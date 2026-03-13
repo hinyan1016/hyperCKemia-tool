@@ -54,7 +54,7 @@ Claude_task/
 2. **index.htmlにカード追加** — 適切な位置に `<a class="tool-card">` ブロックを追加
 3. **sw.js更新** — ASSETS配列に `'./<tool_name>.html'` を追加し、`CACHE_NAME` のバージョンを1つ上げる（例: `ddx-tools-v8` → `ddx-tools-v9`）
 4. **git commit & push** — `git add <files> && git commit && git push origin main`
-5. **デプロイ確認** — 45秒待機後、WebFetchで `https://hinyan1016.github.io/<tool_name>.html` を確認
+5. **デプロイ確認** — 45秒待機後、WebFetchで `https://hinyan1016.github.io/medical-ddx-tools/<tool_name>.html` を確認
 
 ### HTMLテンプレート構造（`<head>`必須要素）
 ```html
