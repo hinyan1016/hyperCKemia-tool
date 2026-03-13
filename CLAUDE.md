@@ -8,6 +8,19 @@
 - **はてなブログ記事 (HTML)**: 医療従事者向け
 - **GitHub Pages**: 診断ツールの公開
 
+## フォルダ構成
+```
+Claude_task/
+├── medical-ddx-tools/    ← 診断ツール本体（GitHub Pagesデプロイ対象）
+├── youtube-slides/       ← YouTube動画トピック別フォルダ（スライド・台本・ブログ）
+├── hospital-data/        ← 病院統計データ・ダッシュボード
+├── nerve-excel/          ← 神経ツールExcel・生成スクリプト
+├── blog/                 ← 単発ブログ記事
+├── scripts/              ← 汎用スクリプト（スライド変換等）
+├── docs/                 ← ドキュメント類
+└── archive/              ← 旧版ツール（medical-ddx-toolsに移行済み）
+```
+
 ## 技術スタック
 - HTML/CSS/JavaScript（診断ツール、単一ファイル構成）
 - Node.js + pptxgenjs（スライド作成）
@@ -40,8 +53,8 @@
 1. **HTMLファイル作成** — 下記アーキテクチャに従い `<tool_name>.html` を作成
 2. **index.htmlにカード追加** — 適切な位置に `<a class="tool-card">` ブロックを追加
 3. **sw.js更新** — ASSETS配列に `'./<tool_name>.html'` を追加し、`CACHE_NAME` のバージョンを1つ上げる（例: `ddx-tools-v8` → `ddx-tools-v9`）
-4. **git commit & push** — `git add <files> && git commit && git push origin master`
-5. **デプロイ確認** — 45秒待機後、WebFetchで `https://hinyan1016.github.io/medical-ddx-tools/<tool_name>.html` を確認
+4. **git commit & push** — `git add <files> && git commit && git push origin main`
+5. **デプロイ確認** — 45秒待機後、WebFetchで `https://hinyan1016.github.io/<tool_name>.html` を確認
 
 ### HTMLテンプレート構造（`<head>`必須要素）
 ```html

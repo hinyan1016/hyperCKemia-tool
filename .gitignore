@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Playwright
+.playwright-mcp/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# 一時ファイル
+*.tmp
+*.bak

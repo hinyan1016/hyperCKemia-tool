@@ -1,0 +1,1278 @@
+- generic [ref=e1]:
+  - link "コンテンツへとスキップする" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - button "サイドバーを開く" [ref=e13]:
+          - img [ref=e14]
+        - generic [ref=e16]:
+          - link [ref=e18] [cursor=pointer]:
+            - /url: /
+            - img [ref=e20]
+          - img [ref=e25] [cursor=pointer]
+          - link [ref=e28] [cursor=pointer]:
+            - /url: /pulse
+            - img [ref=e30]
+          - link [ref=e33] [cursor=pointer]:
+            - /url: /images
+            - img [ref=e35]
+        - button "プロファイルメニューを開く" [ref=e39] [cursor=pointer]:
+          - img "プロファイル画像" [ref=e42]
+      - generic:
+        - heading "チャット履歴" [level=2]
+        - navigation "チャット履歴":
+          - generic:
+            - generic:
+              - generic:
+                - link "ホーム":
+                  - /url: /
+                  - img
+                - generic:
+                  - button "サイドバーを閉じる":
+                    - img
+          - complementary:
+            - link "新しいチャット Control Shift O":
+              - /url: /
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - generic: 新しいチャット
+              - generic:
+                - generic:
+                  - generic "Control":
+                    - generic: Ctrl
+                    - text: +
+                  - generic "Shift":
+                    - generic: Shift
+                    - text: +
+                  - generic:
+                    - generic: O
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - generic: チャットを検索
+              - generic:
+                - generic:
+                  - generic "Control":
+                    - generic: Ctrl
+                    - text: +
+                  - generic:
+                    - generic: K
+          - link "おすすめ":
+            - /url: /pulse
+            - generic:
+              - img
+            - generic:
+              - generic: おすすめ
+          - link "画像":
+            - /url: /images
+            - generic:
+              - img
+            - generic:
+              - generic: 画像
+          - link "ライブラリ":
+            - /url: /library
+            - generic:
+              - img
+            - generic:
+              - generic: ライブラリ
+          - generic:
+            - link "アプリ":
+              - /url: /apps
+              - generic:
+                - img
+              - generic:
+                - generic: アプリ
+            - link "Deep research":
+              - /url: /deep-research
+              - generic:
+                - img
+              - generic:
+                - generic: Deep research
+            - link "Codex":
+              - /url: /codex
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - generic: Codex
+              - generic:
+                - img
+          - generic:
+            - button "GPT" [expanded]:
+              - heading "GPT" [level=2]
+            - link "自分の医学知識":
+              - /url: /g/g-mVeuMWH6N-zi-fen-noyi-xue-zhi-shi
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - generic: 自分の医学知識
+              - button [ref=e43] [cursor=pointer]:
+                - img [ref=e45]
+            - link "クリティカルケアEEGガイド":
+              - /url: /g/g-K5tFlHyyj-kuriteikarukeaeegkaito
+              - generic:
+                - generic:
+                  - generic: クリティカルケアEEGガイド
+              - button [ref=e47] [cursor=pointer]:
+                - img [ref=e49]
+            - link "ディープリサーチ Prompt Maker":
+              - /url: /g/g-67a2210e29c881919dc75dbd7cbba2b6-teihurisati-prompt-maker
+              - generic:
+                - generic:
+                  - generic: ディープリサーチ Prompt Maker
+              - button [ref=e51] [cursor=pointer]:
+                - img [ref=e53]
+            - link "Excelツールmaker":
+              - /url: /g/g-681173b843e8819196fa5c2cd98c91ea-excelturumaker
+              - generic:
+                - generic:
+                  - generic: Excelツールmaker
+              - button [ref=e55] [cursor=pointer]:
+                - img [ref=e57]
+            - link "ブログリサーチパートナー":
+              - /url: /g/g-684cc21b03448191b31e9dbe161be637-hurokurisatihatona
+              - generic:
+                - generic:
+                  - generic: ブログリサーチパートナー
+              - button [ref=e59] [cursor=pointer]:
+                - img [ref=e61]
+            - link "GPT の詳細を見る":
+              - /url: /gpts
+              - generic:
+                - img
+              - generic:
+                - generic: GPT の詳細を見る
+          - generic:
+            - button "プロジェクト" [expanded]:
+              - heading "プロジェクト" [level=2]
+            - button "プロジェクトを新規作成":
+              - generic:
+                - img
+              - generic:
+                - generic: プロジェクトを新規作成
+            - link "ライティング ライティング":
+              - /url: /g/g-p-68dcf6f2c46481918f8211ba8de7f4a3-raiteinku/project
+              - generic:
+                - generic:
+                  - generic:
+                    - img "ライティング"
+                - generic:
+                  - generic: ライティング
+              - button [ref=e63] [cursor=pointer]:
+                - img [ref=e65]
+          - generic:
+            - button "グループ チャット" [expanded]:
+              - heading "グループ チャット" [level=2]
+            - link "新しいグループ チャット":
+              - /url: /gg/6917305fd26c81918af540c3543a199d
+              - generic:
+                - generic: 新しいグループ チャット
+              - generic:
+                - button "新しいグループ チャット のグループ チャットのオプションを開く" [ref=e67] [cursor=pointer]:
+                  - img [ref=e69]
+                - generic:
+                  - generic:
+                    - img
+          - generic:
+            - button "あなたのチャット" [expanded]:
+              - heading "あなたのチャット" [level=2]
+            - generic:
+              - link "めまいの鑑別解説":
+                - /url: /c/69b45423-1618-83a4-bd0b-29a9e746db2d
+                - generic:
+                  - generic: めまいの鑑別解説
+                - button "めまいの鑑別解説 の会話のオプションを開く" [ref=e71] [cursor=pointer]:
+                  - img [ref=e73]
+              - link "意識障害の鑑別解説":
+                - /url: /c/69b45464-4e78-83ab-8a50-c56ea1c3f45f
+                - generic:
+                  - generic: 意識障害の鑑別解説
+                - button "意識障害の鑑別解説 の会話のオプションを開く" [ref=e75] [cursor=pointer]:
+                  - img [ref=e77]
+              - link "頭痛の鑑別解説":
+                - /url: /c/69b4533c-9688-83ab-aca4-291a6b635faf
+                - generic:
+                  - generic: 頭痛の鑑別解説
+                - button "頭痛の鑑別解説 の会話のオプションを開く" [ref=e79] [cursor=pointer]:
+                  - img [ref=e81]
+              - link "脳波運用の現状整理":
+                - /url: /c/69b3f702-b400-83aa-8608-cf0ad3b8f143
+                - generic:
+                  - generic: 脳波運用の現状整理
+                - button "脳波運用の現状整理 の会話のオプションを開く" [ref=e83] [cursor=pointer]:
+                  - img [ref=e85]
+              - link "Branch · Neuroworkbench 保存先設定":
+                - /url: /c/69b3d5de-65d0-83a7-97ff-0ac8dd891064
+                - generic:
+                  - generic "Branch · Neuroworkbench 保存先設定"
+                - button "Branch · Neuroworkbench 保存先設定 の会話のオプションを開く" [ref=e87] [cursor=pointer]:
+                  - img [ref=e89]
+              - link "Neuroworkbench 保存先設定":
+                - /url: /c/69b3d0c7-546c-83a2-8b2c-1561b55ccf5b
+                - generic:
+                  - generic: Neuroworkbench 保存先設定
+                - button "Neuroworkbench 保存先設定 の会話のオプションを開く" [ref=e91] [cursor=pointer]:
+                  - img [ref=e93]
+              - link "MGと脳梁DWI高信号":
+                - /url: /c/69b3bc2f-01f0-83aa-9925-a8708e2f0c1c
+                - generic:
+                  - generic: MGと脳梁DWI高信号
+                - button "MGと脳梁DWI高信号 の会話のオプションを開く" [ref=e95] [cursor=pointer]:
+                  - img [ref=e97]
+              - link "唾液腺ボツリヌス保険適応":
+                - /url: /c/69b3b83b-7c7c-83a8-91c0-52d479056b69
+                - generic:
+                  - generic: 唾液腺ボツリヌス保険適応
+                - button "唾液腺ボツリヌス保険適応 の会話のオプションを開く" [ref=e99] [cursor=pointer]:
+                  - img [ref=e101]
+              - link "非薬物療法 RBD":
+                - /url: /c/69b39981-bab4-83a2-9cdf-5f1e3321bd2a
+                - generic:
+                  - generic: 非薬物療法 RBD
+                - button "非薬物療法 RBD の会話のオプションを開く" [ref=e103] [cursor=pointer]:
+                  - img [ref=e105]
+              - link "頭痛 鑑別 ホームページ":
+                - /url: /c/69b38e2e-2d4c-83a5-bab6-53386a6eed5b
+                - generic:
+                  - generic: 頭痛 鑑別 ホームページ
+                - button "頭痛 鑑別 ホームページ の会話のオプションを開く" [ref=e107] [cursor=pointer]:
+                  - img [ref=e109]
+              - link "CADASIL フォローの仕方":
+                - /url: /c/69b39131-65f4-83a7-94d0-0811e86f1ba3
+                - generic:
+                  - generic: CADASIL フォローの仕方
+                - button "CADASIL フォローの仕方 の会話のオプションを開く" [ref=e111] [cursor=pointer]:
+                  - img [ref=e113]
+              - link "ゾウの航空輸送方法":
+                - /url: /c/69b342ed-9b70-83a2-8f7e-f091f97fe337
+                - generic:
+                  - generic: ゾウの航空輸送方法
+                - button "ゾウの航空輸送方法 の会話のオプションを開く" [ref=e115] [cursor=pointer]:
+                  - img [ref=e117]
+              - link "ファイル変換依頼":
+                - /url: /c/69b24965-a348-83aa-9391-88a9ee15a769
+                - generic:
+                  - generic: ファイル変換依頼
+                - button "ファイル変換依頼 の会話のオプションを開く" [ref=e119] [cursor=pointer]:
+                  - img [ref=e121]
+              - link "JPEG変換と最適化":
+                - /url: /c/69b250fc-4dac-83aa-b85f-160bbcb43277
+                - generic:
+                  - generic: JPEG変換と最適化
+                - button "JPEG変換と最適化 の会話のオプションを開く" [ref=e123] [cursor=pointer]:
+                  - img [ref=e125]
+              - link "デイリーヤマザキの関係":
+                - /url: /c/69b22e13-769c-83a3-aede-4fc2a5d00079
+                - generic:
+                  - generic: デイリーヤマザキの関係
+                - button "デイリーヤマザキの関係 の会話のオプションを開く" [ref=e127] [cursor=pointer]:
+                  - img [ref=e129]
+              - link "Descartes‑08：化学前処理なしCAR‑T試験進行中":
+                - /url: /c/69b06bac-7b50-83a5-9fca-845165959546
+                - generic:
+                  - generic "Descartes‑08：化学前処理なしCAR‑T試験進行中"
+                - button "Descartes‑08：化学前処理なしCAR‑T試験進行中 の会話のオプションを開く" [ref=e131] [cursor=pointer]:
+                  - img [ref=e133]
+              - link "CAR-T療法と抗体療法":
+                - /url: /c/69b17a6a-e420-83a8-a5df-698c23e1fbdd
+                - generic:
+                  - generic: CAR-T療法と抗体療法
+                - button "CAR-T療法と抗体療法 の会話のオプションを開く" [ref=e135] [cursor=pointer]:
+                  - img [ref=e137]
+              - link "全身浮腫の鑑別":
+                - /url: /c/69b0f4ca-73e8-83a2-ae1f-c2c0f790b7b9
+                - generic:
+                  - generic: 全身浮腫の鑑別
+                - button "全身浮腫の鑑別 の会話のオプションを開く" [ref=e139] [cursor=pointer]:
+                  - img [ref=e141]
+              - link "資産形成と投資戦略":
+                - /url: /c/69b0b33e-46dc-83a5-8136-b574bd35bed9
+                - generic:
+                  - generic: 資産形成と投資戦略
+                - button "資産形成と投資戦略 の会話のオプションを開く" [ref=e143] [cursor=pointer]:
+                  - img [ref=e145]
+              - link "社会福祉法人 寄付 控除":
+                - /url: /c/69b0da6f-1670-83aa-8211-94ab41e87675
+                - generic:
+                  - generic: 社会福祉法人 寄付 控除
+                - button "社会福祉法人 寄付 控除 の会話のオプションを開く" [ref=e147] [cursor=pointer]:
+                  - img [ref=e149]
+              - link "PD指タッピング解析：解釈可能な動画バイオマーカー":
+                - /url: /c/69b06bb2-f400-83a2-ac34-db19d4ca0732
+                - generic:
+                  - generic "PD指タッピング解析：解釈可能な動画バイオマーカー"
+                - button "PD指タッピング解析：解釈可能な動画バイオマーカー の会話のオプションを開く" [ref=e151] [cursor=pointer]:
+                  - img [ref=e153]
+              - link "JPEG変換依頼":
+                - /url: /c/69b08bc5-ad6c-83a2-88fc-e3c83526dd69
+                - generic:
+                  - generic: JPEG変換依頼
+                - button "JPEG変換依頼 の会話のオプションを開く" [ref=e155] [cursor=pointer]:
+                  - img [ref=e157]
+              - link "EAN 2024ガイドラインの年":
+                - /url: /c/69b08559-2f68-83a7-bf9b-c655ea5e2484
+                - generic:
+                  - generic: EAN 2024ガイドラインの年
+                - button "EAN 2024ガイドラインの年 の会話のオプションを開く" [ref=e159] [cursor=pointer]:
+                  - img [ref=e161]
+              - link "医療動画向け日本語TTSの比較":
+                - /url: /c/69b06bad-0958-83ab-a10c-bf6ecf624048
+                - generic:
+                  - generic: 医療動画向け日本語TTSの比較
+                - button "医療動画向け日本語TTSの比較 の会話のオプションを開く" [ref=e163] [cursor=pointer]:
+                  - img [ref=e165]
+              - link "医療教育におけるAI画像利用の倫理":
+                - /url: /c/69b06ba9-1170-83a9-a066-1335d026e563
+                - generic:
+                  - generic: 医療教育におけるAI画像利用の倫理
+                - button "医療教育におけるAI画像利用の倫理 の会話のオプションを開く" [ref=e167] [cursor=pointer]:
+                  - img [ref=e169]
+              - link "PPTX読みやすさチェックリスト":
+                - /url: /c/69b06ba5-7754-83a6-8294-b95775947275
+                - generic:
+                  - generic: PPTX読みやすさチェックリスト
+                - button "PPTX読みやすさチェックリスト の会話のオプションを開く" [ref=e171] [cursor=pointer]:
+                  - img [ref=e173]
+              - link "千昌夫 天童よしみ 年齢":
+                - /url: /c/69affbf3-e2ac-83a7-a611-acc03797cb5e
+                - generic:
+                  - generic: 千昌夫 天童よしみ 年齢
+                - button "千昌夫 天童よしみ 年齢 の会話のオプションを開く" [ref=e175] [cursor=pointer]:
+                  - img [ref=e177]
+              - link "JPEG変換と最適化":
+                - /url: /c/69afed34-7ef4-83a9-8b92-adb0c4a49aae
+                - generic:
+                  - generic: JPEG変換と最適化
+                - button "JPEG変換と最適化 の会話のオプションを開く" [ref=e179] [cursor=pointer]:
+                  - img [ref=e181]
+          - generic:
+            - generic:
+              - button "Hisaji Imamuraさんのプロファイルメニューを開く":
+                - generic:
+                  - generic:
+                    - img "プロファイル画像"
+                - generic:
+                  - generic:
+                    - generic: Hisaji Imamura
+                  - generic:
+                    - generic:
+                      - generic: Pro
+    - generic [ref=e184]:
+      - banner:
+        - button "モデル セレクター。現在のモデルは 5.4 Pro です" [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]: ChatGPT 5.4 Pro
+          - img [ref=e187]
+      - main [ref=e189]:
+        - generic [ref=e190]:
+          - generic [ref=e192]:
+            - paragraph [ref=e194]: これは ChatGPT と匿名の利用者の間の会話のコピーです。
+            - button "会話を報告する" [ref=e196] [cursor=pointer]
+            - article [ref=e197]:
+              - heading "あなた:" [level=5] [ref=e198]
+              - generic [ref=e205]: めまいの鑑別について詳しく解説する記事を作成してください。構造的でエッセンシャルなものを作成してください。文字数は1万文字を目安としています。文献は文末にバンクーバー形式で載せてください。対象は若手の脳神経内科医やレジデントあたりを想定していますが言及はしなくて良いです。
+            - article [ref=e207]:
+              - heading "ChatGPT:" [level=6] [ref=e208]
+              - generic [ref=e210]:
+                - generic [ref=e211]:
+                  - paragraph [ref=e215]: 最新の指針と原著を確認しつつ、発症様式・持続時間・誘因・ベッドサイド所見を軸に、見逃せない中枢性めまいも含めた実地向けの鑑別記事として組み立てます。
+                  - paragraph [ref=e219]: ここからはAVS・EVS・CVSの3分類を土台に、歩行不能、眼振・眼球運動、聴覚症状をどう読むかを整理し、HINTS/HINTS+と各診断基準をつないで一本化します。画像に流れすぎず、それでも中枢性を見逃さない実践的な切り分けに仕上げます。
+                  - paragraph [ref=e223]: 本文はほぼ仕上がっており、いまはHINTSの適用場面、MRI陰性時の扱い、各症候群の典型像と落とし穴の表現を詰めています。あわせて文末の参考文献をバンクーバー形式で正確に整えています。
+                  - button "Thought for 37m 19s" [ref=e225] [cursor=pointer]:
+                    - text: Thought for 37m 19s
+                    - img [ref=e226]
+                  - generic [ref=e230]:
+                    - heading "めまいの鑑別" [level=1] [ref=e231]
+                    - heading "時間経過・誘因・眼球運動から組み立てる実践的アプローチ" [level=2] [ref=e232]
+                    - paragraph [ref=e233]:
+                      - text: めまい診療で最も重要なのは、「ぐるぐる回る」「ふわふわする」といった訴えの言葉に引きずられないことです。症状の質だけでは末梢性と中枢性を十分に分けられず、むしろ
+                      - strong [ref=e234]: 時間経過、誘因、発症状況、随伴症状、眼球運動、歩行・体幹失調
+                      - text: で組み立てた方が診断精度は高くなります。近年の考え方では、まずめまいを
+                      - strong [ref=e235]: "急性持続性（acute vestibular syndrome: AVS）"
+                      - text: 、
+                      - strong [ref=e236]: "自発性反復性（spontaneous episodic vestibular syndrome: s-EVS）"
+                      - text: 、
+                      - strong [ref=e237]: "誘発性反復性（triggered episodic vestibular syndrome: t-EVS）"
+                      - text: 、
+                      - strong [ref=e238]: 慢性持続性
+                      - text: に分け、その後に個別疾患へ落とし込むのが実用的です。
+                      - link "PMC +2 PubMed +2" [ref=e241] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e242]:
+                          - generic [ref=e243]:
+                            - generic [ref=e244]: PMC
+                            - generic [ref=e245]: "+2"
+                          - generic [ref=e246]:
+                            - generic [ref=e247]: PubMed
+                            - generic [ref=e248]: "+2"
+                    - paragraph [ref=e249]:
+                      - text: 本稿では、この症候群ベースの考え方に沿って、脳神経内科で押さえるべきめまいの鑑別を、危険な見落としとベッドサイド診察の使い方を中心に整理します。結論を先に言えば、
+                      - strong [ref=e250]: 急性持続性めまいでは「前庭神経炎か脳卒中か」
+                      - text: 、
+                      - strong [ref=e251]: 短い頭位誘発性めまいでは「BPPVか中枢性頭位めまいか」
+                      - text: 、
+                      - strong [ref=e252]: 反復発作では「前庭性片頭痛、メニエール病、血管性、前庭性発作症」
+                      - text: 、**慢性めまいでは「PPPD、両側前庭障害、起立性循環障害」**を軸に考えると、診断の骨格がぶれにくくなります。
+                      - link "PubMed +7 PMC +7 PubMed +7" [ref=e255] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e256]:
+                          - generic [ref=e257]:
+                            - generic [ref=e258]: PubMed
+                            - generic [ref=e259]: "+7"
+                          - generic [ref=e260]:
+                            - generic [ref=e261]: PMC
+                            - generic [ref=e262]: "+7"
+                          - generic [ref=e263]:
+                            - generic [ref=e264]: PubMed
+                            - generic [ref=e265]: "+7"
+                    - separator [ref=e266]
+                    - heading "1. まず、症状の型で分ける" [level=2] [ref=e267]
+                    - paragraph [ref=e268]:
+                      - text: めまいの鑑別は、最初に次の4群へ整理すると見通しが良くなります。
+                      - link "PMC +2 PubMed +2" [ref=e271] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e272]:
+                          - generic [ref=e273]:
+                            - generic [ref=e274]: PMC
+                            - generic [ref=e275]: "+2"
+                          - generic [ref=e276]:
+                            - generic [ref=e277]: PubMed
+                            - generic [ref=e278]: "+2"
+                    - generic [ref=e280]:
+                      - table [ref=e281]:
+                        - rowgroup [ref=e282]:
+                          - row "症候群 典型的な時間経過 誘因 まず考える主な疾患" [ref=e283]:
+                            - columnheader "症候群" [ref=e284]
+                            - columnheader "典型的な時間経過" [ref=e285]
+                            - columnheader "誘因" [ref=e286]
+                            - columnheader "まず考える主な疾患" [ref=e287]
+                        - rowgroup [ref=e288]:
+                          - row "急性前庭症候群（AVS） 急に始まり、数時間〜数日以上持続 明確な誘因なし 前庭神経炎、脳幹・小脳梗塞/出血" [ref=e289]:
+                            - cell "急性前庭症候群（AVS）" [ref=e290]
+                            - cell "急に始まり、数時間〜数日以上持続" [ref=e291]
+                            - cell "明確な誘因なし" [ref=e292]
+                            - cell "前庭神経炎、脳幹・小脳梗塞/出血" [ref=e293]
+                          - row "自発性発作性前庭症候群（s-EVS） 発作が分〜時間単位で反復、間欠期は比較的落ち着く 明確な誘因なし 前庭性片頭痛、メニエール病、TIA/血管性、前庭性発作症" [ref=e294]:
+                            - cell "自発性発作性前庭症候群（s-EVS）" [ref=e295]
+                            - cell "発作が分〜時間単位で反復、間欠期は比較的落ち着く" [ref=e296]
+                            - cell "明確な誘因なし" [ref=e297]
+                            - cell "前庭性片頭痛、メニエール病、TIA/血管性、前庭性発作症" [ref=e298]
+                          - row "誘発性発作性前庭症候群（t-EVS） 秒〜1分程度の短い発作を反復 頭位変換、寝返り、起き上がりなど BPPV、中枢性頭位めまい" [ref=e299]:
+                            - cell "誘発性発作性前庭症候群（t-EVS）" [ref=e300]
+                            - cell "秒〜1分程度の短い発作を反復" [ref=e301]
+                            - cell "頭位変換、寝返り、起き上がりなど" [ref=e302]
+                            - cell "BPPV、中枢性頭位めまい" [ref=e303]
+                          - row "慢性持続性めまい 週〜月単位で持続 立位、歩行、視覚刺激、頭部運動などで増悪 PPPD、両側前庭障害、起立性循環障害" [ref=e304]:
+                            - cell "慢性持続性めまい" [ref=e305]
+                            - cell "週〜月単位で持続" [ref=e306]
+                            - cell "立位、歩行、視覚刺激、頭部運動などで増悪" [ref=e307]
+                            - cell "PPPD、両側前庭障害、起立性循環障害" [ref=e308]
+                      - generic [ref=e310]:
+                        - button "表をコピーする":
+                          - img
+                    - paragraph [ref=e311]:
+                      - text: （分類の基本枠組み）
+                      - link "PMC +2 PubMed +2" [ref=e314] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e315]:
+                          - generic [ref=e316]:
+                            - generic [ref=e317]: PMC
+                            - generic [ref=e318]: "+2"
+                          - generic [ref=e319]:
+                            - generic [ref=e320]: PubMed
+                            - generic [ref=e321]: "+2"
+                    - paragraph [ref=e322]:
+                      - text: この整理の利点は、疾患名を最初から当てにいくのではなく、
+                      - strong [ref=e323]: 発作の長さ
+                      - text: と
+                      - strong [ref=e324]: 誘因の有無
+                      - text: で鑑別の候補が自然に絞られることです。たとえば「寝返りで10秒回る」はBPPVに寄りますが、「朝からずっと強い回転性めまいと嘔吐が続く」はAVSであり、最優先は脳卒中の除外になります。逆に「数時間の発作を繰り返し、耳閉感が揺れる」ならメニエール病が前面に出ます。
+                      - link "PubMed +3 PMC +3 PubMed +3" [ref=e327] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e328]:
+                          - generic [ref=e329]:
+                            - generic [ref=e330]: PubMed
+                            - generic [ref=e331]: "+3"
+                          - generic [ref=e332]:
+                            - generic [ref=e333]: PMC
+                            - generic [ref=e334]: "+3"
+                          - generic [ref=e335]:
+                            - generic [ref=e336]: PubMed
+                            - generic [ref=e337]: "+3"
+                    - separator [ref=e338]
+                    - heading "2. 最初に見落としてはいけない“危険なめまい”" [level=2] [ref=e339]
+                    - paragraph [ref=e340]:
+                      - text: めまい患者で見落としてはいけないのは、
+                      - strong [ref=e341]: 後方循環脳卒中
+                      - text: と、
+                      - strong [ref=e342]: 循環器・感染症・代謝異常などの全身性疾患
+                      - text: です。特に「めまい＋何か」が重要で、複視、構音障害、嚥下障害、片麻痺、感覚障害、失調、強い体幹失調、激しい頭痛、頸部痛、新しい難聴、失神前症状、胸痛、発熱などがあれば、末梢前庭障害だけで説明しない姿勢が必要です。急性めまいでは、全身性の病態や血管性イベントを示唆する随伴症状の聴取が、最初の分岐点になります。
+                      - link "PubMed +2 PubMed +2" [ref=e345] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29395695/
+                        - generic [ref=e346]:
+                          - generic [ref=e347]:
+                            - generic [ref=e348]: PubMed
+                            - generic [ref=e349]: "+2"
+                          - generic [ref=e350]:
+                            - generic [ref=e351]: PubMed
+                            - generic [ref=e352]: "+2"
+                    - paragraph [ref=e353]:
+                      - text: 重要なのは、
+                      - strong [ref=e354]: 神経学的巣症候が目立たなければ安全
+                      - text: とは言えないことです。急性めまい患者における一般的神経診察の感度は約46.8%で、正常だからといって脳卒中は除外できません。体幹・歩行失調は比較的有用ですが、それでも感度は約69.7%です。つまり、「麻痺も構音障害もないから前庭神経炎だろう」と決めるのは危険です。
+                      - link "PubMed +2 PubMed +2" [ref=e357] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/36453134/
+                        - generic [ref=e358]:
+                          - generic [ref=e359]:
+                            - generic [ref=e360]: PubMed
+                            - generic [ref=e361]: "+2"
+                          - generic [ref=e362]:
+                            - generic [ref=e363]: PubMed
+                            - generic [ref=e364]: "+2"
+                    - paragraph [ref=e365]:
+                      - text: さらに、画像にも落とし穴があります。非造影頭部CTは急性めまいにおける中枢病変検出の感度が約28.5%と低く、
+                      - strong [ref=e366]: “CTが正常だったから中枢性ではない”は成り立ちません
+                      - text: 。MRI-DWIも早期脳卒中では完全ではなく、メタ解析では感度約79.8%、すなわち
+                      - strong [ref=e367]: 早期には約5人に1人の脳卒中を見逃しうる
+                      - text: とされています。画像は重要ですが、ベッドサイド診察の代わりにはなりません。
+                      - link "PubMed +2 PubMed +2" [ref=e370] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/35876220/
+                        - generic [ref=e371]:
+                          - generic [ref=e372]:
+                            - generic [ref=e373]: PubMed
+                            - generic [ref=e374]: "+2"
+                          - generic [ref=e375]:
+                            - generic [ref=e376]: PubMed
+                            - generic [ref=e377]: "+2"
+                    - separator [ref=e378]
+                    - heading "3. 急性前庭症候群（AVS）：最重要は前庭神経炎と脳卒中の鑑別" [level=2] [ref=e379]
+                    - paragraph [ref=e380]:
+                      - text: AVSとは、急性発症のめまい・ふらつきが持続し、悪心嘔吐、頭位変換での増悪、歩行障害、自発眼振などを伴う症候群です。臨床で最も重要なのは、**末梢性の急性一側前庭障害（いわゆる前庭神経炎）**なのか、
+                      - strong [ref=e381]: 小脳・脳幹梗塞などの中枢性AVS
+                      - text: なのかを分けることです。GRACE-3でも、この場面では症状の言い方より、眼球運動所見と歩行所見を重視するよう勧めています。
+                      - link "PubMed +2 PubMed +2" [ref=e384] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/37166022/
+                        - generic [ref=e385]:
+                          - generic [ref=e386]:
+                            - generic [ref=e387]: PubMed
+                            - generic [ref=e388]: "+2"
+                          - generic [ref=e389]:
+                            - generic [ref=e390]: PubMed
+                            - generic [ref=e391]: "+2"
+                    - heading "3-1. 前庭神経炎を示唆する所見" [level=3] [ref=e392]
+                    - paragraph [ref=e393]:
+                      - text: 急性一側前庭障害の診断基準では、
+                      - strong [ref=e394]: 24時間以上持続する急性の回転性または非回転性めまい
+                      - text: 、
+                      - strong [ref=e395]: 方向固定性の水平回旋混合性自発眼振
+                      - text: 、
+                      - strong [ref=e396]: 一側の前庭眼反射（VOR）低下
+                      - text: 、そして
+                      - strong [ref=e397]: 明らかな中枢性眼球運動異常や急性聴覚症状を欠くこと
+                      - text: が重視されています。つまり、「急に始まってずっと強い」「一方向性の末梢性眼振がある」「head impulse testで患側に補正サッカードが出る」「新しい難聴がない」という組み合わせは、前庭神経炎に合います。
+                      - link "PubMed" [ref=e400] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/35723133/
+                        - generic [ref=e403]: PubMed
+                    - paragraph [ref=e404]:
+                      - text: ただし、前庭神経炎は
+                      - strong [ref=e405]: 除外診断の要素
+                      - text: を含みます。診断基準でも、単一の決定打となる検査はなく、中心性病変の除外が不可欠とされています。したがって、「前庭神経炎っぽい」だけで終えず、少なくとも脳卒中を疑わせる眼球運動所見や体幹失調の評価を必ず行うべきです。
+                      - link "PubMed" [ref=e408] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/35723133/
+                        - generic [ref=e411]: PubMed
+                    - heading "3-2. HINTSをどう使うか" [level=3] [ref=e412]
+                    - paragraph [ref=e413]:
+                      - text: AVSで有用なのがHINTSです。これは
+                      - strong [ref=e414]: Head-Impulse, Nystagmus, Test-of-Skew
+                      - text: の3点からなる眼球運動診察で、もともとの原著では、
+                      - strong [ref=e415]: 正常head impulse test、方向交代性眼振、skew deviationのいずれか
+                      - text: があれば脳卒中を示唆し、感度100%、特異度96%でした。また、初回MRI-DWIが48時間以内では偽陰性となる症例もあり、HINTSは早期MRIより鋭敏である可能性が示されました。
+                      - link "PubMed +1" [ref=e418] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/19762709/
+                        - generic [ref=e420]:
+                          - generic [ref=e421]: PubMed
+                          - generic [ref=e422]: "+1"
+                    - paragraph [ref=e423]:
+                      - text: その後のメタ解析でも、HINTSの感度は約92.9%、HINTS+（聴力評価を加えたもの）は約99.0%と高く、特異度はいずれも80%台でした。一方で、skew単独の感度は低く、一般神経診察も十分ではありません。つまり、AVSでは
+                      - strong [ref=e424]: 眼球運動診察をセットで見る
+                      - text: ことに意味があります。
+                      - link "PubMed +4 PubMed +4 PubMed +4" [ref=e427] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/36453134/
+                        - generic [ref=e428]:
+                          - generic [ref=e429]:
+                            - generic [ref=e430]: PubMed
+                            - generic [ref=e431]: "+4"
+                          - generic [ref=e432]:
+                            - generic [ref=e433]: PubMed
+                            - generic [ref=e434]: "+4"
+                          - generic [ref=e435]:
+                            - generic [ref=e436]: PubMed
+                            - generic [ref=e437]: "+4"
+                    - paragraph [ref=e438]:
+                      - text: ただし、ここで最も大事なのは
+                      - strong [ref=e439]: HINTSの適応と限界
+                      - text: です。GRACE-3は、HINTSを
+                      - strong [ref=e440]: 自発眼振のあるAVS患者に対し、訓練を受けた診察者が行う場合
+                      - text: に推奨しています。逆に、
+                      - strong [ref=e441]: 症状が断続的な患者、頭位誘発性めまい、無症候時、そもそも自発眼振がない患者
+                      - text: にHINTSを当てはめるのは適切ではありません。また、熟練していない診察者のルーチン使用では精度が落ちることも明記されています。
+                      - link "PubMed +4 PubMed +4 PubMed +4" [ref=e444] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/37166022/
+                        - generic [ref=e445]:
+                          - generic [ref=e446]:
+                            - generic [ref=e447]: PubMed
+                            - generic [ref=e448]: "+4"
+                          - generic [ref=e449]:
+                            - generic [ref=e450]: PubMed
+                            - generic [ref=e451]: "+4"
+                          - generic [ref=e452]:
+                            - generic [ref=e453]: PubMed
+                            - generic [ref=e454]: "+4"
+                    - heading "3-3. AVSで脳卒中を疑うサイン" [level=3] [ref=e455]
+                    - paragraph [ref=e456]:
+                      - text: AVSで中枢性を疑うポイントは、
+                      - strong [ref=e457]: 正常head impulse test
+                      - text: 、
+                      - strong [ref=e458]: 方向交代性注視眼振
+                      - text: 、
+                      - strong [ref=e459]: 垂直性あるいは純回旋性眼振
+                      - text: 、
+                      - strong [ref=e460]: skew deviation
+                      - text: 、
+                      - strong [ref=e461]: 著明な体幹失調・歩行不能
+                      - text: 、
+                      - strong [ref=e462]: 新しい片側難聴
+                      - text: 、
+                      - strong [ref=e463]: 他の脳神経症状や小脳症状
+                      - text: です。聴覚症状は末梢性を意味するとは限らず、AICA領域虚血では急性難聴を伴うことがあるため、AVSでは指擦りなどの簡便な聴力評価も有用とされています。
+                      - link "PubMed +2 PubMed +2" [ref=e466] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/37166022/
+                        - generic [ref=e467]:
+                          - generic [ref=e468]:
+                            - generic [ref=e469]: PubMed
+                            - generic [ref=e470]: "+2"
+                          - generic [ref=e471]:
+                            - generic [ref=e472]: PubMed
+                            - generic [ref=e473]: "+2"
+                    - paragraph [ref=e474]:
+                      - text: 特に注意したいのは、
+                      - strong [ref=e475]: 強い失調のわりに眼振が乏しい、あるいは自発眼振がないAVS
+                      - text: です。GRACE-3では、このような場面ではHINTSではなく、
+                      - strong [ref=e476]: 歩行・体幹の不安定性
+                      - text: を重視するよう勧めています。座位保持や立位保持が明らかに不良なら、小脳病変を強く考えるべきです。
+                      - link "PubMed +1" [ref=e479] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/37166022/
+                        - generic [ref=e481]:
+                          - generic [ref=e482]: PubMed
+                          - generic [ref=e483]: "+1"
+                    - heading "3-4. 画像はどう位置づけるか" [level=3] [ref=e484]
+                    - paragraph [ref=e485]:
+                      - text: AVSにおいて、
+                      - strong [ref=e486]: 頭部CTは脳卒中の除外目的には使わない
+                      - text: 、というのが現在の基本です。GRACE-3は、訓練を受けた臨床家がHINTSを使えるなら、ルーチンのCTもMRIも第一選択としては勧めていません。一方、HINTSが中枢性を示す、あるいは所見が曖昧で臨床的に不安が残る場合には、MRIを確認検査として用いることを推奨しています。これは、画像の限界を踏まえて、
+                      - strong [ref=e487]: まずベッドサイドで危険度層別化し、そのうえで画像を使う
+                      - text: という考え方です。
+                      - link "PubMed +4 PubMed +4 PubMed +4" [ref=e490] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/37166022/
+                        - generic [ref=e491]:
+                          - generic [ref=e492]:
+                            - generic [ref=e493]: PubMed
+                            - generic [ref=e494]: "+4"
+                          - generic [ref=e495]:
+                            - generic [ref=e496]: PubMed
+                            - generic [ref=e497]: "+4"
+                          - generic [ref=e498]:
+                            - generic [ref=e499]: PubMed
+                            - generic [ref=e500]: "+4"
+                    - separator [ref=e501]
+                    - heading "4. 誘発性発作性前庭症候群（t-EVS）：BPPVと中枢性頭位めまい" [level=2] [ref=e502]
+                    - paragraph [ref=e503]:
+                      - text: 頭位変換で数秒から1分程度の短いめまいが反復する場合、まずBPPVを考えます。BPPVは末梢性めまいのなかで最も頻度が高く、
+                      - strong [ref=e504]: 診断の要点は病歴だけでなく、頭位変換で特徴的な眼振を実際に観察すること
+                      - text: です。
+                      - link "PubMed +2 PubMed +2" [ref=e507] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/27174206/
+                        - generic [ref=e508]:
+                          - generic [ref=e509]:
+                            - generic [ref=e510]: PubMed
+                            - generic [ref=e511]: "+2"
+                          - generic [ref=e512]:
+                            - generic [ref=e513]: PubMed
+                            - generic [ref=e514]: "+2"
+                    - heading "4-1. BPPVの診断" [level=3] [ref=e515]
+                    - paragraph [ref=e516]:
+                      - text: 後半規管型BPPVは、
+                      - strong [ref=e517]: Dix-Hallpike試験で誘発される回旋成分を伴う上向き眼振
+                      - text: が典型です。病歴としては、寝返り、起き上がり、上を向く、下を向くなどの頭位変換で、短い回転性めまいが反復します。外側半規管型では、
+                      - strong [ref=e518]: supine roll testで水平性眼振
+                      - text: が観察され、向地性か背地性かで病型が分かれます。BPPVガイドラインでは、後半規管型が疑われればDix-Hallpike、外側半規管型を考えればsupine roll testを行うことが勧められています。
+                      - link "PubMed +2 PubMed +2" [ref=e521] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28248609/
+                        - generic [ref=e522]:
+                          - generic [ref=e523]:
+                            - generic [ref=e524]: PubMed
+                            - generic [ref=e525]: "+2"
+                          - generic [ref=e526]:
+                            - generic [ref=e527]: PubMed
+                            - generic [ref=e528]: "+2"
+                    - paragraph [ref=e529]:
+                      - text: 典型的BPPVであれば、
+                      - strong [ref=e530]: ルーチンの画像検査や前庭機能検査は不要
+                      - text: です。また、治療は薬物よりも
+                      - strong [ref=e531]: canalith repositioning procedure
+                      - text: が中心で、後半規管型ではEpley法が推奨されます。逆に、典型例に漫然と制吐薬・鎮暈薬だけを続けるのは本筋ではありません。
+                      - link "PubMed +2 PubMed +2" [ref=e534] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28248609/
+                        - generic [ref=e535]:
+                          - generic [ref=e536]:
+                            - generic [ref=e537]: PubMed
+                            - generic [ref=e538]: "+2"
+                          - generic [ref=e539]:
+                            - generic [ref=e540]: PubMed
+                            - generic [ref=e541]: "+2"
+                    - heading "4-2. BPPVに見えて実は中枢性、をどう拾うか" [level=3] [ref=e542]
+                    - paragraph [ref=e543]:
+                      - text: 頭位で誘発されるからといって、すべてBPPVではありません。
+                      - strong [ref=e544]: 中枢性頭位眼振
+                      - text: では、BPPVらしくない眼振パターン、たとえば
+                      - strong [ref=e545]: 下眼瞼向き眼振、純回旋性眼振、非典型的な水平性眼振
+                      - text: などが出現しえます。これらは小脳・脳幹の機能障害でみられ、報告によっては頭位眼振患者の一定割合を占めます。
+                      - link "PubMed" [ref=e548] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/34669008/
+                        - generic [ref=e551]: PubMed
+                    - paragraph [ref=e552]: 臨床的には、
+                    - list [ref=e553]:
+                      - listitem [ref=e554]:
+                        - paragraph [ref=e555]:
+                          - text: 頭位変換で誘発されるが
+                          - strong [ref=e556]: 眼振が典型的でない
+                      - listitem [ref=e557]:
+                        - paragraph [ref=e558]:
+                          - text: 眼振の
+                          - strong [ref=e559]: 持続が長い、減衰しない
+                      - listitem [ref=e560]:
+                        - paragraph [ref=e561]: repositioningで改善しない
+                      - listitem [ref=e562]:
+                        - paragraph [ref=e563]: 失調や他の神経所見を伴う
+                      - listitem [ref=e564]:
+                        - paragraph [ref=e565]: 背景に小脳病変を疑う所見がある
+                    - paragraph [ref=e566]:
+                      - text: といった場合は、中枢性を考えます。BPPVと診断するには、
+                      - strong [ref=e567]: 「頭位でめまいがする」だけでは足りず、対応する頭位眼振を確認する
+                      - text: という姿勢が重要です。
+                      - link "PubMed +1" [ref=e570] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28248609/
+                        - generic [ref=e572]:
+                          - generic [ref=e573]: PubMed
+                          - generic [ref=e574]: "+1"
+                    - separator [ref=e575]
+                    - heading "5. 自発性発作性前庭症候群（s-EVS）：前庭性片頭痛、メニエール病、血管性、前庭性発作症" [level=2] [ref=e576]
+                    - paragraph [ref=e577]:
+                      - text: 発作と発作の間は比較的落ち着いていて、明確な頭位誘因がなく、分〜時間単位の発作を反復する場合はs-EVSとして考えます。この群は、
+                      - strong [ref=e578]: 前庭性片頭痛、メニエール病、TIA/血管性、前庭性発作症
+                      - text: の鑑別が中心になります。病歴の質がとても大切で、発作時間、聴覚症状、片頭痛症状、血管危険因子、発作の常同性を丁寧に拾う必要があります。
+                      - link "PubMed +4 PubMed +4 PubMed +4" [ref=e581] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29395695/
+                        - generic [ref=e582]:
+                          - generic [ref=e583]:
+                            - generic [ref=e584]: PubMed
+                            - generic [ref=e585]: "+4"
+                          - generic [ref=e586]:
+                            - generic [ref=e587]: PubMed
+                            - generic [ref=e588]: "+4"
+                          - generic [ref=e589]:
+                            - generic [ref=e590]: PubMed
+                            - generic [ref=e591]: "+4"
+                    - heading "5-1. 前庭性片頭痛" [level=3] [ref=e592]
+                    - paragraph [ref=e593]:
+                      - text: 前庭性片頭痛は、
+                      - strong [ref=e594]: 中等度以上の前庭症状を少なくとも5回
+                      - text: 経験し、各発作が
+                      - strong [ref=e595]: 5分〜72時間
+                      - text: 続き、
+                      - strong [ref=e596]: 現在または過去の片頭痛歴
+                      - text: があり、発作の50%以上で
+                      - strong [ref=e597]: 片頭痛様頭痛、光過敏・音過敏、視覚性前兆
+                      - text: のいずれかを伴う場合に診断されます。前庭症状は自発性めまいだけでなく、頭位性、視覚誘発性、頭部運動誘発性など多彩です。
+                      - link "PubMed +3 PMC +3 PMC +3" [ref=e600] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9249276/
+                        - generic [ref=e601]:
+                          - generic [ref=e602]:
+                            - generic [ref=e603]: PubMed
+                            - generic [ref=e604]: "+3"
+                          - generic [ref=e605]:
+                            - generic [ref=e606]: PMC
+                            - generic [ref=e607]: "+3"
+                          - generic [ref=e608]:
+                            - generic [ref=e609]: PMC
+                            - generic [ref=e610]: "+3"
+                    - paragraph [ref=e611]:
+                      - text: 実臨床では、「反復するめまいだが耳症状は乏しい」「検査で決め手がない」「片頭痛歴がはっきりしない」という症例が少なくありません。そのため、
+                      - strong [ref=e612]: 片頭痛の既往だけでなく、発作時の光過敏、音過敏、視覚性前兆、片側性拍動性頭痛
+                      - text: を系統的に聞くことが重要です。片頭痛が前景に出ない症例もあるため、めまい発作のたびに頭痛が必要という理解は正確ではありません。
+                      - link "PubMed +2 PMC +2" [ref=e615] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/34719447/
+                        - generic [ref=e616]:
+                          - generic [ref=e617]:
+                            - generic [ref=e618]: PubMed
+                            - generic [ref=e619]: "+2"
+                          - generic [ref=e620]:
+                            - generic [ref=e621]: PMC
+                            - generic [ref=e622]: "+2"
+                    - heading "5-2. メニエール病" [level=3] [ref=e623]
+                    - paragraph [ref=e624]:
+                      - text: メニエール病の確実例は、
+                      - strong [ref=e625]: 20分〜12時間持続する反復性めまい発作
+                      - text: に加え、
+                      - strong [ref=e626]: 低〜中音域感音難聴が記録されていること
+                      - text: 、そして
+                      - strong [ref=e627]: 変動する耳閉感・耳鳴・難聴
+                      - text: などの耳症状を伴うことが要件です。疑い例では発作時間が20分〜24時間で、聴力記録が確定していない場合も含まれます。
+                      - link "PubMed +2 PubMed +2" [ref=e630] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/25882471/
+                        - generic [ref=e631]:
+                          - generic [ref=e632]:
+                            - generic [ref=e633]: PubMed
+                            - generic [ref=e634]: "+2"
+                          - generic [ref=e635]:
+                            - generic [ref=e636]: PubMed
+                            - generic [ref=e637]: "+2"
+                    - paragraph [ref=e638]:
+                      - text: 病歴上のキーワードは、
+                      - strong [ref=e639]: 耳症状が発作と連動して揺れること
+                      - text: です。前庭性片頭痛と違って、メニエール病では聴覚症状の比重が高く、聴力評価が診断上重要になります。逆に、耳症状のない反復めまいを機械的にメニエール病とするのは適切ではありません。
+                      - link "PubMed +2 PubMed +2" [ref=e642] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/25882471/
+                        - generic [ref=e643]:
+                          - generic [ref=e644]:
+                            - generic [ref=e645]: PubMed
+                            - generic [ref=e646]: "+2"
+                          - generic [ref=e647]:
+                            - generic [ref=e648]: PubMed
+                            - generic [ref=e649]: "+2"
+                    - heading "5-3. 血管性めまい・TIA" [level=3] [ref=e650]
+                    - paragraph [ref=e651]:
+                      - text: 反復する一過性めまい発作は良性とは限りません。血管性めまいの診断基準では、めまい・ふらつきは
+                      - strong [ref=e652]: 急性持続性
+                      - text: だけでなく、**一過性（分〜24時間未満）**でも起こりえます。特に、明確な頭位誘因がなく、血管危険因子があり、脳虚血を示唆する随伴症状や中枢性眼球運動所見があれば、
+                      - strong [ref=e653]: 後方循環TIA
+                      - text: を考えるべきです。
+                      - link "PubMed +2 PubMed +2" [ref=e656] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/35367974/
+                        - generic [ref=e657]:
+                          - generic [ref=e658]:
+                            - generic [ref=e659]: PubMed
+                            - generic [ref=e660]: "+2"
+                          - generic [ref=e661]:
+                            - generic [ref=e662]: PubMed
+                            - generic [ref=e663]: "+2"
+                    - paragraph [ref=e664]:
+                      - text: この群で重要なのは、
+                      - strong [ref=e665]: 発作時には典型的なAVSではないため、HINTSが使いにくい
+                      - text: ことです。症状が消えている間欠期にHINTSをしても意味は乏しく、むしろ発作の時間経過、血管危険因子、反復パターン、TIAらしい随伴症状の評価が中心になります。GRACE-3でも、脳虚血が疑われる自発性発作性めまいでは、CTではなく
+                      - strong [ref=e666]: CTAまたはMRA
+                      - text: を考慮するよう勧めています。
+                      - link "PubMed +2 PubMed +2" [ref=e669] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29395695/
+                        - generic [ref=e670]:
+                          - generic [ref=e671]:
+                            - generic [ref=e672]: PubMed
+                            - generic [ref=e673]: "+2"
+                          - generic [ref=e674]:
+                            - generic [ref=e675]: PubMed
+                            - generic [ref=e676]: "+2"
+                    - heading "5-4. 前庭性発作症" [level=3] [ref=e677]
+                    - paragraph [ref=e678]:
+                      - text: 前庭性発作症は、
+                      - strong [ref=e679]: 非常に短く、常同的な発作
+                      - text: を多数回繰り返すのが特徴です。確実例では
+                      - strong [ref=e680]: 1分未満の発作を10回以上
+                      - text: 、疑い例では
+                      - strong [ref=e681]: 5分未満の発作を5回以上
+                      - text: が目安で、頭位や特定の頭部運動で誘発されることもあります。カルバマゼピンやオクスカルバゼピンへの反応は診断の参考になりますが、MRIで血管神経接触があるだけでは診断根拠になりません。
+                      - link "PubMed +1" [ref=e684] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28262641/
+                        - generic [ref=e686]:
+                          - generic [ref=e687]: PubMed
+                          - generic [ref=e688]: "+1"
+                    - paragraph [ref=e689]:
+                      - text: 病歴の感触としては、BPPVよりさらに短く、同じような発作を何度も繰り返し、頭位変換だけでは説明しきれない症例で疑います。BPPVが「体位変換で短い発作」なら、前庭性発作症は「
+                      - strong [ref=e690]: 極短時間・高頻度・常同的
+                      - text: 」という印象です。
+                      - link "PubMed" [ref=e693] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28262641/
+                        - generic [ref=e696]: PubMed
+                    - separator [ref=e697]
+                    - heading "6. 慢性持続性めまい：PPPD、両側前庭障害、起立性循環障害" [level=2] [ref=e698]
+                    - paragraph [ref=e699]:
+                      - text: 急性期を過ぎてもめまいが続く場合、単に「前庭神経炎のあと」「不安のせい」とまとめず、慢性めまいの主要病型を意識することが重要です。とくに
+                      - strong [ref=e700]: PPPD、両側前庭障害、起立性循環障害
+                      - text: は、病歴だけでもかなり絞り込めます。
+                      - link "PubMed +2 PubMed +2" [ref=e703] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29036855/
+                        - generic [ref=e704]:
+                          - generic [ref=e705]:
+                            - generic [ref=e706]: PubMed
+                            - generic [ref=e707]: "+2"
+                          - generic [ref=e708]:
+                            - generic [ref=e709]: PubMed
+                            - generic [ref=e710]: "+2"
+                    - heading "6-1. PPPD" [level=3] [ref=e711]
+                    - paragraph [ref=e712]:
+                      - text: PPPDは、
+                      - strong [ref=e713]: 浮動感、ふらつき、不安定感、非回転性めまい
+                      - text: のいずれかが
+                      - strong [ref=e714]: 3か月以上、ほとんど毎日
+                      - text: 続き、
+                      - strong [ref=e715]: 立位、歩行、能動・受動運動、複雑な視覚刺激
+                      - text: で悪化する病態です。前庭障害、片頭痛、内科疾患、心理的ストレスなどを契機に始まることがあり、慢性機能性前庭障害として位置づけられています。
+                      - link "PubMed +1" [ref=e718] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29036855/
+                        - generic [ref=e720]:
+                          - generic [ref=e721]: PubMed
+                          - generic [ref=e722]: "+1"
+                    - paragraph [ref=e723]:
+                      - text: 大切なのは、PPPDが**“除外した後に残る曖昧な診断名”ではなく、陽性所見で診断する病態**であることです。急性前庭障害後に症状が遷延した症例で、立位・歩行・スーパーの陳列棚や人混みなどの視覚刺激で悪化するなら、PPPDを積極的に考えます。逆に、慢性めまいをすべて不安障害として片づけるのは不適切です。
+                      - link "PubMed +1" [ref=e726] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29036855/
+                        - generic [ref=e728]:
+                          - generic [ref=e729]: PubMed
+                          - generic [ref=e730]: "+1"
+                    - heading "6-2. 両側前庭障害" [level=3] [ref=e731]
+                    - paragraph [ref=e732]:
+                      - text: 両側前庭障害では、
+                      - strong [ref=e733]: 歩行・立位での不安定感
+                      - text: が主で、
+                      - strong [ref=e734]: 暗所や不整地で悪化
+                      - text: し、**頭を動かすと視界がぶれる（oscillopsia）**ことがあります。特徴的なのは、
+                      - strong [ref=e735]: 座位や臥位でじっとしていればあまり症状がない
+                      - text: 点です。診断には両側のVOR低下の証明が必要で、vHIT、温度刺激、回転椅子などが使われます。
+                      - link "PubMed +4 PubMed +4 PubMed +4" [ref=e738] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29081426/
+                        - generic [ref=e739]:
+                          - generic [ref=e740]:
+                            - generic [ref=e741]: PubMed
+                            - generic [ref=e742]: "+4"
+                          - generic [ref=e743]:
+                            - generic [ref=e744]: PubMed
+                            - generic [ref=e745]: "+4"
+                          - generic [ref=e746]:
+                            - generic [ref=e747]: PubMed
+                            - generic [ref=e748]: "+4"
+                    - paragraph [ref=e749]:
+                      - text: 病歴では、「歩き出すと不安定」「暗いところで悪い」「視界が跳ねる」が強い手掛かりになります。PPPDのような視覚過敏はありえても、両側前庭障害では
+                      - strong [ref=e750]: 頭部運動時の動揺視
+                      - text: が前面に出る点が異なります。
+                      - link "PubMed +1" [ref=e753] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/29081426/
+                        - generic [ref=e755]:
+                          - generic [ref=e756]: PubMed
+                          - generic [ref=e757]: "+1"
+                    - heading "6-3. 起立性循環障害によるめまい" [level=3] [ref=e758]
+                    - paragraph [ref=e759]:
+                      - text: 起立性・血行動態性めまいは、
+                      - strong [ref=e760]: 立ち上がりや立位で誘発され、座る・横になると改善
+                      - text: する発作を反復し、起立性低血圧、POTS、失神傾向などが背景にある病態です。診断基準では、
+                      - strong [ref=e761]: 5回以上の発作
+                      - text: と、起立試験やtilt試験などでの循環動態異常の確認が重要です。補助所見として、脱力、疲労感、集中困難、視覚のかすみ、動悸なども参考になります。
+                      - link "PubMed +3 PubMed +3 PubMed +3" [ref=e764] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/30883381/
+                        - generic [ref=e765]:
+                          - generic [ref=e766]:
+                            - generic [ref=e767]: PubMed
+                            - generic [ref=e768]: "+3"
+                          - generic [ref=e769]:
+                            - generic [ref=e770]: PubMed
+                            - generic [ref=e771]: "+3"
+                          - generic [ref=e772]:
+                            - generic [ref=e773]: PubMed
+                            - generic [ref=e774]: "+3"
+                    - paragraph [ref=e775]:
+                      - text: めまい診療で起立性血圧・脈拍を測らないのは、かなり大きな取りこぼしになります。特に高齢者、脱水、薬剤性、自律神経障害、若年女性のPOTS疑いでは、前庭疾患だけに視野を狭めないことが重要です。
+                      - link "PubMed +2 PubMed +2" [ref=e778] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/30883381/
+                        - generic [ref=e779]:
+                          - generic [ref=e780]:
+                            - generic [ref=e781]: PubMed
+                            - generic [ref=e782]: "+2"
+                          - generic [ref=e783]:
+                            - generic [ref=e784]: PubMed
+                            - generic [ref=e785]: "+2"
+                    - separator [ref=e786]
+                    - heading "7. ベッドサイドで必ず押さえる診察" [level=2] [ref=e787]
+                    - paragraph [ref=e788]:
+                      - text: めまい診療では、問診と身体診察の質が診断精度を決めます。最低限、
+                      - strong [ref=e789]: 発作時間、誘因、発症様式、聴覚症状、片頭痛徴候、神経症状、既往歴・血管危険因子
+                      - text: を確認し、診察では
+                      - strong [ref=e790]: 自発眼振、注視眼振、head impulse test、skew、歩行・体幹、聴力、起立性バイタル
+                      - text: を系統的にみるべきです。
+                      - link "PubMed +3 PMC +3 PubMed +3" [ref=e793] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e794]:
+                          - generic [ref=e795]:
+                            - generic [ref=e796]: PubMed
+                            - generic [ref=e797]: "+3"
+                          - generic [ref=e798]:
+                            - generic [ref=e799]: PMC
+                            - generic [ref=e800]: "+3"
+                          - generic [ref=e801]:
+                            - generic [ref=e802]: PubMed
+                            - generic [ref=e803]: "+3"
+                    - paragraph [ref=e804]:
+                      - text: 実際には次のように考えると整理しやすいです。
+                      - text: まず、
+                      - strong [ref=e805]: ずっと続いているか、発作性か
+                      - text: 。続いていればAVSとして脳卒中を意識します。次に、
+                      - strong [ref=e806]: 頭位変換で毎回誘発されるか
+                      - text: 。そうならBPPVを念頭にDix-Hallpikeやsupine roll testへ進みます。発作性だが誘因がなければ、
+                      - strong [ref=e807]: 発作時間
+                      - text: で絞ります。秒単位ならBPPVや前庭性発作症、20分〜12時間ならメニエール病、5分〜72時間なら前庭性片頭痛、血管危険因子が強ければTIAを上位に置きます。慢性ならPPPD、両側前庭障害、起立性循環障害を考えます。
+                      - link "PubMed +6 PubMed +6 PubMed +6" [ref=e810] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28248609/
+                        - generic [ref=e811]:
+                          - generic [ref=e812]:
+                            - generic [ref=e813]: PubMed
+                            - generic [ref=e814]: "+6"
+                          - generic [ref=e815]:
+                            - generic [ref=e816]: PubMed
+                            - generic [ref=e817]: "+6"
+                          - generic [ref=e818]:
+                            - generic [ref=e819]: PubMed
+                            - generic [ref=e820]: "+6"
+                    - separator [ref=e821]
+                    - heading "8. 画像・検査をどう使うか" [level=2] [ref=e822]
+                    - paragraph [ref=e823]:
+                      - text: めまい診療では、検査は「何を確認したいか」が明確であるほど役に立ちます。
+                      - strong [ref=e824]: 典型的BPPVにルーチン画像は不要
+                      - text: 、
+                      - strong [ref=e825]: AVSの除外目的にCTは不適
+                      - text: 、
+                      - strong [ref=e826]: 早期MRIも陰性なら完全に安心とは言えない
+                      - text: 、という3点は特に重要です。
+                      - link "PubMed +3 PubMed +3 PubMed +3" [ref=e829] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/28248609/
+                        - generic [ref=e830]:
+                          - generic [ref=e831]:
+                            - generic [ref=e832]: PubMed
+                            - generic [ref=e833]: "+3"
+                          - generic [ref=e834]:
+                            - generic [ref=e835]: PubMed
+                            - generic [ref=e836]: "+3"
+                          - generic [ref=e837]:
+                            - generic [ref=e838]: PubMed
+                            - generic [ref=e839]: "+3"
+                    - paragraph [ref=e840]:
+                      - text: 一方で、
+                      - strong [ref=e841]: 聴覚症状がある反復めまいでは聴力検査
+                      - text: 、
+                      - strong [ref=e842]: 両側前庭障害ではVOR評価
+                      - text: 、
+                      - strong [ref=e843]: 起立性めまいでは起立試験
+                      - text: が重要です。つまり、画像より前に、病型に応じた機能評価を考えるべきです。めまい診療では「とりあえずMRI」より、
+                      - strong [ref=e844]: どの症候群かを決めてから必要な検査を選ぶ
+                      - text: 方が効率的です。
+                      - link "PubMed +3 PubMed +3 PubMed +3" [ref=e847] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/32267799/
+                        - generic [ref=e848]:
+                          - generic [ref=e849]:
+                            - generic [ref=e850]: PubMed
+                            - generic [ref=e851]: "+3"
+                          - generic [ref=e852]:
+                            - generic [ref=e853]: PubMed
+                            - generic [ref=e854]: "+3"
+                          - generic [ref=e855]:
+                            - generic [ref=e856]: PubMed
+                            - generic [ref=e857]: "+3"
+                    - separator [ref=e858]
+                    - heading "9. よくある誤り" [level=2] [ref=e859]
+                    - paragraph [ref=e860]:
+                      - text: めまい診療の誤りには、かなり共通した型があります。代表的なのは、
+                      - strong [ref=e861]: 症状の質だけで末梢性と中枢性を決めること
+                      - text: 、
+                      - strong [ref=e862]: タイミングと誘因をきちんと整理しないこと
+                      - text: 、
+                      - strong [ref=e863]: HINTSを適応外の患者に使うこと
+                      - text: 、
+                      - strong [ref=e864]: 正常CTや早期MRI陰性を過信すること
+                      - text: 、
+                      - strong [ref=e865]: 頭位めまいを全てBPPVとみなすこと
+                      - text: 、
+                      - strong [ref=e866]: 起立性評価をしないこと
+                      - text: です。これらは診断エラーの主要な落とし穴として繰り返し指摘されています。
+                      - link "PubMed +4 PubMed +4 PMC +4" [ref=e869] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/26231272/
+                        - generic [ref=e870]:
+                          - generic [ref=e871]:
+                            - generic [ref=e872]: PubMed
+                            - generic [ref=e873]: "+4"
+                          - generic [ref=e874]:
+                            - generic [ref=e875]: PubMed
+                            - generic [ref=e876]: "+4"
+                          - generic [ref=e877]:
+                            - generic [ref=e878]: PMC
+                            - generic [ref=e879]: "+4"
+                    - paragraph [ref=e880]:
+                      - text: 特に危ないのは、
+                      - text: 「若いから脳卒中ではない」
+                      - text: 「神経所見がないから末梢性」
+                      - text: 「回転性だから末梢性」
+                      - text: 「頭位で悪くなるからBPPV」
+                      - text: 「MRIが陰性だから帰してよい」
+                      - text: という短絡です。後方循環脳卒中や中枢性頭位眼振は、こうした思い込みの隙間で見逃されます。
+                      - link "PubMed +3 PubMed +3 PubMed +3" [ref=e883] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/26231272/
+                        - generic [ref=e884]:
+                          - generic [ref=e885]:
+                            - generic [ref=e886]: PubMed
+                            - generic [ref=e887]: "+3"
+                          - generic [ref=e888]:
+                            - generic [ref=e889]: PubMed
+                            - generic [ref=e890]: "+3"
+                          - generic [ref=e891]:
+                            - generic [ref=e892]: PubMed
+                            - generic [ref=e893]: "+3"
+                    - separator [ref=e894]
+                    - heading "10. 実地で使うためのまとめ" [level=2] [ref=e895]
+                    - paragraph [ref=e896]:
+                      - text: めまいの鑑別は、疾患名から入るより、
+                      - strong [ref=e897]: 症候群分類から入る
+                      - text: 方が安全で再現性があります。まず、
+                    - list [ref=e898]:
+                      - listitem [ref=e899]:
+                        - paragraph [ref=e900]:
+                          - strong [ref=e901]: 持続性か発作性か
+                      - listitem [ref=e902]:
+                        - paragraph [ref=e903]:
+                          - strong [ref=e904]: 誘発されるか自発性か
+                      - listitem [ref=e905]:
+                        - paragraph [ref=e906]:
+                          - strong [ref=e907]: 発作時間はどれくらいか
+                      - listitem [ref=e908]:
+                        - paragraph [ref=e909]:
+                          - strong [ref=e910]: 耳症状、片頭痛徴候、血管危険因子はあるか
+                      - listitem [ref=e911]:
+                        - paragraph [ref=e912]:
+                          - strong [ref=e913]: 眼振、head impulse test、skew、歩行失調はどうか
+                          - text: を順に整理します。
+                          - link "PMC +2 PubMed +2" [ref=e916] [cursor=pointer]:
+                            - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                            - generic [ref=e917]:
+                              - generic [ref=e918]:
+                                - generic [ref=e919]: PMC
+                                - generic [ref=e920]: "+2"
+                              - generic [ref=e921]:
+                                - generic [ref=e922]: PubMed
+                                - generic [ref=e923]: "+2"
+                    - paragraph [ref=e924]:
+                      - text: AVSでは、前庭神経炎を考えつつも、常に脳卒中を同時に疑います。HINTSは強力ですが、
+                      - strong [ref=e925]: AVSかつ自発眼振あり、しかも訓練を受けた診察者が行う
+                      - text: という条件が前提です。t-EVSでは、BPPVを疑ったら
+                      - strong [ref=e926]: 必ず頭位眼振を確認
+                      - text: します。s-EVSでは、
+                      - strong [ref=e927]: 時間幅と随伴症状
+                      - text: が診断の鍵で、耳症状ならメニエール病、片頭痛徴候なら前庭性片頭痛、血管危険因子やTIAらしさがあれば血管性を考えます。慢性めまいでは、PPPD、両側前庭障害、起立性循環障害を意識すると整理しやすくなります。
+                      - link "PubMed +7 PubMed +7 PubMed +7" [ref=e930] [cursor=pointer]:
+                        - /url: https://pubmed.ncbi.nlm.nih.gov/19762709/
+                        - generic [ref=e931]:
+                          - generic [ref=e932]:
+                            - generic [ref=e933]: PubMed
+                            - generic [ref=e934]: "+7"
+                          - generic [ref=e935]:
+                            - generic [ref=e936]: PubMed
+                            - generic [ref=e937]: "+7"
+                          - generic [ref=e938]:
+                            - generic [ref=e939]: PubMed
+                            - generic [ref=e940]: "+7"
+                    - paragraph [ref=e941]:
+                      - text: 結局のところ、めまい診療で最も重要なのは、
+                      - strong [ref=e942]: スキャナの前に、ベッドサイドで症候群を正しく定義すること
+                      - text: です。診断の起点を「回るか、ふわふわか」から「いつから、どのくらい、何で起こり、眼球運動がどうか」へ移すだけで、鑑別の精度は大きく上がります。
+                      - link "PMC +2 PubMed +2" [ref=e945] [cursor=pointer]:
+                        - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4522574/
+                        - generic [ref=e946]:
+                          - generic [ref=e947]:
+                            - generic [ref=e948]: PMC
+                            - generic [ref=e949]: "+2"
+                          - generic [ref=e950]:
+                            - generic [ref=e951]: PubMed
+                            - generic [ref=e952]: "+2"
+                    - separator [ref=e953]
+                    - heading "文献" [level=2] [ref=e954]
+                    - list [ref=e955]:
+                      - listitem [ref=e956]:
+                        - paragraph [ref=e957]: "Newman-Toker DE, Edlow JA. TiTrATE: A novel, evidence-based approach to diagnosing acute dizziness and vertigo. Neurol Clin. 2015;33(3):577-599,viii. doi:10.1016/j.ncl.2015.04.011."
+                      - listitem [ref=e958]:
+                        - paragraph [ref=e959]: Edlow JA, Gurley KL, Newman-Toker DE. A new diagnostic approach to the adult patient with acute dizziness. J Emerg Med. 2018;54(4):469-483. doi:10.1016/j.jemermed.2017.12.024.
+                      - listitem [ref=e960]:
+                        - paragraph [ref=e961]: "Kerber KA, Newman-Toker DE. Misdiagnosing dizzy patients: Common pitfalls in clinical practice. Neurol Clin. 2015;33(3):565-575,viii. doi:10.1016/j.ncl.2015.04.009."
+                      - listitem [ref=e962]:
+                        - paragraph [ref=e963]: "Edlow JA, Carpenter C, Akhter M, Khoujah D, Marcolini E, Meurer WJ, et al. Guidelines for reasonable and appropriate care in the emergency department 3 (GRACE-3): Acute dizziness and vertigo in the emergency department. Acad Emerg Med. 2023;30(5):442-486. doi:10.1111/acem.14728."
+                      - listitem [ref=e964]:
+                        - paragraph [ref=e965]: "Shah VP, Oliveira J E Silva L, Farah W, Seisa MO, Balla AK, Christensen A, et al. Diagnostic accuracy of the physical examination in emergency department patients with acute vertigo or dizziness: A systematic review and meta-analysis for GRACE-3. Acad Emerg Med. 2023;30(5):552-578. doi:10.1111/acem.14630."
+                      - listitem [ref=e966]:
+                        - paragraph [ref=e967]: "Shah VP, Oliveira J E Silva L, Farah W, Seisa M, Balla AK, Christensen A, et al. Diagnostic accuracy of neuroimaging in emergency department patients with acute vertigo or dizziness: A systematic review and meta-analysis for the guidelines for reasonable and appropriate care in the emergency department. Acad Emerg Med. 2023;30(5):517-530. doi:10.1111/acem.14561."
+                      - listitem [ref=e968]:
+                        - paragraph [ref=e969]: "Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: Three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510. doi:10.1161/STROKEAHA.109.551234."
+                      - listitem [ref=e970]:
+                        - paragraph [ref=e971]: "Strupp M, Bisdorff A, Furman J, Hornibrook J, Jahn K, Maire R, et al. Acute unilateral vestibulopathy/vestibular neuritis: Diagnostic criteria. J Vestib Res. 2022;32(5):389-406. doi:10.3233/VES-220201."
+                      - listitem [ref=e972]:
+                        - paragraph [ref=e973]: "Bhattacharyya N, Gubbels SP, Schwartz SR, Edlow JA, El-Kashlan H, Fife T, et al. Clinical practice guideline: Benign paroxysmal positional vertigo (update). Otolaryngol Head Neck Surg. 2017;156(3 Suppl):S1-S47. doi:10.1177/0194599816689667."
+                      - listitem [ref=e974]:
+                        - paragraph [ref=e975]: Imai T, Takeda N, Ikezono T, Shigeno K, Asai M, Watanabe Y, et al. Classification, diagnostic criteria and management of benign paroxysmal positional vertigo. Auris Nasus Larynx. 2017;44(1):1-6. doi:10.1016/j.anl.2016.03.013.
+                      - listitem [ref=e976]:
+                        - paragraph [ref=e977]: "von Brevern M, Bertholon P, Brandt T, Fife T, Imai T, Nuti D, Newman-Toker D. Benign paroxysmal positional vertigo: Diagnostic criteria. J Vestib Res. 2015;25(3-4):105-117. doi:10.3233/VES-150553."
+                      - listitem [ref=e978]:
+                        - paragraph [ref=e979]: "Lemos J, Strupp M. Central positional nystagmus: An update. J Neurol. 2022;269(4):1851-1860. doi:10.1007/s00415-021-10852-8."
+                      - listitem [ref=e980]:
+                        - paragraph [ref=e981]: "Lempert T, Olesen J, Furman J, Waterston J, Seemungal B, Carey J, et al. Vestibular migraine: Diagnostic criteria. Literature update 2021: Consensus document of the Bárány Society and the International Headache Society. J Vestib Res. 2022;32(1):1-6. doi:10.3233/VES-201644."
+                      - listitem [ref=e982]:
+                        - paragraph [ref=e983]: Lopez-Escamez JA, Carey J, Chung WH, Goebel JA, Magnusson M, Mandalà M, et al. Diagnostic criteria for Menière's disease. J Vestib Res. 2015;25(1):1-7. doi:10.3233/VES-150549.
+                      - listitem [ref=e984]:
+                        - paragraph [ref=e985]: "Basura GJ, Adams ME, Monfared A, Schwartz SR, Antonelli PJ, Burkard R, et al. Clinical practice guideline: Ménière's disease. Otolaryngol Head Neck Surg. 2020;162(2 Suppl):S1-S55. doi:10.1177/0194599820909438."
+                      - listitem [ref=e986]:
+                        - paragraph [ref=e987]: "Kim JS, Newman-Toker DE, Kerber KA, Jahn K, Bertholon P, Waterston J, Lee H, et al. Vascular vertigo and dizziness: Diagnostic criteria. J Vestib Res. 2022;32(3):205-222. doi:10.3233/VES-210169."
+                      - listitem [ref=e988]:
+                        - paragraph [ref=e989]: "Strupp M, Lopez-Escamez JA, Kim JS, Straumann D, Jen JC, Carey J, et al. Vestibular paroxysmia: Diagnostic criteria. J Vestib Res. 2016;26(5-6):409-415. doi:10.3233/VES-160589."
+                      - listitem [ref=e990]:
+                        - paragraph [ref=e991]: "Staab JP, Eckhardt-Henn A, Horii A, Jacob R, Strupp M, Brandt T, Bronstein AM. Diagnostic criteria for persistent postural-perceptual dizziness (PPPD): Consensus document of the committee for the Classification of Vestibular Disorders of the Bárány Society. J Vestib Res. 2017;27(4):191-208. doi:10.3233/VES-170622."
+                      - listitem [ref=e992]:
+                        - paragraph [ref=e993]: "Strupp M, Kim JS, Murofushi T, Straumann D, Jen JC, Rosengren SM, et al. Bilateral vestibulopathy: Diagnostic criteria consensus document of the Classification Committee of the Bárány Society. J Vestib Res. 2017;27(4):177-189. doi:10.3233/VES-170619."
+                      - listitem [ref=e994]:
+                        - paragraph [ref=e995]: "Kim HA, Bisdorff A, Bronstein AM, Lempert T, Rossi-Izquierdo M, Staab JP, et al. Hemodynamic orthostatic dizziness/vertigo: Diagnostic criteria. J Vestib Res. 2019;29(2-3):45-56. doi:10.3233/VES-190655."
+                    - paragraph [ref=e996]:
+                      - text: 必要なら次に、これを
+                      - text: 「総論＋各論＋フローチャート」形式に再構成した版、あるいは「外来初診での実践アルゴリズム」付きの版に整えます。
+                - button "情報源" [ref=e997] [cursor=pointer]:
+                  - generic [ref=e1003]: 情報源
+          - generic [ref=e1004]:
+            - button [ref=e1005] [cursor=pointer]:
+              - img [ref=e1006]
+            - generic [ref=e1011]:
+              - generic [ref=e1015]:
+                - textbox [active] [ref=e1018]:
+                  - paragraph [ref=e1019]: ChatGPT にメッセージを送信する
+                - button "ファイルの追加など" [ref=e1022] [cursor=pointer]:
+                  - img
+                - generic [ref=e1026]:
+                  - button "Pro 拡張版：クリックして削除" [ref=e1027] [cursor=pointer]:
+                    - img
+                  - button "Pro 拡張版" [ref=e1028] [cursor=pointer]:
+                    - generic:
+                      - img
+                    - generic [ref=e1029]: Pro 拡張版
+                    - img
+                - generic [ref=e1031]:
+                  - button "音声入力ボタン" [ref=e1033] [cursor=pointer]:
+                    - img
+                  - button "音声を開始する" [ref=e1037] [cursor=pointer]:
+                    - img [ref=e1038]
+              - button [ref=e1040]
+              - button [ref=e1041]
+            - generic [ref=e1045]: ChatGPT の回答は必ずしも正しいとは限りません。重要な情報は確認するようにしてください。cookie の設定を参照してください。
+  - alert [ref=e1048]
+  - status [ref=e1049]
