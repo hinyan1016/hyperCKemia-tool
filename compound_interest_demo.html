@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>複利の仕組み</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Hiragino Sans', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+.container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+h1 { text-align: center; font-size: 1.8em; margin-bottom: 8px; color: #38bdf8; }
+.subtitle { text-align: center; color: #94a3b8; margin-bottom: 24px; font-size: 0.95em; }
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; background: #1e293b; padding: 20px; border-radius: 12px; }
+.control-group label { display: block; font-size: 0.85em; color: #94a3b8; margin-bottom: 4px; }
+.control-group input { width: 100%; padding: 8px 12px; border: 1px solid #334155; border-radius: 8px; background: #0f172a; color: #e2e8f0; font-size: 1em; }
+.control-group .value-display { font-size: 0.8em; color: #38bdf8; margin-top: 2px; }
+
+.chart-area { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+canvas { width: 100%; height: 350px; display: block; }
+
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.summary-card { background: #1e293b; border-radius: 12px; padding: 16px; text-align: center; }
+.summary-card .label { font-size: 0.8em; color: #94a3b8; margin-bottom: 4px; }
+.summary-card .value { font-size: 1.5em; font-weight: bold; }
+.summary-card .value.compound { color: #38bdf8; }
+.summary-card .value.simple { color: #f59e0b; }
+.summary-card .value.diff { color: #34d399; }
+
+.table-area { background: #1e293b; border-radius: 12px; padding: 20px; overflow-x: auto; }
+.table-area h3 { margin-bottom: 12px; color: #38bdf8; font-size: 1em; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+th { background: #334155; padding: 8px 10px; text-align: right; white-space: nowrap; }
+th:first-child { text-align: center; }
+td { padding: 6px 10px; border-bottom: 1px solid #334155; text-align: right; }
+td:first-child { text-align: center; }
+tr:hover td { background: #334155; }
+.highlight { color: #34d399; font-weight: bold; }
+
+.explanation { background: #1e293b; border-radius: 12px; padding: 20px; margin-top: 24px; line-height: 1.8; }
+.explanation h3 { color: #38bdf8; margin-bottom: 12px; }
+.explanation .formula { background: #0f172a; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-family: monospace; font-size: 1.1em; text-align: center; color: #38bdf8; }
+.explanation ul { padding-left: 20px; }
+.explanation li { margin-bottom: 6px; }
+.legend { display: flex; gap: 20px; justify-content: center; margin-bottom: 8px; font-size: 0.9em; }
+.legend span { display: flex; align-items: center; gap: 6px; }
+.legend .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>💰 複利の仕組み</h1>
+  <p class="subtitle">単利と複利の違いを視覚的に理解する</p>
+
+  <div class="controls">
+    <div class="control-group">
+      <label>元本（万円）</label>
+      <input type="range" id="principal" min="10" max="1000" value="100" step="10">
+      <div class="value-display" id="principalVal">100万円</div>
+    </div>
+    <div class="control-group">
+      <label>年利率（%）</label>
+      <input type="range" id="rate" min="0.5" max="15" value="5" step="0.5">
+      <div class="value-display" id="rateVal">5.0%</div>
+    </div>
+    <div class="control-group">
+      <label>運用年数</label>
+      <input type="range" id="years" min="1" max="50" value="20" step="1">
+      <div class="value-display" id="yearsVal">20年</div>
+    </div>
+  </div>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="chart-area">
+    <div class="legend">
+      <span><span class="dot" style="background:#38bdf8"></span>複利</span>
+      <span><span class="dot" style="background:#f59e0b"></span>単利</span>
+      <span><span class="dot" style="background:rgba(52,211,153,0.3)"></span>複利の効果（差額）</span>
+    </div>
+    <canvas id="chart"></canvas>
+  </div>
+
+  <div class="table-area">
+    <h3>📊 年別推移表</h3>
+    <table id="table">
+      <thead>
+        <tr><th>年</th><th>単利（万円）</th><th>複利（万円）</th><th>差額（万円）</th><th>複利の利息</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="explanation">
+    <h3>📖 複利とは？</h3>
+    <p><strong>単利</strong>は元本にのみ利息がつきます：</p>
+    <div class="formula">単利の合計 = 元本 × (1 + 年利率 × 年数)</div>
+    <p><strong>複利</strong>は「元本＋それまでの利息」に利息がつきます：</p>
+    <div class="formula">複利の合計 = 元本 × (1 + 年利率)<sup>年数</sup></div>
+    <p style="margin-top:12px"><strong>🔑 ポイント：</strong></p>
+    <ul>
+      <li><strong>72の法則</strong> — 資産が2倍になる年数 ≈ 72 ÷ 年利率(%)。例：年利6%なら約12年。</li>
+      <li>運用期間が長いほど、複利の効果は<strong>劇的に</strong>大きくなる。</li>
+      <li>アインシュタインは複利を「人類最大の発明」と呼んだとされる（諸説あり）。</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+var principalSlider = document.getElementById('principal');
+var rateSlider = document.getElementById('rate');
+var yearsSlider = document.getElementById('years');
+var canvas = document.getElementById('chart');
+var ctx = canvas.getContext('2d');
+
+function fmt(n) {
+  return n.toFixed(1).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+function calculate() {
+  var P = parseFloat(principalSlider.value);
+  var r = parseFloat(rateSlider.value) / 100;
+  var n = parseInt(yearsSlider.value);
+
+  document.getElementById('principalVal').textContent = P + '万円';
+  document.getElementById('rateVal').textContent = (r * 100).toFixed(1) + '%';
+  document.getElementById('yearsVal').textContent = n + '年';
+
+  var simpleData = [P];
+  var compoundData = [P];
+  for (var i = 1; i <= n; i++) {
+    simpleData.push(P * (1 + r * i));
+    compoundData.push(P * Math.pow(1 + r, i));
+  }
+
+  var finalSimple = simpleData[n];
+  var finalCompound = compoundData[n];
+  var diff = finalCompound - finalSimple;
+  var rule72 = r > 0 ? (72 / (r * 100)).toFixed(1) : '∞';
+
+  // Summary cards
+  var summaryEl = document.getElementById('summary');
+  summaryEl.innerHTML =
+    '<div class="summary-card"><div class="label">複利 最終額</div><div class="value compound">' + fmt(finalCompound) + '万円</div></div>' +
+    '<div class="summary-card"><div class="label">単利 最終額</div><div class="value simple">' + fmt(finalSimple) + '万円</div></div>' +
+    '<div class="summary-card"><div class="label">複利の効果（差額）</div><div class="value diff">+' + fmt(diff) + '万円</div></div>' +
+    '<div class="summary-card"><div class="label">2倍になる年数（72の法則）</div><div class="value compound">約' + rule72 + '年</div></div>';
+
+  // Table
+  var tbody = document.querySelector('#table tbody');
+  var rows = '';
+  for (var i = 0; i <= n; i++) {
+    var s = simpleData[i];
+    var c = compoundData[i];
+    var d = c - s;
+    var interest = i === 0 ? '-' : fmt(compoundData[i] - compoundData[i - 1]) + '万円';
+    rows += '<tr>' +
+      '<td>' + i + '</td>' +
+      '<td>' + fmt(s) + '</td>' +
+      '<td>' + fmt(c) + '</td>' +
+      '<td class="highlight">+' + fmt(d) + '</td>' +
+      '<td>' + interest + '</td>' +
+      '</tr>';
+  }
+  tbody.innerHTML = rows;
+
+  // Draw chart
+  drawChart(simpleData, compoundData, n);
+}
+
+function drawChart(simpleData, compoundData, n) {
+  var dpr = window.devicePixelRatio || 1;
+  var rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  var w = rect.width;
+  var h = rect.height;
+  var padL = 70, padR = 20, padT = 20, padB = 40;
+  var cw = w - padL - padR;
+  var ch = h - padT - padB;
+
+  ctx.clearRect(0, 0, w, h);
+
+  var maxVal = compoundData[n];
+  var niceMax = Math.ceil(maxVal / (Math.pow(10, Math.floor(Math.log10(maxVal))))) * Math.pow(10, Math.floor(Math.log10(maxVal)));
+  if (niceMax < maxVal) niceMax = maxVal * 1.1;
+
+  // Grid lines
+  ctx.strokeStyle = '#334155';
+  ctx.lineWidth = 0.5;
+  ctx.font = '11px sans-serif';
+  ctx.fillStyle = '#94a3b8';
+  ctx.textAlign = 'right';
+  var gridCount = 5;
+  for (var i = 0; i <= gridCount; i++) {
+    var y = padT + ch - (ch * i / gridCount);
+    var val = (niceMax * i / gridCount);
+    ctx.beginPath();
+    ctx.moveTo(padL, y);
+    ctx.lineTo(padL + cw, y);
+    ctx.stroke();
+    ctx.fillText(fmt(val), padL - 8, y + 4);
+  }
+
+  // X axis labels
+  ctx.textAlign = 'center';
+  var xStep = n <= 10 ? 1 : n <= 25 ? 5 : 10;
+  for (var i = 0; i <= n; i += xStep) {
+    var x = padL + (cw * i / n);
+    ctx.fillText(i + '年', x, h - 8);
+  }
+
+  // Fill area between curves
+  ctx.beginPath();
+  for (var i = 0; i <= n; i++) {
+    var x = padL + (cw * i / n);
+    var y = padT + ch - (ch * compoundData[i] / niceMax);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  for (var i = n; i >= 0; i--) {
+    var x = padL + (cw * i / n);
+    var y = padT + ch - (ch * simpleData[i] / niceMax);
+    ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(52, 211, 153, 0.15)';
+  ctx.fill();
+
+  // Simple interest line
+  ctx.beginPath();
+  ctx.strokeStyle = '#f59e0b';
+  ctx.lineWidth = 2.5;
+  for (var i = 0; i <= n; i++) {
+    var x = padL + (cw * i / n);
+    var y = padT + ch - (ch * simpleData[i] / niceMax);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  // Compound interest line
+  ctx.beginPath();
+  ctx.strokeStyle = '#38bdf8';
+  ctx.lineWidth = 2.5;
+  for (var i = 0; i <= n; i++) {
+    var x = padL + (cw * i / n);
+    var y = padT + ch - (ch * compoundData[i] / niceMax);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  // End points with values
+  var lastX = padL + cw;
+  var compY = padT + ch - (ch * compoundData[n] / niceMax);
+  var simpY = padT + ch - (ch * simpleData[n] / niceMax);
+
+  ctx.fillStyle = '#38bdf8';
+  ctx.beginPath(); ctx.arc(lastX, compY, 5, 0, Math.PI * 2); ctx.fill();
+  ctx.font = 'bold 12px sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText(fmt(compoundData[n]) + '万', lastX - 60, compY - 12);
+
+  ctx.fillStyle = '#f59e0b';
+  ctx.beginPath(); ctx.arc(lastX, simpY, 5, 0, Math.PI * 2); ctx.fill();
+  ctx.fillText(fmt(simpleData[n]) + '万', lastX - 60, simpY + 20);
+}
+
+principalSlider.addEventListener('input', calculate);
+rateSlider.addEventListener('input', calculate);
+yearsSlider.addEventListener('input', calculate);
+window.addEventListener('resize', calculate);
+calculate();
+</script>
+</body>
+</html>

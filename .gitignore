@@ -9,6 +9,13 @@ package-lock.json
 Thumbs.db
 .DS_Store
 
+# Claude Code内部ファイル
+.claude/launch.json
+.claude/worktrees/
+
+# 独立リポジトリ
+medical-ddx-tools/
+
 # 一時ファイル
 *.tmp
 *.bak

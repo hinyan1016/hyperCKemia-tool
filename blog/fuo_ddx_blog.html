@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不明熱の鑑別</title>
+</head>
+<body>
+<div class="medical-article">
+<style>
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+.toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.toc-box h3 {
+    margin-top: 0;
+}
+.toc-box ul {
+    margin-bottom: 0;
+}
+.important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+.drug-table th, .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.drug-table th {
+    background: #2c5aa0;
+    color: white;
+    font-weight: bold;
+}
+.drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+.drug-table tr:hover {
+    background: #e9ecef;
+}
+.medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+.medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+.medical-details summary:hover {
+    background: #234a80;
+}
+.medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+.references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+.references h3 {
+    color: #2c5aa0;
+}
+.ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+.ref-content {
+    color: #555;
+}
+.ref-content a {
+    color: #555;
+    text-decoration: underline;
+}
+.ref-content a:hover {
+    color: #2c5aa0;
+}
+</style>
+
+<h1>不明熱（FUO）の鑑別：病型・病因群・PDCで進める実践的アプローチ</h1>
+
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#definition">1. FUOの定義と診断の3段階</a></li>
+<li><a href="#types">2. まず病型を決める — 4つの臨床カテゴリ</a></li>
+<li><a href="#causes">3. 古典型FUOの鑑別：「4本柱＋未診断」</a></li>
+<li><a href="#key-diseases">4. 特に見逃してはいけない疾患</a></li>
+<li><a href="#workup">5. 検査の進め方 — 最小セット→PDC→PET/CT→生検</a></li>
+<li><a href="#pitfalls">6. 見逃しやすいポイント</a></li>
+<li><a href="#summary">7. 実地でのまとめ</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+
+<div class="important-box">
+<strong>📋 この記事のポイント</strong><br>
+FUOの鑑別は、<strong>①まず病型を決める → ②病因群で整理する → ③PDC（potential diagnostic clues）で検査を絞る</strong>の3段階で進めるとぶれません。病名を闇雲に並べるのではなく、<strong>手がかり（PDC）が次の検査を決める</strong>という発想が最も重要です。<sup>[6][7]</sup>
+</div>
+
+<h2 id="definition">1. FUOの定義と診断の3段階</h2>
+
+<p>古典的な定義（Petersdorf-Beeson 1961<sup>[1]</sup>）は「<strong>38.3℃以上の発熱が3週間以上持続</strong>し、1週間の入院精査でも原因不明」というものです。現在は、最低限の標準検査を行っても原因がつかない状態として扱う考え方（qualitative criteria）が実用的とされています。<sup>[6][8]</sup></p>
+
+<div class="warning-box">
+<strong>⚠️ 定義によって「頻度」が変わる</strong><sup>[8]</sup><br>
+どのFUO基準を使うかで、感染症の割合や未診断の割合が変動します。頻度データを読むときは、<strong>時代と定義を確認する</strong>必要があります。
+</div>
+
+<h2 id="types">2. まず病型を決める — 4つの臨床カテゴリ</h2>
+
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">病型</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">特徴</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">優先して考える原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>古典型FUO</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">免疫能がおおむね保たれた患者</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">感染症・炎症性疾患・悪性腫瘍を<strong>同じ重み</strong>で並べる</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>院内発熱</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">入院後に出現した発熱</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">薬剤熱、深部膿瘍、<em>C. difficile</em>、PE、カテーテル感染、輸血反応</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>好中球減少</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">感染症最優先の緊急病態</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">菌血症、侵襲性真菌症（72-96h以上の持続発熱）、カテーテル感染</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>HIV関連</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">CD4数・ART状況で鑑別が変動</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">結核（最重要）、NTM、PCP、クリプトコックス、CMV、リンパ腫</td>
+</tr>
+</tbody>
+</table>
+
+<p>2025年のメタ解析<sup>[11]</sup>では、HIV関連FUOの原因は細菌感染が最多で、個別疾患では<strong>結核の比重が最も大きい</strong>と報告されています。</p>
+
+<h2 id="causes">3. 古典型FUOの鑑別：「4本柱＋未診断」</h2>
+
+<h3>感染症</h3>
+
+<div class="emergency-box">
+<strong>🚨 外してはいけない感染症</strong><sup>[4][6]</sup><br>
+・<strong>結核</strong>（とくに肺外・播種性）<br>
+・<strong>感染性心内膜炎</strong>（培養陰性を含む）<br>
+・深部膿瘍 ・骨/関節感染 ・複雑性尿路感染
+</div>
+
+<p>曝露歴に応じて追加すべき感染症：<sup>[6]</sup></p>
+
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">曝露歴</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">追加すべき鑑別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">動物接触</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>Bartonella</strong>（猫）、<strong>Brucella</strong>（家畜）、<strong>Coxiella</strong>（Q熱）</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">性行動・HIV</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">急性HIV、梅毒</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">渡航歴</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">マラリア、デング熱、リケッチア症、腸チフス、レプトスピラ症</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">食品摂取</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>Salmonella</strong>、A/B/E型肝炎</td>
+</tr>
+</tbody>
+</table>
+
+<h3>悪性腫瘍</h3>
+
+<p>中心は<strong>リンパ腫</strong>と<strong>白血病</strong>です。次いで骨髄異形成症候群、腎細胞癌、多発性骨髄腫、Castleman病などを考えます。FUOの悪性腫瘍は、はっきりした腫瘤よりも<strong>炎症反応上昇、LDH高値、肝脾腫、血球異常</strong>で気づくことが少なくありません。<sup>[6]</sup></p>
+
+<h3>非感染性炎症性疾患</h3>
+
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">疾患</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">手がかり</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>成人Still病</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">弛張熱（≥39℃）、サーモンピンク疹、関節痛、咽頭痛、著明な<strong>フェリチン上昇</strong></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>PMR / 巨細胞性動脈炎</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">高齢者、ESR高値、肩・腰帯の痛み、頭痛、顎跛行</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>SLE</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">若年女性、皮疹、関節痛、血球減少、蛋白尿</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>血管炎</strong>（GPA, PAN等）</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">多臓器障害、ANCA、皮膚/腎/肺の同時病変</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>サルコイドーシス</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">両側肺門リンパ節腫脹、ACE高値、皮膚/眼病変</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>炎症性腸疾患</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">腹痛、下痢、血便、体重減少</td>
+</tr>
+</tbody>
+</table>
+
+<p>日本の前向き研究<sup>[5]</sup>では、FUOの最多原因は<strong>非感染性炎症性疾患</strong>でした。年齢が高いほどPMR/巨細胞性動脈炎の重みは増します。</p>
+
+<h3>その他</h3>
+
+<p>見落としやすい原因：<strong>薬剤熱</strong>、PE/DVT、亜急性甲状腺炎、甲状腺機能亢進症、副腎不全、血腫、Kikuchi病、<strong>HLH/MAS</strong>、自己炎症性・周期性発熱症候群、詐病性発熱<sup>[6]</sup></p>
+
+<div class="warning-box">
+<strong>⚠️ 薬剤熱の原因薬</strong><sup>[6]</sup><br>
+抗菌薬、NSAIDs、アロプリノール、抗不整脈薬、第一世代抗てんかん薬、抗うつ薬<br>
+→ 薬剤熱は除外診断ではなく、<strong>薬剤歴の系統的確認</strong>が最も重要
+</div>
+
+<h3>未診断</h3>
+
+<p>未診断で終わる例は珍しくありません。前向き研究では約2〜5割が最終的に未診断であり、日本の前向き研究<sup>[5]</sup>でも6か月時点で<strong>21.3%</strong>が未診断でした。未診断例の多くは転帰が比較的良好ですが、再燃や後から診断がつく例もあるため、<strong>追跡で病歴と身体所見を取り直す</strong>ことが重要です。<sup>[7][8]</sup></p>
+
+<h2 id="key-diseases">4. 特に見逃してはいけない疾患</h2>
+
+<details class="medical-details">
+<summary>培養陰性心内膜炎 — FUOの重要な原因（クリックして展開）</summary>
+<div class="medical-details-content">
+<p>感染性心内膜炎の約<strong>20%</strong>は血液培養陰性です。FUOの精査で見逃されやすい重要な原因です。</p>
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">原因微生物</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">頻度（BCNE中）</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">手がかり</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong><em>Coxiella burnetii</em></strong>（Q熱）</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">37〜48%</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">家畜接触歴、抗phase I IgG ≥1:800</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong><em>Bartonella</em> spp.</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">12〜28%</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">猫との接触、ホームレス（B. quintana）</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">HACEK群</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">まれ</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">歯科治療歴、培養の延長で検出可能なことも</td>
+</tr>
+</tbody>
+</table>
+<p>診断：<strong>血液培養3セット</strong>に加え、<strong>血清学的検査</strong>（Coxiella、Bartonella）と<strong>心エコー</strong>（経食道を含む）が鍵です。<sup>[4][6]</sup></p>
+</div>
+</details>
+
+<details class="medical-details">
+<summary>成人Still病（AOSD） — Yamaguchi基準（クリックして展開）</summary>
+<div class="medical-details-content">
+<p>FUO症例の<strong>5〜10%</strong>を占めるとされます。診断には<strong>大項目2つ以上を含む計5項目以上</strong>が必要です（感度93%）。ただし<strong>除外診断</strong>が前提であり、感染症・悪性腫瘍・他の膠原病を除外してから判断します。</p>
+<p><strong>大項目：</strong>①39℃以上の弛張熱が1週間以上 ②関節痛が2週間以上 ③非掻痒性サーモンピンク疹 ④顆粒球増多（≥10,000/μL）</p>
+<p><strong>小項目：</strong>咽頭痛、リンパ節腫脹、肝脾腫、肝機能異常、RF・ANA陰性</p>
+<p><strong>フェリチン著明高値</strong>（>1,000 ng/mL以上、時に>10,000）は非常に強い手がかりです。<sup>[6]</sup></p>
+</div>
+</details>
+
+<details class="medical-details">
+<summary>HLH/MAS — HScoreによるスクリーニング（クリックして展開）</summary>
+<div class="medical-details-content">
+<p>血球貪食性リンパ組織球症（HLH）/ マクロファージ活性化症候群（MAS）は、FUOの精査中に鑑別として浮上する重要な病態です。</p>
+<p><strong>HScore ≥168</strong>で感度100%、特異度94%と報告されています。以下の9項目で構成されます：</p>
+<ul>
+<li>基礎免疫不全、発熱（≥38.4℃）、肝脾腫</li>
+<li>血球減少（1〜3系統）</li>
+<li><strong>フェリチン上昇</strong>（≥2,000で強く示唆）</li>
+<li>トリグリセリド上昇、フィブリノゲン低下</li>
+<li>AST上昇、骨髄の血球貪食像</li>
+</ul>
+<p>FUOで<strong>著明なフェリチン上昇＋血球減少＋肝脾腫</strong>を見たら、HLH/MASを積極的に疑います。<sup>[6]</sup></p>
+</div>
+</details>
+
+<h2 id="workup">5. 検査の進め方 — 最小セット→PDC→PET/CT→生検</h2>
+
+<h3>最低限そろえる検査</h3>
+
+<div class="important-box">
+<strong>📋 FUOの最小検査セット</strong><sup>[6][7]</sup><br>
+・<strong>CBC分画</strong>、包括的生化学（Ca・肝機能を含む）<br>
+・<strong>ESR、CRP、フェリチン</strong><br>
+・<strong>血液培養3セット</strong><br>
+・尿検査/尿培養<br>
+・結核検査（<strong>TST or IGRA</strong>）<br>
+・<strong>HIV 1/2検査</strong><br>
+・画像：可能なら<strong>胸腹骨盤CT</strong>を早期に（困難なら胸部X線＋腹部超音波）
+</div>
+
+<h3>PDCがある場合</h3>
+
+<p>その臓器・病態に寄せて検査を追加します。PDC（potential diagnostic clues）を拾うために、以下を<strong>繰り返して</strong>確認します：<sup>[6][7]</sup></p>
+
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">PDCの源泉</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">具体的に確認する項目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>病歴の再聴取</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">薬剤、デバイス、手術/処置、渡航、動物接触、職業曝露、性行動、歯科治療歴、家族歴</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>身体診察の繰り返し</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">皮疹、粘膜、リンパ節、肝脾、眼底、心雑音、側頭動脈、関節、脊椎叩打痛</td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>基本検査の再評価</strong></td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">血液塗抹、LDH、フェリチン、蛋白分画、末梢血フローサイトメトリー</td>
+</tr>
+</tbody>
+</table>
+
+<h3>PDCが乏しい場合 → PET/CT</h3>
+
+<div class="important-box">
+<strong>📋 <sup>18</sup>F-FDG PET/CTの位置づけ</strong><sup>[9]</sup><br>
+・最小検査の後に<strong>早期に考慮</strong>すべき検査<br>
+・メタ解析での感度：<strong>84〜86%</strong>、診断寄与：<strong>55〜75%</strong>（研究により幅がある）<br>
+・従来のCTより<strong>30%以上</strong>高い診断yield<br>
+・<strong>生検部位の決定</strong>にも有用<br>
+・ただしPET/CT正常でも、孤立性側頭動脈病変は否定しきれない<sup>[6]</sup>
+</div>
+
+<h3>生検が必要な場合</h3>
+
+<p>PDCまたはPET/CTで標的を決めて生検するのが原則です。骨髄、リンパ節、肝、肺、皮膚、骨病変、側頭動脈など、<strong>当たりそうな場所を狙い撃ち</strong>します。<sup>[6][9]</sup></p>
+
+<h2 id="pitfalls">6. 見逃しやすいポイント</h2>
+
+<table class="drug-table" style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.95rem;border:1px solid #ddd;">
+<thead>
+<tr>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">落とし穴</th>
+<th style="background-color:#2c5aa0;color:#fff;padding:12px;text-align:left;font-weight:bold;border:1px solid #ddd;">正しいアプローチ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">CRPだけで切る</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">日本の前向き研究ではCRPに有意差なし、<strong>ESRが診断に寄与</strong><sup>[5]</sup></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">地域差を考慮しない</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">西太平洋＝炎症性疾患多い、東南アジア＝感染症多い<sup>[7]</sup></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">PDCなしに血清検査を増やす</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;"><strong>標準化した最小検査＋標的検査</strong>の方が実用的<sup>[6][7]</sup></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">安定した古典型FUOで早すぎる経験的治療</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">経験的抗菌薬/ステロイドは<strong>診断の糸口を消す</strong>。例外は好中球減少・重症<sup>[6][10]</sup></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">薬剤歴を確認しない</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">薬剤熱はFUOの重要な「その他」原因。<strong>系統的な薬剤確認</strong>が必須<sup>[6]</sup></td>
+</tr>
+<tr>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">身体診察を1回で終わらせる</td>
+<td style="padding:12px;border:1px solid #ddd;text-align:left;">FUOの診察は<strong>繰り返し行う</strong>ことでPDCが拾える<sup>[6][7]</sup></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="summary">7. 実地でのまとめ</h2>
+
+<div class="important-box">
+<strong>📋 FUO鑑別の実践フレーム</strong><sup>[4][5][6][7][9]</sup><br>
+<strong>Step 1:</strong> 病型を決める（古典型 / 院内 / 好中球減少 / HIV関連）<br>
+<strong>Step 2:</strong> 5群で機械的に並べる（感染症 / 悪性腫瘍 / 炎症性疾患 / その他 / 未診断）<br>
+<strong>Step 3:</strong> 最小検査セットを実施する<br>
+<strong>Step 4:</strong> PDCがあれば → 標的検査へ<br>
+　　　 PDCが乏しければ → <strong>早期PET/CT</strong>へ<br>
+<strong>Step 5:</strong> PET/CTで標的が見えたら → <strong>狙い撃ち生検</strong><br>
+<strong>Step 6:</strong> 原因不明でも探索を止めず、<strong>病歴・身体所見を繰り返して取り直す</strong>
+</div>
+
+<p>古典型FUOで特に重要な疾患は：<strong>結核、感染性心内膜炎（培養陰性を含む）、深部膿瘍、リンパ腫、成人Still病、巨細胞性動脈炎/PMR、薬剤熱、HLH/MAS</strong>です。<sup>[4][5][6]</sup></p>
+
+<div class="references">
+<h3 id="references">参考文献</h3>
+
+<div class="ref-item">
+<span class="ref-numbers">1</span>
+<span class="ref-content"><a href="https://doi.org/10.1097/00005792-196102000-00001" target="_blank" rel="noopener">Petersdorf RG, Beeson PB. Fever of unexplained origin: report on 100 cases. Medicine (Baltimore). 1961;40:1-30.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">2</span>
+<span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/1651090/" target="_blank" rel="noopener">Durack DT, Street AC. Fever of unknown origin — reexamined and redefined. Curr Clin Top Infect Dis. 1991;11:35-51.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">3</span>
+<span class="ref-content"><a href="https://doi.org/10.1097/00005792-199711000-00002" target="_blank" rel="noopener">de Kleijn EM, Vandenbroucke JP, van der Meer JW. Fever of unknown origin (FUO). I. A prospective multicenter study of 167 patients with FUO, using fixed epidemiologic entry criteria. Medicine (Baltimore). 1997;76(6):392-400.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">4</span>
+<span class="ref-content"><a href="https://doi.org/10.1097/MD.0b013e31802bafc1" target="_blank" rel="noopener">Bleeker-Rovers CP, Vos FJ, de Kleijn EM, Mudde AH, Dofferhoff TS, Richter C, et al. A prospective multicenter study on fever of unknown origin: the yield of a structured diagnostic protocol. Medicine (Baltimore). 2007;86(1):26-38.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">5</span>
+<span class="ref-content"><a href="https://doi.org/10.1136/bmjopen-2019-032059" target="_blank" rel="noopener">Naito T, Tanei M, Ikeda N, Ishihara M, Baba Y, Omae Y, et al. Key diagnostic characteristics of fever of unknown origin in Japanese patients: a prospective multicentre study. BMJ Open. 2019;9(11):e032059.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">6</span>
+<span class="ref-content"><a href="https://doi.org/10.1093/ofid/ofaa132" target="_blank" rel="noopener">Wright WF, Auwaerter PG. Fever and fever of unknown origin: review, recent advances, and lingering dogma. Open Forum Infect Dis. 2020;7(5):ofaa132.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">7</span>
+<span class="ref-content"><a href="https://doi.org/10.1001/jamanetworkopen.2022.15000" target="_blank" rel="noopener">Wright WF, Betz JF, Auwaerter PG. Prospective studies comparing structured vs nonstructured diagnostic protocol evaluations among patients with fever of unknown origin: a systematic review and meta-analysis. JAMA Netw Open. 2022;5(6):e2215000.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">8</span>
+<span class="ref-content"><a href="https://doi.org/10.1016/j.amjmed.2024.07.024" target="_blank" rel="noopener">Wright WF, Wang J, Auwaerter PG. Fever of unknown origin (FUO) criteria influences diagnostic outcomes: a systematic review and meta-analysis. Am J Med. 2024;137(12):1246-1254.e6.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">9</span>
+<span class="ref-content"><a href="https://doi.org/10.1016/j.amjmed.2024.04.007" target="_blank" rel="noopener">Buchrits S, McNeil R, Avni T, Fredman D, Guz D, Gafter-Gvili A. The contribution of 18F FDG PET-CT for the investigation of fever of unknown origin and inflammation of unknown origin. Am J Med. 2024;137(7):629-639.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">10</span>
+<span class="ref-content"><a href="https://doi.org/10.1016/j.lanepe.2025.101214" target="_blank" rel="noopener">Sandherr M, Stemler J, Schalk E, et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur. 2025;51:101214.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">11</span>
+<span class="ref-content"><a href="https://doi.org/10.1111/hiv.13773" target="_blank" rel="noopener">Copaja-Corzo C, Ticona-Tiña D, Caira-Chuquineyra B, Fernandez-Guzman D. Aetiology of fever of unknown origin in people living with HIV: a systematic review and meta-analysis. HIV Med. 2025;26(10):1493-1504.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">12</span>
+<span class="ref-content"><a href="https://link.springer.com/article/10.1007/s00259-024-06732-8" target="_blank" rel="noopener">EANM consensus document on the use of [18F]FDG PET/CT in fever and inflammation of unknown origin. Eur J Nucl Med Mol Imaging. 2024.</a></span>
+</div>
+
+</div>
+
+<div class="important-box" style="margin-top:2rem;text-align:center;">
+<p style="margin-bottom:8px;">🔧 本記事の内容をインタラクティブに使える鑑別ツールを公開しています</p>
+<a href="https://hinyan1016.github.io/medical-ddx-tools/fuo.html" target="_blank" rel="noopener" style="display:inline-block;background:#2c5aa0;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;font-weight:bold;">不明熱（FUO）鑑別診断ツールを使う →</a>
+</div>
+
+</div>
+</body>
+</html>

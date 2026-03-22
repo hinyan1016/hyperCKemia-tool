@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>正座から立ち上がると、なぜクラッとするのか</title>
+</head>
+<body>
+<div class="medical-article">
+<style>
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.toc-box h3 {
+    margin-top: 0;
+}
+
+.toc-box ul {
+    margin-bottom: 0;
+}
+
+.important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.references h3 {
+    color: #2c5aa0;
+}
+
+.ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.ref-content {
+    color: #555;
+}
+</style>
+
+<h1>正座から立ち上がると、なぜクラッとするのか ― 立ちくらみが起こる理由と、気をつけたいサイン</h1>
+
+<!-- 目次ボックス -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#conclusion">まず結論</a></li>
+<li><a href="#mechanism">体の中では何が起きているのか</a></li>
+<li><a href="#seiza">正座だと、なぜ起こりやすいのか</a></li>
+<li><a href="#risk-factors">どんなときに起こりやすいのか</a></li>
+<li><a href="#prevention">自分でできる予防法</a></li>
+<li><a href="#first-aid">立ちくらみが起きたときの対処</a></li>
+<li><a href="#anemia">「立ちくらみ」と「貧血」は同じではない</a></li>
+<li><a href="#red-flags">こんなときは受診を考えたい</a></li>
+<li><a href="#summary">まとめ</a></li>
+</ul>
+</div>
+
+<p>畳の上でしばらく正座をしていて、立ち上がった瞬間に「クラッ」とした経験はないでしょうか。</p>
+
+<p>これは珍しいことではありません。立ち上がったときに血圧が一時的に下がり、頭に届く血液が少し減ることで起こる立ちくらみは、健康な人にも起こります。医学ではこうした状態を<strong>「起立性低血圧」</strong>と呼びますが、むずかしく考えず、「立ったときに一時的に血圧が下がること」と捉えるとわかりやすいです。<sup>[1][2]</sup></p>
+
+<!-- 総合インフォグラフィック -->
+<!-- ※はてなブログ投稿時：orthostatic_mechanism.png をフォトライフにアップロードし、下記srcを差し替えてください -->
+<div style="margin:24px 0;text-align:center;">
+<img src="orthostatic_mechanism.png" alt="正座から立ち上がるとなぜクラッとするのか：起立性低血圧のメカニズム、正座で起こりやすい理由、リスク要因、予防法、対処法、受診サインの総合図解" style="max-width:600px;width:100%;height:auto;border-radius:8px;">
+</div>
+
+<!-- まず結論 -->
+<h2 id="conclusion">まず結論</h2>
+
+<div class="important-box">
+<strong>📋 ポイント</strong><br>
+正座から急に立つと、立ちくらみは起こりやすくなります。
+</div>
+
+<p>理由は、立ち上がるだけでも血液が下半身に集まりやすいのに加えて、正座のように膝を深く曲げた姿勢では、脚から心臓へ戻る血の流れが少し悪くなりやすいからです。しゃがんだ姿勢から立つと、最初の数秒で血圧が大きく下がりやすいことが知られており<sup>[3]</sup>、膝を深く曲げる姿勢で脚の<strong>静脈還流</strong>が妨げられやすいことも報告されています<sup>[4]</sup>。正座は、こうした変化が起こりやすい姿勢のひとつと考えてよいでしょう。</p>
+
+<!-- 体の中では何が起きているのか -->
+<h2 id="mechanism">体の中では何が起きているのか</h2>
+
+<p>人が寝ているときや座っているときは、血液は比較的まんべんなく全身を回っています。ところが立ち上がると、重力のために血液の一部が脚やお腹のほうへ下がりやすくなります。すると心臓に戻る血液が減り、一時的に血圧が下がります。</p>
+
+<p>ふつうは、体がすぐにそれを感じ取り、<strong>心臓を少し速く動かしたり、血管を引き締めたり</strong>して立て直します。ところが、この立て直しが一瞬遅れると、頭に行く血液が少し減り、<strong>めまい、ふらつき、目の前が暗くなる感じ</strong>が出ます。これが立ちくらみの正体です。<sup>[2]</sup></p>
+
+<!-- 模式図（SVGフォールバック版）：受診フローチャートは記事下部に残す -->
+
+<!--
+以下はSVGフォールバック版（画像が使えない場合に有効化してください）
+<div style="margin:24px 0;text-align:center;">
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="max-width:600px;width:100%;height:auto;background:#fff;border:1px solid #dee2e6;border-radius:8px;">
+  <text x="350" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5aa0" font-family="sans-serif">起立性低血圧のメカニズム</text>
+  <!-- 左：座位 -->
+  <g transform="translate(120,60)">
+    <text x="50" y="0" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c5aa0" font-family="sans-serif">座っているとき</text>
+    <!-- 頭 -->
+    <circle cx="50" cy="35" r="18" fill="#fde8d0" stroke="#2c5aa0" stroke-width="1.5"/>
+    <!-- 体 -->
+    <rect x="30" y="55" width="40" height="70" rx="8" fill="#d6e9f8" stroke="#2c5aa0" stroke-width="1.5"/>
+    <!-- 脚（座位） -->
+    <rect x="25" y="125" width="20" height="55" rx="6" fill="#d6e9f8" stroke="#2c5aa0" stroke-width="1.5"/>
+    <rect x="55" y="125" width="20" height="55" rx="6" fill="#d6e9f8" stroke="#2c5aa0" stroke-width="1.5"/>
+    <!-- 血液分布（均等） 赤い丸で表現 -->
+    <circle cx="50" cy="35" r="5" fill="#e74c3c" opacity="0.7"/>
+    <circle cx="42" cy="75" r="5" fill="#e74c3c" opacity="0.7"/>
+    <circle cx="58" cy="90" r="5" fill="#e74c3c" opacity="0.7"/>
+    <circle cx="35" cy="145" r="4" fill="#e74c3c" opacity="0.7"/>
+    <circle cx="65" cy="150" r="4" fill="#e74c3c" opacity="0.7"/>
+    <!-- ラベル -->
+    <text x="50" y="210" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">血液が全身に</text>
+    <text x="50" y="225" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">均等に分布</text>
+    <!-- 脳への血流OK -->
+    <path d="M 50 17 L 50 5" stroke="#e74c3c" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)"/>
+    <text x="50" y="-3" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold" font-family="sans-serif">脳血流 OK</text>
+  </g>
+  <!-- 矢印（中央・右向き） -->
+  <g transform="translate(270,130)">
+    <polygon points="0,12 0,28 60,28 60,40 120,20 60,0 60,12" fill="#2c5aa0" opacity="0.8"/>
+    <text x="60" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c5aa0" font-family="sans-serif">立ち上がる</text>
+  </g>
+  <!-- 右：立位 -->
+  <g transform="translate(470,40)">
+    <text x="50" y="0" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b" font-family="sans-serif">立ち上がった直後</text>
+    <!-- 頭（やや薄い色 = 血流低下） -->
+    <circle cx="50" cy="35" r="18" fill="#fde8d0" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- 体 -->
+    <rect x="30" y="55" width="40" height="80" rx="8" fill="#d6e9f8" stroke="#2c5aa0" stroke-width="1.5"/>
+    <!-- 脚（立位・長め） -->
+    <rect x="28" y="135" width="18" height="80" rx="6" fill="#f5b7b1" stroke="#c0392b" stroke-width="1.5"/>
+    <rect x="54" y="135" width="18" height="80" rx="6" fill="#f5b7b1" stroke="#c0392b" stroke-width="1.5"/>
+    <!-- 血液分布（下半身に集中） -->
+    <circle cx="50" cy="35" r="3" fill="#e74c3c" opacity="0.25"/>
+    <circle cx="45" cy="85" r="4" fill="#e74c3c" opacity="0.5"/>
+    <circle cx="37" cy="160" r="6" fill="#e74c3c" opacity="0.9"/>
+    <circle cx="63" cy="155" r="6" fill="#e74c3c" opacity="0.9"/>
+    <circle cx="37" cy="185" r="6" fill="#e74c3c" opacity="0.9"/>
+    <circle cx="63" cy="180" r="6" fill="#e74c3c" opacity="0.9"/>
+    <circle cx="37" cy="200" r="5" fill="#e74c3c" opacity="0.8"/>
+    <circle cx="63" cy="202" r="5" fill="#e74c3c" opacity="0.8"/>
+    <!-- 下向き矢印（血液移動） -->
+    <path d="M 50 110 L 50 140" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+    <path d="M 42 115 L 36 148" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 58 115 L 64 148" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- ラベル -->
+    <text x="110" y="170" text-anchor="start" font-size="10" fill="#c0392b" font-family="sans-serif">重力で血液が</text>
+    <text x="110" y="184" text-anchor="start" font-size="10" fill="#c0392b" font-family="sans-serif">下半身に集中</text>
+    <!-- 脳血流低下 -->
+    <text x="50" y="-3" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold" font-family="sans-serif">脳血流 ↓↓</text>
+    <line x1="25" y1="20" x2="75" y2="20" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- めまいマーク -->
+    <text x="82" y="30" font-size="14" fill="#f39c12" font-family="sans-serif">💫</text>
+  </g>
+  <!-- 矢印マーカー定義 -->
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <!-- 下部の説明 -->
+  <text x="350" y="320" text-anchor="middle" font-size="11" fill="#888" font-family="sans-serif">立つと血液が重力で脚に集まり → 脳への血流が一時的に減少 → クラッとする</text>
+</svg>
+</div>
+-->
+
+<!-- 正座だと、なぜ起こりやすいのか -->
+<h2 id="seiza">正座だと、なぜ起こりやすいのか</h2>
+
+<p>正座は、膝を深く曲げたまま、しばらく脚をあまり動かさない姿勢です。この姿勢では、脚から心臓へ戻る血の流れが弱くなりやすくなります。そこから急に立つと、もともとの「立ち上がりによる血圧低下」に、正座で起きていた脚の血流変化が重なります。さらに、立った直後は、<strong>ふくらはぎの筋肉</strong>がまだ十分に働いておらず、血液を上へ押し戻す助けも追いつきません。</p>
+
+<p>そのため、最初の数秒でクラッとしやすくなるのです。こうした短時間の強い立ちくらみは、若い人でも起こりうる、ごくありふれた現象として知られています。<sup>[3][4]</sup></p>
+
+<!-- どんなときに起こりやすいのか -->
+<h2 id="risk-factors">どんなときに起こりやすいのか</h2>
+
+<p>立ちくらみは、体調や生活の条件で強くなります。とくに起こりやすいのは以下のような場面です。</p>
+
+<ul>
+<li><strong>水分が足りないとき</strong></li>
+<li>汗をたくさんかいたあと</li>
+<li>暑い場所にいたあと</li>
+<li>長く座っていたあと</li>
+<li>朝起きてすぐ</li>
+</ul>
+
+<p>年齢を重ねると、立ち上がったときの血圧の立て直しが遅くなりやすくなります。</p>
+
+<div class="warning-box">
+<strong>⚠️ 薬剤の影響にも注意</strong><br>
+<strong>血圧の薬</strong>、<strong>利尿薬</strong>、<strong>パーキンソン病の薬</strong>、一部の<strong>向精神薬</strong>などで起こりやすくなることがあります。背景に<strong>心臓の病気</strong>、<strong>糖尿病</strong>、<strong>神経の病気</strong>などが隠れていることもあります。<sup>[2][5][6]</sup>
+</div>
+
+<!-- 自分でできる予防法 -->
+<h2 id="prevention">自分でできる予防法</h2>
+
+<div class="important-box">
+<strong>📋 いちばん大事なこと</strong><br>
+いきなり立たないこと。
+</div>
+
+<p>正座のあとに立つときは、急に立ち上がるのではなく、以下の手順がおすすめです。</p>
+
+<ol>
+<li>まず上体を少し起こす</li>
+<li>足の指や足首を動かす</li>
+<li><strong>ふくらはぎに軽く力を入れる</strong></li>
+<li>ゆっくり立つ</li>
+<li>立ったらすぐ歩き出さず、<strong>数秒待ってふらつきがないか確認する</strong></li>
+</ol>
+
+<!-- 模式図2：正座から安全に立ち上がるステップ -->
+<!-- ※はてなブログ投稿時：orthostatic_steps.png をフォトライフにアップロードし、下記srcを差し替えてください -->
+<div style="margin:24px 0;text-align:center;">
+<img src="orthostatic_steps.png" alt="正座から安全に立ち上がる5ステップ：1.上体を起こす 2.足首を動かす 3.ふくらはぎに力を入れる（最重要） 4.ゆっくり立つ 5.数秒待って確認" style="max-width:650px;width:100%;height:auto;border-radius:8px;">
+</div>
+
+<p>水分をこまめにとること、暑い環境で無理をしないこと、長く同じ姿勢を続けないことも役立ちます。医療機関でも、立つ前に足を動かす、ゆっくり体勢を変える、立ったあとに足踏みする、といった工夫が勧められています。<sup>[7][6]</sup></p>
+
+<!-- 立ちくらみが起きたときの対処 -->
+<h2 id="first-aid">立ちくらみが起きたときの対処</h2>
+
+<p>実際にクラッとしたら、まず大切なのは<strong>転ばないこと</strong>です。</p>
+
+<ul>
+<li>無理に歩かず、その場で<strong>しゃがむ</strong>、<strong>座る</strong></li>
+<li>近くの机や壁につかまる</li>
+<li>できれば<strong>横になる</strong></li>
+</ul>
+
+<p>これだけでも頭への血液は戻りやすくなります。症状が治まる前に歩き出すと、転んでけがをする危険があります。</p>
+
+<p>立ちくらみが起こりやすい人は、立つ前に「足首を動かす」「脚に軽く力を入れる」「ゆっくり立つ」を毎回の習慣にするだけでも、かなり楽になることがあります。<sup>[7][6]</sup></p>
+
+<!-- 「立ちくらみ」と「貧血」は同じではない -->
+<h2 id="anemia">「立ちくらみ」と「貧血」は同じではない</h2>
+
+<p>立ちくらみのことを<strong>「脳貧血」</strong>と呼ぶことがありますが、ここでいう"貧血"は、血液の成分が足りない本当の<strong>貧血</strong>とは別です。</p>
+
+<p>立ちくらみは、立ち上がったときに一時的に頭へ行く血液が減ることで起こります。もちろん、本当の貧血があるとふらつきやすくなることはありますが、正座のあとに立った瞬間のクラッと感の多くは、まず<strong>血圧の変化</strong>で説明できます。<sup>[1]</sup></p>
+
+<!-- こんなときは受診を考えたい -->
+<h2 id="red-flags">こんなときは受診を考えたい</h2>
+
+<p>軽い立ちくらみが数秒でおさまるなら、まずは生活の工夫で改善することも少なくありません。</p>
+
+<div class="emergency-box">
+<strong>🚨 以下の場合は医療機関への相談を</strong><br>
+<ul style="margin-bottom:0;">
+<li>何度も繰り返す</li>
+<li>実際に<strong>失神した</strong></li>
+<li>転んだ</li>
+<li>症状が長引く</li>
+</ul>
+</div>
+
+<p>背景に、脱水だけでなく、<strong>心臓の病気</strong>、<strong>ホルモンの異常</strong>、<strong>神経の病気</strong>、<strong>薬の影響</strong>などが隠れていることがあります。頻繁に起こるなら、一度医療機関で相談してみてください。<sup>[2]</sup></p>
+
+<!-- 模式図3：受診の目安フローチャート -->
+<div style="margin:24px 0;text-align:center;">
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;height:auto;background:#fff;border:1px solid #dee2e6;border-radius:8px;">
+  <text x="300" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c5aa0" font-family="sans-serif">立ちくらみ ― 受診の目安</text>
+  <!-- 起点 -->
+  <rect x="200" y="45" width="200" height="36" rx="18" fill="#2c5aa0"/>
+  <text x="300" y="68" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold" font-family="sans-serif">立ちくらみが起きた</text>
+  <!-- 分岐矢印 -->
+  <line x1="240" y1="81" x2="140" y2="115" stroke="#27ae60" stroke-width="2"/>
+  <line x1="360" y1="81" x2="460" y2="115" stroke="#c0392b" stroke-width="2"/>
+  <!-- 左：軽症 -->
+  <rect x="40" y="115" width="200" height="80" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="140" y="138" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60" font-family="sans-serif">数秒でおさまる場合</text>
+  <text x="140" y="157" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・一時的で繰り返さない</text>
+  <text x="140" y="173" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・すぐに回復する</text>
+  <text x="140" y="189" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・意識ははっきりしている</text>
+  <!-- 左の結論 -->
+  <line x1="140" y1="195" x2="140" y2="220" stroke="#27ae60" stroke-width="2"/>
+  <polygon points="133,218 140,228 147,218" fill="#27ae60"/>
+  <rect x="50" y="232" width="180" height="36" rx="8" fill="#27ae60"/>
+  <text x="140" y="255" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold" font-family="sans-serif">生活の工夫で改善可能</text>
+  <!-- 左：具体策 -->
+  <text x="140" y="285" text-anchor="middle" font-size="10" fill="#27ae60" font-family="sans-serif">ゆっくり立つ / 水分摂取 / 足を動かす</text>
+  <!-- 右：重症 -->
+  <rect x="360" y="115" width="200" height="80" rx="10" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="460" y="138" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b" font-family="sans-serif">以下に当てはまる場合</text>
+  <text x="460" y="157" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・何度も繰り返す</text>
+  <text x="460" y="173" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・失神した・転んだ</text>
+  <text x="460" y="189" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">・症状が長引く</text>
+  <!-- 右の結論 -->
+  <line x1="460" y1="195" x2="460" y2="220" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="453,218 460,228 467,218" fill="#c0392b"/>
+  <rect x="370" y="232" width="180" height="36" rx="8" fill="#c0392b"/>
+  <text x="460" y="255" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold" font-family="sans-serif">医療機関へ相談を</text>
+  <!-- 右：隠れた原因 -->
+  <text x="460" y="285" text-anchor="middle" font-size="10" fill="#c0392b" font-family="sans-serif">心臓 / ホルモン / 神経 / 薬の影響</text>
+  <!-- 下部注釈 -->
+  <text x="300" y="310" text-anchor="middle" font-size="10" fill="#888" font-family="sans-serif">※ 迷ったら受診をおすすめします</text>
+</svg>
+</div>
+
+<!-- まとめ -->
+<h2 id="summary">まとめ</h2>
+
+<p>正座から立ったときに立ちくらみが起こりやすいのは、不思議なことではありません。立ち上がるだけでも血液は下半身に集まりやすいのに、正座では脚から心臓へ戻る血の流れが弱くなりやすく、その状態から急に立つと、体の調整が一瞬追いつかないことがあるからです。</p>
+
+<p>多くは一時的で、<strong>ゆっくり立つこと</strong>、<strong>立つ前に足を動かすこと</strong>、<strong>水分を保つこと</strong>だけでもかなり予防できます。けれども、頻繁に起こる、失神する、転ぶといった場合は、単なる立ちくらみで片づけず、きちんと相談することが大切です。</p>
+
+<div class="important-box">
+<strong>📋 覚えておきたいこと</strong><br>
+「気合いで立つ」より、「一拍おいて立つ」。それだけで、かなり安全になります。
+</div>
+
+<!-- 参考文献 -->
+<div class="references">
+<h3>参考文献</h3>
+<div class="ref-item">
+<span class="ref-numbers">1</span>
+<span class="ref-content"><a href="https://www.nanbyou.or.jp/glossary/%E8%B5%B7%E7%AB%8B%E6%80%A7%E4%BD%8E%E8%A1%80%E5%9C%A7" target="_blank" rel="noopener">難病情報センター. 起立性低血圧（指定難病についての情報）.</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">2</span>
+<span class="ref-content"><a href="https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension/symptoms-causes/syc-20352548" target="_blank" rel="noopener">Mayo Clinic. Orthostatic hypotension (postural hypotension) — Symptoms & causes.</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">3</span>
+<span class="ref-content">PMC（PubMed Central）. しゃがみ姿勢からの起立時における血圧変動に関する研究.</span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">4</span>
+<span class="ref-content">PMC（PubMed Central）. 膝屈曲姿勢における下肢静脈還流への影響.</span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">5</span>
+<span class="ref-content"><a href="https://www.nth.nhs.uk/resources/postural-hypotension/" target="_blank" rel="noopener">North Tees and Hartlepool NHS Foundation Trust. Orthostatic hypotension — Patient information.</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">6</span>
+<span class="ref-content"><a href="https://www.guysandstthomas.nhs.uk/health-information/postural-hypotension" target="_blank" rel="noopener">Guy's and St Thomas' NHS Foundation Trust. Managing orthostatic hypotension.</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">7</span>
+<span class="ref-content"><a href="https://stacks.cdc.gov/view/cdc/49080" target="_blank" rel="noopener">CDC（米国疾病対策予防センター）. Orthostatic hypotension — Prevention and management.</a></span>
+</div>
+</div>
+
+</div>
+</body>
+</html>

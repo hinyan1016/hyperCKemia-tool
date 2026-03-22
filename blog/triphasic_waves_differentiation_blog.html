@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三相波の鑑別法</title>
+</head>
+<body>
+<div class="medical-article">
+<style>
+/* ============================================
+   ⚠️ 全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+/* 基本スタイル */
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.medical-article h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.medical-article .drug-table th {
+    background: #2c5aa0 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.medical-article .drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.medical-article .drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-article .medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-article .medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-article .medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-article .medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* ステップボックス */
+.medical-article .step-box {
+    background: #f0f4fa;
+    border: 1px solid #c5d5ea;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 12px 0;
+}
+
+.medical-article .step-box .step-title {
+    font-weight: bold;
+    color: #2c5aa0;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+/* 落とし穴ボックス */
+.medical-article .pitfall-box {
+    background: #fff8f0;
+    border-left: 4px solid #e8850c;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 12px 0;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+}
+</style>
+
+<h1>てんかん重積で三相波様に見える波形と、代謝性脳症の三相波をどう見分けるか</h1>
+<p>― 若手脳神経内科医のための実践的アプローチ ―</p>
+
+<p><strong>代謝性脳症の三相波</strong>と、<strong>非けいれん性てんかん重積（NCSE）</strong>で三相波様に見える<strong>全般性周期性放電（GPDs）</strong>の鑑別は、EEG診療のなかでも特に迷いやすい領域です。両者とも全般性・周期性・1〜3 Hzの波形として現れるため、形態だけでは区別が困難です。鑑別の鍵は<strong>臨床文脈、EEGの反応性、経時変化</strong>にあります<sup>[1]</sup>。</p>
+
+<!-- 目次ボックス -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#sec1">1. 前提：「三相波」は所見名であって診断名ではない</a></li>
+<li><a href="#sec2">2. なぜ鑑別が難しいのか</a></li>
+<li><a href="#sec3">3. 鑑別の基本姿勢：5軸アプローチ</a></li>
+<li><a href="#sec4">4. EEGで何を見るか</a></li>
+<li><a href="#sec5">5. 典型所見の比較表</a></li>
+<li><a href="#sec6">6. 臨床文脈をどう重ねるか</a></li>
+<li><a href="#sec7">7. ベンゾジアゼピン・ASMトライアルの読み方</a></li>
+<li><a href="#sec8">8. cEEGと再評価</a></li>
+<li><a href="#sec9">9. 実地で使う診断アルゴリズム（7ステップ）</a></li>
+<li><a href="#sec10">10. よくある落とし穴</a></li>
+<li><a href="#sec11">11. まとめ</a></li>
+<li><a href="#refs">参考文献</a></li>
+</ul>
+</div>
+
+<!-- セクション1 -->
+<h2 id="sec1">1. 前提：「三相波」は所見名であって診断名ではない</h2>
+
+<p>歴史的に<strong>三相波（triphasic waves; TW）</strong>は<strong>肝性脳症</strong>の代表的EEG所見として教えられてきました。しかしその後、<strong>腎不全</strong>、<strong>敗血症</strong>、<strong>低血糖・高血糖</strong>、<strong>電解質異常</strong>、<strong>薬剤性脳症</strong>など、さまざまな代謝性・中毒性・感染性・構造性病態で出現することが明らかになり、<strong>肝性脳症に特異的ではない</strong>ことが確立しています<sup>[2]</sup>。現在のACNS用語では、形態を記述する<strong>GPDs with triphasic morphology</strong>という表現が推奨されています。</p>
+
+<p>Foremanらの研究では、「triphasic」という表現の観察者間一致はfairにとどまり、さらに<strong>triphasic appearanceそのものは代謝性脳症も発作リスクも予測しなかった</strong>と報告されています<sup>[3]</sup>。つまり、「三相波っぽいから代謝性」「三相波だから非てんかん性」という短絡は成り立ちません。ACNS 2021の<strong>generalized / periodic / frequency / modifier / evolution / reactivity</strong>という多軸記述が推奨される背景はここにあります。</p>
+
+<div class="important-box">
+<strong>📋 Key Point</strong><br>
+三相波は所見名であって診断名ではない。「三相波＝代謝性脳症」と短絡してはならない。ACNS用語による多軸記述を心がける。
+</div>
+
+<!-- セクション2 -->
+<h2 id="sec2">2. なぜ鑑別が難しいのか ― 二者択一ではなく連続体</h2>
+
+<p>NCSE側の波形も、代謝性脳症側の波形も、しばしば<strong>全般性周期性放電</strong>として現れます。Salzburg基準やACNSの考え方でも、<strong>1〜2.5 Hzの周期性放電はIIC（ictal-interictal continuum）上</strong>に位置づけられ、追加情報なしに即「発作」とは言い切れません<sup>[4]</sup>。一方で、<strong>&gt;2.5 Hz</strong>の放電やdefinite evolutionがあれば、NCSEを強く支持します。</p>
+
+<p>さらに近年は、「代謝性脳症の三相波」と「GNCSEのGPD」は完全に別物というより、<strong>共通のネットワーク機序の上に強弱の違いとして現れるのではないか</strong>という見方も出てきています<sup>[5]</sup>。だからこそ、静止画1枚での形態判定には限界があり、実際に重要なのは<strong>頻度、進展、反応性、背景、臨床反応、原因補正後の変化</strong>です。</p>
+
+<!-- セクション3 -->
+<h2 id="sec3">3. 鑑別の基本姿勢：5軸アプローチ</h2>
+
+<p>鑑別は次の<strong>5軸</strong>で行います<sup>[6]</sup><sup>[7]</sup>：</p>
+
+<ol>
+<li><strong>臨床文脈</strong>：代謝性・中毒性の説明が強いか、急性脳障害やてんかん素因が強いか</li>
+<li><strong>EEGの頻度と進展</strong>：&gt;2.5 Hzか、あるいは明らかなevolutionがあるか</li>
+<li><strong>形態と分布</strong>：典型的な三相波か、atypical triphasic wave / ictal寄りの形か</li>
+<li><strong>反応性</strong>：刺激や覚醒度で増減するか、単調に持続するか</li>
+<li><strong>時間経過と治療反応</strong>：原因補正やASM投与で、EEGだけでなく<strong>臨床も</strong>どう変わるか</li>
+</ol>
+
+<p>この5軸のうち、単独で決め手になるものは多くありません。実際の診断は、<strong>いくつの軸がNCSE側に傾くか</strong>で決めます<sup>[8]</sup>。若手のうちは「波形の美しさ」よりも、<strong>「どの情報がNCSEに加点され、どの情報が代謝性脳症に加点されるか」</strong>を意識して読むことが重要です。</p>
+
+<!-- セクション4 -->
+<h2 id="sec4">4. EEGで何を見るか</h2>
+
+<h3>4-1. まずは頻度とevolution</h3>
+
+<p>Salzburg基準では、既知のてんかん性脳症がない患者で、<strong>&gt;2.5 Hzのてんかん性放電が10秒以上</strong>あればNCSEを強く支持します<sup>[4]</sup>。逆に、<strong>≤2.5 Hzの放電やrhythmic delta/theta</strong>では、それだけでは不十分で、臨床徴候、ASMでのEEG＋臨床改善、あるいは典型的なspatiotemporal evolutionなどの追加基準が必要です。</p>
+
+<p>実務上の目安としては、<strong>1〜2 Hzで単調、刺激依存性があり、背景全体が遅い</strong>なら代謝性脳症側に寄り、<strong>2 Hzを超えてきて、しかも持続的で、頻度や形が展開していく</strong>ならNCSE側に寄ります。最近のレビューでも、<strong>typical triphasic wavesは概ね≤2 Hz</strong>であり、それを超える場合はatypicalとして扱う考え方が示されています<sup>[6]</sup>。</p>
+
+<h3>4-2. 形態は「典型か、非典型か」を見る</h3>
+
+<p>Boulangerらの古典的比較研究は今でも実用的です<sup>[7]</sup>。GNCSEでは、代謝性脳症のTWと比べて、<strong>平均頻度が高く（2.4 Hz vs 1.8 Hz）、extraspike componentが多く、背景徐波化が少なく、phase 2 lagを欠きやすい</strong>ことが示されました。逆にTWでは、<strong>第2相優位、lagの存在、刺激で増強される反応性</strong>が目立ちました。</p>
+
+<p>最近の整理では、<strong>typical triphasic waves</strong>の特徴は以下の通りです<sup>[6]</sup>：</p>
+<ul>
+<li><strong>frontocentral優位の陽性相</strong></li>
+<li><strong>bluntedな輪郭</strong></li>
+<li><strong>anterior-posterior lag</strong></li>
+<li>対称性</li>
+<li>刺激・覚醒度依存性</li>
+<li>周波数は概ね<strong>≤2 Hz</strong></li>
+</ul>
+
+<p>これに対して、<strong>NCSEを疑うatypical features</strong>は以下の通りです：</p>
+<ul>
+<li><strong>spiky / sharp contour</strong></li>
+<li><strong>frontal polar negativityの目立ち</strong></li>
+<li><strong>extraspike</strong></li>
+<li><strong>lagの消失</strong></li>
+<li><strong>一側性または左右非対称</strong></li>
+<li><strong>continuousでstate dependenceが乏しい</strong></li>
+<li><strong>&gt;2 Hz</strong></li>
+</ul>
+
+<p>もちろん例外はありますが、<strong>複数そろうほどNCSE寄り</strong>です<sup>[6]</sup><sup>[7]</sup>。</p>
+
+<h3>4-3. 刺激反応性と背景活動はかなり重要</h3>
+
+<p>Boulangerらでは、<strong>TWの51%が聴覚・疼痛刺激で増強</strong>し、GNCSE側のパターンではそうした反応がみられませんでした<sup>[7]</sup>。また近年のレビューでも、typical TWの重要な特徴として<strong>state/stimulus dependence</strong>が繰り返し強調されています。すなわち、<strong>刺激で出たり消えたりするパターンは代謝性脳症寄り</strong>、<strong>刺激に関係なく単調に持続するパターンはNCSE寄り</strong>です。</p>
+
+<p>背景活動も大事です。代謝性脳症のTWでは<strong>全般性背景徐波化がかなり目立つ</strong>ことが多い一方、NCSE側では背景が比較的保たれていたり、少なくとも「波形以外の脳全体が完全に代謝性脳症の顔をしていない」ことがあります<sup>[7]</sup>。</p>
+
+<!-- セクション5 -->
+<h2 id="sec5">5. 典型所見の比較表</h2>
+
+<p>以下は、主要文献をもとに実地向けに再構成した要点です。単独では決め手になりませんが、<strong>複数項目の集積</strong>が診断を動かします<sup>[7]</sup>。</p>
+
+<table class="drug-table">
+<thead>
+<tr>
+<th>所見</th>
+<th>代謝性脳症の三相波に寄る</th>
+<th>NCSE/てんかん重積に寄る</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周波数</strong></td>
+<td>1〜2 Hz前後、概ね≤2 Hz</td>
+<td><strong>&gt;2 Hz</strong>、特に<strong>&gt;2.5 Hz</strong></td>
+</tr>
+<tr>
+<td><strong>波形</strong></td>
+<td>blunted、陽性相優位</td>
+<td><strong>sharp/spiky</strong>、<strong>extraspike</strong>あり</td>
+</tr>
+<tr>
+<td><strong>Lag</strong></td>
+<td><strong>anterior-posterior lagあり</strong></td>
+<td>lagなし</td>
+</tr>
+<tr>
+<td><strong>分布</strong></td>
+<td>全般性・比較的対称</td>
+<td><strong>一側性、左右差</strong>、焦点性要素</td>
+</tr>
+<tr>
+<td><strong>反応性</strong></td>
+<td><strong>刺激や覚醒度で増減</strong></td>
+<td>反応性乏しく持続</td>
+</tr>
+<tr>
+<td><strong>背景活動</strong></td>
+<td>明らかな全般性徐波化</td>
+<td>背景が比較的保たれることがある</td>
+</tr>
+<tr>
+<td><strong>治療反応</strong></td>
+<td>BZDでEEGのみ改善しうる</td>
+<td><strong>EEGに加えて臨床も改善</strong>すれば強く支持</td>
+</tr>
+<tr>
+<td><strong>経過</strong></td>
+<td>原因補正で改善</td>
+<td>ASMなしでは持続・再発しやすい</td>
+</tr>
+</tbody>
+</table>
+
+<!-- セクション6 -->
+<h2 id="sec6">6. 臨床文脈をどう重ねるか</h2>
+
+<p>EEGだけではなく、<strong>何がこの患者の意識障害を説明しているか</strong>を同時に考えます<sup>[6]</sup>。<strong>肝不全</strong>、<strong>腎不全</strong>、<strong>敗血症</strong>、<strong>高アンモニア血症</strong>、<strong>糖代謝異常</strong>、<strong>電解質異常</strong>、<strong>薬剤性脳症</strong>（特に腎機能低下下の<strong>セフェピム</strong>など）が前景なら、TWは十分ありえます。一方、<strong>急性脳障害、既往てんかん、最近のけいれん、反復するステレオタイプな意識変容、失語、眼球偏倚、眼瞼・顔面の微細な運動</strong>があればNCSE側に傾きます。</p>
+
+<div class="warning-box">
+<strong>⚠️ 注意：代謝異常があってもNCSEは否定できない</strong><br>
+O'Rourkeらの研究では、TPWを示した患者の多くは代謝異常や感染を持っていましたが、それでも一定割合がASMに反応しました。逆に、代謝異常の存在だけでは反応例と非反応例を事前に区別できませんでした<sup>[9]</sup>。<strong>metabolic contextは"免罪符"ではなく、あくまで一要素</strong>です。
+</div>
+
+<p>さらに若手が見落としやすいのは<strong>両者の共存</strong>です。急性脳障害や薬剤性脳症の患者では、脳症によるTWと、同時に存在する発作性活動が重なって見えることがあります。したがって、「脳症らしいから治療しない」でも「三相波だからNCSE」でもなく、<strong>どの部分が脳症で、どの部分が発作性か</strong>を分けて考える姿勢が必要です<sup>[6]</sup>。</p>
+
+<!-- セクション7 -->
+<h2 id="sec7">7. ベンゾジアゼピン・ASMトライアルの読み方</h2>
+
+<div class="emergency-box">
+<strong>🚨 最大の落とし穴：EEGだけ改善しても、NCSEとは言えない</strong><br>
+Fountainらは、<strong>代謝性脳症のTWでもベンゾジアゼピンで消失しうるが、意識は改善しない</strong>ことを示しました<sup>[10]</sup>。したがって、<strong>「lorazepamで波形が消えた＝NCSE」ではありません</strong>。EEG改善だけを根拠にNCSEと診断すると、過剰治療に進みやすくなります。
+</div>
+
+<p>ACNS 2021でも、<strong>EEGと臨床の両方がASMで改善</strong>した場合にelectroclinical seizureと扱います<sup>[1]</sup>。逆に、<strong>EEGだけ改善して臨床改善がない</strong>ものはpossible ECSE / IICの問題として残り、definiteなNCSEとは言えません。</p>
+
+<p>ではトライアルは無意味かというと、そうではありません。O'Rourkeらでは、TPW患者のうち<strong>BZDで18.9%、非鎮静性ASMで42.2%に反応があり、全体で34.4%がdefinite response</strong>を示しました<sup>[9]</sup>。ただし改善の多くは遅延性で、しかも代謝補正の影響を完全には除けません。したがって、診断的トライアルを行う際は：</p>
+
+<ul>
+<li><strong>投与前後の神経診察をできるだけ定型化</strong>する</li>
+<li><strong>EEGと臨床を同時に見る</strong></li>
+<li><strong>再現性のある指標を事前に決めておく</strong></li>
+</ul>
+
+<p>ことが重要です。診断目的なら、<strong>鎮静で診察を曇らせやすいBZD単独より、非鎮静性ASMを使う考え方</strong>には一定の合理性があります<sup>[9]</sup>。ただし重積の緊急度が高い場面では通常のSE治療原則を優先すべきです。</p>
+
+<!-- セクション8 -->
+<h2 id="sec8">8. cEEGと再評価は「答え合わせ」ではなく診断そのもの</h2>
+
+<p>routine EEG 1本で決めきれない症例は少なくありません。とくに、<strong>2 Hz前後、plus featuresあり、左右差あり、急性脳障害あり、既往てんかんあり、反応性がはっきりしない</strong>といった症例では、<strong>cEEG</strong>の価値が高くなります<sup>[1]</sup>。</p>
+
+<p>時間経過のなかで、<strong>frequencyが上がる、evolutionが出る、刺激依存から離れる、臨床徴候がそろう</strong>なら、NCSE側に傾きます。逆に、原因補正や薬剤中止とともに背景・意識・周期性放電がそろって改善すれば代謝性脳症寄りです。</p>
+
+<p>この点で、Salzburg基準は非常に有用ですが、<strong>機械的適用には限界</strong>があります。2024年の外部前向き検証では、「certain/possible NCSE」としての特異度は<strong>77%</strong>で、偽陽性の多くが各種脳症でした<sup>[8]</sup>。偽陽性は<strong>triphasic waves on a slow background</strong>が原因であり、臨床文脈の統合は基準の<strong>代わりにはならない</strong>ことが確認されています。</p>
+
+<!-- セクション9 -->
+<h2 id="sec9">9. 実地で使う診断アルゴリズム（7ステップ）</h2>
+
+<div class="step-box">
+<div class="step-title">Step 1：ACNS用語で記述する</div>
+<p>まず波形を病名で呼ばず、<strong>ACNS用語で記述</strong>します<sup>[1]</sup>。<br>
+例：GPDs, 1.5–2 Hz, triphasic morphology, no definite evolution, stimulus-induced, diffuse slowing</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 2：代謝性・中毒性・感染性・薬剤性の原因検索</div>
+<p>同時に原因検索を始めます。<strong>アンモニア</strong>、<strong>腎機能</strong>、<strong>血糖</strong>、<strong>Na/Ca</strong>、<strong>感染徴候</strong>、<strong>薬歴</strong>は最優先です<sup>[11]</sup>。代謝性脳症では、原因補正でEEGと臨床がともに改善しうるからです。</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 3：&gt;2.5 Hz or definite evolutionの有無を確認</div>
+<p>これがあれば、まず<strong>NCSEとして扱う方向</strong>に倒れます<sup>[4]</sup>。</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 4：NCSE側の赤旗を数える</div>
+<p>≤2.5 Hzであれば、次にNCSE側の赤旗を数えます<sup>[7]</sup>。<br>
+赤旗：<strong>extraspike</strong>、<strong>sharp contour</strong>、<strong>lag消失</strong>、<strong>一側性/左右差</strong>、<strong>state dependenceの欠如</strong>、<strong>急性脳障害</strong>、<strong>既往てんかん</strong>、<strong>明らかな臨床徴候</strong><br>
+赤旗が多いほどNCSE寄りです。</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 5：ベッドサイドで反応性をみる</div>
+<p>刺激や覚醒度変化で<strong>反応性を必ずみます</strong><sup>[7]</sup>。刺激で増減し、睡眠や傾眠で消えるなら、typical TWの方向に傾きます。</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 6：診断的トライアル</div>
+<p>なお迷う場合は、<strong>EEG監視下で診断的トライアル</strong>を行います<sup>[10]</sup>。ただし判定基準は、<strong>EEG改善のみではなく、EEG＋臨床改善</strong>です。EEGだけ改善ならpossible ECSE / IICとして保留し、過剰治療を避けつつ再評価します。</p>
+</div>
+
+<div class="step-box">
+<div class="step-title">Step 7：時間経過でもう一度判定</div>
+<p>最後に<strong>時間経過でもう一度判定</strong>します<sup>[11]</sup>。原因補正後に背景・意識・周期性放電がそろって改善すれば代謝性脳症寄り、ASMなしでは持続・再燃し、cEEGでより明らかな発作性所見に進めばNCSE寄りです。</p>
+</div>
+
+<!-- セクション10 -->
+<h2 id="sec10">10. よくある落とし穴</h2>
+
+<div class="pitfall-box">
+<strong>❌ 落とし穴1：triphasic morphologyを見た瞬間に代謝性と決めること</strong><br>
+これは最も多い誤りです。triphasic appearanceは病因を決めません<sup>[3]</sup>。
+</div>
+
+<div class="pitfall-box">
+<strong>❌ 落とし穴2：lorazepamで波形が消えたからNCSEと決めること</strong><br>
+TWもBZDで消えます。<strong>臨床改善がなければ診断は確定しません</strong><sup>[10]</sup>。
+</div>
+
+<div class="pitfall-box">
+<strong>❌ 落とし穴3：Salzburg基準を臨床から切り離して使うこと</strong><br>
+possible NCSEの偽陽性は脳症で少なくありません<sup>[8]</sup>。
+</div>
+
+<div class="pitfall-box">
+<strong>❌ 落とし穴4：代謝性脳症とNCSEは排他的だと思うこと</strong><br>
+実際には共存しえます。代謝異常があってもNCSEは否定できません<sup>[9]</sup>。
+</div>
+
+<div class="pitfall-box">
+<strong>❌ 落とし穴5：EEGの"見た目"ばかり見て、背景・反応性・経時変化を見ないこと</strong><br>
+診断の決め手は、静止画ではなく<strong>動態</strong>です<sup>[7]</sup>。
+</div>
+
+<!-- セクション11 -->
+<h2 id="sec11">11. まとめ</h2>
+
+<p>代謝性脳症の三相波と、てんかん重積で三相波様に見える波形の鑑別は、<strong>形態診断だけでは不十分</strong>です。若手医師がまず身につけるべきなのは、以下の5点です：</p>
+
+<div class="important-box">
+<strong>📋 Take-Home Messages</strong><br>
+<ol>
+<li><strong>三相波は所見名であって診断名ではない</strong></li>
+<li><strong>&gt;2.5 HzやevolutionはNCSEを強く示唆する</strong></li>
+<li><strong>typical TWは≤2 Hz、blunted、lagあり、刺激・覚醒度依存性</strong>を示しやすい</li>
+<li><strong>BZDでEEGが改善しても、臨床改善がなければNCSEとは言えない</strong></li>
+<li><strong>最終判断は、臨床文脈・反応性・経時変化・原因補正後の推移</strong>で行う</li>
+</ol>
+</div>
+
+<p>実践的には、<strong>「三相波かどうか」を争うよりも、「この周期性放電は典型的TWとして見てよいのか、それともIIC上でNCSEとして治療介入を考えるべきパターンか」</strong>と捉える方が、診断にも治療にも役立ちます<sup>[1]</sup>。そして、その判断は静止画ではなく、<strong>反応と経過で診断する</strong>のが原則です。</p>
+
+<!-- 参考文献 -->
+<div class="references">
+<h3 id="refs">参考文献</h3>
+
+<div class="ref-item">
+<span class="ref-numbers">1</span>
+<span class="ref-content">Hirsch LJ, et al. American Clinical Neurophysiology Society's Standardized Critical Care EEG Terminology: 2021 Version. <em>J Clin Neurophysiol.</em> 2021;38(1):1-29. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8135051/" target="_blank">PMC8135051</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">2</span>
+<span class="ref-content">Kaplan PW. The EEG in metabolic encephalopathy and coma. <em>J Clin Neurophysiol.</em> 2004;21(5):307-318. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3826953/" target="_blank">PMC3826953</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">3</span>
+<span class="ref-content">Foreman B, et al. Generalized periodic discharges in the critically ill: A case-control study of 200 patients. <em>Neurology.</em> 2012;79(19):1951-1960. <a href="https://pubmed.ncbi.nlm.nih.gov/26294138/" target="_blank">PubMed 26294138</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">4</span>
+<span class="ref-content">Beniczky S, et al. Unified EEG terminology and criteria for nonconvulsive status epilepticus. <em>Epilepsia.</em> 2013;54 Suppl 6:28-29. (Salzburg Consensus Criteria) <a href="https://pubmed.ncbi.nlm.nih.gov/26092326/" target="_blank">PubMed 26092326</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">5</span>
+<span class="ref-content">Janati AB, et al. Triphasic waves and the ictal-interictal continuum: shared network mechanisms. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8429048/" target="_blank">PMC8429048</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">6</span>
+<span class="ref-content">Recent review on typical triphasic waves: characteristics, differential diagnosis, and clinical implications. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12274759/" target="_blank">PMC12274759</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">7</span>
+<span class="ref-content">Boulanger JM, et al. Morphology of triphasic waves and comparison with generalized nonconvulsive status epilepticus. <em>Clin Neurophysiol.</em> 2006;117(6):1351-1358. <a href="https://pubmed.ncbi.nlm.nih.gov/16736726/" target="_blank">PubMed 16736726</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">8</span>
+<span class="ref-content">External prospective validation of Salzburg criteria for NCSE (2024). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11514898/" target="_blank">PMC11514898</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">9</span>
+<span class="ref-content">O'Rourke D, et al. Response to antiseizure medications in patients with triphasic waves. <em>Epilepsia.</em> 2016;57(7):1080-1087. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4870012/" target="_blank">PMC4870012</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">10</span>
+<span class="ref-content">Fountain NB, Waldman WA. Effects of benzodiazepines on triphasic waves: implications for nonconvulsive status epilepticus. <em>J Clin Neurophysiol.</em> 2001;18(4):345-352. <a href="https://pubmed.ncbi.nlm.nih.gov/11673700/" target="_blank">PubMed 11673700</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">11</span>
+<span class="ref-content">Sutter R, Kaplan PW. Electroencephalographic criteria for nonconvulsive status epilepticus: synopsis and comprehensive survey. <em>Epilepsia.</em> 2012;53 Suppl 3:1-51. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3105634/" target="_blank">PMC3105634</a></span>
+</div>
+
+</div>
+</body>
+</html>
+
+</div>

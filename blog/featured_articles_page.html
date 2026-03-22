@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新着記事 & 特集 - 医知創造ラボ</title>
+</head>
+<body>
+<div class="featured-page">
+<style>
+.featured-page {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.fp-header {
+    background: linear-gradient(135deg, #0d3b66 0%, #2e86c1 50%, #3498db 100%);
+    color: #fff;
+    padding: 36px 24px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fp-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.fp-header h1 {
+    font-size: 1.6em;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    position: relative;
+}
+
+.fp-header p {
+    font-size: 0.95em;
+    margin: 0;
+    opacity: 0.9;
+    position: relative;
+}
+
+.fp-date {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-bottom: 12px;
+}
+
+.fp-section-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #1a5276;
+    border-bottom: 3px solid #2e86c1;
+    padding-bottom: 8px;
+    margin: 36px 0 20px 0;
+}
+
+/* 特集バナー */
+.fp-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4fd 100%);
+    border: 2px solid #2e86c1;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fp-banner-icon {
+    font-size: 3em;
+    flex-shrink: 0;
+}
+
+.fp-banner h3 {
+    font-size: 1.15em;
+    color: #1a5276;
+    margin: 0 0 6px 0;
+}
+
+.fp-banner p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+.fp-banner a.fp-btn {
+    display: inline-block;
+    background: #2e86c1;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.fp-banner a.fp-btn:hover {
+    background: #1a5276;
+}
+
+/* 記事カード（横型） */
+.fp-article {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.fp-article:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.fp-article-icon {
+    font-size: 1.6em;
+    flex-shrink: 0;
+    width: 40px;
+    text-align: center;
+}
+
+.fp-article-body {
+    flex: 1;
+}
+
+.fp-article h4 {
+    font-size: 1em;
+    margin: 0 0 4px 0;
+    line-height: 1.5;
+}
+
+.fp-article h4 a {
+    color: #1a5276;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fp-article h4 a:hover {
+    color: #2e86c1;
+}
+
+.fp-article-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin: 0 0 4px 0;
+}
+
+.fp-article-desc {
+    font-size: 0.88em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* タグ */
+.fp-tag {
+    display: inline-block;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+.fp-tag.new { background: #fdecea; color: #c0392b; }
+.fp-tag.ddx { background: #e8f4fd; color: #1a5276; }
+.fp-tag.neuro { background: #eaf2f8; color: #2471a3; }
+.fp-tag.general { background: #e8f8f5; color: #1abc9c; }
+.fp-tag.treatment { background: #f4ecf7; color: #7d3c98; }
+.fp-tag.guideline { background: #fef9e7; color: #b7950b; }
+.fp-tag.ai { background: #e8f8f5; color: #1abc9c; }
+.fp-tag.popular { background: #fef9e7; color: #b7950b; }
+.fp-tag.tool { background: #fce4ec; color: #c62828; }
+.fp-tag.eeg { background: #fff3e0; color: #e65100; }
+
+/* グリッドカード */
+.fp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fp-grid-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.fp-grid-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.fp-grid-card .fp-card-icon {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.fp-grid-card h3 {
+    font-size: 1.05em;
+    color: #1a5276;
+    margin: 0 0 8px 0;
+}
+
+.fp-grid-card p {
+    font-size: 0.88em;
+    color: #555;
+    margin: 0 0 12px 0;
+    line-height: 1.6;
+}
+
+.fp-grid-card a.fp-btn {
+    display: inline-block;
+    background: #2e86c1;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.fp-grid-card a.fp-btn:hover {
+    background: #1a5276;
+}
+
+/* ナビゲーション */
+.fp-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.fp-nav a {
+    display: inline-block;
+    background: #fff;
+    color: #1a5276;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.2s;
+}
+
+.fp-nav a:hover {
+    background: #2e86c1;
+    color: #fff;
+    border-color: #2e86c1;
+}
+
+.fp-footer-note {
+    background: #f0f7fc;
+    border-left: 4px solid #2e86c1;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 32px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.fp-footer-note a {
+    color: #2e86c1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fp-footer-note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .fp-header { padding: 24px 16px; }
+    .fp-header h1 { font-size: 1.3em; }
+    .fp-banner { flex-direction: column; text-align: center; }
+    .fp-grid { grid-template-columns: 1fr; }
+    .fp-article { flex-direction: column; gap: 8px; }
+    .fp-nav { justify-content: center; }
+}
+</style>
+
+<!-- ヘッダー -->
+<div class="fp-header">
+    <div class="fp-date">2026年3月20日 更新</div>
+    <h1>新着記事 & 特集</h1>
+    <p>医知創造ラボの最新コンテンツをピックアップ</p>
+</div>
+
+<!-- ページ内ナビゲーション -->
+<div class="fp-nav">
+    <a href="#ddx-series">鑑別診断シリーズ</a>
+    <a href="#latest-treatment">最新治療・ガイドライン</a>
+    <a href="#neuro-10">10選シリーズ</a>
+    <a href="#general">一般向け</a>
+    <a href="#ai-tech">AI・テクノロジー</a>
+    <a href="#all-new">新着一覧</a>
+</div>
+
+<!-- ===== 特集1：鑑別診断シリーズ ===== -->
+<h2 class="fp-section-title" id="ddx-series">特集：鑑別診断シリーズ</h2>
+
+<div class="fp-banner">
+    <div class="fp-banner-icon">🔍</div>
+    <div>
+        <h3>症候から組み立てる鑑別診断 ― 実践的アプローチ集</h3>
+        <p>よく遭遇する症候ごとに、時間経過・重症度・病態群から鑑別を組み立てる実践的な記事シリーズ。<br>すべてYouTube動画・鑑別ツール付き。研修医から専門医まで活用できます。</p>
+        <a class="fp-btn" href="https://hinyan1016.github.io/medical-ddx-tools/">鑑別ツール一覧へ →</a>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🦴</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/125143">高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ</a></h4>
+        <p class="fp-article-desc">PTH依存性 vs 非依存性の2軸で鑑別を整理。急性期対応からFHH除外まで網羅。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🌡️</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/082431">不明熱（FUO）の鑑別：病型・病因群・PDCで進める実践的アプローチ</a></h4>
+        <p class="fp-article-desc">古典型・院内・好中球減少・HIV関連の4病型分類と、PDC（潜在的診断手がかり）に基づく系統的鑑別。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🚶</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/110951">歩行障害・協調運動障害の鑑別診断｜神経診察で局在を絞る実践的アプローチ</a></h4>
+        <p class="fp-article-desc">歩容パターン・視覚依存性・四肢所見・随伴症状から局在を絞り込む系統的アプローチ。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🔍</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag tool">ツール付</span> 2026.03.20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/233400">MMTから神経障害部位を推測する ― 脊髄レベル・末梢神経・腕神経叢の局在診断</a></h4>
+        <p class="fp-article-desc">MMTの結果から脊髄レベル・末梢神経・神経束・神経幹の障害部位を階層的に推測する方法を解説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">💔</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.18</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/18/001634">急性胸痛の鑑別診断：まず危険なものから外す実践的アプローチ</a></h4>
+        <p class="fp-article-desc">ACS・PE・AASなど6つの重篤疾患を並列で除外する初期評価と、PERC・Wells・ADD-RSなどの判断ルールを実装。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🫁</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.16</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/16/194738">呼吸困難（息切れ）の鑑別診断：重症度・時間経過・病態群で組み立てる実践的アプローチ</a></h4>
+        <p class="fp-article-desc">重症度判定→時間経過→病態群の3段階で効率的に鑑別を絞る方法。問診・検査の優先順位も整理。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">😵‍💫</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/125012">意識障害の鑑別：局在・病態・時間軸で整理する実践的アプローチ</a></h4>
+        <p class="fp-article-desc">「何が障害されているか」を切り分け、局在→病態→時間軸で鑑別を組み立てる。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🌀</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/090118">めまいの鑑別：時間経過・誘因・眼球運動から組み立てる実践的アプローチ</a></h4>
+        <p class="fp-article-desc">4つの症候群分類と「危険なめまい」の見極め。急性前庭症候群の中枢 vs 末梢鑑別。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🤕</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/083259">頭痛の鑑別 ── 二次性頭痛を先に拾い、一次性頭痛を積極的に診断する</a></h4>
+        <p class="fp-article-desc">「いつもと違う頭痛」を拾い上げるred flags、二段階の鑑別戦略。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🤝</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ddx">鑑別診断</span><span class="fp-tag tool">ツール付</span> 2026.03.16</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/16/153125">ジストニア振戦とは何か――本態性振戦・パーキンソン病とどう見分けるか</a></h4>
+        <p class="fp-article-desc">振戦の鑑別で見落とされがちなジストニア振戦。ET・PDとの違いを系統的に整理。</p>
+    </div>
+</div>
+
+<!-- ===== 特集2：最新治療・ガイドライン ===== -->
+<h2 class="fp-section-title" id="latest-treatment">最新治療・ガイドライン</h2>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🧠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/210503">蘇生後の高次脳機能障害 ― 病態、臨床像、評価、予後、リハビリテーション</a></h4>
+        <p class="fp-article-desc">蘇生後の脳障害の全体像を整理。評価スケール・予後予測・リハビリ戦略を概説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🫁</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/113452">パーキンソン病における誤嚥性肺炎：早期から予測し、予防する合併症</a></h4>
+        <p class="fp-article-desc">PDにおける嚥下障害の病態生理、リスク因子、スクリーニングから予防まで。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🧠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag eeg">脳波</span> 2026.03.18</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/18/100922">てんかん重積で三相波様に見える波形と、代謝性脳症の三相波をどう見分けるか</a></h4>
+        <p class="fp-article-desc">臨床文脈・頻度と進展・波形形態・刺激反応性・治療応答の5軸で見分ける実践ガイド。</p>
+    </div>
+</div>
+
+<div class="fp-grid">
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">🧬</div>
+        <h3>CAR-T療法の最前線</h3>
+        <p>自己免疫疾患へのCAR-T療法の全体像と、重症筋無力症に対するDescartes-08（AURORA試験）の解説。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/03/12/103828">CAR-T全体像 →</a>
+    </div>
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">💉</div>
+        <h3>DMD遺伝子治療エレビジス</h3>
+        <p>「3億円の薬」は本当に効くのか？デュシェンヌ型筋ジストロフィー遺伝子治療のエビデンスを読み解く。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/02/15/033326">記事を読む →</a>
+    </div>
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">🧠</div>
+        <h3>レカネマブと心房細動</h3>
+        <p>投与検討中にAfが見つかったら？実臨床での判断分岐を整理。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/03/10/122240">記事を読む →</a>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">⚡</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag treatment">治療</span> 2026.03.14</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/14/071725">アルツハイマー病に潜む「見えないてんかん性活動」</a></h4>
+        <p class="fp-article-desc">認知症の進行を早めるのか？治療標的になりうるのか？最新の知見を整理。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">📋</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag guideline">ガイドライン</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/113326">ALS診療ガイドライン追補版2025の差分と臨床上の注目点</a></h4>
+        <p class="fp-article-desc">エダラボン経口剤、遺伝の説明の改訂、高用量メコバラミンなど主な変更点を解説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🔬</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag guideline">ガイドライン</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/060732">EAN 2024ガイドライン：無症候性・乏症候性高CK血症の診断アプローチ</a></h4>
+        <p class="fp-article-desc">次世代シーケンサーが重視される新時代。筋生検の位置づけの変化。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">💊</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag treatment">治療</span> 2026.03.05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/external_seizure_prophylaxis">外傷・術後の抗てんかん薬：いつ始めて、いつ止めるか</a></h4>
+        <p class="fp-article-desc">外傷性脳損傷・開頭術後における抗てんかん薬の開始・継続・中止の判断基準を整理。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🫧</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span> 2026.03.05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/arachnoid_cyst">くも膜嚢胞（Arachnoid Cyst）の臨床総説 — 定義・疫学・病態生理・治療・再発</a></h4>
+        <p class="fp-article-desc">偶発的に発見されることの多いくも膜嚢胞の経過観察と手術適応を概説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🌀</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag treatment">治療</span> 2026.03.05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/vestibular_rehab">めまいに有効な「前庭リハビリ」とは何か ― 脳神経内科医が知っておくべき基本と実践</a></h4>
+        <p class="fp-article-desc">前庭代償を促進するリハビリの原理とエクササイズの実際を解説。</p>
+    </div>
+</div>
+
+<!-- ===== 脳神経内科10選シリーズ ===== -->
+<h2 class="fp-section-title" id="neuro-10">脳神経内科10選シリーズ</h2>
+
+<div class="fp-banner" style="border-color: #8e44ad; background: linear-gradient(135deg, #f8f9fa 0%, #f4ecf7 100%);">
+    <div class="fp-banner-icon">📋</div>
+    <div>
+        <h3>外来で本当に役立つ「10選」を厳選</h3>
+        <p>脳神経内科の日常診療で繰り返し遭遇する疑問や落とし穴を10項目に凝縮。YouTube動画付き。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">❓</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag popular">人気</span> 2026.03.04</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/04/103556">脳神経内科医がよく遭遇する「誤解」10選 — 外来で何度も説明すること</a></h4>
+        <p class="fp-article-desc">「MRIが正常なら脳の病気はない」「めまいは耳の病気」…外来でよくある誤解を解きます。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🔬</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag popular">人気</span> 2026.03.04</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/04/101113">脳神経内科医がよく遭遇する「漫然検査」10選 — その検査、本当に必要ですか？</a></h4>
+        <p class="fp-article-desc">検査オーダー前の3つの質問。ルーチン化した検査を見直すきっかけに。</p>
+    </div>
+</div>
+
+<!-- ===== 一般向け記事 ===== -->
+<h2 class="fp-section-title" id="general">一般向け・話題の記事</h2>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🏥</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/210503">片麻痺患者の胃管留置で「咽頭交差」を意識する</a></h4>
+        <p class="fp-article-desc">NSTの勉強会から。咽頭交差を意識した安全な胃管留置のポイント。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🧎</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag general">一般向け</span> 2026.03.17</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/17/060041">正座から立ち上がると、なぜクラッとするのか ― 立ちくらみが起こる理由と、気をつけたいサイン</a></h4>
+        <p class="fp-article-desc">正座と起立性低血圧の関係を、インフォグラフィック付きでわかりやすく解説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🐘</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag general">一般向け</span> 2026.03.13</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/13/184534">動物園のゾウはどうやって運ぶのか！？</a></h4>
+        <p class="fp-article-desc">天王寺動物園に到着したマレーシアゾウ3頭。体重3〜5トンのゾウの輸送方法とは。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🦠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag neuro">脳神経内科</span><span class="fp-tag general">一般向け</span> 2026.03.10</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/10/063521">帯状疱疹は「皮膚の病気」ではない ― 神経障害の全体像を理解する</a></h4>
+        <p class="fp-article-desc">帯状疱疹の本態は神経節炎。運動麻痺・排尿障害・顔面神経麻痺まで起こしうる全体像。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">❤️</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag general">一般向け</span> 2026.03.09</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/09/033450">エーリッヒ・フロム『愛するということ』をわかりやすく読む</a></h4>
+        <p class="fp-article-desc">愛は「気持ち」ではなく「育てる力」。名著を現代のことばで紐解く。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">💪</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag general">一般向け</span> 2026.03.08</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/08/203506">五十肩の非薬物療法 ― 外来で使える実践ガイド</a></h4>
+        <p class="fp-article-desc">振り子運動・タオル体操・壁のぼり運動など、自宅でできるリハビリを動画付きで解説。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🏥</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag general">一般向け</span> 2026.03.05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/transfer_family">急性期病院から療養型病院への転院を渋る家族への対応 ―急性期医が知っておくべき説明のコツ―</a></h4>
+        <p class="fp-article-desc">家族の不安に寄り添いながら転院の必要性を伝えるコミュニケーション術。</p>
+    </div>
+</div>
+
+<!-- ===== AI・テクノロジー ===== -->
+<h2 class="fp-section-title" id="ai-tech">AI・テクノロジー</h2>
+
+<div class="fp-grid">
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">📊</div>
+        <h3>病院統計をAIで解析</h3>
+        <p>厚労省の最新病院統計（2025年12月分）を、Claude Codeで取得・解析。滋賀県のデータをダッシュボード化。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/03/14/035057">記事を読む →</a>
+    </div>
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">🎉</div>
+        <h3>ブログ開設1周年</h3>
+        <p>AIと歩んだ900記事超の軌跡。テキストから動画まで、進化の過程を振り返る。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/03/08/092126">記事を読む →</a>
+    </div>
+    <div class="fp-grid-card">
+        <div class="fp-card-icon">🤖</div>
+        <h3>最新AIに「幸福とは何か」を聞いた</h3>
+        <p>ChatGPT 5.4 pro と Claude 4.6 opus、2つの最高峰モデルの回答を比較。</p>
+        <a class="fp-btn" href="https://hinyan1016.hatenablog.com/entry/2026/03/07/042637">ChatGPT版 →</a>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">📱</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ai">AI活用</span><span class="fp-tag neuro">脳神経内科</span> 2026.03.11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/095707">スマホで撮るだけでパーキンソン病が分かる？──AI動画解析の最前線をやさしく解説</a></h4>
+        <p class="fp-article-desc">AI動画解析がパーキンソン病の診療に与えるインパクトを解説した総説記事の紹介。</p>
+    </div>
+</div>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🎨</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag ai">AI活用</span> 2026.03.11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/065455">YouTube・学会スライドを「読みやすく」する超実用チェックリスト</a></h4>
+        <p class="fp-article-desc">フォント・配色・レイアウトのチェックポイントを実例付きで紹介。</p>
+    </div>
+</div>
+
+<!-- ===== 新着記事一覧 ===== -->
+<h2 class="fp-section-title" id="all-new">2026年3月 新着記事一覧</h2>
+
+<div class="fp-article">
+    <div class="fp-article-icon">🦴</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/125143">高カルシウム血症の鑑別診断</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🌡️</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/082431">不明熱（FUO）の鑑別</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🔍</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/20</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/20/233400">MMTから神経障害部位を推測する</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🏥</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/210503">片麻痺患者の胃管留置で「咽頭交差」を意識する</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🫁</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/113452">パーキンソン病における誤嚥性肺炎</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🚶</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/110951">歩行障害・協調運動障害の鑑別診断</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🧠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta"><span class="fp-tag new">NEW</span> 03/19</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/19/210503">蘇生後の高次脳機能障害</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🧠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/18</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/18/100922">三相波の鑑別：てんかん重積 vs 代謝性脳症</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">💔</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/18</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/18/001634">急性胸痛の鑑別診断</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🧎</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/17</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/17/060041">正座から立ち上がると、なぜクラッとするのか</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🫁</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/16</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/16/194738">呼吸困難（息切れ）の鑑別診断</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🤝</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/16</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/16/153125">ジストニア振戦とは何か</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">😵‍💫</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/125012">意識障害の鑑別</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🌀</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/090118">めまいの鑑別</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🤕</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/15</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/15/083259">頭痛の鑑別</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">⚡</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/14</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/14/071725">アルツハイマー病に潜む「見えないてんかん性活動」</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">📊</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/14</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/14/035057">最新の病院統計をAIで解析</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🐘</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/13</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/13/184534">動物園のゾウはどうやって運ぶのか！？</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🧬</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/12</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/12/103828">自己免疫疾患CAR-Tの全体像</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">💪</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/105323">重症筋無力症に対するCAR-T療法の新時代</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">📱</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/095707">スマホで撮るだけでパーキンソン病が分かる？</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🎨</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/065455">スライドを「読みやすく」するチェックリスト</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🔬</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/060732">EAN 2024ガイドライン：高CK血症の診断アプローチ</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">💊</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/11</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/11/143022">全身浮腫の鑑別診断 — 系統的アプローチ</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🧠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/10</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/10/122240">レカネマブと心房細動</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🦠</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/10</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/10/063521">帯状疱疹は「皮膚の病気」ではない</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">❤️</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/09</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/09/033450">フロム『愛するということ』をわかりやすく読む</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">💪</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/08</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/08/203506">五十肩の非薬物療法</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🎉</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/08</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/08/092126">ブログ開設1周年</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🤖</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/07</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/07/042637">ChatGPT 5.4 pro vs Claude 4.6 opus：幸福とは何か</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">💊</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/external_seizure_prophylaxis">外傷・術後の抗てんかん薬</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🫧</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/arachnoid_cyst">くも膜嚢胞の臨床総説</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🏥</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/transfer_family">療養型病院への転院を渋る家族への対応</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">📋</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/113326">ALS診療ガイドライン追補版2025</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🌀</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/05</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/05/vestibular_rehab">前庭リハビリの基本と実践</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">❓</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/04</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/04/103556">脳神経内科医がよく遭遇する「誤解」10選</a></h4>
+    </div>
+</div>
+<div class="fp-article">
+    <div class="fp-article-icon">🔬</div>
+    <div class="fp-article-body">
+        <div class="fp-article-meta">03/04</div>
+        <h4><a href="https://hinyan1016.hatenablog.com/entry/2026/03/04/101113">脳神経内科医がよく遭遇する「漫然検査」10選</a></h4>
+    </div>
+</div>
+
+<!-- フッター -->
+<div class="fp-footer-note">
+    すべての記事は <a href="https://hinyan1016.hatenablog.com/archive">記事一覧（時系列）</a> からご覧いただけます。<br>
+    サイト全体のガイドは <a href="https://hinyan1016.hatenablog.com/entrance">医知創造ラボの歩き方</a> をご覧ください。
+</div>
+
+</div>
+</body>
+</html>

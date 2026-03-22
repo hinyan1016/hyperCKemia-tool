@@ -1,0 +1,450 @@
+<div class="medical-article">
+<style>
+/* ============================================
+   ⚠️ 全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 2rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1.2rem;
+}
+
+.medical-article h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+    margin-bottom: 0.9em;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+    margin-bottom: 0.9em;
+}
+
+.medical-article li {
+    margin-bottom: 0.3em;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+    color: #2c5aa0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .practice-box {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.93rem;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.medical-article .drug-table th {
+    background: #2c5aa0 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.medical-article .drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.medical-article .drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-article .medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-article .medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-article .medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-article .medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .references h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+}
+</style>
+
+<h1>片麻痺患者の胃管留置で「咽頭交差」を意識する<br>
+<small style="font-size:0.7em; color:#555;">― 麻痺側に胃管を通し、健側で嚥下を使うという発想 ―</small></h1>
+
+<!-- 目次ボックス -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#intro">はじめに</a></li>
+<li><a href="#crossing">1. 「咽頭交差」とは何か</a></li>
+<li><a href="#effects">2. 胃管が嚥下に与える影響：文献から見えてくること</a></li>
+<li><a href="#problem">3. 問題は「存在」ではなく「太さ・期間・走行」</a></li>
+<li><a href="#physiology">4. 頸部回旋の生理と一側咽頭麻痺への応用</a></li>
+<li><a href="#practice">5. 実践：麻痺側梨状陥凹に胃管を通す</a></li>
+<li><a href="#technique">6. 留置の手順と頸部回旋法</a></li>
+<li><a href="#confirmation">7. 入ったあとの確認：VEで走行を見る</a></li>
+<li><a href="#caution">8. 限界と注意点</a></li>
+<li><a href="#summary">おわりに</a></li>
+</ul>
+</div>
+
+<!-- ======================================== -->
+<h2 id="intro">はじめに</h2>
+
+<p>脳梗塞後などの患者に経鼻胃管を留置するとき、つい「入ったかどうか」に意識が向きがちです。しかし、嚥下リハを進める症例では、それだけでは不十分です。<strong>胃管が咽頭のどこを通っているか</strong>、つまり咽頭で交差していないかまで見たほうがよいと感じています。</p>
+
+<p>文献上、こうした状態は「交差挿入」あるいは「中咽頭から下咽頭への斜走」と表現され、喉頭蓋への接触や圧迫を介して嚥下に悪影響を及ぼしうるとされています。<sup>[6]</sup> 本稿では、この「咽頭交差」という視点から、片麻痺患者への胃管留置をどう考えるかを整理します。</p>
+
+<!-- ======================================== -->
+<h2 id="crossing">1. 「咽頭交差」とは何か</h2>
+
+<p>ここでいう「咽頭交差」とは、たとえば<strong>右鼻腔から入れた胃管が咽頭後壁を斜めに走り、左の梨状陥凹から食道に入るような走行</strong>です（図のイメージ）。挿入した鼻腔と反対側の梨状陥凹に迷い込む形で斜走する状態です。</p>
+
+<p>2017年の学会抄録では、この「交差挿入」で、健常者でも激しいむせや著明な咽頭残留がみられ、高齢の嚥下障害患者では液体で梨状窩・喉頭蓋谷残留が増えることが報告されています。<sup>[6]</sup></p>
+
+<div class="important-box">
+<strong>📋 咽頭交差（交差挿入）の定義</strong><br>
+経鼻胃管が、挿入した鼻腔と<strong>反対側の梨状陥凹を経由して食道に入る走行</strong>。咽頭後壁を斜走するため、喉頭蓋や披裂部への接触・圧迫が生じやすく、嚥下機能に悪影響を及ぼしうる。
+</div>
+
+<!-- ======================================== -->
+<h2 id="effects">2. 胃管が嚥下に与える影響：文献から見えてくること</h2>
+
+<p>胃管が嚥下に与える影響は、以前から指摘されています。</p>
+
+<h3>胃管抜去後に嚥下が改善する（2006年、日本）</h3>
+<p>大野らは同条件で比較できた63件のVFで、<strong>胃管抜去後に喉頭蓋反転、咽頭残留、食塊通過、誤嚥が改善</strong>したことを報告しています。特に、<strong>太いチューブと交差走行のチューブで影響が大きい</strong>ことが示されています。<sup>[2]</sup></p>
+
+<h3>長期留置そのものが障害になる（2019年、BMC Neurology）</h3>
+<p>Wangらの報告では、長期留置された経鼻胃管を抜去すると、咽頭通過時間、喉頭蓋谷残留、梨状窩残留、PAS（Penetration-Aspiration Scale）がすべて改善しており、<strong>長期留置そのものも咽頭期嚥下の妨げになりうる</strong>ことが示されました。<sup>[4]</sup></p>
+
+<h3>正しく留置された胃管は嚥下を大きく変えない（急性期脳卒中FEES研究）</h3>
+<p>一方で、急性期脳卒中のFEES研究では、<strong>側壁沿いに正しく留置された胃管は、主要な嚥下所見を大きく変えませんでした</strong>。ただし、100例中5例に咽頭内の誤留置やループ形成があり、喉頭蓋を回り込んだり披裂部に接触したりした症例では、全例で嚥下が悪化しました。<sup>[5]</sup></p>
+
+<!-- ======================================== -->
+<h2 id="problem">3. 問題は「存在」ではなく「太さ・期間・走行」</h2>
+
+<p>「胃管が入っていれば必ず嚥下が悪くなる」と単純に言うのは正確ではありません。文献が示すのは次の3点です。</p>
+
+<table class="drug-table">
+<thead>
+<tr>
+<th>問題となる要因</th>
+<th>内容</th>
+<th>対策の方向性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>チューブの太さ</strong></td>
+<td>太いほど喉頭・咽頭への機械的影響が大きい</td>
+<td>可能な限り細径チューブを選択</td>
+</tr>
+<tr>
+<td><strong>留置期間</strong></td>
+<td>長期留置は咽頭期嚥下を持続的に障害しうる</td>
+<td>定期的な嚥下評価・抜去可否の再検討</td>
+</tr>
+<tr>
+<td><strong>走行（交差・斜走・誤留置）</strong></td>
+<td>交差挿入・ループ形成・喉頭蓋接触で嚥下が悪化</td>
+<td>頸部回旋法で同側留置を目指す、VEで走行確認</td>
+</tr>
+</tbody>
+</table>
+
+<p>したがって、嚥下リハを進める症例では「胃管が入ったかどうか」だけでなく、<strong>「どこをどう通っているか」</strong>まで意識することが重要になります。</p>
+
+<!-- ======================================== -->
+<h2 id="physiology">4. 頸部回旋の生理と一側咽頭麻痺への応用</h2>
+
+<h3>頸部回旋手技の基本的な生理</h3>
+<p><strong>頸部回旋</strong>は、回旋した側の咽頭を狭くし、食塊を反対側へ流しやすくする代償手技です。通常は、咽頭機能の悪い側へ頸部を回し、食塊を機能のよい側に通して残留や誤嚥を減らします。</p>
+
+<p>Logemann らの古典的研究（1989年）でも、頭部回旋は<strong>食塊を回旋と反対側へ偏らせ、上部食道括約部の圧を下げ、開大を助ける</strong>ことが示されています。<sup>[3]</sup></p>
+
+<h3>一側嚥下（健側傾斜 + 患側回旋）</h3>
+<p><strong>健側傾斜と患側回旋を組み合わせる「一側嚥下」</strong>では、食塊を健側に誘導しつつ、患側梨状窩の狭小化と食道入口部の通過補助を狙います。この手技は、日本摂食嚥下リハビリテーション学会の訓練法まとめでも整理されています。<sup>[7]</sup></p>
+
+<h3>胃管留置への応用</h3>
+<p>この生理をつなげて考えると、<strong>一側咽頭麻痺の患者では、胃管はできるだけ麻痺側の梨状陥凹に通し、健側は食塊通過と訓練のために空けておく</strong>、という考え方はかなり合理的です。</p>
+
+<div class="warning-box">
+<strong>⚠️ 「麻痺側」の定義に注意</strong><br>
+ここでいう「麻痺側」は<strong>四肢の片麻痺側ではなく</strong>、VEやVF、神経学的所見で<strong>咽頭機能が低い側</strong>を指します。四肢の麻痺側と咽頭麻痺側が一致しない場合もあるため、個別評価が必要です。
+</div>
+
+<!-- ======================================== -->
+<h2 id="practice">5. 実践：麻痺側梨状陥凹に胃管を通す</h2>
+
+<p>文献の中心は、</p>
+<ol>
+<li>交差挿入の不利<sup>[2][6]</sup></li>
+<li>頸部回旋での同側挿入<sup>[1]</sup></li>
+<li>一側障害に対する患側回旋・健側通過<sup>[3][7]</sup></li>
+</ol>
+<p>の報告であり、これらを組み合わせた実践的な工夫として理解するのがよいと思います。</p>
+
+<div class="practice-box">
+<strong>✅ 片麻痺患者への胃管留置の考え方</strong><br><br>
+・胃管は<strong>咽頭機能の低い側（麻痺側）の梨状陥凹</strong>を通す<br>
+・<strong>健側の梨状陥凹と咽頭壁は、食塊通過・嚥下訓練のために温存</strong>する<br>
+・これにより、胃管と嚥下の食塊通路を可能な限り分離できる
+</div>
+
+<!-- ======================================== -->
+<h2 id="technique">6. 留置の手順と頸部回旋法</h2>
+
+<h3>頸部回旋法の根拠</h3>
+<p>藤森らの報告では、<strong>頸部回旋法で挿入成功率は92%</strong>、非回旋では59%でした。同側走行の割合も頸部回旋法で高く、学会e-learningでも「喉頭蓋に触れないよう、鼻腔と同側の梨状陥凹に入れる」「そのために挿入鼻腔と反対側へ頸部回旋する」と説明されています。<sup>[1][9]</sup></p>
+
+<div class="important-box">
+<strong>📋 頸部回旋の方向について</strong><br>
+挿入する鼻腔と<strong>反対側へ頸部を回す</strong>ことで、挿入鼻腔と<strong>同側の梨状陥凹</strong>へ胃管が誘導されやすくなる。<br>
+例：右鼻腔から挿入 → 頸部を<strong>左に回旋</strong> → 右梨状陥凹へ通りやすくなる
+</div>
+
+<h3>実際の手順</h3>
+<ol>
+<li><strong>体位の準備</strong>：ややリクライニングして厚めの枕で頸部の緊張を抜く</li>
+<li><strong>頸部回旋</strong>：麻痺側鼻腔を選択し、<strong>健側へ頸部回旋</strong>する（挿入鼻腔の反対側へ回す）</li>
+<li><strong>咽頭通過</strong>：鼻から耳介まで程度進めたところで嚥下を促す</li>
+<li><strong>嚥下に合わせて進める</strong>：嚥下のタイミングに合わせてゆっくり進める</li>
+<li><strong>抵抗があれば</strong>：少し戻して回旋を強めて再度進める。咳や抵抗が強い場合は無理に進めない</li>
+</ol>
+
+<!-- ======================================== -->
+<h2 id="confirmation">7. 入ったあとの確認：VEで走行を見る</h2>
+
+<p>「胃に入ったか」だけで終わらせず、可能なら<strong>VE（嚥下内視鏡検査）でどちらの梨状陥凹を通っているか、喉頭蓋に当たっていないか</strong>まで確認することが理想です。</p>
+
+<p>2026年の報告では、<strong>VF前VEで胃管留置28件中5件に斜走と喉頭蓋接触・圧迫が見つかっています</strong>。<sup>[5]</sup> 見た目上「胃管が入っている」状態でも、交差走行や喉頭蓋接触が存在する可能性があることを示しています。</p>
+
+<div class="important-box">
+<strong>📋 VEで確認したいポイント</strong><br>
+・胃管がどちらの梨状陥凹を通っているか<br>
+・喉頭蓋に当たっていないか（接触・圧迫）<br>
+・披裂部への接触はないか<br>
+・咽頭後壁での斜走（交差挿入）はないか
+</div>
+
+<!-- ======================================== -->
+<h2 id="caution">8. 限界と注意点</h2>
+
+<h3>姿勢調整は万能ではない</h3>
+<p>頸部回旋は本来、食塊を非回旋側へ流す手技ですが、リクライニング角度や体幹の傾きによっては、意図した側と逆に流れることもあります。食塊の実際の通過経路はVFやVEで個別に確認して進めるのが安全です。</p>
+
+<h3>「麻痺側＝必ず咽頭機能低下」ではない</h3>
+<p>咽頭麻痺の程度と四肢麻痺は必ずしも一致しません。また、脳幹梗塞など病変部位によっては両側性の咽頭障害も生じます。VEやVF、神経学的所見に基づいた個別評価が前提です。</p>
+
+<h3>エビデンスの限界</h3>
+<p>「麻痺側への胃管留置＋健側での嚥下訓練」という組み合わせそのものを直接検証した大規模な研究はまだありません。頸部回旋での同側留置の優位性<sup>[1]</sup>、交差挿入の不利<sup>[2][6]</sup>、頸部回旋の嚥下生理<sup>[3]</sup>、長期留置の影響<sup>[4]</sup>、VEでの走行確認<sup>[5]</sup>といった個々の文献を組み合わせた実践的推論です。</p>
+
+<div class="warning-box">
+<strong>⚠️ 実践上の注意</strong><br>
+・麻痺側鼻腔の選択・頸部回旋の方向は、患者ごとの解剖・機能評価に基づいて判断する<br>
+・VEでの走行確認が理想だが、施設環境に応じてできる範囲で実施する<br>
+・胃管留置は栄養管理の手段であり、嚥下リハビリの代替ではない
+</div>
+
+<!-- ======================================== -->
+<h2 id="summary">おわりに</h2>
+
+<p>正直なところ、これまでは「胃管が入ったかどうか」までは見ていても、「咽頭でどちらをどう通っているか」までは十分に意識できていませんでした。</p>
+
+<p>しかし今後は、<strong>一側咽頭麻痺のある患者では、麻痺側鼻腔から、健側への頸部回旋で、麻痺側の梨状陥凹を狙って留置する</strong>。そして必要に応じてVEで走行を確認し、<strong>健側を嚥下訓練に使いやすい状態に整える</strong>、という視点を持ちたいと思います。</p>
+
+<p><strong>胃管は栄養ルートであると同時に、嚥下を邪魔する異物にもなりうる</strong>。この両面を意識した留置が、嚥下リハを進める症例では特に重要です。</p>
+
+<!-- ======================================== -->
+<!-- 参考文献セクション -->
+<div class="references">
+<h3>参考文献</h3>
+
+<div class="ref-item">
+<span class="ref-numbers">1</span>
+<span class="ref-content"><a href="https://www.jstage.jst.go.jp/article/jsnas/4/2/4_14/_article/-char/en" target="_blank" rel="noopener">Fujimori M, Ohno R, Fujishima I. A New Insertion Technique for the Naso-Gastric Tube Using Neck Rotation. <em>Japanese Journal of Nursing Art and Science.</em> 2005;4(2):14-21.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">2</span>
+<span class="ref-content"><a href="https://www.jstage.jst.go.jp/article/jsdr/10/2/10_125/_article/-char/ja/" target="_blank" rel="noopener">大野綾，藤島一郎，大野友久，高橋博達，黒田百合．経鼻経管栄養チューブが嚥下障害患者の嚥下に与える影響．<em>日本摂食嚥下リハビリテーション学会雑誌．</em> 2006;10(2):125-134.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">3</span>
+<span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/2802957/" target="_blank" rel="noopener">Logemann JA, Kahrilas PJ, Kobara M, Vakil NB. The benefit of head rotation on pharyngoesophageal dysphagia. <em>Arch Phys Med Rehabil.</em> 1989;70(10):767-771.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">4</span>
+<span class="ref-content"><a href="https://doi.org/10.1186/s12883-019-1314-6" target="_blank" rel="noopener">Wang ZY, Chen JM, Ni GX. Effect of an indwelling nasogastric tube on swallowing function in elderly post-stroke dysphagia patients with long-term nasal feeding. <em>BMC Neurol.</em> 2019;19:83.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">5</span>
+<span class="ref-content">黒川雅史，宮川晋治，薮崎敦子，棚橋一雄，相井誠次郎，國枝顕二郎，金沢英哲，昆博之，小川美歌，高橋博達，重松孝，藤島一郎．嚥下造影検査の前後に嚥下内視鏡検査を行うことの意義について．<em>嚥下医学．</em> 2026;15:66-72.</span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">6</span>
+<span class="ref-content">西岡由樹，坂倉浩一，桑原有紀，近松一朗．NG-tube咽頭交差挿入の嚥下機能に対する影響．<em>日摂食嚥下リハ会誌．</em> 2017;21(3):S119-S120（学術大会抄録）.</span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">7</span>
+<span class="ref-content"><a href="https://www.jsdr.or.jp/wp-content/uploads/file/doc/18-1-p55-89.pdf" target="_blank" rel="noopener">日本摂食嚥下リハビリテーション学会医療検討委員会．訓練法のまとめ（2014版）．<em>日摂食嚥下リハ会誌．</em> 2014;18(1):55-89.</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">8</span>
+<span class="ref-content"><a href="https://www.jsnt.gr.jp/guideline/enge.html" target="_blank" rel="noopener">標準的神経治療：神経疾患に伴う嚥下障害．<em>神経治療．</em> 2014;31(4).</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">9</span>
+<span class="ref-content"><a href="https://www.jsdr.or.jp/e-learning_index/" target="_blank" rel="noopener">日本摂食嚥下リハビリテーション学会 e-learning. Specific Methods: Nasogastric Tube Feeding, Oro-esophageal Tube Feeding, and Percutaneous Endoscopic Gastrostomy.</a></span>
+</div>
+
+</div>
+
+</div>
