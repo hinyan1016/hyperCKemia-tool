@@ -32,6 +32,17 @@ Claude_task/
 - スライド作成: `NODE_PATH="C:/Users/jsber/AppData/Roaming/npm/node_modules" node <script>.js`
 - Python実行: `/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe`
 - GitHub CLI: `export PATH="$PATH:/c/Program Files/GitHub CLI" && gh ...`
+- LibreOffice (headless): `"/c/Program Files/LibreOffice/program/soffice.exe" --headless --convert-to <format> --outdir <dir> <file>`
+- pdftoppm: `"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe" -png -r 150 <pdf> <output_prefix>`
+
+## スライド視覚検証手順（LibreOffice + pdftoppm）
+PPTXスライド作成後、以下の手順でレンダリング品質を確認する：
+1. **PPTX→PDF変換**: `soffice --headless --convert-to pdf --outdir <dir> <pptx>`
+2. **PDF→ページ別PNG変換**: `pdftoppm -png -r 150 -f <from> -l <to> <pdf> <prefix>`
+3. **PNG画像をReadツールで視覚確認**: レイアウト崩れ・文字切れ・配色・フォントをチェック
+4. **問題があればスクリプトを修正して再生成**
+
+※ サムネイル（1スライド）の場合はPPTX→PNG直接変換も可: `soffice --headless --convert-to png`
 
 ## コーディング規約
 - 日本語UI・日本語コメント
@@ -136,3 +147,24 @@ render() → DOM更新
 - render()内でダブルクォートを含む文字列（例: "vanishing tumor"）は文字列連結で安全に処理する
 - 空ページ問題の主原因はSWキャッシュ。sw.jsのバージョンを必ず上げること
 - GitHub Pagesデプロイには約30-60秒かかる
+
+---
+
+## ブログ文献リンク有効化プロジェクト進捗
+
+はてなブログ(hinyan1016)の参考文献にDOI/URLリンクを追加する継続作業。
+「ブログ文献リンクの続きをお願いします」で再開可能。
+
+### 完了月
+- 2026年3月/2月/1月、2025年12月/11月/10月/9月 — 完了
+- 2025年8月 — 完了（2025-03-26）。全61記事スキャン、68件リンク追加
+- 2025年7月 — 完了（2025-03-26）。282件リンク追加（P1:145+P2:137）。6月以前は対応不要
+
+### 累計実績
+**862件のリンク追加 + 9件のリンク修正**
+
+### 技術メモ（要点）
+- iframe直接変更→submit[0].click()で保存。beforeunload対策必須
+- バッチスキャン: アーカイブページから`a.entry-title-link`のhrefでURL取得→fetchでref-itemチェック
+- 一部記事はref-contentスパンなし（テキスト直接div内）→テキスト直接置換方式
+- 詳細はローカルメモリ `~/.claude/projects/.../memory/project_blog_reference_links.md` 参照
