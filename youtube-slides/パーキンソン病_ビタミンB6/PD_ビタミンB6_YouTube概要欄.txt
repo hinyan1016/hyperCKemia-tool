@@ -1,0 +1,50 @@
+パーキンソン病患者のビタミンB6管理｜レボドパ/カルビドパ時代に「避ける」ではなく「評価して補う」
+
+「ビタミンB6はレボドパを弱めるから避けるべき」という説明をいまだに耳にします。しかしこれは主にレボドパ単剤の話です。2026年3月、FDAはカルビドパ/レボドパ含有製剤にB6欠乏と関連発作の警告追加を要求しました。レボドパ単剤と配合剤で考え方がまったく異なるこのテーマを、最新エビデンスに基づいて整理します。
+
+▼ 目次
+0:00 オープニング
+0:30 今日のテーマ
+1:30 なぜ話がややこしくなるのか
+3:00 レボドパ単剤とビタミンB6
+4:30 レボドパ/カルビドパ合剤ではどう考えるか
+6:00 B6欠乏のエビデンス（2023年系統的レビュー）
+7:30 追加エビデンス（2020・2024・2025年）
+9:30 2026年3月 FDA安全性警告
+11:30 抗てんかん薬に反応しない → B6で消失
+13:00 実臨床で誰にB6を測るべきか
+14:30 補充すべきか、避けるべきか ― 製剤で分ける
+16:00 Take Home Message
+
+▼ この動画で取り上げるポイント
+・レボドパ単剤 vs レボドパ/カルビドパ合剤でB6の扱いが異なる理由
+・2026年3月FDAの安全性警告（14例の発作、B6補充で9例消失）
+・B6欠乏の頻度（LCIG 44.6%、経口L/C 30.1%）
+・抗てんかん薬に反応しない発作 → B6欠乏を鑑別に
+・実臨床でいつ測り、いつ補うか
+・製剤別の実務対応表
+
+▼ 主な参考文献
+1. FDA Drug Safety Communication (March 20, 2026)
+   https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-warning-about-vitamin-b6-deficiency-and-associated-seizures-drug-products-containing
+2. Modica JS et al. J Neurol Sci. 2023;450:120690.
+   https://doi.org/10.1016/j.jns.2023.120690
+3. Rojo-Sebastián A et al. Clin Neuropharmacol. 2020;43(5):151-157.
+   https://doi.org/10.1097/WNF.0000000000000408
+4. Ikenaka K et al. Pharmacol Res Perspect. 2024;12(1):e1174.
+   https://doi.org/10.1002/prp2.1174
+5. Déry C et al. Mov Disord Clin Pract. 2024;12(1):120-122.
+   https://doi.org/10.1002/mdc3.14243
+6. Nathan CL et al. Neurohospitalist. 2025.
+   https://doi.org/10.1177/19418744251360306
+7. Pauls KAM et al. Brain Behav. 2021;11(12):e2408.
+   https://doi.org/10.1002/brb3.2408
+
+▼ 関連リンク
+ブログ記事（詳細版）: https://hinyan1016.hatenablog.com/entry/2026/04/04/082109
+
+▼ チャンネル
+医知創造ラボ ― 脳神経内科医による医学教育チャンネル
+チャンネル登録・高評価よろしくお願いします！
+
+#パーキンソン病 #ビタミンB6 #レボドパ #カルビドパ #FDA警告 #てんかん #LCIG #末梢神経障害 #脳神経内科 #医知創造ラボ

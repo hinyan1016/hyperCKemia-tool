@@ -26,17 +26,17 @@ s.addShape(pres.shapes.RECTANGLE, { x: 0, y: 5.545, w: 10, h: 0.08, fill: { colo
 s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: 0.4, w: 3.5, h: 0.7, fill: { color: C.red } });
 s.addText("見逃していませんか？", {
   x: 0.3, y: 0.4, w: 3.5, h: 0.7,
-  fontSize: 24, fontFace: "Arial Black", color: C.white, bold: true, align: "center", valign: "middle", margin: 0,
+  fontSize: 24, fontFace: "BIZ UDPGothic", color: C.white, bold: true, align: "center", valign: "middle", margin: 0,
 });
 
 // Main title
 s.addText("若年ミオクロニー", {
   x: 0.3, y: 1.3, w: 9.4, h: 1.3,
-  fontSize: 56, fontFace: "Arial Black", color: C.white, bold: true, align: "center", margin: 0,
+  fontSize: 48, fontFace: "BIZ UDPGothic", color: C.white, bold: true, align: "center", margin: 0,
 });
 s.addText("てんかん", {
   x: 0.3, y: 2.5, w: 9.4, h: 1.0,
-  fontSize: 56, fontFace: "Arial Black", color: C.accent, bold: true, align: "center", margin: 0,
+  fontSize: 48, fontFace: "BIZ UDPGothic", color: C.accent, bold: true, align: "center", margin: 0,
 });
 
 // Subtitle line
@@ -54,14 +54,14 @@ points.forEach(function(p, i) {
   s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: 3.85, w: 2.8, h: 0.65, fill: { color: p.color } });
   s.addText(p.text, {
     x: xPos, y: 3.85, w: 2.8, h: 0.65,
-    fontSize: 16, fontFace: "Arial Black", color: C.dark, bold: true, align: "center", valign: "middle", margin: 0,
+    fontSize: 16, fontFace: "BIZ UDPGothic", color: C.dark, bold: true, align: "center", valign: "middle", margin: 0,
   });
 });
 
 // Bottom: channel name
 s.addText("医知創造ラボ", {
   x: 0.3, y: 4.9, w: 9.4, h: 0.5,
-  fontSize: 18, fontFace: "Arial", color: C.accent, align: "center", margin: 0,
+  fontSize: 18, fontFace: "BIZ UDPGothic", color: C.accent, align: "center", margin: 0,
 });
 
 var outPath = __dirname + "/thumbnail_slide.pptx";

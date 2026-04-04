@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1280px; height: 720px; overflow: hidden; font-family: 'BIZ UDPGothic', 'Yu Gothic', sans-serif; }
+.container { position: relative; width: 1280px; height: 720px; background: #0D1B2A; overflow: hidden; }
+
+/* 上部アクセントライン */
+.top-line { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: #DC3545; }
+
+/* 左サイドバー */
+.left-bar { position: absolute; left: 0; top: 0; width: 20px; height: 100%; background: #E8850C; }
+
+/* 背景装飾 */
+.bg-stripe1 { position: absolute; top: 38px; left: 704px; width: 640px; height: 115px; background: #1B3A5C; border-radius: 13px; transform: rotate(-8deg); }
+.bg-stripe2 { position: absolute; top: 179px; left: 768px; width: 576px; height: 90px; background: #1A3550; border-radius: 13px; transform: rotate(-8deg); }
+.bg-stripe3 { position: absolute; top: 307px; left: 832px; width: 512px; height: 64px; background: #162D45; border-radius: 13px; transform: rotate(-8deg); }
+
+/* 警告マーク */
+.warning-box { position: absolute; top: 38px; right: 100px; width: 192px; height: 192px; background: #DC3545; border-radius: 19px; transform: rotate(5deg); display: flex; align-items: center; justify-content: center; }
+.warning-box span { font-size: 90px; color: white; }
+
+/* メインタイトル */
+.title1 { position: absolute; top: 51px; left: 64px; font-size: 64px; font-weight: bold; color: #FFFFFF; }
+.title2 { position: absolute; top: 166px; left: 64px; font-size: 72px; font-weight: bold; color: #E8850C; }
+
+/* サブタイトル */
+.subtitle-bg { position: absolute; top: 346px; left: 64px; width: 960px; height: 90px; background: #DC3545; border-radius: 6px; display: flex; align-items: center; padding-left: 26px; }
+.subtitle-bg span { font-size: 36px; font-weight: bold; color: #FFFFFF; }
+
+/* キーワードバッジ */
+.badges { position: absolute; display: flex; gap: 12px; left: 64px; }
+.badges.row1 { top: 474px; }
+.badges.row2 { top: 548px; }
+.badge { width: 256px; height: 70px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold; color: #FFFFFF; }
+
+/* 下部テキスト */
+.bottom-text { position: absolute; top: 646px; left: 64px; font-size: 23px; font-weight: bold; color: #78909C; }
+
+/* 下部アクセントライン */
+.bottom-line { position: absolute; bottom: 0; left: 0; width: 100%; height: 10px; background: #DC3545; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-line"></div>
+  <div class="left-bar"></div>
+  <div class="bg-stripe1"></div>
+  <div class="bg-stripe2"></div>
+  <div class="bg-stripe3"></div>
+  <div class="warning-box"><span>⚠</span></div>
+  <div class="title1">感染症の</div>
+  <div class="title2">最新動向 2025</div>
+  <div class="subtitle-bg"><span>医療従事者が今知るべき8つの脅威</span></div>
+  <div class="badges row1">
+    <div class="badge" style="background:#DC3545;">H5N1</div>
+    <div class="badge" style="background:#2C5AA0;">AMR</div>
+    <div class="badge" style="background:#8E44AD;">梅毒</div>
+    <div class="badge" style="background:#E67E22;">マイコプラズマ</div>
+  </div>
+  <div class="badges row2">
+    <div class="badge" style="background:#1A6B3C;">COVID変異株</div>
+    <div class="badge" style="background:#C0392B;">麻疹</div>
+    <div class="badge" style="background:#2980B9;">mpox</div>
+    <div class="badge" style="background:#D35400;">iGAS</div>
+  </div>
+  <div class="bottom-text">Immunity Debt × グローバル化</div>
+  <div class="bottom-line"></div>
+</div>
+</body>
+</html>

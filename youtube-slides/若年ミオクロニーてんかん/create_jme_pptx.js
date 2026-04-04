@@ -21,15 +21,17 @@ var C = {
   green: "28A745",
 };
 
-var FONT_H = "Arial Black";
-var FONT_B = "Arial";
+var FONT_JP = "BIZ UDPGothic";
+var FONT_EN = "Segoe UI";
+var FONT_H = FONT_JP;
+var FONT_B = FONT_JP;
 
 function makeShadow() { return { type: "outer", blur: 4, offset: 2, angle: 135, color: "000000", opacity: 0.12 }; }
 
 function addHeader(s, title) {
   s.background = { color: C.warmBg };
   s.addShape(pres.shapes.RECTANGLE, { x: 0, y: 0, w: 10, h: 0.9, fill: { color: C.primary } });
-  s.addText(title, { x: 0.5, y: 0.1, w: 9, h: 0.7, fontSize: 28, fontFace: FONT_H, color: C.white, bold: true, margin: 0 });
+  s.addText(title, { x: 0.5, y: 0.1, w: 9, h: 0.7, fontSize: 24, fontFace: FONT_JP, color: C.white, bold: true, margin: 0 });
 }
 
 function addCard(s, x, y, w, h) {
@@ -51,24 +53,24 @@ function addPageNum(s, num) {
 
   s.addText("若年ミオクロニーてんかん", {
     x: 0.8, y: 0.8, w: 8.4, h: 1.2,
-    fontSize: 42, fontFace: FONT_H, color: C.white, bold: true, align: "center", margin: 0,
+    fontSize: 40, fontFace: FONT_JP, color: C.white, bold: true, align: "center", margin: 0,
   });
   s.addText("Juvenile Myoclonic Epilepsy (JME)", {
     x: 0.8, y: 1.9, w: 8.4, h: 0.6,
-    fontSize: 22, fontFace: FONT_B, color: C.accent, align: "center", italic: true, margin: 0,
+    fontSize: 22, fontFace: FONT_EN, color: C.accent, align: "center", italic: true, margin: 0,
   });
   s.addText("― 見逃されやすい思春期てんかんの診断と治療 ―", {
     x: 0.8, y: 2.6, w: 8.4, h: 0.7,
-    fontSize: 22, fontFace: FONT_B, color: C.accent, align: "center", margin: 0,
+    fontSize: 22, fontFace: FONT_JP, color: C.accent, align: "center", margin: 0,
   });
   s.addShape(pres.shapes.LINE, { x: 3, y: 3.5, w: 4, h: 0, line: { color: C.accent, width: 2 } });
   s.addText("医知創造ラボ  今村久司", {
     x: 0.8, y: 3.8, w: 8.4, h: 0.5,
-    fontSize: 20, fontFace: FONT_B, color: C.light, align: "center", margin: 0,
+    fontSize: 20, fontFace: FONT_JP, color: C.light, align: "center", margin: 0,
   });
   s.addText("2025年最新メタアナリシス・コホート研究に基づく", {
     x: 0.8, y: 4.5, w: 8.4, h: 0.4,
-    fontSize: 14, fontFace: FONT_B, color: C.sub, align: "center", italic: true, margin: 0,
+    fontSize: 14, fontFace: FONT_JP, color: C.sub, align: "center", italic: true, margin: 0,
   });
 })();
 
@@ -89,7 +91,7 @@ function addPageNum(s, num) {
   stats.forEach(function(item, i) {
     var xPos = 0.3 + i * 2.4;
     addCard(s, xPos, 1.2, 2.2, 1.8);
-    s.addText(item.num, { x: xPos, y: 1.3, w: 2.2, h: 0.8, fontSize: 26, fontFace: FONT_H, color: C.primary, bold: true, align: "center", margin: 0 });
+    s.addText(item.num, { x: xPos, y: 1.3, w: 2.2, h: 0.8, fontSize: 24, fontFace: FONT_EN, color: C.primary, bold: true, align: "center", margin: 0 });
     s.addText(item.desc, { x: xPos, y: 2.1, w: 2.2, h: 0.8, fontSize: 14, fontFace: FONT_B, color: C.text, align: "center", valign: "middle", margin: 0 });
   });
 
@@ -100,10 +102,10 @@ function addPageNum(s, num) {
     { text: "遺伝形式: ", options: { bold: true, color: C.text } },
     { text: "多因子遺伝（polygenic）が主体", options: { color: C.text, breakLine: true } },
     { text: "GWAS感受性座位: ", options: { bold: true, color: C.text } },
-    { text: "4p12, 8q23.1, 16p11.2（JME特異的）", options: { color: C.text, breakLine: true } },
+    { text: "4p12, 8q23.1, 16p11.2（JME特異的）", options: { color: C.text, fontFace: FONT_EN, breakLine: true } },
     { text: "病態基盤: ", options: { bold: true, color: C.text } },
     { text: "前頭-視床-皮質ネットワークの遺伝的異常", options: { color: C.text } },
-  ], { x: 0.8, y: 3.9, w: 8.4, h: 1.4, fontSize: 15, fontFace: FONT_B, valign: "top", margin: 0, lineSpacingMultiple: 1.3 });
+  ], { x: 0.8, y: 3.9, w: 8.4, h: 1.4, fontSize: 15, fontFace: FONT_JP, valign: "top", margin: 0, lineSpacingMultiple: 1.3 });
 
   addPageNum(s, "2/15");
 })();
@@ -129,7 +131,7 @@ function addPageNum(s, num) {
     s.addText(t.name, { x: xPos, y: 1.2, w: 3.0, h: 0.7, fontSize: 16, fontFace: FONT_H, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
     // Frequency circle
     s.addShape(pres.shapes.OVAL, { x: xPos + 0.7, y: 2.1, w: 1.6, h: 1.2, fill: { color: C.light } });
-    s.addText(t.freq, { x: xPos + 0.7, y: 2.1, w: 1.6, h: 1.2, fontSize: 22, fontFace: FONT_H, color: t.color, bold: true, align: "center", valign: "middle", margin: 0 });
+    s.addText(t.freq, { x: xPos + 0.7, y: 2.1, w: 1.6, h: 1.2, fontSize: 22, fontFace: FONT_EN, color: t.color, bold: true, align: "center", valign: "middle", margin: 0 });
     // Description
     s.addText(t.desc, { x: xPos + 0.2, y: 3.5, w: 2.6, h: 1.6, fontSize: 14, fontFace: FONT_B, color: C.text, align: "center", valign: "top", margin: 0 });
   });
@@ -345,9 +347,9 @@ function addPageNum(s, num) {
   addCard(s, 0.5, 4.4, 9, 1.0);
   s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 4.4, w: 0.2, h: 1.0, fill: { color: C.accent } });
   s.addText([
-    { text: "2025年メタアナリシス (18研究, 2,189例): ", options: { bold: true, color: C.primary } },
+    { text: "2025年メタアナリシス (18研究, 2,189例): ", options: { bold: true, color: C.primary, fontFace: FONT_JP } },
     { text: "LEV vs VPA → ミオクロニー発作消失率に有意差なし。LEVはLTG (OR 2.22), TPM (OR 1.93)に有意に優位", options: { color: C.text } },
-  ], { x: 1.0, y: 4.4, w: 8.2, h: 1.0, fontSize: 13, fontFace: FONT_B, valign: "middle", margin: 0 });
+  ], { x: 1.0, y: 4.4, w: 8.2, h: 1.0, fontSize: 13, fontFace: FONT_JP, valign: "middle", margin: 0 });
 
   addPageNum(s, "9/15");
 })();
@@ -487,10 +489,10 @@ function addPageNum(s, num) {
   addCard(s, 0.5, 1.2, 9, 1.3);
   s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.2, w: 0.25, h: 1.3, fill: { color: C.red } });
   s.addText([
-    { text: "断薬後の再発率: ", options: { fontSize: 22, color: C.text } },
-    { text: "75〜100%", options: { fontSize: 28, bold: true, color: C.red } },
-    { text: " (5年以内)", options: { fontSize: 22, color: C.text } },
-  ], { x: 1.0, y: 1.2, w: 8.2, h: 0.7, fontFace: FONT_H, align: "center", valign: "middle", margin: 0 });
+    { text: "断薬後の再発率: ", options: { fontSize: 22, color: C.text, fontFace: FONT_JP } },
+    { text: "75〜100%", options: { fontSize: 28, bold: true, color: C.red, fontFace: FONT_EN } },
+    { text: " (5年以内)", options: { fontSize: 22, color: C.text, fontFace: FONT_JP } },
+  ], { x: 1.0, y: 1.2, w: 8.2, h: 0.7, fontFace: FONT_JP, align: "center", valign: "middle", margin: 0 });
   s.addText("→ 多くの患者で生涯にわたる服薬継続が推奨", {
     x: 1.0, y: 1.9, w: 8.2, h: 0.5, fontSize: 16, fontFace: FONT_B, color: C.primary, align: "center", margin: 0,
   });
@@ -508,7 +510,7 @@ function addPageNum(s, num) {
     var yPos = 3.4 + i * 0.5;
     s.addShape(pres.shapes.RECTANGLE, { x: 0.8, y: yPos, w: 0.2, h: 0.4, fill: { color: p.color } });
     s.addText(p.label, { x: 1.2, y: yPos, w: 2.0, h: 0.4, fontSize: 13, fontFace: FONT_B, color: C.text, valign: "middle", margin: 0 });
-    s.addText(p.pct, { x: 3.3, y: yPos, w: 1.2, h: 0.4, fontSize: 15, fontFace: FONT_H, color: p.color, bold: true, valign: "middle", margin: 0 });
+    s.addText(p.pct, { x: 3.3, y: yPos, w: 1.2, h: 0.4, fontSize: 15, fontFace: FONT_EN, color: p.color, bold: true, valign: "middle", margin: 0 });
   });
 
   // New view
@@ -598,7 +600,7 @@ function addPageNum(s, num) {
 
   s.addText("Take-home Message", {
     x: 0.5, y: 0.2, w: 9, h: 0.7,
-    fontSize: 30, fontFace: FONT_H, color: C.accent, bold: true, align: "center", margin: 0,
+    fontSize: 28, fontFace: FONT_EN, color: C.accent, bold: true, align: "center", margin: 0,
   });
 
   var messages = [
@@ -615,7 +617,7 @@ function addPageNum(s, num) {
     var yPos = 1.1 + i * 0.62;
     s.addShape(pres.shapes.OVAL, { x: 0.7, y: yPos + 0.05, w: 0.45, h: 0.45, fill: { color: C.accent } });
     s.addText(m.num, { x: 0.7, y: yPos + 0.05, w: 0.45, h: 0.45, fontSize: 18, fontFace: FONT_H, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-    s.addText(m.text, { x: 1.4, y: yPos, w: 8, h: 0.55, fontSize: 17, fontFace: FONT_B, color: C.white, valign: "middle", margin: 0 });
+    s.addText(m.text, { x: 1.4, y: yPos, w: 8, h: 0.55, fontSize: 16, fontFace: FONT_JP, color: C.white, valign: "middle", margin: 0 });
   });
 
   s.addText("ご視聴ありがとうございました", {
@@ -650,7 +652,7 @@ function addPageNum(s, num) {
 
   refs.forEach(function(r, i) {
     var yPos = 1.1 + i * 0.3;
-    s.addText(r, { x: 0.5, y: yPos, w: 9, h: 0.3, fontSize: 10, fontFace: FONT_B, color: C.text, valign: "middle", margin: 0 });
+    s.addText(r, { x: 0.5, y: yPos, w: 9, h: 0.3, fontSize: 10, fontFace: FONT_EN, color: C.text, valign: "middle", margin: 0 });
   });
 
   addPageNum(s, "16/16");

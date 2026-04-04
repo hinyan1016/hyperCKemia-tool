@@ -1,0 +1,732 @@
+<div class="medical-article">
+<style>
+/* ============================================
+   全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+/* 基本スタイル */
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.medical-article h3::before {
+    content: '\25B6';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.medical-article td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.medical-article tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* FAQ */
+.medical-article .faq-item {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.medical-article .faq-q {
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-bottom: 6px;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+}
+</style>
+
+<h1>【2025-2026年】感染症の最新動向まとめ｜医療従事者が押さえるべき8つのトピック</h1>
+
+<div class="toc-box">
+<h3>目次</h3>
+<ul>
+<li><a href="#sec1" style="color:#2c5aa0;text-decoration:none;">1. 2025-2026年の感染症動向 ― 概観</a></li>
+<li><a href="#sec2" style="color:#2c5aa0;text-decoration:none;">2. 鳥インフルエンザ（H5N1）― ヒト感染リスクの最新評価</a></li>
+<li><a href="#sec3" style="color:#2c5aa0;text-decoration:none;">3. 薬剤耐性菌（AMR）― 2025年の現状と対策</a></li>
+<li><a href="#sec4" style="color:#2c5aa0;text-decoration:none;">4. 梅毒の急増 ― なぜ止まらないのか</a></li>
+<li><a href="#sec5" style="color:#2c5aa0;text-decoration:none;">5. マイコプラズマ肺炎 ― マクロライド耐性時代の治療戦略</a></li>
+<li><a href="#sec6" style="color:#2c5aa0;text-decoration:none;">6. COVID-19 ― 変異株の現在地と後遺症の最新知見</a></li>
+<li><a href="#sec7" style="color:#2c5aa0;text-decoration:none;">7. 麻疹の再流行 ― ワクチンギャップへの対応</a></li>
+<li><a href="#sec8" style="color:#2c5aa0;text-decoration:none;">8. mpox（サル痘）― クレード分類と臨床対応</a></li>
+<li><a href="#sec9" style="color:#2c5aa0;text-decoration:none;">9. 侵襲性A群溶血性レンサ球菌（iGAS）― 劇症型の急増</a></li>
+<li><a href="#sec10" style="color:#2c5aa0;text-decoration:none;">10. 医療従事者のための実践チェックリスト</a></li>
+<li><a href="#sec11" style="color:#2c5aa0;text-decoration:none;">11. よくある質問（FAQ）</a></li>
+<li><a href="#sec12" style="color:#2c5aa0;text-decoration:none;">12. まとめ</a></li>
+</ul>
+</div>
+
+<div class="important-box">
+<p><strong>この記事のポイント</strong></p>
+<ul>
+<li>鳥インフルエンザH5N1は米国乳牛での大規模アウトブレイクを経て、哺乳類→ヒト感染の新たな経路が確認された。ヒト-ヒト感染は未確認だが監視強化が急務</li>
+<li>AMR関連死は2021年時点で年間471万人、2050年には822万人に達するとの予測。新規BL/BLI配合薬が複数承認され、治療選択肢が拡大</li>
+<li>日本の梅毒報告数は2020年を変曲点に年間変化率43.8%で急増。先天梅毒予防のための妊婦スクリーニング強化が重要</li>
+<li>マイコプラズマ肺炎はCOVID-19後のimmunity debtで世界的に再興。東アジアではマクロライド耐性率80%超</li>
+<li>Long COVIDに対するメトホルミンのPCC予防効果（リスク64%低下）やpost-COVID ILDに対するステロイドの有効性がRCTで示された</li>
+</ul>
+</div>
+
+<!-- ===== セクション1: 概観 ===== -->
+<h2 id="sec1">1. 2025-2026年の感染症動向 ― 概観</h2>
+
+<p>COVID-19パンデミックの「5類移行」後も、感染症の脅威は形を変えながら続いている。<strong>パンデミック期間中の非薬学的介入（NPI）が解除されたことで、複数の感染症が同時に再興する「immunity debt」現象</strong>が世界的に観察されている。</p>
+
+<p>2024年のGlobal Burden of Disease研究では、非COVID下気道感染が世界で年間3億4400万エピソード・218万人の死亡を引き起こしており、COVID以前のレベルに戻りつつある。<sup>1</sup></p>
+
+<p>本記事では、2025-2026年に医療従事者が特に注視すべき8つの感染症トピックを取り上げる。選定基準は以下の3点である。</p>
+
+<ul>
+<li><strong>疫学的インパクト</strong>：報告数の急増または新たな流行パターン</li>
+<li><strong>臨床的重要性</strong>：診断・治療戦略に変化をもたらす新知見</li>
+<li><strong>パンデミックポテンシャル</strong>：将来的な大規模流行のリスク</li>
+</ul>
+
+<!-- ===== セクション2: H5N1 ===== -->
+<h2 id="sec2">2. 鳥インフルエンザ（H5N1）― ヒト感染リスクの最新評価</h2>
+
+<h3>2-1. 疫学：乳牛→ヒト感染とワンヘルスの視点</h3>
+
+<p><strong>H5N1 clade 2.3.4.4bは、野鳥における世界的panzootic（汎動物流行）から哺乳類への越境感染へと段階を進めている。</strong>2024年のNature誌のレビューでは、南米・南極への初到達を含む史上最大規模の野鳥流行が報告され、ヨーロッパの毛皮農場、南米のアシカ、そして米国の乳牛で持続的な哺乳類間伝播が確認された。<sup>2</sup></p>
+
+<p>特に注目すべきは<strong>米国乳牛での大規模アウトブレイク</strong>である。H5N1ウイルスは乳腺組織に主に複製し、乳汁中に高ウイルス量が検出される。乳牛から猫・アライグマ・齧歯類・家禽への伝播も確認され、さらに酪農作業者における複数のヒト感染事例が報告された。これは<strong>哺乳類からヒトへの初めての伝播事例</strong>として重要である。<sup>3</sup></p>
+
+<h3>2-2. 臨床像と重症度</h3>
+
+<p>現時点でのヒト感染例は軽症が多く、結膜炎や軽度の呼吸器症状が主体である。ただし、ウイルスのポリメラーゼタンパク質（PB2）にはE627K、D701Nなどの哺乳類適応変異が出現しており、ヒト型受容体（α2,6シアル酸）への結合変化はまだ見られていないものの、変異の蓄積は継続的に監視が必要である。<sup>4</sup></p>
+
+<div class="warning-box">
+<p><strong>ヒト-ヒト感染は未確認</strong></p>
+<p>2025年時点でH5N1のヒト-ヒト持続的伝播は確認されていない。しかし、zoonotic感染の増加は適応変異やreassortmentの機会を創出しており、パンデミックリスクはゼロではない。<sup>5</sup></p>
+</div>
+
+<h3>2-3. 日本の備え：サーベイランスとワクチン準備状況</h3>
+
+<p>米国備蓄のAS03/MF59アジュバント添加H5N1ワクチン（旧株由来）が、現在流行中のclade 2.3.4.4bに対して交差中和抗体を産生することが確認されている。AS03-A/Indonesia 2回接種で60-95%の血清変換率が得られ、更新版ワクチンが利用可能になるまでの「bridging vaccine」として期待される。<sup>6</sup> 日本でも家禽・野鳥のサーベイランス体制の維持とワクチン準備の加速が求められる。</p>
+
+<!-- ===== セクション3: AMR ===== -->
+<h2 id="sec3">3. 薬剤耐性菌（AMR）― 2025年の現状と対策</h2>
+
+<h3>3-1. ESBL・CRE・MRSA：耐性パターンの変化</h3>
+
+<p><strong>2024年のLancet誌GBD研究によると、2021年のAMR関連死は471万人（うちAMR起因死114万人）に達し、2050年にはそれぞれ822万人・191万人に増加すると予測されている。</strong><sup>7</sup></p>
+
+<p>特に深刻なのは以下の点である。</p>
+<ul>
+<li><strong>MRSA関連死</strong>が最も増加：1990年の26.1万人から2021年に55万人へ倍増</li>
+<li><strong>カルバペネム耐性</strong>も著しく増加し、WHO 2024年版の細菌優先病原体リストではカルバペネム耐性K. pneumoniaeが最高スコア（84%）で最上位に位置づけられた<sup>8</sup></li>
+<li>5歳未満の死亡は50%以上減少した一方で、<strong>70歳以上では80%以上増加</strong>しており、高齢化社会での影響が懸念される</li>
+</ul>
+
+<h3>3-2. AMRアクションプラン2023-2027の進捗</h3>
+
+<p>WHOは2024年にAMR対策の研究優先事項40項目を特定し、予防・診断・治療を網羅する包括的な研究ロードマップを発表した。<sup>9</sup> 同時に、感染予防・ワクチン・抗菌薬適正使用・新規抗菌薬開発の組み合わせにより、2050年までに累積9200万人の死亡を回避できる可能性が示されている。<sup>10</sup></p>
+
+<h3>3-3. 抗菌薬適正使用：実臨床でできること</h3>
+
+<p>新規BL/BLI配合薬として以下が承認され、治療選択肢が拡大している。<sup>11</sup></p>
+
+<table>
+<tr>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">薬剤名</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">主な対象</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">臨床的位置づけ</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">Cefepime/enmetazobactam</td>
+<td style="padding:10px 12px;">ESBL産生菌</td>
+<td style="padding:10px 12px;">カルバペネム温存戦略の選択肢</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:10px 12px;">Aztreonam/avibactam</td>
+<td style="padding:10px 12px;">CRE（メタロβラクタマーゼ含む）</td>
+<td style="padding:10px 12px;">MBL産生菌への数少ない選択肢</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">Sulbactam/durlobactam</td>
+<td style="padding:10px 12px;">CRAB（カルバペネム耐性A. baumannii）</td>
+<td style="padding:10px 12px;">CRAB治療の新たな選択肢</td>
+</tr>
+</table>
+
+<p>実臨床では、抗菌薬適正使用支援チーム（AST）活動の推進と、培養結果に基づくde-escalationの徹底が引き続き重要である。</p>
+
+<!-- ===== セクション4: 梅毒 ===== -->
+<h2 id="sec4">4. 梅毒の急増 ― なぜ止まらないのか</h2>
+
+<h3>4-1. 疫学：年間報告数の推移と年齢・性別分布</h3>
+
+<p><strong>2025年のJAMAレビューによると、世界で年間推定800万人が梅毒に新規感染しており、米国では2019-2023年に61%増加（女性112%増、先天梅毒106%増）した。</strong><sup>12</sup></p>
+
+<p>日本でも梅毒の急増が顕著である。2025年のMoriらの研究では、<strong>日本の梅毒症例数に2020年を変曲点とする急増（年間変化率43.8%）</strong>が確認され、非店舗型デリバリーヘルス事業数との強い相関が報告されている。<sup>13</sup> また、日本の妊婦における梅毒有病率は1/1,215と報告されており、早産9%、子宮内胎児死亡2%、新生児先天梅毒7%という周産期合併症が認められている。<sup>14</sup></p>
+
+<h3>4-2. 診断アルゴリズム（RPR/TPHA）と見逃しやすいケース</h3>
+
+<p>診断には従来のRPR/TPHAに加え、<strong>reverse algorithm（まずTPHA/FTA-ABSで特異抗体を検出→RPRで活動性を評価）</strong>が海外では普及しつつある。見逃しやすいケースとして以下に注意が必要である。</p>
+
+<ul>
+<li>第1期梅毒の初期硬結が無痛のため患者が受診しない</li>
+<li>第2期梅毒の多彩な皮疹が他疾患と誤診される</li>
+<li><strong>神経梅毒・眼梅毒・耳梅毒</strong>：梅毒増加に伴い再興しており、原因不明の視力障害・聴覚障害では鑑別に含めるべきである<sup>15</sup></li>
+</ul>
+
+<h3>4-3. 治療：ベンジルペニシリンベンザチン筋注の位置づけ</h3>
+
+<p>第一選択薬は<strong>ベンジルペニシリンベンザチン（BPG）240万単位筋注</strong>である。<sup>12</sup> 日本では2022年から使用可能となり、外来での単回投与による治療完遂が可能になった。ペニシリンアレルギーの場合はdoxycycline 100mg 1日2回14日間が代替となる。</p>
+
+<p>予防面では、性的曝露後のdoxycycline予防投与（<strong>DoxyPEP</strong>）が注目されており、梅毒・クラミジア・淋菌感染の予防効果が示されている。<sup>12</sup></p>
+
+<!-- ===== セクション5: マイコプラズマ ===== -->
+<h2 id="sec5">5. マイコプラズマ肺炎 ― マクロライド耐性時代の治療戦略</h2>
+
+<h3>5-1. 2024-2025年の流行規模と疫学的特徴</h3>
+
+<p><strong>COVID-19パンデミック後の「immunity debt」により、Mycoplasma pneumoniaeが世界的に再興している。</strong>GBD 2021研究ではMycoplasma属が下気道感染の起因病原体として第3位（年間2530万エピソード）に位置づけられた。<sup>1</sup></p>
+
+<p>M. pneumoniaeは通常3-5年周期で流行するが、パンデミック中のNPIにより循環が抑制され、免疫が低下した集団で2024-2025年に大規模な再興が生じた。大気汚染（PM2.5、NO2）も感受性を高める因子として報告されている。<sup>16</sup></p>
+
+<h3>5-2. マクロライド耐性率と治療選択</h3>
+
+<p>地域間のマクロライド耐性率の差は極めて大きい。</p>
+
+<table>
+<tr>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">地域</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">マクロライド耐性率</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">第二選択薬</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">中国</td>
+<td style="padding:10px 12px;">80%超</td>
+<td style="padding:10px 12px;">テトラサイクリン系（ドキシサイクリン/ミノサイクリン）</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:10px 12px;">日本・韓国</td>
+<td style="padding:10px 12px;">50-80%</td>
+<td style="padding:10px 12px;">テトラサイクリン系、トスフロキサシン（小児）</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">欧米</td>
+<td style="padding:10px 12px;">10-30%</td>
+<td style="padding:10px 12px;">マクロライドが依然として第一選択</td>
+</tr>
+</table>
+
+<p>2024年に発表された世界初のMRMP小児治療コンセンサスでは、マクロライド48-72時間の初期治療で改善しない場合にテトラサイクリン系への変更が推奨されている。難治性マイコプラズマ肺炎にはコルチコステロイド+IVIGの併用も検討される。<sup>17,18</sup></p>
+
+<!-- ===== セクション6: COVID-19 ===== -->
+<h2 id="sec6">6. COVID-19 ― 変異株の現在地と後遺症の最新知見</h2>
+
+<h3>6-1. 変異株の動向と免疫逃避</h3>
+
+<p><strong>SARS-CoV-2は6つの血清型に分類され、血清型間でT細胞交差反応性が段階的に低下することが2026年の研究で明らかになった。</strong>特にSerotype VI（BA.2.86/JN.1系統）に対する交差T細胞応答が顕著に弱く、ユニバーサルワクチン開発の障壁となっている。<sup>19</sup></p>
+
+<p>XBB.1.5に対する中和抗体は全年齢で著明に低下しているが、ワクチン接種は自然感染単独より強い中和活性を誘導し、特に60歳以上で交差中和の改善が最も大きい。<sup>20</sup> 年齢別のブースター戦略の最適化が引き続き重要である。</p>
+
+<h3>6-2. Long COVID：病態と治療の進展</h3>
+
+<p>Long COVIDの病態解明と治療に関して、2026年に複数の重要な知見が報告された。</p>
+
+<div class="important-box">
+<p><strong>Long COVID治療の新展開</strong></p>
+<ul>
+<li><strong>メトホルミン</strong>：英国62万人超のコホート研究で、BMI 25以上の過体重者においてCOVID-19診断後90日以内のメトホルミン開始がpost-COVID condition発症リスクを<strong>64%低下</strong>（HR 0.36; 95%CI 0.32-0.41）<sup>21</sup></li>
+<li><strong>メチルプレドニゾロン</strong>：post-COVID ILD 229例のRCTで、0.5mg/kg/日投与群の12週時点での機能改善率74.2% vs 対照55.2%（OR 2.33）<sup>22</sup></li>
+</ul>
+</div>
+
+<p>病態面では、NK細胞の転写リプログラミングやマスト細胞の活性化を介した小径線維神経障害・自律神経障害のメカニズムが報告されており、新たな治療標的として注目されている。<sup>23,24</sup></p>
+
+<!-- ===== セクション7: 麻疹 ===== -->
+<h2 id="sec7">7. 麻疹の再流行 ― ワクチンギャップへの対応</h2>
+
+<h3>7-1. 国内外の流行状況</h3>
+
+<p><strong>2000年に排除宣言された米国を含む複数の高所得国で、麻疹が再流行している。</strong>主因はMMRワクチン接種率の低下とワクチン忌避であり、WHOが定める95%の集団免疫閾値を下回る地域が増加している。<sup>25,26</sup></p>
+
+<p>イタリアの献血者調査では、<strong>18-24歳の感受性率が39.8%</strong>と極めて高く、ワクチン2回接種済みでも69.6%が感受性を示した。自然感染はワクチンより持続的な免疫を誘導するため、ワクチンのみに依存した世代で免疫のwaning（減衰）が懸念される。<sup>27</sup></p>
+
+<h3>7-2. 空白世代と医療従事者の抗体確認</h3>
+
+<p>アイルランドの小児調査では、3-9歳の血清陽性率は94-95%と良好だが、<strong>10-17歳では87-89%と95%閾値を下回る</strong>ことが判明した。<sup>28</sup> ワクチン接種率データでは見えない免疫ギャップが血清疫学調査で初めて明らかになる場合がある。</p>
+
+<p>3回目の麻疹含有ワクチンについては、抗体低下者の液性・細胞性免疫を増強する可能性が示されているが、持続的な臨床的防御は未証明であり、現時点では<strong>2回接種の徹底が最優先</strong>とされている。<sup>29</sup></p>
+
+<div class="warning-box">
+<p><strong>医療従事者への推奨</strong></p>
+<p>医療従事者自身の麻疹抗体価確認と、必要に応じた追加接種を推奨する。特に1978-1990年生まれ（接種1回世代）は要確認。</p>
+</div>
+
+<!-- ===== セクション8: mpox ===== -->
+<h2 id="sec8">8. mpox（サル痘）― クレード分類と臨床対応</h2>
+
+<h3>8-1. クレードIb：新たなリスク</h3>
+
+<p><strong>2023年後半にコンゴ民主共和国で検出されたクレードIbは、アフリカ大陸を越えて世界的に拡散している。</strong>インドでも2024年9月-2025年3月に10例が確認された（90%がUAE渡航歴あり）。APOBEC3変異シグネチャーが高く、持続的なヒト-ヒト感染を示唆する。<sup>30,31</sup></p>
+
+<p>アフリカ全体では2022年1月-2024年9月に20カ国で9,446例が報告され、COVID-19後にmpox発生リスクが約4倍に増加（IRR 3.77）している。<sup>32</sup></p>
+
+<h3>8-2. 診断・治療・ワクチン</h3>
+
+<p>治療面では、クレードIb MPXVに対して<strong>テコビリマト、シドフォビル、ブリンシドフォビルの3剤全てが前臨床で有効</strong>であることが実証された。<sup>33</sup> ワクチンとしてはMVA-BN（JYNNEOS）がACAM2000より安全性と免疫原性に優れ、優先使用が推奨されている。<sup>34</sup></p>
+
+<!-- ===== セクション9: iGAS ===== -->
+<h2 id="sec9">9. 侵襲性A群溶血性レンサ球菌（iGAS）― 劇症型の急増</h2>
+
+<h3>9-1. 疫学：2024-2025年の報告数</h3>
+
+<p><strong>COVID-19パンデミック後に複数の高所得国でiGASが急増しており、日本では2024年6月時点でSTSS（劇症型溶血性レンサ球菌感染症）が977例に達し、前年を上回った。</strong><sup>35,36</sup></p>
+
+<p>急増の要因としては、パンデミック中のNPIによるGAS循環の抑制と免疫低下、呼吸器ウイルス（インフルエンザ・RSV）との相互作用、そしてM1UK等の超毒性クローンの拡大が検討されている。M1UK系統はSpeAスーパー抗原の発現増加を特徴とし、欧州・豪州・カナダで支配的な系統となっている。<sup>36,37</sup></p>
+
+<h3>9-2. 臨床像と早期介入のポイント</h3>
+
+<p>英国の大規模コホート（emm1 iGAS 4,952例）では、<strong>30日死亡率は24%</strong>であり、死亡の63.7%が検体採取1日以内に発生している。15歳未満では致死例の56.3%が検体採取前に死亡しており、培養確認前に作用する迅速診断・早期治療が不可欠である。<sup>38</sup></p>
+
+<div class="emergency-box">
+<p><strong>劇症型溶連菌を疑うべき所見</strong></p>
+<ul>
+<li>急速に進行する軟部組織の疼痛（壊死性筋膜炎）</li>
+<li>低血圧・頻脈・意識障害（敗血症性ショック）</li>
+<li>先行する軽微な外傷・水痘・インフルエンザ後の急激な悪化</li>
+</ul>
+</div>
+
+<p>日本の全国データベース解析（481例）では、IVIG投与はiGAS全体の院内死亡率を改善しなかったが、STSSサブグループへの効果は不確定であり、さらなる研究が必要とされている。<sup>39</sup></p>
+
+<!-- ===== セクション10: チェックリスト ===== -->
+<h2 id="sec10">10. 医療従事者のための実践チェックリスト</h2>
+
+<table>
+<tr>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">感染症</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">いつ疑う</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">主な検査</td>
+<td style="padding:10px 12px; background:#2c5aa0; color:#fff; font-weight:bold;">届出</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">H5N1</td>
+<td style="padding:10px 12px;">鳥・乳牛との接触歴＋呼吸器/結膜症状</td>
+<td style="padding:10px 12px;">PCR（鼻咽頭・結膜）</td>
+<td style="padding:10px 12px;">2類（疑い段階で保健所連絡）</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:10px 12px;">梅毒</td>
+<td style="padding:10px 12px;">無痛性潰瘍、多彩な皮疹、原因不明の視力・聴力障害</td>
+<td style="padding:10px 12px;">RPR＋TPHA（またはreverse algorithm）</td>
+<td style="padding:10px 12px;">5類全数</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">マイコプラズマ</td>
+<td style="padding:10px 12px;">乾性咳嗽が遷延、マクロライド48-72h無効</td>
+<td style="padding:10px 12px;">PCR、迅速抗原、LAMP法</td>
+<td style="padding:10px 12px;">5類定点</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:10px 12px;">麻疹</td>
+<td style="padding:10px 12px;">発熱＋発疹＋カタル症状（渡航歴・接触歴）</td>
+<td style="padding:10px 12px;">IgM抗体、PCR</td>
+<td style="padding:10px 12px;">5類全数（直ちに届出）</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;">mpox</td>
+<td style="padding:10px 12px;">水疱膿疱性皮疹＋リンパ節腫脹（渡航歴・接触歴）</td>
+<td style="padding:10px 12px;">PCR（皮膚病変部）</td>
+<td style="padding:10px 12px;">4類</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:10px 12px;">iGAS/STSS</td>
+<td style="padding:10px 12px;">急速進行の軟部組織痛、ショック</td>
+<td style="padding:10px 12px;">血液培養、迅速抗原</td>
+<td style="padding:10px 12px;">5類全数（STSS）</td>
+</tr>
+</table>
+
+<!-- ===== セクション11: FAQ ===== -->
+<h2 id="sec11">11. よくある質問（FAQ）</h2>
+
+<div class="faq-item">
+<p class="faq-q">Q1. 鳥インフルエンザH5N1はヒトからヒトにうつりますか？</p>
+<p>2025年時点で、H5N1の持続的なヒト-ヒト感染は確認されていません。現在のヒト感染は鳥や乳牛との直接接触が原因です。ただし、ウイルスの哺乳類適応変異が蓄積しており、監視が継続されています。<sup>5</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q2. 薬剤耐性菌（AMR）が増えている原因は何ですか？</p>
+<p>主な原因は抗菌薬の不適切な使用（過剰処方、不完全な治療コース、畜産での使用）、感染予防策の不徹底、新規抗菌薬開発の停滞です。2050年にはAMR起因死が年間191万人に達する見込みです。<sup>7</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q3. 梅毒はなぜ日本で急増しているのですか？</p>
+<p>2020年を変曲点に年間43.8%のペースで増加しています。出会い系アプリの普及や性風俗産業の構造的変化（非店舗型サービスの増加）との相関が報告されています。コンドーム使用率の低下も一因と考えられています。<sup>13</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q4. マイコプラズマ肺炎にマクロライド系が効かない場合、何を使いますか？</p>
+<p>マクロライド48-72時間で改善しない場合は、テトラサイクリン系（ドキシサイクリンまたはミノサイクリン）が第二選択です。小児では年齢制限に注意が必要です。難治例ではコルチコステロイドの併用も検討されます。<sup>17</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q5. COVID-19の後遺症はいつ治りますか？</p>
+<p>個人差が大きく、一律の回答は困難です。多くの症状は数か月で改善しますが、一部の患者では1年以上持続します。最近の研究では、メトホルミン（BMI 25以上の方）やステロイド（肺病変がある場合）の有効性が報告されています。<sup>21,22</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q6. 麻疹のワクチンを大人が打つべき世代はどこですか？</p>
+<p>日本では特に1978-1990年生まれ（定期接種1回世代）でワクチンギャップが懸念されます。医療従事者は抗体価の確認が推奨されます。2回接種が未完了の方は追加接種を検討してください。<sup>27</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q7. mpox（サル痘）のクレードIbとは何ですか？</p>
+<p>2023年後半にコンゴ民主共和国で検出された新たな系統で、従来のクレードIaより持続的なヒト-ヒト感染能力を持つ可能性があります。アジアを含む複数国で確認されており、国際渡航による拡散リスクがあります。<sup>30,31</sup></p>
+</div>
+
+<div class="faq-item">
+<p class="faq-q">Q8. 劇症型溶連菌感染症を疑うべき初期症状は何ですか？</p>
+<p>急速に悪化する軟部組織の疼痛（皮膚所見に比して不釣り合いに強い痛み）、発熱、低血圧、頻脈が危険信号です。水痘やインフルエンザ後の急激な悪化にも注意してください。死亡の6割以上が検体採取から1日以内に生じるため、早期介入が極めて重要です。<sup>38</sup></p>
+</div>
+
+<!-- ===== セクション12: まとめ ===== -->
+<h2 id="sec12">12. まとめ</h2>
+
+<p>2025-2026年の感染症動向は、パンデミック後の「immunity debt」とグローバル化がもたらす多面的な脅威によって特徴づけられる。H5N1の哺乳類への越境感染、AMRの深刻化、梅毒やマイコプラズマの再興、Long COVIDの治療進展、麻疹のワクチンギャップ、mpoxのクレードIb拡散、iGASの劇症化 ― いずれも個別疾患の知識だけでなく、横断的な視点と迅速な対応が求められるトピックである。</p>
+
+<p>本記事が日常診療における感染症の「気づき」の一助となれば幸いである。各トピックの詳細は参考文献から原著にアクセスいただきたい。</p>
+
+<!-- ===== 参考文献 ===== -->
+<div class="references">
+<h3>参考文献</h3>
+
+<div class="ref-item">
+<span class="ref-numbers">[1]</span>
+<span class="ref-content">GBD 2021 Lower Respiratory Infections Collaborators. Global, regional, and national incidence and mortality burden of non-COVID-19 lower respiratory infections and aetiologies, 1990-2021. Lancet Infect Dis. 2024;24(9):974-1002. <a href="https://doi.org/10.1016/S1473-3099(24)00176-2" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S1473-3099(24)00176-2</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[2]</span>
+<span class="ref-content">Peacock TP, Moncla L, Dudas G, et al. The global H5N1 influenza panzootic in mammals. Nature. 2024;637(8045):304-313. <a href="https://doi.org/10.1038/s41586-024-08054-z" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1038/s41586-024-08054-z</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[3]</span>
+<span class="ref-content">Mostafa A, Naguib MM, Nogales A, et al. Avian influenza A (H5N1) virus in dairy cattle: origin, evolution, and cross-species transmission. mBio. 2024;15(12):e0254224. <a href="https://doi.org/10.1128/mbio.02542-24" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1128/mbio.02542-24</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[4]</span>
+<span class="ref-content">Capelastegui F, Goldhill DH. H5N1 2.3.4.4b: a review of mammalian adaptations and risk of pandemic emergence. J Gen Virol. 2025;106(6). <a href="https://doi.org/10.1099/jgv.0.002109" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1099/jgv.0.002109</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[5]</span>
+<span class="ref-content">Krammer F, Hermann E, Rasmussen AL. Highly pathogenic avian influenza H5N1: history, current situation, and outlook. J Virol. 2025;99(4):e0220924. <a href="https://doi.org/10.1128/jvi.02209-24" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1128/jvi.02209-24</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[6]</span>
+<span class="ref-content">Khurana S, King LR, Manischewitz J, et al. Licensed H5N1 vaccines generate cross-neutralizing antibodies against highly pathogenic H5N1 clade 2.3.4.4b influenza virus. Nat Med. 2024;30(10):2771-2776. <a href="https://doi.org/10.1038/s41591-024-03189-y" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1038/s41591-024-03189-y</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[7]</span>
+<span class="ref-content">GBD 2021 Antimicrobial Resistance Collaborators. Global burden of bacterial antimicrobial resistance 1990-2021: a systematic analysis with forecasts to 2050. Lancet. 2024;404(10459):1199-1226. <a href="https://doi.org/10.1016/S0140-6736(24)01867-1" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S0140-6736(24)01867-1</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[8]</span>
+<span class="ref-content">Sati H, Carrara E, Savoldi A, et al. The WHO Bacterial Priority Pathogens List 2024. Lancet Infect Dis. 2025;25(9):1033-1043. <a href="https://doi.org/10.1016/S1473-3099(25)00118-5" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S1473-3099(25)00118-5</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[9]</span>
+<span class="ref-content">Bertagnolio S, Dobreva Z, Centner CM, et al. WHO global research priorities for antimicrobial resistance in human health. Lancet Microbe. 2024;5(11):100902. <a href="https://doi.org/10.1016/S2666-5247(24)00134-4" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S2666-5247(24)00134-4</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[10]</span>
+<span class="ref-content">Kariuki S. Global burden of antimicrobial resistance and forecasts to 2050 (Commentary). Lancet. 2024;404(10459):1172-1173. <a href="https://doi.org/10.1016/S0140-6736(24)01885-3" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S0140-6736(24)01885-3</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[11]</span>
+<span class="ref-content">Sargianou M, Stathopoulos P, Vrysis C, et al. New beta-Lactam/beta-Lactamase Inhibitor Combination Antibiotics. Pathogens. 2025;14(4). <a href="https://doi.org/10.3390/pathogens14040307" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.3390/pathogens14040307</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[12]</span>
+<span class="ref-content">Chevalier FJ, Bacon O, Johnson KA, Cohen SE. Syphilis: A Review. JAMA. 2025;334(21):1927-1940. <a href="https://doi.org/10.1001/jama.2025.17362" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1001/jama.2025.17362</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[13]</span>
+<span class="ref-content">Mori Y, Miyatake N, Mori Y, et al. Trends in Syphilis Incidence and Its Association With the Number of Sex Industry-Related Businesses in Japan. Cureus. 2025;17(5):e83294. <a href="https://doi.org/10.7759/cureus.83294" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.7759/cureus.83294</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[14]</span>
+<span class="ref-content">Hayata E, Suzuki S, Hoshi SI, et al. Trends in Syphilis in Pregnant Women in Japan in 2016 and 2022. Cureus. 2024;16(3):e56292. <a href="https://doi.org/10.7759/cureus.56292" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.7759/cureus.56292</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[15]</span>
+<span class="ref-content">Marra CM. Neurosyphilis. Brain. 2025;148(12):4222-4240. <a href="https://doi.org/10.1093/brain/awaf329" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1093/brain/awaf329</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[16]</span>
+<span class="ref-content">Tahmasebi H, Babaeizad A, Mohammadlou M, et al. Reemergence of Mycoplasma pneumoniae disease: Pathogenesis and new approaches. Microb Pathog. 2024;196:106944. <a href="https://doi.org/10.1016/j.micpath.2024.106944" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/j.micpath.2024.106944</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[17]</span>
+<span class="ref-content">Wang YS, Zhou YL, Bai GN, et al. Expert consensus on the diagnosis and treatment of macrolide-resistant Mycoplasma pneumoniae pneumonia in children. World J Pediatr. 2024;20(9):901-914. <a href="https://doi.org/10.1007/s12519-024-00831-0" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1007/s12519-024-00831-0</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[18]</span>
+<span class="ref-content">Ding G, Zhang X, Vinturache A, et al. Challenges in the treatment of pediatric Mycoplasma pneumoniae pneumonia. Eur J Pediatr. 2024;183(7):3001-3011. <a href="https://doi.org/10.1007/s00431-024-05519-1" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1007/s00431-024-05519-1</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[19]</span>
+<span class="ref-content">Guo Y, Tian J, Guo P, et al. T cell cross-immunity between SARS-CoV-2 serotypes. Emerg Microbes Infect. 2026;15(1):2610856. <a href="https://doi.org/10.1080/22221751.2025.2610856" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1080/22221751.2025.2610856</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[20]</span>
+<span class="ref-content">Dai M, Guo N, Wu Y, et al. Age-dependent immune profiles and variant-driven changes in humoral immunity. Front Immunol. 2026;17:1776854. <a href="https://doi.org/10.3389/fimmu.2026.1776854" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.3389/fimmu.2026.1776854</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[21]</span>
+<span class="ref-content">Chaichana U, Man KKC, Ju C, et al. Metformin for post-COVID condition prevention. Clin Infect Dis. 2026;82(3):e423-e432. <a href="https://doi.org/10.1093/cid/ciaf429" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1093/cid/ciaf429</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[22]</span>
+<span class="ref-content">Yuksel A, Karadogan D, et al. Methylprednisolone for post-COVID interstitial lung disease (RCT). Sarcoidosis Vasc Diffuse Lung Dis. 2026;43(1):17022. <a href="https://doi.org/10.36141/svdld.2026.17022" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.36141/svdld.2026.17022</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[23]</span>
+<span class="ref-content">Morcos ZL, Theoharides TC. Long COVID neurological effects and mast cells. J Neuropathol Exp Neurol. 2026. <a href="https://doi.org/10.1093/jnen/nlag016" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1093/jnen/nlag016</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[24]</span>
+<span class="ref-content">Ray U, Schulze Selting A, Singh Y, et al. NK cell transcriptional changes in Long COVID. Front Immunol. 2026;17:1720551. <a href="https://doi.org/10.3389/fimmu.2026.1720551" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.3389/fimmu.2026.1720551</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[25]</span>
+<span class="ref-content">Edward M. Measles resurgence in the United States. Global Public Health. 2026;21(1):2624148. <a href="https://doi.org/10.1080/17441692.2026.2624148" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1080/17441692.2026.2624148</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[26]</span>
+<span class="ref-content">Solano L, Smith R. Declining childhood vaccination rates and measles resurgence. JAAPA. 2026;39(4):16-22. <a href="https://doi.org/10.1097/01.JAA.0000000000000328" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1097/01.JAA.0000000000000328</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[27]</span>
+<span class="ref-content">Centrone F, Melilli R, Chironna M, et al. Measles immunity gaps in young adults in southern Italy. Hum Vaccin Immunother. 2026;22(1):2634496. <a href="https://doi.org/10.1080/21645515.2026.2634496" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1080/21645515.2026.2634496</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[28]</span>
+<span class="ref-content">Brady M, Brouwer L, O'Connor L, et al. Measles antibody seroprevalence in Irish children. Eurosurveillance. 2026;31(9). <a href="https://doi.org/10.2807/1560-7917.ES.2026.31.9.2500313" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.2807/1560-7917.ES.2026.31.9.2500313</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[29]</span>
+<span class="ref-content">Chau HTB, Minh BC, Huy NT, et al. Measles resurgence: is a third vaccine dose the answer? Rev Med Virol. 2026;36(2):e70134. <a href="https://doi.org/10.1002/rmv.70134" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1002/rmv.70134</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[30]</span>
+<span class="ref-content">Judson SD, Munster VJ, et al. Clade Ib mpox outside Africa: are we ready? Lancet Infect Dis. 2026;26(4):334-336. <a href="https://doi.org/10.1016/S1473-3099(26)00054-X" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S1473-3099(26)00054-X</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[31]</span>
+<span class="ref-content">Sahay RR, Shete AM, Yadav PD, et al. Clinical and genomic characterization of clade Ib mpox in India. Virology. 2026;617:110800. <a href="https://doi.org/10.1016/j.virol.2026.110800" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/j.virol.2026.110800</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[32]</span>
+<span class="ref-content">Oyedele OK, et al. Mpox in Africa post-COVID-19. BMC Med. 2026. <a href="https://doi.org/10.1186/s12916-026-04804-0" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1186/s12916-026-04804-0</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[33]</span>
+<span class="ref-content">Prevost J, Safronetz D, et al. Clade Ib MPXV mouse model and antiviral treatment. Antiviral Res. 2026;248:106377. <a href="https://doi.org/10.1016/j.antiviral.2026.106377" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/j.antiviral.2026.106377</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[34]</span>
+<span class="ref-content">Chen M, Li J, et al. Comprehensive review of mpox: immunity, vaccines, and treatment. Microorganisms. 2026;14(2):317. <a href="https://doi.org/10.3390/microorganisms14020317" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.3390/microorganisms14020317</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[35]</span>
+<span class="ref-content">Khan M, Furrukh N, Naveed F. The next pandemic? Global rise of streptococcal toxic shock syndrome. Disaster Med Public Health Prep. 2025;19:e53. <a href="https://doi.org/10.1017/dmp.2025.44" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1017/dmp.2025.44</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[36]</span>
+<span class="ref-content">Flamant A, Demirjian A, Lamagni T, et al. Lessons from the 2022-23 iGAS surge. Lancet Infect Dis. 2025;26(2):e91-e95. <a href="https://doi.org/10.1016/S1473-3099(25)00343-3" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/S1473-3099(25)00343-3</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[37]</span>
+<span class="ref-content">Bertolla OM, Walker MJ, Brouwer S. Recent evolution of GAS M1 serotype. Emerg Microbes Infect. 2026;15(1):2623691. <a href="https://doi.org/10.1080/22221751.2026.2623691" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1080/22221751.2026.2623691</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[38]</span>
+<span class="ref-content">Li HK, Zhu N, Sriskandan S, et al. M1UK lineage iGAS mortality in England and Wales. Clin Infect Dis. 2025;81(5):e277-e284. <a href="https://doi.org/10.1093/cid/ciaf492" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1093/cid/ciaf492</a></span>
+</div>
+
+<div class="ref-item">
+<span class="ref-numbers">[39]</span>
+<span class="ref-content">Senda A, Endo A, Fushimi K, Otomo Y. IVIG for invasive group A Streptococcus: Japan nationwide study. Int J Infect Dis. 2023;135:84-90. <a href="https://doi.org/10.1016/j.ijid.2023.08.011" target="_blank" rel="noopener" style="color:#2c5aa0;">doi:10.1016/j.ijid.2023.08.011</a></span>
+</div>
+
+</div>
+
+</div>

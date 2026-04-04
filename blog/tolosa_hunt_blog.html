@@ -1,0 +1,555 @@
+<div class="medical-article">
+<style>
+/* ============================================
+   全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+/* 基本スタイル */
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.medical-article h3::before {
+    content: '\25B6';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .pearl-box {
+    background: #e8f5e9;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.medical-article .drug-table th {
+    background: #2c5aa0 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.medical-article .drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.medical-article .drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-article .medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-article .medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-article .medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-article .medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+    font-size: 0.9rem;
+}
+</style>
+
+<h1>Tolosa-Hunt症候群（有痛性眼筋麻痺）：診断基準・鑑別診断・治療を徹底解説</h1>
+
+<p>「片側の激しい眼窩痛に続いて複視が出現した」――このような症例に遭遇した際、鑑別の一つとして必ず挙がるのが<strong>Tolosa-Hunt症候群（THS）</strong>です。しかし本疾患は<strong>除外診断</strong>であり、類似症状を呈する重篤な疾患を確実に除外することが不可欠です。本記事では、ICHD-3診断基準から鑑別診断、治療、予後まで体系的に解説します。</p>
+
+<div class="toc-box">
+<h3>目次</h3>
+<ul>
+<li><a href="#sec1">1. Tolosa-Hunt症候群とは</a></li>
+<li><a href="#sec2">2. 疫学</a></li>
+<li><a href="#sec3">3. 病態生理と解剖</a></li>
+<li><a href="#sec4">4. 臨床症状</a></li>
+<li><a href="#sec5">5. ICHD-3診断基準</a></li>
+<li><a href="#sec6">6. MRI所見</a></li>
+<li><a href="#sec7">7. 鑑別診断</a></li>
+<li><a href="#sec8">8. 検査アプローチ</a></li>
+<li><a href="#sec9">9. 治療</a></li>
+<li><a href="#sec10">10. 予後と再発</a></li>
+<li><a href="#sec11">11. 臨床パール</a></li>
+<li><a href="#sec12">12. 参考文献</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Tolosa-Hunt症候群とは</h2>
+
+<p>Tolosa-Hunt症候群（THS）は、<strong>海綿静脈洞・上眼窩裂・眼窩先端部</strong>における原因不明の肉芽腫性炎症により、片側性の眼窩痛と眼筋麻痺を呈する疾患です<sup>1,2</sup>。1954年にTolosaが初めて報告し、1961年にHuntらが症候群として体系化しました。</p>
+
+<div class="important-box">
+<p><strong>Key Point：</strong>Tolosa-Hunt症候群は「有痛性眼筋麻痺（painful ophthalmoplegia）」の原因の一つであり、<strong>除外診断</strong>です。腫瘍・血管病変・感染症など重篤な疾患を確実に否定した上で初めて診断できます。</p>
+</div>
+
+<h2 id="sec2">2. 疫学</h2>
+
+<ul>
+<li><strong>発症率</strong>：年間約100万人に1人（極めて稀）<sup>1</sup></li>
+<li><strong>好発年齢</strong>：平均41歳（あらゆる年齢で発症しうる）</li>
+<li><strong>性差</strong>：男女差なし</li>
+<li><strong>人種差</strong>：なし（世界中で報告あり）</li>
+<li><strong>左右差</strong>：通常片側性、両側性は約5%と稀</li>
+</ul>
+
+<h2 id="sec3">3. 病態生理と解剖</h2>
+
+<h3>海綿静脈洞の解剖</h3>
+
+<p>海綿静脈洞は蝶形骨のトルコ鞍の両側に位置する硬膜静脈洞で、内部を以下の重要構造物が通過します：</p>
+
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">構造物</th>
+<th style="background:#2c5aa0 !important;color:white !important;">走行部位</th>
+<th style="background:#2c5aa0 !important;color:white !important;">機能</th>
+</tr>
+<tr><td>動眼神経（CN III）</td><td>外側壁（上部）</td><td>眼球運動（上・下・内転、挙筋）、瞳孔収縮</td></tr>
+<tr><td>滑車神経（CN IV）</td><td>外側壁（中部）</td><td>上斜筋（内旋・下転）</td></tr>
+<tr><td>三叉神経V1（眼神経）</td><td>外側壁（下部）</td><td>前頭部・眼窩周囲の感覚</td></tr>
+<tr><td>三叉神経V2（上顎神経）</td><td>外側壁（最下部）</td><td>上顎・頬部の感覚</td></tr>
+<tr><td>外転神経（CN VI）</td><td>洞内（内頸動脈外側）</td><td>外側直筋（外転）</td></tr>
+<tr><td>内頸動脈</td><td>洞内中央</td><td>脳への血液供給</td></tr>
+<tr><td>交感神経叢</td><td>内頸動脈周囲</td><td>瞳孔散大、眼瞼挙上</td></tr>
+</table>
+
+<h3>病理学的特徴</h3>
+
+<p>THSの病理組織像は、海綿静脈洞の隔壁および壁における<strong>非特異的慢性炎症</strong>で、以下の所見を認めます<sup>1</sup>：</p>
+<ul>
+<li>線維芽細胞の増殖</li>
+<li>リンパ球・形質細胞の浸潤</li>
+<li>肉芽腫性変化（類上皮細胞、巨細胞）</li>
+<li>硬膜の肥厚</li>
+</ul>
+
+<p>これらの炎症性変化が海綿静脈洞内を走行する脳神経を圧迫・障害することで、眼窩痛と眼筋麻痺が生じます。</p>
+
+<h2 id="sec4">4. 臨床症状</h2>
+
+<h3>疼痛の特徴</h3>
+<ul>
+<li><strong>部位</strong>：眼窩周囲・眼窩後方が中心、前頭部・側頭部へ放散</li>
+<li><strong>性質</strong>：鋭い（sharp）、刺すような（stabbing）、えぐるような（boring）、激烈（severe/intense）</li>
+<li><strong>経過</strong>：数日〜数週間で進行、未治療で8週間まで持続しうる</li>
+<li><strong>時間関係</strong>：眼筋麻痺に先行することが多い（最大30日先行）</li>
+</ul>
+
+<h3>神経障害の頻度</h3>
+
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">障害される神経</th>
+<th style="background:#2c5aa0 !important;color:white !important;">頻度</th>
+<th style="background:#2c5aa0 !important;color:white !important;">主な症状</th>
+</tr>
+<tr><td>動眼神経（CN III）</td><td>約80%</td><td>眼瞼下垂、瞳孔散大、眼球運動制限（上・下・内転）</td></tr>
+<tr><td>外転神経（CN VI）</td><td>約70%</td><td>外転制限（内斜視）</td></tr>
+<tr><td>三叉神経V1</td><td>約30%</td><td>前頭部・眼窩周囲の感覚低下</td></tr>
+<tr><td>滑車神経（CN IV）</td><td>約29%</td><td>複視（特に下方注視時）</td></tr>
+<tr><td>交感神経（Horner症候群）</td><td>約20%</td><td>縮瞳、眼瞼下垂、無汗症</td></tr>
+<tr><td>視神経（CN II）</td><td>稀</td><td>視力低下（眼窩先端部進展時）</td></tr>
+</table>
+
+<div class="pearl-box">
+<p><strong>Clinical Pearl：</strong>複数の脳神経が同時に障害される場合、海綿静脈洞〜上眼窩裂の病変を強く示唆します。特にCN III + CN VI + V1の組み合わせはTHSに典型的です。</p>
+</div>
+
+<h2 id="sec5">5. ICHD-3診断基準</h2>
+
+<p>国際頭痛分類第3版（ICHD-3）では、THSの診断基準として以下の4項目すべてを満たすことが求められます<sup>2,3</sup>：</p>
+
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">基準</th>
+<th style="background:#2c5aa0 !important;color:white !important;">内容</th>
+</tr>
+<tr><td><strong>A</strong></td><td>片側性の頭痛（同側の眉部・眼周囲に局在）</td></tr>
+<tr><td><strong>B</strong></td><td>以下の2つをともに満たす：<br>① 頭痛と同側の第III・IV・VI脳神経のうち1つ以上の麻痺<br>② MRIまたは生検で海綿静脈洞・上眼窩裂・眼窩の肉芽腫性炎症を証明</td></tr>
+<tr><td><strong>C</strong></td><td>頭痛と脳神経麻痺の時間的関連：頭痛が麻痺に2週間以内に先行、または同時に発症</td></tr>
+<tr><td><strong>D</strong></td><td>他の疾患では説明できない（除外診断）</td></tr>
+</table>
+
+<div class="warning-box">
+<p><strong>注意：</strong>旧基準（ICHD-2）に含まれていた「ステロイドへの反応性」は、ICHD-3では診断基準から<strong>除外</strong>されました。リンパ腫やサルコイドーシスなど他疾患もステロイドに反応しうるため、診断的価値が低いと判断されたためです<sup>3</sup>。</p>
+</div>
+
+<h3>診断基準の限界</h3>
+<ul>
+<li><strong>感度は高い（95-100%）が、特異度は低い（約50%）</strong><sup>3</sup></li>
+<li>MRIで病変が同定されない症例が<strong>18-57%</strong>存在（3T MRIでも1mm未満の病変は検出困難）</li>
+<li>ICHD-3はMRIまたは生検での確認を必須としているが、これにより臨床的に明らかなTHSが基準を満たさない場合がある</li>
+</ul>
+
+<h2 id="sec6">6. MRI所見</h2>
+
+<h3>典型的なMRI所見</h3>
+<ul>
+<li><strong>T1強調画像</strong>：海綿静脈洞外側壁に等信号の軟部組織腫瘤</li>
+<li><strong>T2強調画像</strong>：等信号〜低信号</li>
+<li><strong>Gd造影</strong>：<strong>著明な増強効果</strong>（最も重要な所見）</li>
+<li><strong>海綿静脈洞外側壁の肥厚・外方膨隆</strong></li>
+<li>眼窩先端部への進展を認めることがある</li>
+<li>内頸動脈の分節的狭窄（ステロイド治療で改善）</li>
+</ul>
+
+<div class="important-box">
+<p><strong>Key Point：</strong>MRI所見は<strong>非特異的</strong>であり、リンパ腫・髄膜腫・サルコイドーシスでも類似所見を呈します。MRI所見だけでTHSを確定診断することはできません。</p>
+</div>
+
+<h3>MRI撮影のポイント</h3>
+<ul>
+<li>薄スライス（1-2mm）の冠状断・矢状断が有用</li>
+<li>Gd造影は必須（造影なしでは病変を見逃す可能性が高い）</li>
+<li>脂肪抑制T1造影が海綿静脈洞病変の描出に有用</li>
+<li>治療経過のフォローにも有用（炎症の改善を確認）</li>
+</ul>
+
+<h2 id="sec7">7. 鑑別診断</h2>
+
+<p>THSは除外診断であり、以下の疾患を系統的に除外する必要があります<sup>1,4</sup>。有痛性眼筋麻痺を呈する疾患は多岐にわたります。</p>
+
+<h3>腫瘍性疾患</h3>
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">疾患</th>
+<th style="background:#2c5aa0 !important;color:white !important;">鑑別のポイント</th>
+</tr>
+<tr><td>髄膜腫</td><td>緩徐進行性、MRIで硬膜テイルサイン、均一造影</td></tr>
+<tr><td>悪性リンパ腫</td><td>ステロイドに一時的反応あり（偽陰性の原因）、全身検索が重要</td></tr>
+<tr><td>転移性腫瘍</td><td>原発巣の検索、急速進行、骨破壊</td></tr>
+<tr><td>頭蓋底腫瘍</td><td>CT骨条件で骨破壊を確認</td></tr>
+<tr><td>下垂体腫瘍（海綿静脈洞浸潤）</td><td>内分泌異常の合併、トルコ鞍の拡大</td></tr>
+</table>
+
+<h3>血管性疾患</h3>
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">疾患</th>
+<th style="background:#2c5aa0 !important;color:white !important;">鑑別のポイント</th>
+</tr>
+<tr><td>脳動脈瘤（特に内頸動脈-後交通動脈分岐部）</td><td>CN III単独麻痺＋瞳孔散大、MRA/CTAで確認</td></tr>
+<tr><td>内頸動脈海綿静脈洞瘻（CCF）</td><td>拍動性眼球突出、結膜充血、眼圧上昇、血管雑音</td></tr>
+<tr><td>海綿静脈洞血栓症</td><td>発熱、両側性進展、副鼻腔炎・歯科感染の先行</td></tr>
+<tr><td>頸動脈解離</td><td>頸部痛、Horner症候群、MRA/CTAで確認</td></tr>
+</table>
+
+<h3>感染性疾患</h3>
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">疾患</th>
+<th style="background:#2c5aa0 !important;color:white !important;">鑑別のポイント</th>
+</tr>
+<tr><td>真菌症（ムコール症、アスペルギルス症）</td><td>糖尿病・免疫不全患者、副鼻腔病変、急速進行、致死的</td></tr>
+<tr><td>結核性髄膜炎</td><td>髄液所見（リンパ球優位、低糖、高蛋白）、胸部画像</td></tr>
+<tr><td>帯状疱疹（VZV）</td><td>V1領域の皮疹・水疱（Ramsay Hunt症候群との鑑別も）</td></tr>
+<tr><td>梅毒</td><td>RPR/TPHA、髄液検査</td></tr>
+<tr><td>ライム病</td><td>渡航歴、遊走性紅斑、血清抗体</td></tr>
+</table>
+
+<h3>炎症性・自己免疫疾患</h3>
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">疾患</th>
+<th style="background:#2c5aa0 !important;color:white !important;">鑑別のポイント</th>
+</tr>
+<tr><td>サルコイドーシス</td><td>BHL、ACE高値、髄液検査、全身検索（ステロイドにも反応）</td></tr>
+<tr><td>IgG4関連疾患</td><td>血清IgG4高値、多臓器病変、生検でIgG4陽性形質細胞浸潤</td></tr>
+<tr><td>肥厚性硬膜炎</td><td>広範な硬膜肥厚・造影効果、ANCA関連の場合あり</td></tr>
+<tr><td>結節性多発動脈炎（PAN）</td><td>全身血管炎症状、ANCA、血管造影</td></tr>
+<tr><td>全身性エリテマトーデス（SLE）</td><td>多臓器病変、抗核抗体、補体低下</td></tr>
+<tr><td>ANCA関連血管炎（GPA等）</td><td>上気道・肺・腎病変、PR3-ANCA/MPO-ANCA</td></tr>
+</table>
+
+<h3>その他</h3>
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">疾患</th>
+<th style="background:#2c5aa0 !important;color:white !important;">鑑別のポイント</th>
+</tr>
+<tr><td>糖尿病性眼筋麻痺</td><td>CN III単独（瞳孔温存が多い）またはCN VI単独、疼痛は軽度〜中等度</td></tr>
+<tr><td>眼筋麻痺性片頭痛（RPON）</td><td>反復する片頭痛の既往、若年発症、MRIでCN III造影効果</td></tr>
+<tr><td>甲状腺眼症</td><td>外眼筋肥大、眼球突出、甲状腺機能異常</td></tr>
+<tr><td>眼窩偽腫瘍</td><td>眼窩内軟部組織腫瘤、眼球突出、THS類似だが海綿静脈洞外</td></tr>
+</table>
+
+<div class="emergency-box">
+<p><strong>Red Flags（見逃してはならない危険な鑑別）：</strong></p>
+<ul>
+<li><strong>急速進行＋免疫不全</strong> → 真菌感染（ムコール症）を緊急除外</li>
+<li><strong>CN III麻痺＋瞳孔散大</strong> → 動脈瘤による圧迫を緊急除外</li>
+<li><strong>発熱＋両側性</strong> → 海綿静脈洞血栓症を疑う</li>
+<li><strong>ステロイドで一時改善後に再増悪</strong> → リンパ腫の可能性</li>
+</ul>
+</div>
+
+<h2 id="sec8">8. 検査アプローチ</h2>
+
+<h3>必須検査</h3>
+<ul>
+<li><strong>頭部MRI（Gd造影）</strong>：海綿静脈洞・上眼窩裂・眼窩先端部を薄スライスで撮影</li>
+<li><strong>MRA/CTA</strong>：動脈瘤・CCF・頸動脈解離の除外</li>
+<li><strong>血液検査</strong>：CBC、ESR、CRP、血糖/HbA1c、甲状腺機能、ACE、IgG4、ANA、ANCA、RPR/TPHA、抗SS-A/SS-B抗体</li>
+</ul>
+
+<h3>状況に応じた追加検査</h3>
+<ul>
+<li><strong>髄液検査</strong>：感染性・炎症性疾患の除外（細胞数、蛋白、糖、培養、細胞診）</li>
+<li><strong>胸部CT</strong>：サルコイドーシス・悪性腫瘍の検索</li>
+<li><strong>PET-CT</strong>：悪性リンパ腫・転移性腫瘍の全身検索</li>
+<li><strong>生検</strong>：確定診断の最終手段（海綿静脈洞の生検はリスクを伴う）</li>
+</ul>
+
+<h2 id="sec9">9. 治療</h2>
+
+<h3>第一選択：副腎皮質ステロイド</h3>
+
+<table class="drug-table">
+<tr>
+<th style="background:#2c5aa0 !important;color:white !important;">項目</th>
+<th style="background:#2c5aa0 !important;color:white !important;">内容</th>
+</tr>
+<tr><td>初期投与量</td><td>プレドニゾロン 0.5〜1.0 mg/kg/日</td></tr>
+<tr><td>疼痛改善</td><td>投与開始から<strong>24〜72時間以内</strong>に多くの症例で改善</td></tr>
+<tr><td>神経障害の回復</td><td><strong>2〜8週間</strong>かけて段階的に回復</td></tr>
+<tr><td>漸減</td><td>症状改善に応じて数週間〜数ヶ月かけて漸減</td></tr>
+<tr><td>投与経路・期間</td><td>標準的プロトコルは確立されていない</td></tr>
+</table>
+
+<div class="pearl-box">
+<p><strong>Clinical Pearl：</strong>ステロイド投与後72時間以内に疼痛が改善しない場合、THSの診断を再検討し、他疾患（特にリンパ腫）の精査を追加すべきです。ただし、ステロイド反応性があってもTHSの確定にはなりません（リンパ腫やサルコイドーシスもステロイドに反応します）。</p>
+</div>
+
+<h3>第二選択：免疫抑制療法（ステロイド依存性・難治例）</h3>
+<ul>
+<li><strong>アザチオプリン</strong></li>
+<li><strong>メトトレキサート</strong></li>
+<li><strong>ミコフェノール酸モフェチル</strong></li>
+<li><strong>シクロスポリン</strong></li>
+<li><strong>インフリキシマブ</strong>（TNF阻害薬）— ステロイド依存性・難治性THSに有効との報告あり<sup>5</sup></li>
+<li><strong>放射線療法</strong> — 最終手段として報告あり</li>
+</ul>
+
+<h2 id="sec10">10. 予後と再発</h2>
+
+<h3>予後</h3>
+<ul>
+<li>自然寛解も報告されている（未治療で8週間まで症状持続）</li>
+<li>ステロイド治療後の残存神経障害は<strong>稀</strong></li>
+<li>致死的な疾患ではない（self-limiting）</li>
+</ul>
+
+<h3>再発</h3>
+<ul>
+<li><strong>40〜50%の患者が再発</strong>を経験<sup>1</sup></li>
+<li>同側・対側・両側のいずれのパターンでも再発しうる</li>
+<li>若年患者でより再発頻度が高い</li>
+<li>ステロイドによる再発予防効果は不明確</li>
+</ul>
+
+<div class="warning-box">
+<p><strong>重要：</strong>再発のたびに<strong>完全な鑑別診断ワークアップを繰り返す</strong>必要があります。THSは除外診断であるため、再発時にも腫瘍やその他の疾患が新たに発見される可能性があります。</p>
+</div>
+
+<h2 id="sec11">11. 臨床パール</h2>
+
+<div class="pearl-box">
+<p><strong>まとめ：Tolosa-Hunt症候群の臨床パール</strong></p>
+<ul>
+<li><strong>除外診断である</strong> — MRI・血液検査・必要に応じて髄液検査で他疾患を系統的に除外</li>
+<li><strong>ステロイド反応性は診断基準ではない</strong>（ICHD-3で除外された理由：リンパ腫等も反応するため）</li>
+<li><strong>MRI正常でもTHSは否定できない</strong>（18-57%で画像所見なし）</li>
+<li><strong>CN III + CN VI + V1の複合障害</strong>は海綿静脈洞病変を強く示唆</li>
+<li><strong>72時間以内にステロイドで疼痛改善しなければ診断を再考</strong></li>
+<li><strong>40-50%が再発</strong> — 再発時も毎回フルワークアップが必要</li>
+<li><strong>「海綿静脈洞症候群」の診断名使用</strong>を提唱する意見もあり、より柔軟な診断修正が可能<sup>3</sup></li>
+</ul>
+</div>
+
+<h2 id="sec12">12. 参考文献</h2>
+
+<div class="references">
+<h3>参考文献</h3>
+<div class="ref-item">
+<span class="ref-numbers">1</span>
+<span class="ref-content">Kline LB, Hoyt WF. Tolosa-Hunt Syndrome. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2024. <a href="https://www.ncbi.nlm.nih.gov/books/NBK459225/" target="_blank">PMID: 29083745</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">2</span>
+<span class="ref-content">Headache Classification Committee of the International Headache Society (IHS). The International Classification of Headache Disorders, 3rd edition. Cephalalgia. 2018;38(1):1-211. <a href="https://doi.org/10.1177/0333102417738202" target="_blank">DOI: 10.1177/0333102417738202</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">3</span>
+<span class="ref-content">Amrutkar C, Burton EV. Tolosa-Hunt Syndrome: A Review of Diagnostic Criteria and Unresolved Issues. J Clin Med. 2021;10(16):3553. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8365592/" target="_blank">DOI: 10.3390/jcm10163553</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">4</span>
+<span class="ref-content">Coraça-Huber DC, et al. Tolosa-Hunt syndrome: a review of diagnostic criteria based on a case series. Arq Neuropsiquiatr. 2024;82(6):1-8. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11211914/" target="_blank">DOI: 10.1055/s-0044-1788657</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">5</span>
+<span class="ref-content">Haraldstad A, et al. Successful treatment of pediatric Tolosa-Hunt syndrome with adalimumab. J AAPOS. 2020;24(1):52-54. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7004262/" target="_blank">DOI: 10.1016/j.jaapos.2019.09.008</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">6</span>
+<span class="ref-content">臨床神経学. Tolosa-Hunt症候群の2症例. 臨床神経学. 2014;54(11):903-907. <a href="https://www.neurology-jp.org/Journal/public_pdf/054110903.pdf" target="_blank">PDF</a></span>
+</div>
+<div class="ref-item">
+<span class="ref-numbers">7</span>
+<span class="ref-content">済生会. トロサ・ハント症候群. <a href="https://www.saiseikai.or.jp/medical/disease/tolosa_hunt_syndrome/" target="_blank">https://www.saiseikai.or.jp/medical/disease/tolosa_hunt_syndrome/</a></span>
+</div>
+</div>
+
+</div>

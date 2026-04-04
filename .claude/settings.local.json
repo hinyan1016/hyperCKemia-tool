@@ -226,7 +226,22 @@
       "mcp__playwright__browser_press_key",
       "Bash(\"/c/Program Files/LibreOffice/program/soffice.exe\" --version)",
       "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -v)",
-      "Bash(NODE_PATH=\"C:/Users/jsber/AppData/Roaming/npm/node_modules\" node -e \"require\\('pptxgenjs'\\); console.log\\('pptxgenjs OK'\\)\")"
+      "Bash(NODE_PATH=\"C:/Users/jsber/AppData/Roaming/npm/node_modules\" node -e \"require\\('pptxgenjs'\\); console.log\\('pptxgenjs OK'\\)\")",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 1 -l 1 \"めまい_スライド.pdf\" slide)",
+      "Bash(\"/c/Program Files/LibreOffice/program/soffice.exe\" --headless --convert-to pdf --outdir . \"めまいの種類を脳神経内科医が図解.pptx\")",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 \"めまいの種類を脳神経内科医が図解.pdf\" manus)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 2 -l 2 \"めまい_スライド.pdf\" slide)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 11 -l 11 \"めまい_スライド.pdf\" slide)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 6 -l 6 \"めまい_スライド.pdf\" slide)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 2 -l 3 \"めまい_スライド.pdf\" slide)",
+      "Bash(\"/c/Program Files/LibreOffice/program/soffice.exe\" --headless --convert-to pdf --outdir . \"alidone_patch_slides.pptx\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 1 -l 4 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲/alidone_patch_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲/slide\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 5 -l 10 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲/alidone_patch_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲/slide\")",
+      "Bash(\"/c/Program Files/LibreOffice/program/soffice.exe\" --headless --convert-to png --outdir \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/アリドネパッチと食欲/thumbnail.pptx\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 4 -l 7 \"alidone_patch_slides.pdf\" \"slide\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 1 -l 4 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 6 -l 8 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview2\")",
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 11 -l 12 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview3\")"
     ],
     "deny": [
       "Bash(rm -rf *)",

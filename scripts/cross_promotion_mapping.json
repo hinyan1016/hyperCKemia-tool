@@ -1,0 +1,218 @@
+{
+  "description": "YouTube動画 ↔ はてなブログ記事のマッピング（最新30本）",
+  "updated": "2026-03-31",
+  "channel_id": "UCmZ9m9j2T9isCuJpsoiY9qQ",
+  "blog_base": "https://hinyan1016.hatenablog.com",
+  "mappings": [
+    {
+      "topic": "小脳梗塞リハビリテーション",
+      "video_id": "GaPTiPGIeqg",
+      "video_title": "小脳梗塞後のリハビリテーション｜回復はいつまで続く？最新エビデンス解説【KOSCO・NIBS・DBS・VR】",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/31/171828",
+      "blog_title": "小脳梗塞後のリハビリテーション：エビデンスに基づく回復戦略と最新治療【KOSCO・NIBS・DBS・VR】"
+    },
+    {
+      "topic": "若年ミオクロニーてんかん（JME）",
+      "video_id": "Hz3OFN1JtTU",
+      "video_title": "若年ミオクロニーてんかん（JME）― 見逃されやすい思春期てんかんの診断と最新治療戦略",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/30/185614",
+      "blog_title": "若年ミオクロニーてんかん（JME）― 見逃されやすい思春期てんかんの診断と最新治療戦略"
+    },
+    {
+      "topic": "三叉神経痛",
+      "video_id": "JehIClZ2RuU",
+      "video_title": "【神経内科】三叉神経痛を徹底解説！ICHD-3分類・SUNCT/SUNAとの鑑別・薬物治療・MVD｜診断から治療まで",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/30/185536",
+      "blog_title": "三叉神経痛 ― 神経内科医視点の鑑別診断と治療戦略"
+    },
+    {
+      "topic": "Tolosa-Hunt症候群",
+      "video_id": "6xmtSFIe7WY",
+      "video_title": "【神経内科】Tolosa-Hunt症候群を徹底解説！有痛性眼筋麻痺の鑑別と治療｜ICHD-3診断基準",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/31/001731",
+      "blog_title": "Tolosa-Hunt症候群（有痛性眼筋麻痺）：診断基準・鑑別診断・治療を徹底解説"
+    },
+    {
+      "topic": "感染症最新動向2025",
+      "video_id": "OqBmcmXxnc4",
+      "video_title": "【2025-2026年】感染症の最新動向まとめ｜医療従事者が押さえるべき8つのトピック",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/29/184944",
+      "blog_title": "【2025-2026年】感染症の最新動向まとめ｜医療従事者が押さえるべき8つのトピック"
+    },
+    {
+      "topic": "日本人の起源_遺伝学",
+      "video_id": "Tz8k8F8MIyE",
+      "video_title": "日本人はどこから来たのか？最新ゲノム解析が明かす三重構造モデルと私たちのDNA【遺伝学で解明】",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/29/192023",
+      "blog_title": "日本人はどこから来たのか？ — 最新ゲノム解析が明かす三重構造モデルと私たちのDNA"
+    },
+    {
+      "topic": "細胞外液補充液",
+      "video_id": "8YX6YaV0uD8",
+      "video_title": "細胞外液補充液の使い分け｜生食 vs リンゲル液を徹底比較",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/29/063210",
+      "blog_title": "【完全版】細胞外液補充液の使い分け｜生食・リンゲル液を徹底比較"
+    },
+    {
+      "topic": "ビタミンB12欠乏症（治療編）",
+      "video_id": "xrlUfuWteVM",
+      "video_title": "ビタミンB12欠乏症の治療・フォローアップ・特殊集団のマネジメント",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/201504",
+      "blog_title": "ビタミンB12欠乏症の診断と治療【医療従事者向け総説】"
+    },
+    {
+      "topic": "ビタミンB12欠乏症（診断編）",
+      "video_id": "4kKyChvnhzU",
+      "video_title": "ビタミンB12欠乏症の症状・原因・診断アプローチ",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/201504",
+      "blog_title": "ビタミンB12欠乏症の診断と治療【医療従事者向け総説】"
+    },
+    {
+      "topic": "食事指導シリーズ 第1回",
+      "video_id": "z1wBhh0Jbg8",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第1回「食事指導は何を禁止するかではなく何を守るかから始める」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第2回",
+      "video_id": "5fNtu6sy5Fo",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第2回「高血圧の食事指導 ― 減塩だけでは不十分な理由」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第3回",
+      "video_id": "j2vInLvqpoc",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第3回「脂質異常症の食事指導 ― LDLと中性脂肪で戦略が違う」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第4回",
+      "video_id": "YkHg5qWnFcI",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第4回「糖尿病の食事指導 ― 血糖を安定させる3つのルール」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第5回",
+      "video_id": "wfR2MhY9LqY",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第5回「肥満の食事指導 ― 食べ方を変える行動療法的アプローチ」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第6回",
+      "video_id": "g2VKLcFbZ6s",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第6回「CKDの食事指導 ― たんぱく質・塩分・カリウムの三本柱」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第7回",
+      "video_id": "r8d_r_CBIGA",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第7回「肝疾患の食事指導 ― 脂肪肝と肝硬変で真逆になる理由」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第8回",
+      "video_id": "KFtDUWJnbro",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第8回「嚥下障害の食事指導 ― 食形態選択と誤嚥予防の実際」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第9回",
+      "video_id": "zLy-Py9O0Ok",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第9回「消化管術後の食事指導 ― 少量頻回と症状別対応の考え方」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "食事指導シリーズ 第10回",
+      "video_id": "n0zvSugkKoA",
+      "video_title": "外来でそのまま使える食事指導シリーズ 第10回（最終回）「フレイル・多疾患併存の食事指導」",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/27/075518",
+      "blog_title": "【全10回まとめ】外来で使える食事指導シリーズ｜疾患別の優先順位を整理"
+    },
+    {
+      "topic": "甲状腺機能異常",
+      "video_id": "4285LNgMKZk",
+      "video_title": "甲状腺機能異常の鑑別診断：7ステップで系統的に考える",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/25/162707",
+      "blog_title": "甲状腺機能異常の鑑別診断 ─ TSH×FT4パターン分類と系統的アプローチ"
+    },
+    {
+      "topic": "再栄養症候群",
+      "video_id": "gF850PO5oag",
+      "video_title": "低栄養患者に「どんどん栄養を入れる」のは正しいか ― 再栄養症候群と急性期栄養管理の考え方",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/24/205734",
+      "blog_title": "低栄養患者に「どんどん栄養を入れる」のは正しいか ― 再栄養症候群と急性期栄養管理の考え方"
+    },
+    {
+      "topic": "前庭神経炎",
+      "video_id": "Mnbr7FJ8KsQ",
+      "video_title": "前庭神経炎の鑑別診断：脳卒中を見逃さない",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/24/184115",
+      "blog_title": "前庭神経炎 ― 脳卒中を除外しながら考える急性めまいの臨床診断"
+    },
+    {
+      "topic": "意識消失発作の鑑別",
+      "video_id": "9Np7S0n6dAk",
+      "video_title": "意識消失発作（TLOC）の鑑別診断｜失神・てんかん・PNESを7ステップ14疾患で系統的に鑑別",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/22/220206",
+      "blog_title": "意識消失発作（TLOC）の鑑別診断 — 失神・てんかん・PNESを見極める系統的アプローチ"
+    },
+    {
+      "topic": "貧血の鑑別",
+      "video_id": "MwC0lGcOpuo",
+      "video_title": "貧血の鑑別診断｜MCV+網状赤血球で20疾患を8ステップで系統的に鑑別",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/22/171026",
+      "blog_title": "貧血の鑑別診断 ─ MCV分類と8ステップで系統的に迫る"
+    },
+    {
+      "topic": "肝機能障害の鑑別",
+      "video_id": "TGsGHdFKODw",
+      "video_title": "肝機能障害の鑑別診断（トランスアミナーゼ上昇）R値×7ステップで系統的に迫る",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/22/074748",
+      "blog_title": "肝機能障害（トランスアミナーゼ上昇）の鑑別診断 ─ 7ステップで系統的に迫る"
+    },
+    {
+      "topic": "高カルシウム血症の鑑別",
+      "video_id": "svMXL9SmQqw",
+      "video_title": "高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/20/125143",
+      "blog_title": "高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ"
+    },
+    {
+      "topic": "不明熱（FUO）の鑑別",
+      "video_id": "1_Squ8Y2R5g",
+      "video_title": "もう迷わない！不明熱（FUO）の鑑別・完全ロードマップ",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/20/082431",
+      "blog_title": "不明熱（FUO）の鑑別：病型・病因群・PDCで進める実践的アプローチ"
+    },
+    {
+      "topic": "歩行障害の鑑別診断",
+      "video_id": "YdI3hDxdAe4",
+      "video_title": "歩行障害の鑑別診断：神経診察で局在を絞る実践的アプローチ",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/19/110951",
+      "blog_title": "歩行障害・協調運動障害の鑑別診断｜神経診察で局在を絞る実践的アプローチ"
+    },
+    {
+      "topic": "パーキンソン病と誤嚥性肺炎",
+      "video_id": "H51WbhyPImo",
+      "video_title": "パーキンソン病と誤嚥性肺炎：知らないと命にかかわる合併症：早期発見、予防の最新エビデンス",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/19/113452",
+      "blog_title": "パーキンソン病における誤嚥性肺炎：早期から予測し、予防する合併症"
+    },
+    {
+      "topic": "急性胸痛の鑑別",
+      "video_id": "zIKob1frTcE",
+      "video_title": "【完全保存版】絶対に見逃すな！急性胸痛の『6大キラー疾患』と初期対応10分の鉄則",
+      "blog_url": "https://hinyan1016.hatenablog.com/entry/2026/03/18/001634",
+      "blog_title": "急性胸痛の鑑別診断：まず危険なものから外す実践的アプローチ"
+    }
+  ]
+}

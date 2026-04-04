@@ -17,6 +17,7 @@ Thumbs.db
 medical-ddx-tools/
 
 # 大容量ファイル（GitHub 50MB制限）
+*.mp4
 youtube-slides/パーキンソン病せん妄/パーキンソン病せん妄_評価とNPO対策_20260209_023028.pptx
 
 # 認証情報

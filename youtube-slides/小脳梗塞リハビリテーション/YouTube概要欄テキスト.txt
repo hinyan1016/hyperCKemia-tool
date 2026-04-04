@@ -1,0 +1,52 @@
+小脳梗塞後のリハビリテーションについて、最新のエビデンスに基づいて解説します。
+
+KOSCOスタディ（2025年）による回復の時間経過、SARAスケールによる失調評価、従来型リハビリの柱（Frenkel体操・PNF・バランス訓練）に加え、近年注目の非侵襲的脳刺激療法（iTBS・tDCS）、さらに小脳DBS（Nature Medicine 2023）やVRリハビリまで、幅広くカバーしています。
+
+脳神経内科医・リハビリ医・理学療法士・作業療法士の方々に特に参考になる内容です。
+
+📌 Key Points
+✅ 小脳梗塞の回復は12ヶ月まで続く（機能ドメインで回復時期が異なる）
+✅ 姿勢障害は回復しやすいが、歩行失調は残りやすい
+✅ SARAで評価（NIHSSだけでは後方循環障害を過小評価）
+✅ 小脳NIBS（iTBS/tDCS）は有望な補助療法
+✅ 適切な訓練強度（急性期: 週2-3回）が重要
+
+📖 ブログ記事（詳細版）
+https://hinyan1016.hatenablog.com/entry/2026/03/31/171828
+
+⏱ タイムスタンプ
+00:00 イントロダクション
+00:33 本日のアウトライン
+01:04 小脳梗塞の臨床的特徴と後遺症
+02:01 回復の時間経過（KOSCOスタディ）
+02:54 リハビリ後の機能回復（Kellyら 2001）
+03:40 失調の評価スケール：SARA
+04:51 従来型リハビリテーションの柱
+05:51 姿勢障害 vs 歩行失調の回復パターン
+06:33 訓練強度のエビデンス
+07:19 非侵襲的脳刺激療法（NIBS）とは
+08:15 小脳iTBSによる歩行・バランス回復
+09:13 M1刺激 vs 小脳iTBSの比較
+10:11 小脳NIBSのメタアナリシス（2025）
+11:00 小脳tDCSによる上肢機能回復
+12:01 新規治療：小脳深部脳刺激（DBS）
+13:00 新規治療：VRリハビリテーション
+14:03 まとめ：5つの臨床ポイント
+
+📚 参考文献（PMID）
+1. Kelly PJ et al. Stroke 2001 (PMID: 11157193)
+2. Lee HS et al. Front Neurol 2025 (PMID: 40129865) — KOSCO study
+3. Bultmann U et al. Gait Posture 2014 (PMID: 24119775)
+4. Choi SW et al. Ann Rehabil Med 2018 (PMID: 29961735) — SARA
+5. Marquer A et al. Ann Phys Rehabil Med 2014 (PMID: 24582474)
+6. Lubetzky-Vilnai A et al. J Neurol Phys Ther 2010 (PMID: 20716987)
+7. Koch G et al. JAMA Neurol 2019 (PMID: 30476999) — cerebellar iTBS
+8. Liao LY et al. Stroke 2024 (PMID: 38037225) — M1 vs cerebellar iTBS
+9. Jiang J et al. Eur J Phys Rehabil Med 2025 (PMID: 40047654) — meta-analysis
+10. Gong Q et al. Front Neurol 2023 (PMID: 37006504) — cerebellar tDCS
+11. Baker KB et al. Nat Med 2023 (PMID: 37580534) — cerebellar DBS
+12. Takimoto K et al. BMJ Case Rep 2021 (PMID: 33972306) — VR rehab
+13. Fox-Hesling J et al. NeuroRehabilitation 2024 (PMID: 38943401)
+14. Eapen BC et al. Ann Intern Med 2025 (PMID: 39832369) — VA/DoD guideline
+
+#小脳梗塞 #リハビリテーション #小脳失調 #SARA #NIBS #iTBS #tDCS #DBS #VR #バランス訓練 #脳卒中 #運動失調 #KOSCO #歩行障害 #脳神経内科 #理学療法 #回復 #予後 #エビデンス #ガイドライン
