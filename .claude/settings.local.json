@@ -241,13 +241,41 @@
       "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 4 -l 7 \"alidone_patch_slides.pdf\" \"slide\")",
       "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 1 -l 4 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview\")",
       "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 6 -l 8 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview2\")",
-      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 11 -l 12 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview3\")"
+      "Bash(\"C:/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 -f 11 -l 12 \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/PD_vitaminB6_slides.pdf\" \"C:/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/パーキンソン病_ビタミンB6/preview3\")",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1-full_build/bin/ffmpeg\" -i \"機能性神経障害サムネイル.png\" -q:v 5 \"機能性神経障害サムネイル.jpg\" -y)",
+      "Bash(file /c/Users/jsber/OneDrive/Documents/Claude_task/youtube-slides/からだの不思議06_あくび/*.pptx)",
+      "Bash(sed 's/,.*//')",
+      "Read(//tmp/**)"
     ],
     "deny": [
       "Bash(rm -rf *)",
       "Bash(git push --force *)",
       "Bash(git reset --hard *)",
       "Read(.env)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/jsber/OneDrive/Documents/Claude_task/scripts/hooks/validate-blog-html.js\""
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/jsber/OneDrive/Documents/Claude_task/scripts/hooks/validate-ddx-tool.js\""
+          }
+        ]
+      }
     ]
   }
 }
