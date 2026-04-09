@@ -87,7 +87,7 @@ Hoover徴候などのポジティブな神経所見で診断します。
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（全文＋全参考文献リンク）
-（投稿後に追加）
+https://hinyan1016.hatenablog.com/entry/2026/04/05/081707
 
 ▶ からだの不思議シリーズ
 #01「名前が出てこない」は認知症のサイン？
@@ -101,9 +101,6 @@ https://youtu.be/WKo1LRYDuC4
 
 #04 そのめまい大丈夫？3タイプの見分け方
 https://youtu.be/Z7ZzKnY7GyM
-
-▶ 医学診断ツール一覧（神経局在・多発脳神経ほか全ツール）
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ▶ この動画
 https://youtu.be/JNaIRbHVz4s

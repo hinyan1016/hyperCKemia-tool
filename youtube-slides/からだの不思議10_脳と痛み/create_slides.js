@@ -167,19 +167,19 @@ function addPageNum(s, num) {
   ];
 
   // テーブルヘッダ
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.2, y: 1.1, w: 2.3, h: 0.5, fill: { color: C.dark } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 2.5, y: 1.1, w: 5.0, h: 0.5, fill: { color: C.primary } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.2, y: 1.1, w: 1.8, h: 0.5, fill: { color: C.dark } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 2.0, y: 1.1, w: 5.5, h: 0.5, fill: { color: C.primary } });
   s.addShape(pres.shapes.RECTANGLE, { x: 7.5, y: 1.1, w: 2.3, h: 0.5, fill: { color: C.accent } });
-  s.addText("発生源", { x: 0.2, y: 1.1, w: 2.3, h: 0.5, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-  s.addText("メカニズム", { x: 2.5, y: 1.1, w: 5.0, h: 0.5, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("発生源", { x: 0.2, y: 1.1, w: 1.8, h: 0.5, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("メカニズム", { x: 2.0, y: 1.1, w: 5.5, h: 0.5, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
   s.addText("関連頭痛", { x: 7.5, y: 1.1, w: 2.3, h: 0.5, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
 
   rows.forEach(function(r, i) {
     var yPos = 1.65 + i * 0.96;
     var bgColor = (i % 2 === 0) ? C.warmBg : C.white;
     s.addShape(pres.shapes.RECTANGLE, { x: 0.2, y: yPos, w: 9.6, h: 0.96, fill: { color: bgColor } });
-    s.addText(r.source, { x: 0.2, y: yPos, w: 2.3, h: 0.96, fontSize: 13, fontFace: FONT_JP, color: C.primary, bold: true, align: "center", valign: "middle", margin: 2, lineSpacingMultiple: 1.1 });
-    s.addText(r.mechanism, { x: 2.5, y: yPos, w: 5.0, h: 0.96, fontSize: 12, fontFace: FONT_JP, color: C.text, valign: "middle", margin: [0, 6, 0, 6], lineSpacingMultiple: 1.15 });
+    s.addText(r.source, { x: 0.2, y: yPos, w: 1.8, h: 0.96, fontSize: 12, fontFace: FONT_JP, color: C.primary, bold: true, align: "center", valign: "middle", margin: 2, lineSpacingMultiple: 1.1 });
+    s.addText(r.mechanism, { x: 2.0, y: yPos, w: 5.5, h: 0.96, fontSize: 12, fontFace: FONT_JP, color: C.text, valign: "middle", margin: [0, 8, 0, 8], lineSpacingMultiple: 1.15 });
     s.addText(r.headache, { x: 7.5, y: yPos, w: 2.3, h: 0.96, fontSize: 12, fontFace: FONT_JP, color: C.red, bold: true, align: "center", valign: "middle", margin: 2, lineSpacingMultiple: 1.1 });
   });
 
@@ -246,19 +246,19 @@ function addPageNum(s, num) {
 
   // 4領域カード
   var areas = [
-    { name: "一次・二次\n体性感覚野\nS1 / S2", role: "痛みの「場所」「強さ」を識別する", color: C.primary },
-    { name: "前帯状皮質\nACC", role: "痛みの不快感・情動的側面を処理する", color: C.orange },
-    { name: "島皮質\n(insula)", role: "内臓感覚・自律神経反応と統合する", color: C.accent },
-    { name: "視床\n(thalamus)", role: "末梢からの痛み信号を大脳皮質へ中継する「中継局」", color: C.green },
+    { name: "一次・二次体性感覚野（S1/S2）", role: "痛みの「場所」「強さ」を識別する", color: C.primary },
+    { name: "前帯状皮質（ACC）", role: "痛みの不快感・情動的側面を処理する", color: C.orange },
+    { name: "島皮質（insula）", role: "内臓感覚・自律神経反応と統合する", color: C.accent },
+    { name: "視床（thalamus）", role: "末梢からの痛み信号を大脳皮質へ中継する「中継局」", color: C.green },
   ];
 
   areas.forEach(function(area, i) {
     var xPos = 0.3 + (i % 2) * 4.8;
     var yPos = 2.1 + Math.floor(i / 2) * 1.65;
     addCard(s, xPos, yPos, 4.4, 1.45);
-    s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: yPos, w: 4.4, h: 0.5, fill: { color: area.color } });
-    s.addText(area.name, { x: xPos, y: yPos, w: 4.4, h: 0.5, fontSize: 14, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0, lineSpacingMultiple: 1.0 });
-    s.addText(area.role, { x: xPos + 0.1, y: yPos + 0.55, w: 4.2, h: 0.85, fontSize: 13, fontFace: FONT_JP, color: C.text, valign: "middle", margin: 0, lineSpacingMultiple: 1.2 });
+    s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: yPos, w: 4.4, h: 0.55, fill: { color: area.color } });
+    s.addText(area.name, { x: xPos, y: yPos, w: 4.4, h: 0.55, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: [0, 4, 0, 4] });
+    s.addText(area.role, { x: xPos + 0.1, y: yPos + 0.6, w: 4.2, h: 0.8, fontSize: 13, fontFace: FONT_JP, color: C.text, valign: "middle", margin: 0, lineSpacingMultiple: 1.2 });
   });
 
   addPageNum(s, "6/9");
@@ -284,18 +284,18 @@ function addPageNum(s, num) {
   });
 
   // 慢性化の流れ
-  var flow = ["片頭痛を繰り返す", "三叉神経系が過敏化", "頭痛がない日も神経が過活動", "慢性片頭痛へ移行\n（月15日以上の頭痛）"];
+  var flow = ["片頭痛を\n繰り返す", "三叉神経系が\n過敏化", "頭痛がない日も\n神経が過活動", "慢性片頭痛へ移行\n（月15日以上）"];
   flow.forEach(function(f, i) {
-    var xPos = 0.3 + i * 2.3;
-    addCard(s, xPos, 2.5, 2.1, 1.1);
+    var xPos = 0.2 + i * 2.35;
+    addCard(s, xPos, 2.5, 2.15, 1.1);
     s.addText(f, {
-      x: xPos, y: 2.5, w: 2.1, h: 1.1,
-      fontSize: 14, fontFace: FONT_JP, color: (i === 3) ? C.red : C.text, bold: (i === 3), align: "center", valign: "middle", margin: 4, lineSpacingMultiple: 1.15,
+      x: xPos, y: 2.5, w: 2.15, h: 1.1,
+      fontSize: 13, fontFace: FONT_JP, color: (i === 3) ? C.red : C.text, bold: (i === 3), align: "center", valign: "middle", margin: 4, lineSpacingMultiple: 1.15,
     });
     if (i < 3) {
       s.addText("→", {
-        x: xPos + 2.1, y: 2.8, w: 0.2, h: 0.5,
-        fontSize: 22, color: C.accent, align: "center", valign: "middle", margin: 0,
+        x: xPos + 2.15, y: 2.8, w: 0.2, h: 0.5,
+        fontSize: 20, color: C.accent, align: "center", valign: "middle", margin: 0,
       });
     }
   });
@@ -335,25 +335,25 @@ function addPageNum(s, num) {
     { flag: "発熱・項部硬直・意識障害を伴う", disease: "髄膜炎・脳炎を疑う" },
     { flag: "神経症状を伴う\n（片麻痺・言語障害・複視・歩行困難）", disease: "脳卒中・脳腫瘍を疑う" },
     { flag: "50歳以降の初めての頭痛", disease: "側頭動脈炎・脳腫瘍を疑う" },
-    { flag: "体位で大きく変化する頭痛\n（起立で悪化、または改善）", disease: "低髄液圧症候群・頭蓋内圧亢進" },
+    { flag: "体位で大きく変化する頭痛\n（起立で悪化、または改善）", disease: "低髄液圧症候群・頭蓋内圧亢進を疑う" },
     { flag: "免疫不全・がん治療中の頭痛", disease: "日和見感染・転移を疑う" },
   ];
 
   flags.forEach(function(f, i) {
     var col = i % 2;
     var row = Math.floor(i / 2);
-    var xPos = 0.2 + col * 4.9;
+    var xPos = 0.15 + col * 4.95;
     var yPos = 1.15 + row * 1.38;
-    addCard(s, xPos, yPos, 4.6, 1.2);
-    s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: yPos, w: 0.5, h: 1.2, fill: { color: C.red } });
-    s.addText("!", { x: xPos, y: yPos, w: 0.5, h: 1.2, fontSize: 26, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+    addCard(s, xPos, yPos, 4.7, 1.2);
+    s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: yPos, w: 0.45, h: 1.2, fill: { color: C.red } });
+    s.addText("!", { x: xPos, y: yPos, w: 0.45, h: 1.2, fontSize: 24, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
     s.addText(f.flag, {
-      x: xPos + 0.6, y: yPos + 0.05, w: 3.85, h: 0.7,
-      fontSize: 13, fontFace: FONT_JP, color: C.text, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.1,
+      x: xPos + 0.55, y: yPos + 0.05, w: 4.0, h: 0.7,
+      fontSize: 12, fontFace: FONT_JP, color: C.text, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.1,
     });
     s.addText("→ " + f.disease, {
-      x: xPos + 0.6, y: yPos + 0.75, w: 3.85, h: 0.38,
-      fontSize: 12, fontFace: FONT_JP, color: C.red, valign: "middle", margin: 0,
+      x: xPos + 0.55, y: yPos + 0.75, w: 4.0, h: 0.38,
+      fontSize: 11, fontFace: FONT_JP, color: C.red, valign: "middle", margin: 0,
     });
   });
 
@@ -393,7 +393,7 @@ function addPageNum(s, num) {
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.8, y: yPos, w: 8.4, h: 0.75, fill: { color: "243B5C" }, rectRadius: 0.1 });
     s.addShape(pres.shapes.OVAL, { x: 1.0, y: yPos + 0.1, w: 0.55, h: 0.55, fill: { color: C.accent } });
     s.addText(m.num, { x: 1.0, y: yPos + 0.1, w: 0.55, h: 0.55, fontSize: 20, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-    s.addText(m.text, { x: 1.75, y: yPos, w: 7.25, h: 0.75, fontSize: 14, fontFace: FONT_JP, color: C.light, valign: "middle", margin: 0, lineSpacingMultiple: 1.1 });
+    s.addText(m.text, { x: 1.75, y: yPos, w: 7.25, h: 0.75, fontSize: 13, fontFace: FONT_JP, color: C.light, valign: "middle", margin: 0, lineSpacingMultiple: 1.1 });
   });
 
   s.addShape(pres.shapes.LINE, { x: 2, y: 5.4, w: 6, h: 0, line: { color: C.accent, width: 1 } });
