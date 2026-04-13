@@ -99,7 +99,6 @@ https://youtu.be/WKo1LRYDuC4
 https://youtu.be/JNaIRbHVz4s
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ▶ この動画
 https://youtu.be/Z7ZzKnY7GyM

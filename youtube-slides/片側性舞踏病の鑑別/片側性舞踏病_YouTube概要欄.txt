@@ -53,7 +53,8 @@ MRI・CTの落とし穴（皮質梗塞、偽陰性、不一致例）を含めて
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（詳細版）：https://hinyan1016.hatenablog.com/entry/2026/04/05/131547
-▶ 医学診断ツール：https://hinyan1016.github.io/medical-ddx-tools/
+▶ 片側性舞踏病 鑑別診断ツール：https://hinyan1016.github.io/medical-ddx-tools/hemichorea.html
+▶ 医学診断ツール一覧：https://hinyan1016.github.io/medical-ddx-tools/
 
 ━━━━━━━━━━━━━━━━━━━
 

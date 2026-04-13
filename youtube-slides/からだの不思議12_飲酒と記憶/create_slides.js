@@ -206,33 +206,37 @@ function addPageNum(s, num) {
 
   var rows = [
     { item: "別名", frag: "グレーアウト", enbloc: "完全ブラックアウト" },
-    { item: "記憶の欠落", frag: "部分的・断片的な空白", enbloc: "一定時間の記憶が\nまるごと消失" },
-    { item: "ヒントで\n思い出せるか", frag: "断片的に思い出せる\nことがある", enbloc: "いくらヒントを出されても\n思い出せない" },
-    { item: "血中\nアルコール濃度", frag: "比較的低め", enbloc: "高値\n（0.15%以上が多い）" },
-    { item: "深刻度", frag: "より一般的", enbloc: "より深刻\n（問題飲酒と関連）" },
+    { item: "記憶の欠落", frag: "部分的・断片的な空白", enbloc: "一定時間の記憶がまるごと消失" },
+    { item: "ヒントで\n思い出せるか", frag: "断片的に思い出せることがある", enbloc: "いくらヒントを出されても\n思い出せない" },
+    { item: "血中アルコール\n濃度", frag: "比較的低め", enbloc: "高値（0.15%以上が多い）" },
+    { item: "深刻度", frag: "より一般的", enbloc: "より深刻（問題飲酒と関連）" },
   ];
 
   // ヘッダ行
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: 1.1, w: 2.0, h: 0.55, fill: { color: C.dark } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 2.3, y: 1.1, w: 3.6, h: 0.55, fill: { color: C.orange } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 5.9, y: 1.1, w: 3.8, h: 0.55, fill: { color: C.red } });
-  s.addText("項目", { x: 0.3, y: 1.1, w: 2.0, h: 0.55, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-  s.addText("断片型（fragmentary）", { x: 2.3, y: 1.1, w: 3.6, h: 0.55, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-  s.addText("完全型（en bloc）", { x: 5.9, y: 1.1, w: 3.8, h: 0.55, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+  var tblY = 1.1;
+  var hdrH = 0.5;
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: tblY, w: 1.8, h: hdrH, fill: { color: C.dark } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 2.1, y: tblY, w: 3.7, h: hdrH, fill: { color: C.orange } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 5.8, y: tblY, w: 3.9, h: hdrH, fill: { color: C.red } });
+  s.addText("項目", { x: 0.3, y: tblY, w: 1.8, h: hdrH, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("断片型（fragmentary）", { x: 2.1, y: tblY, w: 3.7, h: hdrH, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("完全型（en bloc）", { x: 5.8, y: tblY, w: 3.9, h: hdrH, fontSize: 13, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
 
+  var rowH = 0.64;
   rows.forEach(function(r, i) {
-    var yPos = 1.65 + i * 0.75;
+    var yPos = tblY + hdrH + i * rowH;
     var bgColor = (i % 2 === 0) ? C.warmBg : C.white;
-    s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: yPos, w: 9.4, h: 0.75, fill: { color: bgColor } });
-    s.addText(r.item, { x: 0.3, y: yPos, w: 2.0, h: 0.75, fontSize: 12, fontFace: FONT_JP, color: C.primary, bold: true, align: "center", valign: "middle", margin: 2 });
-    s.addText(r.frag, { x: 2.3, y: yPos, w: 3.6, h: 0.75, fontSize: 12, fontFace: FONT_JP, color: C.text, valign: "middle", margin: [0, 8, 0, 8], lineSpacingMultiple: 1.2 });
-    s.addText(r.enbloc, { x: 5.9, y: yPos, w: 3.8, h: 0.75, fontSize: 12, fontFace: FONT_JP, color: C.red, bold: true, valign: "middle", margin: [0, 8, 0, 8], lineSpacingMultiple: 1.2 });
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: yPos, w: 9.4, h: rowH, fill: { color: bgColor } });
+    s.addText(r.item, { x: 0.3, y: yPos, w: 1.8, h: rowH, fontSize: 11, fontFace: FONT_JP, color: C.primary, bold: true, align: "center", valign: "middle", margin: 2, lineSpacingMultiple: 1.15 });
+    s.addText(r.frag, { x: 2.1, y: yPos, w: 3.7, h: rowH, fontSize: 12, fontFace: FONT_JP, color: C.text, valign: "middle", margin: [0, 8, 0, 8], lineSpacingMultiple: 1.15 });
+    s.addText(r.enbloc, { x: 5.8, y: yPos, w: 3.9, h: rowH, fontSize: 12, fontFace: FONT_JP, color: C.red, bold: true, valign: "middle", margin: [0, 8, 0, 8], lineSpacingMultiple: 1.15 });
   });
 
   // 統計注記
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: 5.1, w: 9.4, h: 0.42, fill: { color: C.light } });
+  var noteY = tblY + hdrH + rows.length * rowH + 0.15;
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.3, y: noteY, w: 9.4, h: 0.42, fill: { color: C.light } });
   s.addText("飲酒経験のある大学生の51%がブラックアウトを経験（Duke大学 2002）", {
-    x: 0.5, y: 5.1, w: 9.0, h: 0.42,
+    x: 0.5, y: noteY, w: 9.0, h: 0.42,
     fontSize: 13, fontFace: FONT_JP, color: C.sub, valign: "middle", margin: 0,
   });
 
@@ -384,25 +388,25 @@ function addPageNum(s, num) {
   });
 
   var messages = [
-    { num: "1", text: "ブラックアウトは記憶が「消えた」のではなく\n「最初から作られなかった」 ― 海馬のLTPがブロックされるため" },
+    { num: "1", text: "ブラックアウトは記憶が「消えた」のではなく「最初から作られなかった」\n― 海馬のLTPがブロックされるため" },
     { num: "2", text: "NMDA受容体遮断 ＋ GABA-A受容体増強の2重作用が記憶形成を妨げる" },
-    { num: "3", text: "断片型（fragmentary）と完全型（en bloc）の2種類があり\n後者のほうが深刻" },
-    { num: "4", text: "急速飲酒・空腹・女性・若年者がリスク大\n「酒が強い人」でも油断は禁物" },
-    { num: "5", text: "繰り返す多量飲酒 → ウェルニッケ・コルサコフ症候群や\nアルコール性認知症につながる" },
+    { num: "3", text: "断片型と完全型の2種類があり、完全型のほうが深刻" },
+    { num: "4", text: "急速飲酒・空腹・女性・若年者がリスク大。「酒が強い人」でも油断禁物" },
+    { num: "5", text: "繰り返す多量飲酒 → ウェルニッケ・コルサコフ症候群やアルコール性認知症" },
   ];
 
   messages.forEach(function(m, i) {
-    var yPos = 1.1 + i * 0.86;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.8, y: yPos, w: 8.4, h: 0.75, fill: { color: "243B5C" }, rectRadius: 0.1 });
-    s.addShape(pres.shapes.OVAL, { x: 1.0, y: yPos + 0.1, w: 0.55, h: 0.55, fill: { color: C.accent } });
-    s.addText(m.num, { x: 1.0, y: yPos + 0.1, w: 0.55, h: 0.55, fontSize: 20, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
-    s.addText(m.text, { x: 1.75, y: yPos, w: 7.2, h: 0.75, fontSize: 14, fontFace: FONT_JP, color: C.light, valign: "middle", margin: 0, lineSpacingMultiple: 1.1 });
+    var yPos = 1.05 + i * 0.8;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: yPos, w: 8.8, h: 0.72, fill: { color: "243B5C" }, rectRadius: 0.1 });
+    s.addShape(pres.shapes.OVAL, { x: 0.8, y: yPos + 0.08, w: 0.52, h: 0.52, fill: { color: C.accent } });
+    s.addText(m.num, { x: 0.8, y: yPos + 0.08, w: 0.52, h: 0.52, fontSize: 18, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
+    s.addText(m.text, { x: 1.55, y: yPos, w: 7.65, h: 0.72, fontSize: 13, fontFace: FONT_JP, color: C.light, valign: "middle", margin: 0, lineSpacingMultiple: 1.1 });
   });
 
-  s.addShape(pres.shapes.LINE, { x: 2, y: 5.35, w: 6, h: 0, line: { color: C.accent, width: 1 } });
+  s.addShape(pres.shapes.LINE, { x: 2, y: 5.15, w: 6, h: 0, line: { color: C.accent, width: 1 } });
   s.addText("医知創造ラボ  今村久司  ｜  チャンネル登録よろしくお願いします", {
-    x: 0.5, y: 5.45, w: 9.0, h: 0.35,
-    fontSize: 13, fontFace: FONT_JP, color: C.sub, align: "center", margin: 0,
+    x: 0.5, y: 5.2, w: 9.0, h: 0.35,
+    fontSize: 12, fontFace: FONT_JP, color: C.sub, align: "center", margin: 0,
   });
 
   addPageNum(s, "9/9");

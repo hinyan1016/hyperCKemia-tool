@@ -92,10 +92,8 @@
 https://hinyan1016.hatenablog.com/
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ▶ 神経局在診断ツール
-https://hinyan1016.github.io/medical-ddx-tools/nerve-localization.html
 
 ━━━━━━━━━━━━━━━━━━━━━
 🏥 チャンネル情報

@@ -72,10 +72,9 @@
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（全文＋全参考文献リンク）
-https://hinyan1016.hatenablog.com/（公開後URLを記入）
+https://hinyan1016.hatenablog.com/entry/2026/04/06/071409
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ━━━━━━━━━━━━━━━━━━━━━
 🏥 チャンネル情報

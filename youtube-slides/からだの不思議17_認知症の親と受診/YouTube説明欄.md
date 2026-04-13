@@ -112,7 +112,6 @@
 https://hinyan1016.hatenablog.com/
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ▶ 関連動画【#01】「あの人の名前が出てこない」は認知症のサイン？
 （チャンネル内動画リンクを挿入）

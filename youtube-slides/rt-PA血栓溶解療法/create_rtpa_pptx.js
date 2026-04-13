@@ -1111,7 +1111,7 @@ function hdr(s, title, bgColor) {
   hdr(s, "参考文献", C.dark);
 
   var refs = [
-    { num: "1", text: "日本脳卒中学会 脳卒中治療ガイドライン2025（改訂版）" },
+    { num: "1", text: "日本脳卒中学会 脳卒中治療ガイドライン2021〔改訂2025〕" },
     { num: "2", text: "Yamaguchi T, et al. Randomized double-blind study of tissue-type plasminogen activator (t-PA). Stroke 2006; 37:2873–2879. [J-ACT]" },
     { num: "3", text: "Hacke W, et al. Thrombolysis with alteplase 3 to 4.5 hours after acute ischemic stroke. N Engl J Med 2008; 359:1317–1329. [ECASS III]" },
     { num: "4", text: "Thomalla G, et al. MRI-guided thrombolysis for stroke with unknown time of onset. N Engl J Med 2018; 379:611–622. [WAKE-UP]" },

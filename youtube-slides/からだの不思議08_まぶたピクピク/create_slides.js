@@ -137,11 +137,10 @@ function addPageNum(s, num) {
   ];
   triggers.forEach(function(t, i) {
     var xPos = 0.3 + i * 1.88;
-    addCard(s, xPos, 3.1, 1.7, 1.5);
-    s.addShape(pres.shapes.RECTANGLE, { x: xPos, y: 3.1, w: 1.7, h: 0.45, fill: { color: t.color } });
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: xPos, y: 3.1, w: 1.7, h: 1.5, fill: { color: t.color }, rectRadius: 0.08, shadow: makeShadow() });
     s.addText(t.label, {
       x: xPos, y: 3.1, w: 1.7, h: 1.5,
-      fontSize: 14, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 0,
+      fontSize: 15, fontFace: FONT_JP, color: C.white, bold: true, align: "center", valign: "middle", margin: 4,
       lineSpacingMultiple: 1.3,
     });
   });
@@ -168,27 +167,28 @@ function addPageNum(s, num) {
   addHeader(s, "メカニズム ― なぜ疲れるとピクピクするのか");
 
   var steps = [
-    { icon: "😴", label: "疲労・睡眠不足\nカフェイン・Mg不足", color: C.orange },
-    { icon: "⚡", label: "神経・筋肉の\n静止電位が不安定に", color: C.yellow },
-    { icon: "🔀", label: "わずかな刺激で\n自発放電が起きやすくなる", color: C.red },
-    { icon: "👁️", label: "指令なしに\n眼輪筋がピクッと収縮", color: C.primary },
+    { num: "1", label: "疲労・睡眠不足\nカフェイン・Mg不足", color: C.orange },
+    { num: "2", label: "神経・筋肉の\n静止電位が不安定に", color: C.yellow },
+    { num: "3", label: "わずかな刺激で\n自発放電が起きやすくなる", color: C.red },
+    { num: "4", label: "指令なしに\n眼輪筋がピクッと収縮", color: C.primary },
   ];
 
   steps.forEach(function(st, i) {
     var xPos = 0.2 + i * 2.45;
     addCard(s, xPos, 1.2, 2.2, 2.5);
-    s.addText(st.icon, { x: xPos, y: 1.35, w: 2.2, h: 0.7, fontSize: 30, align: "center", margin: 0 });
-    s.addShape(pres.shapes.RECTANGLE, { x: xPos + 0.1, y: 2.05, w: 2.0, h: 0.4, fill: { color: st.color } });
+    s.addShape(pres.shapes.OVAL, { x: xPos + 0.7, y: 1.35, w: 0.8, h: 0.8, fill: { color: st.color } });
+    s.addText(st.num, { x: xPos + 0.7, y: 1.35, w: 0.8, h: 0.8, fontSize: 26, fontFace: FONT_EN, color: C.white, bold: true, align: "center", valign: "middle", margin: 0 });
     s.addText(st.label, {
-      x: xPos, y: 2.5, w: 2.2, h: 1.0,
+      x: xPos + 0.1, y: 2.3, w: 2.0, h: 1.2,
       fontSize: 13, fontFace: FONT_JP, color: C.text, align: "center", valign: "top", margin: 4,
       lineSpacingMultiple: 1.2,
     });
   });
 
-  s.addText("→", { x: 2.35, y: 2.0, w: 0.4, h: 0.5, fontSize: 24, color: C.accent, align: "center", valign: "middle", margin: 0 });
-  s.addText("→", { x: 4.8, y: 2.0, w: 0.4, h: 0.5, fontSize: 24, color: C.accent, align: "center", valign: "middle", margin: 0 });
-  s.addText("→", { x: 7.25, y: 2.0, w: 0.4, h: 0.5, fontSize: 24, color: C.accent, align: "center", valign: "middle", margin: 0 });
+  // 矢印（カード間）
+  s.addText("\u25B6", { x: 2.3, y: 2.1, w: 0.5, h: 0.5, fontSize: 20, fontFace: FONT_EN, color: C.accent, align: "center", valign: "middle", margin: 0 });
+  s.addText("\u25B6", { x: 4.75, y: 2.1, w: 0.5, h: 0.5, fontSize: 20, fontFace: FONT_EN, color: C.accent, align: "center", valign: "middle", margin: 0 });
+  s.addText("\u25B6", { x: 7.2, y: 2.1, w: 0.5, h: 0.5, fontSize: 20, fontFace: FONT_EN, color: C.accent, align: "center", valign: "middle", margin: 0 });
 
   addCard(s, 0.5, 4.0, 9.0, 1.4);
   s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 4.0, w: 9.0, h: 0.45, fill: { color: C.primary } });

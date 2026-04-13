@@ -80,10 +80,8 @@ T（Time）― 発症時刻を必ず記録（4.5時間以内が治療の鍵）
 https://hinyan1016.hatenablog.com/
 
 ▶ 神経局在診断ツール（しびれ・感覚障害の局在を段階的に絞り込む）
-https://hinyan1016.github.io/medical-ddx-tools/nerve-localization.html
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ━━━━━━━━━━━━━━━━━━━━━
 🏥 チャンネル情報

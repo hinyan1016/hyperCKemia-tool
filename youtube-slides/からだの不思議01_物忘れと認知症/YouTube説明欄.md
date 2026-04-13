@@ -93,7 +93,6 @@ https://youtu.be/Z7ZzKnY7GyM
 https://youtu.be/JNaIRbHVz4s
 
 ▶ 医学診断ツール一覧
-https://hinyan1016.github.io/medical-ddx-tools/
 
 ━━━━━━━━━━━━━━━━━━━━━
 🏥 チャンネル情報
