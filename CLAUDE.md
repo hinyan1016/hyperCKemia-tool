@@ -150,6 +150,37 @@ render() → DOM更新
 
 ---
 
+## はてなブログ記事 SEO必須項目
+
+新規ブログ記事の作成・投稿時に必ず含める要素（SEO改善プロジェクト2026-04の知見）。
+
+### 記事作成時
+1. **導入文（リード文）**: 記事冒頭に120文字以上。主キーワードを含む。GSCのメタディスクリプションになる
+2. **本文500文字以上**: 薄いコンテンツはGoogleにインデックスされにくい
+3. **内部リンク2〜5件**: 関連記事への正規はてなURL（`https://hinyan1016.hatenablog.com/entry/...`）
+4. **VideoObject JSON-LD**: YouTube埋め込み記事には必須（動画インデックス登録用）
+5. **FAQ構造化データ**: 検索結果のリッチスニペット対応
+
+### リンクのルール
+- 内部リンクは必ず**正規はてなURL**を使用（`/entry/YYYY/MM/DD/HHMMSS` 形式）
+- `.html`ファイル名や相対パスは使わない（404の原因）
+- リンク先が公開中であることを確認
+
+### 記事の下書き化・削除時
+記事を下書きにする場合、**必ず**以下を同時実施:
+1. 他の記事からの内部リンク（関連記事ブロック含む）を検索・除去
+2. まとめページ等でのリンクも除去
+3. リンク除去後に空になるページは連鎖的に下書き化
+
+### VideoObject JSON-LDテンプレート
+```html
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"動画タイトル","description":"説明","thumbnailUrl":"https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg","uploadDate":"YYYY-MM-DD","contentUrl":"https://www.youtube.com/watch?v=VIDEO_ID","embedUrl":"https://www.youtube.com/embed/VIDEO_ID"}
+</script>
+```
+
+---
+
 ## ブログ文献リンク有効化プロジェクト進捗
 
 はてなブログ(hinyan1016)の参考文献にDOI/URLリンクを追加する継続作業。
