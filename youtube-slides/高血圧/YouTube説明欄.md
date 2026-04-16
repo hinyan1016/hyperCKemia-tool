@@ -18,16 +18,16 @@
 ━━━━━━━━━━━━━━━━━━━━━
 📋 目次
 ━━━━━━━━━━━━━━━━━━━━━
-00:00 はじめに：日本人の3人に1人が高血圧
-01:05 衝撃の数字 ― 年間10万人が高血圧関連で死亡
-01:55 コントロール不良の3,100万人
-03:00 2025年の新基準 ― JSH2025ガイドライン
-04:15 血圧の分類とリスク（8.5倍の衝撃）
-05:20 なぜ日本は高血圧大国なのか ― 食塩9.8g問題
-06:30 沈黙の殺し屋 ― 高血圧が引き起こす病気
-07:40 家庭血圧の正しい測り方 7つのポイント
-08:55 減塩のコツとDASH食 ― 今日からできる対策
-10:20 Take Home Message（まとめ）
+0:00 オープニング・高血圧の現状
+0:56 日本の高血圧の現状（衝撃の数字）
+1:41 コントロール不良の3,100万人
+2:34 2025年の新基準（JSH2025ガイドライン）
+3:42 血圧の分類とリスク
+4:34 なぜ日本は高血圧大国なのか
+5:29 沈黙の殺し屋（高血圧が引き起こす病気）
+6:26 家庭血圧を測ろう（正しい測定法7つのポイント）
+7:25 減塩のコツとDASH食（今日からできる対策）
+8:55 まとめ（Take Home Message）
 
 ━━━━━━━━━━━━━━━━━━━━━
 📊 日本の高血圧 ― 衝撃の数字
@@ -70,12 +70,12 @@
 ━━━━━━━━━━━━━━━━━━━━━
 📚 参考文献
 ━━━━━━━━━━━━━━━━━━━━━
-[1] 厚生労働省. 令和5年（2023）患者調査の概況.
-[2] 厚生労働省. 令和4年（2022）人口動態統計.
-[3] Ikeda N, et al. Adult mortality attributable to preventable risk factors for non-communicable diseases and injuries in Japan. PLoS Med. 2012;9(1):e1001160.
+[1] 厚生労働省. 令和5年（2023）患者調査の概況. https://www.mhlw.go.jp/toukei/saikin/hw/kanja/23/index.html
+[2] 厚生労働省. 令和4年（2022）人口動態統計. https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei22/
+[3] Ikeda N, et al. Adult mortality attributable to preventable risk factors for non-communicable diseases and injuries in Japan. PLoS Med. 2012;9(1):e1001160. https://doi.org/10.1371/journal.pmed.1001160
 [4] Umemura S, et al. JSH2019 Guidelines. Hypertens Res. 2019;42(9):1235-1481. https://doi.org/10.1038/s41440-019-0284-9
-[5] 日本高血圧学会. 高血圧管理・治療ガイドライン2025（JSH2025）.
-[6] 厚生労働省. 令和5年（2023）国民健康・栄養調査.
+[5] 日本高血圧学会. 高血圧管理・治療ガイドライン2025（JSH2025）. https://www.jpnsh.jp/guideline.html
+[6] 厚生労働省. 令和5年（2023）国民健康・栄養調査. https://www.mhlw.go.jp/stf/newpage_45540.html
 [7] 日本高血圧学会 減塩・栄養委員会. https://www.jpnsh.jp/general_salt_02.html
 [8] Sacks FM, et al. DASH-Sodium trial. N Engl J Med. 2001;344(1):3-10. https://doi.org/10.1056/NEJM200101043440101
 
@@ -83,7 +83,7 @@
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（全文＋FAQ＋参考文献付き）
-https://hinyan1016.hatenablog.com/entry/2026/04/16/204727
+https://hinyan1016.hatenablog.com/entry/2026/04/17/063136
 
 ━━━━━━━━━━━━━━━━━━━━━
 🏥 チャンネル情報
