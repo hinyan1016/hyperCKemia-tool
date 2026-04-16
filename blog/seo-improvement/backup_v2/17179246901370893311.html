@@ -1,0 +1,638 @@
+<div class="medical-article">
+<div class="medical-article">
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>三叉神経痛 ― 神経内科医視点の鑑別診断と治療戦略</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/JehIClZ2RuU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【神経内科】三叉神経痛を徹底解説！ICHD-3分類・SUNCT/SUNAとの鑑別・薬物治療・MVD｜診断から治療まで" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/JehIClZ2RuU">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ============================================
+   全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+/* 基本スタイル */
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.medical-article h3::before {
+    content: '\25B6';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .pearl-box {
+    background: #e8f5e9;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.medical-article .drug-table th {
+    background: #2c5aa0 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.medical-article .drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.medical-article .drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-article .medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-article .medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-article .medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-article .medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+}
+</style>
+<div class="medical-article">
+<h1>三叉神経痛 ― 神経内科医視点の鑑別診断と治療戦略</h1>
+<div class="toc-box">
+<h3>目次</h3>
+<ul>
+<li><a href="#tn-definition">1. 三叉神経痛とは</a></li>
+<li><a href="#tn-anatomy">2. 三叉神経の解剖</a></li>
+<li><a href="#tn-pathophysiology">3. 病態生理</a></li>
+<li><a href="#tn-classification">4. ICHD-3に基づく臨床分類</a></li>
+<li><a href="#tn-symptoms">5. 症状と診断基準</a></li>
+<li><a href="#tn-redflags">6. Red Flags ― 二次性TNを疑う所見</a></li>
+<li><a href="#tn-differential">7. 顔面痛の鑑別診断</a></li>
+<li><a href="#tn-workup">8. 検査</a></li>
+<li><a href="#tn-pharmacotherapy">9. 薬物治療</a></li>
+<li><a href="#tn-surgery">10. 外科治療</a></li>
+<li><a href="#tn-algorithm">11. 治療アルゴリズム</a></li>
+<li><a href="#tn-references">参考文献</a></li>
+</ul>
+</div>
+<!-- ==================== 1. 定義・疫学 ==================== -->
+<h2 id="tn-definition">1. 三叉神経痛とは</h2>
+<p>三叉神経痛（Trigeminal Neuralgia: TN）は、<strong>三叉神経（第V脳神経）の支配領域に生じる発作性の激烈な顔面痛</strong>を特徴とする疾患です。痛みは「電撃様」「稲妻が走るような」と表現され、日常生活を著しく障害します。</p>
+<div class="important-box"><strong>疫学データ</strong><br />• 発症率: 4-5.5/10万人・年（全年齢）、60歳以上では20/10万人・年超<sup>1,2</sup><br />• 男女比: 女性:男性 = 約3:2〜2:1<br />• 好発年齢: 50歳以上（ピーク 51-59歳）<br />• 生涯有病率: 0.1-0.3%</div>
+<!-- ==================== 2. 解剖 ==================== -->
+<h2 id="tn-anatomy">2. 三叉神経の解剖</h2>
+<p>三叉神経は<strong>顔面の感覚を司る最大の脳神経</strong>で、三叉神経節（ガッセル神経節）から3本の枝に分かれます。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">分枝</th>
+<th style="background: #2c5aa0!important; color: white!important;">名称</th>
+<th style="background: #2c5aa0!important; color: white!important;">通過孔</th>
+<th style="background: #2c5aa0!important; color: white!important;">支配領域</th>
+</tr>
+<tr>
+<td><strong>V1</strong></td>
+<td>眼神経</td>
+<td>上眼窩裂</td>
+<td>前頭部、上眼瞼、鼻背</td>
+</tr>
+<tr>
+<td><strong>V2</strong></td>
+<td>上顎神経</td>
+<td>正円孔</td>
+<td>頬部、上唇、上歯列、鼻翼</td>
+</tr>
+<tr>
+<td><strong>V3</strong></td>
+<td>下顎神経</td>
+<td>卵円孔</td>
+<td>下唇、下歯列、下顎、舌前2/3（感覚）+ 咀嚼筋（運動）</td>
+</tr>
+</tbody>
+</table>
+<div class="pearl-box"><strong>Clinical Pearl</strong><br />三叉神経痛はV2・V3領域に好発し、V1単独は全体の5%未満です。V1単独の顔面痛では腫瘍性病変やTACs（三叉神経・自律神経性頭痛）をまず鑑別する必要があります。</div>
+<p><strong>Root Entry Zone（REZ）</strong>は、脳幹から5-10mmの位置にあり、中枢性ミエリン（乏突起膠細胞）から末梢性ミエリン（シュワン細胞）へ移行する部位です。この部位はミエリンの移行により構造的に脆弱であり、<strong>血管圧迫の好発部位</strong>となります。</p>
+<!-- ==================== 3. 病態生理 ==================== -->
+<h2 id="tn-pathophysiology">3. 病態生理</h2>
+<h3>神経血管圧迫説</h3>
+<p>現在最も支持されている仮説は<strong>神経血管圧迫説</strong>です。REZ付近で血管（主に動脈）が三叉神経を圧迫することで、以下の病態が進行します。</p>
+<ol>
+<li><strong>局所脱髄</strong>: 持続的な機械的圧迫により神経鞘が障害される</li>
+<li><strong>異所性発火</strong>: 脱髄部位で自発的な神経インパルスが発生する</li>
+<li><strong>エファプティック伝導</strong>: 脱髄した隣接する神経線維間で電気信号が「漏電」し、軽い触覚刺激が疼痛信号に変換される</li>
+</ol>
+<div class="important-box"><strong>責任血管の頻度</strong><sup>3</sup><br />• 上小脳動脈（SCA）: 75-80%（最多）<br />• 前下小脳動脈（AICA）: 10-15%<br />• 椎骨脳底動脈系: 5-10%<br />• 静脈単独: 5%未満（予後不良因子）</div>
+<h3>Ignition Hypothesis</h3>
+<p>Devorらが提唱した仮説では、脱髄部位が「点火装置（ignition site）」として機能し、わずかな触覚入力が<strong>反復的な後発射（afterdischarge）</strong>を引き起こし、発作性の激痛が生じるとされます<sup>4</sup>。この仮説は、トリガーゾーンの存在や不応期の説明に合致します。</p>
+<!-- ==================== 4. 分類 ==================== -->
+<h2 id="tn-classification">4. ICHD-3に基づく臨床分類</h2>
+<p>国際頭痛分類第3版（ICHD-3, 2018）では、三叉神経痛を以下の3型に分類しています<sup>5</sup>。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">分類</th>
+<th style="background: #2c5aa0!important; color: white!important;">定義</th>
+<th style="background: #2c5aa0!important; color: white!important;">頻度</th>
+<th style="background: #2c5aa0!important; color: white!important;">特徴</th>
+</tr>
+<tr>
+<td><strong>典型的TN（Classical）</strong></td>
+<td>MRI/手術で神経血管圧迫 + 三叉神経根の形態変化を確認</td>
+<td>約70-80%</td>
+<td>純粋発作型と持続性疼痛併存型に細分</td>
+</tr>
+<tr>
+<td><strong>二次性TN（Secondary）</strong></td>
+<td>基礎疾患（MS、腫瘍、AVM等）に起因</td>
+<td>約15%</td>
+<td>若年者、両側性、感覚障害の合併</td>
+</tr>
+<tr>
+<td><strong>特発性TN（Idiopathic）</strong></td>
+<td>MRIで血管圧迫なし、基礎疾患なし</td>
+<td>約10-15%</td>
+<td>臨床的にはTNの特徴を満たす</td>
+</tr>
+</tbody>
+</table>
+<div class="warning-box"><strong>注意</strong>: 二次性TNの原因疾患として、<strong>多発性硬化症（MS）</strong>は最も重要です。TN患者の2-4%にMSが合併し、逆にMS患者の1-5%がTNを発症します。特に<strong>40歳未満の発症・両側性</strong>ではMSを積極的に検索する必要があります。</div>
+<!-- ==================== 5. 症状と診断 ==================== -->
+<h2 id="tn-symptoms">5. 症状と診断基準</h2>
+<h3>典型的発作の特徴</h3>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">項目</th>
+<th style="background: #2c5aa0!important; color: white!important;">特徴</th>
+</tr>
+<tr>
+<td><strong>痛みの性質</strong></td>
+<td>電撃様、刺すような、鋭い激痛（「稲妻が走る」「針で刺される」）</td>
+</tr>
+<tr>
+<td><strong>持続時間</strong></td>
+<td>数秒〜2分（通常1分以内）</td>
+</tr>
+<tr>
+<td><strong>頻度</strong></td>
+<td>1日数回〜数百回</td>
+</tr>
+<tr>
+<td><strong>部位</strong></td>
+<td>片側性（右側60%）、V2/V3領域に好発</td>
+</tr>
+<tr>
+<td><strong>トリガー</strong></td>
+<td>咀嚼、会話、洗顔、歯磨き、冷風、軽い接触</td>
+</tr>
+<tr>
+<td><strong>トリガーゾーン</strong></td>
+<td>鼻唇溝、上唇、下唇、歯肉（軽い触覚で発作誘発）</td>
+</tr>
+<tr>
+<td><strong>不応期</strong></td>
+<td>発作後に短い無痛期間（数秒〜数分）</td>
+</tr>
+<tr>
+<td><strong>寛解期</strong></td>
+<td>数週〜数ヶ月の無痛期が存在（経過とともに短縮）</td>
+</tr>
+</tbody>
+</table>
+<div class="pearl-box"><strong>Clinical Pearl ― 診断のカギ</strong><br />三叉神経痛の診断は<strong>ほぼ病歴のみ</strong>で可能です。以下の3要素が揃えば臨床的にTNと診断できます:<br />• 電撃様の発作性疼痛（数秒〜2分）<br />• 三叉神経支配領域に限局<br />• 無害刺激による誘発（トリガーゾーンの存在）</div>
+<!-- ==================== 6. Red Flags ==================== -->
+<h2 id="tn-redflags">6. Red Flags ― 二次性TNを疑う所見</h2>
+<div class="emergency-box"><strong>以下の所見がある場合、二次性TNを積極的に疑い精査が必要です</strong><br />• <strong>両側性</strong>: 多発性硬化症を示唆<br />• <strong>V1領域単独</strong>: 小脳橋角部腫瘍（聴神経鞘腫、髄膜腫）を疑う<br />• <strong>感覚低下・運動障害</strong>: 三叉神経に沿った構造的病変を示唆<br />• <strong>若年発症（&lt;40歳）</strong>: MSの検索が必須<br />• <strong>難聴・めまいの合併</strong>: 小脳橋角部腫瘍を疑う<br />• <strong>薬剤抵抗性</strong>（特にCBZへの無反応）: 二次性の可能性を再評価<br />• <strong>進行性の症状</strong>: 持続痛への移行、不応期の消失</div>
+<!-- ==================== 7. 鑑別診断 ==================== -->
+<h2 id="tn-differential">7. 顔面痛の鑑別診断</h2>
+<p>顔面痛を呈する疾患は多岐にわたり、体系的な鑑別が重要です。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">疾患</th>
+<th style="background: #2c5aa0!important; color: white!important;">痛みの特徴</th>
+<th style="background: #2c5aa0!important; color: white!important;">持続時間</th>
+<th style="background: #2c5aa0!important; color: white!important;">鑑別ポイント</th>
+</tr>
+<tr>
+<td><strong>歯原性疼痛</strong></td>
+<td>拍動性、持続性</td>
+<td>持続〜数時間</td>
+<td>歯科検査で原因歯同定、冷温刺激で増悪</td>
+</tr>
+<tr>
+<td><strong>帯状疱疹後神経痛</strong></td>
+<td>灼熱感、持続性、アロディニア</td>
+<td>持続（慢性）</td>
+<td>水疱の既往、皮疹の分布（デルマトーム）</td>
+</tr>
+<tr>
+<td><strong>群発頭痛（TACs）</strong></td>
+<td>激痛 + 自律神経症状</td>
+<td>15-180分</td>
+<td>流涙、鼻閉、縮瞳、眼瞼下垂、興奮・不穏</td>
+</tr>
+<tr>
+<td><strong>SUNCT / SUNA</strong></td>
+<td>刺痛 + 結膜充血・流涙</td>
+<td>1-600秒</td>
+<td>自律神経症状が顕著、1日に多数回</td>
+</tr>
+<tr>
+<td><strong>持続性特発性顔面痛（PIFP）</strong></td>
+<td>鈍痛、漠然とした痛み</td>
+<td>持続（毎日・慢性）</td>
+<td>局在不明瞭、心理的要因の関与</td>
+</tr>
+<tr>
+<td><strong>顎関節症（TMD）</strong></td>
+<td>鈍痛、咀嚼時に増悪</td>
+<td>持続〜数時間</td>
+<td>開口制限、関節雑音（クリック音）</td>
+</tr>
+<tr>
+<td><strong>舌咽神経痛</strong></td>
+<td>電撃様、咽頭・耳に放散</td>
+<td>数秒〜2分</td>
+<td>嚥下・咳嗽が主トリガー、TNより稀</td>
+</tr>
+<tr>
+<td><strong>副鼻腔炎</strong></td>
+<td>鈍痛、前屈で増悪</td>
+<td>持続</td>
+<td>膿性鼻汁、CT/MRI所見</td>
+</tr>
+</tbody>
+</table>
+<details class="medical-details">
+<summary>SUNCT/SUNAとの詳細鑑別（クリックで展開）</summary>
+<div class="medical-details-content">
+<p>SUNCT（Short-lasting Unilateral Neuralgiform headache attacks with Conjunctival injection and Tearing）およびSUNA（Short-lasting Unilateral Neuralgiform headache attacks with cranial Autonomic symptoms）は、三叉神経痛と最も混同されやすい疾患群です<sup>6</sup>。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">特徴</th>
+<th style="background: #2c5aa0!important; color: white!important;">三叉神経痛</th>
+<th style="background: #2c5aa0!important; color: white!important;">SUNCT/SUNA</th>
+</tr>
+<tr>
+<td>痛みの持続</td>
+<td>数秒〜2分</td>
+<td>1-600秒</td>
+</tr>
+<tr>
+<td>自律神経症状</td>
+<td>通常なし</td>
+<td><strong>必発</strong>（結膜充血、流涙、鼻閉等）</td>
+</tr>
+<tr>
+<td>不応期</td>
+<td>あり</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>トリガー</td>
+<td>軽触覚（洗顔、歯磨き）</td>
+<td>皮膚刺激でも誘発されるが不応期なし</td>
+</tr>
+<tr>
+<td>CBZへの反応</td>
+<td>著効</td>
+<td>無効（ラモトリギンが有効）</td>
+</tr>
+<tr>
+<td>好発部位</td>
+<td>V2/V3</td>
+<td>V1（眼窩部）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><!-- ==================== 8. 検査 ==================== -->
+<h2 id="tn-workup">8. 検査</h2>
+<h3>画像検査</h3>
+<p><strong>MRI</strong>は全てのTN患者で推奨されます（AAN guideline, Level B）<sup>7</sup>。主な目的は二次性TNの除外と責任血管の同定です。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">検査</th>
+<th style="background: #2c5aa0!important; color: white!important;">目的</th>
+<th style="background: #2c5aa0!important; color: white!important;">所見</th>
+</tr>
+<tr>
+<td><strong>MRI（通常撮像）</strong></td>
+<td>二次性TNの除外</td>
+<td>腫瘍、MS plaque、血管奇形の検出</td>
+</tr>
+<tr>
+<td><strong>MRA</strong></td>
+<td>責任血管の同定</td>
+<td>SCA等の走行異常・三叉神経との接触</td>
+</tr>
+<tr>
+<td><strong>3D-FIESTA / CISS</strong></td>
+<td>神経-血管関係の精密評価</td>
+<td>REZでの圧迫・変形を高分解能で描出</td>
+</tr>
+<tr>
+<td><strong>造影MRI</strong></td>
+<td>腫瘍性病変の評価</td>
+<td>小脳橋角部腫瘍（聴神経鞘腫、髄膜腫）の造影効果</td>
+</tr>
+</tbody>
+</table>
+<div class="important-box"><strong>3D-FIESTA / CISSシーケンスの重要性</strong><br />通常のMRIでは三叉神経と血管の関係を十分に評価できません。<strong>3D-FIESTA（Fast Imaging Employing Steady-state Acquisition）</strong>やCISS（Constructive Interference in Steady State）は、髄液と神経・血管のコントラストに優れ、REZでの血管圧迫を高精度で描出できます。MVD手術の術前評価に必須の撮像法です。</div>
+<h3>その他の検査</h3>
+<ul>
+<li><strong>三叉神経反射検査（Blink reflex等）</strong>: 三叉神経伝導異常の客観的評価。二次性TNでは異常を示すことが多い</li>
+<li><strong>血液検査</strong>: MS疑いではオリゴクローナルバンド、髄液検査を検討</li>
+<li><strong>歯科評価</strong>: 歯原性疼痛の除外（特にV2/V3領域の痛み）</li>
+</ul>
+<!-- ==================== 9. 薬物治療 ==================== -->
+<h2 id="tn-pharmacotherapy">9. 薬物治療</h2>
+<h3>第一選択薬</h3>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">薬剤</th>
+<th style="background: #2c5aa0!important; color: white!important;">用量</th>
+<th style="background: #2c5aa0!important; color: white!important;">エビデンス</th>
+<th style="background: #2c5aa0!important; color: white!important;">初期奏効率</th>
+<th style="background: #2c5aa0!important; color: white!important;">主な副作用</th>
+</tr>
+<tr>
+<td><strong>カルバマゼピン（CBZ）</strong></td>
+<td>200-1200 mg/日</td>
+<td>Level A (AAN)</td>
+<td>約88%</td>
+<td>眠気、ふらつき、低Na血症、SJS/TEN、肝障害、再生不良性貧血</td>
+</tr>
+<tr>
+<td><strong>オキシカルバゼピン（OXC）</strong></td>
+<td>600-1800 mg/日</td>
+<td>Level B (AAN)</td>
+<td>約91%</td>
+<td>CBZより副作用少（30% vs 44%）、低Na血症</td>
+</tr>
+</tbody>
+</table>
+<div class="warning-box"><strong>HLA-B*1502検査（アジア人で必須）</strong><br />カルバマゼピン・オキシカルバゼピン開始前に、<strong>HLA-B*1502</strong>遺伝子検査を実施してください。この遺伝子陽性者ではStevens-Johnson症候群（SJS）/ 中毒性表皮壊死症（TEN）のリスクが著しく上昇します。東アジア人での陽性率は約8%です<sup>8</sup>。</div>
+<div class="pearl-box"><strong>Clinical Pearl ― CBZの治療的診断価値</strong><br />CBZへの劇的な反応（数時間〜数日で疼痛消失）は三叉神経痛を強く支持する所見です。逆に、CBZが無効な場合は診断の再考が必要です。NNT（治療必要数）は1.7-1.8と極めて優れています<sup>7</sup>。</div>
+<h3>第二選択薬・補助薬</h3>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">薬剤</th>
+<th style="background: #2c5aa0!important; color: white!important;">用量</th>
+<th style="background: #2c5aa0!important; color: white!important;">備考</th>
+</tr>
+<tr>
+<td><strong>ラモトリギン</strong></td>
+<td>200-400 mg/日</td>
+<td>エビデンスLevel C、CBZ併用で有効。皮疹に注意（漸増必須）</td>
+</tr>
+<tr>
+<td><strong>バクロフェン</strong></td>
+<td>40-80 mg/日</td>
+<td>CBZとの併用療法のエビデンスあり</td>
+</tr>
+<tr>
+<td><strong>プレガバリン</strong></td>
+<td>150-600 mg/日</td>
+<td>CBZアレルギー時の代替。SUNCT/SUNAにも有効な場合あり</td>
+</tr>
+<tr>
+<td><strong>ミロガバリン</strong></td>
+<td>10-30 mg/日</td>
+<td>日本で使用可能なCa2+チャネルリガンド</td>
+</tr>
+<tr>
+<td><strong>フェニトイン</strong></td>
+<td>静注: 250mg</td>
+<td>急性期の疼痛コントロールに静注で使用</td>
+</tr>
+<tr>
+<td><strong>ボツリヌス毒素A</strong></td>
+<td>皮下注射</td>
+<td>新規エビデンス蓄積中。難治例への有効性報告あり</td>
+</tr>
+</tbody>
+</table>
+<!-- ==================== 10. 外科治療 ==================== -->
+<h2 id="tn-surgery">10. 外科治療</h2>
+<p>薬物治療に抵抗性を示す場合、または副作用で継続困難な場合に外科治療が検討されます。</p>
+<h3>微小血管減圧術（MVD）</h3>
+<p><strong>MVD（Microvascular Decompression）</strong>は、責任血管を三叉神経から物理的に移動させる<strong>唯一の原因治療</strong>です<sup>9</sup>。</p>
+<div class="important-box"><strong>MVDの治療成績</strong><br />• 初期成功率: <strong>90-95%</strong><br />• 長期成功率（5年）: 80%以上<br />• 再発率: 15-25%（10年）<br />• 内視鏡下MVD: 93.7% vs 顕微鏡下 81.1%の完全治癒率（最近のメタ解析）<sup>10</sup><br />• 予後因子: 動脈圧迫 &gt; 静脈圧迫（静脈のみでは再発リスク高）</div>
+<p><strong>主な合併症</strong>: 聴力障害（1-2%）、顔面しびれ（1-3%）、髄液漏（&lt;1%）、死亡（&lt;0.5%）</p>
+<h3>その他の外科治療</h3>
+<table class="drug-table">
+<tbody>
+<tr>
+<th style="background: #2c5aa0!important; color: white!important;">治療法</th>
+<th style="background: #2c5aa0!important; color: white!important;">疼痛軽減率</th>
+<th style="background: #2c5aa0!important; color: white!important;">再発率</th>
+<th style="background: #2c5aa0!important; color: white!important;">特徴</th>
+</tr>
+<tr>
+<td><strong>高周波熱凝固術（RF）</strong></td>
+<td>90-97%</td>
+<td>20-30%/5年</td>
+<td>顔面しびれ必発、外来手技可能</td>
+</tr>
+<tr>
+<td><strong>バルーン圧迫術</strong></td>
+<td>80-90%</td>
+<td>20-30%/5年</td>
+<td>全身麻酔不要のオプションあり</td>
+</tr>
+<tr>
+<td><strong>グリセロール注入</strong></td>
+<td>70-90%</td>
+<td>30-50%/5年</td>
+<td>顔面しびれ比較的少ない</td>
+</tr>
+<tr>
+<td><strong>ガンマナイフ</strong></td>
+<td>70-90%</td>
+<td>30-50%/5年</td>
+<td>非侵襲、効果発現まで数日〜数ヶ月、高齢者に適</td>
+</tr>
+</tbody>
+</table>
+<!-- ==================== 11. 治療アルゴリズム ==================== -->
+<h2 id="tn-algorithm">11. 治療アルゴリズム</h2>
+<div class="important-box"><strong>三叉神経痛の治療フローチャート</strong><br /><br /><strong>Step 1: 診断と評価</strong><br />• 病歴聴取（発作性電撃痛 + トリガー + 三叉神経領域）<br />• MRI撮像（二次性TNの除外 + 血管圧迫の評価）<br />• HLA-B*1502検査（アジア人）<br /><br /><strong>Step 2: 薬物治療</strong><br />• 第一選択: CBZ 200mg/日から開始、200mg/日ずつ漸増（最大1200mg/日）<br />• CBZ不耐 → OXC 600mg/日から開始<br />• 効果不十分 → ラモトリギン or バクロフェン追加<br /><br /><strong>Step 3: 外科治療の検討</strong>（薬剤抵抗性 or 副作用で継続困難）<br />• 全身状態良好 + 典型的TN → <strong>MVD</strong>（第一選択）<br />• 高齢 or 手術リスク高い → <strong>ガンマナイフ</strong><br />• MVD不適/再発 → <strong>経皮的手技</strong>（RF、バルーン、グリセロール）</div>
+<div class="pearl-box"><strong>Clinical Pearl ― 治療選択のポイント</strong><br />• MVDは唯一の<strong>原因治療</strong>であり、長期成績が最も優れています<br />• 経皮的手技やガンマナイフは<strong>対症治療</strong>（神経を破壊/損傷して痛みを軽減）<br />• 二次性TN（特にMS）では基礎疾患の治療が優先され、MVDの成績はやや劣ります</div>
+<!-- ==================== 参考文献 ==================== -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=JehIClZ2RuU" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div id="tn-references" class="references">
+<h3>参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">[1]</span> <span class="ref-content">Katusic S, et al. Incidence and clinical features of trigeminal neuralgia, Rochester, Minnesota, 1945-1984. Ann Neurol. 1990;27:89-95. <a href="https://doi.org/10.1002/ana.410270114" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[2]</span> <span class="ref-content">Boo B, et al. Incidence of trigeminal neuralgia: A population-based study in Central Sweden. Cephalalgia. 2023;43(3):03331024221149522. <a href="https://pubmed.ncbi.nlm.nih.gov/36680398/" target="_blank">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[3]</span> <span class="ref-content">Bendtsen L, et al. Advances in diagnosis, classification, pathophysiology, and management of trigeminal neuralgia. Lancet Neurol. 2020;19:784-796. <a href="https://doi.org/10.1016/S1474-4422(20)30233-7" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[4]</span> <span class="ref-content">Devor M, et al. Trigeminal neuralgia: the role of self-sustaining discharge in the trigeminal ganglion. Pain. 2002;97:125-130.</span></div>
+<div class="ref-item"><span class="ref-numbers">[5]</span> <span class="ref-content">Headache Classification Committee of the International Headache Society (IHS). The International Classification of Headache Disorders, 3rd edition. Cephalalgia. 2018;38:1-211. <a href="https://doi.org/10.1177/0333102417738202" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[6]</span> <span class="ref-content">Cohen AS, et al. Short-lasting unilateral neuralgiform headache attacks with conjunctival injection and tearing (SUNCT) or cranial autonomic features (SUNA). Brain. 2006;129:2746-2760.</span></div>
+<div class="ref-item"><span class="ref-numbers">[7]</span> <span class="ref-content">Gronseth G, et al. Practice parameter: the diagnostic evaluation and treatment of trigeminal neuralgia (an evidence-based review). Neurology. 2008;71:1183-1190. <a href="https://doi.org/10.1212/01.wnl.0000326598.83183.04" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[8]</span> <span class="ref-content">日本神経学会. てんかん診療ガイドライン2018. HLA-B*1502とカルバマゼピン関連SJS/TENリスク.</span></div>
+<div class="ref-item"><span class="ref-numbers">[9]</span> <span class="ref-content">Barker FG, et al. The long-term outcome of microvascular decompression for trigeminal neuralgia. N Engl J Med. 1996;334:1077-1083. <a href="https://doi.org/10.1056/NEJM199604253341701" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[10]</span> <span class="ref-content">J Clin Med. 2025;14(2):528. Pathogenesis, Diagnosis, and Management of Trigeminal Neuralgia: A Narrative Review. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11765769/" target="_blank">PMC</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[11]</span> <span class="ref-content">Di Stefano G, et al. Real-world effectiveness and tolerability of carbamazepine and oxcarbazepine in 354 patients with trigeminal neuralgia. Eur J Pain. 2021;25:1064-1071. <a href="https://pubmed.ncbi.nlm.nih.gov/33428801/" target="_blank">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">[12]</span> <span class="ref-content">日本神経治療学会. 標準的神経治療：三叉神経痛. <a href="https://www.jsnt.gr.jp/guideline/img/sansa.pdf" target="_blank">PDF</a></span></div>
+</div>
+</div>

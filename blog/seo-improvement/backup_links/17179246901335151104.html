@@ -1,0 +1,600 @@
+<div class="medical-article">
+<div class="medical-article">
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="てんかん後精神病（Postictal Psychosis：PIP）総説">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251221/20251221150532.png" alt="てんかん後精神病（Postictal Psychosis：PIP）総説" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">てんかん後精神病（Postictal Psychosis：PIP）総説</figcaption>
+</figure>
+</div>
+<div>
+<p><a href="https://docs.google.com/presentation/d/1LxU_JSlPeluzcd5nRNLm-ZqxvBjewiOG/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank"><span style="font-size: 150%;"><strong>てんかん後精神病スライド</strong></span></a></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+.ref-content a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.ref-content a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>てんかん後精神病（Postictal Psychosis：PIP）総説</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 概念</a></li>
+<li><a href="#section2">2. 疫学・頻度</a></li>
+<li><a href="#section3">3. 典型的な臨床経過</a></li>
+<li><a href="#section4">4. 症状の特徴</a></li>
+<li><a href="#section5">5. 危険性（暴力・自傷）</a></li>
+<li><a href="#section6">6. リスク因子</a></li>
+<li><a href="#section7">7. 病態仮説</a></li>
+<li><a href="#section8">8. 診断</a></li>
+<li><a href="#section9">9. 鑑別診断</a></li>
+<li><a href="#section10">10. 治療と予防</a></li>
+<li><a href="#section11">11. 予後・外科との関係</a></li>
+<li><a href="#section12">まとめ</a></li>
+</ul>
+</div>
+<!-- 1. 概念 -->
+<h2 id="section1">1. 概念</h2>
+<p><strong>PIP</strong>は、発作（多くは<strong>発作群発</strong>）に続いて、いったん意識・行動がある程度回復する「<strong>lucid interval（清明期）</strong>」を挟んだ後に出現する、<strong>一過性の精神病状態</strong>である（てんかん関連精神病のうち「発作関連（peri-ictal）」に分類される）。</p>
+<p>臨床上は認識可能な症候群である一方、標準的な精神科診断マニュアルでは十分に独立した枠として扱われてこなかった点が、見逃し・遅れにつながると指摘されている。<sup>[1]</sup><sup>[2]</sup></p>
+<p><strong>てんかんと精神病は双方向性の関連</strong>があり、疫学的にも「てんかんでは精神病性障害が一般人口より多い」ことが示されている。<sup>[4]</sup><sup>[5]</sup></p>
+<!-- 2. 疫学 -->
+<h2 id="section2">2. 疫学・頻度</h2>
+<p>系統的レビュー／メタ解析では、以下の有病率が報告されている。<sup>[5]</sup></p>
+<div class="info-box important-box"><span class="info-box-title"><span class="info-box-title"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225090816.png" width="1200" height="609" loading="lazy" title="" class="hatena-fotolife" itemprop="image" style="text-align: justify; color: #2d3436;" /></span></span><span class="info-box-title">てんかんにおける精神病有病率</span>
+<ul>
+<li>てんかんにおける精神病の有病率：<strong>5.6%</strong></li>
+<li><strong>側頭葉てんかん（TLE）</strong>での精神病：<strong>7%</strong></li>
+<li><strong>PIPの有病率：2%</strong></li>
+</ul>
+</div>
+<p>TLEに限った研究でも、PIPは概ね<strong>約7%</strong>とされ、特に<strong>薬剤抵抗性</strong>や<strong>発作群発</strong>を背景に問題化しやすい。<sup>[10]</sup></p>
+<!-- 3. 臨床経過 -->
+<h2 id="section3">3. 典型的な臨床経過（"lucid interval"が鍵）</h2>
+<p>PIPは「発作直後すぐに精神病になる」よりも、<strong>発作後の混迷・疲弊が落ち着いた後に、改めて精神病症状が立ち上がる</strong>のが特徴である（清明期）。<sup>[3]</sup><sup>[4]</sup></p>
+<div class="info-box important-box"><span class="info-box-title"><span class="info-box-title"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225090651.png" width="1200" height="359" loading="lazy" title="" class="hatena-fotolife" itemprop="image" style="text-align: justify; color: #2d3436;" /></span></span><span class="info-box-title">臨床的に使える時間軸の目安</span>
+<ul>
+<li><strong>誘因</strong>：発作群発（焦点発作＋二次性全般化を含むことが多い）</li>
+<li><strong>清明期</strong>：<strong>12〜120時間</strong>（報告により幅）</li>
+<li><strong>持続</strong>：<strong>平均約10日前後</strong>、多くは急速に始まり急速に終わる</li>
+</ul>
+</div>
+<p><sup>[4]</sup><sup>[9]</sup></p>
+<!-- 4. 症状 -->
+<h2 id="section4">4. 症状の特徴（「感情＋精神病」）</h2>
+<p>PIPは「統合失調症様」だけでなく、<strong>気分症状を強く伴う"affective psychosis"に近い像</strong>を取りやすいとされる。<sup>[4]</sup><sup>[7]</sup></p>
+<p><strong>77例の臨床記述研究</strong>では、以下の所見が示されている。<sup>[7]</sup></p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">症状・特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>被害妄想</strong></td>
+<td><strong>67.5%</strong></td>
+</tr>
+<tr>
+<td><strong>宗教的妄想</strong></td>
+<td><strong>55.8%</strong></td>
+</tr>
+<tr>
+<td><strong>幻覚</strong></td>
+<td><strong>83.1%</strong>（ほぼ必発に近い）</td>
+</tr>
+<tr>
+<td><strong>気分障害</strong>（特に多幸）</td>
+<td><strong>76.6%</strong></td>
+</tr>
+<tr>
+<td>発症は急速／突然が多い</td>
+<td><strong>90.9%</strong></td>
+</tr>
+<tr>
+<td>期間は1〜14日が最多</td>
+<td><strong>64.9%</strong></td>
+</tr>
+<tr>
+<td><strong>再発</strong>は半数以上</td>
+<td><strong>57.1%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>臨床像の「<strong>多彩さ</strong>」と「<strong>気分成分の強さ</strong>」が強調されている。</p>
+<!-- 5. 危険性 -->
+<h2 id="section5">5. 危険性（暴力・自傷は"PIP特異的に"上がる）</h2>
+<p>PIPは「治療可能」だが、放置すると重篤な転帰をとり得る。とくに重要なのは、<strong>暴力や自殺企図が"てんかん性精神病全体"ではなく、PIPで相対的に高い</strong>点である。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 PIPにおける暴力・自傷リスク</span> エピソード比較研究では、PIP中の：
+<ul>
+<li><strong>対人の目的的暴力：23%</strong></li>
+<li><strong>自殺企図：7%</strong></li>
+</ul>
+が報告され、急性間欠期精神病や発作後混迷と比べて<strong>有意に高かった</strong>。<sup>[8]</sup></div>
+<p>このためPIPは、精神症状そのものだけでなく、<strong>安全確保（本人・周囲）の観点から緊急度が高い合併症</strong>として扱う必要がある。<sup>[3]</sup><sup>[8]</sup></p>
+<!-- 6. リスク因子 -->
+<h2 id="section6">6. リスク因子（臨床で拾うべきポイント）</h2>
+<p>研究間で多少の差はあるが、繰り返し示される所見は以下。</p>
+<h3>6-1. てんかん側の因子</h3>
+<ul>
+<li><strong>発作群発</strong>、とくに<strong>二次性全般化発作（SGTCS）</strong>を含む</li>
+<li>焦点が局在しにくい／<strong>両側性の関与</strong>（両側独立焦点、局在不明瞭な発作時活動など）<sup>[11]</sup><sup>[13]</sup><sup>[10]</sup></li>
+</ul>
+<p>Kannerらは、PIP既往が<strong>両側独立焦点</strong>と関連する可能性を示している。<sup>[11]</sup></p>
+<h3>6-2. 個体側（脆弱性）の因子</h3>
+<ul>
+<li><strong>精神疾患の家族歴</strong></li>
+<li><strong>間欠期精神病の既往</strong>、あるいは精神病脆弱性を示唆する背景</li>
+<li><strong>知的機能（脆弱性）</strong>が強いほど、エピソードが長引きやすい<sup>[9]</sup><sup>[10]</sup></li>
+</ul>
+<p>Adachiらは、151エピソードの検討で、平均は約9〜10日、<strong>95%が1か月以内に改善</strong>しつつも、<strong>間欠期精神病の既往・精神病の家族歴・知的機能</strong>が持続に影響し得ると報告している。<sup>[9]</sup></p>
+<h3>6-3. 長期予後との関係</h3>
+<p><strong>PIP既往は、将来的な間欠期精神病のリスク</strong>になり得る可能性が示唆される一方、独立因子としての強さは研究により揺れがある。<sup>[12]</sup></p>
+<!-- 7. 病態仮説 -->
+<h2 id="section7">7. 病態仮説（「発作後変化が広く長く残る」）</h2>
+<p>PIPの機序は確定していないが、近年の系統的レビューでは、以下が整理されている。<sup>[6]</sup></p>
+<div class="info-box important-box"><span class="info-box-title"><span class="info-box-title"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225091101.png" width="1200" height="658" loading="lazy" title="" class="hatena-fotolife" itemprop="image" style="text-align: justify; color: #2d3436;" /></span></span><span class="info-box-title">病態仮説のポイント</span>
+<ul>
+<li><strong>前頭葉・側頭葉</strong>がしばしば関与</li>
+<li>EEGは「不変〜びまん性徐波」など多様</li>
+<li>代謝／灌流画像では<strong>前頭側頭の灌流増加</strong>がPIP中に観察される</li>
+<li><strong>発作後状態（postictal state）の変化が、本来より広範で遷延することがPIPにつながる</strong>、という仮説</li>
+</ul>
+</div>
+<p>臨床的には、<strong>発作群発 → 睡眠障害（不眠） → 情動不安定 → 妄想・幻覚</strong>という連鎖がみられることが多く、<strong>睡眠障害は早期サインとして重要</strong>である（ただし系統的データは限定的）。<sup>[3]</sup><sup>[6]</sup><sup>[7]</sup></p>
+<!-- 8. 診断 -->
+<h2 id="section8">8. 診断：実地での考え方</h2>
+<h3>8-1. 診断のコア</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 PIP診断の4要素</span>
+<ol>
+<li>発作（多くは群発）に<strong>続発</strong></li>
+<li><strong>清明期（lucid interval）</strong>を挟む</li>
+<li><strong>妄想・幻覚・行動異常</strong>など精神病症状が出現</li>
+<li>他の原因（薬物中毒、非けいれん性てんかん重積、せん妄、物質、器質疾患）を<strong>除外</strong></li>
+</ol>
+</div>
+<p><sup>[1]</sup><sup>[2]</sup><sup>[4]</sup></p>
+<h3>8-2. 操作的診断基準の考え方</h3>
+<p>古典的には<strong>Logsdail &amp; Tooneの基準</strong>が引用される。<sup>[1]</sup></p>
+<p>またTrimbleらは、発症時期（発作後1週以内）や除外項目（抗てんかん薬中毒、非けいれん性重積など）を含む診断枠組みを整理している。<sup>[2]</sup></p>
+<h3>8-3. 実務上の検査・評価（推奨）</h3>
+<details class="expandable" open="open">
+<summary>検査・評価項目の詳細</summary>
+<div class="expandable-content">
+<ul>
+<li><strong>詳細な発作歴</strong>：直前の群発、二次性全般化、睡眠状況、薬の抜け</li>
+<li><strong>身体診察・神経所見</strong>：新規局在徴候、感染徴候</li>
+<li><strong>血液検査</strong>：電解質、血糖、肝腎機能、炎症反応、必要に応じ薬物濃度</li>
+<li><strong>EEG</strong>：意識混濁や症状の揺れがある場合は特に、<strong>非けいれん性重積（NCSE）の除外</strong></li>
+<li><strong>画像</strong>：新規神経症状や経過が非典型の場合</li>
+</ul>
+<p>（これらは基準・レビューで除外すべき要素として繰り返し挙げられる）<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup></p>
+</div>
+</details><!-- 9. 鑑別診断 -->
+<h2 id="section9">9. 鑑別診断（臨床で迷いやすいもの）</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">状態</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">発作との関係</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時間経過の特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">典型像</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PIP</strong></td>
+<td>発作後（多くは群発）</td>
+<td><strong>清明期→精神病</strong></td>
+<td>妄想・幻覚＋気分症状、急速発症</td>
+<td><strong>lucid intervalが鍵</strong><sup>[4]</sup><sup>[7]</sup></td>
+</tr>
+<tr>
+<td><strong>発作後せん妄</strong>（postictal delirium）</td>
+<td>発作直後から連続</td>
+<td>清明期が乏しい</td>
+<td>注意障害・見当識障害優位</td>
+<td>まずはせん妄を疑う<sup>[2]</sup></td>
+</tr>
+<tr>
+<td><strong>非けいれん性重積（NCSE）</strong>/発作性精神症状（ictal）</td>
+<td>発作活動そのもの</td>
+<td>症状がゆらぐ/遷延</td>
+<td>意識変容・自動症・精神症状</td>
+<td><strong>EEGで確認</strong><sup>[2]</sup><sup>[3]</sup></td>
+</tr>
+<tr>
+<td><strong>間欠期精神病（IIP）</strong></td>
+<td>発作と時間的連関が弱い</td>
+<td>週〜月以上</td>
+<td>統合失調症様の持続</td>
+<td>経過と発作連関で判断<sup>[4]</sup><sup>[5]</sup></td>
+</tr>
+<tr>
+<td><strong>強制正常化</strong>（forced normalization）/代替精神病</td>
+<td>発作が抑制された後</td>
+<td>発作減少と精神症状が"交代"</td>
+<td>精神症状が前景、EEG変化を伴うこと</td>
+<td>PIPと逆方向の関係<sup>[16]</sup><sup>[15]</sup></td>
+</tr>
+<tr>
+<td><strong>抗てんかん薬関連</strong>（薬剤性）</td>
+<td>投与開始・増量など</td>
+<td>直後〜数週</td>
+<td>易刺激性、攻撃性、幻覚など</td>
+<td>時間関係と再現性<sup>[4]</sup></td>
+</tr>
+</tbody>
+</table>
+<!-- 10. 治療 -->
+<h2 id="section10">10. 治療（急性期）と予防（再発例）</h2>
+<h3>10-1. 急性期対応の原則</h3>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 急性期対応の4原則</span>
+<ol>
+<li><strong>安全確保</strong>（隔離・付き添い・入院適応判断）：PIPは暴力・自傷リスクが上がる<sup>[8]</sup></li>
+<li><strong>てんかん側の制御</strong>：発作群発が引き金であるため、救急治療・再発抑制を同時に進める<sup>[4]</sup></li>
+<li><strong>不眠・興奮の早期介入</strong>：不眠は悪化要因になりやすい<sup>[3]</sup><sup>[7]</sup></li>
+<li><strong>除外診断</strong>：NCSE、薬物中毒、感染・代謝異常<sup>[1]</sup><sup>[2]</sup></li>
+</ol>
+</div>
+<h3>10-2. 薬物療法（実務的な考え方）</h3>
+<p>エビデンスは大規模試験が乏しく、症例系列＋専門家レビューが中心だが、一般に以下が示されている。</p>
+<ul>
+<li><strong>抗精神病薬への反応は良好</strong>（短期使用が基本）<sup>[7]</sup></li>
+<li>急性期の興奮・不眠には<strong>ベンゾジアゼピンを併用</strong>することが多い<sup>[3]</sup><sup>[2]</sup></li>
+</ul>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 薬剤選択時の注意点</span> 実臨床では、以下を踏まえて薬剤選択・用量を調整する：
+<ul>
+<li><strong>けいれん閾値低下</strong></li>
+<li><strong>QT延長</strong></li>
+<li><strong>鎮静</strong></li>
+<li><strong>抗てんかん薬との相互作用</strong>（酵素誘導薬など）</li>
+</ul>
+</div>
+<h3>10-3. 再発予防</h3>
+<ul>
+<li><strong>最大の予防は発作（特に群発）の抑制</strong>：PIPは発作と直接リンクし、てんかんが制御されると消退しやすい<sup>[4]</sup></li>
+<li>反復例では、<strong>早期サイン（不眠、易刺激性、気分高揚/焦燥）</strong>を共有し、発作群発後の観察強化・早期投薬を検討する（施設方針で）<sup>[3]</sup><sup>[7]</sup><sup>[9]</sup></li>
+</ul>
+<!-- 11. 予後 -->
+<h2 id="section11">11. 予後・外科との関係</h2>
+<ul>
+<li>多くは<strong>1か月以内に自然軽快</strong>し、平均は約9〜10日程度<sup>[9]</sup><sup>[4]</sup></li>
+<li><strong>反復例が一定数存在</strong>し（&gt;50%との報告もある）<sup>[7]</sup></li>
+<li>TLE手術において、PIP既往そのものは発作予後（seizure freedom）を必ずしも規定しない一方、<strong>反復PIP例では術後にde novo精神病理（特に気分障害）リスクが上がる</strong>と報告され、<strong>術前説明と術後精神科フォローの重要性</strong>が示されている<sup>[10]</sup></li>
+</ul>
+<!-- まとめ -->
+<h2 id="section12">まとめ（臨床の要点）</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 PIP臨床の要点</span>
+<ol>
+<li><strong>PIPは発作群発後に清明期を挟んで出る精神病</strong></li>
+<li><strong>平均10日前後で軽快</strong>することが多いが、<strong>再発も多い</strong><sup>[7]</sup><sup>[9]</sup></li>
+<li><strong>被害妄想・宗教妄想・幻覚・気分症状</strong>が目立ち、気分成分が強い<sup>[7]</sup><sup>[4]</sup></li>
+<li><strong>暴力・自傷がPIPで相対的に高い</strong>ため、急性期は安全確保を優先する<sup>[8]</sup></li>
+<li>リスク因子として<strong>両側性関与／局在不明瞭、家族歴、精神病脆弱性</strong>を意識する<sup>[10]</sup><sup>[11]</sup><sup>[9]</sup></li>
+<li>治療は「<strong>除外診断＋発作制御＋短期の抗精神病薬/鎮静</strong>」が軸<sup>[2]</sup><sup>[3]</sup><sup>[7]</sup></li>
+</ol>
+</div>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">Logsdail SJ, Toone BK. Post-ictal psychoses. Br J Psychiatry. 1988;152:246-252. doi:10.1192/bjp.152.2.246. <a href="https://pubmed.ncbi.nlm.nih.gov/3167337/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Trimble M, Kanner A, Schmitz B. Postictal psychosis. Epilepsy Behav. 2010;19(2):159-161. doi:10.1016/j.yebeh.2010.06.027. <a href="https://pubmed.ncbi.nlm.nih.gov/20851062/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Devinsky O. Postictal psychosis: common, dangerous, and treatable. Epilepsy Curr. 2008;8(2):31-34. doi:10.1111/j.1535-7511.2008.00227.x. <a href="https://pubmed.ncbi.nlm.nih.gov/18330462/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">de Toffol B. Epilepsy and psychosis. Rev Neurol (Paris). 2024;180(4):298-307. doi:10.1016/j.neurol.2023.12.005. <a href="https://pubmed.ncbi.nlm.nih.gov/38151382/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Clancy MJ, Clarke MC, Connor DJ, Cannon M, Cotter DR. The prevalence of psychosis in epilepsy; a systematic review and meta-analysis. BMC Psychiatry. 2014;14:75. doi:10.1186/1471-244X-14-75. <a href="https://pubmed.ncbi.nlm.nih.gov/24625201/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">Cheval M, Hingray C, Kanemoto K, de Toffol B, Tarrada A. Insights into Postictal Psychosis, from functional imaging and EEG: A systematic review. Seizure. 2024;121:45-55. doi:10.1016/j.seizure.2024.07.012. <a href="https://pubmed.ncbi.nlm.nih.gov/39094265/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Tarrada A, Hingray C, Aron O, Dupont S, Maillard L, de Toffol B. Postictal psychosis, a cause of secondary affective psychosis: A clinical description study of 77 patients. Epilepsy Behav. 2022;127:108553. doi:10.1016/j.yebeh.2022.108553. <a href="https://pubmed.ncbi.nlm.nih.gov/35032807/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Kanemoto K, Kawasaki J, Mori E. Violence and epilepsy: a close relation between violence and postictal psychosis. Epilepsia. 1999;40(1):107-109. doi:10.1111/j.1528-1157.1999.tb01996.x. <a href="https://pubmed.ncbi.nlm.nih.gov/9924910/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Adachi N, Ito M, Kanemoto K, Akanuma N, Okazaki M, Ishida S, et al. Duration of postictal psychotic episodes. Epilepsia. 2007;48(8):1531-1537. doi:10.1111/j.1528-1167.2007.01058.x. <a href="https://pubmed.ncbi.nlm.nih.gov/17442998/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Cleary RA, Thompson PJ, Thom M, Foong J. Postictal psychosis in temporal lobe epilepsy: risk factors and postsurgical outcome? Epilepsy Res. 2013;106(1-2):264-272. doi:10.1016/j.eplepsyres.2013.03.015. <a href="https://pubmed.ncbi.nlm.nih.gov/23746491/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">Kanner AM, Ostrovskaya A. Long-term significance of postictal psychotic episodes I. Are they predictive of bilateral ictal foci? Epilepsy Behav. 2008;12(1):150-153. doi:10.1016/j.yebeh.2007.09.009. <a href="https://pubmed.ncbi.nlm.nih.gov/17981505/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">Kanner AM, Ostrovskaya A. Long-term significance of postictal psychotic episodes II. Are they predictive of interictal psychotic episodes? Epilepsy Behav. 2008;12(1):154-156. doi:10.1016/j.yebeh.2007.09.007. <a href="https://pubmed.ncbi.nlm.nih.gov/17981504/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">Alper K, Kuzniecky R, Carlson C, Barr WB, Devinsky O. Postictal psychosis in partial epilepsy: a case-control study. Ann Neurol. 2008;63(5):602-610. doi:10.1002/ana.21341. <a href="https://pubmed.ncbi.nlm.nih.gov/18481295/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14</span> <span class="ref-content">Morrow EM, Lafayette JM, Bromfield EB, et al. Postictal psychosis: presymptomatic risk factors and the need for further investigation of genetics and pharmacotherapy. Ann Gen Psychiatry. 2006;5:9. doi:10.1186/1744-859X-5-9. <a href="https://pubmed.ncbi.nlm.nih.gov/16857056/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Teixeira AL. Peri-Ictal and Para-Ictal Psychiatric Phenomena: A Relatively Common Yet Unrecognized Disorder. Curr Top Behav Neurosci. 2022;55:171-181. doi:10.1007/7854_2021_223. <a href="https://pubmed.ncbi.nlm.nih.gov/33860456/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">Calle-López Y, Ladino LD, Benjumea-Cuartas V, Castrillón-Velilla DM, Téllez-Zenteno JF, Wolf P. Forced normalization: A systematic review. Epilepsia. 2019;60(8):1610-1618. doi:10.1111/epi.16276. <a href="https://pubmed.ncbi.nlm.nih.gov/31297793/" target="_blank">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">Qiu Z, Guo J, Chen B, Fang J. Psychosis of epilepsy: an update on clinical classification and mechanism. Biomolecules. 2025;15(1):56. doi:10.3390/biom15010056. <a href="https://pubmed.ncbi.nlm.nih.gov/39858454/" target="_blank">[PubMed]</a></span></div>
+</div>
+</div>

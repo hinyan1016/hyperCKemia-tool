@@ -1,0 +1,522 @@
+<div class="medical-article">
+<div class="medical-article">作者コメント</div>
+<div>TGAでDWIが海馬付近に高信号になった症例があったので、知識整理です。</div>
+</div>
+<style>
+/* はてなブログ最適化スタイル */
+.medical-article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .medical-article {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 見出しスタイル */
+.medical-article h1 {
+  font-size: 1.6rem;
+  color: #2c5aa0;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 8px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.medical-article h2 {
+  font-size: 1.3rem;
+  color: #2c5aa0;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 12px;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.medical-article h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.2rem 0 0.6rem 0;
+}
+
+.medical-article h3::before {
+  content: '▶';
+  color: #2c5aa0;
+  margin-right: 8px;
+}
+
+/* 強調表示 */
+.medical-article strong {
+  font-weight: bold;
+  color: #2c5aa0;
+}
+
+.medical-article em {
+  font-style: italic;
+  color: #444;
+}
+
+.medical-article .text-red {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.medical-article .text-blue {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 目次 */
+.toc-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc-box li {
+  margin-bottom: 8px;
+}
+
+.toc-box a {
+  color: #2c5aa0;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 情報ボックス */
+.important-box, .warning-box, .emergency-box {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.important-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2c5aa0;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.emergency-box {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+  border: 1px solid #ddd !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.medical-article .drug-table thead th,
+.medical-article .drug-table th {
+  background-color: #2c5aa0 !important;
+  background: #2c5aa0 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(even) {
+  background: #f8f9fa !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(odd) {
+  background: white !important;
+}
+
+.medical-article table.drug-table {
+  background: transparent !important;
+}
+
+.medical-article table.drug-table * {
+  background-color: inherit;
+}
+
+/* リスト */
+.medical-article ul, .medical-article ol {
+  margin: 16px 0;
+  padding-left: 1.5rem;
+}
+
+.medical-article li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* コード */
+.medical-article code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #d73502;
+}
+
+.medical-article pre {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.medical-article pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+/* 展開可能セクション */
+.medical-details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.medical-details summary {
+  background: #2c5aa0;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: block;
+}
+
+.medical-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.medical-details summary::after {
+  content: '▼ 展開';
+  float: right;
+  font-size: 0.9rem;
+}
+
+.medical-details[open] summary::after {
+  content: '▲ 閉じる';
+}
+
+.medical-details-content {
+  padding: 16px;
+  background: white;
+}
+
+/* バッジとラベル */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.badge-primary { background: #2c5aa0; color: white; }
+.badge-warning { background: #ffc107; color: #212529; }
+.badge-danger { background: #dc3545; color: white; }
+.badge-success { background: #28a745; color: white; }
+
+/* 引用番号 */
+sup {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* 参考文献 */
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+}
+
+.references li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.references-details {
+  margin-top: 16px;
+}
+
+.references-details summary {
+  background: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .medical-article .drug-table {
+    font-size: 0.8rem;
+  }
+  .medical-article .drug-table th,
+  .medical-article .drug-table td {
+    padding: 8px !important;
+  }
+  
+  .important-box, .warning-box, .emergency-box {
+    margin: 12px 0;
+  }
+}
+</style>
+<div class="medical-article">
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="TGAの海馬DWI高信号">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251211/20251211072855.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">TGAの海馬DWI高信号</figcaption>
+</figure>
+<h1><br /><br /></h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#section1">1. 概要</a></li>
+<li><a href="#section2">2. 検出率とタイミング</a></li>
+<li><a href="#section3">3. 典型的な画像所見</a></li>
+<li><a href="#section4">4. 病態仮説</a></li>
+<li><a href="#section5">5. 撮像プロトコールのコツ</a></li>
+<li><a href="#section6">6. 鑑別診断との違い</a></li>
+<li><a href="#section7">7. 臨床的意義</a></li>
+<li><a href="#section8">8. まとめ</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- 概要 -->
+<h2 id="section1">1 概要</h2>
+<div class="important-box"><strong>📋 重要ポイント</strong><br /><strong>TGA の診断補助所見</strong>として、発症後しばらく経ってから<strong>海馬 CA1 域に小さな高信号スポット</strong>（直径 1–5 mm）が DWI で描出されることがよくあります。<br />この所見は<strong>病変というより一過性の機能的障害</strong>を示すサインと考えられ、永続的な組織障害を示すものではありません。</div>
+<!-- 検出率とタイミング -->
+<h2 id="section2">2 検出率とタイミング</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">発症からの時間</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">検出率</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–12 h</td>
+<td>&lt;10 %</td>
+<td>早期は陰性例が多い</td>
+</tr>
+<tr>
+<td><strong>24–72 h</strong></td>
+<td><strong>60–80 %</strong></td>
+<td>最も検出率が高いピーク (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10116751/?utm_source=chatgpt.com">PMC</a>)</td>
+</tr>
+<tr>
+<td>4–10 日</td>
+<td>30–50 %</td>
+<td>徐々に消失傾向</td>
+</tr>
+<tr>
+<td>≥14 日</td>
+<td>ほぼ消失</td>
+<td>フォロー画像で確認可</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>メタ解析では「<strong>24〜96 h で撮像すると検出率が 68 % に上昇</strong>」と報告 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8484159/?utm_source=chatgpt.com">PMC</a>)</li>
+<li>陰性だからといって TGA を否定はできません。</li>
+<li>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="Wikimedia Commons, CC BY‑SA 3.0">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20250722/20250722223256.png" width="757" height="875" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">Wikimedia Commons, CC BY‑SA 3.0</figcaption>
+</figure>
+</li>
+</ul>
+<!-- 典型的な画像所見 -->
+<h2 id="section3">3 典型的な画像所見</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">項目</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位置</td>
+<td><strong>海馬 CA1（コーニュ・アンモニス 1）</strong>の外側部；左右いずれか単独優位、または両側に複数スポット</td>
+</tr>
+<tr>
+<td>形状</td>
+<td>2–3 mm 程度の点状または短線状高信号</td>
+</tr>
+<tr>
+<td>ADC map</td>
+<td>同部で低信号（拡散制限）</td>
+</tr>
+<tr>
+<td>T2WI/FLAIR</td>
+<td>変化は軽微または非可視</td>
+</tr>
+<tr>
+<td>経時変化</td>
+<td>約 1–2 週間で完全消失</td>
+</tr>
+</tbody>
+</table>
+<!-- 病態仮説 -->
+<h2 id="section4">4 病態仮説</h2>
+<details class="medical-details" open="open">
+<summary>病態仮説の詳細</summary>
+<div class="medical-details-content">
+<ul>
+<li><strong>代謝ストレス仮説</strong><br />CA1 は代謝要求が高く耐糖能が低い。急性ストレス（精神的緊張、冷水浴、性行為など）で一過性虚血様変化を起こす。</li>
+<li><strong>静脈うっ滞／ミグレイン様拡延抑制</strong><br />海馬静脈系の逆流・うっ滞や、脳皮質拡延抑制（CSD）が CA1 の拡散制限を生む可能性。</li>
+<li><strong>神経細胞の可逆的エネルギー枯渇</strong><br />電気活動の過負荷 → Na⁺/K⁺‐ATPase 失調 → 細胞膨化 → 一過性拡散低下。</li>
+</ul>
+</div>
+</details>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />いずれも <strong>不可逆的梗塞ではない</strong> ことが大半で、後遺症も通常残しません。ただし超高磁場 MRI で<strong>慢性期にきわめて小さな萎縮が検出された例</strong>も報告され、完全可逆性でない可能性も議論されています (<a href="https://pubmed.ncbi.nlm.nih.gov/37199520/?utm_source=chatgpt.com">PubMed</a>)。</div>
+<!-- 撮像プロトコールのコツ -->
+<h2 id="section5">5 撮像プロトコールのコツ</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">パラメータ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">推奨値・理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>タイミング</td>
+<td><strong>24–72 h 以降</strong>に再撮像する（初回陰性なら 24 h 後再検でも可）</td>
+</tr>
+<tr>
+<td>スライス厚</td>
+<td>2–3 mm 以下、<strong>斜冠状（海馬長軸）面</strong>を追加すると描出率向上</td>
+</tr>
+<tr>
+<td>b値</td>
+<td><strong>2000 s/mm² 以上</strong>でコントラスト改善</td>
+</tr>
+<tr>
+<td>ADC map</td>
+<td>同時取得し梗塞との鑑別に有用</td>
+</tr>
+<tr>
+<td>FLAIR/T2</td>
+<td>基本セットで追加し他疾患除外</td>
+</tr>
+</tbody>
+</table>
+<!-- 鑑別診断との違い -->
+<h2 id="section6">6 鑑別診断との違い</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">疾患</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">DWI 所見</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床経過</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TGA</strong></td>
+<td>海馬 CA1 に 1–5 mm スポット、1–2 週で消失</td>
+<td>記憶障害のみ、24 h 以内に改善</td>
+</tr>
+<tr>
+<td><strong>海馬梗塞</strong></td>
+<td>領域性または線状病変、ADC 低下長期残存</td>
+<td>症状持続、焦点神経症状を伴うことあり</td>
+</tr>
+<tr>
+<td>てんかん後変化</td>
+<td>皮質・海馬に拡散制限、しばしば皮質帯状</td>
+<td>発作の前後・再発時に変動</td>
+</tr>
+<tr>
+<td>炎症（LGI1抗体脳炎など）</td>
+<td>淡い DWI/T2 高信号、皮質・扁桃体にも拡がる</td>
+<td>進行性健忘・痙攣・精神症状</td>
+</tr>
+</tbody>
+</table>
+<!-- 臨床的意義 -->
+<h2 id="section7">7 臨床的意義</h2>
+<ol>
+<li><strong>診断確度が上がる</strong><br />⮕ TGA と脳梗塞の鑑別を迅速に行う手掛かり。</li>
+<li><strong>治療方針に大きな影響はない</strong><br />⮕ 原則として抗血栓療法は不要。</li>
+<li><strong>予後説明に役立つ</strong><br />⮕ 病変が消えることをフォロー画像で確認し安心材料に。</li>
+</ol>
+<!-- まとめ -->
+<h2 id="section8">8 まとめ</h2>
+<div class="important-box"><strong>📋 重要ポイント</strong><br />
+<ul>
+<li><strong>24〜72 h 後の高分解能 DWI での再撮像</strong>が TGA の海馬病変検出に最適。</li>
+<li>病変は <strong>可逆的で予後良好</strong>。ただしきわめて稀に慢性微小萎縮が残る可能性が示唆されている。</li>
+<li>DWI 陰性でも TGA は否定できず、<strong>臨床像が最重要</strong>。</li>
+<li>梗塞・てんかん・炎症との鑑別には <strong>症状の時間経過と追加 MRI シークエンス</strong>を組み合わせて判断する。</li>
+</ul>
+</div>
+<!-- 参考文献 -->
+<div id="references" class="references">
+<h2>参考文献</h2>
+<details class="medical-details references-details" open="open">
+<summary>参考文献を表示（全5件）</summary>
+<div class="medical-details-content">
+<ol>
+<li>German Society of Neurology Guideline: Transient Global Amnesia (2023). (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10116751/?utm_source=chatgpt.com">PMC</a>)</li>
+<li>Diagnostic yield of DWI in TGA – Meta-analysis (2021). (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8484159/?utm_source=chatgpt.com">PMC</a>)</li>
+<li>Retrospective study of hippocampal diffusion restriction in TGA (2023). (<a href="https://pubmed.ncbi.nlm.nih.gov/38446411/?utm_source=chatgpt.com">PubMed</a>)</li>
+<li>Chronic hippocampal subfield damage after TGA – Ultra-high-field MRI case (2023). (<a href="https://pubmed.ncbi.nlm.nih.gov/37199520/?utm_source=chatgpt.com">PubMed</a>)</li>
+<li>日本語症例報告：TGA と海馬 DWI 高信号の鑑別 (2023). (<a href="https://www.jstage.jst.go.jp/article/jhgmwabun/17/1/17_56/_article/-char/ja?utm_source=chatgpt.com">jstage.jst.go.jp</a>)</li>
+</ol>
+</div>
+</details></div>
+</div>

@@ -1,0 +1,741 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212100617.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>焦点性てんかん重積状態の急性期から亜急性期におけるMRI所見 ― DWIとASLを中心に</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/BCoZHq3Nzi8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【てんかん重積】脳卒中とどう見分ける？DWIとASLを活用したMRI画像診断の極意" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/BCoZHq3Nzi8">youtu.be</a></cite></p>
+<p><strong><a href="https://docs.google.com/presentation/d/1P6CxXBPXA0BM2m1IOM6vp37eQ5VEgWLK/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank">てんかん重積MRI＿DWI_ASL</a></strong></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>焦点性てんかん重積状態の急性期から亜急性期におけるMRI所見 ― DWIとASLを中心に</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#summary">エグゼクティブサマリー</a></li>
+<li><a href="#background">研究目的と臨床的背景</a></li>
+<li><a href="#dwi">DWIとADCの所見</a></li>
+<li><a href="#asl">ASLの所見</a></li>
+<li><a href="#localization">病変局在と時間経過の統合像</a></li>
+<li><a href="#pathophysiology">病態生理的解釈</a></li>
+<li><a href="#differential">鑑別診断と鑑別ポイント</a></li>
+<li><a href="#prognosis">治療介入とMRIの可逆性・予後・実用ポイント</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- エグゼクティブサマリー -->
+<h2 id="summary">エグゼクティブサマリー</h2>
+<p><strong>焦点性てんかん重積状態</strong>、とくに<strong>非けいれん性</strong>を含む焦点性発作重積は、臨床像が非特異的で「<strong>脳卒中ミミック</strong>」「意識障害の原因不明」として救急・集中治療の現場で見逃されやすい一方、神経画像で"発作そのものが作る可逆性病変"が捉えられることがある<sup>[1]</sup><sup>[2]</sup>。</p>
+<p>その中で、<strong>DWI/ADC</strong>は「皮質優位の拡散低下（ADC低下）」「海馬・視床（特にpulvinar）への波及」「血管支配に一致しない局在」といったパターンで<strong>発作関連変化（peri-ictal MRI abnormality: PMA）</strong>を示し得る。NCSEを対象とした2025年の系統的レビュー・メタ解析では、<strong>DWI異常のプール推定は約51%</strong>（95%CI 37.6–64.2）で、DWI単独では"陰性だから否定"が危険である<sup>[3]</sup><sup>[4]</sup>。</p>
+<p>一方、<strong>ASL</strong>は発作時の神経血管カップリングに基づく灌流変化を直接"見える化"でき、同メタ解析で<strong>ASL異常のプール推定は約88.8%</strong>と高率だった（ただし研究数が少なく不均一性が大きい）<sup>[5]</sup><sup>[6]</sup>。単施設大規模データでも、SE患者でASL変化が<strong>約90%</strong>に観察され、DWIより感度が高いことが示されている<sup>[7]</sup><sup>[8]</sup>。</p>
+<p>時間経過としては、<strong>ASLの過灌流は早期（分〜時間）から出現し、概ね1週間以内に収束することが多いが、数週持続する例もある</strong><sup>[9]</sup>。一方で<strong>DWI/ADC変化は急性期（〜数日）に出現し、消退は日〜週単位</strong>で、持続例では<strong>皮質菲薄化・海馬萎縮</strong>など不可逆変化へつながり得る<sup>[10]</sup><sup>[11]</sup><sup>[12]</sup>。</p>
+<p>予後との関連では、<strong>PMA陽性</strong>は<strong>院内死亡、難治化、遅発性てんかん</strong>などと関連する報告があり、画像は単なる鑑別だけでなく"重症度・脳傷害のバイオマーカー候補"になっている<sup>[13]</sup><sup>[14]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 本記事のキーメッセージ</span>
+<p><strong>DWI異常は約51%</strong>にとどまり陰性でもSEは否定できない。<strong>ASLは約89%</strong>と高感度だが研究数が少ない。両者を組み合わせ、分布（血管支配域か否か）・灌流方向・EEGとの整合で総合判断することが、救急・神経画像の実臨床で求められる。</p>
+</div>
+<!-- 研究目的と臨床的背景 -->
+<h2 id="background">研究目的と臨床的背景</h2>
+<p>本レポートの目的は、<strong>焦点性てんかん重積状態の急性期（発症〜約7日）から亜急性期（7日〜数週間）におけるMRI所見</strong>を、救急・脳神経内科・脳外科の実臨床で意思決定に直結する<strong>DWI/ADC</strong>と<strong>ASL</strong>を中心に整理し、(1)頻度と時間経過、(2)典型的局在と拡大傾向、(3)病態生理的な読み方、(4)鑑別の実戦的ポイント、(5)治療介入と可逆性・予後の関係、を統合することである<sup>[15]</sup><sup>[16]</sup>。</p>
+<h3>てんかん重積状態の定義</h3>
+<p><strong>てんかん重積状態（SE）</strong>は「発作終結機構の破綻、または異常に遷延する機構の開始により、<strong>t1</strong>を超えて持続する発作状態で、<strong>t2</strong>を超えると<strong>神経細胞死・神経傷害・ネットワーク変容</strong>など長期後遺を来し得る」とされる<sup>[17]</sup>。日本の診療ガイドラインでも、<strong>けいれん性SE</strong>では<strong>5分以上で治療開始</strong>が推奨され、<strong>30分以上で長期転帰不良リスク</strong>が高まる、と整理されている<sup>[18]</sup><sup>[19]</sup>。焦点性・非けいれん性ではt1/t2が異なり得るが、救急現場では<strong>「疑ったら迅速に治療と評価を始める」</strong>という原則が最重要になる<sup>[20]</sup><sup>[21]</sup>。</p>
+<h3>疫学と臨床的重要性</h3>
+<p>SEは神経救急で頻度が高く、既往てんかんがない"<strong>de novo</strong>"が相当数を占め、原因検索と同時に発作自体を止める必要がある。MRIは原因同定だけでなく、臨床・EEGが曖昧なNCSEの診断にも寄与し得るため、<strong>de novo SEや初回SE、EEGが決め手に欠けるNCSE</strong>などで推奨される<sup>[22]</sup><sup>[23]</sup>。</p>
+<p>救急・脳卒中診療の観点では、stroke unitにおける<strong>stroke mimic</strong>が一定割合存在し、その中で発作・SEは主要な一群を占めるとされるため、<strong>画像で"梗塞らしく見えるSE"をどう外すか</strong>が実務上の核心になる<sup>[24]</sup><sup>[25]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 臨床上の注意</span>
+<p><strong>非けいれん性てんかん重積状態（NCSE）</strong>は臨床像が非特異的であり、意識障害や認知機能低下として見逃されやすい。「原因不明の意識障害」に対して画像・EEGの積極的な評価が求められる。</p>
+</div>
+<!-- DWIとADCの所見 -->
+<h2 id="dwi">DWIとADCの所見</h2>
+<p>焦点性SEの急性期MRIで最も重要な所見は、<strong>皮質優位のDWI高信号とADC低下（拡散制限）</strong>である。典型像は「<strong>gyriform（皮質リボン状）</strong>」で、血管支配に一致せず、隣接する皮質下白質や海馬、視床へ連続あるいはネットワーク的に波及する<sup>[26]</sup><sup>[27]</sup><sup>[28]</sup>。</p>
+<h3>急性期の典型所見と頻度</h3>
+<p><strong>非けいれん性SE</strong>を対象とした系統的レビュー・メタ解析では、<strong>NCSEにおけるDWI異常の検出率はプール推定約50.95%</strong>（95%CI 37.56–64.21）で、研究間差は中等度だった<sup>[29]</sup><sup>[30]</sup>。</p>
+<p>臨床研究レベルでは、SE含む前向きコホートで<strong>SE群のDWI拡散制限が50%</strong>（15/30）、<strong>ADC低信号が37%</strong>（11/30）と報告され、DWI所見は「あると強いが、ないことも多い」性格が明確である<sup>[31]</sup><sup>[32]</sup>。より大きい前向きシリーズでは、SE患者54例でDWI異常が、複雑部分（焦点性意識減損）SEで<strong>50%</strong>に出現し、<strong>海馬68.5%</strong>、<strong>pulvinar 25.9%</strong>など局在の偏りが示されている<sup>[33]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ADC低下の"深さ"と鑑別</span>
+<p>発作関連拡散制限は<strong>梗塞ほど鋭くない</strong>ことが多いとされる。具体的には、発作・SEでの<strong>ADC低下が対側比で6〜28%程度</strong>の範囲を取ることが報告されている。臨床的にも"DWI高信号がやや淡い""ADC低下が軽い"という印象と一致する<sup>[34]</sup><sup>[35]</sup>。</p>
+</div>
+<h3>亜急性期の時間経過と可逆性</h3>
+<p>DWI/ADCは固定した一相ではなく、<strong>急性期のADC低下 → 正常化（pseudo-normalizationを含む）→ 亜急性期以降のADC上昇</strong>という"時間軸"を取り得る<sup>[36]</sup><sup>[37]</sup>。臨床的フォローでは、発症後<strong>9日で部分改善、30日で消失</strong>といった解像例が提示されており、焦点性SEでも<strong>数週スケールでの可逆性</strong>が現実的な期待値になる<sup>[38]</sup><sup>[39]</sup>。</p>
+<p>一方で、ADC低下が反転しても<strong>対応領域に皮質萎縮が残る</strong>例があり、可逆性＝無傷ではない点が重要である<sup>[40]</sup><sup>[41]</sup>。前向き研究では、PMAの消退中央値が<strong>約24日</strong>（SE群では<strong>18日</strong>）とされ、急性期（〜1週）で完結するとは限らず、亜急性期（数週）まで残存し得ることが、実務上の"再検時期"の根拠になる<sup>[42]</sup><sup>[43]</sup>。</p>
+<h3>補助的シーケンスとしての価値</h3>
+<p>DWI中心の運用でも、以下のシーケンスは補助的に重要である。</p>
+<p><strong>FLAIR/T2</strong>：DWIと同時に高信号化し得て（脳梗塞のDWI先行と対照的）、発作関連変化の示唆になることがある<sup>[44]</sup><sup>[45]</sup>。</p>
+<p><strong>T1造影</strong>：<strong>gyral enhancement</strong>や<strong>leptomeningeal enhancement</strong>が報告され、stroke mimicの鑑別や腫瘍・炎症の見落とし防止に役立つ局面がある<sup>[46]</sup><sup>[47]</sup>。</p>
+<p><strong>MRA/TOF</strong>：局所高灌流を反映した動脈シグナル増強など、"虚血ではなく過灌流"の方向性を支える<sup>[48]</sup><sup>[49]</sup>。</p>
+<!-- ASLの所見 -->
+<h2 id="asl">ASLの所見</h2>
+<p><strong>ASL（arterial spin labeling）</strong>は非造影で脳血流（CBF）変化を描出し、<strong>焦点性SEの"今まさに起きている生理"を最も早く捉えやすい</strong>シーケンスである。メタ解析ではNCSEのASL異常のプール推定が高く、臨床研究でもDWIより感度が高い傾向が一貫している<sup>[50]</sup><sup>[51]</sup><sup>[52]</sup>。</p>
+<h3>急性期の典型所見と頻度</h3>
+<p>NCSEメタ解析で、<strong>ASL灌流異常のプール推定は88.83%</strong>（95%CI 32.86–99.23）とされた（研究数3で不均一性が大きい点は解釈上の注意点）<sup>[53]</sup><sup>[54]</sup>。</p>
+<p>単施設研究では、SE患者51例でASL変化が<strong>90.2%</strong>に観察され、同一プロトコル内のDWI（<strong>35.3%</strong>）やDSC（<strong>39.2%</strong>）より高感度だった<sup>[55]</sup><sup>[56]</sup>。同研究では、ASLを用いた「SE vs 自己終息発作」の識別で、<strong>ASL（any change）の感度90.2%、特異度58.7%</strong>、一方で<strong>DWIは特異度97.8%</strong>とされ、<strong>ASLはスクリーニング寄り、DWIは確証寄り</strong>という役割分担が読み取れる<sup>[57]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ASL灌流パターンの整理</span>
+<p><strong>ictal〜peri-ictalの過灌流（hyperperfusion）</strong>：SEでは過灌流が多数派で、ASL変化の大部分を占める<sup>[58]</sup><sup>[59]</sup>。</p>
+<p><strong>postictalの低灌流（hypoperfusion）</strong>：自己終息発作や発作後では低灌流が優位になり得る。発作後90分時点で低灌流が多数（71%）で、焦点と一致しやすいという前向きデータがある<sup>[60]</sup>。</p>
+</div>
+<h3>視床過灌流の意味</h3>
+<p>ASLの特徴的パターンとして、<strong>視床（とくにpulvinar）過灌流</strong>はNCSEを強く示唆し得る。脳外科・救急領域のNCSE疑い28エピソードの解析では、皮質過灌流はNCSEで<strong>感度100%・特異度57.1%</strong>で、さらにROC解析で視床過灌流はNCSEやPDs/RDAとの関連が示され、<strong>「皮質＋視床」の組み合わせが疑いを強める</strong><sup>[61]</sup><sup>[62]</sup>。また、SEと自己終息発作の鑑別でも、視床ASL変化が感度・特異度のバランスを改善し得ると報告されている<sup>[63]</sup><sup>[64]</sup>。</p>
+<h3>亜急性期の時間経過と落とし穴</h3>
+<p>ASL過灌流は多くのケースで<strong>約1週間前後で収束</strong>するとされる一方、<strong>4週間程度まで持続しEEG上の発作活動を超えて残る</strong>可能性がある、と整理されている<sup>[65]</sup><sup>[66]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 救急現場の落とし穴</span>
+<p>(1) <strong>発作後の低灌流が虚血と紛れる</strong>：postictalの低灌流パターンは急性虚血と類似し得るため、DWI分布（血管支配か否か）・MRA/CTA・臨床経過・EEGとの総合判断が不可欠である<sup>[67]</sup><sup>[68]</sup>。</p>
+<p>(2) <strong>再灌流や血行再建後の過灌流との区別</strong>が困難な場合がある。ASL所見は単独で判断せず、臨床文脈と束ねて解釈すべきである。</p>
+</div>
+<h3>救急実装の実感値</h3>
+<p>急性期の「疑い発作」集団における現実的な検出率として、救急・入院患者の後方視研究では、ASL灌流異常は発作患者の<strong>39%</strong>で検出され、そのほとんどが過灌流（<strong>94%</strong>）だった。さらに、灌流異常がある場合は<strong>非血管支配型（non-territorial）が98%</strong>と高率で、stroke mimicの鑑別に効く属性になり得る<sup>[69]</sup><sup>[70]</sup>。</p>
+<!-- 病変局在と時間経過の統合像 -->
+<h2 id="localization">病変局在と時間経過の統合像</h2>
+<p>焦点性SEのMRI変化は"単発の局所病変"というより、<strong>発作ネットワークに沿った局在と拡がり</strong>を取ることが多い。皮質焦点に加え、<strong>海馬、視床pulvinar、基底核、脳梁膨大部、対側小脳</strong>などの遠隔部位が巻き込まれ得る<sup>[71]</sup><sup>[72]</sup><sup>[73]</sup>。</p>
+<h3>局在の頻度</h3>
+<p>SE患者54例の前向きシリーズでは、DWI異常は<strong>海馬68.5%</strong>、<strong>pulvinar 25.9%</strong>、<strong>両側性は14.8%</strong>で、DWIとEEGの側方一致も高率だった<sup>[74]</sup><sup>[75]</sup>。別の前向き研究でも、SEのPMAは側方性として大半が片側性で、<strong>側頭葉皮質・海馬</strong>が高頻度とされる<sup>[76]</sup><sup>[77]</sup>。</p>
+<h3>左右差と拡大傾向の3パターン</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">パターン</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">分布</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">臨床的意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(1) 焦点皮質に一致する片側性</strong></td>
+<td>最も典型。DWI/ASLとも焦点を示しやすい</td>
+<td>焦点同定に直結<sup>[78]</sup><sup>[79]</sup></td>
+</tr>
+<tr>
+<td><strong>(2) 片側皮質＋同側視床pulvinar/海馬</strong></td>
+<td>伝播を示唆。SEが長いほど皮質＋pulvinar同時病変が増える</td>
+<td>意識障害との関連あり。重症度を示唆<sup>[80]</sup><sup>[81]</sup></td>
+</tr>
+<tr>
+<td><strong>(3) 両側性・多発性</strong></td>
+<td>NCSEや重症例、背景病変により出現。ASLでは多発/半球性変化もあり得る</td>
+<td>広範なネットワーク障害を反映<sup>[82]</sup><sup>[83]</sup></td>
+</tr>
+</tbody>
+</table>
+<h3>画像変化の時間軸（概念タイムライン）</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ASL</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">DWI/ADC</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">その他</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0〜数時間</strong></td>
+<td>過灌流が出やすい</td>
+<td>出ないことも多い</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>数時間〜2日</strong></td>
+<td>過灌流が最も捉えやすい時期</td>
+<td>皮質の拡散低下が出現し得る</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>3〜7日</strong></td>
+<td>持続〜収束傾向</td>
+<td>DWI/ADCとFLAIR/T2が併存し得る</td>
+<td>海馬・視床への波及評価</td>
+</tr>
+<tr>
+<td><strong>1〜4週</strong></td>
+<td>多くは消失。一部持続例あり</td>
+<td>多くは改善・消失</td>
+<td>PMA消退中央値：約24日</td>
+</tr>
+<tr>
+<td><strong>数週以降</strong></td>
+<td>—</td>
+<td>持続例では不可逆変化</td>
+<td>皮質菲薄化・海馬萎縮</td>
+</tr>
+</tbody>
+</table>
+<p>このタイムラインの根拠として、ASLは分〜時間単位で出現し得て早期に消える一方、DWI/FLAIRはより遅れて出現し日〜週残る、という整理が提示されている<sup>[84]</sup><sup>[85]</sup><sup>[86]</sup>。また前向き研究ではPMAの消退中央値が<strong>約24日</strong>で、SE群では中央値<strong>18日</strong>だった<sup>[87]</sup><sup>[88]</sup>。</p>
+<!-- 病態生理的解釈 -->
+<h2 id="pathophysiology">病態生理的解釈</h2>
+<p>焦点性SEで見えるMRI変化は、単純な虚血ではなく、<strong>過剰な神経活動 → 代謝需要増大 → 血流増加（過灌流）→ 需要が供給を上回る局面でエネルギー破綻・イオンポンプ不全 → 細胞性浮腫（cytotoxic edema）→ BBB破綻を伴う血管性浮腫（vasogenic edema）</strong>という連続体として理解するのが実務的である<sup>[89]</sup><sup>[90]</sup><sup>[91]</sup>。</p>
+<details class="expandable" open="open">
+<summary>病態メカニズムの詳細</summary>
+<div class="expandable-content">
+<p><strong>ASL過灌流</strong>：神経血管カップリングによりCBFが上がる"最初の生理学的変化"として位置づけられる<sup>[92]</sup><sup>[93]</sup>。</p>
+<p><strong>DWI高信号＋ADC低下</strong>：<strong>細胞性浮腫</strong>を反映するが、虚血による拡散低下とはメカニズムが異なり得る、と整理されている。発作に伴う過剰なグルタミン酸放出・イオン恒常性の破綻が主因と考えられている<sup>[94]</sup><sup>[95]</sup>。</p>
+<p><strong>皮質下白質のADC上昇</strong>：白質側は<strong>血管性浮腫（BBB破綻や水シフト）</strong>寄りに動くことがあり、灰白質の拡散低下と同居する"混合型"が起きる<sup>[96]</sup><sup>[97]</sup>。</p>
+<p><strong>造影効果</strong>：局所過灌流とBBB変化の反映として<strong>gyral/髄膜増強</strong>が出ることがあり、腫瘍・髄膜炎・炎症との鑑別を難しくする<sup>[98]</sup><sup>[99]</sup><sup>[100]</sup>。</p>
+</div>
+</details>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 重要：可逆性と不可逆障害は連続している</span>
+<p><strong>"可逆性の範囲内の変化"と"不可逆障害の入口"は連続している</strong>。DWI/FLAIR変化が数日〜数週持続した症例で、<strong>皮質菲薄化</strong>や<strong>海馬硬化</strong>など長期変化へ至る可能性が報告されている。早期の発作コントロールが画像異常の可逆性と転帰を左右し得る<sup>[101]</sup><sup>[102]</sup><sup>[103]</sup>。</p>
+</div>
+<!-- 鑑別診断と鑑別ポイント -->
+<h2 id="differential">鑑別診断と鑑別ポイント</h2>
+<p>焦点性SEの画像は、<strong>脳梗塞・脳炎・腫瘍・脱髄・代謝性障害</strong>などと重なり得る。実戦的には、<strong>分布（血管支配か）、灌流方向（過灌流か低灌流か）、時間軸（改善するか進行するか）、EEGとの整合</strong>で層別化する<sup>[104]</sup><sup>[105]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">DWI/ADC</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ASL</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">分布の特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">造影・MRA/SWI</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時間経過</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>焦点性SEによるPMA</strong></td>
+<td>皮質優位のDWI高信号＋ADC低下。梗塞ほど強くないことがある。灰白質と白質で混在も<sup>[106]</sup><sup>[107]</sup></td>
+<td>ictal/peri-ictalで過灌流が多い。視床過灌流が補強所見<sup>[108]</sup><sup>[109]</sup></td>
+<td>非血管支配型、焦点皮質＋海馬/視床pulvinarなどネットワーク<sup>[110]</sup></td>
+<td>MRAで局所動脈シグナル増強、SWIで皮質静脈所見が"過灌流側"に寄ることがある<sup>[111]</sup><sup>[112]</sup></td>
+<td>日〜週で改善し得る。多くは数週で消退、持続例で萎縮<sup>[113]</sup></td>
+</tr>
+<tr>
+<td><strong>急性虚血性脳卒中</strong></td>
+<td>血管支配域に一致した強いDWI高信号・ADC低下。DWI先行、FLAIR遅れが典型<sup>[114]</sup></td>
+<td>低灌流が基本（再灌流期は過灌流もあり得る）<sup>[115]</sup></td>
+<td>動脈支配域に沿う</td>
+<td>CTA/MRAで閉塞・狭窄、SWIで虚血側静脈の所見<sup>[116]</sup></td>
+<td>通常は永続。改善しても梗塞痕が残る<sup>[117]</sup></td>
+</tr>
+<tr>
+<td><strong>感染性脳炎・自己免疫性脳炎</strong></td>
+<td>DWI/FLAIR変化がSEと重なりうる。両側辺縁系や進行性が示唆<sup>[118]</sup></td>
+<td>変化し得るが非特異的。臨床・髄液と統合必須<sup>[119]</sup></td>
+<td>辺縁系優位、両側性が多い傾向</td>
+<td>造影が比較的目立つことがある</td>
+<td>日単位で進行しやすい。PMAは改善が基本</td>
+</tr>
+<tr>
+<td><strong>脳腫瘍・腫瘍関連発作</strong></td>
+<td>腫瘍本体に一致する信号異常。発作後浮腫や造影増強で進行に見える<sup>[120]</sup></td>
+<td>非特異。焦点周囲で過灌流も取り得る</td>
+<td>腫瘍境界・白質優位など</td>
+<td>造影増強が強い。再検で固定/進行<sup>[121]</sup></td>
+<td>改善しない/増大が続く場合は腫瘍を強く疑う</td>
+</tr>
+<tr>
+<td><strong>脱髄</strong></td>
+<td>髄質優位、時間的多発など</td>
+<td>非特異</td>
+<td>白質病変、解剖学的整合</td>
+<td>造影パターン・臨床経過で判断</td>
+<td>週〜月単位</td>
+</tr>
+<tr>
+<td><strong>代謝性障害（低血糖など）</strong></td>
+<td>両側性・対称性や特定部位の好発、文脈依存</td>
+<td>非特異</td>
+<td>臨床状況に強く依存</td>
+<td>血糖・代謝評価が決定的</td>
+<td>原因是正で改善</td>
+</tr>
+</tbody>
+</table>
+<details class="expandable" open="open">
+<summary>鑑別の簡易フロー（概念図）</summary>
+<div class="expandable-content">
+<p><strong>ステップ1：急性局在症状/意識障害 + 画像異常</strong></p>
+<p>→ <strong>DWI/ADC</strong>の分布を確認</p>
+<p><strong>ステップ2a：血管支配域に一致する場合</strong></p>
+<p>→ <strong>虚血を第一に評価</strong> → ASL/CTA/CTP/MRAで低灌流＋血管閉塞 → <strong>脳梗塞として治療/血行再建評価</strong></p>
+<p>→ 過灌流/再灌流が疑わしい → 発作/再灌流/その他を統合判断</p>
+<p><strong>ステップ2b：血管支配域に一致しない/皮質優位の場合</strong></p>
+<p>→ <strong>SE/PMAを強く疑う</strong> → ASL確認</p>
+<p>→ <strong>過灌流（±視床）</strong>：持続発作・NCSEの可能性↑ → <strong>早期EEG＋治療</strong></p>
+<p>→ <strong>低灌流</strong>：postictal/Todd vs 虚血 → EEGと経時再検で鑑別<sup>[122]</sup><sup>[123]</sup></p>
+</div>
+</details><!-- 治療介入とMRIの可逆性・予後 -->
+<h2 id="prognosis">治療介入とMRIの可逆性・予後・実用ポイント</h2>
+<h3>治療介入が画像と転帰に与える含意</h3>
+<p><strong>けいれん性SE</strong>では、<strong>早期（5分以上）・確定（30分以上）・難治（60〜120分以上）</strong>という段階で治療を組み立て、<strong>ベンゾジアゼピン → 二次薬 → 必要なら鎮静薬持続</strong>へ進むフレームが提示されている<sup>[124]</sup><sup>[125]</sup>。この"時間を意識した治療"は、PMAの不可逆化（<strong>皮質菲薄化・海馬萎縮</strong>など）を避ける観点からも合理的である。PMAは多くが可逆だが、一部は数日〜数週持続し脳実質の容量減少へ至り得る<sup>[126]</sup><sup>[127]</sup><sup>[128]</sup>。</p>
+<h3>MRI所見の可逆性と予後</h3>
+<p>PMAは"止めれば消えることが多い"一方で、<strong>重症度・予後の指標</strong>にもなり得る。大規模コホートでは以下の関連が示されている<sup>[129]</sup><sup>[130]</sup><sup>[131]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">指標</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">PMA陽性群</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">PMA陰性群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>院内死亡（独立予測因子）</strong></td>
+<td><strong>OR 2.86</strong></td>
+<td>対照</td>
+</tr>
+<tr>
+<td><strong>難治化（refractory SE）</strong></td>
+<td><strong>71%</strong></td>
+<td>33%</td>
+</tr>
+<tr>
+<td><strong>遅発性てんかん（生存例）</strong></td>
+<td><strong>40%</strong></td>
+<td>21%</td>
+</tr>
+</tbody>
+</table>
+<p>ASLについても、SE患者においてASL変化が難治化や転帰不良の"感度"は高いが、特異度は低い（ASL陽性＝必ず不良ではない）という形で整理されている<sup>[132]</sup><sup>[133]</sup>。したがって、<strong>ASLは「見逃しを減らす」方向に強く、DWI/ADCや臨床・EEGで「確度と重症度」を詰める</strong>のが合理的である<sup>[134]</sup><sup>[135]</sup><sup>[136]</sup>。</p>
+<h3>臨床への実用的ポイント</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 実臨床における5つのポイント</span>
+<p><strong>1. DWI陰性でSEを否定しない</strong><br />NCSEではDWI異常は<strong>約半数にとどまる</strong>推定であり、ASLやCTP/EEGと組み合わせる設計が必要<sup>[137]</sup><sup>[138]</sup>。</p>
+<p><strong>2. ASL過灌流があれば"いま起きている"可能性を優先</strong><br />EEGの手配・治療反応の観察を同時並行で行う<sup>[139]</sup><sup>[140]</sup><sup>[141]</sup>。</p>
+<p><strong>3. 分布で勝負する</strong><br />血管支配域に一致しない皮質優位病変、皮質＋視床pulvinar、対側小脳などはSE側に傾く<sup>[142]</sup><sup>[143]</sup><sup>[144]</sup>。</p>
+<p><strong>4. "postictal低灌流"の罠</strong><br />ASL低灌流＝虚血とは限らず、時間軸とEEGで詰める<sup>[145]</sup><sup>[146]</sup>。</p>
+<p><strong>5. 再検の意義</strong><br />PMA消退中央値が数週である以上、<strong>数日〜数週での再MRI</strong>は「PMAか器質病変か」の判定に直結する<sup>[147]</sup><sup>[148]</sup>。</p>
+</div>
+<details class="expandable" open="open">
+<summary>ブログ向け引用可能な図表リンクとキャプション案</summary>
+<div class="expandable-content">
+<p><strong>ASLの感度がDWIより高いことを示す図</strong>（オープンアクセス、CC BY 4.0）<br /><a href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-021-03698-7/MediaObjects/41598_2021_3698_Fig1_HTML.png" target="_blank"> </a></p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="「ASLはSEの急性期に最も高感度で、撮像が遅れるほど各シーケンスの感度が低下する」[149][150]">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212125124.png" width="685" height="426" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">「ASLはSEの急性期に最も高感度で、撮像が遅れるほど各シーケンスの感度が低下する」[149][150]</figcaption>
+</figure>
+<p><a href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-021-03698-7/MediaObjects/41598_2021_3698_Fig1_HTML.png" target="_blank">Kim TJ et al. Sci Rep 2021 Fig.1</a><br /><br /></p>
+<p><strong>NCSEでのDWI/FLAIR/ASL異常のプール推定（森林プロット）</strong>（オープンアクセス論文の図）</p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="「NCSEではDWI異常は約半数だが、ASLは高率に異常を示す（研究統合推定）」[151][152]">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212125504.jpg" width="709" height="766" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">「NCSEではDWI異常は約半数だが、ASLは高率に異常を示す（研究統合推定）」[151][152]</figcaption>
+</figure>
+<p><br /><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d008/12779322/c316edae6e23/EPI-66-4895-g002.jpg" target="_blank">Bosque-Varela P et al. Epilepsia 2025 Fig.2</a><br /><br /></p>
+<p><strong>救急設定でのASLパターン例</strong>（PLOS、オープンアクセス）<a href="https://doi.org/10.1371/journal.pone.0173538.g004" target="_blank"> </a></p>
+<p><a href="https://doi.org/10.1371/journal.pone.0173538.g004" target="_blank">Yoo RE et al. PLoS One 2017 Fig.4</a><sup>[153]</sup></p>
+<p> </p>
+<p><strong>DWI・FLAIR・ASLを1枚で見せるNCSE症例（教育的）</strong>（PMC掲載）</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212125617.jpg" width="780" height="420" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e866/6930695/a4bd9568bb69/amjcaserep-20-1883-g001.jpg" target="_blank">Mutoh T et al. Am J Case Rep 2019 Fig.1</a><sup>[154]</sup><sup>[155]</sup></p>
+<p><strong>焦点性SEの経時改善のイメージ</strong>（AJNRの症例図）</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212125646.jpg" width="720" height="252" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /><br /><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b033/7974775/edf91b0d9a2b/ajnr-22-06-04-f06.jpg" target="_blank">Kim JA et al. AJNR 2001 Fig.6</a><sup>[156]</sup><sup>[157]</sup></p>
+</div>
+</details><!-- 主要文献の優先リスト --><details class="expandable" open="open">
+<summary>主要文献の優先リスト（DWI/ASL中心の記事作成向け）</summary>
+<div class="expandable-content">
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">区分</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">文献</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">位置づけ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">要点</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">画像・図表の使いやすさ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>総説</td>
+<td>Bosque-Varela P, et al. 2025</td>
+<td>NCSEの画像異常を統合</td>
+<td><strong>DWI約51%、ASL約89%</strong>という統合推定を提示。時間要因の限界も議論<sup>[158]</sup><sup>[159]</sup></td>
+<td>図（森林プロット）が教育的</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Kim TJ, et al. 2021</td>
+<td>SEでのASLの診断・予後</td>
+<td><strong>ASL変化90.2%、DWI 35.3%</strong>。SE vs自己終息発作の識別や予後推定<sup>[160]</sup><sup>[161]</sup></td>
+<td>図と表が多く実装向き（OA）</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Yoo RE, et al. 2017</td>
+<td>救急現場でのASLの現実値</td>
+<td>発作患者のASL異常39%、非血管支配型98%<sup>[162]</sup></td>
+<td>図が臨床向け（OA）</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Chatzikonstantinou A, et al. 2011</td>
+<td>DWI局在の大規模前向き</td>
+<td>海馬・pulvinar優位、複雑部分SEで50%<sup>[163]</sup></td>
+<td>本文は要確認</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Kim JA, et al. 2001</td>
+<td>DWI/ADCの質的理解</td>
+<td>ADC低下の幅（6–28%）や経時変化、誤診リスクを具体化<sup>[164]</sup><sup>[165]</sup></td>
+<td>図が経時変化の説明に有用</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Chu K, et al. 2001</td>
+<td>病態生理の言語化</td>
+<td>ADC低下＝細胞性浮腫、虚血との差異、萎縮残存の解釈<sup>[166]</sup></td>
+<td>病態説明の引用に強い</td>
+</tr>
+<tr>
+<td>原著</td>
+<td>Ohtomo S, et al. 2020</td>
+<td>視床過灌流の意味づけ</td>
+<td>視床過灌流がNCSE/PDs/RDAと関連（ROC）<sup>[167]</sup><sup>[168]</sup></td>
+<td>"視床"の説得力向上に</td>
+</tr>
+<tr>
+<td>予後</td>
+<td>Bonduelle T, et al. 2023</td>
+<td>PMAと転帰</td>
+<td>PMA陽性が死亡・難治化・遅発てんかんと関連<sup>[169]</sup><sup>[170]</sup></td>
+<td>予後章の根拠に最適</td>
+</tr>
+<tr>
+<td>日本語</td>
+<td>てんかん診療ガイドライン2018 第8章</td>
+<td>治療の枠組み</td>
+<td>早期/確定/難治/超難治の段階と治療フロー<sup>[171]</sup><sup>[172]</sup></td>
+<td>図引用は規定確認</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=BCoZHq3Nzi8" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1 9 15 16 20 21 23 24 25 26 44 45 49 52 60 65 72 75 80 85 89 92 100 104 114 117 126 138 141 143 145 148</span> <span class="ref-content">Bosque Varela P, Machegger L, Oellerer A, et al. Imaging of Status Epilepticus. J Clin Med. 2025;14(9):2922. doi:10.3390/jcm14092922.</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Lansberg MG, O'Brien MW, Norbash AM, et al. MRI abnormalities associated with partial status epilepticus. Neurology. 1999;52(5):1021-1027.</span></div>
+<div class="ref-item"><span class="ref-numbers">3 4 5 6 29 30 50 53 54 84 137 151 152 158 159</span> <span class="ref-content">Bosque-Varela P, Kuchukhidze G, Hahn W, et al. Peri-ictal imaging abnormalities in non-convulsive status epilepticus: A systematic review and meta-analysis comparing magnetic resonance imaging and computed tomography perfusion. Epilepsia. 2025;66:4895-4909. doi:10.1111/epi.18604.</span></div>
+<div class="ref-item"><span class="ref-numbers">7 8 51 55 56 57 58 63 93 132 133 134 149 150 160 161</span> <span class="ref-content">Kim TJ, Choi JW, Han M, et al. Usefulness of arterial spin labeling perfusion as an initial evaluation of status epilepticus. Sci Rep. 2021;11:24218. doi:10.1038/s41598-021-03698-7.</span></div>
+<div class="ref-item"><span class="ref-numbers">10 42 43 76 77 86 87 88 113 127 128 147</span> <span class="ref-content">Pascarella A, Manzo L, Marsico O, et al. Investigating Peri-Ictal MRI Abnormalities: A Prospective Neuroimaging Study on Status Epilepticus, Seizure Clusters, and Single Seizures. J Clin Med. 2025;14:2711. doi:10.3390/jcm14082711.</span></div>
+<div class="ref-item"><span class="ref-numbers">11 12 37 40 91 94 95 96 97 101 102 107</span> <span class="ref-content">Chu K, Kang DW, Kim JY, et al. Diffusion-weighted magnetic resonance imaging in nonconvulsive status epilepticus. Arch Neurol. 2001;58(6):993-998.</span></div>
+<div class="ref-item"><span class="ref-numbers">13 14 129 130 131 169 170</span> <span class="ref-content">Bonduelle T, Ollivier M, Trin K, et al. Association of peri-ictal MRI abnormalities with mortality, antiseizure medication refractoriness, and morbidity in status epilepticus. Neurology. 2023;100(9):e943-e953. doi:10.1212/WNL.0000000000201599.</span></div>
+<div class="ref-item"><span class="ref-numbers">17 18 19 124 125 171 172</span> <span class="ref-content">日本神経学会てんかん診療ガイドライン作成委員会. てんかん診療ガイドライン2018 第8章 てんかん重積状態. 2018.</span></div>
+<div class="ref-item"><span class="ref-numbers">22</span> <span class="ref-content">Trinka E, Cock H, Hesdorffer D, et al. A definition and classification of status epilepticus—Report of the ILAE Task Force on Classification of Status Epilepticus. Epilepsia. 2015;56(10):1515-1523.</span></div>
+<div class="ref-item"><span class="ref-numbers">27 28 33 34 35 74 78 79 81 82 83 110 142 144 163</span> <span class="ref-content">Chatzikonstantinou A, Gass A, Förster A, et al. Features of acute DWI abnormalities related to status epilepticus. Epilepsy Res. 2011;97(1-2):45-51. doi:10.1016/j.eplepsyres.2011.07.002.</span></div>
+<div class="ref-item"><span class="ref-numbers">31 32 71 73</span> <span class="ref-content">Pascarella A, Manzo L, Marsico O, et al. Investigating Peri-Ictal MRI Abnormalities（前向きコホートデータ）. J Clin Med. 2025;14:2711.</span></div>
+<div class="ref-item"><span class="ref-numbers">36 38 39 90 99 103 106 156 157 164 165</span> <span class="ref-content">Kim JA, Chung JI, Yoon PH, et al. Transient MR signal changes in patients with generalized tonicoclonic seizure or status epilepticus: peri-ictal diffusion-weighted imaging. AJNR Am J Neuroradiol. 2001;22(6):1149-1160.</span></div>
+<div class="ref-item"><span class="ref-numbers">41 46 47 48 98</span> <span class="ref-content">Lansberg MG, O'Brien MW, Norbash AM, et al. MRI abnormalities associated with partial status epilepticus. Neurology. 1999;52(5):1021-1027.</span></div>
+<div class="ref-item"><span class="ref-numbers">59 66 67 68 69 70 105 115 116 122 123 146 153 162</span> <span class="ref-content">Yoo RE, Yun TJ, Rhim JH, et al. Identification of cerebral perfusion using arterial spin labeling in patients with seizures in acute settings. PLoS One. 2017;12(3):e0173538. doi:10.1371/journal.pone.0173538.</span></div>
+<div class="ref-item"><span class="ref-numbers">61 62 64 167 168</span> <span class="ref-content">Ohtomo S, Otsubo H, Arai H, et al. Hyperperfusion in the thalamus on arterial spin labelling indicates non-convulsive status epilepticus. Brain Commun. 2020;3(1):fcaa223. doi:10.1093/braincomms/fcaa223.</span></div>
+<div class="ref-item"><span class="ref-numbers">108 109 135 136 139 140</span> <span class="ref-content">Kim TJ, et al. 2021 / Ohtomo S, et al. 2020（ASL-NCSE関連データの統合引用）.</span></div>
+<div class="ref-item"><span class="ref-numbers">111 112 120 121</span> <span class="ref-content">Verma RK, Abela E, Schindler K, et al. Focal and Generalized Patterns of Cerebral Cortical Veins Due to Non-Convulsive Status Epilepticus or Prolonged Seizure Episode after Convulsive Status Epilepticus—A MRI Study Using Susceptibility Weighted Imaging. PLoS One. 2016;11(8):e0160495. doi:10.1371/journal.pone.0160495.</span></div>
+<div class="ref-item"><span class="ref-numbers">118 119</span> <span class="ref-content">Bosque Varela P, et al. 2025（脳炎との鑑別に関する記載）.</span></div>
+<div class="ref-item"><span class="ref-numbers">154 155</span> <span class="ref-content">Mutoh T, Eguchi K, Yamamoto S, et al. Arterial Spin Labeling Magnetic Resonance Imaging in the Assessment of Non-Convulsive Status Epilepticus in Alzheimer's Disease: A Report of Two Cases. Am J Case Rep. 2019;20:1883-1887. doi:10.12659/AJCR.919938.</span></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "焦点性てんかん重積状態の急性期から亜急性期におけるMRI所見 ― DWIとASLを中心に",
+  "description": "焦点性てんかん重積状態の急性期から亜急性期におけるMRI所見 ― DWIとASLを中心に",
+  "thumbnailUrl": "https://img.youtube.com/vi/BCoZHq3Nzi8/maxresdefault.jpg",
+  "uploadDate": "2026-02-12",
+  "contentUrl": "https://www.youtube.com/watch?v=BCoZHq3Nzi8",
+  "embedUrl": "https://www.youtube.com/embed/BCoZHq3Nzi8"
+}
+</script>
+<div class="related-articles">
+<h3>関連記事</h3>
+<ul>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/21/075425">全般てんかんに対する抗てんかん薬の推奨と薬剤選択</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/25/105101">全身けいれん発作後のもうろう状態への対応ガイド</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/28/104150">焦点性てんかん重積状態の急性期〜亜急性期MRI所見：DWI・FLAIRを中心に</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/06/05/113429">MRIにおけるASLのPLD差 (1525ms vs 2525ms) が臨床診断に与える影響</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/06/13/231544">妊娠を望むてんかん患者さんへ：抗てんかん薬と葉酸補充の重要性</a></li>
+</ul>
+</div>

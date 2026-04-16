@@ -1,0 +1,520 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260131/20260131025809.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>てんかん発作との鑑別診断</strong></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/ATh9k5kTHek?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="てんかん発作との鑑別診断！失神・PNES・TMAを見極める臨床アプローチ" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/ATh9k5kTHek">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>てんかん発作との鑑別診断</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#intro">はじめに</a></li>
+<li><a href="#approach">鑑別のアプローチ：発作の特徴と診察のポイント</a></li>
+<li><a href="#syncope">失神（Syncope）</a></li>
+<li><a href="#pnes">心因性非てんかん性発作（PNES）</a></li>
+<li><a href="#tma">急性代謝性脳症と一過性ミオクローヌス状態（TMA）</a></li>
+<li><a href="#others">不随意運動・睡眠時異常行動などその他の鑑別</a></li>
+<li><a href="#dementia">認知症との関係：高齢発症てんかんの見逃しに注意</a></li>
+<li><a href="#conclusion">おわりに</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- はじめに -->
+<h2 id="intro">はじめに</h2>
+<p>突然の<strong>意識消失</strong>やけいれん様の発作で救急外来を受診した患者では、実際には<strong>てんかん発作以外の原因</strong>によるイベントが多いことが知られています。日本の報告では、救急外来での突然の意識消失エピソードのうち、<strong>てんかん発作は約29%</strong>に過ぎず、残りは<strong>神経調節性失神</strong>や<strong>心因性非てんかん発作（PNES）</strong>などが多数を占めるとされています<sup>[1]</sup><sup>[2]</sup>。このようにてんかんと紛らわしい発作や症状は珍しくなく、誤診により不必要な抗てんかん薬治療が行われたり、逆に適切な治療が遅れるリスクがあります。鑑別診断のためには詳しい病歴聴取や目撃者からの情報が極めて重要であり<sup>[1]</sup>、発作の様子（持続時間、発症状況、身体所見など）を総合的に評価する必要があります。また、必要に応じて脳波検査やその他補助検査を行い、てんかん発作か否かの判断材料とします。</p>
+<p>本稿では、医療従事者向けにてんかん発作と間違われやすい様々な症状・疾患の鑑別ポイントを整理します<sup>[3]</sup>。特に<strong>心因性非てんかん性発作（PNES）</strong>、<strong>アステリクシスを伴う一過性ミオクローヌス状態（TMA）</strong>、<strong>認知症</strong>との関係、さらには<strong>失神</strong>や<strong>不随意運動</strong>など主要な鑑別事項について、最新の知見を踏まえて解説します。</p>
+<!-- 鑑別のアプローチ -->
+<h2 id="approach">鑑別のアプローチ：発作の特徴と診察のポイント</h2>
+<p>まず、発作様症状の鑑別には<strong>発作前後の状況や誘因</strong>、<strong>発作中の様子</strong>、<strong>発作後の状態</strong>を詳しく把握することが基本です。例えば直前の体位や誘因（起立中か安静時か、疼痛・排尿・運動直後など）、前兆の有無（動悸やめまい、恐怖感、デジャヴュなど）、発作中の意識レベル、体の動きの種類（全身強直間代けいれんか、四肢の不規則な動きか、脱力か、局所的な不随意運動か等）、眼球偏位や自律神経徴候（顔面蒼白、発汗、尿失禁など）、発作持続時間、発作後の混迷や麻痺の有無（ポストイクト状態）といった点を詳細に確認します<sup>[4]</sup><sup>[5]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 てんかん発作の特徴</span> <strong>てんかん発作</strong>は通常、<strong>突然発症</strong>し持続時間は<strong>数十秒〜2分程度</strong>で自然停止し、その後一過性の意識混濁や脱力がみられることがあります。一方で<strong>非てんかん性発作</strong>では、発作が不自然に長引く、あるいは発作後も<strong>意識清明</strong>であるといった違いが手がかりになります<sup>[4]</sup>。</div>
+<p>また、発作中の身体所見では、<strong>舌咬傷</strong>の有無や外傷の有無、左右対称性かどうか、随意的に阻止できるか（例：目を閉じる発作で無理に開眼させると抵抗する等）も有用な情報です。</p>
+<!-- 失神 -->
+<h2 id="syncope">失神（Syncope）</h2>
+<p><strong>失神</strong>は一時的な<strong>脳低灌流</strong>による意識消失発作で、てんかんと間違われやすい代表的な状態です<sup>[6]</sup>。失神には迷走神経反射による<strong>神経調節性失神</strong>（血管迷走神経失神）が最も多く、その他に<strong>心原性失神</strong>（不整脈や心疾患による）や<strong>起立性低血圧</strong>があります。</p>
+<p>典型的な神経調節性失神では、起立や長時間の立位、疼痛・恐怖などの誘因があり、前駆症状として<strong>めまい・悪心・発汗・視野狭窄</strong>などが出現して徐々に意識消失に至ります。一方、てんかん発作は<strong>誘因なく突然意識消失</strong>することが多い点で異なります。</p>
+<p>失神のエピソードでは意識消失は通常<strong>30秒以内</strong>と短く、体位の変更（臥位にする等）で速やかに回復するのが一般的です。時に失神に随伴して不随意運動（けいれん様の四肢の細かな痙攣）を生じる場合があり、これを<strong>失神時けいれん（convulsive syncope）</strong>といいます。これは脳への血流低下が数秒以上持続した際に大脳皮質が過興奮して生じる<strong>一過性のミオクローヌス</strong>で、短い四肢の震えや筋収縮が数回起こる程度であり、<strong>持続的な強直間代けいれんには至りません</strong>。また失神では<strong>発作後の混迷がほとんどなく</strong>、数分以内に意識が清明に戻る点も重要な鑑別点です<sup>[4]</sup><sup>[7]</sup>。発作後に頭痛や強い疲労感を訴える場合はてんかん強直間代発作の可能性が高くなります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 失神とてんかんの鑑別ポイント</span>
+<ul>
+<li><strong>失神</strong>：皮膚蒼白、瞳孔反応・対光反射が保たれる、発作後意識清明</li>
+<li><strong>てんかん</strong>：チアノーゼ、発作中は瞳孔反応消失、発作後混迷あり</li>
+</ul>
+目撃者からの情報と心電図モニタリング、必要ならホルター心電図や傾斜試験など循環器系の評価も考慮します。</div>
+<!-- PNES -->
+<h2 id="pnes">心因性非てんかん性発作（PNES）</h2>
+<p><strong>心因性非てんかん性発作（Psychogenic Non-Epileptic Seizures; PNES）</strong>は、心理的要因により生じる非てんかん性の発作様症状です<sup>[8]</sup>。外見上はけいれん発作に酷似しえるため鑑別が極めて重要です。PNESは<strong>解離性（転換性）障害</strong>の一表現と考えられ、<strong>てんかん患者の約5〜20%</strong>にPNESが混在するとの報告もあります<sup>[9]</sup>。したがっててんかんとPNESが合併しているケースもありうるため注意が必要です。</p>
+<h3>PNESの臨床的特徴</h3>
+<p>PNESの特徴として、<strong>発作の持続時間が長い</strong>ことがまず挙げられます<sup>[4]</sup>。典型的な<strong>強直間代てんかん発作</strong>は<strong>2分以内</strong>に自然停止するのに対し、PNESでは<strong>5分以上持続</strong>したり、医療者が制止しようと関わった途端におさまるなど不自然な経過をとることがあります。</p>
+<p>発作中の身体の動きは<strong>左右非同期かつ不規則</strong>で、頭を振る・腰を突き出すような動きが見られたり<sup>[10]</sup><sup>[4]</sup>、全身が大きく反り返るようなアーチ状挙上（いわゆる鰓様反射のような姿勢）になることもあります。また発作中に<strong>目を固く閉じている</strong>傾向が強く<sup>[4]</sup>、呼びかけに対する反応がないように見えても実は<strong>意識は保たれている</strong>（後で発作中の会話内容を覚えている）ことが多い点も示唆的です<sup>[4]</sup>。試しに強制開眼させようとすると<strong>抵抗する</strong>場合や、疼痛刺激を加えると嫌がる素振りを見せることもPNESではしばしば認められます。一方、てんかん強直間代発作では眼は開いたままであることが多く、外部刺激に全く反応しません。</p>
+<p>さらにPNESでは、<strong>発作後のもうろう状態や記憶消失を呈さない</strong>ことが多く<sup>[4]</sup>、発作直後から周囲と会話ができたり涙を流す（感情表出が見られる）のも特徴とされます。発作そのものがストレス状況下でのみ出現することや、発作の頻度が非常に多い（日に何度も起こる）場合も疑わしい所見です。ただしPNESに特異的な単一の所見は存在しないため<sup>[11]</sup>、総合的な判断が重要です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 PNESの診断</span> 診断確定には<strong>ビデオ脳波モニタリング</strong>が有用です<sup>[12]</sup>。発作時に脳波上てんかん性異常が全くなく、臨床像がPNESに典型的であれば診断が確定します<sup>[12]</sup>。血中の<strong>プロラクチン</strong>や<strong>CK上昇</strong>が強直間代発作後にみられる一方、PNESでは上昇しない傾向があるため鑑別補助に使われることもありますが、決め手にはなりません<sup>[13]</sup>。</div>
+<p>重要なのは、PNESに対して<strong>抗てんかん薬は無効</strong>なばかりか副作用リスクがあるため、てんかんとの鑑別が臨床上非常に重要という点です<sup>[8]</sup>。PNESと疑われる場合は患者の心理社会的背景を評価し、必要に応じて<strong>精神科医</strong>や<strong>臨床心理士</strong>と連携して治療（心理療法やストレス環境への対処など）を進めます。</p>
+<!-- TMA -->
+<h2 id="tma">急性代謝性脳症と一過性ミオクローヌス状態（TMA）</h2>
+<h3>急性代謝性脳症</h3>
+<p><strong>急性代謝性脳症</strong>とは、<strong>肝不全・腎不全・高CO<sub>2</sub>血症・薬物中毒・電解質異常</strong>など全身代謝の失調によって生じる一過性の脳機能障害を指します。代表的なものに<strong>肝性脳症</strong>（高アンモニア血症）、<strong>尿毒症性脳症</strong>、<strong>高二酸化炭素血症</strong>（CO<sub>2</sub>ナルコーシス）、<strong>糖尿病性昏睡</strong>、<strong>アルコール離脱</strong>や<strong>ベンゾジアゼピン離脱</strong>などがあります<sup>[14]</sup><sup>[15]</sup><sup>[16]</sup>。</p>
+<p>これら代謝性脳症では<strong>意識レベル低下</strong>（傾眠〜昏迷）を主症状としますが、しばしば四肢近位筋を中心とした不規則な<strong>ミオクローヌス様の不随意運動</strong>や<strong>アステリクシス</strong>（羽ばたき振戦）を伴います<sup>[17]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 アステリクシス（羽ばたき振戦）とは</span> <strong>アステリクシス</strong>とは、手を伸ばした姿勢を保持できず手関節が不意にガクッと落ちる現象で、<strong>陰性ミオクローヌス</strong>（筋の一過性弛緩）に分類されます。典型的には<strong>肝性脳症</strong>で知られますが、決して肝障害に特異的な所見ではなく、<strong>高CO<sub>2</sub>血症</strong>や<strong>尿毒症</strong>をはじめ様々な代謝異常で生じ得る現象です<sup>[16]</sup>。したがって、「羽ばたき振戦＝肝性脳症」と短絡せず、広く<strong>代謝性脳機能障害のサイン</strong>と理解する必要があります<sup>[16]</sup>。</div>
+<p>代謝性脳症によるミオクローヌスやアステリクシスは、てんかん発作と鑑別すべき重要な所見です。特に重症筋無力感や軽度の意識混濁を伴う場合には、目撃者からは全身けいれん発作に見えて救急搬送されることもあります。これらの場合、脳波検査で広汎性の徐波や<strong>三相波</strong>（肝性脳症に典型）を認めたり、血液検査で<strong>高アンモニア血症・腎機能障害・呼吸不全</strong>の所見が得られれば代謝性脳症と診断できます<sup>[18]</sup><sup>[19]</sup>。逆に、明らかな代謝異常がなく脳波にてんかん性異常波も認めない場合には、てんかん発作や器質的脳疾患以外の別の鑑別が必要になります。</p>
+<h3>一過性ミオクローヌス状態（TMA）</h3>
+<p>その文脈で注意すべき鑑別疾患が、<strong>アステリクシスを伴う一過性ミオクローヌス状態（TMA）</strong>です<sup>[20]</sup>。TMAは「Transient Myoclonic State with Asterixis」の略で、高齢者に急性かつ一過性（通常<strong>2〜3日以内に軽快</strong>）に<strong>全身の不随意運動</strong>（多発性ミオクローヌス）と<strong>アステリクシス</strong>が生じる症候群として報告されました<sup>[21]</sup><sup>[22]</sup>。</p>
+<p>特徴的なのは<strong>患者の意識がほぼ清明に保たれる点</strong>で、見当識も保たれ指示に従った動作が可能です<sup>[23]</sup>。つまり「<strong>羽ばたき振戦があるのに意識障害がない</strong>」という、一見矛盾した所見を呈する良性の病態です<sup>[24]</sup>。日本の<strong>橋本ら</strong>によって<strong>1992年</strong>に初めて提唱されて以来、慢性疾患を持つ高齢者が感染症からの回復期などに発症するケースが報告されています<sup>[25]</sup><sup>[26]</sup>。</p>
+<p>原因は明確ではありませんが、発症の誘因として<strong>軽度の感染症</strong>（尿路感染や肺炎）や<strong>利尿薬の中止</strong>、<strong>向精神薬の開始</strong>などが挙げられており、<strong>大脳皮質の一過性過興奮</strong>を引き起こす軽度の代謝変調が背景に疑われます<sup>[27]</sup>。発作中の脳波でもてんかん性のスパイクは記録されず、非特異的な徐波化のみであったことから「てんかん発作の定義を満たさない」と結論されています<sup>[28]</sup>。</p>
+<h3>TMAの鑑別診断</h3>
+<p>TMAと鑑別すべきはまず<strong>てんかん性ミオクローヌス</strong>（特に<strong>若年ミオクロニーてんかん</strong>など）ですが、こちらは発作が<strong>瞬間的</strong>（一瞬の筋収縮で終わる）で<strong>意識消失</strong>を伴う点で明確に異なります<sup>[29]</sup>。むしろ鑑別上問題となるのは<strong>軽度の急性代謝性脳症</strong>との区別です<sup>[20]</sup>。先述の通り、軽症の肝性脳症や尿毒症でも羽ばたき振戦とミオクローヌスを呈しつつ患者が覚醒しているケースがあり得ます<sup>[30]</sup>。このため血液検査で代謝異常の有無を確認し（<strong>肝機能・アンモニア、腎機能、血糖・電解質</strong>など）<sup>[19]</sup>、異常が全くなければTMAを考えます。</p>
+<p>実際、報告されたTMA症例ではほとんどが<strong>血液検査正常範囲</strong>で、軽微な異常があっても臨床像とかけ離れていたとされています<sup>[18]</sup>。また脳波では、TMAではてんかん波を欠く一方、肝性脳症では<strong>三相波</strong>、尿毒症でも広範な徐波やフェーズリバーサルを伴う放電が多く見られ、鑑別に有用です<sup>[31]</sup>。さらに頭部MRIで新規の脳梗塞や出血がないことを確認し（TMAでは急性病変を欠く）<sup>[32]</sup>、局所病変があればその疾患（脳卒中や中枢神経感染症など）を優先します。</p>
+<p>以上を踏まえてTMAの診断は、「<strong>高齢者で急性に発症し、意識清明を保ったまま数日にわたり持続する多巣性ミオクローヌスとアステリクシス</strong>」という臨床像に合致し、かつ検査で他の原因が否定されることで成立します<sup>[33]</sup><sup>[34]</sup>。治療は自然軽快を待つことになりますが、症状が強い場合は<strong>ジアゼパム</strong>や<strong>クロナゼパム</strong>などベンゾジアゼピン系が奏効しやすいと報告されています<sup>[35]</sup><sup>[36]</sup>。予後は基本的に良好で後遺症を残さず回復しますが、再発することもあるため初回で正しく診断し経過を追うことが肝要です<sup>[37]</sup>。なお、TMAと紛らわしい病態としては脳卒中による<strong>一側性のアステリクシス</strong>も挙げられます。<strong>視床出血</strong>などの病変で反対側の手足に羽ばたき振戦が見られることがあり、片側性の場合は中枢神経系の局所病変を疑います。</p>
+<!-- TMA比較表 -->
+<h3>TMA・代謝性脳症・てんかん性ミオクローヌスの比較</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">TMA（高齢者の一過性ミオクローヌス）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">代謝性脳症（肝性・尿毒症など）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">てんかん性ミオクローヌス（発作性）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>主な背景</strong></td>
+<td>高齢者（慢性疾患＋急性ストレス）</td>
+<td><strong>肝不全・腎不全・呼吸不全</strong>など臓器障害</td>
+<td>（様々：若年例も）しばしばてんかん既往</td>
+</tr>
+<tr>
+<td><strong>意識状態</strong></td>
+<td><strong>清明</strong>（軽度の錯乱に留まる）</td>
+<td><strong>低下</strong>（傾眠〜昏迷）</td>
+<td>多くは瞬間的な意識消失または健忘</td>
+</tr>
+<tr>
+<td><strong>発作・ミオクローヌスの経過</strong></td>
+<td>数日間持続（群発的に反復）</td>
+<td>原因が改善するまで持続（遷延すること多い）</td>
+<td>瞬間的（発作時のみ）※反復しても短時間</td>
+</tr>
+<tr>
+<td><strong>アステリクシス（羽ばたき振戦）</strong></td>
+<td>出現する（症例の<strong>約30〜50%</strong>）</td>
+<td>しばしば陽性（高頻度で出現）</td>
+<td>通常みられない</td>
+</tr>
+<tr>
+<td><strong>血液検査所見</strong></td>
+<td>概ね<strong>正常</strong>（軽微な異常のみ）</td>
+<td>肝・腎機能など<strong>明らかな異常</strong>あり</td>
+<td>発作自体は検査値に反映されない（特異所見なし）</td>
+</tr>
+<tr>
+<td><strong>脳波所見</strong></td>
+<td>正常〜軽度徐波化。<strong>てんかん波なし</strong></td>
+<td>広汎性徐波、肝性なら<strong>三相波</strong>など特徴的変化</td>
+<td><strong>棘波・多棘徐波</strong>などてんかん波（発作と相関）</td>
+</tr>
+<tr>
+<td><strong>予後</strong></td>
+<td><strong>良好</strong>（自然軽快、ただし再発あり）</td>
+<td>原因次第（改善しなければ致死的）</td>
+<td>再発傾向あり（慢性てんかん）</td>
+</tr>
+</tbody>
+</table>
+<p><small>TMA: transient myoclonic state with asterixis; 代謝性脳症: 肝性脳症・尿毒症など; てんかん性ミオクローヌス: 例）若年ミオクロニーてんかん（JME）などにおけるミオクローヌス発作。</small></p>
+<p>上記のように、TMAは軽度の代謝性脳症との鑑別が難しく盲点となり得る症候群です<sup>[38]</sup><sup>[39]</sup><sup>[38]</sup>。臨床的には「<strong>意識清明な羽ばたき振戦</strong>」という所見に注目し、患者が高齢で感染症回復期などの状況にあれば本症を疑います。一方で明らかな意識低下や他の神経学的異常所見（麻痺や感覚障害など）がある場合は、より重篤な広範脳症（代謝性や中枢神経感染症）や器質的脳疾患を疑うべきです<sup>[40]</sup>。</p>
+<!-- その他の鑑別 -->
+<h2 id="others">不随意運動・睡眠時異常行動などその他の鑑別</h2>
+<p>上記以外にも、てんかん発作と紛らわしい発作様症状は多岐にわたります<sup>[14]</sup>。ここでは代表的なものを挙げます。</p>
+<details class="expandable">
+<summary>脳卒中発作</summary>
+<div class="expandable-content">
+<p><strong>脳梗塞</strong>や<strong>TIA（一過性脳虚血発作）</strong>による一過性症状は時にてんかんと誤認されます<sup>[40]</sup><sup>[41]</sup><sup>[42]</sup><sup>[43]</sup>。一側の手足の不随意運動（例：<strong>肢揺さぶり発作</strong>）は一部のTIAで見られることがあり（肢揺さぶり発作：頸動脈狭窄に伴う一過性局所虚血で生じる不随意運動）、数秒〜1分程度でおさまります。</p>
+<p>脳卒中では<strong>脱力発作（drop attack）</strong>様に突然崩れる場合もありますが、この場合は直後に<strong>麻痺や構音障害</strong>など神経脱落所見が残ることが多く、てんかん後の<strong>Todd麻痺</strong>との鑑別が問題になります。また脳卒中急性期にはごくまれに急性発症の不随意運動（<strong>ヘミバリスムス</strong>や<strong>ジスキネジア</strong>）が出現することも報告されています<sup>[48]</sup>。いずれにせよ神経学的所見と<strong>画像検査（MRI）</strong>での評価が重要です。</p>
+</div>
+</details><details class="expandable">
+<summary>睡眠時随伴症（パラソムニア）</summary>
+<div class="expandable-content">
+<p><strong>レム睡眠行動障害（RBD）</strong>や<strong>夜驚症</strong>、<strong>夢中遊行</strong>（睡眠時遊行症）など、睡眠中に発現する異常行動は夜間のてんかん発作と紛らわしいことがあります<sup>[44]</sup><sup>[45]</sup>。特にRBDでは夢見と連動した激しい四肢の動きや発声があり、ベッドパートナーが目撃すると発作と誤解されることがあります。</p>
+<p>しかしRBDは<strong>高齢男性</strong>に多く、発症が<strong>睡眠後期（明け方）</strong>に集中しやすい点、患者はその最中の<strong>夢を想起できる</strong>点、脳波でREM期に筋トーヌスが消失しない所見が得られる点などで区別します。睡眠時のエピソードは<strong>ビデオポリソムノグラフィー検査</strong>で鑑別可能です。なおてんかん発作（特に<strong>前頭葉てんかん</strong>）は睡眠中に頻発することも多く、睡眠時発作とパラソムニアの鑑別は臨床上難しいケースもあります。その際も発作の時間帯や頻度、発作中の様子（複雑な行動の有無、持続時間）、日中の覚醒時には起こらないかなどを手がかりにします。</p>
+</div>
+</details><details class="expandable">
+<summary>運動異常症（不随意運動）</summary>
+<div class="expandable-content">
+<p><strong>ジストニア発作</strong>や<strong>ジスキネジア</strong>、<strong>チック</strong>、<strong>ミオクローヌス発作性運動障害</strong>など、種々の不随意運動が一過性に起これば周囲から発作とみなされることがあります<sup>[14]</sup><sup>[49]</sup>。しかし多くの場合、<strong>意識は保持</strong>されており、自分である程度その動きを抑制できるかどうかが鑑別のポイントです。</p>
+<p>例えば<strong>チック</strong>は一瞬の素早い運動で、本人が一時的に止めることも可能です。<strong>パーキンソン病の振戦</strong>やジストニアは<strong>持続的・律動的な動き</strong>であり<sup>[49]</sup>、てんかんのけいれんが持続的でも不規則である点と異なります<sup>[49]</sup>。また不随意運動は特定の誘因（例えば驚愕や特定の動作）で誘発されることが多く、てんかんのように突発的に生じるとは限りません。</p>
+</div>
+</details><details class="expandable">
+<summary>カタプレキシー（情動脱力発作）</summary>
+<div class="expandable-content">
+<p>笑いや驚きといった強い感情刺激で、突然全身の筋緊張が消失して崩れる発作で、<strong>ナルコレプシー</strong>の症候として知られます。<strong>意識は清明</strong>なまま脱力のみが数秒〜数十秒持続し、すぐ元に戻るのが典型です。感情誘発が明確であること、眼球運動は保たれること、持続中も呼吸や意識は維持されていることなどで強直間代発作による失神（無酸素による弛緩相）とは区別できます。</p>
+</div>
+</details><details class="expandable">
+<summary>一過性全健忘（TGA）</summary>
+<div class="expandable-content">
+<p>中高年に突然発症する記憶の消失発作で、発症後数時間にわたり新しいことを記銘できなくなる病態です。<strong>意識レベルは保たれ応答は可能</strong>ですが、同じ質問を繰り返すなど<strong>前向健忘</strong>が顕著です。多くは<strong>24時間以内に完全回復</strong>し後遺症を残しません。</p>
+<p>てんかんの<strong>側頭葉発作</strong>でも健忘をきたすことがありますが、その場合は通常<strong>数分以内</strong>のエピソードである点、脳波で側頭葉放電が捕捉される点が異なります。またTGAでは<strong>海馬の一過性虚血</strong>が示唆されており、<strong>MRI拡散強調</strong>で海馬に小さな高信号を認めることがあります。TGAは年に1回程度再発することもあるため、繰り返す一過性の健忘発作では側頭葉てんかん発作との鑑別に慎重を期します。</p>
+</div>
+</details>
+<div class="info-box important-box"><span class="info-box-title">📋 鑑別の視点</span>
+<p>以上のように多彩な鑑別疾患がありますが、「<strong>発作が繰り返し起こるか</strong>」という点がてんかんか否かを考えるうえで重要な視点です<sup>[50]</sup>。認知症や器質性疾患による慢性的な症状悪化と異なり、てんかん発作はエピソードごとに発症と回復を繰り返すことが特徴であり<sup>[7]</sup>、症状の発症様式（急性か徐々か）と可逆性に着目することが鑑別のカギとなります。</p>
+</div>
+<!-- 認知症との関係 -->
+<h2 id="dementia">認知症との関係：高齢発症てんかんの見逃しに注意</h2>
+<p>高齢者ではてんかん発作が<strong>認知症と誤診される</strong>ケースが少なくありません<sup>[51]</sup>。例えば高齢発症の部分てんかんでは、発作時にぼんやりして会話が途切れる、呼びかけに反応しなくなる、軽度の記憶障害が一時的に出現するといった症状が中心で、<strong>全身けいれんを伴わない</strong>ことも多いです<sup>[52]</sup><sup>[53]</sup>。一見すると「物忘れがある」「反応が鈍い」程度の印象であるため、初期の認知症や単なる加齢による注意力低下と見なされてしまうことがあります<sup>[54]</sup><sup>[55]</sup>。</p>
+<p>しかし、こうした意識障害や記憶障害が<strong>エピソード的・一過性</strong>に出現し、他の時間帯は正常に戻る場合、実はてんかん発作（<strong>非けいれん性発作</strong>）が起きている可能性があります<sup>[51]</sup><sup>[56]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 認知症とてんかんの鑑別ポイント</span>
+<p>認知症がゆっくり進行する<strong>持続的な症状</strong>であるのに対し、てんかん発作による症状は<strong>発作とともに急に出現し短時間で回復</strong>する点です<sup>[7]</sup>。患者や家族から「<strong>良い時と悪い時の波がある認知機能低下</strong>」との訴えがあれば、てんかん発作の関与を念頭に置きましょう<sup>[56]</sup>。</p>
+</div>
+<p>具体例として、ある時だけ会話のおかしな受け答えをするとか、急に怒り出す発作、突然歩き回る異常行動などが繰り返し起こり、当人はその間の記憶がないという場合、<strong>側頭葉てんかんの複雑部分発作</strong>の表れであることがあります<sup>[56]</sup>。これらは周囲からは「認知症による周辺症状（<strong>BPSD</strong>）」と思われがちですが、てんかん発作であれば<strong>抗てんかん薬治療で劇的に改善</strong>する可能性があります<sup>[51]</sup>。実際、高齢者のてんかんは適切に診断・治療すれば症状が消失し生活の質が向上するケースも多く報告されています<sup>[51]</sup>。</p>
+<p>逆に認知症患者がてんかんを併発することもしばしばあります<sup>[57]</sup>。<strong>アルツハイマー型認知症</strong>ではてんかんの発症リスクが一般高齢者より高いことが知られており<sup>[58]</sup>、背景に脳の変性や萎縮による過興奮があると考えられます。認知症患者で新たに発作様イベントが見られた場合、持続的な認知機能低下（認知症そのもの）なのか、一過性の発作による症状かを見極める必要があります<sup>[57]</sup>。鑑別には<strong>脳波検査</strong>が有用で、発作との関連が示唆される<strong>棘波・徐波複合</strong>などが記録されれば、てんかんの診断につながります<sup>[7]</sup>。判断が難しい場合には<strong>抗てんかん薬の試験的導入</strong>も選択肢となり、症状が明らかに改善すれば発作が関与していた可能性が高まります<sup>[51]</sup>。</p>
+<!-- おわりに -->
+<h2 id="conclusion">おわりに</h2>
+<p>てんかん発作の鑑別診断には、多領域にわたる知識と慎重な観察が求められます。<strong>失神</strong>、<strong>心因性発作</strong>、<strong>代謝性脳症</strong>（TMAを含む）、<strong>睡眠時異常行動</strong>、<strong>運動異常症</strong>、<strong>認知症関連の症状</strong>など、多彩な鑑別項目を統合的に検討することが重要です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 鑑別診断の実践ポイント</span> 発作の<strong>動画記録</strong>や<strong>脳波・MRI</strong>などの客観的データを適切に活用し、必要に応じて各科専門医と連携して診断精度を高めましょう。鑑別を尽くした上で正しく診断・治療することで、不適切な治療を避け患者の予後と生活の質を向上させることができます。普段から「<strong>てんかんと紛らわしい症状</strong>」が存在することを念頭に置き、冷静かつ系統立てた鑑別診断を行う姿勢が大切です<sup>[3]</sup>。</div>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=ATh9k5kTHek" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3 id="references">📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">星山栄成ほか. てんかんと鑑別すべき疾患. 日本内科学会雑誌 105巻8号 (2016):1358-1365</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">星山栄成ほか. てんかんと鑑別すべき疾患. 日本内科学会雑誌 105巻8号 (2016):1358-1365</span></div>
+<div class="ref-item"><span class="ref-numbers">3 46</span> <span class="ref-content">金澤恭子. てんかんと間違われやすい症状や病気について. てんかん市民公開講座資料 (2025)</span></div>
+<div class="ref-item"><span class="ref-numbers">4 9 12</span> <span class="ref-content">音成秀一郎. てんかん発作 vs 心因性発作. HOKUTO記事 (けいれん診療ガイド第13回, 2024)</span></div>
+<div class="ref-item"><span class="ref-numbers">5 8 10 11 13</span> <span class="ref-content">日本神経学会. てんかん治療ガイドライン2018 第14章「心因性非てんかん発作の診断」</span></div>
+<div class="ref-item"><span class="ref-numbers">6 14</span> <span class="ref-content">星山栄成ほか. てんかんと鑑別すべき疾患. 日本内科学会雑誌 105巻8号 (2016):1358-1365</span></div>
+<div class="ref-item"><span class="ref-numbers">7 52 53 55 57 58</span> <span class="ref-content">国立長寿医療研究センター. それって認知症？「てんかん」かも！？ (Web記事, 2021)</span></div>
+<div class="ref-item"><span class="ref-numbers">15 48 49</span> <span class="ref-content">音成秀一郎. けいれん発作と間違えやすい急性期の異常運動. HOKUTO記事 (連載けいれん診療ガイド第9回, 2023)</span></div>
+<div class="ref-item"><span class="ref-numbers">16 17 22 24</span> <span class="ref-content">Asterixis│医學事始　いがくことはじめ</span></div>
+<div class="ref-item"><span class="ref-numbers">18 19 20 21 26 27 28 29 30 31 32 34 36 38 39 40 41 42 43 44 45</span> <span class="ref-content">Hinyan1016 (脳神経内科医). 高齢者に発症するアステリクシスを伴う一過性ミオクローヌス状態（TMA）: 知っておくべき診断と治療. 医知創造ラボ (2025)</span></div>
+<div class="ref-item"><span class="ref-numbers">23 25 33 35 37 59</span> <span class="ref-content">Medixpost | TMA症候群－あまり知られていない病態（その1）</span></div>
+<div class="ref-item"><span class="ref-numbers">50 51 56</span> <span class="ref-content">その物忘れ、認知症じゃないかも…見過ごされる老人てんかん（豊田内科クリニック）</span></div>
+<div class="ref-item"><span class="ref-numbers">54</span> <span class="ref-content">実は多い高齢者のてんかん｜症状や治療法、認知症との相違点を解説 | 認知症DOC</span></div>
+<div class="ref-item"><span class="ref-numbers">59</span> <span class="ref-content">Hashimoto S, 他. Transient myoclonic state with asterixis in elderly patients: a new syndrome? J Neurol Sci. 109(1992):132–139</span></div>
+<div class="ref-item"><span class="ref-numbers">33</span> <span class="ref-content">土田哲也 他. Transient Myoclonic State (TMA)の臨床的特徴. Clin Neurol Neurosurg 139(2015):192–198</span></div>
+<div>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F12%2F12%2F170644" title="機能性発作（Functional Seizures）管理ガイドライン2025：AAN実践指針の要点 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/12/12/170644">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F12%2F15%2F134620" title="救急外来でのてんかん発作（研修医対象定例研修会） - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/12/15/134620">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F12%2F22%2F231941" title="てんかん後精神病（Postictal Psychosis：PIP）総説 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/12/22/231941">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F12%2F24%2F090816" title="日本における抗てんかん薬の定期検査とモニタリングまとめ - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/12/24/090816">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F06%2F025400" title="抗てんかん薬内服患者の全身麻酔周術期管理 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/06/025400">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F08%2F181551" title="2026年最新・てんかん診療アップデート ～非専門医が知っておくべきポイント～ - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/08/181551">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F13%2F234631" title="自己免疫性脳炎後てんかんにおける治療終了戦略 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/13/234631">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F15%2F150535" title="てんかんの移行期医療の重要性と現状 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/15/150535">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F17%2F085422" title="カルバマゼピンの薬物相互作用：機序・臨床意義と対策 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/17/085422">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F17%2F093117" title="妊娠でだけ発作が出るLTG症例：血中濃度が&quot;1/3&quot;になる人をどう守るか - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/17/093117">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F01%2F21%2F111058" title="良性成人型家族性ミオクローヌスてんかん（BAFME）総説 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/01/21/111058">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+</div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "てんかん発作との鑑別診断",
+  "description": "てんかん発作との鑑別診断",
+  "thumbnailUrl": "https://img.youtube.com/vi/ATh9k5kTHek/maxresdefault.jpg",
+  "uploadDate": "2026-01-31",
+  "contentUrl": "https://www.youtube.com/watch?v=ATh9k5kTHek",
+  "embedUrl": "https://www.youtube.com/embed/ATh9k5kTHek"
+}
+</script>

@@ -1,0 +1,471 @@
+<div class="medical-article">
+<p>コメント</p>
+<p>一般向けの疾患説明ページと動画を作成していこうと思います。全患者の疾患をいずれは網羅したいですが、まずは認知症からスタートです。</p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="認知症とは？ ― 症状・原因・受診の目安、そして最新治療まで専門医がやさしく解説">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260212/20260212180412.png" alt="認知症とは？ ― 症状・原因・受診の目安、そして最新治療まで専門医がやさしく解説" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">認知症とは？ ― 症状・原因・受診の目安、そして最新治療まで専門医がやさしく解説</figcaption>
+</figure>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/cm9vm-5flXI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="認知症：正しく知り、早く動く。最新治療「レカネマブ」まで専門医が徹底解説！" id="widget2"></iframe></p>
+<p><strong><a href="https://docs.google.com/presentation/d/12m5v7tABWgu8q0WCsSRD3ag4DiWkyX5q/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank">認知症とは？スライド</a></strong></p>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>認知症とは？ ― 症状・原因・受診の目安、そして最新治療まで専門医がやさしく解説</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 認知症とは？</a></li>
+<li><a href="#section2">2. こんな症状があれば要注意</a></li>
+<li><a href="#section3">3. なぜ起きるの？ ― 認知症の種類</a></li>
+<li><a href="#section4">4. 検査では何をする？</a></li>
+<li><a href="#section5">5. 治療について</a></li>
+<li><a href="#section6">6. よくある質問</a></li>
+<li><a href="#section7">7. 受診の目安まとめ</a></li>
+<li><a href="#section8">8. まとめ</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">1. 認知症とは？</h2>
+<p><strong>認知症</strong>とは、<strong>記憶・判断・理解などの認知機能が低下</strong>し、<strong>日常生活に支障が出る状態</strong>を指します。単なる「年相応の物忘れ」とは異なり、以下のような変化が見られます。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 認知症に特徴的な変化</span>
+<p>・買い物や金銭管理が難しくなる<br />・同じことを何度も繰り返す<br />・生活全体の段取りがうまくいかなくなる</p>
+</div>
+<p>日本では高齢化に伴い増加しており、<strong>65歳以上の約6〜7人に1人</strong>が認知症と推定されています。</p>
+<!-- セクション2 -->
+<h2 id="section2">2. こんな症状があれば要注意</h2>
+<h3>初期によく見られる変化</h3>
+<p>・最近の出来事を忘れる<br />・同じ質問を何度もする<br />・物の置き場所を忘れる<br />・料理や仕事の段取りが悪くなる</p>
+<h3>進行すると</h3>
+<p>・日付や場所がわからなくなる<br />・服の着方がわからない<br />・性格や行動が変わる</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 救急受診が必要な場合</span>
+<p>・<strong>数日〜数週間で急激に悪化</strong><br />・<strong>発熱</strong>や<strong>強い頭痛</strong><br />・<strong>けいれん</strong>や<strong>意識障害</strong></p>
+<p>急に悪くなった場合は、慢性の認知症ではなく、<strong>別の急性疾患</strong>の可能性があります。</p>
+</div>
+<!-- セクション3 -->
+<h2 id="section3">3. なぜ起きるの？ ― 認知症の種類</h2>
+<p>認知症にはいくつかのタイプがあります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な種類</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>アルツハイマー型認知症</strong></td>
+<td>最も多い。ゆっくり進行</td>
+</tr>
+<tr>
+<td><strong>脳血管性認知症</strong></td>
+<td><strong>脳梗塞</strong>などが原因</td>
+</tr>
+<tr>
+<td><strong>レビー小体型認知症</strong></td>
+<td><strong>幻視</strong>や<strong>パーキンソン症状</strong></td>
+</tr>
+<tr>
+<td><strong>前頭側頭型認知症</strong></td>
+<td>性格変化が目立つ</td>
+</tr>
+</tbody>
+</table>
+<h3>アルツハイマー型認知症とは？</h3>
+<p>脳に「<strong>アミロイドβ</strong>」や「<strong>タウ</strong>」と呼ばれる<strong>異常なたんぱく質</strong>がたまり、<strong>神経細胞が減少</strong>していく病気です。通常は年単位でゆっくり進行します。</p>
+<!-- セクション4 -->
+<h2 id="section4">4. 検査では何をする？</h2>
+<p>認知症の診断には、以下の検査が行われます。</p>
+<p>・<strong>問診</strong>（家族からの情報が重要）<br />・<strong>認知機能検査</strong><br />・<strong>血液検査</strong><br />・<strong>MRI</strong></p>
+<p>必要に応じて、<strong>アミロイドPET</strong>や<strong>髄液検査</strong>を行うこともあります。</p>
+<!-- セクション5 -->
+<h2 id="section5">5. 治療について</h2>
+<p>認知症治療は大きく2つに分かれます。</p>
+<h3>① 症状を和らげる治療（従来治療）</h3>
+<p><strong>アルツハイマー型認知症</strong>では、以下の薬剤が使われます。</p>
+<p>・<strong>コリンエステラーゼ阻害薬</strong><br />・<strong>NMDA受容体拮抗薬</strong></p>
+<p>これらは<strong>症状の進行をゆるやかにする薬</strong>であり、脳にたまった異常なたんぱく質を取り除く薬ではありません。</p>
+<h3>② 病気の原因に働きかける治療（疾患修飾薬）</h3>
+<p>近年、大きな話題となっているのが<strong>アミロイドβを除去する薬剤</strong>です。その代表例が<strong>レカネマブ</strong>です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 レカネマブとは？</span>
+<p><strong>レカネマブ</strong>は、脳にたまった<strong>アミロイドβ</strong>に結合し、それを取り除く作用を持つ<strong>抗体薬</strong>です。これまでの薬が「症状を和らげる」のに対し、<strong>病気の進行そのものをゆるやかにする可能性がある薬</strong>と位置づけられています。</p>
+</div>
+<h3>レカネマブの対象患者</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">対象条件</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>早期アルツハイマー型認知症</strong></td>
+<td>認知機能低下が軽度の段階</td>
+</tr>
+<tr>
+<td><strong>軽度認知障害（MCI）</strong></td>
+<td>認知症の前段階</td>
+</tr>
+<tr>
+<td><strong>アミロイド蓄積の確認</strong></td>
+<td>PETや髄液検査で確認が必要</td>
+</tr>
+</tbody>
+</table>
+<p>すべての認知症患者さんに使えるわけではありません。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ レカネマブの注意点</span>
+<p>・<strong>点滴治療</strong>（定期的に通院が必要）<br />・<strong>MRIによる副作用チェック</strong>が必要<br />・<strong>脳出血</strong>や<strong>脳浮腫</strong>のリスク（<strong>ARIA</strong>と呼ばれる変化）<br />・<strong>高額医療</strong></p>
+<p>「夢の新薬」ではありますが、<strong>慎重な適応判断</strong>が必要です。</p>
+</div>
+<!-- セクション6 -->
+<h2 id="section6">6. よくある質問</h2>
+<details class="expandable" open="open">
+<summary>Q. 新薬があるなら、治りますか？</summary>
+<div class="expandable-content">
+<p><strong>完全に治す薬ではありません</strong>。<strong>進行をゆるやかにすること</strong>が目的です。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 誰でも使えますか？</summary>
+<div class="expandable-content">
+<p>いいえ。<strong>早期段階</strong>で、<strong>アミロイドの蓄積が確認された方</strong>が対象です。すべての認知症患者さんに使えるわけではありません。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 副作用はありますか？</summary>
+<div class="expandable-content">
+<p><strong>MRI</strong>で確認が必要な脳の変化（<strong>ARIA</strong>）が起こることがあります。定期的な画像検査によるモニタリングが重要です。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 薬以外に大切なことは？</summary>
+<div class="expandable-content">
+<p><strong>運動</strong>、<strong>社会参加</strong>、<strong>生活習慣病の管理</strong>が重要です。薬物療法と合わせて、日常生活全体を整えることが大切です。</p>
+</div>
+</details><!-- セクション7 -->
+<h2 id="section7">7. 受診の目安まとめ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">受診区分</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">症状・状況</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>早めに外来受診</strong></td>
+<td>物忘れが増えた／家族が変化に気づいた／金銭管理が難しくなった</td>
+</tr>
+<tr>
+<td><strong>救急受診</strong></td>
+<td><strong>急激な悪化</strong>／<strong>意識障害</strong></td>
+</tr>
+</tbody>
+</table>
+<!-- セクション8 -->
+<h2 id="section8">8. まとめ</h2>
+<p><strong>認知症</strong>は決して珍しい病気ではありません。近年は、<strong>早期診断</strong>、<strong>新しい治療薬</strong>、<strong>社会的支援</strong>が大きく進歩しています。</p>
+<p>特に<strong>早期アルツハイマー型認知症</strong>では、<strong>アミロイドを標的とした治療</strong>という新しい選択肢が登場しました。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 最も大切なメッセージ</span>
+<p>「少し気になる」段階で相談することが、将来の治療選択肢を広げることにつながります。<strong>早期受診・早期診断</strong>が、より良い経過への第一歩です。</p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F02%2F02%2F021350" title="一般向けの医学啓発記事のまとめ - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/02/02/021350">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+</div>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=cm9vm-5flXI" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>

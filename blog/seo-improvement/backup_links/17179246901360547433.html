@@ -1,0 +1,436 @@
+<div class="medical-article">
+<div>
+<p>コメント</p>
+<p>Yahooニュースの記事に誤解を生みそうな花粉食物アレルギー症候群の記事があったので、一般向けに記事を作成しました。</p>
+<p> </p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260303/20260303182743.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/PVZ9uOA4BOA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="花粉症の人が果物を食べると口が痒くなるのはなぜ？「PFAS」を専門医レベルでわかりやすく解説！" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/PVZ9uOA4BOA">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>花粉症なのに果物で口がかゆい？ ― 花粉食物アレルギー症候群（PFAS）をわかりやすく解説 ―</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. PFASって何？</a></li>
+<li><a href="#section2">2. どうしてそんなことが起こるの？ ― 交差反応のしくみ</a></li>
+<li><a href="#section3">3. どんな症状が出るの？</a></li>
+<li><a href="#section4">4. どんな食べ物で起こるの？ ― 花粉と食品の対応表</a></li>
+<li><a href="#section5">5. 花粉症の人は果物を食べてはいけない？</a></li>
+<li><a href="#section6">6. 加熱すると大丈夫なことが多い</a></li>
+<li><a href="#section7">7. どれくらい多いの？ ― 疫学データ</a></li>
+<li><a href="#section8">8. どうすればいい？ ― 対処と受診の目安</a></li>
+<li><a href="#section9">9. よくある誤解</a></li>
+<li><a href="#section10">10. まとめ</a></li>
+</ul>
+</div>
+<!-- セクション1：PFASとは -->
+<h2 id="section1">1. PFASって何？</h2>
+<p><strong>花粉食物アレルギー症候群（PFAS：Pollen-Food Allergy Syndrome）</strong>とは、<strong>花粉症</strong>のある人が、特定の<strong>果物</strong>や<strong>野菜</strong>を食べたときに、<strong>口の中がかゆくなったり腫れたりする</strong>現象のことです。英語では <strong>Pollen-Food Allergy Syndrome</strong> と呼ばれます。</p>
+<p>以前は「<strong>口腔アレルギー症候群（OAS：Oral Allergy Syndrome）</strong>」と呼ばれていましたが、現在は<strong>PFAS</strong>という呼称が一般的になっています。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> PFASは花粉症を基盤とする食物アレルギーの一型であり、以前の呼称である<strong>口腔アレルギー症候群（OAS）</strong>とほぼ同義です。花粉症患者の一部にのみ発症し、すべての花粉症患者に起こるわけではありません。</div>
+<!-- セクション2：交差反応のしくみ -->
+<h2 id="section2">2. どうしてそんなことが起こるの？ ― 交差反応のしくみ</h2>
+<p>ポイントは「<strong>似ているタンパク質</strong>」です。</p>
+<p>花粉に含まれるタンパク質と、果物や野菜に含まれるタンパク質が、<strong>構造的に類似している</strong>ことがあります。すると体の免疫系は、食物中のタンパク質を花粉のタンパク質と誤認識し、<strong>アレルギー反応</strong>を起こしてしまいます。</p>
+<p>この現象を<strong>交差反応（こうさはんのう）</strong>といいます。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 交差反応のメカニズム</span> 花粉中のアレルゲンタンパク質と果物・野菜中のタンパク質が<strong>立体構造上の相同性</strong>をもつため、花粉に対して産生された<strong>IgE抗体</strong>が食物中のタンパク質にも結合し、<strong>即時型アレルギー反応</strong>が誘発されます。</div>
+<!-- セクション3：症状 -->
+<h2 id="section3">3. どんな症状が出るの？</h2>
+<p>多くは<strong>軽い症状</strong>にとどまります。</p>
+<h3>主な症状</h3>
+<p><strong>口の中がかゆい</strong>、<strong>唇や舌がピリピリする</strong>、<strong>のどがイガイガする</strong>、<strong>口腔内の軽度腫脹</strong>などが代表的です。ほとんどは<strong>食べてすぐ（数分以内）</strong>に出現します。</p>
+<h3>まれに起こる重症症状</h3>
+<p>頻度は低いものの、<strong>じんましん</strong>、<strong>呼吸困難</strong>、<strong>血圧低下（アナフィラキシー）</strong>が生じる可能性もあります。重症例は多くありませんが、<strong>ゼロではない</strong>ことに注意が必要です。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> PFASの多くは口腔内の軽微な症状にとどまりますが、まれに<strong>アナフィラキシー</strong>に進展する例も報告されています。口腔症状に加え、<strong>全身のじんましん</strong>・<strong>呼吸困難</strong>・<strong>血圧低下</strong>などが出現した場合は、<strong>速やかに医療機関を受診</strong>してください。</div>
+<!-- セクション4：花粉と食品の対応表 -->
+<h2 id="section4">4. どんな食べ物で起こるの？ ― 花粉と食品の対応表</h2>
+<p>PFASの原因食物は、<strong>花粉の種類</strong>によって異なります。以下に代表的な対応関係を示します。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">花粉</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">反応しやすい食べ物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>シラカンバ</strong>（カバノキ科）</td>
+<td><strong>りんご</strong>、<strong>もも</strong>、<strong>さくらんぼ</strong>、梨、大豆（豆乳）など</td>
+</tr>
+<tr>
+<td><strong>イネ科</strong></td>
+<td><strong>メロン</strong>、<strong>スイカ</strong>、<strong>トマト</strong>、オレンジなど</td>
+</tr>
+<tr>
+<td><strong>ブタクサ</strong></td>
+<td><strong>メロン</strong>、<strong>バナナ</strong>、ズッキーニ、キュウリなど</td>
+</tr>
+</tbody>
+</table>
+<p>※地域や個人によって差があり、上記はあくまで代表例です。</p>
+<!-- セクション5：果物を食べてはいけない？ -->
+<h2 id="section5">5. 花粉症の人は果物を食べてはいけない？</h2>
+<p>答えは<strong>「いいえ」</strong>です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 大事なポイント</span> ✔ <strong>花粉症の人すべてがPFASになるわけではありません</strong><br />✔ <strong>症状が出る人だけが対象</strong>です<br />✔ <strong>症状が出ない食べ物を避ける必要はありません</strong></div>
+<p>つまり、「<strong>花粉症だから果物禁止</strong>」というのは<strong>誤り</strong>です。症状が出る特定の食品のみ注意すればよく、必要以上の食事制限はかえって<strong>栄養面のデメリット</strong>につながる可能性があります。</p>
+<!-- セクション6：加熱の影響 -->
+<h2 id="section6">6. 加熱すると大丈夫なことが多い</h2>
+<p>PFASの原因となるタンパク質は、<strong>熱に弱い（易熱性）</strong>ことが多いという大きな特徴があります。</p>
+<p>そのため、<strong>生のりんごでは症状が出る</strong>が、<strong>焼きりんごやジャムなら食べられる</strong>というケースがよくあります。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 加熱とPFASの関係</span> PFASの主要原因タンパク質（<strong>PR-10</strong>ファミリーなど）は<strong>易熱性</strong>であり、加熱・加工により<strong>アレルゲン性が低下</strong>します。ただし、すべてのケースで安全とは限らないため、初回摂取時は注意が必要です。</div>
+<!-- セクション7：疫学データ -->
+<h2 id="section7">7. どれくらい多いの？ ― 疫学データ</h2>
+<p>報告によると、<strong>シラカンバ花粉症の人の30〜70％</strong>にPFASがみられるとされています。一方、<strong>スギ花粉症では比較的少ない</strong>とされます。</p>
+<p>発症頻度には<strong>地域差</strong>が大きく、花粉の飛散状況や食生活によって異なります。</p>
+<!-- セクション8：対処と受診の目安 -->
+<h2 id="section8">8. どうすればいい？ ― 対処と受診の目安</h2>
+<h3>軽い場合</h3>
+<p><strong>症状が出る食品だけを避ける</strong>のが基本です。無理にすべての果物・野菜をやめる必要はありません。加熱調理で摂取可能な場合も多いため、<strong>調理法の工夫</strong>も有用です。</p>
+<h3>強い症状がある場合</h3>
+<p><strong>アレルギー専門医への相談</strong>が推奨されます。必要に応じて<strong>血液検査（特異的IgE検査）</strong>や<strong>皮膚プリックテスト</strong>などの精査を行い、原因食物を正確に特定します。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 受診の目安</span> 以下のような場合は<strong>アレルギー専門医への受診</strong>を検討してください：<br />・口腔症状が<strong>繰り返し起こる</strong>場合<br />・口腔外の症状（<strong>じんましん</strong>、<strong>呼吸困難</strong>など）が出現した場合<br />・どの食品が原因か<strong>はっきりしない</strong>場合<br />・<strong>アナフィラキシー</strong>の既往がある場合</div>
+<!-- セクション9：よくある誤解 -->
+<h2 id="section9">9. よくある誤解</h2>
+<details class="expandable">
+<summary>よくある誤解と正しい理解（クリックで展開）</summary>
+<div class="expandable-content">
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">よくある誤解</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">正しい理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ <strong>花粉症＝果物アレルギー</strong></td>
+<td>花粉症患者のうち<strong>一部のみ</strong>にPFASが発症します。花粉症があるだけで果物アレルギーとは限りません。</td>
+</tr>
+<tr>
+<td>❌ <strong>みんな重症になる</strong></td>
+<td><strong>多くは軽症の口腔内症状</strong>にとどまります。アナフィラキシーはまれです。</td>
+</tr>
+<tr>
+<td>❌ <strong>一生食べられない</strong></td>
+<td><strong>加熱すれば食べられる</strong>ことが多いです。原因タンパク質の多くは易熱性です。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><!-- セクション10：まとめ -->
+<h2 id="section10">10. まとめ</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 PFASのまとめ</span> ・<strong>花粉食物アレルギー症候群（PFAS）</strong>は、花粉症のある人の<strong>一部</strong>に起こる<br />・花粉と構造が類似したタンパク質への<strong>交差反応</strong>が原因<br />・主な症状は<strong>口腔内のかゆみ</strong>など軽症が多い<br />・<strong>症状が出る食べ物だけ注意</strong>すればよい<br />・原因タンパク質は<strong>易熱性</strong>であり、加熱で症状回避が可能なことが多い</div>
+<p><strong>花粉症</strong>があるからといって、必要以上に食事を制限する必要はありません。正しく知ることで、不安を減らすことができます。気になる症状がある場合は、<strong>アレルギー専門医</strong>に相談しましょう。</p>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=PVZ9uOA4BOA" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "花粉症なのに果物で口がかゆい？ ― 花粉食物アレルギー症候群（PFAS）をわかりやすく解説 ―",
+  "description": "花粉症なのに果物で口がかゆい？ ― 花粉食物アレルギー症候群（PFAS）をわかりやすく解説 ―",
+  "thumbnailUrl": "https://img.youtube.com/vi/PVZ9uOA4BOA/maxresdefault.jpg",
+  "uploadDate": "2026-03-03",
+  "contentUrl": "https://www.youtube.com/watch?v=PVZ9uOA4BOA",
+  "embedUrl": "https://www.youtube.com/embed/PVZ9uOA4BOA"
+}
+</script>

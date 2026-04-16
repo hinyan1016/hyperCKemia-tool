@@ -1,0 +1,428 @@
+<div class="medical-article">
+<div class="medical-article">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251231/20251231231738.png" width="327" height="493" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>AIと出会った1年──学習の革命を、個人が体感する時代へ</h1>
+<p>🎍 <strong>新年あけましておめでとうございます。</strong></p>
+<p>2026年最初の投稿は、AIと歩んだ2025年を振り返りたいと思います。</p>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">Deep Researchとの出会い──「次の段階」の始まり</a></li>
+<li><a href="#section2">「ブログを書く」という行為の根本的変化</a></li>
+<li><a href="#section3">学習の感覚が変わった</a></li>
+<li><a href="#section4">情報格差の拡大</a></li>
+<li><a href="#section5">文章から、スライド・動画へ</a></li>
+<li><a href="#section6">AIと出会えたことの幸運</a></li>
+<li><a href="#section7">2026年に向けて</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">Deep Researchとの出会い──「次の段階」の始まり</h2>
+<p><strong>2025年2月</strong>、<strong>ChatGPT</strong>で「<strong>Deep Research</strong>」が使えるようになったとき、私ははっきりと「次の段階に入った」と感じました。</p>
+<p>それまでの生成AIは、どうしても<strong>ハルシネーション</strong>（もっともらしいが誤った回答）がつきまとい、使う側が常に裏取りをする必要がありました。便利ではあるけれど、「参考意見」以上にはなかなか使いにくい。そんな立ち位置だったと思います。</p>
+<p>ところが<strong>Deep Research</strong>が登場してから、状況は一変しました。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 Deep Researchの革新性</span> AIが実際に<strong>検索を行い</strong>、<strong>一次情報にあたり</strong>、<strong>根拠を示し</strong>、<strong>引用箇所へのリンク</strong>まで明確にしたうえで回答を返してくる。しかも、その構成は人間が論文や解説記事を書くときの思考過程に非常に近い。</div>
+<p>正直に言えば、この段階で私は「<strong>これはもう、人間の情報整理能力を一部で超えている</strong>」と感じました。</p>
+<!-- セクション2 -->
+<h2 id="section2">「ブログを書く」という行為の根本的変化</h2>
+<p>ブログ作成は、これまでかなりの労力を要する作業でした。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ステップ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">従来の作業内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. テーマ決定</strong></td>
+<td>何を書くか検討・選定</td>
+</tr>
+<tr>
+<td><strong>2. 情報収集</strong></td>
+<td>複数のソースから情報を集める</td>
+</tr>
+<tr>
+<td><strong>3. 根拠確認</strong></td>
+<td>信頼できる情報源かどうか検証</td>
+</tr>
+<tr>
+<td><strong>4. 構成検討</strong></td>
+<td>論理的な流れを設計</td>
+</tr>
+<tr>
+<td><strong>5. 文章作成</strong></td>
+<td>読みやすい文章にまとめる</td>
+</tr>
+</tbody>
+</table>
+<p>一つの記事を書くのに、悩みながら何時間もかかることは珍しくありません。</p>
+<p>しかし<strong>Deep Research</strong>を使うようになってから、この「<strong>重たい前半作業</strong>」をAIが極めて高精度に肩代わりしてくれるようになりました。</p>
+<p>しかも、出てくる内容は単なる要約ではありません。<strong>論点が整理され</strong>、<strong>反対意見も含め</strong>、<strong>読み手を想定した構成</strong>になっている。</p>
+<p>自分は「考えなくてよくなった」のではなく、<strong>より高いレベルの思考に集中できるようになった</strong>、そんな感覚に近いと思います。</p>
+<!-- セクション3 -->
+<h2 id="section3">学習の感覚が変わった</h2>
+<p>この1年で最も強く感じたのは、</p>
+<div class="info-box important-box"><span class="info-box-title">📋 学習の質的変化</span> <strong>知識が増えるスピードが、これまでとは桁違いになった</strong>ということです。</div>
+<p>わからないことを調べるたびに、「断片的な情報」ではなく「<strong>背景・根拠・現在の位置づけ</strong>」まで含めて理解できる。</p>
+<p>すると、<strong>学ぶこと自体が楽しくなる</strong>。「勉強しなければ」ではなく、「<strong>知りたいから進む</strong>」感覚に自然と切り替わっていきました。</p>
+<p>これは、単なる効率化ではなく、<strong>学習体験そのものの質が変わった</strong>と言ってよいと思います。</p>
+<!-- セクション4 -->
+<h2 id="section4">情報格差の拡大</h2>
+<p>同時に、強烈に感じたのが<strong>情報格差</strong>の問題です。</p>
+<p>このレベルのAIを使う人と、使わずに従来の方法だけで情報収集をする人。その差は、もはや「少し詳しい・少し早い」というレベルではありません。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260101/20260101001445.png" width="1200" height="564" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 拡大する格差</span> <strong>得られる情報量</strong>、<strong>思考の深さ</strong>、<strong>学習のスピード</strong>、<strong>アウトプットの質</strong>──あらゆる面で、差は<strong>指数関数的</strong>に広がっていく。</div>
+<p>これは決して誇張ではなく、<strong>AIを扱えるかどうかが、知的生産における前提条件になりつつある</strong>と実感しています。</p>
+<!-- セクション5 -->
+<h2 id="section5">文章から、スライド・動画へ</h2>
+<p>さらにこの流れに追い打ちをかけたのが、<strong>Google AI Studio</strong>をはじめとする<strong>音声生成・画像生成AI</strong>の進歩でした。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">技術</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">実現できること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text-to-Speech</strong></td>
+<td>自然な音声の生成</td>
+</tr>
+<tr>
+<td><strong>画像生成AI</strong></td>
+<td>高品質な画像の作成</td>
+</tr>
+<tr>
+<td><strong>統合活用</strong></td>
+<td>スライドや動画の制作</td>
+</tr>
+</tbody>
+</table>
+<p>以前なら専門的な知識や時間が必要だったことが、驚くほど簡単に実現できるようになりました。</p>
+<details class="expandable" open="open">
+<summary>私のブログの進化</summary>
+<div class="expandable-content">
+<p>私のブログも、AIの進化とともに形を変えてきました。</p>
+<p>・<strong>Deep Research</strong>を使った高精度な記事</p>
+<p>・視覚的に整理されたスライド</p>
+<p>・内容を補強する動画</p>
+<p>「<strong>個人がここまでできる時代になったのか</strong>」という驚きは、今でも更新され続けています。</p>
+</div>
+</details><!-- セクション6 -->
+<h2 id="section6">AIと出会えたことの幸運</h2>
+<p>振り返ると、この1年はAIと出会えたことで、</p>
+<div class="info-box important-box"><span class="info-box-title">📋 2025年の成果</span> ・<strong>知識量が飛躍的に増え</strong><br />・<strong>学習が楽しくなり</strong><br />・<strong>アウトプットの幅が広がった</strong><br />非常に有意義な時間でした。</div>
+<p>AIは、何かを奪う存在ではなく、「<strong>考えること</strong>」「<strong>学ぶこと</strong>」をもう一段深いところへ連れていく存在なのだと思います。</p>
+<p>この変化は、もう後戻りしません。だからこそ、</p>
+<p><strong>どう使うか</strong><br /><strong>どう向き合うか</strong></p>
+<p>が、これからますます重要になっていくのでしょう。</p>
+<p>少なくとも私は、この流れの中に身を置けていることを、<strong>とても幸運</strong>だと感じています。</p>
+<!-- セクション7（新規追加） -->
+<h2 id="section7">2026年に向けて</h2>
+<p>2026年もこのブログを続けていきます。</p>
+<p>AIの進化は止まりません。むしろ、ここからさらに加速していくでしょう。その変化を<strong>傍観者として眺める</strong>のではなく、<strong>自ら使い、試し、発信する</strong>ことで、より深く関わっていきたい。</p>
+<p>ブログを書くという行為は、単なる情報発信ではありません。調べ、考え、言葉にする過程で、<strong>自分自身の理解が深まる</strong>。そして発信することで、<strong>誰かの学びや気づきにつながる可能性が生まれる</strong>。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260101/20260101001302.png" width="1200" height="581" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<div class="info-box important-box"><span class="info-box-title">🚀 2026年の抱負</span> <strong>AIの進歩を楽しみながら</strong>、その変化を発信していく。<br /><strong>情報発信を通じて</strong>、この時代の波により深く乗っていく。<br />そんな1年にしたいと思います。</div>
+<p>2025年に得た学びを土台に、2026年はさらに一歩踏み込んだ発信ができればと考えています。</p>
+<p><strong>本年もどうぞよろしくお願いいたします。</strong></p>
+</div>

@@ -1,0 +1,566 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="両側視床FLAIR高信号">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251216/20251216221931.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">両側視床FLAIR高信号</figcaption>
+</figure>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>両側視床FLAIR高信号の鑑別診断：実践的アプローチ</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">最優先で除外すべき鑑別（見逃すと危ない）</a></li>
+<li><a href="#section2">カテゴリー別の主な鑑別疾患</a></li>
+<li><a href="#section3">画像パターンからの鑑別アプローチ</a></li>
+<li><a href="#section4">追加検査の優先順位</a></li>
+</ul>
+</div>
+<p><strong>両側視床のFLAIR高信号</strong>は、病変の「<strong>左右対称性</strong>」「<strong>急性かどうか</strong>」「<strong>出血の有無</strong>」「<strong>造影効果</strong>」「<strong>静脈うっ滞の所見</strong>」などでかなり絞ることができます。まずは<strong>見逃すと危ない血管性病変</strong>を最優先で除外するのが実戦的です。</p>
+<h2 id="section1">最優先で除外すべき鑑別（見逃すと危ない）</h2>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 緊急で除外すべき3疾患</span> 以下の血管性病変は見逃すと重篤な転帰をたどる可能性があり、最優先で除外が必要です。</div>
+<h3>1. 脳深部静脈血栓症（内大脳静脈〜直静脈洞血栓）</h3>
+<p><strong>典型的臨床像</strong>：両側視床の浮腫（<strong>FLAIR高信号</strong>）±<strong>点状出血</strong>、<strong>意識障害</strong>、<strong>頭痛</strong>、<strong>けいれん</strong></p>
+<p><strong>画像のヒント</strong>：</p>
+<ul>
+<li><strong>DWI</strong>は「梗塞」より浮腫優位で混在しうる</li>
+<li><strong>SWI/T2*</strong>で<strong>出血成分</strong>を確認</li>
+<li><strong>MRV</strong>で<strong>直静脈洞</strong>や<strong>深部静脈の描出不良</strong></li>
+</ul>
+<div class="info-box important-box"><span class="info-box-title">📋 次の一手</span> <strong>MRV（またはCTV）</strong>を早めに施行</div>
+<h3>2. Percheron動脈（視床傍正中動脈）梗塞（動脈性）</h3>
+<p><strong>典型的臨床像</strong>：急性の<strong>意識障害</strong>、<strong>垂直注視麻痺</strong>、<strong>記憶障害</strong>など</p>
+<p><strong>画像のヒント</strong>：</p>
+<ul>
+<li><strong>両側傍正中視床</strong>に<strong>DWI高信号</strong>（<strong>ADC低下</strong>）</li>
+<li><strong>中脳内側</strong>を伴うことがある（"<strong>V sign</strong>"などの言い方をされるパターン）</li>
+</ul>
+<div class="info-box important-box"><span class="info-box-title">📋 次の一手</span> <strong>DWI/ADC</strong>で急性梗塞を確認、<strong>MRA</strong>も合わせて評価</div>
+<h3>3. 硬膜動静脈瘻（dural AVF）/ 静脈うっ滞（深部静脈還流障害）</h3>
+<p><strong>典型的臨床像</strong>：亜急性〜慢性の<strong>意識変容</strong>、<strong>頭痛</strong>、<strong>けいれん</strong></p>
+<p><strong>画像のヒント</strong>：</p>
+<ul>
+<li>両側視床の<strong>FLAIR高信号</strong>＋<strong>血管拡張/flow void</strong></li>
+<li><strong>MRV</strong>だけで分かりにくいことも</li>
+</ul>
+<div class="info-box important-box"><span class="info-box-title">📋 次の一手</span> <strong>造影MRA/CTA</strong>、必要なら<strong>DSA</strong></div>
+<h2 id="section2">カテゴリー別の主な鑑別疾患</h2>
+<h3>A. 感染・脳炎/脳症</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別のヒント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>日本脳炎</strong>、<strong>ウエストナイル</strong>、<strong>インフルエンザ関連脳症</strong></td>
+<td>視床（＋<strong>基底核</strong>、<strong>脳幹</strong>）に病変が出やすい</td>
+<td><strong>発熱</strong>、<strong>髄液所見</strong>、周辺流行、年齢</td>
+</tr>
+<tr>
+<td><strong>急性壊死性脳症（ANE）</strong></td>
+<td>小児/若年に多いが成人も。両側視床病変＋<strong>出血/壊死</strong>を伴うことあり</td>
+<td><strong>SWI</strong>で出血成分、<strong>肝機能異常</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>B. 代謝・栄養・中毒</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別のヒント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wernicke脳症</strong>（チアミン欠乏）</td>
+<td><strong>内側視床</strong>、<strong>乳頭体</strong>、<strong>第三脳室周囲</strong>、<strong>中脳水道周囲</strong>などがセットで出やすい</td>
+<td>アルコール多飲歴、栄養障害</td>
+</tr>
+<tr>
+<td><strong>浸透圧性脱髄（extrapontine myelinolysis）</strong></td>
+<td>視床・<strong>基底核</strong>・<strong>小脳</strong>などに対称性病変</td>
+<td><strong>低Naの急速補正</strong>などの背景</td>
+</tr>
+<tr>
+<td><strong>低酸素/虚血性脳障害</strong>、<strong>低血糖</strong></td>
+<td>皮質や基底核優位が多いが視床が絡むことも</td>
+<td>心停止歴、低血糖エピソード</td>
+</tr>
+<tr>
+<td><strong>ミトコンドリア病</strong>（<strong>Leigh病</strong>など）</td>
+<td>小児で要注意。対称性の視床・基底核病変</td>
+<td>乳酸上昇、家族歴</td>
+</tr>
+<tr>
+<td><strong>高アンモニア血症/肝性脳症</strong></td>
+<td>典型は<strong>淡蒼球のT1高信号</strong>などだが、重症例では広範な信号変化が出得る</td>
+<td>肝機能異常、アンモニア高値</td>
+</tr>
+</tbody>
+</table>
+<h3>C. 炎症・脱髄・自己免疫</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別のヒント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADEM</strong></td>
+<td>多発性で白質優位だが視床・基底核を巻き込み得る</td>
+<td>小児に多い、先行感染</td>
+</tr>
+<tr>
+<td><strong>NMOSD / MOGAD</strong></td>
+<td>視床や脳幹、<strong>視床下部周辺</strong>などを含むことがある</td>
+<td>視神経炎、脊髄病変の既往</td>
+</tr>
+<tr>
+<td><strong>自己免疫性脳炎</strong></td>
+<td>辺縁系優位が多いが例外あり</td>
+<td><strong>精神症状</strong>、<strong>けいれん</strong>、<strong>低Na</strong>など</td>
+</tr>
+</tbody>
+</table>
+<h3>D. 腫瘍・浸潤性病変</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別のヒント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>両側視床グリオーマ（bithalamic glioma）</strong></td>
+<td>じわじわ進行、腫大、造影は乏しいことも</td>
+<td>緩徐進行性の症状</td>
+</tr>
+<tr>
+<td><strong>中枢神経リンパ腫</strong></td>
+<td><strong>造影増強</strong>、<strong>DWI高信号（拡散制限）</strong>を伴いやすい</td>
+<td>免疫不全状態（HIV、移植後など）</td>
+</tr>
+<tr>
+<td><strong>転移/播種</strong></td>
+<td>結節性造影や髄膜病変の併存</td>
+<td>原発巣の検索</td>
+</tr>
+</tbody>
+</table>
+<h3>E. けいれん関連</h3>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> 鑑別に入れないと誤診しやすい病態です。</div>
+<p><strong>てんかん重積・頻回発作後のperi-ictal変化</strong>：視床（特に<strong>後方視床/"pulvinar"付近</strong>）に信号変化が出ることがあり、片側が多いが状況次第で両側も認められます。<strong>DWI変化</strong>を伴うこともあり、<strong>時間経過で改善</strong>することが多いです。</p>
+<p><strong>鑑別のヒント</strong>：直近の発作/重積、<strong>EEG</strong>、皮質（<strong>海馬</strong>・<strong>島皮質</strong>など）に同時病変がないか確認</p>
+<h3>F. プリオン病</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別のヒント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CJD（クロイツフェルト・ヤコブ病）</strong></td>
+<td>典型は<strong>皮質リボン状</strong>・<strong>尾状核/被殻のDWI高信号</strong></td>
+<td>急速進行性認知症、ミオクローヌス</td>
+</tr>
+<tr>
+<td><strong>variant CJD</strong></td>
+<td>視床後部優位（<strong>pulvinar</strong>）の高信号が有名（"<strong>pulvinar sign</strong>"）</td>
+<td>若年発症、精神症状先行</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> "pulvinar"所見は特異的ではなく、他疾患でも起こり得るため、臨床/検査とセットで評価が必要です。</div>
+<h2 id="section3">画像パターンからの鑑別アプローチ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">まず見るポイント</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">その所見が強いときに上がる鑑別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DWI高信号＋ADC低下</strong>が明瞭（急性）</td>
+<td><strong>Percheron梗塞</strong>、（一部）<strong>リンパ腫</strong>、（発作後変化もあり得る）</td>
+</tr>
+<tr>
+<td><strong>FLAIR優位の浮腫</strong>＋<strong>静脈系の異常</strong>が疑わしい</td>
+<td><strong>深部静脈血栓症</strong>、<strong>dural AVF/静脈うっ滞</strong></td>
+</tr>
+<tr>
+<td><strong>SWI/T2*で出血成分</strong></td>
+<td><strong>静脈血栓症</strong>、<strong>ANE</strong>、<strong>出血性脳炎</strong>など</td>
+</tr>
+<tr>
+<td><strong>内側視床</strong>＋<strong>第三脳室周囲/乳頭体</strong>など"セット病変"</td>
+<td><strong>Wernicke脳症</strong></td>
+</tr>
+<tr>
+<td><strong>対称性で多部位</strong>（視床＋基底核/橋外）</td>
+<td>代謝性（<strong>浸透圧性脱髄</strong>、<strong>ミトコンドリア病</strong>、毒性など）</td>
+</tr>
+<tr>
+<td><strong>腫大・腫瘤性</strong>、造影で<strong>結節/リング</strong></td>
+<td>腫瘍（<strong>グリオーマ</strong>/<strong>リンパ腫</strong>/<strong>転移</strong>）・肉芽腫性病変</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section4">追加検査の優先順位</h2>
+<p>迷ったときの「<strong>安全運転</strong>」として、以下の追加検査を優先的に検討します。</p>
+<details class="expandable">
+<summary>追加検査の詳細（クリックで展開）</summary>
+<div class="expandable-content">
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">検査</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DWI/ADC</strong></td>
+<td>急性梗塞・急性障害かどうか</td>
+</tr>
+<tr>
+<td><strong>SWI/T2*</strong></td>
+<td>出血/微小出血の検出</td>
+</tr>
+<tr>
+<td><strong>MRV（or CTV）</strong></td>
+<td>深部静脈血栓・静脈還流障害</td>
+</tr>
+<tr>
+<td><strong>造影MRI</strong></td>
+<td>腫瘍/炎症性病変の評価</td>
+</tr>
+<tr>
+<td><strong>髄液検査</strong>（必要ならPCR含む）</td>
+<td>脳炎/炎症の評価</td>
+</tr>
+<tr>
+<td><strong>採血</strong></td>
+<td><strong>Na</strong>、<strong>肝腎機能</strong>、<strong>血糖</strong>、<strong>アンモニア</strong>、<strong>ビタミンB1</strong>（状況次第で治療優先）、<strong>自己抗体</strong></td>
+</tr>
+<tr>
+<td><strong>EEG</strong></td>
+<td>重積/発作後変化の裏取り</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<div class="info-box important-box"><span class="info-box-title">📋 実践的ポイント</span> <strong>血管性病変</strong>（脳深部静脈血栓症、Percheron梗塞、dural AVF）は見逃すと致命的となり得るため、まずこれらを優先的に除外することが重要です。画像所見と臨床情報を組み合わせて、系統的にアプローチしましょう。</div>
+</div>

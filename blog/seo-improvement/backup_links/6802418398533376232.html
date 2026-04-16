@@ -1,0 +1,544 @@
+<div class="medical-article">
+<div>音声概要</div>
+<div>
+<p><a href="https://drive.google.com/file/d/1JlC56T3iNlDmd4nNupOZrOrCMbY97xtB/view?usp=sharing" target="_blank">2025年7月 神経学注目論文まとめ.mp3 - Google ドライブ</a></p>
+</div>
+<div class="medical-article">作成者コメント</div>
+<div>ChatGPTのエージェントモードが拾ってきた7月に出た注目論文の紹介をします。</div>
+</div>
+<style>
+/* はてなブログ最適化スタイル */
+.medical-article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .medical-article {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 見出しスタイル */
+.medical-article h1 {
+  font-size: 1.6rem;
+  color: #2c5aa0;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 8px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.medical-article h2 {
+  font-size: 1.3rem;
+  color: #2c5aa0;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 12px;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.medical-article h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.2rem 0 0.6rem 0;
+}
+
+.medical-article h3::before {
+  content: '▶';
+  color: #2c5aa0;
+  margin-right: 8px;
+}
+
+/* 強調表示 */
+.medical-article strong {
+  font-weight: bold;
+  color: #2c5aa0;
+}
+
+.medical-article em {
+  font-style: italic;
+  color: #444;
+}
+
+.medical-article .text-red {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.medical-article .text-blue {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 目次 */
+.toc-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc-box li {
+  margin-bottom: 8px;
+}
+
+.toc-box a {
+  color: #2c5aa0;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 情報ボックス */
+.important-box, .warning-box, .emergency-box {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.important-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2c5aa0;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.emergency-box {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+  border: 1px solid #ddd !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.medical-article .drug-table thead th,
+.medical-article .drug-table th {
+  background-color: #2c5aa0 !important;
+  background: #2c5aa0 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(even) {
+  background: #f8f9fa !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(odd) {
+  background: white !important;
+}
+
+.medical-article table.drug-table {
+  background: transparent !important;
+}
+
+.medical-article table.drug-table * {
+  background-color: inherit;
+}
+
+/* リスト */
+.medical-article ul, .medical-article ol {
+  margin: 16px 0;
+  padding-left: 1.5rem;
+}
+
+.medical-article li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* コード */
+.medical-article code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #d73502;
+}
+
+.medical-article pre {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.medical-article pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+/* 展開可能セクション */
+.medical-details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.medical-details summary {
+  background: #2c5aa0;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: block;
+}
+
+.medical-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.medical-details summary::after {
+  content: '▼ 展開';
+  float: right;
+  font-size: 0.9rem;
+}
+
+.medical-details[open] summary::after {
+  content: '▲ 閉じる';
+}
+
+.medical-details-content {
+  padding: 16px;
+  background: white;
+}
+
+/* バッジとラベル */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.badge-primary { background: #2c5aa0; color: white; }
+.badge-warning { background: #ffc107; color: #212529; }
+.badge-danger { background: #dc3545; color: white; }
+.badge-success { background: #28a745; color: white; }
+
+/* 引用番号 */
+sup {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* 参考文献 */
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+}
+
+.references li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.references-details {
+  margin-top: 16px;
+}
+
+.references-details summary {
+  background: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .medical-article .drug-table {
+    font-size: 0.8rem;
+  }
+  .medical-article .drug-table th,
+  .medical-article .drug-table td {
+    padding: 8px !important;
+  }
+  
+  .important-box, .warning-box, .emergency-box {
+    margin: 12px 0;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>2025年7月に発表された注目の神経学論文</h1>
+<p>2025年7月は、脳卒中や認知症、片頭痛、てんかん、神経免疫疾患など幅広い領域で興味深い報告が相次ぎました。以下に、内容と臨床的意義をまとめます。</p>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#vascular">血管系疾患・急性期治療</a></li>
+<li><a href="#dementia">認知症・加齢に伴う認知機能</a></li>
+<li><a href="#migraine">片頭痛・頭痛疾患</a></li>
+<li><a href="#epilepsy">てんかん・神経免疫疾患</a></li>
+<li><a href="#neuromuscular">神経筋疾患・神経炎症</a></li>
+<li><a href="#others">その他の話題</a></li>
+<li><a href="#summary">まとめ</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<h2 id="vascular">血管系疾患・急性期治療</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>急性脳内出血における血圧管理</strong> – INTERACT試験のプール解析</td>
+<td>欧州神経学会のハイライトで紹介された解析では、4つのINTERACT試験（11,312例）をまとめ、収縮期血圧を1時間以内に140 mmHg未満まで積極的に下げた群は、従来の目標（180 mmHg未満）と比べ、修正Rankinスケールでの機能予後が改善し、神経学的悪化・死亡・重篤な有害事象が減少した<sup>1</sup>。</td>
+<td>急性脳内出血の血圧管理は議論が続いていたが、早期・積極的降圧が安全かつ有効であることを裏付け、救急現場での目標値設定に影響を与える。</td>
+</tr>
+<tr>
+<td><strong>くも膜下出血急性期治療の実践的コンセンサス</strong></td>
+<td>ドイツ語圏の神経集中治療医・神経放射線医による改良デルファイ法を用いたコンセンサスでは、動脈瘤性くも膜下出血の診断手順、侵襲的モニタリング、血圧・体温管理、血管攣縮や遅発性脳虚血の予防・治療、栄養管理、早期手術／血管内治療などについて実践的指針を示した。エビデンスの乏しい領域（治療的低体温やマルチモダルモニタリング）については専門家の意見に基づく推奨とし、標準化されたケアが予後改善につながる可能性を示した<sup>2</sup>。</td>
+<td>既存ガイドラインで取り扱いが不十分なICU管理項目を補完し、臨床現場での統一的な対応を促す。</td>
+</tr>
+<tr>
+<td><strong>脳卒中後の運転能力自己評価</strong></td>
+<td>神経学研究と実践誌の縦断研究では、脳卒中患者12名と健常者17名が4か月間隔で2回、運転技能と自己評価（VSA）を比較した。脳卒中群は健常群より運転能力の自己評価が過大であり、この傾向は6か月後も残存した<sup>3</sup>。</td>
+<td>運転再開の判断に自己評価を用いることは危険であり、専門的評価とリハビリ支援が必要であることを示す。</td>
+</tr>
+<tr>
+<td><strong>ホモシステイン比による抗酸化ストレス評価</strong></td>
+<td>BMC Neurologyの研究では、急性虚血性脳卒中患者66人（うち2型糖尿病併存33人）と対照30人の血漿中還元型と酸化型ホモシステイン比（Hcy/HHcy）を測定し、比率がNIHSSスコアと相関し、AUC0.719–0.735で疾患評価に有用であった<sup>4</sup>。</td>
+<td>糖尿病を伴う脳卒中患者の抗酸化能力指標として有用で、治療効果判定の補助となる可能性がある。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dementia">認知症・加齢に伴う認知機能</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>100歳以上のアミロイドβ蓄積と認知機能</strong></td>
+<td>オランダ100-plus Studyの95名の百寿者を対象とした研究では、脳内アミロイドβ負荷が低い群と高い群に分かれ、高負荷群は認知機能（特に実行機能）が有意に低下していた。一方、高いアミロイドβ負荷でもタウ負荷が低い5名は高い認知機能を維持していた<sup>5</sup>。</td>
+<td>アミロイドβとタウの相互作用が認知保護に関与する可能性があり、百寿者におけるアルツハイマー病抵抗性の理解に役立つ。</td>
+</tr>
+<tr>
+<td><strong>ミトコンドリアDNA m.3243A&gt;G変異と認知障害</strong></td>
+<td>BMC Neurologyの研究はm.3243A&gt;G変異保因者45例中36%に認知障害（13%は重度）を認め、抽象的推論の低下、記憶障害、運動機能低下、実行機能障害が特徴であった。変異負荷率が高いほど認知障害のリスクが高かったが、年齢や性別との関連はなかった<sup>6</sup>。</td>
+<td>このミトコンドリア変異は糖尿病・難聴だけでなく認知症の原因にもなり得ることを示し、早期認知検査やサポートの必要性を示唆する。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="migraine">片頭痛・頭痛疾患</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fremanezumabによる片頭痛とうつ病の併存症に対する効果（UNITE試験）</strong></td>
+<td>主要評価はJAMA Neurologyで報告された。片頭痛と大うつ病性障害を併存する成人353名をfremanezumab群とプラセボ群に割り付けたところ、fremanezumab群は月間片頭痛日数が有意に減少し、うつ症状も改善した。この効果はオープンラベル期にも維持された<sup>7</sup>。</td>
+<td>CGRP抗体療法がうつ症状まで改善する可能性を示し、精神症状を抱える片頭痛患者の治療選択肢となる。</td>
+</tr>
+<tr>
+<td><strong>前駆症状に対するCGRP受容体拮抗薬ubrogepant</strong></td>
+<td>Nature MedicineのPRODROME試験では、片頭痛発作の前兆段階でubrogepantを投与すると、1時間以内に光過敏・音過敏や認知機能障害などの前駆症状が改善した<sup>8</sup>。</td>
+<td>片頭痛の「予兆」に対する早期介入の有効性を示し、発作予防戦略の拡大につながる。</td>
+</tr>
+<tr>
+<td><strong>パーキンソン病患者へのタッチング・コミュニケーション・リリーフ療法 (TCR)</strong></td>
+<td>BMC Neurologyの介入研究では、45例に精神的ケアとTCRを併用した群は通常の看護のみの群より抑うつと睡眠の質が改善し、看護満足度が高かった。生活の質スコアには差がなかった<sup>9</sup>。</td>
+<td>身体接触とコミュニケーションによる補完療法が気分や睡眠を改善し、パーキンソン病患者の全人的ケアに役立つ可能性がある。</td>
+</tr>
+<tr>
+<td><strong>小児片頭痛における睡眠障害とビタミンD</strong></td>
+<td>150名の小児片頭痛患者と対照群を比較したケースコントロール研究では、片頭痛群で睡眠障害が有意に多く、血中ビタミンDが低いほど睡眠障害のリスクが高かった（オッズ比0.008、95%CI 0.023–0.225）。ROC曲線ではカットオフ15.84 ng/mLで感度87.5%、特異度93.7%を示した<sup>10</sup>。</td>
+<td>ビタミンD欠乏が小児片頭痛に伴う睡眠障害の危険因子である可能性を示し、サプリメントの有用性を検討する価値がある。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="epilepsy">てんかん・神経免疫疾患</h2>
+<details class="medical-details">
+<summary>てんかんと神経免疫疾患の詳細研究データ</summary>
+<div class="medical-details-content">
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>脳内抑制性シナプスの除去とてんかん発症機構</strong></td>
+<td>Nature Neuroscienceの研究報告に関するブリーフィングでは、過剰な抑制性シグナルを出すニューロンと星状細胞の補体系活性化によりミクログリアが抑制性シナプスを選択的に除去し、興奮性－抑制性バランスが崩れて神経過興奮が起こることが示された<sup>11</sup>。</td>
+<td>てんかんの発症過程において、ミクログリアが抑制性シナプスを除去する仕組みが新たな治療標的となる可能性を示す。</td>
+</tr>
+<tr>
+<td><strong>抗てんかん薬の性差に関するメタ解析</strong></td>
+<td>Journal of Neurologyの系統的レビューでは、1,778件の研究から60件が性差を検討し、23%の研究で有意差が報告された。多くの報告で男性の方が抗てんかん薬への反応率が高かった<sup>12</sup>。</td>
+<td>抗てんかん薬の効果に性差が存在する可能性があり、治療効果解析に性別を組み込む必要性を強調する。</td>
+</tr>
+<tr>
+<td><strong>免疫チェックポイント阻害薬関連重症筋無力症に対するefgartigimod</strong></td>
+<td>免疫チェックポイント阻害薬投与後に重症筋無力症とミオパチーを発症した60歳女性の症例では、ステロイド治療後も悪化したためefgartigimodを投与し、筋力が顕著に改善した<sup>13</sup>。</td>
+<td>免疫療法関連副作用に対する治療選択肢として、FcRn阻害薬efgartigimodの有効性を示す初報告である。</td>
+</tr>
+<tr>
+<td><strong>抗DPPX抗体関連脳炎の症例報告</strong></td>
+<td>38歳女性が混乱と体重減少で受診し、高力価の抗DPPX抗体を検出された。免疫療法を行ったが症状は悪化し、死亡した<sup>14</sup>。体重減少と混乱が先行症状となり得る点が強調された。</td>
+<td>抗DPPX脳炎は非特異的な前駆症状を呈し診断が遅れやすいため、早期認識と治療介入が重要である。</td>
+</tr>
+<tr>
+<td><strong>MOG抗体関連疾患(MOGAD) が無菌性髄膜炎と多発脳神経炎として発症した症例</strong></td>
+<td>59歳男性が無菌性髄膜炎と脳神経炎で発症し、血清と髄液でMOG抗体陽性となった。ステロイドで髄膜炎症状は改善したが脳神経症状は悪化し、死亡した<sup>15</sup>。</td>
+<td>MOGADは多彩な神経症状を呈することがあり、早期診断・治療の重要性が示される。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<h2 id="neuromuscular">神経筋疾患・神経炎症</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CIDPとGuillain–Barré症候群の鑑別におけるPLRと髄液IL‑8</strong></td>
+<td>GBS患者65例、CIDP患者38例、健常対照65例を解析した研究で、血小板／リンパ球比（PLR）と髄液IL-8の組み合わせによりCIDPとGBSの鑑別精度が向上し、ROC曲線AUC0.827、特異度0.973を示した<sup>16</sup>。</td>
+<td>診断が難しいCIDPとGBSの鑑別に有用なバイオマーカーとなり得る。</td>
+</tr>
+<tr>
+<td><strong>重症筋無力症の発症に関与するサイトカイン</strong></td>
+<td>91種類の循環サイトカインデータとGWASを用いた双方向メンデルランダム化研究では、アデノシンデアミナーゼとCD40リガンドが重症筋無力症のリスクを高め（OR1.16〜1.20）、IL-1α、GDNF、オステオプロテゲリン、TNF-βはリスクを減少させた<sup>17</sup>。</td>
+<td>免疫介在性神経筋疾患の発症に関わる炎症経路が明らかになり、新規治療標的の探索につながる。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="others">その他の話題</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">研究テーマ</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な内容と結果</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的意義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>パーキンソン病向け複合治療利用者層の比較</strong></td>
+<td>ドイツの二つの大学病院で行われた前向き観察研究（PD-MCT群100例、GCT群102例）では、GCT利用者は平均年齢が高く疾病期間が長く、身体機能・認知機能・生活の質が低かった。また、両群に共通する予後因子として「転倒への恐怖」が挙げられた<sup>18</sup>。</td>
+<td>高齢・重症患者の理学療法やリハビリテーション利用の実態を把握し、保険制度や紹介方針の最適化に役立つ。</td>
+</tr>
+<tr>
+<td><strong>神経科医の職業ストレスとバーンアウト</strong></td>
+<td>ドイツ神経学会が318名の研修医と175名の専門医を対象に実施した全国調査では、ストレスの多くが救急室・ICUで発生し、研修医の大多数がバーンアウトリスクにあることが明らかになった。高い患者数、セカンドビクティム現象、コミュニケーション不足が主な原因で、アルコールや薬物など不適切な対処法がバーンアウトリスクを高めていた<sup>19</sup>。</td>
+<td>組織的なオンボーディングやデブリーフィングといった対策が緊急に求められる。</td>
+</tr>
+<tr>
+<td><strong>グリオブラストーマにおける嗅覚機能の予後予測（試験計画）</strong></td>
+<td>前向きコホート研究プロトコルでは、グリオブラストーマ患者64例と健常対照64例を登録し、嗅覚検査（Sniffin' Sticks）やMRIを用いて嗅覚障害が生存期間や認知機能、QOLの独立予測因子となるかを検討する予定である<sup>20</sup>。</td>
+<td>嗅覚評価が脳腫瘍患者のリスク層別化やフォローアップに用いられる可能性がある。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">まとめ</h2>
+<div class="important-box"><strong>📋 重要ポイント</strong><br />2025年7月は、脳内出血やくも膜下出血など急性期疾患の治療指針が更新され、アミロイドβや性差・免疫機序など神経疾患の病態理解が深まりました。片頭痛領域ではCGRP関連薬の応用範囲が拡大し、補完療法や栄養因子の有用性も報告されています。ミクログリアによる抑制性シナプス除去や5-HT2C受容体を介した脈絡叢上皮の分泌機構（妊娠中の母体感染やLSD曝露で誘導され、胚発達に影響する）など<sup>21</sup>、基礎研究でも重要な発見がありました。さらに、医療者自身のバーンアウト問題やリハビリ利用者層の分析など、医療制度改善につながる報告も発表されました。これらの成果は臨床現場の意思決定や将来の研究・政策に生かされると考えられます。</div>
+<!-- 参考文献 -->
+<div id="references" class="references">
+<h3>参考文献</h3>
+<details class="medical-details references-details">
+<summary>参考文献を表示（全21件）</summary>
+<div class="medical-details-content">
+<ol>
+<li>Research Highlights of the Month – July 2025 - EANnews<br /><a href="https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/">https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/</a></li>
+<li>Acute care of aneurysmal subarachnoid hemorrhage: practical consensus statement from a multidisciplinary group of German-speaking neurointensivists and neuroradiologists on behalf of the DIVI neurology section | Neurological Research and Practice | Full Text<br /><a href="https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00407-x">https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00407-x</a></li>
+<li>Stroke survivors show an overestimation of their on-road driving performance | Neurological Research and Practice | Full Text<br /><a href="https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00406-y">https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00406-y</a></li>
+<li>An indicator of antioxidant stress ability to evaluate neurofunctional changes in patients with acute ischemic stroke: preliminary findings | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04295-1">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04295-1</a></li>
+<li>Research Highlights of the Month – July 2025 - EANnews<br /><a href="https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/">https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/</a></li>
+<li>Cognitive impairment profile in patients with the m.3243A&gt; G variant in mitochondrial DNA | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04325-y">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04325-y</a></li>
+<li>Research Highlights of the Month – July 2025 - EANnews<br /><a href="https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/">https://www.eanpages.org/2025/07/16/research-highlights-of-the-month-july-2025/</a></li>
+<li>Ubrogepant alleviates migraine premonitory symptoms | Nature Reviews Neurology<br /><a href="https://www.nature.com/articles/s41582-025-01107-5">https://www.nature.com/articles/s41582-025-01107-5</a></li>
+<li>The impact of touching-communication-relief therapy on Parkinson's disease patients: a spiritual care perspective study | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04300-7">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04300-7</a></li>
+<li>Unraveling the link: exploring what risk factor for sleep disorders among paediatric migraine | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04310-5">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04310-5</a></li>
+<li>Microglia eliminate inhibitory synapses and drive neuronal hyperexcitability in epilepsy | Nature Neuroscience<br /><a href="https://www.nature.com/articles/s41593-025-01983-6">https://www.nature.com/articles/s41593-025-01983-6</a></li>
+<li>Sex differences in antiseizure medications response in people with epilepsy: a systematic review - PubMed<br /><a href="https://pubmed.ncbi.nlm.nih.gov/40679631/">https://pubmed.ncbi.nlm.nih.gov/40679631/</a></li>
+<li>Efgartigimod therapy for immune checkpoint inhibitor–associated myasthenia gravis with myositis: a case report | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04288-0">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04288-0</a></li>
+<li>Anti-dipeptidyl-peptidase-like protein-6 antibody-associated encephalitis masquerading as weight loss and confusion: a case report | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04337-8">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04337-8</a></li>
+<li>Myelin oligodendrocyte glycoprotein antibody-associated disease presenting as aseptic meningitis and multiple cranial neuritis: a case report | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04287-1">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04287-1</a></li>
+<li>An auxiliary diagnostic strategy for distinguishing Guillain–Barré syndrome and chronic inflammatory demyelinating polyneuropathy: combining platelet-to-lymphocyte ratio and cerebrospinal fluid interleukin-8 levels | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04330-1">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04330-1</a></li>
+<li>Circulating inflammatory cytokines and the risk of myasthenia gravis: a bidirectional Mendelian randomization study | BMC Neurology | Full Text<br /><a href="https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04271-9">https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-025-04271-9</a></li>
+<li>User groups of inpatient multidisciplinary therapies for Parkinson's disease in Germany: a bicenter prospective observational study | Neurological Research and Practice | Full Text<br /><a href="https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00409-9">https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00409-9</a></li>
+<li>Work-related stressful events and burnout experienced by residents and specialists in German neurology: prevalence, causes, and coping strategies derived from a nationwide survey | Neurological Research and Practice | Full Text<br /><a href="https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00415-x">https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00415-x</a></li>
+<li>Decoding glioblastoma survival: unraveling the prognostic potential of olfactory function in a prospective observational study | Neurological Research and Practice | Full Text<br /><a href="https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00410-2">https://neurolrespract.biomedcentral.com/articles/10.1186/s42466-025-00410-2</a></li>
+<li>Choroid plexus apocrine secretion shapes CSF proteome during mouse brain development | Nature Neuroscience<br /><a href="https://www.nature.com/articles/s41593-025-01972-9">https://www.nature.com/articles/s41593-025-01972-9</a></li>
+</ol>
+</div>
+</details></div>
+</div>

@@ -1,0 +1,594 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260108/20260108112421.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>高齢者のインフルエンザで言動がおかしいのは、脳症ではなく「せん妄」であることが多い</strong></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/hFPLZLa8TYg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【医師解説】高齢者インフルエンザの「言動がおかしい」は脳症？せん妄？見極めのポイントと対応" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/hFPLZLa8TYg">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>高齢者のインフルエンザで言動がおかしいのは、脳症ではなく「せん妄」であることが多い</h1>
+<p>一般内科医向け：見逃さないポイントと実践アルゴリズム</p>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#conclusion">まず結論（忙しい方向け）</a></li>
+<li><a href="#encephalopathy">1. インフルエンザ脳症の概要</a></li>
+<li><a href="#delirium">2. 高齢者インフルエンザ時の「せん妄」の概要</a></li>
+<li><a href="#redflags">3. まれな「高齢者のインフルエンザ脳症」—疑うべき状況</a></li>
+<li><a href="#algorithm">4. 鑑別アルゴリズム（一般内科向け・実務版）</a></li>
+<li><a href="#explanation">5. 家族への説明：せん妄と脳症をどう伝えるか</a></li>
+<li><a href="#summary">6. まとめ（一般内科医の持ち帰り）</a></li>
+</ul>
+</div>
+<!-- まず結論 -->
+<h2 id="conclusion">まず結論（忙しい方向け）</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 Key Points</span>
+<p>高齢者のインフルエンザで「言動がおかしい」「落ち着かない」「幻覚っぽい」は、ほとんどが<strong>せん妄</strong>です。</p>
+<p><strong>インフルエンザ脳症</strong>は本来、<strong>小児に多い急性・重篤な脳障害</strong>で、成人・高齢者ではまれです。</p>
+<p>高齢者で「<strong>脳症</strong>」を疑うのは、<strong>急速に深い意識障害へ進む</strong>／<strong>けいれん</strong>／<strong>画像で脳浮腫など明確な異常がある</strong>とき。</p>
+<p>日常診療では、<strong>せん妄の原因検索・是正</strong>（低酸素、脱水、低血糖、電解質、薬剤、尿閉・便秘など）と、<strong>"赤旗（red flags）"の見極め</strong>が最重要です。</p>
+</div>
+<!-- セクション1：インフルエンザ脳症 -->
+<h2 id="encephalopathy">1. インフルエンザ脳症の概要（「脳炎」とは別物になりやすい）</h2>
+<h3>1) 定義と特徴</h3>
+<p>いわゆる<strong>インフルエンザ脳症</strong>は、インフルエンザ感染に続いて起こる<strong>急性の脳機能障害</strong>で、しばしば以下を伴います。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な症状・所見</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>意識障害</strong></td>
+<td>急速進行</td>
+</tr>
+<tr>
+<td><strong>けいれん</strong></td>
+<td>重積を含む</td>
+</tr>
+<tr>
+<td><strong>脳浮腫</strong></td>
+<td>画像で確認</td>
+</tr>
+<tr>
+<td><strong>全身重症像</strong></td>
+<td>ショック、DIC、肝障害</td>
+</tr>
+</tbody>
+</table>
+<p>ポイントは、典型例では<strong>ウイルスが脳に直接入って壊す（＝典型的なウイルス脳炎）</strong>というより、<strong>過剰な炎症反応（サイトカインの暴走）や全身状態の破綻が脳に波及する</strong>、という病態が中心になりやすいことです。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> 鑑別として<strong>脳炎・髄膜炎</strong>は常に念頭に置きます。</div>
+<h3>2) 疫学（なぜ"若年者の病気"と言われるか）</h3>
+<p><strong>好発は乳幼児〜学童</strong>（特に小児で多い）で、発熱後<strong>1〜3日以内</strong>など比較的早期に急変することが多いです。予後は軽症から重篤まで幅があり、重症例では<strong>後遺症</strong>や<strong>死亡</strong>もあり得ます。</p>
+<h3>3) 典型的な臨床像（一般内科医が知っておくべき「像」）</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">臨床像</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>発熱→意識障害</strong></td>
+<td>短時間で意識障害が深くなる</td>
+</tr>
+<tr>
+<td><strong>けいれん</strong></td>
+<td>特に反復・重積</td>
+</tr>
+<tr>
+<td><strong>異常行動</strong></td>
+<td>よくみると注意障害・意識障害の一部であることが多い</td>
+</tr>
+<tr>
+<td><strong>画像所見</strong></td>
+<td><strong>脳浮腫</strong>や特徴的病変（<strong>視床病変</strong>など）（小児で有名）</td>
+</tr>
+</tbody>
+</table>
+<h3>4) 初期対応（内科当直での現実的な優先順位）</h3>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 初期対応の優先事項</span>
+<p><strong>ABC</strong>、<strong>低血糖の除外</strong>、<strong>低酸素の是正</strong>（これだけで改善する"脳症もどき"がある）</p>
+<p><strong>けいれん</strong>があれば標準的なけいれん対応（重積ならガイドラインに沿って）</p>
+<p>全身重症（<strong>ショック、DIC、肝腎障害</strong>）があれば<strong>ICU相当</strong></p>
+</div>
+<p>「脳症の治療（<strong>ステロイドパルス</strong>等）」は施設差が大きく、エビデンスも一定しません。少なくとも"単独で内科医が決め打ちで開始する"より、<strong>ICU/神経内科/小児科と連携</strong>し、重症度と鑑別（<strong>脳炎・脳血管障害</strong>など）を並行して進めるのが安全です。</p>
+<!-- セクション2：せん妄 -->
+<h2 id="delirium">2. 高齢者インフルエンザ時の「せん妄」の概要（こちらが本命）</h2>
+<h3>1) せん妄とは（定義をシンプルに）</h3>
+<p><strong>せん妄</strong>は、ざっくり言うと<strong>急性に起こる、注意力の低下を中心とした脳機能の乱れ</strong>で、以下が特徴です。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>日内変動</strong></td>
+<td>夕方〜夜に悪化</td>
+</tr>
+<tr>
+<td><strong>変動性</strong></td>
+<td>良くなったり悪くなったりする</td>
+</tr>
+</tbody>
+</table>
+<p>感染症は代表的な誘因で、<strong>インフルエンザ</strong>は"せん妄を起こす引き金"として非常に強いです。</p>
+<h3>2) なぜインフルエンザでせん妄が起きやすいか</h3>
+<p>高齢者では、感染そのものに加えて次が重なりがちです。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">誘因</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">具体例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>高熱・脱水</strong></td>
+<td>食事水分低下</td>
+</tr>
+<tr>
+<td><strong>低酸素</strong></td>
+<td>肺炎、心不全合併、基礎肺疾患</td>
+</tr>
+<tr>
+<td><strong>電解質異常</strong></td>
+<td><strong>Na異常</strong>など</td>
+</tr>
+<tr>
+<td><strong>血糖異常</strong></td>
+<td><strong>低血糖/高血糖</strong></td>
+</tr>
+<tr>
+<td><strong>環境因子</strong></td>
+<td>睡眠不足、環境変化（救急外来・入院）</td>
+</tr>
+<tr>
+<td><strong>薬剤</strong></td>
+<td><strong>抗コリン作用薬、ベンゾジアゼピン、鎮静薬、オピオイド</strong>等</td>
+</tr>
+<tr>
+<td><strong>身体的要因</strong></td>
+<td><strong>尿閉・便秘・疼痛</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>3) 臨床でよくある「せん妄っぽい」言動</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 せん妄の典型的症状</span>
+<p><strong>見当識障害</strong>、話が飛ぶ、注意が続かない</p>
+<p>「人がいる」「虫がいる」などの<strong>幻視</strong></p>
+<p>落ち着きのなさ、点滴を抜く、帰ると言い出す</p>
+<p><strong>夜間に悪化</strong>しやすい</p>
+<p>でも翌朝は比較的まとも、など<strong>波がある</strong></p>
+</div>
+<h3>4) せん妄の基本対応（薬より先にやること）</h3>
+<p><strong>"原因を取る"のが本体</strong>です。薬は最後の手段にします。</p>
+<details class="expandable">
+<summary>まずやること（入院・外来共通）</summary>
+<div class="expandable-content">
+<p><strong>SpO₂、血糖、体温、血圧</strong>の確認（<strong>低酸素・低血糖</strong>は即対応）</p>
+<p><strong>脱水</strong>があれば補正、<strong>疼痛・尿閉・便秘</strong>の評価</p>
+<p><strong>薬剤整理</strong>（抗コリン、BZ系、眠剤の追加などに注意）</p>
+<p><strong>環境調整</strong>：眼鏡・補聴器、時計/カレンダー、昼夜リズム、同じスタッフ、家族の短時間同席</p>
+<p>不必要なライン・拘束を増やさない（逆に悪化させることがある）</p>
+</div>
+</details><details class="expandable">
+<summary>どうしても危険行動が強いとき</summary>
+<div class="expandable-content">
+<p>"本人や周囲の安全"を守るために、<strong>最小限の薬物療法</strong>を検討</p>
+<p><strong>QT延長、転倒、嚥下、パーキンソニズム、低血圧</strong>など副作用を意識</p>
+<p>「まず鎮静」ではなく、<strong>せん妄の誘因を並行して是正</strong>する</p>
+</div>
+</details><!-- セクション3：赤旗 -->
+<h2 id="redflags">3. まれな「高齢者のインフルエンザ脳症」—疑うべき状況は限られる</h2>
+<p>高齢者でも報告はありますが、日常診療で遭遇する頻度は高くありません。疑うべきなのは、次のような<strong>せん妄の範囲を超える"赤旗"</strong>があるときです。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 脳症を疑う赤旗（red flags）</span>
+<p>短時間で<strong>意識レベルが深く落ちる</strong>（例：数時間で<strong>JCS</strong>が進行）</p>
+<p><strong>けいれん</strong>（特に反復、重積）</p>
+<p><strong>局所神経症状</strong>（片麻痺、失語、明らかな眼球偏倚など）</p>
+<p><strong>変動性に乏しい</strong>（ずっと強い意識障害が持続）</p>
+<p><strong>髄膜刺激症状</strong>、強い頭痛、持続嘔吐</p>
+<p>重篤な全身障害（<strong>ショック、DIC</strong>、著明な<strong>肝障害・腎障害</strong>、重度代謝異常）</p>
+<p>画像で<strong>脳浮腫</strong>や明確な病変が示唆される</p>
+<p>「インフルエンザとしては不釣り合いに重い」神経症状</p>
+</div>
+<p>逆に言うと、"会話はできるが言動が変／夜だけ荒れる／注意が散漫"程度で赤旗が乏しければ、まずは<strong>せん妄として組み立てる</strong>のが合理的です。</p>
+<!-- セクション4：アルゴリズム -->
+<h2 id="algorithm">4. 鑑別アルゴリズム（一般内科向け・実務版）</h2>
+<p>高齢者で「インフル＋言動異常」を見たときの、迷いを減らす流れです。</p>
+<h3>Step 0：最初に命に関わるものを潰す（5分で）</h3>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 最優先確認事項</span>
+<p><strong>SpO₂、血糖、体温、血圧</strong></p>
+<p><strong>低酸素・低血糖</strong>なら即是正</p>
+<p><strong>けいれん</strong>なら標準対応</p>
+<p>服薬歴（<strong>眠剤追加、抗コリン、BZ、オピオイド</strong>など）をざっくり確認</p>
+</div>
+<h3>Step 1：「せん妄らしさ」を確認</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">確認項目</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">せん妄を示唆する所見</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>変動性</strong></td>
+<td>良い時間帯がある</td>
+</tr>
+<tr>
+<td><strong>注意障害</strong></td>
+<td>会話が追えない、指示が入らない</td>
+</tr>
+<tr>
+<td><strong>夜間増悪</strong></td>
+<td>夕方〜夜に悪化する傾向</td>
+</tr>
+<tr>
+<td><strong>基礎疾患</strong></td>
+<td>認知症・感覚障害・身体フレイルがある</td>
+</tr>
+</tbody>
+</table>
+<p>→ これが揃えば、まず<strong>せん妄として原因検索・是正</strong>へ。</p>
+<h3>Step 2：赤旗があるか（ここが分岐点）</h3>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 分岐判断</span>
+<p><strong>赤旗あり</strong> → 脳卒中/髄膜炎・脳炎/脳症を本気で鑑別</p>
+<p><strong>赤旗なし</strong> → せん妄中心（ただし経過で再評価）</p>
+</div>
+<h3>Step 3：検査の優先順位（目安）</h3>
+<details class="expandable">
+<summary>せん妄でまず押さえる基本セット</summary>
+<div class="expandable-content">
+<p><strong>採血</strong>：<strong>CBC、CRP、Na/K/Cl、BUN/Cr、AST/ALT、血糖</strong></p>
+<p>必要に応じて：<strong>血ガス</strong>（<strong>CO₂貯留・低酸素</strong>）、<strong>CK、アンモニア</strong></p>
+<p><strong>尿検査</strong>（尿路感染や脱水評価）、<strong>胸部画像</strong>（肺炎）</p>
+<p>可能なら簡単なせん妄評価（<strong>4AT</strong>や<strong>CAM</strong>など）</p>
+</div>
+</details><details class="expandable">
+<summary>赤旗がある場合（追加）</summary>
+<div class="expandable-content">
+<p><strong>頭部CT</strong>（出血・大梗塞の除外）→可能なら<strong>MRI</strong></p>
+<p><strong>髄膜炎・脳炎</strong>が疑わしければ<strong>髄液検査</strong>（抗菌薬/抗ウイルス薬開始の判断も含めて）</p>
+<p><strong>EEG</strong>は施設状況次第（<strong>非けいれん性てんかん重積</strong>の除外）</p>
+</div>
+</details><!-- セクション5：家族説明 -->
+<h2 id="explanation">5. 家族への説明：せん妄と脳症をどう伝えるか（そのまま使える言い方）</h2>
+<p>家族は「脳の病気？後遺症？薬のせい？」と不安になります。短く、誤解が少ない言い方を用意しておくと、現場が楽になります。</p>
+<h3>A) せん妄の説明（基本形）</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 せん妄の説明テンプレート</span>
+<p>「今の"言動が変"という状態は、<strong>脳にウイルスが入って壊れている</strong>というより、<strong>高熱や脱水、酸素不足、環境変化</strong>などで、<strong>脳が一時的にうまく働けなくなっている状態（せん妄）</strong>と考えています。」</p>
+<p>「これは高齢の方の感染症でよく起こり、<strong>良くなったり悪くなったり波が出る</strong>のが特徴です。原因を一つずつ整えていくと、<strong>数日〜1週間程度で改善</strong>することが多いです。」</p>
+</div>
+<p>（追加で言えると安心されやすい）</p>
+<p>「<strong>夜に悪化しやすい</strong>」「点滴を抜こうとすることもある」</p>
+<p>「まずは<strong>酸素・水分・痛み・便秘・尿</strong>などを整えます」</p>
+<p>「安全のため必要最小限の薬を使うことがあるが、根本は原因治療」</p>
+<h3>B) 脳症の可能性を説明する（赤旗があるとき）</h3>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 脳症疑いの説明テンプレート</span>
+<p>「ただし、今は<strong>意識が急に深く落ちたり</strong>、<strong>けいれんがあったり</strong>して、普通のせん妄より重い可能性があります。」</p>
+<p>「<strong>脳の腫れ（脳浮腫）</strong>や、<strong>脳炎・脳卒中</strong>なども含めて急いで調べます。必要なら<strong>集中治療</strong>が必要になります。」</p>
+</div>
+<h3>C) 「薬（抗インフル薬）のせいでは？」への対応（よくある質問）</h3>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 抗インフルエンザ薬と異常行動について</span>
+<p>「<strong>インフルエンザそのもの</strong>の発熱や体の負担で、せん妄や異常な言動が出ることがあります。薬だけが原因と決めつけるのは難しく、<strong>全身状態（酸素・脱水・電解質・睡眠）を整えること</strong>が最も重要です。薬は必要性と副作用を見ながら調整します。」</p>
+</div>
+<!-- セクション6：まとめ -->
+<h2 id="summary">6. まとめ（一般内科医の持ち帰り）</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 Take Home Message</span>
+<p>高齢者のインフルエンザで「言動がおかしい」は、まず<strong>せん妄として整理する</strong>のが合理的。</p>
+<p><strong>赤旗</strong>（<strong>急速な意識低下、けいれん、局所神経症状、持続する深い意識障害、重篤な全身障害</strong>）があれば、<strong>脳卒中・脳炎・脳症</strong>へ舵を切る。</p>
+<p><strong>せん妄は原因治療が本体</strong>。薬は安全確保のための最小限。</p>
+<p>家族説明は「<strong>脳が一時的に働きにくい</strong>」「<strong>波がある</strong>」「<strong>原因を整えると改善しやすい</strong>」を軸に、脳症の可能性がある場合は重症性と検査方針を明確に。</p>
+</div>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=hFPLZLa8TYg" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-content">本記事は一般内科医向けの臨床実践ガイドとして作成されました。個別の症例については、各施設のプロトコルおよび専門家へのコンサルテーションを参照してください。</span></div>
+</div>
+</div>

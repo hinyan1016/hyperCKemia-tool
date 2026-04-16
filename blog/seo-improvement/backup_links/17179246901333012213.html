@@ -1,0 +1,513 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>スマホ用スライド</div>
+<div>
+<p><a href="https://claude.ai/public/artifacts/136fc58b-ac3c-4d99-8eeb-493c93db5297" target="_blank">https://claude.ai/public/artifacts/136fc58b-ac3c-4d99-8eeb-493c93db5297</a></p>
+<p> </p>
+<p>Podcast</p>
+<p><a href="https://drive.google.com/file/d/1RhB5DXSJJtGcE2pi465X6fLxQw4rSD_h/view?usp=sharing" target="_blank">歴史の教科書比較merged_audio.mp3 - Google ドライブ</a></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="昭和と令和の社会科の教科書比較">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251215/20251215171055.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">昭和と令和の社会科の教科書比較</figcaption>
+</figure>
+<h1><br />昭和（1980年代）と令和（2020年代）の社会科（歴史分野）教科書の比較</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">扱われる歴史上の出来事・人物（教材内容の変化）</a></li>
+<li><a href="#section2">歴史記述の視点・トーン（近代史や戦争の扱い）</a></li>
+<li><a href="#section3">多様性の扱い・国際的視点の導入</a></li>
+<li><a href="#section4">写真・図表・コラムの活用（教材デザイン・構成の変化）</a></li>
+<li><a href="#section5">教育指導要領の変更に伴う構成の違い</a></li>
+<li><a href="#section6">その他の相違点（道徳観・国際理解・価値観の反映）</a></li>
+</ul>
+</div>
+<div class="info-box important-box"><span class="info-box-title">📋 本記事のポイント</span> 約<strong>40年</strong>の時を経て、小中学校の社会科教科書（歴史分野）は内容・構成ともに大きくアップデートされています。取り上げる史実や記述の視点は現代社会の要求に合わせて変化しており、昭和の教科書世代の大人にとっては、令和の教科書は内容も見た目も別物と言えるほど進化しています。各時代の教科書の違いは、単に知識の更新のみならず、<strong>教育を通じて育もうとする価値観の変遷</strong>をも映し出しています。</div>
+<!-- セクション1 -->
+<h2 id="section1">扱われる歴史上の出来事・人物（教材内容の変化）</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>主要な歴史事項は現在と概ね共通するものの、当時の教科書には現在では修正・更新された内容が含まれていました。例えば、<strong>鎌倉幕府の成立年</strong>は源頼朝が征夷大将軍に任命された<strong>1192年</strong>と教えられ（語呂合わせの「<strong>いい国（1192）作ろう</strong>」）、「<strong>聖徳太子</strong>」の呼称もそのまま用いられていました<sup>[1]</sup><sup>[2]</sup>。</p>
+<p>日本最古の貨幣は<strong>和同開珎</strong>（<strong>708年</strong>鋳造）とされ、江戸時代の身分制は<strong>士農工商</strong>の四民身分として説明されていました<sup>[3]</sup>。また、世界史事項ではかつて世界最長の川をナイル川でなくミシシッピ川とする記述が見られるなど、当時の通説に基づいた内容が含まれていました<sup>[4]</sup>（※この川の例は昭和より前の教科書での誤りですが、1980年代時点でも一部古い記述が残存していました）。</p>
+<p>総じて、取り上げられる歴史上の人物は有名な政治指導者や戦国武将など<strong>男性中心</strong>で、女性の歴史上の人物は<strong>卑弥呼</strong>や<strong>紫式部</strong>など極わずかしか登場しませんでした<sup>[5]</sup>。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>新たな研究成果や社会の価値観の変化に伴い、歴史事項の記述が見直されています。例えば<strong>鎌倉幕府の成立</strong>は、頼朝が実質的に権力基盤を確立した<strong>1185年</strong>とされ（語呂合わせも「<strong>いい箱（1185）作ろう</strong>」に変更）、征夷大将軍任命の1192年説は再定義されました<sup>[1]</sup>。</p>
+<p>飛鳥時代の政治を主導した人物も、生前の称号である<strong>厩戸皇子</strong>（うまやどのみこ）の名で記載され、「聖徳太子」という呼び名は用いないのが基本です<sup>[2]</sup>。日本最古の貨幣は1990年代の発見を受け<strong>富本銭</strong>（<strong>687年</strong>頃）と訂正され<sup>[6]</sup>、江戸時代の「士農工商」という身分区分の記述も、実際には画一的な身分制度ではなかったとの説が有力となり教科書から<strong>削除</strong>されています<sup>[7]</sup>。</p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="富本銭と和同開珎">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251215/20251215172948.png" width="1200" height="601" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">富本銭と和同開珎</figcaption>
+</figure>
+<p><br /><br /></p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">項目</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">昭和（1980年代）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">令和（2020年代）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>鎌倉幕府成立</strong></td>
+<td>1192年（いい国作ろう）</td>
+<td>1185年（いい箱作ろう）</td>
+</tr>
+<tr>
+<td><strong>飛鳥時代の人物</strong></td>
+<td>聖徳太子</td>
+<td>厩戸皇子（うまやどのみこ）</td>
+</tr>
+<tr>
+<td><strong>日本最古の貨幣</strong></td>
+<td>和同開珎（708年）</td>
+<td>富本銭（687年頃）</td>
+</tr>
+<tr>
+<td><strong>江戸時代の身分制</strong></td>
+<td>士農工商</td>
+<td>削除（画一的制度ではなかった）</td>
+</tr>
+<tr>
+<td><strong>蒙古襲来</strong></td>
+<td>元寇</td>
+<td>蒙古襲来</td>
+</tr>
+<tr>
+<td><strong>1857年インドの出来事</strong></td>
+<td>セポイの乱</td>
+<td>インド大反乱</td>
+</tr>
+<tr>
+<td><strong>キリシタン摘発行為</strong></td>
+<td>踏み絵</td>
+<td>絵踏</td>
+</tr>
+</tbody>
+</table>
+<p>また、<strong>蒙古襲来</strong>の出来事は以前「元寇」と教えていたものを「蒙古襲来」と表現し直し、<strong>インド大反乱</strong>（1857年）の項目も旧来の「セポイの乱」から「インド大反乱」へ名称が改められています<sup>[8]</sup>。さらに、隠れキリシタン摘発のための行為は「踏み絵」という用語が宗教的配慮から「<strong>絵踏</strong>」に変更されるなど、歴史用語の表現も現代の視点で見直されています<sup>[9]</sup>。</p>
+<p>扱う時代範囲も拡大しており、昭和後期〜平成・令和にかけての出来事（<strong>冷戦の終結</strong>、<strong>インターネットの普及</strong>、平成のバブル崩壊や震災など）まで最新の歴史事項が盛り込まれています。</p>
+<!-- セクション2 -->
+<h2 id="section2">歴史記述の視点・トーン（近代史や戦争の扱い）</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>1980年代当時の教科書の歴史記述は、<strong>自国中心・事実中心</strong>の傾向が強く、戦争や近代史の描写も現在とはトーンが異なっていました。例えば<strong>太平洋戦争期</strong>については、日本国内の状況（国民の戦時下の苦労や被害など）に重点が置かれ、侵略先のアジア諸国で日本軍が与えた被害や加害責任への言及は希薄でした<sup>[10]</sup>。</p>
+<p>当時、いわゆる<strong>従軍慰安婦問題</strong>や<strong>強制連行</strong>などのセンシティブな事柄は教科書に記載されておらず、<strong>植民地支配</strong>や<strong>南京事件</strong>なども詳細には触れられていませんでした<sup>[11]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 第一次教科書問題</span> 1980年代初頭には文部省検定で「<strong>侵略</strong>」を「<strong>進出</strong>」と表現するよう修正させた例もあり、日本軍の行為を婉曲に描写する傾向が見られました。これがいわゆる<strong>第一次教科書問題</strong>として国内外で批判を招きました。</div>
+<p>その一方で、昭和後期には<strong>原爆</strong>や<strong>空襲</strong>の被害、<strong>シベリア抑留</strong>など日本人の戦争体験談を紹介する記述も一部教科書に盛り込まれ始め、戦争の悲惨さや平和の尊さを伝える試みも行われていました。総じて昭和の教科書は、戦争の記述において<strong>加害より被害を強調</strong>し、自国の歴史を比較的控えめなトーンで描いていたと言えます。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>令和時代の教科書では、戦争や近現代史の記述はより<strong>多面的かつ国際的な視点</strong>を取り入れつつあります。現在の主要な教科書では、<strong>日中戦争</strong>や<strong>太平洋戦争</strong>について日本の侵略や加害の事実にも一定のページを割き、<strong>南京事件</strong>や<strong>沖縄戦</strong>の住民被害なども記述されています（ただし記述の詳しさは出版社によって差異があります）<sup>[11]</sup>。</p>
+<p>いわゆる<strong>慰安婦問題</strong>については、政治的議論が続いている背景もあり記述が控えめな傾向は残るものの、韓国やアジアの人々への加害の存在自体には触れられるケースもあります<sup>[11]</sup>。</p>
+<p>全般に、<strong>戦争の悲惨さ</strong>や<strong>平和の希求</strong>、<strong>人権尊重</strong>のメッセージが強調されており、例えば被爆者の証言や世界の核軍縮への動きなど<strong>平和教育的なコラム</strong>が掲載される教科書もあります。さらに、歴史上の出来事を複数の立場から考察させる記述も見られます。例えば「<strong>東京裁判</strong>」を扱う際に連合国側と日本側の受け止めの違いに言及したり、海外の教科書ではどう教えているか紹介するなど、<strong>多角的に歴史認識を捉える工夫</strong>もなされています。</p>
+<p>もっとも、日本の歴史教科書に対しては依然として保守的な修正主義の影響も指摘されており、文部科学省の検定において表現を穏当なものに是正させる圧力は現在でも存在します<sup>[12]</sup>。それでも過去数十年で見れば、令和期の教科書は昭和期に比べて近現代史・戦争について格段に厚みのある記述と、<strong>冷静かつ国際的な視野からの解説</strong>を志向していると言えるでしょう。</p>
+<!-- セクション3 -->
+<h2 id="section3">多様性の扱い・国際的視点の導入</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>昭和期の教科書では、日本社会を構成する人々像は比較的画一的で、<strong>多様性に関する記述はごく限られていました</strong>。歴史上の女性の扱いを見ると、登場人物の大半は男性であり、女性史上の偉人は<strong>卑弥呼</strong>や<strong>北条政子</strong>、<strong>紫式部</strong>など十指に満たない程度でした<sup>[5]</sup>。授業を通じて女性の社会的役割に気づく機会は少なく、生徒は「歴史上の重要人物＝男性」という印象を持ちやすい状況でした<sup>[5]</sup>。</p>
+<p>また、国内の民族的マイノリティ（例えば<strong>アイヌ民族</strong>や<strong>在日韓国・朝鮮人</strong>）に関する記述もほとんどなく、江戸時代の被差別民について触れる程度にとどまりました。外国人労働者や移民、障害のある人々などについても歴史教材で扱われることは皆無に近く、社会科全体を通じても<strong>多文化共生</strong>や<strong>バリアフリー</strong>といったテーマは1980年代当時は顕在化していませんでした（当時の教科書で「外国人」が登場する場面は、海外からの来訪者や観光客に限られていました<sup>[13]</sup>）。</p>
+<p>国際的視点に関しても、社会科では主に外交史や国際連合の仕組みを学ぶ程度で、<strong>世界の中の日本</strong>という観点は限定的でした。例えば日本の開国や近代化も国内事情が中心で語られ、欧米列強やアジア諸国との相互の影響関係を深く考察する記述は多くありませんでした。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>令和期の教科書は、<strong>多様性や国際理解</strong>の観点を取り入れた記述が増えています。<strong>ジェンダー平等</strong>の視点から、従来ほとんど取り上げられなかった女性の歴史上の役割にも光が当てられ始めています。中学校歴史教科書で名前が挙がる女性は依然少数ではあるものの、近年の版では<strong>十数名程度</strong>に増えており<sup>[5]</sup>、近代の<strong>婦人運動</strong>（<strong>平塚らいてう</strong>など）や<strong>女性参政権</strong>の実現といったトピックも扱われます。</p>
+<p><strong>民族的マイノリティ</strong>や<strong>差別の歴史</strong>についても記述が充実し、例えば小学校6年生の教科書の歴史単元では、<strong>在日韓国・朝鮮人</strong>や<strong>アイヌ民族</strong>が歴史的に差別を受けてきた集団として人権問題の文脈で登場します<sup>[14]</sup>。同時に<strong>同和問題</strong>（部落差別）や<strong>障害者への偏見</strong>など、国内の多様性に関わる課題にも触れられています。</p>
+<details class="expandable" open="open">
+<summary>令和期教科書における多様性記述の詳細</summary>
+<div class="expandable-content">
+<p>教科書の記述全般において「さまざまな立場の人々」や各地域の多様な歴史に目を向け、出来事を<strong>多角的に捉える工夫</strong>もされています<sup>[15]</sup>。例えば農民・庶民の暮らしや少数派の視点から見た歴史的出来事の説明、各地のローカルな歴史の紹介（<strong>沖縄の歴史</strong>や<strong>アイヌ文化</strong>など）がコラム等で要所に盛り込まれており、従来は埋もれがちだった声にもスポットが当たります<sup>[15]</sup>。</p>
+<p>国際的視点についても、現在の教科書では日本史と世界史の関連性を意識した記述が増えました。日本の出来事を世界の動向と結びつけて解説したり、年表で日本と世界の出来事を並列して示すなど、<strong>グローバルな枠組み</strong>で歴史を理解させる工夫があります。</p>
+<p>さらに近年は<strong>SDGs</strong>（持続可能な開発目標）に代表される地球規模の課題（貧困や人権、環境問題など）も教材で取り上げられ、国際社会の一員として考えさせる記述が社会科全般で増加しています<sup>[16]</sup>。</p>
+</div>
+</details><!-- セクション4 -->
+<h2 id="section4">写真・図表・コラムの活用（教材デザイン・構成の変化）</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>1980年代の教科書はレイアウトや教材デザインの面でも現在と大きく異なります。当時は紙面レイアウトは<strong>文章主体</strong>で、写真やイラスト、図表の点数も少なめでした。掲載される写真も小さく<strong>白黒</strong>のものが多く、地図やグラフもシンプルなもので視覚的な訴求力は限定的でした。</p>
+<p>例えば歴史上の人物の肖像画や遺跡の写真が教科書に掲載されても点数は限られ、<strong>一つの見開きページに写真が1〜2点</strong>ある程度という構成が一般的でした（1回の授業に対応する見開き2ページに収まるよう編集されていたためです）。コラムや記事欄のような形で本文とは別に解説や豆知識が載ることもほぼなく、余白も現在ほど活用されていませんでした。文字も細かな活字中心で、低学年向け以外イラストや漫画的表現は少なかったと言えます。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>令和期の教科書は<strong>フルカラー化</strong>され、写真・図表・コラムがふんだんに活用された視覚的にリッチな構成になっています。全ページがカラー印刷となった恩恵で、地図やグラフなどは色分けが鮮やかで非常に見やすくなりました<sup>[17]</sup>。統計グラフや年表もカラーで整理され、児童生徒が<strong>直感的に読み取りやすく</strong>デザインされています。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 令和期教科書のデザイン特徴</span>
+<ul>
+<li><strong>フルカラー印刷</strong>による視覚的な訴求力向上</li>
+<li>発掘遺物の写真、復元された建造物や当時の暮らしを再現した想像図を豊富に掲載</li>
+<li>重要事項をまとめた<strong>図解</strong>や、<strong>人物相関図・年表</strong>など補助教材の配置</li>
+<li>歴史人物の逸話を紹介するコラム、当時の人々の生活や国際比較を伝える豆知識コーナーの設置</li>
+<li><strong>QRコード</strong>や専用アプリで関連動画や追加資料にアクセス可能</li>
+</ul>
+</div>
+<p>また、教科書には多数の写真資料やイラストが散りばめられ、歴史の情景を実感できるような工夫が凝らされています。例えば発掘遺物の写真、復元された建造物や当時の暮らしを再現した想像図なども豊富に掲載され、文字だけでなく<strong>ビジュアルからも歴史を学べる</strong>よう配慮されています<sup>[18]</sup>。</p>
+<p>各ページには重要事項をまとめた図解や、人物相関図・年表など補助教材も配置され、理解を助けます。さらに、現代の教科書ではコラム欄も積極的に設けられています。歴史人物の逸話を紹介するコラム、当時の人々の生活や国際比較を伝える豆知識コーナー、あるいは本文の内容に関連した資料文（例えば<strong>聖徳太子の十七条憲法</strong>の抜粋や、<strong>二宮金次郎</strong>のエピソード解説）などが枠で囲まれて掲載され、読み物として興味を引くようになっています<sup>[17]</sup><sup>[18]</sup>。</p>
+<p>紙幅の制約を超えて詳細を載せられる<strong>デジタル教科書・教材との連携</strong>も進み、QRコードや専用アプリで関連動画や追加資料にアクセスできるよう工夫された教科書もあります。総合すると、令和の教科書は「<strong>見てわかる</strong>」「<strong>読んで深める</strong>」ことを重視したレイアウトに進化しており、昭和期のシンプルな紙面と比べて学習者にとって格段に親しみやすいものとなっています。</p>
+<!-- セクション5 -->
+<h2 id="section5">教育指導要領の変更に伴う構成の違い</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>1980年代の教科書は、当時の学習指導要領の方針（いわゆる<strong>第一次ゆとり教育期</strong>）を反映していました。<strong>1977年改訂</strong>の指導要領に基づき、知識偏重の見直しから授業時数や学習内容が削減されており<sup>[19]</sup>、教科書の分量もそれ以前の時代よりややコンパクトでした。</p>
+<p>例えば社会科全体では高度経済成長期までに肥大化した内容を絞り込む措置が取られ、歴史分野でも細かな事項の一部が整理されています（小学校では<strong>縄文時代</strong>や<strong>古代文明</strong>の詳細を簡略化、中学校では世界史事項の一部簡略化など）。</p>
+<p>一方、カリキュラムの構成自体は現在と大きくは変わらず、小学校高学年で日本の歴史概説を学び、中学校では地理・歴史・公民を各学年で順次履修する体系が確立していました（例：中1で地理分野、中2で歴史分野、中3で公民分野<sup>[20]</sup>）。昭和後期時点では高校入試も重視され、多くの学校で歴史の授業進度は<strong>明治以降の近現代に至る前に時間切れ</strong>となりがちという問題も見られました。そのため<strong>1989年</strong>の指導要領改訂では近現代史を重視して教えることが打ち出され、歴史教育では現代まで扱う努力が求められるようになるなど、昭和から平成にかけて徐々に改善策が講じられました。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>現行（<strong>平成29年改訂</strong>）の学習指導要領では「<strong>生きる力</strong>」の育成が掲げられ、教科書の構成にもその理念が反映されています。<strong>2011年</strong>の改訂でいわゆる「<strong>脱ゆとり教育</strong>」となり学習内容が再拡充されたのち、<strong>2017年</strong>の改訂では<strong>思考力・判断力・表現力</strong>の育成が重視されました<sup>[21]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">改訂年</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な方針</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">教科書への影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1977年</strong></td>
+<td>第一次ゆとり教育</td>
+<td>授業時数・学習内容の削減</td>
+</tr>
+<tr>
+<td><strong>1989年</strong></td>
+<td>近現代史重視</td>
+<td>現代まで扱う努力の要請</td>
+</tr>
+<tr>
+<td><strong>2011年</strong></td>
+<td>脱ゆとり教育</td>
+<td>学習内容の再拡充</td>
+</tr>
+<tr>
+<td><strong>2017年</strong></td>
+<td>生きる力の育成</td>
+<td>思考力・判断力・表現力重視</td>
+</tr>
+</tbody>
+</table>
+<p>これに伴い、教科書も単なる知識の羅列ではなく、児童生徒が自ら考える活動を促す構成になっています。例えば各章末に<strong>探究学習のテーマ</strong>が提示され、学んだ歴史事象について自分の意見をまとめ発表する課題が設けられるなど、<strong>能動的学習</strong>につなげる紙面構成です<sup>[22]</sup>。</p>
+<p>また新指導要領では小中高の一貫性が図られ、小学校段階で扱う歴史の範囲がやや拡大されました。具体的には、小学校では従来6年生で明治以降まで概説していた日本の歴史について、世界の歴史的事象にも簡単に触れるようになり、中学校では<strong>日本史と世界史の関連</strong>を意識した叙述が求められています<sup>[15]</sup>。</p>
+<p>近年の教科書では昭和期に比べページ数が増加傾向にあり（カラー化・資料増の影響もあります）、巻末に用語索引や年表を充実させるなど学習補助も手厚くなっています。全体として令和時代の教科書は、新しい指導要領の下で内容が<strong>高度化・深化</strong>しつつ、<strong>学習者主体の学び</strong>を支える構成へと発展しています。</p>
+<!-- セクション6 -->
+<h2 id="section6">その他の相違点（道徳観・国際理解・価値観の反映）</h2>
+<h3>昭和時代（1980年代）の特徴</h3>
+<p>戦後の反省を踏まえた昭和期の教科書は、価値観教育の面では<strong>愛国心や道徳観の直接的な押し付けを避ける傾向</strong>にありました。戦前の「<strong>修身</strong>」に相当する教科は戦後廃止され、<strong>昭和33年（1958年）</strong>改訂で道徳の時間が復活しましたが<sup>[23]</sup>、それは独立した活動であり、社会科教科書自体には道徳的訓話の類はほとんど盛り込まれませんでした。</p>
+<p>1980年代の社会科は<strong>民主主義</strong>や<strong>人権尊重</strong>の理念を基盤に据えつつも、それを説教的に教えるというよりは歴史の事実や公民の制度を通じて学ばせる姿勢でした。愛国心の涵養についても昭和期は極めて慎重で、教科書で国旗国歌を称揚したり日本を賛美するような記述は避けられていました（むしろ<strong>戦争への批判</strong>や<strong>平和国家としての歩み</strong>を淡々と記す内容が中心でした）。</p>
+<p>国際理解教育の面では、昭和末期から徐々に関心が高まりつつありましたが、教材としては「世界の子どもたちの暮らしを紹介する」「国連やユネスコの役割を学ぶ」程度に留まり、<strong>国内の多文化社会に目を向ける内容は皆無</strong>でした。</p>
+<h3>令和時代（2020年代）の特徴</h3>
+<p>令和の教科書では、教育基本法・学習指導要領の理念変化を受けて、道徳的価値観や国際理解に関する記述にも変化が見られます。近年の指導要領では社会科の目標に「<strong>我が国の国土と歴史に対する愛情</strong>」を育てることが明記され、小学校3・4年では「<strong>地域社会に対する誇りと愛情</strong>」にも言及されています<sup>[24]</sup>。</p>
+<details class="expandable" open="open">
+<summary>道徳観・国際理解に関する具体的な記述内容</summary>
+<div class="expandable-content">
+<p>この方針のもと、教科書にも<strong>郷土愛</strong>や<strong>日本の伝統文化</strong>を尊重する記述が散見されます。例えば各地の年中行事や祭り、文化財を紹介し「先人が築いてきた文化を大切に受け継ごう」といった呼びかけをするコラムが設けられるなど、自国の文化や歴史に誇りを持つ態度を養う狙いがうかがえます。</p>
+<p>一方で、価値観の押し付けにならないよう配慮もされており、現代社会の課題（環境問題や人権課題など）について<strong>多角的に考えさせる形</strong>で道徳心を涵養するスタンスです。</p>
+<p>また、グローバル化に対応し<strong>国際理解教育</strong>も重視されています。中学校公民分野では地球規模問題や<strong>SDGs</strong>に関する記述が大幅に増え<sup>[16]</sup>、世界の諸問題（貧困・環境・紛争など）を自分事として捉える学習活動につなげています。</p>
+</div>
+</details>
+<p>英語教育の強化と相まって、社会科でも<strong>異文化理解</strong>や<strong>国際協力</strong>（例：国際連合の持続可能な開発目標や、世界の多文化共生社会の紹介）を扱う記述が見られます。総じて令和期の教科書は、道徳観や国際感覚について昭和期より踏み込んだ内容を含みつつ、それらを押し付けではなく<strong>子ども自身が考え主体的に学ぶ形</strong>で盛り込んでいる点に特徴があります。</p>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">教科書の変更点「今と昔」教育の考え方はこんなに変わった！｜札幌市 学習塾受験｜チーム個別指導塾・大成会. https://passing-notes.com/column/213589/</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">『昭和の教科書と令和の教科書の違い』｜京都府城陽市の個別塾・学習塾｜ナビ個別指導学院 城陽校ブログ. https://www.navi-school.com/school/kyoto/joyo/2022/10/post-497.html</span></div>
+<div class="ref-item"><span class="ref-numbers">3 4</span> <span class="ref-content">教科書内容の比較に関する研究文献（和同開珎・士農工商・地理的誤記に関する記述）</span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">どうしたら社会科で女性の姿が見えるようになるのか――『女性の視点でつくるジェンダー平等教育』｜じんぶん堂. https://book.asahi.com/jinbun/article/14880238</span></div>
+<div class="ref-item"><span class="ref-numbers">6 9</span> <span class="ref-content">教科書の変更点「今と昔」｜大成会（富本銭・絵踏に関する記述）</span></div>
+<div class="ref-item"><span class="ref-numbers">7 8</span> <span class="ref-content">『昭和の教科書と令和の教科書の違い』｜ナビ個別指導学院（士農工商削除・蒙古襲来・インド大反乱に関する記述）</span></div>
+<div class="ref-item"><span class="ref-numbers">10 11 12</span> <span class="ref-content">分断された記憶：歴史教科書とアジアの戦争｜nippon.com. https://www.nippon.com/ja/in-depth/a00703/</span></div>
+<div class="ref-item"><span class="ref-numbers">13 14</span> <span class="ref-content">研究所多文化論文. sa6ab9be4899acea2.jimcontent.com</span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">多面的・多角的に考えられる教科書｜帝国書院. https://www.teikokushoin.co.jp/files/product1/07%E4%B8%AD%E5%9B%B3%E4%B8%AD%E7%A4%BE/07rekishi-all-.pdf</span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">持続可能な社会を目指す｜東京書籍. https://ten.tokyo-shoseki.co.jp/text/chu_current/tokucho/kadai/bousai.html</span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">中学校の歴史教科書で使用する写真に関する一考察｜京都教育大学. https://www.yumpu.com/nl/document/view/17799588/-</span></div>
+<div class="ref-item"><span class="ref-numbers">18</span> <span class="ref-content">「新編 新しい社会 歴史」見本本パンフレット｜東書Eネット・東京書籍. https://ten.tokyo-shoseki.co.jp/text/chu/shakai/rekishi/download/documents/rekishi_pamph_all.pdf</span></div>
+<div class="ref-item"><span class="ref-numbers">19 21</span> <span class="ref-content">社会・地理歴史・公民に関する資料｜文部科学省. https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/071/siryo/__icsFiles/afieldfile/2015/12/14/1365200_2.pdf</span></div>
+<div class="ref-item"><span class="ref-numbers">20</span> <span class="ref-content">山川出版社の中学歴史｜新刊教科書のご案内. https://new-textbook.yamakawa.co.jp/junior-history/</span></div>
+<div class="ref-item"><span class="ref-numbers">22</span> <span class="ref-content">新学習指導要領 批判分析 社会科｜大阪教育文化センター. https://osaka-kyoubun.org/archives/1892</span></div>
+<div class="ref-item"><span class="ref-numbers">23 24</span> <span class="ref-content">文部科学省「学習指導要領」および解説書</span></div>
+<div class="ref-item"><span class="ref-numbers">25 26</span> <span class="ref-content">教科書会社（東京書籍・教育出版・帝国書院など）の資料</span></div>
+</div>
+</div>

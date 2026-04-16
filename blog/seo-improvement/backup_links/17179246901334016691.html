@@ -1,0 +1,546 @@
+<div class="medical-article">
+<div class="medical-article">
+<p>作者コメント</p>
+<p>12月12日（現地時間）Google翻訳にGeminiが搭載されて翻訳精度がすごく上がっています。課金を特にしなくても制度の高い翻訳ができるようになりました。英語の苦手な自分でも海外の一次情報にもすぐに入手できるようになったのは大きな変化です。皆さんもぜひGoogle翻訳使ってください。</p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="Google翻訳の進化">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218125041.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">Google翻訳の進化</figcaption>
+</figure>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== リンク ===== */
+.medical-article a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted var(--primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.medical-article a:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+  border-bottom-style: solid !important;
+}
+
+.medical-article .data-table a {
+  border-bottom: none !important;
+  font-weight: 600 !important;
+}
+
+.medical-article .data-table a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>Google翻訳×英語サイトで、脳神経内科の「情報の遅れ」をゼロにする</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 英語の壁が薄くなった理由</a></li>
+<li><a href="#section2">2. 翻訳を「読む力」に変える基本運用</a></li>
+<li><a href="#section3">3. ブックマーク必須の早見表 12選</a></li>
+<li><a href="#section4">4. 使い分けの型 ─ 迷ったらこの順で当たる</a></li>
+<li><a href="#section5">5. 現場の5分で回る具体例 3つ</a></li>
+<li><a href="#section6">6. 論文仕事にも効く翻訳の使い所</a></li>
+<li><a href="#section7">7. 安全に使うための注意点</a></li>
+<li><a href="#section8">8. 英語サイトを使い倒す小ワザ</a></li>
+<li><a href="#section9">9. 今日からできる導入プラン</a></li>
+</ul>
+</div>
+<p>当直中、<strong>急性めまい</strong>／<strong>初回発作</strong>／<strong>脳梗塞の再灌流適応</strong>など、<strong>「今この患者で、次に何をするか」</strong>を迷わず決めたい場面は毎日あります。ところが現実は、最新のガイドラインや良質な解説は英語に偏りがちで、英語が苦手だと「読みに行く前に疲れる」。この"入口の摩擦"が、医療の質を静かに下げてきました。</p>
+<p>ここに大きな変化が来ています。<strong>Google翻訳がGeminiで強化</strong>され、Chromeで無料のまま"実務レベル"に近づいてきたからです<sup>[1]</sup>。英語が得意でなくても、一次情報に触れる速度は上げられます。</p>
+<h2 id="section1">1. 英語の壁が薄くなった理由</h2>
+<h3>Gemini搭載で「直訳の破綻」が減る</h3>
+<p>Googleは<strong>2025年12月</strong>、<strong>Google翻訳</strong>（アプリ／Web）と検索の翻訳品質を、<strong>Gemini</strong>を用いたより自然で正確な翻訳に更新すると発表しました<sup>[2]</sup>。特に、<strong>慣用句・ローカル表現・スラング</strong>など"文脈が命"の表現で、直訳に引っ張られにくくする狙いが明確です。</p>
+<p>また、この強化は発表時点で<strong>米国・インドから段階的</strong>に、<strong>英語⇄約20言語</strong>（日本語を含む）で展開とされています<sup>[3]</sup>。</p>
+<h3>音声もリアルタイムへ</h3>
+<p>同時に、ヘッドホンでの<strong>音声→音声ライブ翻訳</strong>（ベータ）も開始。米国・メキシコ・インドでAndroid向けに展開され、<strong>70以上の言語をサポート</strong>、<strong>2026年にiOSや国の拡大予定</strong>とされています<sup>[4]</sup>。海外学会や講演を「理解可能な速度」で追える未来に繋がります。</p>
+<h3>対応言語の拡大も進行中</h3>
+<p><strong>2024年</strong>にはGoogle翻訳が<strong>110言語を追加</strong>した大型拡張も実施されています（過去最大規模と説明）<sup>[5]</sup>。言語が増えるほど、国際的な患者資料・研究・教育資源に手が届きやすくなります。</p>
+<h2 id="section2">2. 翻訳を「読む力」に変える基本運用</h2>
+<p>翻訳が強くなるほど大事なのは、<strong>"全部を信じる"ではなく"安全に速く使う"</strong>ことです。おすすめは次の3段階です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 翻訳活用の3段階</span> <strong>① スクリーニング</strong>：Chromeのページ翻訳で全体像を掴む<br /><strong>② 精読</strong>：結論・主要アウトカム・禁忌／例外だけ原文と突合<br /><strong>③ アウトプット</strong>：英文は翻訳を叩き台にして、人間が仕上げる</div>
+<p>Chromeは右クリックやアドレスバーの翻訳ボタンで、ページ全体／選択部分を翻訳できます<sup>[6]</sup>。まずここを設定して「英語ページを開いた瞬間に日本語」を作るのが第一歩です。</p>
+<h2 id="section3">3. ブックマーク必須の早見表 12選</h2>
+<p>「英語サイトを使う」と言っても、全部は要りません。まずは臨床で出番が多い<strong>12個だけ</strong>で十分です。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">カテゴリ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">サイト（英語）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">何が強い？（一言）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">費用感</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>臨床意思決定</td>
+<td><strong><a href="https://www.uptodate.com/" target="_blank" rel="noopener">UpToDate</a></strong></td>
+<td>外来・当直で「次の一手」を最短で確認</td>
+<td>有料（施設契約が多い）</td>
+</tr>
+<tr>
+<td>臨床意思決定</td>
+<td><strong><a href="https://bestpractice.bmj.com/" target="_blank" rel="noopener">BMJ Best Practice</a></strong></td>
+<td>症状からの鑑別・評価手順が見やすい</td>
+<td>有料（施設契約が多い）</td>
+</tr>
+<tr>
+<td>臨床意思決定</td>
+<td><strong><a href="https://www.dynamed.com/" target="_blank" rel="noopener">DynaMed</a></strong></td>
+<td>根拠の取り方が明示され、読みやすい</td>
+<td>有料（施設契約が多い）</td>
+</tr>
+<tr>
+<td>ガイドライン</td>
+<td><strong><a href="https://www.aan.com/practice/guidelines/" target="_blank" rel="noopener">AAN Clinical Practice Guidelines</a></strong></td>
+<td>神経内科領域の推奨がまとまっている</td>
+<td>多くは閲覧可（詳細は条件あり）</td>
+</tr>
+<tr>
+<td>ガイドライン</td>
+<td><strong><a href="https://www.nice.org.uk/guidance/conditions-and-diseases/neurological-conditions" target="_blank" rel="noopener">NICE Neurological conditions</a></strong></td>
+<td>受診→紹介→検査の流れが明確（実装目線）</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>文献検索</td>
+<td><strong><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a></strong></td>
+<td>一次文献検索の標準</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>フルテキスト</td>
+<td><strong><a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" rel="noopener">PubMed Central（PMC）</a></strong></td>
+<td>無料で全文まで読める論文が多い</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>システマティックレビュー</td>
+<td><strong><a href="https://www.cochranelibrary.com/" target="_blank" rel="noopener">Cochrane Library</a></strong></td>
+<td>介入のエビデンスを「まとめ」で確認</td>
+<td>一部無料／契約で拡張</td>
+</tr>
+<tr>
+<td>臨床試験</td>
+<td><strong><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener">ClinicalTrials.gov</a></strong></td>
+<td>進行中試験・結果・プロトコルの入口</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>画像・神経放射線</td>
+<td><strong><a href="https://radiopaedia.org/" target="_blank" rel="noopener">Radiopaedia</a></strong></td>
+<td>症例画像＋鑑別の頭整理が速い</td>
+<td>無料＋有料（上位機能）</td>
+</tr>
+<tr>
+<td>画像・神経放射線</td>
+<td><strong><a href="https://radiologyassistant.nl/neuroradiology" target="_blank" rel="noopener">The Radiology Assistant Neuroradiology</a></strong></td>
+<td>急性期脳梗塞、腫瘍、出血、認知症MRIなどが臨床向け</td>
+<td>無料</td>
+</tr>
+<tr>
+<td>スコア・計算</td>
+<td><strong><a href="https://www.mdcalc.com/" target="_blank" rel="noopener">MDCalc</a></strong></td>
+<td>NIHSSやmRSなどをその場で迷わず</td>
+<td>無料（登録で機能増）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section4">4. 使い分けの型 ─ 迷ったらこの順で当たる</h2>
+<p>英語が苦手だと、迷った瞬間に検索が止まります。そこで<strong>順番を固定してしまう</strong>のがコツです。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 検索の順番（型）</span> <strong>① 今この患者での判断</strong>：<a href="https://www.uptodate.com/" target="_blank" rel="noopener">UpToDate</a> / <a href="https://bestpractice.bmj.com/" target="_blank" rel="noopener">BMJ Best Practice</a> / <a href="https://www.dynamed.com/" target="_blank" rel="noopener">DynaMed</a><br /><strong>② 標準治療や推奨</strong>：<a href="https://www.aan.com/practice/guidelines/" target="_blank" rel="noopener">AAN</a> / <a href="https://www.nice.org.uk/guidance/conditions-and-diseases/neurological-conditions" target="_blank" rel="noopener">NICE</a>（＋必要なら各領域の学会本家へ）<br /><strong>③ 根拠の原著へ</strong>：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a> →（全文は）<a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" rel="noopener">PMC</a>／出版社／図書館<br /><strong>④ 介入の強さを俯瞰</strong>：<a href="https://www.cochranelibrary.com/" target="_blank" rel="noopener">Cochrane</a>（＋余力があれば他のレビュー検索）<br /><strong>⑤ 画像で鑑別を詰める</strong>：<a href="https://radiologyassistant.nl/neuroradiology" target="_blank" rel="noopener">Radiology Assistant</a> → <a href="https://radiopaedia.org/" target="_blank" rel="noopener">Radiopaedia</a><br /><strong>⑥ スコアで共有</strong>：<a href="https://www.mdcalc.com/" target="_blank" rel="noopener">MDCalc</a></div>
+<h2 id="section5">5. 現場の5分で回る具体例 3つ</h2>
+<h3>例1：初回けいれんの評価</h3>
+<p><strong><a href="https://www.uptodate.com/" target="_blank" rel="noopener">UpToDate</a></strong>等で「成人<strong>初回発作</strong>の基本手順」を確認し、<strong><a href="https://www.ilae.org/" target="_blank" rel="noopener">ILAE</a></strong>関連の分類・診断ページをChrome翻訳でざっと通す。<strong><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a></strong>で"review"を1本だけ拾って要点をメモ。これで「<strong>検査の優先順位</strong>」と「<strong>説明の言い方</strong>」が整います。</p>
+<h3>例2：急性期脳梗塞 ─ 画像で迷ったとき</h3>
+<p><strong><a href="https://radiologyassistant.nl/neuroradiology" target="_blank" rel="noopener">Radiology Assistant</a></strong>で"考え方の骨格"を確認。<strong><a href="https://radiopaedia.org/" target="_blank" rel="noopener">Radiopaedia</a></strong>で似た症例を追加で見て鑑別を補強。<strong>NIHSS</strong>や<strong>mRS</strong>は<strong><a href="https://www.mdcalc.com/" target="_blank" rel="noopener">MDCalc</a></strong>で統一してチーム共有。これで迷いの正体が「読影の型の不足」なのか「症例経験の不足」なのか、切り分けが速くなります。</p>
+<h3>例3：ガイドラインが更新されたと聞いたとき</h3>
+<p>まず<strong><a href="https://www.aan.com/practice/guidelines/" target="_blank" rel="noopener">AAN</a>/<a href="https://www.nice.org.uk/guidance/conditions-and-diseases/neurological-conditions" target="_blank" rel="noopener">NICE</a></strong>など"本家"へ。Chrome翻訳で<strong>Recommendation</strong>だけ拾う。変わった点だけ原文を確認し、院内手順に落とす。これで読む量が<strong>10分の1</strong>になります。</p>
+<h2 id="section6">6. 論文仕事にも効く翻訳の使い所</h2>
+<h3>読む：情報収集の速度を上げる</h3>
+<p>コツは、先に<strong>結論→次に方法→最後に限界</strong>の順で読むこと。全部を丁寧に訳し切ろうとしない。</p>
+<h3>書く：英語は下書きを作ってから整える</h3>
+<p>「日本語で骨子→英訳→自分で短く整える」という順にすると、書けない理由の大半が消えます。医学アブストラクトの英訳で<strong>DeepL</strong>と<strong>Google翻訳</strong>を比較した研究でも、<strong>ROUGE指標では大きな差がなく</strong>、研究者が英語論文執筆の一部で機械翻訳を利用し得ると結論されています<sup>[7]</sup>。</p>
+<h2 id="section7">7. 安全に使うための注意点</h2>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 ここを外すと事故る</span> 以下の3点は必ず守ってください。機械翻訳の誤訳が患者安全に直結する可能性があります。</div>
+<h3>注意1：患者個別情報は入れない</h3>
+<p><strong>無料翻訳への貼り付け</strong>は、施設の規定と合わない可能性があります。参考として、企業向けの<strong>Cloud Translation API</strong>では、送信したテキストは翻訳提供のためにのみ使い、第三者共有せず、短時間メモリ上に保持する旨が明記されています<sup>[8]</sup>。<strong>Workspace</strong>の資料でも、Translateに送ったデータは恒久保存せず、翻訳モデルの学習にも使わない旨が説明されています（ただし一時的利用の記載あり）<sup>[9]</sup>。</p>
+<h3>注意2：患者指示文書を機械翻訳に依存しない</h3>
+<p>救急外来の退院指示をGoogle翻訳で翻訳した検証では、<strong>意味が保たれたのは全体で82.5%</strong>でしたが、言語によって<strong>55%〜94%</strong>とばらつきが大きく、結論として「<strong>患者指示に頼るべきではない</strong>」とされています<sup>[10]</sup>。</p>
+<h3>注意3：否定・数字・条件は必ず原文確認</h3>
+<p>翻訳の弱点が出やすいのは、<strong>否定</strong>、<strong>条件</strong>、<strong>数値</strong>です。ここだけ原文に戻る"癖"を付けると事故が減ります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 必ず原文確認すべき3項目</span> <strong>① 否定表現</strong>：「〜ではない」「禁忌」などの否定が正しく訳されているか<br /><strong>② 数値</strong>：用量、投与間隔、基準値などの数字<br /><strong>③ 条件</strong>：「〜の場合のみ」「〜を除く」などの条件付き記述</div>
+<h2 id="section8">8. 英語サイトを使い倒す小ワザ</h2>
+<details class="expandable">
+<summary>検索語の組み立て方</summary>
+<div class="expandable-content">
+<p><strong>症候＋部位＋時間</strong>で組むのが基本です。例：</p>
+<ul>
+<li><strong>acute vestibular syndrome</strong>（急性前庭症候群）</li>
+<li><strong>first seizure adult</strong>（成人初回けいれん）</li>
+<li><strong>thunderclap headache</strong>（雷鳴頭痛）</li>
+</ul>
+</div>
+</details><details class="expandable">
+<summary>ガイドラインの効率的な読み方</summary>
+<div class="expandable-content">
+<p><strong>Recommendation → 根拠 → 例外</strong>の順に拾うと、必要な情報だけを短時間で取得できます。全文を最初から読む必要はありません。</p>
+</div>
+</details><details class="expandable">
+<summary>画像系サイトの使い分け</summary>
+<div class="expandable-content">
+<p><strong>体系は<a href="https://radiologyassistant.nl/neuroradiology" target="_blank" rel="noopener">Radiology Assistant</a></strong>：系統立てた考え方の骨格を確認<br /><strong>症例は<a href="https://radiopaedia.org/" target="_blank" rel="noopener">Radiopaedia</a></strong>：具体的な画像例で鑑別を補強</p>
+<p>この順番で当たると効率的です。</p>
+</div>
+</details><details class="expandable">
+<summary>自分用の訳語メモを作る</summary>
+<div class="expandable-content">
+<p>"毎回訳が揺れる語"を固定するだけで読む速さが上がります。例：</p>
+<ul>
+<li><strong>outcome</strong>：転帰、アウトカム</li>
+<li><strong>endpoint</strong>：エンドポイント、評価項目</li>
+<li><strong>adverse event</strong>：有害事象</li>
+</ul>
+</div>
+</details>
+<h2 id="section9">9. 今日からできる導入プラン</h2>
+<h3>15分でやること ─ まず1回</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 初回セットアップ（15分）</span> <strong>① Chromeの翻訳をON</strong>にして、右クリック翻訳に慣れる<br /><strong>② ブックマークに「12選フォルダ」を作る</strong><br /><strong>③ 自分の専門領域の"本家ガイドライン"を2つだけ追加</strong></div>
+<h3>1週間の回し方 ─ 英語が苦手な人向け</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">曜日</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>月曜</strong></td>
+<td><a href="https://www.uptodate.com/" target="_blank" rel="noopener">UpToDate</a>等で「よくある主訴」1つだけ確認</td>
+</tr>
+<tr>
+<td><strong>水曜</strong></td>
+<td><a href="https://www.aan.com/practice/guidelines/" target="_blank" rel="noopener">AAN</a>/<a href="https://www.nice.org.uk/guidance/conditions-and-diseases/neurological-conditions" target="_blank" rel="noopener">NICE</a>でRecommendationだけ拾う</td>
+</tr>
+<tr>
+<td><strong>金曜</strong></td>
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>で"review"検索→<a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" rel="noopener">PMC</a>で全文1本だけ読む（Chrome翻訳でOK）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">おわりに</h2>
+<p><strong>Gemini</strong>でGoogle翻訳の自然さ・文脈理解が上がり、さらに<strong>ライブ翻訳</strong>まで広がってきました<sup>[1]</sup>。英語が苦手でも、一次情報に触れる回数は増やせます。回数が増えれば、<strong>診療の判断</strong>も、<strong>チームへの説明</strong>も、<strong>研究の質</strong>も上がります。</p>
+<p>大事なのは「完璧に訳す」ではなく、<strong>型を作り、Chrome翻訳で入口を越えること</strong>。今日、ブックマーク12個から始めてみてください。</p>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">Google. Google Translate updates with Gemini AI. The Keyword Blog. 2025年12月.</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Google. Gemini-powered translation quality improvements announcement. The Keyword Blog. 2025年12月.</span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Google. Translation rollout: US, India, and 20+ languages including Japanese. The Keyword Blog. 2025年12月.</span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">Google. Live audio-to-audio translation beta launch announcement. The Keyword Blog. 2025年12月.</span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Google. Google Translate adds 110 new languages (largest expansion ever). The Keyword Blog. 2024.</span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">Google Support. Chrome page translation feature documentation.</span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Medical abstract translation comparison study (DeepL vs Google Translate). PLOS ONE.</span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Google Cloud Documentation. Cloud Translation API data usage and privacy policy.</span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Google Workspace. Translate data handling and model training policy documentation.</span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Emergency department discharge instruction translation accuracy study. PubMed（82.5% overall accuracy, 55-94% by language）.</span></div>
+</div>
+</div>

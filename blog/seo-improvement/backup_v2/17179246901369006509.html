@@ -1,0 +1,462 @@
+<p>コメント</p>
+<p>甲状腺機能の鑑別に関して勉強しなおしたので知識を共有します。</p>
+<p>動画での説明、鑑別診断ツールも作ったので活用してください。</p>
+<p>最近はこのあたりの作業はClaude codeを使えばかなりはかどります！</p>
+<p> </p>
+<p> </p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260325/20260325162403.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p> </p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/4285LNgMKZk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="「甲状腺機能異常の鑑別診断：7ステップで系統的に考える」" id="widget2"></iframe></p>
+<p> </p>
+<p><strong><a href="https://hinyan1016.github.io/medical-ddx-tools/thyroid_dysfunction.html" target="_blank">甲状腺機能異常 鑑別診断ツール</a></strong></p>
+<p><br /><br /></p>
+<div class="medical-article">
+<div class="medical-article"> </div>
+</div>
+<style>
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+.toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.toc-box h3 { margin-top: 0; }
+.toc-box h3::before { content: ''; margin-right: 0; }
+.toc-box ul { margin-bottom: 0; }
+.important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+.drug-table th, .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.drug-table th {
+    background: #2c5aa0;
+    color: white;
+    font-weight: bold;
+}
+.drug-table tr:nth-child(even) { background: #f8f9fa; }
+.drug-table tr:hover { background: #e9ecef; }
+.references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+.references h3 { color: #2c5aa0; }
+.ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+.ref-content { color: #555; }
+</style>
+<div class="medical-article">
+<h1>甲状腺機能異常の鑑別診断 ─ TSH×FT4パターン分類と系統的アプローチ</h1>
+<div class="toc-box">
+<h3>目次</h3>
+<ul>
+<li><a href="#intro">はじめに：甲状腺機能検査の落とし穴</a></li>
+<li><a href="#pattern">TSH × FT4/FT3 パターン分類（7パターン）</a></li>
+<li><a href="#thyrotoxicosis">甲状腺中毒症の鑑別（破壊性 vs 産生過剰）</a></li>
+<li><a href="#hypothyroidism">甲状腺機能低下症の鑑別</a></li>
+<li><a href="#subclinical">潜在性甲状腺機能異常</a></li>
+<li><a href="#redflags">Red Flags：甲状腺クリーゼと粘液水腫性昏睡</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- ==================== 1. 導入 ==================== -->
+<h2 id="intro">はじめに：甲状腺機能検査の落とし穴</h2>
+<p>甲状腺機能異常は日常診療で遭遇頻度が高く、プライマリ・ケア外来の約5%で甲状腺機能検査に異常が見つかるとされます<sup>[1]</sup>。スクリーニングでは<strong>TSH単独測定</strong>が広く行われますが、これには重大な落とし穴があります。</p>
+<div class="warning-box"><strong>TSH単独スクリーニングの盲点</strong><br /><strong>中枢性甲状腺機能低下症</strong>（下垂体性・視床下部性）では、TSHが低値〜正常にとどまるため、TSH単独では<strong>見逃される</strong>。FT4低値にもかかわらずTSHが上昇しないパターンを常に念頭に置く<sup>[2]</sup>。<br />・下垂体腫瘍、シーハン症候群、リンパ球性下垂体炎、頭蓋内照射後など<br />・有病率は甲状腺機能低下症全体の約1/1,000と稀だが、副腎不全合併時に甲状腺ホルモン補充を先行すると副腎クリーゼを誘発するリスクがある<sup>[3]</sup></div>
+<p>したがって、<strong>臨床的に甲状腺機能低下を疑う場合</strong>や、<strong>下垂体疾患のリスクがある患者</strong>では、TSHに加えて<strong>FT4を同時測定</strong>することが推奨されます<sup>[2]</sup>。</p>
+<!-- ==================== 2. パターン分類 ==================== -->
+<h2 id="pattern">TSH × FT4/FT3 パターン分類（7パターン）</h2>
+<p>甲状腺機能検査の異常は、TSHとFT4/FT3の組み合わせから以下の7パターンに分類できます。パターンを認識することが鑑別診断の第一歩です<sup>[1][2]</sup>。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">パターン</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: center; font-weight: bold; border: 1px solid #ddd;">TSH</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: center; font-weight: bold; border: 1px solid #ddd;">FT4</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: center; font-weight: bold; border: 1px solid #ddd;">FT3</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">主な鑑別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>1. 顕性甲状腺中毒症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低下</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd;">バセドウ病、機能性結節、甲状腺炎</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>2. T3優位型中毒症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低下</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd;">バセドウ病初期、機能性結節、T3製剤内服</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>3. 潜在性甲状腺中毒症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低下</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常</td>
+<td style="padding: 12px; border: 1px solid #ddd;">軽症バセドウ、機能性結節、LT4過量</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>4. 顕性甲状腺機能低下症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低値</td>
+<td style="padding: 12px; border: 1px solid #ddd;">橋本病、術後/RAI後、薬剤性</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>5. 潜在性甲状腺機能低下症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常</td>
+<td style="padding: 12px; border: 1px solid #ddd;">橋本病初期、ヨウ素過剰、回復期</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>6. 中枢性甲状腺機能低下症</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低〜正常</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">低値</td>
+<td style="padding: 12px; border: 1px solid #ddd;">下垂体腫瘍、シーハン症候群、ICI関連</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>7. TSH産生下垂体腺腫（TSHoma）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">正常〜高値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd; text-align: center;">高値</td>
+<td style="padding: 12px; border: 1px solid #ddd;">TSH産生腺腫、甲状腺ホルモン不応症</td>
+</tr>
+</tbody>
+</table>
+<div class="important-box"><strong>実践的ポイント</strong><br />・パターン7（FT4高値なのにTSH抑制されない）は<strong>不適切TSH分泌症候群（SITSH）</strong>と呼ばれ、TSH産生腺腫と甲状腺ホルモン不応症の鑑別が重要<sup>[4]</sup><br />・<strong>NTI（non-thyroidal illness / euthyroid sick syndrome）</strong>では、急性期にTSH低下→FT3低下→FT4低下と変動し、回復期にTSH一過性上昇を認める。重症患者では検査解釈に注意<sup>[1]</sup><br />・薬剤（ビオチン、ヘパリン、フェニトインなど）による<strong>検査干渉</strong>も鑑別に含める</div>
+<!-- ==================== 3. 甲状腺中毒症の鑑別 ==================== -->
+<h2 id="thyrotoxicosis">甲状腺中毒症の鑑別（破壊性 vs 産生過剰）</h2>
+<p>TSH低下＋FT4/FT3高値を確認したら、次のステップは<strong>破壊性甲状腺中毒症</strong>（甲状腺組織の炎症・破壊による一過性ホルモン放出）と<strong>産生過剰型</strong>（甲状腺の自律的ホルモン合成亢進）の鑑別です。この区別は治療方針を決定する上で極めて重要です<sup>[5]</sup>。</p>
+<div class="important-box"><strong>鑑別の鍵：甲状腺シンチグラフィ（<sup>99m</sup>Tc / <sup>123</sup>I）</strong><br />・<strong>取り込み亢進（びまん性）</strong>→ バセドウ病<br />・<strong>取り込み亢進（限局性 hot nodule）</strong>→ 機能性結節/TMNG<br />・<strong>取り込み低下</strong>→ 破壊性甲状腺炎（亜急性/無痛性）、薬剤性<br />シンチが施行できない場合はTRAb＋甲状腺エコー＋臨床所見で判断する<sup>[5][6]</sup></div>
+<h3>バセドウ病（Graves' disease）</h3>
+<p>甲状腺中毒症の最多原因（60〜80%）<sup>[5]</sup>。TSH受容体に対する自己抗体（TRAb）が甲状腺を持続的に刺激し、ホルモン産生過剰を引き起こします。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">項目</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">所見</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">自己抗体</td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>TRAb陽性</strong>（感度95%以上）<sup>[5]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">甲状腺</td>
+<td style="padding: 12px; border: 1px solid #ddd;">びまん性腫大、エコーで血流増加</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">眼症状</td>
+<td style="padding: 12px; border: 1px solid #ddd;">眼球突出、複視、眼瞼後退（Graves' ophthalmopathy）</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">シンチ</td>
+<td style="padding: 12px; border: 1px solid #ddd;">びまん性高取り込み</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">治療</td>
+<td style="padding: 12px; border: 1px solid #ddd;">抗甲状腺薬（MMI/PTU）、RAI、手術</td>
+</tr>
+</tbody>
+</table>
+<h3>機能性甲状腺結節 / 多結節性甲状腺腫（TMNG）</h3>
+<p>結節が自律的にホルモンを産生します。高齢者に多く、ヨウ素欠乏地域では甲状腺中毒症の主要原因となります<sup>[6]</sup>。</p>
+<p>・TRAb陰性<br />・シンチで<strong>hot nodule</strong>（周囲は抑制）<br />・治療：RAIまたは手術（抗甲状腺薬は根本治療にならない）</p>
+<h3>亜急性甲状腺炎（subacute thyroiditis / de Quervain thyroiditis）</h3>
+<p>ウイルス感染が先行し、甲状腺の炎症・破壊により一過性の中毒症を呈します<sup>[7]</sup>。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">特徴</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">所見</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">症状</td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>有痛性</strong>甲状腺腫大、発熱、頸部放散痛</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">炎症マーカー</td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>CRP/ESR著明高値</strong>（ESR &gt; 50 mm/h が多い）</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">シンチ</td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>取り込み低下〜消失</strong></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">経過</td>
+<td style="padding: 12px; border: 1px solid #ddd;">中毒期（1〜2か月）→ 一過性低下期 → 回復（大半は正常化）</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">治療</td>
+<td style="padding: 12px; border: 1px solid #ddd;">NSAIDs、重症例はステロイド（抗甲状腺薬は無効）</td>
+</tr>
+</tbody>
+</table>
+<h3>無痛性甲状腺炎 / 産後甲状腺炎</h3>
+<p>自己免疫性の破壊性甲状腺炎です。<strong>圧痛を伴わない</strong>点で亜急性甲状腺炎と区別されます<sup>[7]</sup>。</p>
+<p>・CRP/ESR正常〜軽度上昇（炎症が軽い）<br />・TPOAb陽性が多い<br />・シンチ：<strong>取り込み低下</strong><br />・産後甲状腺炎は産後1年以内に発症し、約20〜30%が永続性低下症に移行<sup>[8]</sup><br />・中毒期は<strong>β遮断薬</strong>で対症療法（抗甲状腺薬は無効）</p>
+<h3>薬剤性甲状腺中毒症</h3>
+<p>鑑別上特に重要な薬剤を以下にまとめます。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">薬剤</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">機序</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">鑑別ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>アミオダロン（AIT）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Type 1：ヨウ素誘発性（産生過剰）<br />Type 2：破壊性甲状腺炎</td>
+<td style="padding: 12px; border: 1px solid #ddd;">Type 1：基礎疾患あり、エコーで血流増加<br />Type 2：正常甲状腺、血流低下<br />混合型も多い<sup>[9]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>免疫チェックポイント阻害薬（ICI）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">破壊性甲状腺炎（中毒期→低下症）</td>
+<td style="padding: 12px; border: 1px solid #ddd;">抗PD-1/PD-L1で頻度高い。中毒期は一過性で低下症に移行することが多い<sup>[10]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>ヨウ素（造影剤など）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">Jod-Basedow現象（ヨウ素誘発性中毒症）</td>
+<td style="padding: 12px; border: 1px solid #ddd;">基礎に結節性甲状腺腫がある患者で起こりやすい<sup>[9]</sup></td>
+</tr>
+</tbody>
+</table>
+<div class="important-box"><strong>アミオダロン甲状腺障害（AIT）の鑑別</strong><br />・<strong>AIT Type 1</strong>：既存の甲状腺疾患（結節/バセドウ）に過剰ヨウ素が加わり産生過剰。エコーで<strong>血流増加</strong>。抗甲状腺薬＋過塩素酸カリウムで治療<br />・<strong>AIT Type 2</strong>：直接的な甲状腺細胞障害による破壊性甲状腺炎。エコーで<strong>血流低下</strong>。ステロイドで治療<br />・実臨床では混合型が多く、判別困難な場合はステロイド＋抗甲状腺薬の併用も考慮<sup>[9]</sup></div>
+<!-- ==================== 4. 甲状腺機能低下症の鑑別 ==================== -->
+<h2 id="hypothyroidism">甲状腺機能低下症の鑑別</h2>
+<h3>橋本病（慢性甲状腺炎 / Hashimoto's thyroiditis）</h3>
+<p>甲状腺機能低下症の<strong>最多原因</strong>（ヨウ素充足地域）<sup>[1]</sup>。自己免疫による甲状腺の慢性炎症・線維化が進行します。</p>
+<p>・<strong>TPOAb陽性</strong>（感度90〜95%）、TgAb陽性<br />・エコー：びまん性低エコー、不均一<br />・年間約2〜4%が顕性低下症に進行（TPOAb陽性＋TSH高値の場合）<sup>[11]</sup><br />・LT4補充療法が標準治療</p>
+<h3>医原性低下症</h3>
+<p>・<strong>甲状腺全摘/亜全摘後</strong>：術後は全例でLT4補充が必要<br />・<strong>RAI（放射性ヨウ素）治療後</strong>：バセドウ病治療後、数か月〜数年で低下症に至ることが多い<br />・<strong>外照射後</strong>：頭頸部放射線治療後に発症しうる</p>
+<h3>薬剤性甲状腺機能低下症</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">薬剤</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">機序</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>リチウム（Li）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">ヨウ素取り込み・ホルモン放出阻害</td>
+<td style="padding: 12px; border: 1px solid #ddd;">投与患者の約20〜30%で低下症<sup>[12]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>アミオダロン</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">ヨウ素過剰による Wolff-Chaikoff 効果</td>
+<td style="padding: 12px; border: 1px solid #ddd;">ヨウ素充足地域ではAIHが最多。LT4補充で対応可<sup>[9]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>ICI</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">自己免疫性甲状腺炎の惹起</td>
+<td style="padding: 12px; border: 1px solid #ddd;">抗PD-1で5〜10%。破壊性中毒期を経ずに低下症で発見されることもある<sup>[10]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>TKI（チロシンキナーゼ阻害薬）</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">甲状腺への直接障害</td>
+<td style="padding: 12px; border: 1px solid #ddd;">スニチニブで頻度高い<sup>[12]</sup></td>
+</tr>
+</tbody>
+</table>
+<h3>中枢性甲状腺機能低下症</h3>
+<div class="warning-box"><strong>見逃し注意：FT4低値 + TSH低〜正常</strong><br />・下垂体腫瘍、シーハン症候群、リンパ球性下垂体炎、ICI関連下垂体炎、術後・放射線後<br />・<strong>TSHは基準範囲内でも「不適切に低い」</strong>ことが診断の手がかり<br />・<strong>下垂体MRI</strong> + 他の下垂体前葉ホルモン評価（ACTH、GH、LH/FSH、PRL）が必須<sup>[2][3]</sup><br />・<strong>副腎不全の合併を除外してからLT4を開始</strong>すること（副腎クリーゼ予防）</div>
+<!-- ==================== 5. 潜在性甲状腺機能異常 ==================== -->
+<h2 id="subclinical">潜在性甲状腺機能異常（subclinical thyroid dysfunction）</h2>
+<p>FT4/FT3が正常範囲内でTSHのみ異常を示す状態です。治療適応の判断が臨床上しばしば問題になります。</p>
+<h3>潜在性甲状腺機能低下症</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">状況</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">治療方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>TSH &gt; 10 mIU/L</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">LT4補充を推奨（顕性低下症への進行率が高い）<sup>[11][13]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">TSH 4.5〜10 + <strong>症状あり</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">LT4補充を考慮（3〜6か月のトライアル）<sup>[13]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">TSH 4.5〜10 + <strong>TPOAb陽性</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">進行リスク高い → 定期フォロー or 補充考慮<sup>[11]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;">TSH 4.5〜10 + <strong>妊娠中/妊娠希望</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>LT4補充を推奨</strong>（ATA 2017ガイドライン）<sup>[8]</sup></td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>70歳以上</strong> + TSH 4.5〜10</td>
+<td style="padding: 12px; border: 1px solid #ddd;">経過観察が優先（TRUST試験で症状改善なし）<sup>[14]</sup></td>
+</tr>
+</tbody>
+</table>
+<h3>潜在性甲状腺中毒症</h3>
+<p>・<strong>TSH &lt; 0.1 mIU/L（Grade II）</strong>：心房細動・骨折リスク増加のエビデンスがあり、<strong>治療を推奨</strong>（特に65歳以上、心疾患、骨粗鬆症リスク）<sup>[15]</sup><br />・<strong>TSH 0.1〜0.4 mIU/L（Grade I）</strong>：リスク因子がなければ6〜12か月ごとの経過観察<br />・まず2〜3か月後に再検し、持続性を確認してから治療を決定<sup>[15]</sup></p>
+<!-- ==================== 6. Red Flags ==================== -->
+<h2 id="redflags">Red Flags：甲状腺クリーゼと粘液水腫性昏睡</h2>
+<h3>甲状腺クリーゼ（thyroid storm）</h3>
+<div class="emergency-box"><strong>致死的緊急症 ─ Burch-Wartofskyスコアで評価</strong><br />甲状腺クリーゼは未治療/不十分治療の甲状腺中毒症に感染・手術・外傷などのストレスが加わり発症します。<strong>致死率10〜30%</strong>とされ、臨床診断に基づく即座の治療開始が必要です<sup>[16]</sup>。</div>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #dc3545; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;" colspan="2">Burch-Wartofskyスコア（主要項目）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>体温</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">37.2〜37.7℃：5点 / 37.8〜38.2℃：10点 / ... / ≥40℃：30点</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>中枢神経</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">軽度興奮：10点 / せん妄・精神症状：20点 / 痙攣・昏睡：30点</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>消化器</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">下痢：10点 / 嘔吐：10点 / 黄疸：20点</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>心血管</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">頻脈（HR 100〜109：5点 ... ≥140：25点）/ 心房細動：10点 / 心不全（軽：5点 / 重：15点）</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>誘因</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;">あり：10点</td>
+</tr>
+<tr>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>判定</strong></td>
+<td style="padding: 12px; border: 1px solid #ddd;"><strong>≥45点：クリーゼ強く疑う</strong> / 25〜44点：切迫クリーゼ / &lt;25点：クリーゼ否定的<sup>[16]</sup></td>
+</tr>
+</tbody>
+</table>
+<div class="important-box"><strong>甲状腺クリーゼの治療（同時並行で開始）</strong><br />1. <strong>抗甲状腺薬</strong>：PTU大量投与（末梢でのT4→T3変換も阻害）<br />2. <strong>無機ヨウ素</strong>：PTU投与1時間後に開始（Wolff-Chaikoff効果でホルモン放出抑制）<br />3. <strong>β遮断薬</strong>：プロプラノロール（T4→T3変換阻害作用もあり）<br />4. <strong>ステロイド</strong>：ヒドロコルチゾン（相対的副腎不全に対応＋T4→T3変換阻害）<br />5. <strong>全身管理</strong>：冷却、輸液、誘因の治療<sup>[5][16]</sup></div>
+<h3>粘液水腫性昏睡（myxedema coma）</h3>
+<div class="emergency-box"><strong>甲状腺機能低下症の最重症形態 ─ 致死率25〜60%</strong><br />高齢者、冬季に好発。意識障害、低体温、徐脈、低換気、低Na血症を呈します<sup>[17]</sup>。</div>
+<p>・<strong>誘因</strong>：感染、寒冷曝露、鎮静薬、LT4中断、手術<br />・<strong>治療</strong>：<br />　- LT4静注（loading dose 200〜400 μg → 維持 50〜100 μg/日）<br />　- ヒドロコルチゾン（副腎不全合併の除外前に開始）<br />　- 保温（積極的な外部加温は末梢血管拡張→ショックのリスク）<br />　- 全身管理（換気補助、低Na補正、誘因治療）<sup>[17]</sup></p>
+<div class="warning-box"><strong>粘液水腫性昏睡の低Na血症</strong><br />甲状腺機能低下による<strong>ADH分泌亢進（SIADH様）</strong>＋自由水排泄障害が原因。甲状腺ホルモン補充で改善するが、重症低Naでは高張食塩水を検討<sup>[17]</sup>。</div>
+<!-- ==================== 7. 鑑別診断ツール ==================== -->
+<h2>鑑別診断ツール</h2>
+<p>甲状腺機能異常の系統的な鑑別に役立つWeb鑑別診断ツールを作成しています。</p>
+<div class="important-box"><strong>甲状腺機能異常 鑑別診断ツール</strong><br /><a href="https://hinyan1016.github.io/medical-ddx-tools/thyroid_dysfunction.html" target="_blank" rel="noopener">https://hinyan1016.github.io/medical-ddx-tools/thyroid_dysfunction.html</a><br />TSH・FT4/FT3パターン、症状、検査所見からステップバイステップで鑑別を絞り込めます。</div>
+<!-- ==================== 参考文献 ==================== -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=4285LNgMKZk" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3 id="references">参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">Garber JR, et al. Clinical practice guidelines for hypothyroidism in adults: cosponsored by the American Association of Clinical Endocrinologists and the American Thyroid Association. Thyroid. 2012;22(12):1200-1235. <a href="https://pubmed.ncbi.nlm.nih.gov/23246686/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Persani L, et al. 2018 European Thyroid Association (ETA) guidelines on the diagnosis and management of central hypothyroidism. Eur Thyroid J. 2018;7(5):225-237. <a href="https://pubmed.ncbi.nlm.nih.gov/30374425/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Fleseriu M, et al. Hormonal replacement in hypopituitarism in adults: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2016;101(11):3888-3921. <a href="https://pubmed.ncbi.nlm.nih.gov/27736313/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">Beck-Peccoz P, et al. 2013 European Thyroid Association guidelines for the diagnosis and treatment of thyrotropin-secreting pituitary tumors. Eur Thyroid J. 2013;2(2):76-82. <a href="https://pubmed.ncbi.nlm.nih.gov/24783044/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Ross DS, et al. 2016 American Thyroid Association guidelines for diagnosis and management of hyperthyroidism and other causes of thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. <a href="https://pubmed.ncbi.nlm.nih.gov/27521067/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">日本甲状腺学会. バセドウ病治療ガイドライン 2019. <a href="https://www.japanthyroid.jp/doctor/guideline/index.html" target="_blank" rel="noopener">日本甲状腺学会</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Samuels MH. Subacute, silent, and postpartum thyroiditis. Med Clin North Am. 2012;96(2):223-233. <a href="https://pubmed.ncbi.nlm.nih.gov/22443972/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Alexander EK, et al. 2017 Guidelines of the American Thyroid Association for the diagnosis and management of thyroid disease during pregnancy and the postpartum. Thyroid. 2017;27(3):315-389. <a href="https://pubmed.ncbi.nlm.nih.gov/28056690/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Bartalena L, et al. 2018 European Thyroid Association (ETA) guidelines for the management of amiodarone-associated thyroid dysfunction. Eur Thyroid J. 2018;7(2):55-66. <a href="https://pubmed.ncbi.nlm.nih.gov/29594056/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Delivanis DA, et al. Pembrolizumab-induced thyroiditis: comprehensive clinical review and insights into underlying involved mechanisms. J Clin Endocrinol Metab. 2017;102(8):2770-2780. <a href="https://pubmed.ncbi.nlm.nih.gov/28609832/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">Vanderpump MPJ, et al. The incidence of thyroid disorders in the community: a twenty-year follow-up of the Whickham Survey. Clin Endocrinol (Oxf). 1995;43(1):55-68. <a href="https://pubmed.ncbi.nlm.nih.gov/7641412/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">Burch HB. Drug effects on the thyroid. N Engl J Med. 2019;381(8):749-761. <a href="https://pubmed.ncbi.nlm.nih.gov/31433922/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">Bekkering GE, et al. Thyroid hormones treatment for subclinical hypothyroidism: a clinical practice guideline. BMJ. 2019;365:l2006. <a href="https://pubmed.ncbi.nlm.nih.gov/31088853/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14</span> <span class="ref-content">Stott DJ, et al. Thyroid hormone therapy for older adults with subclinical hypothyroidism (TRUST). N Engl J Med. 2017;376(26):2534-2544. <a href="https://pubmed.ncbi.nlm.nih.gov/28402245/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Biondi B, et al. 2015 European Thyroid Association guidelines for diagnosis and management of subclinical hyperthyroidism. Eur Thyroid J. 2015;4(3):149-163. <a href="https://pubmed.ncbi.nlm.nih.gov/26558232/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">Burch HB, Wartofsky L. Life-threatening thyrotoxicosis: thyroid storm. Endocrinol Metab Clin North Am. 1993;22(2):263-277. <a href="https://pubmed.ncbi.nlm.nih.gov/8325286/" target="_blank" rel="noopener">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">Wall CR. Myxedema coma: diagnosis and treatment. Am Fam Physician. 2000;62(11):2485-2490. <a href="https://pubmed.ncbi.nlm.nih.gov/11130234/" target="_blank" rel="noopener">PubMed</a></span></div>
+</div>
+</div>

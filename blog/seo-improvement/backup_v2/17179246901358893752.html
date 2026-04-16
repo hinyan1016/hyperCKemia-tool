@@ -1,0 +1,666 @@
+<div class="medical-article">
+<div>
+<p>研究会でお会いした先輩から今、線維芽細胞の研究が面白いという話をききました。自分にはピンとこなかったのですが情報を収集して高校生レベルで理解できるようにとAIに指示してみました。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260227/20260227020710.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/dPtcEvfAPHk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【最新医療】神経の傷跡は「消す」から「デザインする」時代へ！線維芽細胞が切り拓く脳神経・再生医療の未来" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/dPtcEvfAPHk">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>脳神経領域の線維芽細胞と線維性瘢痕が面白い理由と再生医療への応用</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#summary">Executive Summary</a></li>
+<li><a href="#background">背景：グリア瘢痕と線維性瘢痕</a></li>
+<li><a href="#origin">線維芽細胞はどこから来るのか</a></li>
+<li><a href="#singlecell">単一細胞・空間トランスクリプトームで分かったこと</a></li>
+<li><a href="#mechanics">瘢痕の力学とメカノバイオロジー</a></li>
+<li><a href="#fap">治療標的としての線維芽細胞とFAP</a></li>
+<li><a href="#regeneration">再生医療への応用戦略</a></li>
+<li><a href="#future">未解決課題と将来展望</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- ===== Executive Summary ===== -->
+<h2 id="summary">Executive Summary</h2>
+<p>脳・脊髄が傷つくと、体は「穴をふさぐ壁」を作って命を守ろうとします。この壁（<strong>瘢痕</strong>）は大きく分けて、神経の細胞（主に<strong>アストロサイト</strong>）が作る"<strong>グリア瘢痕</strong>"と、<strong>線維芽細胞</strong>が作る"<strong>線維性（線維化）瘢痕</strong>"の2つがからみ合って出来上がります<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup><sup>[4]</sup><sup>[5]</sup>。</p>
+<p>いま線維芽細胞が注目される最大の理由は、線維芽細胞が「ただコラーゲンを出す裏方」ではなく、いつ・どこで・どんな傷に対して、<strong>免疫細胞や血管、グリア細胞とやり取りしながら、傷の"治り方（再生寄りか、瘢痕寄りか）"を組織レベルで決める"設計者"</strong>に近い働きをすることが、<strong>単一細胞解析</strong>や<strong>空間トランスクリプトーム</strong>で見えるようになったからです<sup>[6]</sup><sup>[7]</sup><sup>[8]</sup>。</p>
+<p>さらに近年は、瘢痕を「消す」のではなく、<strong>硬さや線維（コラーゲン）の並びを"デザインし直す"ことで軸索再生を助けよう</strong>、という再生医療戦略が具体的に進んでいます（硬さが合うハイドロゲルで線維芽細胞の動きを並べ替える、<strong>コラーゲンI</strong>の影響を薬で弱める、など）<sup>[9]</sup><sup>[10]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> 線維芽細胞は、傷口を閉じて感染や出血拡大を防ぐ"守り"も担うため、単純に抑えれば良いわけではありません。脳損傷モデルでは、<strong>早期の線維芽細胞状態を乱すと組織欠損や死亡が増える</strong>、という結果も出ています<sup>[4]</sup>。</div>
+<p>一方、がん領域では「<strong>がん関連線維芽細胞（CAF）</strong>」を標的にするための<strong>FAP（fibroblast activation protein）</strong>を利用した<strong>PET画像（FAPI-PET）</strong>や治療が急速に臨床へ進んでおり<sup>[5]</sup>、線維芽細胞を"見える化→狙い撃ち"する技術の蓄積が、将来的に脳神経領域へ波及する可能性があります。</p>
+<!-- ===== 背景 ===== -->
+<h2 id="background">背景：グリア瘢痕と線維性瘢痕</h2>
+<p>高校生向けに言うと、脳や脊髄のケガの現場は「工事現場」になり、周囲に二重のフェンスが作られます。</p>
+<h3>グリア瘢痕（glial scar）</h3>
+<p>主役は<strong>アストロサイト</strong>などのグリア細胞で、傷の周囲に"境界線"を作り、炎症や外から来た細胞が無秩序に広がるのを抑えます<sup>[11]</sup><sup>[12]</sup>。一方で、軸索が伸びるのを邪魔しやすい分子（<strong>CSPG</strong>など）や環境を作る側面もあり、「守り」と「再生阻害」の両面があります<sup>[7]</sup><sup>[8]</sup>。</p>
+<h3>線維性瘢痕（fibrotic scar / fibrotic component）</h3>
+<p>主役は<strong>線維芽細胞</strong>（広い意味では線維芽細胞様の間質細胞）で、傷の中心部に<strong>コラーゲンI</strong>や<strong>フィブロネクチン</strong>などの"足場（<strong>細胞外マトリックス</strong>）"を大量に積み上げ、穴を埋めて強度を出します<sup>[13]</sup>。これも命を守る一方で、軸索が通りにくい物理・化学的バリアになります<sup>[14]</sup><sup>[15]</sup><sup>[16]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> 脊髄損傷の瘢痕は「<strong>グリア成分</strong>」と「<strong>線維性成分</strong>」に分けられる、という整理が古くから使われ、現在の研究もこの枠組みをベースに議論します。</div>
+<h3>ひと目で分かる比較表</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">観点</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">グリア瘢痕</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">線維性瘢痕</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>主な"作り手"</strong></td>
+<td><strong>アストロサイト</strong>（＋ミクログリア、OPCなどが関与）</td>
+<td><strong>線維芽細胞</strong>（血管周囲・髄膜由来など）＋免疫細胞との連携</td>
+</tr>
+<tr>
+<td><strong>主な"材料"</strong></td>
+<td><strong>CSPG</strong>などの分子、細胞の密な網</td>
+<td><strong>コラーゲンI</strong>、<strong>フィブロネクチン</strong>、基底膜様成分など</td>
+</tr>
+<tr>
+<td><strong>役割（良い面）</strong></td>
+<td>炎症や損傷の拡大を抑える、安全柵</td>
+<td>破綻部を"塞ぐ"、組織強度を出す</td>
+</tr>
+<tr>
+<td><strong>役割（困る面）</strong></td>
+<td>再生を妨げる面がある（"化学的バリア"）</td>
+<td>再生を妨げる面がある（"物理＋化学的バリア"）</td>
+</tr>
+</tbody>
+</table>
+<details class="expandable" open="open">
+<summary>オンラインで見られる模式図の例</summary>
+<div class="expandable-content">
+<p>脳損傷の時間変化（初期〜慢性期）を"線維芽細胞の状態の変化"として描いた図（空間解析の図を含む）は、2025年の脳損傷研究の本文とExtended Dataに複数あります（特に空間トランスクリプトームのクラスタ図）<sup>[17]</sup>。</p>
+<p>脊髄損傷における線維性瘢痕の由来（髄膜由来と血管周囲由来）を模式化した要点は、2024年の脊髄損傷研究の要旨部分にまとまっています<sup>[18]</sup>。</p>
+</div>
+</details><!-- ===== 線維芽細胞の起源 ===== -->
+<h2 id="origin">線維芽細胞はどこから来るのか</h2>
+<p>ここが「今いちばん面白い」と言われやすい部分です。脳実質内の線維芽細胞は多くありませんが、損傷や炎症が起きると、<strong>境界（髄膜）</strong>と<strong>血管の周辺</strong>にいる線維芽細胞が増えたり移動したりして、線維性瘢痕を作ります<sup>[19]</sup><sup>[20]</sup>。</p>
+<p>ただし、起源は一枚岩ではありません。損傷モデルや部位、観察時期、そして「どの遺伝子を頼りに<strong>系譜追跡（lineage tracing）</strong>したか」で結論が揺れることがあり、現在も議論が続いています<sup>[21]</sup>。</p>
+<h3>起源候補とエビデンス比較</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">起源候補</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">典型的な場所</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主なエビデンスの型</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">代表的に示された結論（要約）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">解釈の注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>髄膜由来線維芽細胞</strong>（meningeal fibroblasts）</td>
+<td>脳・脊髄の表面を包む膜（硬膜・くも膜・軟膜）</td>
+<td>単一細胞解析／空間解析／損傷後の分布</td>
+<td>脊髄損傷の線維性瘢痕に、髄膜由来のサブタイプが中心部に多い（例：<strong>Crabp2/Emb陽性群</strong>など）<sup>[18]</sup><sup>[22]</sup></td>
+<td>「髄膜が破れた損傷（穿通）」では入りやすいが、損傷モデルにより比率が変わる</td>
+</tr>
+<tr>
+<td><strong>血管周囲線維芽細胞</strong>（perivascular fibroblasts）</td>
+<td>太めの血管の外側（血管周囲ニッチ）</td>
+<td>遺伝学的系譜追跡＋3D可視化など</td>
+<td>硬膜が保たれる"挫滅型"脊髄損傷では、<strong>Col1a1陽性</strong>の血管周囲線維芽細胞が主要な供給源、というデータがある<sup>[23]</sup><sup>[24]</sup><sup>[25]</sup></td>
+<td>「血管周囲の線維芽細胞」と「特定の周皮細胞（pericyte）」の境界は、マーカーが重なるため難しい</td>
+</tr>
+<tr>
+<td><strong>周皮細胞（pericyte）由来</strong>の線維芽細胞様細胞</td>
+<td>毛細血管の壁に密着する周皮細胞</td>
+<td>遺伝学的系譜追跡（特定Cre系統）</td>
+<td>特定の周皮細胞サブタイプが"瘢痕形成間質細胞"を生む、という強い主張がある（脊髄や脳損傷、虚血、MSモデルなど）<sup>[26]</sup><sup>[27]</sup></td>
+<td>追跡に使う遺伝子（例：<strong>GLAST</strong>など）が周皮細胞以外でも発現し得る、という指摘があり、再検証が進んでいる</td>
+</tr>
+<tr>
+<td><strong>脈絡叢関連の線維芽細胞</strong>（choroid plexus）</td>
+<td>脳室内の"脳脊髄液を作る器官"の間質</td>
+<td>単一細胞＋空間マッピング／発生学的解析</td>
+<td>脈絡叢には線維芽細胞系の多様性があり、部位差や加齢変化も記述されている<sup>[28]</sup>。さらに、脈絡叢付着部に特有の線維芽細胞（<strong>base barrier cells</strong>）が同定され、髄膜間葉前駆細胞由来で種を超えて保存される<sup>[29]</sup></td>
+<td>「損傷部の線維性瘢痕にどれほど直接入るか」は、脊髄損傷の主流モデルでは中心テーマではない（むしろ"境界・バリア"としての重要性が強調）</td>
+</tr>
+<tr>
+<td><strong>骨（骨髄）由来細胞</strong></td>
+<td>頭蓋骨・椎骨の骨髄など</td>
+<td>炎症細胞の動員は強い／線維芽細胞成分は議論中</td>
+<td>神経炎症に骨髄由来免疫細胞が関与する総説は増えている<sup>[30]</sup><sup>[31]</sup>。一方、少なくとも自己免疫性炎症（EAE）モデルでは、線維性瘢痕の大半は「骨髄から入ってくる細胞」ではなく「<strong>CNS内在の線維芽細胞の増殖</strong>」と結論する単一細胞＋系譜追跡研究がある<sup>[32]</sup></td>
+<td>「自然経過で骨髄由来線維芽細胞がどの程度入るか」と、「治療として骨髄由来間葉系細胞を移植するか」は別問題。移植は有望だがメカニズムは多因子</td>
+</tr>
+</tbody>
+</table>
+<details class="expandable" open="open">
+<summary>研究者注：用語のズレについて</summary>
+<div class="expandable-content">
+<p>"<strong>fibroblast（線維芽細胞）</strong>"と"<strong>pericyte（周皮細胞）</strong>"は、どちらも血管周辺にいて、しかも<strong>PDGFRβ</strong>など一部のマーカーが重なります<sup>[33]</sup><sup>[34]</sup>。そのため「何を線維芽細胞と呼ぶか」が論文間で揺れやすく、<strong>系譜追跡の"入口（どの遺伝子で標識したか）"が結論に直結</strong>します。</p>
+</div>
+</details><!-- ===== 単一細胞解析 ===== -->
+<h2 id="singlecell">単一細胞・空間トランスクリプトームで分かったこと</h2>
+<h3>高校生向け：この技術で何ができるのか</h3>
+<p><strong>単一細胞RNA解析</strong>：細胞を1個ずつに分けて「その細胞が何の遺伝子を使っているか」を読む。見た目が似ている細胞を"性格（状態）"で分けられる<sup>[35]</sup>。</p>
+<p><strong>空間トランスクリプトーム</strong>：同じことを「組織のどの場所で起きているか」付きで読む。たとえば、傷の中心と周辺で線維芽細胞が違う、が見える<sup>[36]</sup>。</p>
+<p>この2つが合わさると、瘢痕を「ひとつの固まり」ではなく、<strong>場所と時間で変わる"複数の状態の集合体"</strong>として扱えるようになります。</p>
+<h3>主要論文の比較表（単一細胞・空間トランスクリプトーム中心）</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">著者</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">年</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">手法</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主要発見（超要約）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">臨床含意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J. DeSisto</td>
+<td><strong>2020</strong></td>
+<td>胎生期髄膜のscRNA-seq</td>
+<td>髄膜の線維芽細胞は層（硬膜・くも膜・軟膜）で遺伝子発現が異なる＝もともと多様<sup>[37]</sup></td>
+<td>「髄膜線維芽細胞は1種類」という前提が崩れ、損傷後に"どの層由来が何をするか"を議論できる土台に</td>
+</tr>
+<tr>
+<td>R. Pietilä</td>
+<td><strong>2023</strong></td>
+<td>成人マウスのレプトメニンジス解析（単一細胞系）</td>
+<td>成人髄膜にも複数の線維芽細胞サブタイプがあり、脈絡叢側に別系統の線維芽細胞様転写型が示唆される<sup>[38]</sup></td>
+<td>"境界の線維芽細胞"を、発生・老化・病気で追う指標（マーカー）を提供</td>
+</tr>
+<tr>
+<td>C. E. Dorrier</td>
+<td><strong>2021</strong></td>
+<td>EAEで系譜追跡＋単一細胞解析</td>
+<td>線維性瘢痕の大半は「<strong>CNS内在のCol1陽性線維芽細胞の増殖由来</strong>」で、骨髄由来細胞や周皮細胞主体ではない。<strong>IFNγ経路</strong>の関与も提示<sup>[39]</sup><sup>[40]</sup></td>
+<td>"線維芽細胞の増殖やIFNγシグナル"を調整して、炎症性病変の瘢痕量と障害を減らす発想へ</td>
+</tr>
+<tr>
+<td>X. Xue</td>
+<td><strong>2024</strong></td>
+<td>脊髄損傷で系譜追跡＋scRNA-seq（マウス＋霊長類）</td>
+<td>線維性瘢痕は少なくとも「<strong>髄膜由来（中心寄り）</strong>」と「<strong>血管周囲／軟膜由来（周辺寄り）</strong>」の線維芽細胞サブタイプで機能が違う（例：中心は<strong>コラーゲンI・フィブロネクチン</strong>、周辺は<strong>ラミニン・血管新生</strong>など）<sup>[41]</sup></td>
+<td>"瘢痕を一律に抑える"ではなく、場所ごとに違う線維芽細胞を狙い分けて瘢痕を作り替える方向へ</td>
+</tr>
+<tr>
+<td>N. A. Ewing-Crystal</td>
+<td><strong>2025</strong></td>
+<td>脳損傷でsnRNA-seq＋空間トランスクリプトーム（時系列）</td>
+<td>脳損傷後、線維芽細胞は時間で状態が変化。亜急性期は<strong>筋線維芽細胞様状態</strong>が優位で、慢性期には<strong>リンパ球と相互作用する線維芽細胞ニッチ</strong>が形成される。<strong>TGFβシグナル</strong>や<strong>CXCL12</strong>がキー<sup>[42]</sup><sup>[43]</sup><sup>[44]</sup><sup>[45]</sup></td>
+<td>早期は"守り"の線維芽細胞状態が必要な可能性があり、<strong>いつ介入するか（時間窓）</strong>が治療成否に直結</td>
+</tr>
+<tr>
+<td>N. Dani</td>
+<td><strong>2021</strong></td>
+<td>脈絡叢のsc/snRNA-seq＋空間マッピング</td>
+<td>脈絡叢の上皮・免疫・血管・間質（線維芽細胞や周皮細胞）を単一細胞で整理し、空間配置や加齢変化も提示<sup>[46]</sup></td>
+<td>"脳脊髄液バリア周辺の線維芽細胞"を、疾患・炎症・薬物送達の観点で評価する基盤へ</td>
+</tr>
+<tr>
+<td>D. Verhaege</td>
+<td><strong>2026</strong></td>
+<td>脈絡叢付着部の特異線維芽細胞の同定</td>
+<td>脈絡叢付着部に特有の線維芽細胞（<strong>BBC</strong>）を同定し、髄膜間葉前駆細胞由来で種を超えて保存されると示した<sup>[47]</sup><sup>[48]</sup></td>
+<td>"境界のバリア設計"に関わる線維芽細胞理解が、炎症波及や薬物移行の制御に発展する可能性</td>
+</tr>
+<tr>
+<td>E. Vinsland</td>
+<td><strong>2025</strong></td>
+<td>ヒト胎児髄膜のscRNA-seq＋空間解析</td>
+<td>ヒト髄膜の線維芽細胞系譜（pia/arachnoid/dura）を遺伝子マーカーで区別し、空間的な層形成も検証。脈絡叢の線維芽細胞型にも言及<sup>[49]</sup></td>
+<td>ヒトでの"どの線維芽細胞が病変に関与するか"を議論する足場（翻訳研究の入口）</td>
+</tr>
+<tr>
+<td>L. Xiao</td>
+<td><strong>2025</strong></td>
+<td>介入研究＋scRNA-seq（線維芽細胞サブセット同定）</td>
+<td>脊髄と"硬さを合わせた"ハイドロゲルが線維芽細胞の移動・配列を整え、<strong>線維性ECMを平行に再配列</strong>して軸索再生を促す。<strong>Il11ra1/Itga11陽性サブセット</strong>と機械刺激伝達経路を提示<sup>[50]</sup></td>
+<td>瘢痕を"消す"ではなく、物理環境で瘢痕を作り替える（<strong>mechanoregulation</strong>）という再生医療の具体例</td>
+</tr>
+</tbody>
+</table>
+<h3>研究の流れが分かる簡易タイムライン</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">年代</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">何が変わったか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2011</strong></td>
+<td>"血管周囲の細胞（<strong>周皮細胞サブタイプ</strong>）が瘢痕の間質細胞を作る"という強い主張が登場<sup>[51]</sup></td>
+</tr>
+<tr>
+<td><strong>2013</strong></td>
+<td>"硬膜が保たれる挫滅損傷では、血管周囲の<strong>Col1a1陽性線維芽細胞</strong>が主要供給源"という別視点<sup>[52]</sup></td>
+</tr>
+<tr>
+<td><strong>2018</strong></td>
+<td>線維性瘢痕を適度に弱めると<strong>軸索再生と機能回復が改善</strong>、という介入研究<sup>[53]</sup><sup>[54]</sup></td>
+</tr>
+<tr>
+<td><strong>2020–2021</strong></td>
+<td>髄膜・脈絡叢など境界組織が単一細胞＋空間で"地図化"され、多様性が前提になる<sup>[55]</sup></td>
+</tr>
+<tr>
+<td><strong>2021</strong></td>
+<td>神経炎症（EAE）では「<strong>CNS内在線維芽細胞の増殖が主</strong>」とする単一細胞＋系譜追跡が提示<sup>[32]</sup></td>
+</tr>
+<tr>
+<td><strong>2024–2025</strong></td>
+<td>線維芽細胞を"サブタイプ×場所×時間"で捉え直し、再配列・ニッチ制御・時期依存性が明確化<sup>[56]</sup></td>
+</tr>
+<tr>
+<td><strong>2025</strong></td>
+<td>"硬さを合わせる"など<strong>物理学的介入</strong>で線維性瘢痕を設計し直す戦略が具体化<sup>[3]</sup></td>
+</tr>
+</tbody>
+</table>
+<!-- ===== 力学 ===== -->
+<h2 id="mechanics">瘢痕の力学とメカノバイオロジー</h2>
+<h3>高校生向け：なぜ"硬さ"がそんなに大事？</h3>
+<p>神経の<strong>軸索</strong>は、「伸びやすい地面」と「伸びにくい地面」があります。瘢痕は、化学的に嫌な物質が増えるだけでなく、<strong>地面の硬さ・ねばり・繊維の向きが変わります</strong>。そうすると、軸索の先端（<strong>成長円錐</strong>）が止まりやすくなったり、迷いやすくなったりします<sup>[57]</sup>。</p>
+<h3>どんな実験で確かめられているか</h3>
+<p><strong>原子間力顕微鏡（AFM）</strong>などで、瘢痕部の"弾性（硬さ）"を測る研究が進みました<sup>[58]</sup>。</p>
+<p>ラット脳・脊髄の<strong>グリア瘢痕</strong>は、AFM測定で「他臓器の瘢痕と違い、むしろ柔らかくなる」と報告されています（損傷後1.5週・3週の時点）<sup>[59]</sup>。一方で、脊髄損傷の慢性期では"硬くなる"という報告もあり、<strong>線維性瘢痕（線維化）</strong>が硬化の主要因として示唆されています<sup>[60]</sup>。さらに別の慢性モデルでは"柔らかくなる"という報告もあり、<strong>時期・モデル・部位で結果が分かれる</strong>（＝瘢痕は力学的に一様ではない）ことが分かります<sup>[61]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> 瘢痕は「一枚岩の硬い壁」ではなく、<strong>柔らかい／硬いが混在する"地形"</strong>で、時間とともに作り替わるということです。</div>
+<h3>コラーゲン配列（繊維の向き）という"道の形"</h3>
+<p>コラーゲンはただ増えるだけでなく、<strong>どんな形・どんな向きで積まれるかが重要</strong>です。<strong>多光子顕微鏡の第二高調波（SHG）</strong>を使うと、線維状コラーゲンをラベルなしで追えます。脊髄損傷後、<strong>コラーゲン密度が増え、繊維がより複雑（うねる・曲がる）になり、それが硬化と相関する</strong>、という報告があります<sup>[62]</sup><sup>[63]</sup><sup>[64]</sup>。</p>
+<h3>"硬さを感じ取る"仕組みが治療標的になる</h3>
+<p>線維芽細胞は周囲の硬さに反応して、さらにコラーゲンを出すなどの"<strong>自己増幅ループ</strong>"に入り得る、という考え方は臓器線維症の一般理論として知られ、CNS線維性瘢痕にも応用されて議論されています<sup>[65]</sup>。</p>
+<p>そして近年、<strong>硬さを調整した材料（ハイドロゲル）</strong>で線維芽細胞の移動・並び方を変え、瘢痕のECM配列そのものを"再設計"して軸索再生を促す、という介入研究が出てきました<sup>[56]</sup>。</p>
+<details class="expandable" open="open">
+<summary>研究者注：メカノトランスダクションの例</summary>
+<div class="expandable-content">
+<p>硬さの違いが細胞内シグナルに変換される経路として、脊髄と硬さを合わせたハイドロゲルが特定線維芽細胞サブセット（<strong>Il11ra1/Itga11陽性</strong>）を介し、<strong>LRP6/β-catenin/MMP7</strong>を含むカスケードでECM配列と軸索再生に影響する、というモデルが提示されています<sup>[56]</sup>。</p>
+</div>
+</details><!-- ===== FAP ===== -->
+<h2 id="fap">治療標的としての線維芽細胞とFAP</h2>
+<h3>FAPとは何か（まずはがん領域の話）</h3>
+<p><strong>FAP</strong>は、がんの周囲にいる<strong>がん関連線維芽細胞（CAF）</strong>など、活性化した線維芽細胞で高く出やすい膜タンパクとして知られ、これを狙う<strong>PETトレーサー（FAPI）</strong>を使うと、「がん細胞そのもの」ではなく「がんの間質（周辺環境）」を画像化できます<sup>[66]</sup><sup>[67]</sup>。</p>
+<p>この<strong>FAPI-PET</strong>は多くのがん種で研究が進み、さらに"治療用放射性核種を付ける"ことで<strong>セラノスティクス（診断＋治療）</strong>へつなげる議論もあります<sup>[68]</sup><sup>[69]</sup>。</p>
+<h3>臨床試験はどこまで進んでいるか（要点）</h3>
+<p><strong>[<sup>68</sup>Ga]Ga-FAPI-46</strong>などのFAP標的PETは、病理検証を伴う<strong>第2相試験</strong>などが報告され、診断性能評価が進んでいます<sup>[70]</sup>。FAP標的の画像診断に関する試験は、膵がんなどで多施設試験設計が提示され、試験登録も行われています（NCT番号で追跡可能）<sup>[71]</sup><sup>[72]</sup>。一方、治療（放射性核種治療、抗体薬物複合体、細胞療法など）は有望視されつつも、全体としては初期段階が中心、という整理が近年の総説で示されています<sup>[73]</sup>。</p>
+<h3>CNS領域との接点：脳腫瘍と"CAF様の血管周囲線維芽細胞"</h3>
+<p>脳腫瘍（例：<strong>膠芽腫</strong>）でも、血管周囲に<strong>CAF様の間質細胞</strong>が関わり、免疫療法抵抗性や予後と関連し得る、というトランスクリプトーム解析があります<sup>[74]</sup>。</p>
+<p>つまりCNSでも、線維芽細胞（あるいは線維芽細胞様間質細胞）は「無関係」ではなく、がん領域で育った<strong>FAP/CAF標的技術</strong>が、CNSの"周辺環境を読む・狙う"技術として将来波及する余地があります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 重要な限界（正直に）</span> 現時点でのFAP標的臨床試験の主戦場はがんであり、脊髄損傷や外傷性脳損傷の線維性瘢痕をFAPで"標準的に"診断・治療する段階にはまだ到達していません（研究は接続し得るが、臨床実装は別ステップ）<sup>[75]</sup>。</div>
+<!-- ===== 再生医療 ===== -->
+<h2 id="regeneration">再生医療への応用戦略</h2>
+<p>ここからが「どう治すか」です。近年の考え方は、単純な"瘢痕を消す"ではなく、<strong>瘢痕を再設計する</strong>です。理由は、瘢痕がないと傷が閉じず、出血・感染・炎症暴走が起き得るからです。実際、<strong>瘢痕形成細胞の増殖を強く止めると傷の封鎖に失敗する</strong>、という古典的な観察があります<sup>[76]</sup><sup>[77]</sup><sup>[78]</sup>。</p>
+<p>以下の3本柱が、現在の再生医療の具体論として整理しやすいです。</p>
+<h3>柱①：硬さを改変する（生体材料・薬・免疫調整）</h3>
+<p><strong>生体材料（ハイドロゲル）で"硬さを合わせる"</strong>：脊髄の硬さに近いハイドロゲルを入れることで、線維芽細胞の移動とECMの並びを整え、結果として軸索が伸びやすい"平行マトリックス"を作った、という報告があります<sup>[79]</sup>。ここでポイントは「硬ければ良い／柔らかければ良い」ではなく、"<strong>脊髄という組織の力学に合う</strong>"ことが条件として示された点です。</p>
+<p><strong>薬で線維芽細胞の侵入・コラーゲンIを弱める</strong>：<strong>コラーゲンI</strong>が瘢痕と再生失敗の"組織設計上の要"になり得る、という前提で、<strong>血液脳関門を通れる既存薬</strong>を組み合わせて線維芽細胞の侵入やコラーゲンI沈着を減らし、軸索成長と機能回復を伴った、という報告があります<sup>[80]</sup><sup>[81]</sup><sup>[82]</sup>。</p>
+<p><strong>免疫側を調整して線維性瘢痕形成を間接的に変える</strong>：損傷部に入ってくる<strong>血行性マクロファージ</strong>が線維芽細胞の集積と線維性瘢痕形成に関与し、マクロファージを減らすと線維性瘢痕が減って軸索成長が増える、というデータがあります<sup>[83]</sup><sup>[84]</sup>。ただし免疫抑制は感染・修復遅延など副作用も絡むため、臨床応用は「どの細胞を、いつ、どれだけ」が難所です。</p>
+<h3>柱②：コラーゲンガイドを作る（配列を"道"に変える）</h3>
+<p>ここでの発想は単純で、<strong>ランダムな壁を、整列した"レール"に変える</strong>です。そのための方法として、整列構造を持つ足場（コラーゲンやハイドロゲル、ナノファイバーなど）に幹細胞を載せる戦略が多数検討されています。例えば、<strong>整列コラーゲン系足場</strong>が軸索の伸び方向をガイドし、炎症やグリア瘢痕にも影響を与え得る、という報告があります<sup>[85]</sup>。</p>
+<h3>柱③：線維芽細胞を再プログラムする（"別の仕事"をさせる）</h3>
+<p>ここでいう再プログラムは、SF的な「細胞種を別物に変える」だけでなく、現実的には"<strong>同じ線維芽細胞でも、状態（出す物質・振る舞い）を変える</strong>"ことを指します。単一細胞・空間解析により、線維芽細胞が時間と場所で状態遷移すること自体が示されているため<sup>[86]</sup>、「状態を誘導する」戦略が成り立ちます。</p>
+<p>具体例：</p>
+<p><strong>TGFβ経路の調整</strong>：脳損傷モデルで<strong>筋線維芽細胞様状態</strong>を駆動する候補として<strong>TGFβ</strong>が示され、TGFβ受容体側の操作が線維芽細胞状態や瘢痕の質に影響する、という枠組みが提示されています<sup>[87]</sup>。</p>
+<p><strong>IFNγ経路の調整</strong>：神経炎症モデルで、線維性瘢痕細胞に<strong>IFNγ関連遺伝子</strong>が富み、線維性細胞側のIFNγ受容体を欠失させると瘢痕が減る、というデータがあります<sup>[32]</sup>。</p>
+<p><strong>CD44などの分子を介した線維化抑制</strong>：脊髄損傷で<strong>CD44を阻害</strong>すると線維性瘢痕関連ECMが減り、<strong>皮質脊髄路軸索の進入と機能回復</strong>が示唆された、という研究があります<sup>[88]</sup>。</p>
+<details class="expandable" open="open">
+<summary>細胞間相互作用フロー（概念図）</summary>
+<div class="expandable-content">
+<p><strong>外傷・虚血などの障害</strong> → <strong>血管障害・バリア破綻</strong></p>
+<p>　→ <strong>免疫細胞流入</strong>（血行性マクロファージなど） → サイトカイン/誘引 → 境界/血管周囲の<strong>線維芽細胞が活性化・増殖・移動</strong></p>
+<p>　→ <strong>アストロサイト活性化</strong> → <strong>グリア瘢痕</strong>（境界形成・CSPG等）</p>
+<p>　→ 線維芽細胞 → <strong>線維性瘢痕</strong>（コラーゲンI/フィブロネクチン等ECM）＋ <strong>免疫ニッチ形成</strong>（例：CXCL12）</p>
+<p>　→ 硬さ・線維配列の変化 → <strong>軸索再生の阻害/誘導の分岐</strong></p>
+<p>　←（介入）硬さを合わせた材料（ハイドロゲル等）/ TGFβ・IFNγ・IL-11など状態制御 / ECMや受容体の標的（例：CD44）</p>
+<p>このフローの"根拠の芯"は、線維芽細胞が時系列で状態を変え、免疫細胞との相互作用（<strong>CXCL12</strong>など）やTGFβ関連の制御が瘢痕・慢性炎症に影響するという脳損傷のデータ<sup>[89]</sup><sup>[90]</sup>と、損傷部で線維芽細胞サブタイプが空間的に分業し得るという脊髄損傷のデータ<sup>[3]</sup>です。</p>
+</div>
+</details><!-- ===== 未解決課題 ===== -->
+<h2 id="future">未解決課題と将来展望</h2>
+<h3>瘢痕は"悪"か？という二択を超える必要がある</h3>
+<p>脳損傷では、<strong>早期の線維芽細胞状態を乱すと障害や死亡が悪化し得る</strong>一方、慢性期の免疫ニッチが炎症を長引かせる可能性も示され<sup>[91]</sup>、線維芽細胞を一律に抑えるのは危険です。脊髄損傷でも、線維性瘢痕は再生阻害になる一方で、損傷部の構造維持に関わるため、介入の"<strong>強さ</strong>"と"<strong>タイミング</strong>"が鍵です。</p>
+<h3>起源論争の整理：線維芽細胞・周皮細胞・血管平滑筋の境界</h3>
+<p>同じ<strong>PDGFRβ陽性</strong>でも、周皮細胞と線維芽細胞が混線し得ます。系譜追跡の入り口（<strong>GLAST</strong>など）にも注意が必要で、今後は「<strong>遺伝子×場所×形態×機能</strong>」を同時に満たす定義（命名法）が必要です<sup>[92]</sup><sup>[93]</sup>。この点は、最新の総説でも"今後の課題"として繰り返し強調されています。</p>
+<h3>人間での検証と"空間"の重要性</h3>
+<p>ヒト髄膜は層構造と線維芽細胞系譜が空間解析で検証されつつありますが<sup>[54]</sup>、成人損傷・慢性疾患での線維性瘢痕を、同じ解像度で追う研究はまだ限定的です。今後は、単一細胞だけでなく、<strong>空間・時間・力学を統合した"縦断アトラス"</strong>（同一個体での時系列を含む）が重要になります。</p>
+<h3>FAP/FAPI技術の脳神経領域への波及は、段階を踏む必要がある</h3>
+<p><strong>FAPI-PET</strong>やFAP標的治療は臨床の速度が速い一方、現在の中心は腫瘍領域で、CNS損傷の線維性瘢痕に直結しているわけではありません<sup>[94]</sup><sup>[95]</sup>。ただし、脳腫瘍のCAF様細胞やCNS境界の線維芽細胞が病態に関与することが示されており<sup>[96]</sup>、"線維芽細胞の見える化・状態推定・標的化"の技術基盤としての価値は高いです。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 将来像（高校生向けに一言）</span> これからの再生医療は、瘢痕を「壊す」より、<strong>瘢痕を"通れる構造"へ作り替える工学と生物学の融合</strong>に向かっています。硬さ・線維の向き・細胞の状態を、必要な範囲だけデザインして「守り」と「再生」を両立させる、という方向です<sup>[97]</sup>。</div>
+<!-- ===== 参考文献 ===== -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=dPtcEvfAPHk" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div id="references" class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1 6 9 10 11 12 22 23 24 25 34 92</span> <span class="ref-content">Soderblom C, et al. PMC3755723. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3755723/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC3755723/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2 19 20 93</span> <span class="ref-content">Dorrier CE, et al. Emerging roles of CNS fibroblasts in their border and beyond. Nat Rev Neurosci. 2021. <a href="https://www.nature.com/articles/s41583-021-00525-w" target="_blank">https://www.nature.com/articles/s41583-021-00525-w</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3 41 56 61 80 81 97</span> <span class="ref-content">Xiao L, et al. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40923460/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/40923460/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4 17 36 44 45 48 86 87 89 90 94</span> <span class="ref-content">Ewing-Crystal NA, et al. Nature. 2025. <a href="https://www.nature.com/articles/s41586-025-09449-2" target="_blank">https://www.nature.com/articles/s41586-025-09449-2</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5 52 71 72 77 78 95</span> <span class="ref-content">Nat Rev Clin Oncol (FAP/FAPI関連総説). 2024. <a href="https://www.nature.com/articles/s44303-024-00053-z" target="_blank">https://www.nature.com/articles/s44303-024-00053-z</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Yang T, et al. Dissecting the Dual Role of the Glial Scar and Scar-Forming Astrocytes in Spinal Cord Injury. Front Cell Neurosci. 2020. <a href="https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2020.00078/full" target="_blank">https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2020.00078/full</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8 13</span> <span class="ref-content">Bradbury EJ, Burnside ER. Moving beyond the glial scar for spinal cord repair. Nat Commun. 2019. <a href="https://www.nature.com/articles/s41467-019-11707-7" target="_blank">https://www.nature.com/articles/s41467-019-11707-7</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14 16 83 84</span> <span class="ref-content">Zhu Y, et al. Hematogenous macrophage depletion reduces the fibrotic scar and increases axonal growth after spinal cord injury. Neurobiol Dis. 2015. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0969996114003374" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S0969996114003374</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15 26 57 79 91</span> <span class="ref-content">Göritz C, et al. A pericyte origin of spinal cord scar tissue. Science. 2011. <a href="https://pubmed.ncbi.nlm.nih.gov/21737741/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/21737741/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">18 37 46 60</span> <span class="ref-content">Xue X, et al. Nat Commun. 2024. <a href="https://www.nature.com/articles/s41467-024-50564-x" target="_blank">https://www.nature.com/articles/s41467-024-50564-x</a></span></div>
+<div class="ref-item"><span class="ref-numbers">21 35 38 39 40 59</span> <span class="ref-content">DeSisto J, et al. PMC7769050. 2020. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7769050/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC7769050/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">27</span> <span class="ref-content">Pietilä R, et al. Nat Commun. 2023. <a href="https://www.nature.com/articles/s41467-021-25585-5" target="_blank">https://www.nature.com/articles/s41467-021-25585-5</a></span></div>
+<div class="ref-item"><span class="ref-numbers">28 30 50 55</span> <span class="ref-content">Dani N, et al. PMC8214809. 2021. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8214809/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8214809/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">29 51</span> <span class="ref-content">Verhaege D, et al. Nat Neurosci. 2026. <a href="https://www.nature.com/articles/s41593-025-02188-7" target="_blank">https://www.nature.com/articles/s41593-025-02188-7</a></span></div>
+<div class="ref-item"><span class="ref-numbers">31</span> <span class="ref-content">PMC11197483. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11197483/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11197483/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">32</span> <span class="ref-content">Dorrier CE, et al. CNS fibroblasts form a fibrotic scar in response to immune cell infiltration. PMC7877789. 2021. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7877789/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC7877789/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">33</span> <span class="ref-content">Bhatt P, et al. 2002. <a href="https://pubmed.ncbi.nlm.nih.gov/11854516/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/11854516/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">42 43</span> <span class="ref-content">Ewing-Crystal NA, et al. Neuron. 2023. <a href="https://www.sciencedirect.com/science/article/pii/S0896627323006669" target="_blank">https://www.sciencedirect.com/science/article/pii/S0896627323006669</a></span></div>
+<div class="ref-item"><span class="ref-numbers">47 62 63 64</span> <span class="ref-content">PMC5364386. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5364386/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC5364386/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">49 85</span> <span class="ref-content">Vinsland E, et al. 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/32832944/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/32832944/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">53 54</span> <span class="ref-content">PMC12265625. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12265625/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC12265625/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">58</span> <span class="ref-content">PMC5871719. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5871719/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC5871719/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">65</span> <span class="ref-content">PMC6978780. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6978780/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC6978780/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">66 67</span> <span class="ref-content">J Mech Behav Biomed Mater. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751616120305063" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S1751616120305063</a></span></div>
+<div class="ref-item"><span class="ref-numbers">68 69</span> <span class="ref-content">FAPI-PET/CT theranostics. 2023. <a href="https://pubmed.ncbi.nlm.nih.gov/37572769/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/37572769/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">70</span> <span class="ref-content">Cells. 2022;11(15):2371. <a href="https://www.mdpi.com/2073-4409/11/15/2371" target="_blank">https://www.mdpi.com/2073-4409/11/15/2371</a></span></div>
+<div class="ref-item"><span class="ref-numbers">73</span> <span class="ref-content">2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40774265/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/40774265/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">74</span> <span class="ref-content">2023. <a href="https://pubmed.ncbi.nlm.nih.gov/38011131/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/38011131/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">75</span> <span class="ref-content">Acta Radiol. 2025. <a href="https://www.sciencedirect.com/science/article/pii/S0001299825001771" target="_blank">https://www.sciencedirect.com/science/article/pii/S0001299825001771</a></span></div>
+<div class="ref-item"><span class="ref-numbers">76 96</span> <span class="ref-content">npj Genom Med. 2023. <a href="https://www.nature.com/articles/s41525-023-00381-w" target="_blank">https://www.nature.com/articles/s41525-023-00381-w</a></span></div>
+<div class="ref-item"><span class="ref-numbers">82</span> <span class="ref-content">Collagen I is a critical organizer of scarring and CNS regeneration failure. PMC11100746. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11100746/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11100746/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">88</span> <span class="ref-content">2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38323002/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/38323002/</a></span></div>
+<div>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentrance%3F_gl%3D1*gl4xyd*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0" title="医知創造ラボの歩き方 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entrance?_gl=1*gl4xyd*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F02%2F26%2F150249" title="アドレノメデュリン（AM）と脳神経領域への応用 ― 血管を守るペプチドの可能性 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/02/26/150249">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F02%2F26%2F151006" title="脳のミクログリアって何？ ─ 少し深掘り - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/02/26/151006">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+</div>
+</div>
+</div>

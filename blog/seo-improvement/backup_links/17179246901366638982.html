@@ -1,0 +1,494 @@
+<div class="medical-article">
+<div> </div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+.ref-content a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.ref-content a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260319/20260319073508.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<h1><br /><br /></h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#summary">要旨</a></li>
+<li><a href="#introduction">はじめに</a></li>
+<li><a href="#section1">1. なぜ起こるのか：病態の基本</a></li>
+<li><a href="#section2">2. どのような障害が出るのか</a></li>
+<li><a href="#section3">3. なぜ見逃されるのか</a></li>
+<li><a href="#section4">4. どう評価するか</a></li>
+<li><a href="#section5">5. 予後はどこまでわかるか</a></li>
+<li><a href="#section6">6. 治療と支援</a></li>
+<li><a href="#section7">7. 実地臨床で押さえるべき点</a></li>
+<li><a href="#conclusion">おわりに</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- 要旨 -->
+<h2 id="summary">要旨</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 この記事のポイント</span> <strong>蘇生後の高次脳機能障害</strong>は、<strong>心停止後</strong>に生じる<strong>post-cardiac arrest brain injury</strong>のうち、意識が回復したあとに残る<strong>認知・行動・情動の障害</strong>として理解するとわかりやすい。問題の中心は、単なる「もの忘れ」ではなく、<strong>記憶、注意、処理速度、遂行機能、視空間認知、感情調整、疲労</strong>が複合して障害される点にある。現在のガイドラインや科学声明では、救命率だけでなく、その後の<strong>survivorship</strong>、すなわち<strong>社会参加、就労、家族支援</strong>まで含めた回復が<strong>post-resuscitation care</strong>の一部として位置づけられている。</div>
+<p>したがって、蘇生後診療では「目が開いたか」「会話ができるか」だけでは不十分で、見えにくい<strong>高次脳機能障害</strong>を系統的に拾い上げる視点が重要である<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup><sup>[4]</sup>。</p>
+<!-- はじめに -->
+<h2 id="introduction">はじめに</h2>
+<p><strong>心停止後の脳障害</strong>は、集中治療室に入室する蘇生後患者における<strong>主要な死亡原因</strong>であると同時に、<strong>長期障害の最大の原因</strong>でもある。つまり、蘇生後の神経学的問題は「助かるかどうか」だけではなく、「どのように助かるか」を決める中核にある。とくに近年は、急性期治療の進歩によって生存者が増えたため、退院後に残る<strong>認知障害</strong>、<strong>感情障害</strong>、<strong>疲労</strong>、<strong>社会復帰困難</strong>がより重要な課題になっている<sup>[1]</sup><sup>[2]</sup>。</p>
+<p>日本語の「高次脳機能障害」は、狭い意味では<strong>失語・失行・失認</strong>を連想しやすいが、蘇生後患者ではそれだけでは足りない。実際の臨床では、<strong>記憶障害</strong>、<strong>注意障害</strong>、<strong>遂行機能障害</strong>、<strong>視空間障害</strong>、<strong>感情・行動変化</strong>、<strong>疲労</strong>をまとめて把握したほうが実態に近い。患者は基本的ADLが自立していても、仕事や学業、家庭内役割への復帰で初めて問題が明らかになることが少なくない<sup>[1]</sup><sup>[3]</sup>。</p>
+<!-- 1. なぜ起こるのか：病態の基本 -->
+<h2 id="section1">1. なぜ起こるのか：病態の基本</h2>
+<p><strong>心停止後脳障害</strong>の本体は、<strong>全脳虚血</strong>とその後の<strong>再灌流障害</strong>である。心停止中は脳血流が途絶え、神経細胞は短時間でエネルギーを失う。自己心拍再開後も、ただ血流が戻れば終わりではない。再灌流後には<strong>酸化ストレス</strong>、<strong>炎症</strong>、<strong>代謝異常</strong>、自律神経・血管反応の乱れが重なり、脳障害は数時間から数日にわたって進展しうる。ILCORの2024年科学声明では、<strong>post-cardiac arrest brain injury</strong>を「<strong>ischemic depolarization</strong>」「<strong>reperfusion repolarization</strong>」「<strong>dysregulation</strong>」「<strong>recovery and repair</strong>」の<strong>4つの重なり合う段階</strong>として整理している<sup>[2]</sup><sup>[5]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 蘇生後脳障害の二重の一撃</span> 最初の一撃は「<strong>血が止まること（虚血）</strong>」、二つ目の一撃は「<strong>血が戻ったあとに起こる二次障害（再灌流障害）</strong>」である。再灌流後には<strong>興奮毒性</strong>、<strong>ミトコンドリア障害</strong>、<strong>酸化ストレス</strong>、<strong>炎症</strong>が持続し、これらが神経細胞死や神経回路の機能不全につながる。</div>
+<p>したがって、蘇生後脳障害は単一臓器の単純な梗塞ではなく、<strong>時間的に変化する全脳性のネットワーク障害</strong>として捉える必要がある<sup>[5]</sup><sup>[6]</sup><sup>[7]</sup>。</p>
+<p>障害されやすい部位は一様ではないが、<strong>皮質</strong>、<strong>基底核</strong>、<strong>海馬</strong>、<strong>視床</strong>などの脆弱部位が関与しやすい。重要なのは、これらの部位が個別に傷むというより、互いに結びついた<strong>神経ネットワーク</strong>が障害されることで、記憶、注意、遂行機能、視空間認知など複数の領域にまたがる症状が出る点である。そのため、蘇生後の認知障害は「海馬が傷んだから記憶だけ悪い」という単純な図式では説明できないことが多い<sup>[8]</sup><sup>[11]</sup>。</p>
+<!-- 2. どのような障害が出るのか -->
+<h2 id="section2">2. どのような障害が出るのか</h2>
+<p>蘇生後の高次脳機能障害で最も重要なのは、障害が"まだら"ではなく、<strong>"複合的"</strong>であることである。系統的レビューや総説では、<strong>長期の認知障害はおおむね生存者の40～50%前後</strong>にみられ、障害されやすい領域として<strong>記憶</strong>、<strong>注意</strong>、<strong>処理速度</strong>、<strong>遂行機能</strong>が繰り返し報告されている。加えて、<strong>視空間認知</strong>、<strong>言語流暢性</strong>、<strong>気分症状</strong>、<strong>疲労</strong>も日常生活に強く影響する<sup>[1]</sup><sup>[8]</sup><sup>[9]</sup><sup>[10]</sup>。</p>
+<h3>記憶障害</h3>
+<p><strong>記憶障害</strong>は代表的症状であるが、しばしば誤解される。臨床では「<strong>前向性健忘</strong>だけ」が目立つと理解されがちだが、レビューでは純粋な健忘だけが残る例はむしろ少なく、<strong>記憶障害に注意障害や遂行機能障害が重なった形</strong>が典型とされる。つまり、患者は"覚えられない"だけでなく、"そもそも<strong>情報を保持・整理・取り出す過程</strong>"全体が傷んでいることが多い<sup>[10]</sup><sup>[11]</sup>。</p>
+<h3>注意障害・処理速度低下</h3>
+<p><strong>注意障害</strong>と<strong>処理速度低下</strong>は、日常で最も見逃されやすい。会話は成立しても、話の切り替えについていけない、少し複雑な指示で混乱する、複数課題を同時に扱えない、反応が遅い、といった形で現れる。患者本人も「頭の回転が遅い」と表現することがある。こうした障害は検査室よりも、病棟での会話、服薬管理、退院調整、家族とのやりとりで目立ちやすい<sup>[1]</sup><sup>[8]</sup><sup>[10]</sup>。</p>
+<h3>遂行機能障害</h3>
+<p><strong>遂行機能障害</strong>は、<strong>社会復帰を最も妨げやすい障害</strong>である。遂行機能とは、目標を立て、段取りを組み、優先順位を決め、柔軟に修正しながら行動を進める力である。これが落ちると、診察室では普通に見えるのに、退院後は仕事の段取り、買い物、書類処理、家事の同時進行ができない。蘇生後生存者の系統的レビューでも、<strong>遂行機能と処理速度</strong>は記憶と並んで障害されやすい領域である<sup>[1]</sup><sup>[8]</sup><sup>[10]</sup>。</p>
+<h3>視空間認知障害と行動・情動の変化</h3>
+<p><strong>視空間認知障害</strong>は頻度のわりに見逃されやすい。道順が覚えにくい、物の位置関係がつかみにくい、運転再開が危うい、という形で表面化することがある。また、生存者では<strong>不安</strong>、<strong>抑うつ</strong>、<strong>PTSD様症状</strong>、<strong>易怒性</strong>、<strong>感情易変</strong>などの情動変化も少なくない。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 蘇生後生存者における精神症状・疲労の頻度（ERC/ESICMガイドライン）</span> <strong>不安</strong>：3～6か月で<strong>15～30%</strong>　/　<strong>抑うつ</strong>：<strong>13～32%</strong>　/　<strong>PTSD症状</strong>：約<strong>4分の1</strong>に残存<br /><strong>疲労</strong>：6か月で約<strong>70%</strong>、1年でも約<strong>半数</strong>に残存</div>
+<p>これらは日常生活への影響が大きく、見逃してはならない<sup>[1]</sup><sup>[9]</sup>。</p>
+<!-- 障害領域の一覧テーブル -->
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">障害領域</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">臨床上の特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">日常場面での現れ方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>記憶障害</strong></td>
+<td>前向性健忘が中心だが、注意・遂行機能障害と複合</td>
+<td>新しいことが覚えられない、約束を忘れる</td>
+</tr>
+<tr>
+<td><strong>注意障害</strong></td>
+<td>持続性・分配性注意の低下、処理速度低下</td>
+<td>話の切り替えについていけない、複数課題が困難</td>
+</tr>
+<tr>
+<td><strong>遂行機能障害</strong></td>
+<td>計画・段取り・柔軟な修正の障害</td>
+<td>仕事の段取り不良、家事の同時進行困難</td>
+</tr>
+<tr>
+<td><strong>視空間認知障害</strong></td>
+<td>空間的位置関係の把握困難</td>
+<td>道順が覚えにくい、運転再開が危険</td>
+</tr>
+<tr>
+<td><strong>情動・行動変化</strong></td>
+<td>不安、抑うつ、PTSD様症状、易怒性</td>
+<td>気分の不安定、対人関係の困難</td>
+</tr>
+<tr>
+<td><strong>疲労</strong></td>
+<td>6か月で約70%、1年で約50%に残存</td>
+<td>活動量の低下、社会参加の制限</td>
+</tr>
+</tbody>
+</table>
+<!-- 3. なぜ見逃されるのか -->
+<h2 id="section3">3. なぜ見逃されるのか</h2>
+<p>蘇生後の高次脳機能障害が見逃されやすい最大の理由は、従来よく使われてきた<strong>global outcome scale</strong>では拾いきれないからである。<strong>Cerebral Performance Category（CPC）</strong>や<strong>modified Rankin Scale（mRS）</strong>は、重度障害の層別化には有用だが、<strong>軽度から中等度の認知障害</strong>、疲労、情動障害、就労困難を十分に反映しない。実際、<strong>TTM試験</strong>のサブ解析では、標準的アウトカム尺度では見えにくい認知障害が、患者や家族の報告で明らかになった<sup>[1]</sup><sup>[13]</sup><sup>[14]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 見逃しの原因</span> もう一つの理由は、初期回復期には<strong>残存鎮静</strong>、<strong>せん妄</strong>、<strong>睡眠障害</strong>、<strong>全身衰弱</strong>、<strong>聴力低下</strong>、<strong>抑うつ</strong>などが重なり、純粋な認知障害の輪郭が見えにくいことである。しかも、患者自身に<strong>病識が乏しい</strong>ことがあるため、「本人は大丈夫と言うが家族は明らかに違和感を覚える」という状況が起こりやすい。だからこそ、本人への問診だけでなく、<strong>家族や介護者からの情報</strong>が非常に重要になる。</div>
+<p><sup>[1]</sup><sup>[12]</sup></p>
+<!-- 4. どう評価するか -->
+<h2 id="section4">4. どう評価するか</h2>
+<p>評価は、<strong>急性期・回復期・外来フォロー</strong>で分けて考えるとわかりやすい。急性期の第一目標は、<strong>重度低酸素虚血性脳障害の評価と予後判定</strong>であり、神経学的診察、<strong>EEG</strong>、<strong>SSEP</strong>、<strong>NSE</strong>、<strong>CT/MRI</strong>などを組み合わせた<strong>multimodal neuroprognostication</strong>が推奨される。ただし、ここで主に見ているのは「重度に不良かどうか」であって、「社会復帰できる程度に認知が戻るか」を精密に言い当てることではない<sup>[1]</sup><sup>[12]</sup>。</p>
+<p>意識が回復してきたら、次に必要なのは<strong>formal cognitive screening</strong>である。ERC/ESICMガイドラインは、<strong>記憶</strong>、<strong>注意</strong>、考える速さ、いらだち、計画性、多重課題処理などの訴えを聴取し、家族からも変化を聞き取ったうえで、<strong>MoCA</strong>を実用的なスクリーニングとして勧めている。Hagbergらは、現時点で金標準の単一検査バッテリーはなく、まずは広く拾い、その後に必要なら詳細検査へ進む戦略が現実的だとしている。さらに、<strong>退院前の認知スクリーニング結果は、その後1か月の機能予後と独立して関連</strong>していた<sup>[1]</sup><sup>[8]</sup><sup>[16]</sup>。</p>
+<p>詳細評価が必要になるのは、復学・復職を見据える場面である。簡易スクリーニングが正常でも、業務負荷が高い仕事では<strong>注意分配</strong>や<strong>遂行機能の障害</strong>が表面化しうる。したがって、若年者、知的負荷の高い職種、運転再開を検討する患者では、<strong>神経心理検査を含む包括的評価</strong>が望ましい。評価領域としては、<strong>記憶、注意、処理速度、遂行機能、視空間認知、気分、疲労</strong>を最低限押さえるべきである<sup>[1]</sup><sup>[8]</sup><sup>[10]</sup>。</p>
+<details class="expandable" open="open">
+<summary>画像検査の位置づけ</summary>
+<div class="expandable-content">
+<p><strong>CT</strong>や<strong>MRI</strong>は<strong>重度低酸素虚血性脳障害</strong>の検出や予後判定には有用だが、軽症～中等症の高次脳機能障害を単独で説明しきれないことがある。近年は、早期に意識を回復し自宅退院可能な患者でも、<strong>3か月時点で遂行機能や視空間機能の障害</strong>が残り、<strong>脳ネットワークの変化</strong>が関連することが示されている。つまり、「<strong>画像が派手でないから大丈夫</strong>」とは言えない<sup>[1]</sup><sup>[18]</sup>。</p>
+</div>
+</details><!-- 評価の段階テーブル -->
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">評価の目的</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な手法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>急性期</strong></td>
+<td>重度不良予後の判定</td>
+<td>神経学的診察、EEG、SSEP、NSE、CT/MRI（multimodal neuroprognostication）</td>
+</tr>
+<tr>
+<td><strong>回復期</strong></td>
+<td>認知障害のスクリーニング</td>
+<td>MoCA、本人・家族からの聴取</td>
+</tr>
+<tr>
+<td><strong>外来フォロー</strong></td>
+<td>復職・復学に向けた詳細評価</td>
+<td>神経心理検査（記憶、注意、処理速度、遂行機能、視空間認知、気分、疲労）</td>
+</tr>
+</tbody>
+</table>
+<!-- 5. 予後はどこまでわかるか -->
+<h2 id="section5">5. 予後はどこまでわかるか</h2>
+<p>予後については、まず「<strong>重度不良予後の判定</strong>」と「<strong>社会復帰レベルの予測</strong>」を分けて考える必要がある。前者については、<strong>72時間以降の診察</strong>、<strong>EEG</strong>、<strong>SSEP</strong>、<strong>NSE</strong>、画像を組み合わせた手法が整ってきた。一方、後者、すなわち就労や学業復帰を含む高次脳機能の予測は、急性期だけで正確に行うことが難しい。2023年のneuroprognostication guidelineでも、信頼性が高い予測因子は限られており、しかも多くは"不良予後"の予測に偏っている<sup>[1]</sup><sup>[12]</sup>。</p>
+<h3>回復の時間軸</h3>
+<p>ERC/ESICMガイドラインでは、<strong>認知回復の多くは最初の3か月に起こる</strong>とされるが、それで回復が打ち止めになるわけではない。<strong>Hanox study</strong>では<strong>18か月</strong>まで機能改善がみられ、2025年の前向き研究では、<strong>正常範囲の認知機能を示す患者割合が退院時26%から6か月で67%まで増加</strong>した。したがって、早期評価は必要だが、数週で固定的に悲観しすぎるのも適切ではない<sup>[1]</sup><sup>[15]</sup><sup>[17]</sup>。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 楽観しすぎてもいけない</span> <strong>Hanox study</strong>では、<strong>14日以内に覚醒した患者群</strong>でも<strong>18か月時点で35%が中等度以上の障害を残すか死亡</strong>しており、<strong>20%に認知障害</strong>、<strong>32%に不安症状</strong>、<strong>25%に抑うつ症状</strong>が残っていた。<strong>低灌流時間</strong>、<strong>ICU入室時重症度</strong>、<strong>3日を超える昏睡持続</strong>、<strong>人工呼吸の遷延</strong>は不良機能予後と関連した。これは「意識が戻った＝脳機能が十分戻った」ではないことを示している<sup>[15]</sup>。</div>
+<h3>社会復帰の実態</h3>
+<p>多くの生存者は基本的ADLは自立し、自宅退院も可能であるが、<strong>社会参加</strong>は別問題である。ERC/ESICMガイドラインでは、就労していた患者の<strong>63～85%は職場復帰できる</strong>一方、勤務時間や仕事内容の調整が必要な例が少なくないとしている。就労・社会参加を妨げる要因として、<strong>認知障害</strong>、<strong>抑うつ</strong>、<strong>疲労</strong>、<strong>移動障害</strong>が挙げられ、<strong>退院時の認知機能低下はその後の機能予後とも関連</strong>する。つまり、退院できることと、元の生活に戻れることは同義ではない<sup>[1]</sup><sup>[16]</sup><sup>[17]</sup>。</p>
+<!-- 6. 治療と支援 -->
+<h2 id="section6">6. 治療と支援</h2>
+<p>蘇生後高次脳機能障害に対する治療は、<strong>急性期の二次障害予防</strong>と、<strong>回復期のリハビリテーション支援</strong>に大きく分かれる。</p>
+<h3>急性期：二次障害の予防</h3>
+<p>急性期には、<strong>低酸素</strong>、<strong>低血圧</strong>、<strong>発熱</strong>、<strong>痙攣</strong>、<strong>極端な血糖異常</strong>など、脳障害を悪化させる因子を避けることが重要である。<strong>2025年AHAガイドライン</strong>でも、<strong>血圧</strong>、<strong>酸素化</strong>、<strong>換気</strong>、<strong>糖管理</strong>、<strong>痙攣対応</strong>、<strong>温度管理</strong>、<strong>神経モニタリング</strong>がpost-cardiac arrest careの主要項目として整理されている<sup>[1]</sup><sup>[2]</sup><sup>[4]</sup><sup>[5]</sup>。</p>
+<details class="expandable" open="open">
+<summary>温度管理に関する最新の考え方</summary>
+<div class="expandable-content">
+<p>かつて「より低く冷やすほどよい」と考えられた時期もあったが、認知機能の観点からは単純ではない。<strong>33℃対36℃</strong>を比較した<strong>TTM試験</strong>の認知・QOL解析では差がなく、その後の研究でも温度戦略の差が長期の認知回復を大きく変えるという確立した証拠はない。現在は、特定の温度そのものより、<strong>発熱回避</strong>と<strong>標準化された集中治療の質を保つこと</strong>が重要と理解するのが妥当である<sup>[1]</sup><sup>[13]</sup><sup>[14]</sup>。</p>
+</div>
+</details>
+<h3>回復期：包括的リハビリテーション</h3>
+<p>回復期には、<strong>包括的で個別化されたリハビリテーション</strong>が中心になる。近年のレビューでは、心停止後回復において<strong>認知疲労</strong>、<strong>遂行機能障害</strong>、<strong>情動不安定</strong>が大きな障壁であり、リハビリテーションは付加的なものではなく<strong>回復の本体の一部</strong>と位置づけられている。ERC/ESICMガイドラインは、退院前に身体面だけでなく<strong>認知・情動面も評価</strong>し、必要に応じてリハビリテーションへつなぐこと、さらに<strong>退院後3か月以内に系統的フォローアップ</strong>を行うことを推奨している<sup>[1]</sup><sup>[19]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 回復期リハビリテーションの柱</span> <strong>認知リハビリテーション</strong>、<strong>作業療法</strong>、<strong>復職支援</strong>、<strong>心理支援</strong>、<strong>疲労マネジメント</strong>、<strong>家族教育</strong>が柱になる。情報提供は口頭だけでなく文書も望ましい。患者本人だけでなく<strong>家族の不安、抑うつ、PTSD様症状</strong>にも配慮が必要である。AHAのsurvivorship statementは、患者・介護者・リハビリ専門職を含む<strong>連携そのもの</strong>をcardiac arrest survivorshipの中心に据えている<sup>[1]</sup><sup>[3]</sup><sup>[19]</sup>。</div>
+<h3>薬物治療の現状</h3>
+<p>一方、薬物治療はまだ限定的である。<strong>post-cardiac arrest brain injury</strong>に対する<strong>神経保護薬</strong>は多数検討されているが、現時点で高次脳機能障害の改善に<strong>確立した特効薬はない</strong>。したがって、現実的な臨床戦略は、<strong>①急性期の標準化された脳保護</strong>、<strong>②早期発見</strong>、<strong>③系統的フォロー</strong>、<strong>④個別化リハビリテーション</strong>の4本柱になる<sup>[5]</sup><sup>[6]</sup><sup>[19]</sup>。</p>
+<!-- 7. 実地臨床で押さえるべき点 -->
+<h2 id="section7">7. 実地臨床で押さえるべき点</h2>
+<p>医学生にまず覚えてほしいのは、蘇生後患者の神経学的評価は「<strong>意識が戻ったか</strong>」だけで終わらないという点である。意識が清明でも、<strong>記憶</strong>、<strong>注意</strong>、<strong>処理速度</strong>、<strong>遂行機能</strong>、<strong>疲労</strong>、<strong>情動障害</strong>が残れば、その人の生活は大きく変わる。逆に、急性期に疎通が悪くても、数か月単位で改善する例もある。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 蘇生後診療の三段構え</span> <strong>①急性期</strong>：不良予後の見極めを慎重に行う<br /><strong>②回復期</strong>：formal cognitive screeningを行う<br /><strong>③退院後</strong>：社会参加まで見据えてフォローする</div>
+<p><sup>[1]</sup><sup>[12]</sup><sup>[15]</sup><sup>[16]</sup><sup>[17]</sup><sup>[18]</sup><sup>[19]</sup></p>
+<!-- おわりに -->
+<h2 id="conclusion">おわりに</h2>
+<p><strong>蘇生後の高次脳機能障害</strong>は、<strong>低酸素虚血と再灌流障害</strong>を背景とした<strong>全脳性ネットワーク障害</strong>であり、典型的には<strong>記憶、注意、処理速度、遂行機能、視空間認知、情動、疲労</strong>が複合して障害される。重度不良予後の予測は一定程度可能になってきたが、<strong>社会復帰レベルの認知予後</strong>はなお見えにくい。</p>
+<p>今後の鍵は、救命率の向上そのものに加え、<strong>退院前評価</strong>、<strong>3か月以内の系統的フォロー</strong>、<strong>家族を含めた多職種介入</strong>を標準化することである。蘇生後診療は、救命で終わる医療ではなく、「<strong>その後の人生をどう支えるか</strong>」まで含めた医療として理解すべきである<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup><sup>[4]</sup><sup>[5]</sup><sup>[19]</sup>。</p>
+<!-- 参考文献 -->
+<div id="references" class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">Nolan JP, Sandroni C, Böttiger BW, Cariou A, Cronberg T, Friberg H, et al. European Resuscitation Council and European Society of Intensive Care Medicine Guidelines 2021: Post-resuscitation care. Resuscitation. 2021;161:220-269. <a href="https://doi.org/10.1016/j.resuscitation.2021.02.012" target="_blank" rel="noopener">doi:10.1016/j.resuscitation.2021.02.012</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Sandroni C, Cronberg T, Sekhon M. Brain injury after cardiac arrest: pathophysiology, treatment, and prognosis. Intensive Care Med. 2021;47(12):1393-1414. <a href="https://doi.org/10.1007/s00134-021-06548-2" target="_blank" rel="noopener">doi:10.1007/s00134-021-06548-2</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Sawyer KN, Camp-Rogers TR, Kotini-Shah P, Del Rios M, Gossip MR, Moitra VK, et al. Sudden Cardiac Arrest Survivorship: A Scientific Statement From the American Heart Association. Circulation. 2020;141(12):e654-e685. <a href="https://doi.org/10.1161/CIR.0000000000000747" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000000747</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">Hirsch KG, Amorim E, Coppler PJ, Drennan IR, Elliott A, Gordon AJ, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16_suppl_2):S673-S718. <a href="https://doi.org/10.1161/CIR.0000000000001375" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000001375</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Perkins GD, Neumar R, Hsu CH, Hirsch KG, Aneman A, Becker LB, et al. Improving Outcomes After Post-Cardiac Arrest Brain Injury: A Scientific Statement From the International Liaison Committee on Resuscitation. Circulation. 2024 Jun 27. <a href="https://doi.org/10.1161/CIR.0000000000001219" target="_blank" rel="noopener">doi:10.1161/CIR.0000000000001219</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">Katz A, Brosnahan SB, Papadopoulos J, Parnia S, Lam JQ. Pharmacologic neuroprotection in ischemic brain injury after cardiac arrest. Ann N Y Acad Sci. 2022;1507(1):49-59. <a href="https://doi.org/10.1111/nyas.14613" target="_blank" rel="noopener">doi:10.1111/nyas.14613</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Busl KM, Greer DM. Hypoxic-ischemic brain injury: pathophysiology, neuropathology and mechanisms. NeuroRehabilitation. 2010;26(1):5-13. <a href="https://doi.org/10.3233/NRE-2010-0531" target="_blank" rel="noopener">doi:10.3233/NRE-2010-0531</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Hagberg G, Ihle-Hansen H, Sandset EC, Jacobsen D, Wimmer H, Ihle-Hansen H. Long Term Cognitive Function After Cardiac Arrest: A Mini-Review. Front Aging Neurosci. 2022;14:885226. <a href="https://doi.org/10.3389/fnagi.2022.885226" target="_blank" rel="noopener">doi:10.3389/fnagi.2022.885226</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Green CR, Botha JA, Tiruvoipati R. Cognitive function, quality of life and mental health in survivors of out-of-hospital cardiac arrest: a review. Anaesth Intensive Care. 2015;43(5):568-576. <a href="https://doi.org/10.1177/0310057X1504300504" target="_blank" rel="noopener">doi:10.1177/0310057X1504300504</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Zook N, Voss S, Blennow Nordström E, Brett SJ, Jenkinson E, Shaw P, et al. Neurocognitive function following out-of-hospital cardiac arrest: A systematic review. Resuscitation. 2022;170:238-246. <a href="https://doi.org/10.1016/j.resuscitation.2021.10.005" target="_blank" rel="noopener">doi:10.1016/j.resuscitation.2021.10.005</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">Lim C, Alexander MP, LaFleche G, Schnyer DM, Verfaellie M. The neurological and cognitive sequelae of cardiac arrest. Neurology. 2004;63(10):1774-1778. <a href="https://doi.org/10.1212/01.WNL.0000144189.83077.8E" target="_blank" rel="noopener">doi:10.1212/01.WNL.0000144189.83077.8E</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">Rajajee V, et al. Guidelines for Neuroprognostication in Comatose Adult Survivors of Cardiac Arrest. Neurocrit Care. 2023;38(3):533-563. <a href="https://doi.org/10.1007/s12028-023-01688-3" target="_blank" rel="noopener">doi:10.1007/s12028-023-01688-3</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">Lilja G, Nielsen N, Friberg H, Horn J, Kjaergaard J, Nilsson F, et al. Cognitive function in survivors of out-of-hospital cardiac arrest after target temperature management at 33°C versus 36°C. Circulation. 2015;131(15):1340-1349. <a href="https://doi.org/10.1161/CIRCULATIONAHA.114.014414" target="_blank" rel="noopener">doi:10.1161/CIRCULATIONAHA.114.014414</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14</span> <span class="ref-content">Cronberg T, Lilja G, Horn J, Kjaergaard J, Wise MP, Pellis T, et al. Neurologic Function and Health-Related Quality of Life in Patients Following Targeted Temperature Management at 33°C vs 36°C After Out-of-Hospital Cardiac Arrest: A Randomized Clinical Trial. JAMA Neurol. 2015;72(6):634-641. <a href="https://doi.org/10.1001/jamaneurol.2015.0169" target="_blank" rel="noopener">doi:10.1001/jamaneurol.2015.0169</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Peskine A, Cariou A, Hajage D, Deye N, Guérot E, Dres M, et al. Long-Term Disabilities of Survivors of Out-of-Hospital Cardiac Arrest: The Hanox Study. Chest. 2021;159(2):699-711. <a href="https://doi.org/10.1016/j.chest.2020.07.022" target="_blank" rel="noopener">doi:10.1016/j.chest.2020.07.022</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">Nordström EB, Birk JL, Rojas DA, St Onge Sheehy T, Domínguez-Imbert Nieto CI, Cruz GJ, et al. Prospective evaluation of the relationship between cognition and recovery outcomes after cardiac arrest. Resuscitation. 2024;202:110343. <a href="https://doi.org/10.1016/j.resuscitation.2024.110343" target="_blank" rel="noopener">doi:10.1016/j.resuscitation.2024.110343</a></span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">Brouer JAE, Oestergaard LG, Eiskjær H, Bro-Jeppesen J, Kristensen LQ. Cognitive Recovery After Out-of-Hospital Cardiac Arrest: Insights Into Improvement Over 6 Months and the Role of Arrest Duration. J Am Heart Assoc. 2025;14(21):e042637. <a href="https://doi.org/10.1161/JAHA.125.042637" target="_blank" rel="noopener">doi:10.1161/JAHA.125.042637</a></span></div>
+<div class="ref-item"><span class="ref-numbers">18</span> <span class="ref-content">Zarifkar P, Wagner MK, Fisher PM, Stenbæk DS, Berg SK, Knudsen GM, et al. Brain network changes and cognitive function after cardiac arrest. Brain Commun. 2024;6(4):fcae174. <a href="https://doi.org/10.1093/braincomms/fcae174" target="_blank" rel="noopener">doi:10.1093/braincomms/fcae174</a></span></div>
+<div class="ref-item"><span class="ref-numbers">19</span> <span class="ref-content">Salwa K, Kaziród-Wolski K, Rębak D, Sielski J. Current Perspectives on Rehabilitation Following Return of Spontaneous Circulation After Sudden Cardiac Arrest: A Narrative Review. Healthcare (Basel). 2025;13(15):1865. <a href="https://doi.org/10.3390/healthcare13151865" target="_blank" rel="noopener">doi:10.3390/healthcare13151865</a></span></div>
+</div>
+</div>

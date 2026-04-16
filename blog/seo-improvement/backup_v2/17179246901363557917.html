@@ -1,0 +1,413 @@
+<div class="medical-article">
+<p>コメント</p>
+<p>無症候性の高CK血症へのアプローチって、どこまでやるのかいつも迷っていましたが、このようなガイドラインが出たのですね！</p>
+<p>侵襲のある筋生検より、次世代シーケンサーが重視される傾向があるのは、時代の流れを感じます。日本では国立精神神経センターに筋肉の検体と血液を送って、必要に応じて次世代シーケンサーを使ってもらうので、実質、筋生検が前提ですね。筋生検がどういう人で推奨されるかもあるので、非常に参考になると思います。</p>
+<p> </p>
+<p>このページを参考にClaude codeで無症候性高CK血症の鑑別ツールを作りました。</p>
+<p><a href="https://hinyan1016.github.io/medical-ddx-tools/hyperckemia.html" target="_blank">無症候性高CK血症 鑑別診断ツール</a></p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="EAN 2024ガイドライン：無症候性・乏症候性高CK血症の診断アプローチ">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260311/20260311060205.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">EAN 2024ガイドライン：無症候性・乏症候性高CK血症の診断アプローチ</figcaption>
+</figure>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/lGSGQp2lJio?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【EAN 2024最新ガイドライン】乏症候性・無症候性高CK血症の診断アプローチ｜NGSと筋MRIがもたらすパラダイムシフト【医知創造ラボ】" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/lGSGQp2lJio">youtu.be</a></cite></p>
+</div>
+<style>
+.medical-article { 
+    max-width: 100%; 
+    padding: 16px; 
+    line-height: 1.7; 
+    color: #333; 
+}
+
+h1 { 
+    font-size: 1.6rem; 
+    color: #2c5aa0; 
+    border-bottom: 2px solid #2c5aa0; 
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h2 { 
+    font-size: 1.3rem; 
+    color: #2c5aa0; 
+    border-left: 4px solid #2c5aa0; 
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+h3 { 
+    font-size: 1.1rem; 
+    color: #444;
+    margin-top: 1rem;
+}
+
+h3::before { 
+    content: '▶'; 
+    color: #2c5aa0; 
+    margin-right: 8px; 
+}
+
+strong { 
+    font-weight: bold; 
+    color: #2c5aa0; 
+}
+
+sup { 
+    color: #dc3545; 
+    font-weight: bold; 
+    font-size: 0.75em; 
+}
+
+.toc-box { 
+    background: #f8f9fa; 
+    border: 1px solid #dee2e6; 
+    border-radius: 4px;
+    padding: 16px; 
+    margin: 16px 0; 
+}
+
+.toc-box h3 {
+    margin-top: 0;
+}
+
+.toc-box ul {
+    margin-bottom: 0;
+}
+
+.important-box { 
+    background: #e8f4fd; 
+    border-left: 4px solid #2c5aa0; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.warning-box { 
+    background: #fff3cd; 
+    border-left: 4px solid #ffc107; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.emergency-box { 
+    background: #f8d7da; 
+    border-left: 4px solid #dc3545; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.drug-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.drug-table th, .drug-table td { 
+    border: 1px solid #ddd; 
+    padding: 12px;
+    text-align: left;
+}
+
+.drug-table th { 
+    background: #2c5aa0; 
+    color: white; 
+    font-weight: bold; 
+}
+
+.drug-table tr:nth-child(even) { 
+    background: #f8f9fa; 
+}
+
+.drug-table tr:hover {
+    background: #e9ecef;
+}
+
+.medical-details { 
+    background: #f8f9fa; 
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-details summary { 
+    background: #2c5aa0; 
+    color: white; 
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-details-content { 
+    padding: 16px; 
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+.references { 
+    margin-top: 2rem; 
+    border-top: 2px solid #dee2e6; 
+    padding-top: 1rem; 
+}
+
+.references h3 {
+    color: #2c5aa0;
+}
+
+.ref-item { 
+    margin-bottom: 12px; 
+    padding: 10px; 
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.ref-numbers { 
+    color: #dc3545; 
+    font-weight: bold; 
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.ref-content {
+    color: #555;
+}
+</style>
+<div class="medical-article">
+<h1>EAN 2024ガイドライン：無症候性・乏症候性高CK血症の診断アプローチ</h1>
+<p>2026年にEuropean Journal of Neurologyに掲載された、<strong>無症候性・乏症候性高CK血症（oligo/asymptomatic hyperCKemia）</strong>に対するEAN（European Academy of Neurology）2024ガイドラインを解説します<sup>[1]</sup>。前回の<strong>EFNSガイドライン（2010年）</strong>以降、<strong>次世代シーケンシング（NGS）</strong>と<strong>筋MRI</strong>の普及により診断アプローチが大きく変化しました。本ガイドラインでは、GRADE方法論に基づき、<strong>18歳以上</strong>の成人を対象に、8つのPICO（Patient/Intervention/Comparison/Outcome：臨床疑問の定式化フレームワーク）を設定し、エビデンスに基づく推奨を提示しています<sup>[1]</sup>。</p>
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#sec1">背景と疫学</a></li>
+<li><a href="#sec2">CK測定の確認手順（臨床疑問1-3）</a></li>
+<li><a href="#sec3">血液検査によるスクリーニング（臨床疑問4）</a></li>
+<li><a href="#sec4">NCS/EMGの役割（臨床疑問5）</a></li>
+<li><a href="#sec5">次世代シーケンシングの位置づけ（臨床疑問6-7）</a></li>
+<li><a href="#sec6">筋MRIの役割（臨床疑問8）</a></li>
+<li><a href="#sec7">筋生検の適応</a></li>
+<li><a href="#sec8">12ステップの実践的推奨</a></li>
+<li><a href="#sec9">エキスパートコメンタリー</a></li>
+</ul>
+</div>
+<div class="important-box"><strong>📋 ガイドラインの推奨タイプ</strong><br />本ガイドラインの推奨は3種類に分類されます：<strong>エビデンスに基づく推奨（強い推奨・弱い推奨）</strong>、公表されたエビデンスが不十分な場合の<strong>コンセンサスステートメント</strong>（タスクフォース〔Task Force; 以下TF〕メンバーの66%以上の同意が必要）、および<strong>エキスパートオピニオン</strong>です。エビデンスに基づく推奨には80%以上の同意が求められました<sup>[1]</sup>。</div>
+<h2 id="sec1">背景と疫学</h2>
+<p><strong>高CK血症</strong>は、血清クレアチンキナーゼ（CK）が持続的に基準値上限（upper limit of normal; 以下ULN）を超える状態です。<strong>乏症候性</strong>とは、筋痛、筋疲労、筋けいれんなどの非特異的な筋症状を有する状態を指します<sup>[1]</sup>。</p>
+<p>一般人口における高CK血症の疫学として、ノルウェーの<strong>Tromsø研究</strong>（12,828人を対象）が最も大規模であり、その有病率は<strong>1.3%</strong>と報告されています<sup>[2,3]</sup>。同研究では、筋痛や筋けいれんなどの非特異的症状はCK正常者と高CK血症者の両方に共通して見られました<sup>[2]</sup>。</p>
+<p>高CK血症の原因は多岐にわたり、激しい運動、薬剤（特に<strong>スタチン</strong>）、心疾患、内分泌疾患、代謝性疾患などの非神経筋疾患が含まれます<sup>[1]</sup>。一方、潜在的な神経筋疾患の可能性もあり、系統的な診断アプローチが求められます。</p>
+<h2 id="sec2">CK測定の確認手順（臨床疑問1-3）</h2>
+<h3>臨床疑問1：CK再検査のタイミング</h3>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率86%）</strong><br />CKは、運動・薬剤・その他のCK上昇因子を避けた上で、<strong>少なくとも72時間後、できれば1週間後</strong>に再測定すべきである<sup>[1]</sup>。</div>
+<p>運動や肉体労働はCKを一過性に上昇させるため、測定前にこれらを回避する必要があります。信頼性の高い2つの疫学研究では3日間の回避期間を採用していますが、1週間が望ましいとされています<sup>[3,4]</sup>。</p>
+<h3>臨床疑問2：CK再測定の回数</h3>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率91%）</strong><br />初回測定後、<strong>少なくとも1か月以上の間隔</strong>を空けて<strong>2回</strong>再測定を行う。高CK血症の具体的な状況（薬剤、甲状腺機能、手術・外傷の既往等）も考慮すべきである<sup>[1]</sup>。</div>
+<h3>臨床疑問3：精査すべきCKの閾値</h3>
+<p>従来のCK基準値はメーカー提供のものですが、年齢・性別・人種・運動量によって大きく異なることが近年の疫学研究で示されています<sup>[5,6]</sup>。調査閾値を<strong>1× ULN</strong>から<strong>1.5× ULN</strong>に引き上げると、精査対象は正常者の2.5%から1.5%に減少します<sup>[1,5]</sup>。Tromsø研究のフォローアップでは、1× ULNで4人の筋疾患患者が同定されましたが、1.5× ULNを使用した場合に見逃されるのは1人のみでした<sup>[2]</sup>。</p>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率83%）</strong><br /><strong>CK &gt; 1.5× ULN</strong>の患者を精査対象とすることを推奨する<sup>[1]</sup>。</div>
+<h3>推奨されるCK基準値上限（ULN = 97.5パーセンタイル）</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">集団</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">カテゴリ</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">ULN（97.5パーセンタイル）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><strong>白人（NORIP）</strong><sup>[7]</sup></td>
+<td>女性 ≥18歳</td>
+<td><strong>210 U/L</strong></td>
+</tr>
+<tr>
+<td>男性 18-50歳</td>
+<td><strong>400 U/L</strong></td>
+</tr>
+<tr>
+<td>男性 ≥50歳</td>
+<td><strong>280 U/L</strong></td>
+</tr>
+<tr>
+<td rowspan="4"><strong>非白人（Brewster）</strong><sup>[5]</sup></td>
+<td>南アジア女性</td>
+<td><strong>313 IU/L</strong></td>
+</tr>
+<tr>
+<td>南アジア男性</td>
+<td><strong>641 IU/L</strong></td>
+</tr>
+<tr>
+<td>黒人女性</td>
+<td><strong>414 IU/L</strong></td>
+</tr>
+<tr>
+<td>黒人男性</td>
+<td><strong>801 IU/L</strong></td>
+</tr>
+</tbody>
+</table>
+<p>理想的には各検査施設が独自の基準値を設定すべきですが、白人には<strong>NORIPの値</strong><sup>[7]</sup>、非白人には<strong>Brewster研究の値</strong><sup>[5]</sup>が推奨されています。</p>
+<h2 id="sec3">血液検査によるスクリーニング（臨床疑問4）</h2>
+<h3>α-グルコシダーゼ（GAA）乾燥ろ紙血スポット（DBS）検査</h3>
+<p>11の論文で、<strong>遅発型ポンペ病（LOPD）</strong>のスクリーニングとしてのGAA-DBS（α-グルコシダーゼ活性を乾燥ろ紙血で測定する検査）が評価されました。症候性患者と乏症候性/無症候性患者の間でGAA-DBS陽性率および後続の遺伝学的検査陽性率に有意差は認められず（OR: 0.66, CI: 0.35-1.23およびOR: 0.46, CI: 0.23-0.94）、GAA-DBSは症状の有無にかかわらず<strong>LOPD</strong>の同定に有用であることが示されました<sup>[1]</sup>。</p>
+<div class="important-box"><strong>📋 エビデンスに基づく推奨：強い推奨（TF同意率86%）</strong><br />乏症候性/無症候性高CK血症の患者に対し、<strong>GAA酵素欠損症のスクリーニングとしてDBS検査</strong>を実施する<sup>[1]</sup>。</div>
+<p>エビデンスの確実性は非常に低いものの、遺伝学的検査で確認されれば早期治療開始につながり、筋生検よりも簡便で患者負担が少ない点がTFにより重視されました<sup>[1]</sup>。</p>
+<h3>安静時乳酸値</h3>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率71%）</strong><br />臨床的に適応がある場合、特に<strong>代謝性ミオパチー</strong>が疑われる場合は、安静時または運動時の乳酸検査を実施する<sup>[1]</sup>。</div>
+<p>安静時乳酸が高値であれば<strong>ミトコンドリア病</strong>の精査を示唆します。なお<strong>GDF15</strong>はミトコンドリア病に対して乳酸よりはるかに高感度な血液マーカーとして期待されていますが、現時点では多くの国で広く利用可能ではありません<sup>[8]</sup>。<strong>McArdle病（糖原病V型）</strong>が疑われる場合は、非虚血前腕運動負荷試験が有用です<sup>[1]</sup>。</p>
+<h3>空腹時アシルカルニチン</h3>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率68%）</strong><br />臨床的に適応がある場合、特に<strong>代謝性ミオパチー</strong>（例：<strong>脂質蓄積ミオパチー</strong>）が疑われる場合は、空腹時アシルカルニチン検査を実施する<sup>[1]</sup>。</div>
+<h2 id="sec4">NCS/EMGの役割（臨床疑問5）</h2>
+<p>神経原性疾患も高CK血症の原因となりえます。<strong>球脊髄性筋萎縮症（Kennedy病）</strong>ではCKが正常値の20倍まで上昇することがあり、<strong>慢性軸索性ニューロパチー</strong>、<strong>筋萎縮性側索硬化症（ALS）</strong>、<strong>脊髄性筋萎縮症3型</strong>などでは1000 U/L（3-5× ULN）まで上昇しうるため、筋原性と神経原性の鑑別は不可欠です<sup>[1]</sup>。</p>
+<p>EMGの感度は<strong>0.53</strong>（CI: 0.41-0.65）、特異度は<strong>0.67</strong>（CI: 0.41-0.85）でした。筋生検の感度は<strong>0.39</strong>（CI: 0.17-0.62）、特異度は<strong>0.55</strong>（CI: 0.36-0.73）であり、EMGは筋生検と同等以上の診断能を有します<sup>[1]</sup>。</p>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />正常なEMGはミオパチーを除外するものではありません<sup>[1]</sup>。</div>
+<div class="important-box"><strong>📋 エビデンスに基づく推奨：弱い推奨（TF同意率78%）</strong><br />高CK血症の筋原性または神経原性の基盤を同定するため、<strong>NCS/EMG</strong>を実施する<sup>[1]</sup>。</div>
+<h2 id="sec5">次世代シーケンシング（NGS）の位置づけ（臨床疑問6-7）</h2>
+<h3>臨床疑問6：NGS vs 筋生検</h3>
+<p>460例の乏症候性/無症候性高CK血症に対する筋生検の過去のレビューでは、<strong>炎症性筋疾患 4%</strong>、<strong>筋ジストロフィー 5.5%</strong>、<strong>代謝性ミオパチー 11%</strong>、<strong>非特異的筋原性異常 41%</strong>、<strong>正常 29%</strong>という結果でした<sup>[1]</sup>。すなわち、筋生検で特異的診断に至る割合は限られており、遺伝性疾患が多いことが示唆されます。</p>
+<p>NGSによる診断率はプール推定値で<strong>44%</strong>（CI: 0.37-0.52）であり、個々の研究では33%-67%の範囲でした<sup>[1]</sup>。偽陽性のリスクは最小限であり、無症候性患者コホートにおいて他のどの検査よりも高い診断到達率を実現しています<sup>[1]</sup>。</p>
+<div class="important-box"><strong>📋 エビデンスに基づく推奨：強い推奨（TF同意率84%）</strong><br />後天性または神経原性の原因を除外した上で、筋原性が疑われる乏症候性/無症候性高CK血症に対し、<strong>筋生検よりもNGS</strong>を推奨する<sup>[1]</sup>。</div>
+<div class="warning-box"><strong>⚠️ NGSの技術的注意点</strong><br />NGSはリピート伸長疾患（<strong>筋強直性ジストロフィー</strong>等）や大規模なコピー数変異（<strong>顔面肩甲上腕型筋ジストロフィー</strong>、<strong>Becker/Duchenne型筋ジストロフィー</strong>のexon欠失/重複等）、<strong>ミトコンドリアDNA変異</strong>の一部を検出できない場合があることに留意が必要です<sup>[9]</sup>。また、<strong>意義不明のバリアント（variant of uncertain significance; 以下VUS）</strong>が検出された場合は筋生検の追加を考慮する必要があります<sup>[1]</sup>。</div>
+<h3>臨床疑問7：NGS vs 標的遺伝子検査</h3>
+<p>遺伝子パネルを用いたNGSは、Sanger法による個別遺伝子検査よりも迅速・安価・効率的です<sup>[9]</sup>。ただし、家系内に既知の病的バリアントがある場合や、特定の遺伝性ミオパチーの頻度が高い集団では、標的遺伝子検査も選択肢となります<sup>[1]</sup>。</p>
+<div class="important-box"><strong>📋 コンセンサスステートメント（TF同意率71%）</strong><br />家系内の既知変異や特定集団の高頻度変異がある場合を除き、大半の乏症候性/無症候性高CK血症患者では、個別遺伝子検査よりも<strong>NGS</strong>を推奨する<sup>[1]</sup>。</div>
+<h2 id="sec6">筋MRIの役割（臨床疑問8）</h2>
+<p>筋MRIは複数の筋を非侵襲的に評価でき、遺伝性および後天性筋疾患に特徴的なパターンが報告されています<sup>[10,11]</sup>。遺伝学的に確認された患者を対象とした解析では、感度は全体で<strong>0.79</strong>（CI: 0.67-0.88）、乏症候性/無症候性患者に限定すると<strong>0.85</strong>（CI: 0.72-0.93）でした<sup>[1]</sup>。異常所見は主に下肢に認められ、軽度から重度まで様々でした。</p>
+<div class="important-box"><strong>📋 エビデンスに基づく推奨：強い推奨（TF同意率86%）</strong><br />乏症候性/無症候性高CK血症に対し、潜在的な筋組織異常の有無を評価し、異常パターンに基づいて遺伝学的検査の選択・解釈をガイドするために<strong>筋MRI</strong>を実施する。筋生検の部位選択にも有用である<sup>[1]</sup>。</div>
+<p>筋MRIは筋生検よりも感度が高い可能性があり、遺伝子パネルの選択を補助してNGSの診断率を向上させることが期待されます。また、VUSの解釈にもMRIパターンが有用です<sup>[1]</sup>。</p>
+<h2 id="sec7">筋生検の適応</h2>
+<p>筋生検は遺伝学的検査で確定診断に至らない場合に考慮されます。組織学的評価、免疫組織化学、ウエスタンブロット、酵素分析、さらにトランスクリプトーム解析（RNAシーケンシング）による新たな病的バリアント同定にも活用されます<sup>[12,13]</sup>。</p>
+<div class="important-box"><strong>📋 エキスパートオピニオン</strong><br />遺伝学的検査が非診断的な場合、以下の<strong>いずれか1つ以上</strong>に該当すれば筋生検を考慮する：<br />・<strong>意義不明のバリアント（VUS）</strong>が検出された場合<br />・<strong>代謝性ミオパチー</strong>が疑われる場合<br />・<strong>炎症性筋疾患</strong>が疑われる場合<br />・<strong>筋MRI異常</strong>がある場合<br />・<strong>CK ≥ 3× ULN</strong><br />・筋疾患の<strong>家族歴</strong>がある場合<br />・<strong>25歳未満</strong><sup>[1]</sup></div>
+<h2 id="sec8">12ステップの実践的推奨</h2>
+<p>本ガイドラインが提案する段階的な診断アプローチを以下にまとめます。ステップ1-4はかかりつけ医・一般内科医でも実施可能です<sup>[1]</sup>。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">ステップ</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">推奨内容</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">推奨の種類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>運動・薬剤・その他の因子を回避し、72時間以上（できれば1週間）後にCK再測定</td>
+<td>コンセンサス</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>初回測定後、1か月以上の間隔で2回CK再測定</td>
+<td>コンセンサス</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>CK &gt; 1.5× ULNの患者を精査対象とする</td>
+<td>コンセンサス</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>詳細な神経学的診察、家族歴（神経筋疾患、高CK血症、悪性高熱症、近親婚）の聴取</td>
+<td>エキスパートオピニオン</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>神経原性および非神経筋性の原因の除外</td>
+<td>エキスパートオピニオン</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>DBS検査</strong>によるGAA酵素欠損症スクリーニング</td>
+<td><strong>強い推奨</strong></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>NCS/EMG</strong>による筋原性・筋強直性・神経原性の鑑別</td>
+<td>弱い推奨</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>代謝性ミオパチーが疑われる場合、安静時乳酸、非虚血前腕運動負荷試験、空腹時アシルカルニチン検査</td>
+<td>コンセンサス</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>筋MRI</strong>による組織異常の評価と遺伝学的検査のガイド</td>
+<td><strong>強い推奨</strong></td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>家系内既知変異・高頻度変異がある場合を除き、<strong>NGS</strong>を個別遺伝子検査よりも推奨</td>
+<td>コンセンサス</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td>後天性・神経原性の原因を除外後、筋原性が疑われる場合、<strong>筋生検よりもNGS</strong>を推奨</td>
+<td><strong>強い推奨</strong></td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td>遺伝学的検査が非診断的な場合、条件に応じて筋生検を考慮</td>
+<td>エキスパートオピニオン</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec9">エキスパートコメンタリー</h2>
+<h3>高CK血症患者へのスタチン投与</h3>
+<p>大規模スタチンリスク研究では、<strong>CK 10× ULN以下</strong>の無症候性患者においてスタチン合併症のリスク増加はないとの限定的なエビデンスがあります。適応がある場合、CK 10× ULN以下の患者ではスタチン投与を回避すべきではありませんが、密なフォローアップが推奨されます<sup>[14]</sup>。</p>
+<h3>運動時の注意と横紋筋融解症のリスク</h3>
+<p>一部の<strong>肢帯型筋ジストロフィー</strong>や<strong>Becker型筋ジストロフィー</strong>は、筋力低下を伴わない高CK血症・労作時筋痛・筋けいれん・疲労（偽代謝性表現型）で発症することがあります。<strong>遅発型ポンペ病</strong>、<strong>McArdle病</strong>、脂質蓄積ミオパチー、ミトコンドリアミオパチーも同様です<sup>[1]</sup>。診断確定前は激しい運動を避け、確定後に疾患特異的な運動・食事指導を行うことが推奨されます<sup>[15]</sup>。</p>
+<h3>麻酔時の注意</h3>
+<div class="warning-box"><strong>⚠️ 悪性高熱症に注意</strong><br />高CK血症患者では、吸入麻酔薬や脱分極性筋弛緩薬によって<strong>悪性高熱症（MH）</strong>が誘発される可能性があります。MHの発生率は不完全浸透と表現度の違いにより<strong>3%-49%</strong>と報告に幅があります<sup>[16,17]</sup>。過去に何度も問題なく全身麻酔を受けた患者でもMHを発症しうること、家族歴にMH疑い症例がある場合はリスクありと見なす必要があることに注意が必要です<sup>[1]</sup>。可能であれば遺伝学的検査またはin vitro contracture testの結果を待ってから予定手術を行うことが望ましいとされています<sup>[18]</sup>。</div>
+<h3>神経原性疾患におけるCK上昇の範囲</h3>
+<p><strong>ALS</strong>、<strong>球脊髄性筋萎縮症（Kennedy病）</strong>、<strong>脊髄性筋萎縮症（SMA）</strong>、軸索性ニューロパチーなどの神経原性疾患では、通常<strong>CKは正常値の5倍程度</strong>まで上昇します<sup>[19,20,21]</sup>。ALSの急速進行期やKennedy病では<strong>10倍</strong>に達することもあります<sup>[22]</sup>。<strong>McLeod症候群</strong>は極めてまれなCK上昇の神経原性原因です<sup>[23]</sup>。</p>
+<details class="medical-details">
+<summary>非神経筋性高CK血症の原因一覧（クリックして展開）</summary>
+<div class="medical-details-content">
+<p>以下の非神経筋疾患が高CK血症の原因となりえます<sup>[24,25]</sup>：</p>
+<p>・身体運動、スポーツ<br />・外傷、圧迫<br />・侵襲的医療処置（筋肉注射、針筋電図、手術）<br />・薬剤（スタチン、フィブラート、免疫チェックポイント阻害薬、β遮断薬、ARB、クロザピン、ヒドロキシクロロキン、イソトレチノイン、コルヒチン）<br />・毒物（アルコール、コカイン、ヘロイン）<br />・代謝性疾患（甲状腺機能低下症・亢進症、副甲状腺機能低下症・亢進症、低カリウム血症、低ナトリウム血症）<br />・てんかん発作<br />・筋けいれん<br />・心筋梗塞、慢性心疾患<br />・腎疾患<br />・セリアック病<br />・悪性腫瘍<br />・ウイルス感染<br />・閉塞性睡眠時無呼吸症候群<br />・マクロCK：通常の定量アッセイでは正常酵素と区別できないまれな原因。CK-MBの割合が総CKの25%を超える場合にマクロCKが疑われ、心筋梗塞のCK-MB割合（通常6-20%）との鑑別に有用</p>
+</div>
+</details>
+<h2>まとめ</h2>
+<p>本EAN 2024ガイドラインのポイントは以下の通りです：</p>
+<p>（1）<strong>CK &gt; 1.5× ULN</strong>が持続する場合に精査を開始、（2）非神経筋原因の除外後、（3）<strong>DBS検査</strong>（強い推奨）と<strong>NCS/EMG</strong>（弱い推奨）を実施、（4）<strong>筋MRI</strong>で表現型を評価（強い推奨）、（5）<strong>NGSを筋生検よりも優先</strong>（強い推奨）、（6）NGSが非診断的な場合に条件を満たせば筋生検を考慮、というステップワイズなアプローチが提案されています。</p>
+<p>2010年の旧ガイドラインからの最大の変化は、<strong>NGSと筋MRIの導入</strong>により、侵襲的な筋生検の優先順位が下がった点です。エビデンスの確実性は全体的に低いものの、非侵襲的検査を優先した合理的なアルゴリズムが構築されています。今後5-10年での前向き研究によるエビデンスの蓄積とアップデートが期待されます<sup>[1]</sup>。</p>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=lGSGQp2lJio" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">Kyriakides T, Aleksovska K, Angelini C, et al. EAN 2024 Guideline on the Diagnostic Approach to Oligo/Asymptomatic HyperCKemia. Eur J Neurol. 2026;33:e70493. <a href="https://doi.org/10.1111/ene.70493" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">Lilleng H, Abeler K, Johnsen SH, et al. Clinical Impact of Persistent hyperCKemia in a Norwegian General Population: A Case-Control Study. Neuromuscul Disord. 2013;23(1):29-35. <a href="https://doi.org/10.1016/j.nmd.2012.07.008" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Lilleng H, Abeler K, Johnsen SH, et al. Variation of Serum Creatine Kinase (CK) Levels and Prevalence of Persistent hyperCKemia in a Norwegian Normal Population. The Tromso Study. Neuromuscul Disord. 2011;21(7):494-500. <a href="https://doi.org/10.1016/j.nmd.2011.04.007" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">Rubegni A, Malandrini A, Dosi C, et al. Next-Generation Sequencing Approach to hyperCKemia: A 2-Year Cohort Study. Neurol Genet. 2019;5(5):e352. <a href="https://doi.org/10.1212/NXG.0000000000000352" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Brewster LM, Mairuhu G, Sturk A, van Montfrans GA. Distribution of Creatine Kinase in the General Population: Implications for Statin Therapy. Am Heart J. 2007;154(4):655-661. <a href="https://doi.org/10.1016/j.ahj.2007.06.008" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">Lilleng H, Johnsen SH, Wilsgaard T, Bekkelund SI. Are the Currently Used Reference Intervals for Creatine Kinase (CK) Reflecting the General Population? The Tromso Study. Clin Chem Lab Med. 2011;50(5):879-884. <a href="https://doi.org/10.1515/CCLM.2011.776" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Rustad P, Felding P, Franzson L, et al. The Nordic Reference Interval Project 2000: Recommended Reference Intervals for 25 Common Biochemical Properties. Scand J Clin Lab Invest. 2004;64(4):271-284. <a href="https://doi.org/10.1080/00365510410006306" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Martin-Jimenez P, Bermejo-Guerrero L, Navarro-Riquelme M, et al. Comprehensive Analysis of GDF15 as a Biomarker in Primary Mitochondrial Myopathies. Mol Genet Metab. 2025;144(3):109023. <a href="https://doi.org/10.1016/j.ymgme.2025.109023" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Ng KWP, Chin HL, Chin AXY, Goh DLM. Using Gene Panels in the Diagnosis of Neuromuscular Disorders: A Mini-Review. Front Neurol. 2022;13:997551. <a href="https://doi.org/10.3389/fneur.2022.997551" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Verdu-Diaz J, Alonso-Pérez J, Nuñez-Peralta C, et al. Accuracy of a Machine Learning Muscle MRI-Based Tool for the Diagnosis of Muscular Dystrophies. Neurology. 2020;94(10):e1094-e1102. <a href="https://doi.org/10.1212/WNL.0000000000009068" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">Ten Dam L, van der Kooi AJ, Verhamme C, Wattjes MP, de Visser M. Muscle Imaging in Inherited and Acquired Muscle Diseases. Eur J Neurol. 2016;23(4):688-703. <a href="https://doi.org/10.1111/ene.12984" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">Cummings BB, Marshall JL, Tukiainen T, et al. Improving Genetic Diagnosis in Mendelian Disease With Transcriptome Sequencing. Sci Transl Med. 2017;9(386):1-11. <a href="https://doi.org/10.1126/scitranslmed.aal5209" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">Wrighton KH. Genetic Testing: The Diagnostic Power of RNA-Seq. Nat Rev Genet. 2017;18(7):392-393. <a href="https://doi.org/10.1038/nrg.2017.39" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14</span> <span class="ref-content">Glueck CJ, Rawal B, Khan NA, et al. Should High Creatine Kinase Discourage the Initiation or Continuance of Statins for the Treatment of Hypercholesterolemia? Metabolism. 2009;58(2):233-238. <a href="https://doi.org/10.1016/j.metabol.2008.09.019" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Siciliano G, Simoncini C, Giannotti S, et al. Muscle Exercise in Limb Girdle Muscular Dystrophies: Pitfall and Advantages. Acta Myologica. 2015;34(1):3-8. <a href="https://pubmed.ncbi.nlm.nih.gov/26155063/" target="_blank" rel="noopener">[PubMed]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">Malandrini A, Orrico A, Gaudiano C, et al. Muscle Biopsy and In Vitro Contracture Test in Subjects With Idiopathic HyperCKemia. Anesthesiology. 2008;109(4):625-628. <a href="https://doi.org/10.1097/ALN.0b013e3181862a0d" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">Weglinski MR, Wedel DJ, Engel AG. Malignant Hyperthermia Testing in Patients With Persistently Increased Serum Creatine Kinase Levels. Anesth Analg. 1997;84(5):1038-1041. <a href="https://doi.org/10.1097/00000539-199705000-00016" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">18</span> <span class="ref-content">Ruffert H, Bastian B, Bendixen D, et al. Consensus Guidelines on Perioperative Management of Malignant Hyperthermia Suspected or Susceptible Patients From the European Malignant Hyperthermia Group. Br J Anaesth. 2021;126(1):120-130. <a href="https://doi.org/10.1016/j.bja.2020.09.029" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">19</span> <span class="ref-content">Freigang M, Wurster CD, Hagenacker T, et al. Serum Creatine Kinase and Creatinine in Adult Spinal Muscular Atrophy Under Nusinersen Treatment. Ann Clin Transl Neurol. 2021;8(5):1049-1063. <a href="https://doi.org/10.1002/acn3.51340" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">20</span> <span class="ref-content">Sorenson EJ, Klein CJ. Elevated Creatine Kinase and Transaminases in Asymptomatic SBMA. Amyotroph Lateral Scler. 2007;8(1):62-64. <a href="https://doi.org/10.1080/17482960600765040" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">21</span> <span class="ref-content">Li JY, Dai Y, Sun XH, et al. Comparison of Neurofilament Light and Heavy Chain in Spinal Muscular Atrophy and Amyotrophic Lateral Sclerosis: A Pilot Study. Brain Behav. 2023;13(5):e2997. <a href="https://doi.org/10.1002/brb3.2997" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">22</span> <span class="ref-content">Sperfeld AD, Karitzky J, Brummer D, et al. X-Linked Bulbospinal Neuronopathy: Kennedy Disease. Arch Neurol. 2002;59(12):1921-1926. <a href="https://doi.org/10.1001/archneur.59.12.1921" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">23</span> <span class="ref-content">Hewer E, Danek A, Schoser BG, et al. McLeod Myopathy Revisited: More Neurogenic and Less Benign. Brain. 2007;130(12):3285-3296. <a href="https://doi.org/10.1093/brain/awm269" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">24 25</span> <span class="ref-content">Kley RA, Schmidt-Wilcke T, Vorgerd M. Differential Diagnosis of HyperCKemia. Neurol Int Open. 2018;2:E72-E83. / Silvestri NJ. HyperCKemia Evaluation for Elevated Creatine Kinase Is a Required Skill for Neurologists. Pract Neurol. 2019:38-41. <a href="https://doi.org/10.1093/brain/awm271" target="_blank" rel="noopener">[DOI]</a></span></div>
+</div>
+</div>

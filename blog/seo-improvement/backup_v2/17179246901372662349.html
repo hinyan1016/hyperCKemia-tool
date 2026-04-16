@@ -1,0 +1,349 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+</div>
+<style>
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+.toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.toc-box h3 { margin-top: 0; }
+.toc-box h3::before { content: ''; margin-right: 0; }
+.toc-box ul { margin-bottom: 0; }
+.important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+.drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+.drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.drug-table tr:first-child td {
+    background: #2c5aa0;
+    color: white;
+    font-weight: bold;
+}
+.drug-table tr:nth-child(even) { background: #f8f9fa; }
+.drug-table tr:hover { background: #e9ecef; }
+.drug-table tr:first-child:hover { background: #2c5aa0; }
+.references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+.references h3 { color: #2c5aa0; }
+.ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+.ref-content { color: #555; }
+.faq-section {
+    margin-top: 1.5rem;
+}
+.faq-item {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #2c5aa0;
+}
+.faq-q {
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-bottom: 8px;
+}
+</style>
+<div class="medical-article">
+<p>「ビタミンB6はレボドパを弱めるから避けるべき」という説明を、いまでも耳にします。これは完全に間違いではありませんが、主にレボドパ単剤の話です。一方、2026年3月20日にFDAはカルビドパ/レボドパ含有製剤に対して、<strong>ビタミンB6欠乏と関連発作の警告追加</strong>を要求しました<sup>1</sup>。いま問題になっているのは「B6を避けるべきかどうか」よりも、<strong>「どの製剤で、どの患者に、いつ測り、いつ補うか」</strong>です。本稿では、この混乱しやすいテーマを整理します。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260404/20260404085556.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<div class="toc-box">
+<h3>目次</h3>
+<ul>
+<li><a href="#conclusion">まず結論</a></li>
+<li><a href="#confusion">なぜ話がややこしくなるのか</a></li>
+<li><a href="#monotherapy">B6でレボドパが効きにくくなるのは主にレボドパ単剤</a></li>
+<li><a href="#combination">レボドパ/カルビドパ合剤ではどう考えるか</a></li>
+<li><a href="#deficiency">配合剤ではB6欠乏が問題になる</a></li>
+<li><a href="#seizure">最近のトピック：B6欠乏と発作</a></li>
+<li><a href="#monitoring">実臨床では誰にB6を測るべきか</a></li>
+<li><a href="#supplement-or-avoid">補充するべきか、避けるべきか</a></li>
+<li><a href="#iv-drip">「点滴でレボドパとB6を一緒に入れると分解される」の整理</a></li>
+<li><a href="#summary">まとめ</a></li>
+<li><a href="#faq">よくある質問（FAQ）</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<div style="text-align: center; margin: 16px 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/npIa19G8fDg" title="パーキンソン病とビタミンB6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="max-width: 100%;"></iframe></div>
+<h2 id="conclusion">まず結論</h2>
+<div class="important-box">
+<p>レボドパ/カルビドパを使っている患者にビタミンB6を<strong>一律に禁止する必要はありません</strong>。むしろ、高用量・長期投与・LCIG・低栄養・末梢神経障害・貧血・新規発作がある患者では、<strong>B6欠乏を疑って測定し、低ければ補充を考える</strong>のが実臨床に合った対応です。FDAも2026年3月に、カルビドパ/レボドパ含有製剤について開始前と治療中のB6評価、必要時の補充を求めました<sup>1</sup>。</p>
+</div>
+<h2 id="confusion">なぜ話がややこしくなるのか</h2>
+<p>混乱の原因は、同じ「ビタミンB6」でも<strong>見ている場面が違う</strong>からです。</p>
+<p>ビタミンB6の活性型であるピリドキサールリン酸（PLP）は、芳香族L-アミノ酸脱炭酸酵素（AADC）の補酵素です。この酵素は、レボドパをドパミンに変換する反応を触媒します。</p>
+<p><strong>1つ目の話：B6が多すぎると困る</strong><br />レボドパ単剤では、B6があると末梢（脳の外側）でレボドパがドパミンに変わりやすくなり、脳に届く量が減ります。これが古典的な相互作用です<sup>2</sup>。</p>
+<p><strong>2つ目の話：B6が足りなくなると困る</strong><br />カルビドパ/レボドパ合剤の長期・高用量使用では、逆にB6欠乏が起こり、末梢神経障害や貧血、さらには発作の原因になりうるという最近の安全性情報です<sup>1,3</sup>。</p>
+<p>前者は「B6過剰」の話、後者は「B6不足」の話であり、同じB6でも文脈がまったく異なります。</p>
+<h2 id="monotherapy">B6でレボドパが効きにくくなるのは主にレボドパ単剤</h2>
+<h3>PMDA電子添文の記載</h3>
+<p>PMDAのレボドパ注射剤の電子添文には、ピリドキシンが末梢でのレボドパ脱炭酸化を促進し、作用を減弱することがあると明記されています<sup>2</sup>。これが「レボドパ患者はB6に注意」という話の出発点です。</p>
+<h3>2017年系統的レビューの結論</h3>
+<p>2017年に日本で発表された系統的レビューでは、ビタミンB6が<strong>50 mg/日以上</strong>になるとレボドパの薬効低下の可能性が高まると報告されています。一方で、通常の食事からの摂取（日本人の食事摂取基準における推奨量と上限量の範囲）は大きな問題になりにくく、<strong>注意すべきはサプリメントや市販薬</strong>だとまとめられています<sup>4</sup>。</p>
+<p>したがって、レボドパ単剤を使っている患者では、B6入りサプリや総合ビタミン剤、あるいはB6含有注射を確認する価値があります。とくに「急に効きが悪くなった」「自己判断でサプリを始めた」という文脈では、まずここを疑うのが自然です。</p>
+<h2 id="combination">レボドパ/カルビドパ合剤ではどう考えるか</h2>
+<p>ここで重要なのが、<strong>昔の単剤の話を、そのまま配合剤に当てはめないこと</strong>です。</p>
+<h3>添付文書の記載を比較する</h3>
+<p>米国のSINEMET（カルビドパ/レボドパ合剤）添付文書には、ピリドキシン10〜25 mg/日でレボドパ単独の効果が弱まることがあるが、<strong>カルビドパはこの作用を抑えるため、B6補充中の患者にも投与できる</strong>と記載されています<sup>5</sup>。</p>
+<p>日本のメネシット配合錠の添付文書でも、相互作用欄にはレセルピン、鉄剤、イソニアジドなどの記載がありますが、ピリドキシンやビタミンB6の記載は見当たりません<sup>6</sup>。少なくとも日本の配合剤添付文書では「B6欠乏と発作」が前面に出てこないため、実臨床でこの問題が見落とされやすい背景があります。</p>
+<h3>カルビドパによるB6への影響メカニズム</h3>
+<p>カルビドパは末梢でのAADC活性を阻害する薬剤ですが、同時に<strong>活性型B6（PLP）に結合して機能的なB6不足</strong>を起こしうるとされています。さらにレボドパがドパミンに変換される過程そのものでもB6が消費されます<sup>1</sup>。つまり配合剤では「B6が多いと困る」よりも、<strong>「B6が足りなくなることがある」</strong>が問題になります。</p>
+<h2 id="deficiency">配合剤ではB6欠乏が問題になる</h2>
+<h3>2023年系統的レビュー：41.4%でB6異常</h3>
+<p>2023年にModicaらが発表した系統的レビューでは、パーキンソン病患者<strong>145例中60例（41.4%）</strong>でB6異常が報告されました。内訳は低B6が52例、高B6が8例でした。B6低値の頻度は<strong>LCIGで44.6%、経口レボドパ/カルビドパで30.1%</strong>であり、低B6の報告のほぼ全例でレボドパ1,000 mg/日以上でした。また、低B6は多発ニューロパチー（14例）やてんかん（4例）と関連していました<sup>3</sup>。</p>
+<h3>2020年後ろ向き研究</h3>
+<p>Rojo-Sebastiánらの研究では、3年以上L-DOPA/カルビドパで治療されていた24例を調査し、<strong>経腸投与6/6例（100%）、経口投与13/18例（72%）</strong>でB6低値がみられました。低B6の19例中8例には臨床症状があり、累積カルビドパ年間投与量がB6レベルと最も相関していました（r = −0.36）<sup>7</sup>。</p>
+<h3>2024〜2025年の最新報告</h3>
+<p>2024年に大阪大学のIkenakaらは、PD患者72例と対照31例を比較し、PD患者でB6が有意に低値であることを確認しました。さらに、<strong>B6低下がAST・ALTの低下として反映される</strong>こと、LCIG治療でAST/ALT低下が顕著になること、COMT阻害薬Opicapone併用でALTの改善がみられることを報告しました<sup>8</sup>。この知見は標準診療にはまだなっていませんが、LCIGでAST/ALTが低めに動く症例を見たらB6低値も考えるという臨床感覚は持っておくとよいかもしれません。</p>
+<p>2024年にDéryらが発表した横断的観察研究では、経口レボドパ600 mg/日以上、罹病期間3年以上の50例を調べ、<strong>7例（14%）にB6欠乏</strong>があり、B6低値ほどレボドパ量が多く、末梢神経障害の重症度とも相関していました。一方、B12・葉酸・ホモシステインは末梢神経障害との関連が認められませんでした<sup>9</sup>。</p>
+<h2 id="seizure">最近のトピック：B6欠乏と発作</h2>
+<div class="warning-box">
+<p><strong>2026年3月20日 FDAの安全性警告</strong>：カルビドパ/レボドパ含有製剤について、ビタミンB6欠乏と関連発作の警告を添付文書に追加することを全メーカーに要求しました<sup>1</sup>。</p>
+</div>
+<h3>FDA安全性レビューの要点</h3>
+<p>FDAの安全性レビューでは、B6欠乏に関連した発作<strong>14例</strong>が確認されました<sup>1</sup>。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<td>項目</td>
+<td>詳細</td>
+</tr>
+<tr>
+<td>全例のレボドパ用量</td>
+<td>1,000 mg/日超</td>
+</tr>
+<tr>
+<td>高用量（1,500 mg/日超）</td>
+<td>発症までの期間がより短い傾向</td>
+</tr>
+<tr>
+<td>発症までの期間</td>
+<td>23〜132か月</td>
+</tr>
+<tr>
+<td>発作型</td>
+<td>焦点起始で二次性全般化が多い</td>
+</tr>
+<tr>
+<td>てんかん重積</td>
+<td>一部で進展あり</td>
+</tr>
+<tr>
+<td>B6補充後の転帰</td>
+<td>9例全例で発作消失</td>
+</tr>
+<tr>
+<td>死亡</td>
+<td>2例（低B6 + 難治発作）</td>
+</tr>
+</tbody>
+</table>
+<h3>抗てんかん薬抵抗性とB6補充による消失</h3>
+<p>実務上もっとも重要なのは、これらの発作が<strong>通常の抗てんかん薬に反応しにくい</strong>という点です。FDAも、従来の抗てんかん薬に反応しない発作がB6投与で改善すると注意喚起しています<sup>1</sup>。2025年のNathanらの症例報告でも、カルビドパ/レボドパ増量後に新規発作を起こした患者で、複数の抗てんかん薬に反応しなかった発作がB6補充後に消失し、最終的に全抗てんかん薬を離脱できたと報告されています<sup>10</sup>。</p>
+<h3>臨床的意義：新規発作で見逃さないために</h3>
+<p>パーキンソン病患者の新規発作を見たとき、構造病変や神経変性に伴うてんかんだけでなく、<strong>B6欠乏による急性症候性発作</strong>も必ず鑑別に入れるべきです。特に以下の条件が揃えば、B6欠乏の可能性を強く疑います。</p>
+<ul>
+<li>レボドパ/カルビドパ高用量（とくに1,000 mg/日超）</li>
+<li>長期投与（2年以上）</li>
+<li>複数の抗てんかん薬に反応しない</li>
+<li>末梢神経障害や貧血を合併</li>
+</ul>
+<h2 id="monitoring">実臨床では誰にB6を測るべきか</h2>
+<p>FDAの警告内容と既報の観察研究を総合すると、少なくとも以下の患者ではB6測定を検討すべきです。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<td>リスク因子</td>
+<td>理由</td>
+</tr>
+<tr>
+<td>レボドパ/カルビドパ高用量（1,000 mg/日超）</td>
+<td>FDA報告の全例で該当<sup>1</sup></td>
+</tr>
+<tr>
+<td>LCIG（経腸投与）</td>
+<td>経口より高頻度でB6低値（44.6% vs 30.1%）<sup>3</sup></td>
+</tr>
+<tr>
+<td>体重減少・食事摂取低下</td>
+<td>栄養素摂取全般が低下<sup>11</sup></td>
+</tr>
+<tr>
+<td>嚥下障害・消化管障害</td>
+<td>吸収障害の可能性</td>
+</tr>
+<tr>
+<td>末梢神経障害</td>
+<td>B6欠乏の主要合併症<sup>3,9</sup></td>
+</tr>
+<tr>
+<td>原因不明の貧血</td>
+<td>B6欠乏性鉄芽球性貧血の可能性<sup>12</sup></td>
+</tr>
+<tr>
+<td>新規発作・てんかん重積</td>
+<td>FDA警告の中核<sup>1</sup></td>
+</tr>
+<tr>
+<td>原因不明の抑うつ・錯乱</td>
+<td>B6欠乏の神経精神症状<sup>1</sup></td>
+</tr>
+</tbody>
+</table>
+<h3>LCIGでの特別な注意点</h3>
+<p>LCIG使用患者では、B6低値の頻度が経口療法より高いことに加え、貧血や末梢神経障害との関連も多く報告されています<sup>3,7,11,12</sup>。前述の大阪大学の報告では、<strong>AST・ALTの低下がB6低値の手がかりになりうる</strong>可能性が示されました<sup>8</sup>。日常診療で意識しておくと有用です。</p>
+<p>なお、2021年のPaulsらの研究では、LCIG開始時にBビタミン補充を行った6例ではニューロパチーの発症が0例であったのに対し、非補充群では10.5%で新規発症がみられ、<strong>予防的ビタミンB補充の有用性</strong>が示唆されています<sup>11</sup>。</p>
+<h2 id="supplement-or-avoid">補充するべきか、避けるべきか</h2>
+<p>実務的には<strong>「製剤で分ける」</strong>のが最もシンプルです。</p>
+<table class="drug-table">
+<tbody>
+<tr>
+<td>製剤</td>
+<td>B6の考え方</td>
+<td>実務対応</td>
+</tr>
+<tr>
+<td>レボドパ単剤</td>
+<td>B6で薬効減弱の可能性</td>
+<td>高用量B6サプリ・B6含有注射に注意。通常食事は問題なし<sup>2,4</sup></td>
+</tr>
+<tr>
+<td>レボドパ/カルビドパ合剤（経口）</td>
+<td>長期・高用量でB6欠乏リスク</td>
+<td>通常食事を制限不要。欠乏が疑われたら測定・補充<sup>1,5</sup></td>
+</tr>
+<tr>
+<td>LCIG（経腸投与）</td>
+<td>B6欠乏リスクが最も高い</td>
+<td>定期的モニタリング推奨。予防的B補充も考慮<sup>3,7,11</sup></td>
+</tr>
+</tbody>
+</table>
+<div class="warning-box">
+<p><strong>高用量B6補充の注意</strong>：ビタミンB6は不足でも問題ですが、サプリ由来の高用量B6の長期投与は<strong>感覚優位の末梢神経障害</strong>の原因になりうることが知られています。「とりあえず多めに出しておく」ではなく、<strong>不足を確認して必要量を補う</strong>のが安全です。</p>
+</div>
+<h2 id="iv-drip">「点滴でレボドパとB6を一緒に入れると分解される」の整理</h2>
+<p>この点は話が混ざりやすいところです。PMDAのレボドパ注射剤で確認できるのは、以下の2点です<sup>2</sup>。</p>
+<ol>
+<li><strong>薬力学的相互作用</strong>：ピリドキシン併用でレボドパの作用が減弱しうる</li>
+<li><strong>配合変化</strong>：レボドパ注射剤はアルカリ性注射剤との混合で分解・着色する</li>
+</ol>
+<p>つまり、公式文書で確認できるのはB6との薬力学的相互作用と、アルカリ性による配合変化です。「B6そのものがバッグ内でレボドパを化学的に分解する」とまでは電子添文には明示されていません。臨床現場で語られる話は、この<strong>2つが混同されている可能性</strong>があります。</p>
+<p>実務的には、レボドパ注射剤（単剤）を使用する場面では、B6含有注射との同時ルートは避けるのが安全ですが、これは化学的分解というよりも薬効減弱を避けるための対応と理解するのが正確です。</p>
+<h2 id="summary">まとめ</h2>
+<div class="important-box">
+<p>このテーマの一番大事なポイントは、「B6は敵か味方か」ではなく、<strong>「どの製剤で、どの場面の話をしているか」を分けること</strong>です。</p>
+<ul>
+<li><strong>レボドパ単剤</strong>では、B6は相互作用の相手（高用量サプリに注意）</li>
+<li><strong>レボドパ/カルビドパ合剤</strong>では、B6は欠乏を見逃してはいけない栄養素</li>
+</ul>
+<p>2026年のFDA警告を踏まえると、カルビドパ/レボドパ時代のB6管理は<strong>「禁止」から「層別化して測定し、必要時に補う」へ</strong>考え方を更新するのが妥当です。特にLCIG、高用量、低栄養、ニューロパチー、貧血、新規発作がある患者では、B6欠乏を鑑別に入れておく価値があります。</p>
+</div>
+<h2 id="faq">よくある質問（FAQ）</h2>
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q1. パーキンソン病患者にはビタミンB6を禁止すべきですか？</div>
+<p>一律禁止ではありません。レボドパ単剤では高用量B6サプリによる相互作用に注意しますが、レボドパ/カルビドパ合剤では通常の食事摂取を止める必要はなく、むしろ欠乏の評価が重要です<sup>1,4,5</sup>。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q2. レボドパ/カルビドパ服用中の新規発作では何を考えるべきですか？</div>
+<p>構造病変や脳炎だけでなく、<strong>B6欠乏による急性症候性発作</strong>を鑑別に入れるべきです。特に高用量・長期投与・LCIG・低栄養・貧血・末梢神経障害がある場合は要注意です。通常の抗てんかん薬に反応しない場合、B6測定・補充を検討してください<sup>1,10</sup>。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q3. LCIGでは何が違いますか？</div>
+<p>経口療法よりB6低値の頻度が高く（44.6% vs 30.1%）、貧血や末梢神経障害との関連も多く報告されています。高用量例では定期的なモニタリングの優先度が上がります<sup>3,7,11</sup>。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q4. B6を補充するなら多めに入れてよいですか？</div>
+<p>不足是正は重要ですが、高用量B6の長期投与（耐容上限量の目安は成人で40〜60 mg/日前後とされるが、報告により異なる）が感覚性ニューロパチーの原因になりうるため、漫然と多量投与するより<strong>測定して必要量を補う</strong>ほうが安全です。</p>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q5. メネシットとマドパーでB6の扱いは違いますか？</div>
+<p>メネシット（カルビドパ配合）もマドパー（ベンセラジド配合）も、どちらも末梢AADC阻害薬を含む合剤です。B6欠乏のメカニズム（PLP結合＋レボドパ代謝でのB6消費）は共通しうるため、同様の注意が必要と考えられます。ただし、FDA警告はカルビドパ/レボドパ製剤を対象としており、ベンセラジド配合剤に関するデータは限られています。</p>
+</div>
+</div>
+<div class="references">
+<h3 id="references">参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">FDA. FDA Is Requiring Warning about Vitamin B6 Deficiency and Associated Seizures for Drug Products Containing Carbidopa/Levodopa. March 20, 2026. <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-warning-about-vitamin-b6-deficiency-and-associated-seizures-drug-products-containing" target="_blank">FDA Drug Safety Communication</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">PMDA. レボドパ注射液 電子添文. <a href="https://www.pmda.go.jp/" target="_blank">PMDA</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">Modica JS, Déry C, Canissario R, et al. A systematic review of the potential consequences of abnormal serum levels of vitamin B6 in people living with Parkinson's disease. J Neurol Sci. 2023;450:120690. <a href="https://doi.org/10.1016/j.jns.2023.120690" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">レボドパの薬効に影響を与えるビタミンB6摂取量に関する系統的レビュー. 食品衛生学雑誌. 2017;58(6):268-274. <a href="https://www.jstage.jst.go.jp/article/shokueishi/58/6/58_268/_pdf" target="_blank">J-STAGE</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">DailyMed. SINEMET (carbidopa and levodopa) label. <a href="https://dailymed.nlm.nih.gov/" target="_blank">DailyMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">PMDA. メネシット配合錠 電子添文. <a href="https://www.pmda.go.jp/" target="_blank">PMDA</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Rojo-Sebastián A, González-Robles C, García de Yébenes J. Vitamin B6 Deficiency in Patients With Parkinson Disease Treated With Levodopa/Carbidopa. Clin Neuropharmacol. 2020;43(5):151-157. <a href="https://doi.org/10.1097/WNF.0000000000000408" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Ikenaka K, Kajiyama Y, Aguirre C, et al. Decreased hepatic enzymes reflect the decreased vitamin B6 levels in Parkinson's disease patients. Pharmacol Res Perspect. 2024;12(1):e1174. <a href="https://doi.org/10.1002/prp2.1174" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Déry C, Buchmann C, Labrecque G, et al. Oral Levodopa Therapy, Vitamin B6 and Peripheral Neuropathy: A Cross-Sectional Observational Study. Mov Disord Clin Pract. 2024;12(1):120-122. <a href="https://doi.org/10.1002/mdc3.14243" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">Nathan CL, Ghandour D, May J, et al. New Onset Medically Refractory Seizures in an Adult With Parkinson's Disease and Vitamin B6 Deficiency Case Report. Neurohospitalist. 2025;19418744251360306. <a href="https://doi.org/10.1177/19418744251360306" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">Pauls KAM, Toppila J, Koivu M, et al. Polyneuropathy monitoring in Parkinson's disease patients treated with levodopa/carbidopa intestinal gel. Brain Behav. 2021;11(12):e2408. <a href="https://doi.org/10.1002/brb3.2408" target="_blank">DOI</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">Yasuda H, Hatano T, Honda T, et al. Vitamin B6 Deficiency Anemia Attributed to Levodopa/Carbidopa Intestinal Gel Therapy for Parkinson's Disease. Intern Med. 2022;61(24):3719-3722. <a href="https://doi.org/10.2169/internalmedicine.9577-22" target="_blank">DOI</a></span></div>
+</div>
+</div>

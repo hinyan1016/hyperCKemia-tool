@@ -1,0 +1,478 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260226/20260226150901.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>脳のミクログリアって何？ ─ 少し深掘り</strong></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/KMDTub-sXz8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="脳の掃除からアルツハイマー病まで？裏方細胞「ミクログリア」の3つの任務と秘密" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/KMDTub-sXz8">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>脳のミクログリアって何？ ─ 高校生でもわかる解説（少し深掘り）</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. ミクログリアをひとことで言うと</a></li>
+<li><a href="#section2">2. どこにいるの？ いつからいるの？</a></li>
+<li><a href="#section3">3. ふだんは何をしているの？</a></li>
+<li><a href="#section4">4. ミクログリアの代表的な仕事 3つ</a></li>
+<li><a href="#section5">5. ミクログリアが関わる病気って？</a></li>
+<li><a href="#section6">6. 研究が難しい理由（でも面白い理由）</a></li>
+<li><a href="#section7">7. ミクログリアはどうやって研究するの？</a></li>
+<li><a href="#section8">8. 用語ミニ辞典</a></li>
+<li><a href="#section9">9. まとめ：ミクログリアが重要な理由</a></li>
+</ul>
+</div>
+<p>「脳＝<strong>神経細胞（ニューロン）</strong>の集まり」と思われがちですが、実は脳の中には神経細胞を支える"裏方"の細胞がたくさんいます。その代表が<strong>グリア細胞</strong>。そして、その中でも"脳の免疫担当"として働くのが<strong>ミクログリア</strong>です。</p>
+<!-- セクション1 -->
+<h2 id="section1">1. ミクログリアをひとことで言うと</h2>
+<p><strong>ミクログリア</strong>は、脳の中に住んでいる「見回り係（警備員）」「掃除係（清掃員）」「修理係（メンテナンス担当）」のような細胞です。</p>
+<p>脳はとても大切な臓器なので、外から細菌などが入りにくい仕組み（いわゆる<strong>"血液脳関門"</strong>）があります。そのぶん、脳の中で起きたトラブルは脳の中の専門チームが対処する必要があり、<strong>ミクログリアはその中心メンバー</strong>です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> ミクログリアは脳の中で「見回り・掃除・修理」を担う常駐型の免疫細胞です。血液中の白血球とは異なり、脳の中に常に存在して脳を守っています。</div>
+<!-- セクション2 -->
+<h2 id="section2">2. どこにいるの？ いつからいるの？</h2>
+<p><strong>ミクログリア</strong>は脳のあちこちに散らばって存在しています。しかも特徴的なのは、体の他の免疫細胞（血液中の<strong>白血球</strong>など）と違って、<strong>赤ちゃんのころ早い時期に脳に入って、そのまま脳の中で長く働き続ける</strong>という点です。「脳の常駐スタッフ」みたいなイメージで捉えるとわかりやすいでしょう。</p>
+<!-- セクション3 -->
+<h2 id="section3">3. ふだんは何をしているの？</h2>
+<h3>3-1. まずは「見回り」</h3>
+<p>ミクログリアは、ふだんは細い腕（突起）を伸ばした形で、脳の中を"常にチェック"しています。止まっているように見えても、実は突起を動かして、周囲の細胞が元気か、壊れたものがないか、危険なサインが出ていないかを見張っています。</p>
+<h3>3-2. トラブルがあると「形が変わる」</h3>
+<p>問題が起こると、ミクログリアは<strong>丸っこくなり、動きが速くなり、掃除や防御モードに入る</strong>など、働き方を切り替えます。この「切り替え」が、ミクログリア研究の面白さでもあり難しさでもあります。</p>
+<!-- セクション4 -->
+<h2 id="section4">4. ミクログリアの代表的な仕事 3つ</h2>
+<h3>仕事①：掃除（ゴミ処理）</h3>
+<p>脳の中でも、細胞は壊れたり、役目を終えたりします。そのままにすると"ゴミ"がたまり、周りの細胞に悪影響が出ます。ミクログリアは、不要になったものを見つけると<strong>食べて片づける</strong>ことができます。この「食べて処理する」働きを<strong>貪食（どんしょく）</strong>と呼びます。</p>
+<p>🔹 イメージ：落ち葉を回収する清掃車</p>
+<h3>仕事②：防御（炎症を起こして守る）</h3>
+<p>細菌やウイルス、強いダメージが疑われると、ミクログリアは"警報"を出します。そのときに使うのが<strong>炎症</strong>という反応です。</p>
+<p>炎症は、痛みや腫れのイメージが強いかもしれませんが、本来は「敵を追い払う」「傷ついた組織を守る」「修理を進める」ための大事な反応です。ただし、<strong>炎症が強すぎたり長引いたりすると、逆に脳を傷つけてしまう</strong>ことがあります。ここが重要ポイントです。</p>
+<p>🔹 イメージ：火事を消すための水が、かけすぎると家まで壊す</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> <strong>炎症</strong>は本来、防御・修理のための反応ですが、過剰になったり長引いたりすると脳に悪影響を及ぼす"両刃の剣"です。この点がミクログリア研究の核心的課題です。</div>
+<h3>仕事③：脳の回路を整える（発達期の「配線整理」）</h3>
+<p>ここが、ミクログリアの"ただの免疫細胞ではない"面です。</p>
+<p>脳の中の神経細胞同士は、<strong>シナプス</strong>というつなぎ目で情報をやりとりします。子どもの脳は、新しいつながりをたくさん作る一方で、不要なつながりを整理して効率を上げていきます。この「不要なつながりを減らす作業」を<strong>シナプスの刈り込み（剪定）</strong>と呼びます。ミクログリアは、この剪定に関わることがわかってきました。</p>
+<p>🔹 イメージ：伸びすぎた枝を剪定して、木全体が元気に育つようにする</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ミクログリアの3大機能まとめ</span> <strong>① 貪食（掃除）</strong>：不要な細胞やゴミを食べて処理する<br /><strong>② 炎症反応（防御）</strong>：警報を出して脳を守る（ただし過剰は害に）<br /><strong>③ シナプス刈り込み（配線整理）</strong>：発達期の脳回路を効率化する</div>
+<!-- セクション5 -->
+<h2 id="section5">5. ミクログリアが関わる病気って？</h2>
+<p>ミクログリア研究が注目される理由は、ミクログリアが<strong>「守ってくれる面（良い働き）」</strong>と<strong>「悪影響を出す面（悪い働き）」</strong>の両方を持ち、いろいろな脳の病気と関係するからです。</p>
+<h3>例①：アルツハイマー病（もの忘れが進む病気）</h3>
+<p><strong>アルツハイマー病</strong>では、脳に"たまりもの"（<strong>アミロイドβ</strong>など）が増えることが知られています。ミクログリアはそれを片づけようとしますが、状況によっては<strong>炎症が続いてしまい、かえってダメージに関わる可能性</strong>も研究されています。</p>
+<h3>例②：脳卒中（脳の血管のトラブル）</h3>
+<p><strong>脳卒中</strong>で脳の一部が急に傷つくと、ミクログリアはすぐ反応します。ただし、最初は炎症が強く出て悪影響になることもあれば、少し時間がたつと修理や片づけに役立つこともあります。つまり<strong>「いつの段階のミクログリアを見ているか」がとても大切</strong>です。</p>
+<h3>例③：感染や外傷</h3>
+<p><strong>脳炎</strong>や頭を強く打ったあとなどでも、ミクログリアは大きく反応します。必要な防御ではありますが、<strong>反応が過剰になると二次的な問題</strong>につながることがあります。</p>
+<!-- セクション6 -->
+<h2 id="section6">6. 研究が難しい理由（でも面白い理由）</h2>
+<p>ミクログリアを「悪者」と決めつけるのも、「味方」と決めつけるのも危険です。その理由を以下にまとめます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">難しさ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">何が起きる？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 状況で役割が変わる</strong></td>
+<td>守る働きにも、傷つける働きにもなる</td>
+</tr>
+<tr>
+<td><strong>② 時間で役割が変わる</strong></td>
+<td>急性期は強い炎症、回復期は修理…など</td>
+</tr>
+<tr>
+<td><strong>③ 場所で性格が違う</strong></td>
+<td>脳の部位によって働き方が違うことがある</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box important-box"><span class="info-box-title">📋 将来の治療目標</span> 「ミクログリアを止める」のではなく、<strong>「必要な働きは残して、困る働きだけを抑える」</strong>ことが今後の治療研究の目標です。</div>
+<!-- セクション7 -->
+<h2 id="section7">7. ミクログリアはどうやって研究するの？</h2>
+<p>高校生にもイメージしやすいように、代表的な方法をまとめます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">研究方法</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">何をするか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>顕微鏡で見る</strong></td>
+<td>色をつけて形や場所を観察する</td>
+</tr>
+<tr>
+<td><strong>生きた脳で動きを見る</strong></td>
+<td>特殊な顕微鏡で"見回り"の様子をリアルタイムに観察する</td>
+</tr>
+<tr>
+<td><strong>遺伝子の働きを調べる</strong></td>
+<td>細胞の中の設計図を読み、ミクログリアが今どんな状態かを推定する</td>
+</tr>
+<tr>
+<td><strong>脳画像で推定する</strong></td>
+<td><strong>PET</strong>などの画像法で"活性化のサイン"を見ることがある（研究・臨床研究）</td>
+</tr>
+</tbody>
+</table>
+<p>※細かい専門用語は無理に覚えなくて大丈夫です。「見える化して、状態を読み取る工夫をしている」と捉えるとOKです。</p>
+<!-- セクション8 -->
+<h2 id="section8">8. 用語ミニ辞典</h2>
+<p>ここだけ押さえると読みやすくなります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">用語</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">かんたん説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>神経細胞（ニューロン）</strong></td>
+<td>電気信号で情報をやり取りする主役</td>
+</tr>
+<tr>
+<td><strong>グリア細胞</strong></td>
+<td>神経細胞を支える裏方。複数種類がある</td>
+</tr>
+<tr>
+<td><strong>ミクログリア</strong></td>
+<td>脳の免疫・見回り・掃除担当のグリア</td>
+</tr>
+<tr>
+<td><strong>シナプス</strong></td>
+<td>神経細胞同士のつなぎ目（情報の受け渡し場所）</td>
+</tr>
+<tr>
+<td><strong>炎症</strong></td>
+<td>防御や修理のための反応。ただし過剰だと害になる</td>
+</tr>
+<tr>
+<td><strong>貪食（どんしょく）</strong></td>
+<td>不要物を"食べて"処理すること</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション9 -->
+<h2 id="section9">9. まとめ：ミクログリアが重要な理由</h2>
+<p><strong>ミクログリア</strong>は、脳の中で「日常の見回りと掃除」をしながら、「脳が育つ過程の配線整理」にも関わり、「病気やケガのときには防御と修理」にも関わる、とても多才な細胞です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 最重要ポイント</span> ミクログリアの働きは<strong>「状況・時間・場所」で変わる</strong>。だからこそ、研究が進むと<strong>「脳の病気の新しい治療」に結びつく可能性がある</strong>。これが、ミクログリアが世界中で注目されている最大の理由です。</div>
+<div>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentrance%3F_gl%3D1*gl4xyd*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0" title="医知創造ラボの歩き方 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entrance?_gl=1*gl4xyd*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F02%2F26%2F150249" title="アドレノメデュリン（AM）と脳神経領域への応用 ― 血管を守るペプチドの可能性 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/02/26/150249">hinyan1016.hatenablog.com</a></cite></p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2026%2F02%2F27%2F021111" title="脳神経領域の線維芽細胞と線維性瘢痕が面白い理由と再生医療への応用 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2026/02/27/021111">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+</div>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=KMDTub-sXz8" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "脳のミクログリアって何？ ─ 少し深掘り",
+  "description": "脳のミクログリアって何？ ─ 少し深掘り",
+  "thumbnailUrl": "https://img.youtube.com/vi/KMDTub-sXz8/maxresdefault.jpg",
+  "uploadDate": "2026-02-26",
+  "contentUrl": "https://www.youtube.com/watch?v=KMDTub-sXz8",
+  "embedUrl": "https://www.youtube.com/embed/KMDTub-sXz8"
+}
+</script>

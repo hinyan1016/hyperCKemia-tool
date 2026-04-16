@@ -1,0 +1,576 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>
+<p>NRSスコア計算ツール</p>
+<p><a href="https://claude.ai/public/artifacts/62184aa1-f078-4e60-afa1-40d878017e70" target="_blank">NRS2002 Calculator - Nutritional Risk Screening Tool | Claude</a></p>
+<p> </p>
+<p>MUST計算ツール</p>
+<p><a href="https://claude.ai/public/artifacts/135a8a3a-41fe-4bae-b963-f9457eecbee0" target="_blank">MUST Calculator - Malnutrition Screening Tool for Healthcare | Claude</a></p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="ERAS時代の周術期管理。NSTが導く栄養療法とチーム医療の実践ポイント。">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251118/20251118111221.png" alt="明るく清潔な病院内で、医師、看護師、管理栄養士などの医療チームがタブレット上の患者回復計画を見ながら連携しているイラスト。ERAS（術後回復強化）プロトコルにおけるNST（栄養サポートチーム）の重要な役割と、周術期栄養管理を通じたチーム医療の推進を象徴している。" width="1024" height="1024" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">ERAS時代の周術期管理。NSTが導く栄養療法とチーム医療の実践ポイント。</figcaption>
+</figure>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251130/20251130002731.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+</div>
+<style>
+/* 基本スタイル */
+.medical-article { max-width: 100%; padding: 16px; line-height: 1.7; color: #333333; }
+h1 { font-size: 1.6rem; color: #2c5aa0; border-bottom: 2px solid #2c5aa0; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px; }
+h2 { font-size: 1.3rem; color: #2c5aa0; border-left: 4px solid #2c5aa0; padding-left: 12px; margin-top: 32px; margin-bottom: 16px; }
+h3 { font-size: 1.1rem; color: #444444; margin-top: 24px; margin-bottom: 12px; }
+h3::before { content: '▶'; color: #2c5aa0; margin-right: 8px; }
+strong { font-weight: bold; color: #2c5aa0; }
+sup { color: #dc3545; font-weight: bold; font-size: 0.75em; }
+p { margin-bottom: 12px; }
+ul, ol { margin: 12px 0; padding-left: 24px; }
+li { margin-bottom: 8px; }
+
+/* 情報ボックス */
+.toc-box { background: #f8f9fa; border: 1px solid #dee2e6; padding: 16px; margin: 16px 0; border-radius: 4px; }
+.toc-box h3 { margin-top: 0; }
+.toc-box ul { margin: 8px 0; }
+.toc-box li { margin-bottom: 6px; }
+.important-box { background: #e8f4fd; border-left: 4px solid #2c5aa0; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+.warning-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+.emergency-box { background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+
+/* テーブル - 強化版 */
+.drug-table { width: 100%; border-collapse: collapse; margin: 16px 0; border: 1px solid #dddddd; }
+.drug-table thead th { 
+  background-color: #2c5aa0 !important; 
+  color: #ffffff !important; 
+  font-weight: bold !important;
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+}
+.drug-table th { 
+  background-color: #2c5aa0 !important; 
+  color: #ffffff !important; 
+  font-weight: bold;
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+}
+.drug-table tbody td { 
+  border: 1px solid #dddddd; 
+  padding: 12px;
+  background-color: #ffffff;
+  vertical-align: top;
+}
+.drug-table tbody tr:nth-child(even) td { 
+  background-color: #f8f9fa !important;
+}
+.drug-table tbody tr:nth-child(odd) td { 
+  background-color: #ffffff !important;
+}
+
+/* 展開セクション */
+.medical-details { background: #f8f9fa; margin: 16px 0; border: 1px solid #dee2e6; border-radius: 4px; }
+.medical-details summary { 
+  background-color: #2c5aa0; 
+  color: #ffffff; 
+  padding: 12px; 
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+.medical-details-content { padding: 16px; background-color: #ffffff; }
+
+/* 参考文献 */
+.references { margin-top: 2rem; border-top: 2px solid #dee2e6; padding-top: 1rem; }
+.ref-item { margin-bottom: 12px; padding: 10px; background-color: #f8f9fa; border-radius: 4px; line-height: 1.6; }
+.ref-numbers { color: #dc3545; font-weight: bold; margin-right: 8px; }
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .medical-article { padding: 12px; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1.05rem; }
+  .drug-table { font-size: 0.9rem; }
+  .drug-table th, .drug-table td { padding: 8px; }
+}
+</style>
+<div class="medical-article">
+<h1>ERAS時代の周術期栄養管理：NSTの実務ガイド</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#intro">はじめに：なぜ「ERAS × NST」なのか</a></li>
+<li><a href="#section1">1. ERASの概要と栄養管理の位置づけ</a></li>
+<li><a href="#section2">2. 周術期栄養療法のエビデンスと基本戦略</a></li>
+<li><a href="#section3">3. NSTとは何か：チームとシステム</a></li>
+<li><a href="#section4">4. ERASにおけるNSTの役割：時系列で整理する</a></li>
+<li><a href="#section5">5. ERASにおけるNST介入の「標準フロー」</a></li>
+<li><a href="#section6">6. ERASパスとNST：病院全体のシステムとして</a></li>
+<li><a href="#section7">7. ケーススタディ：大腸がん患者のERAS＋NST介入</a></li>
+<li><a href="#section8">8. 小規模病院・内科主体病院での現実的な導入ステップ</a></li>
+<li><a href="#section9">9. 今後の展望：プレハビリテーションとがん栄養ガイドライン</a></li>
+<li><a href="#section10">10. まとめ：ERAS時代のNST実務のポイント</a></li>
+</ul>
+</div>
+<h2 id="intro">はじめに:なぜ「ERAS × NST」なのか</h2>
+<p>周術期管理の標準は、いまや「手術＋点滴＋絶食」ではなく、<strong>「ERAS（Enhanced Recovery After Surgery：術後回復強化）」</strong>です。<strong>ERASの中核の一つが「栄養管理」</strong>であり、その実践の主役が病院内の<strong>NST（Nutrition Support Team）</strong>です。ERASの考え方を取り入れていても、「栄養だけは従来どおり」という施設も少なくありません。</p>
+<p>本記事では、以下の3点を医療従事者向けに実務目線で整理します：</p>
+<ul>
+<li><strong>ERASの中で栄養管理がなぜ重要なのか</strong></li>
+<li><strong>NSTがどのタイミングで、何をすべきか</strong></li>
+<li><strong>実際に病院で回す時の組織づくり・運用のポイント</strong></li>
+</ul>
+<h2 id="section1">1. ERASの概要と栄養管理の位置づけ</h2>
+<h3>1-1. ERASとは何か</h3>
+<p><strong>ERAS</strong>は、術後のストレス反応と合併症を減らし、<strong>早期回復と在院日数短縮を目指す</strong>、周術期の包括的なマネジメント・コンセプトです<sup>[1]</sup>。消化器外科を中心に発展し、現在は婦人科、泌尿器科、整形外科などにも拡大しています。</p>
+<p>代表的な管理項目には、以下が含まれます<sup>[2]</sup>：</p>
+<ul>
+<li><strong>術前説明と不安軽減</strong></li>
+<li><strong>禁飲食期間の短縮</strong>（固形6時間前・水分2時間前まで）</li>
+<li><strong>術前炭水化物飲料の投与</strong></li>
+<li><strong>術中・術後の過剰輸液回避</strong></li>
+<li><strong>早期離床</strong></li>
+<li><strong>早期経口摂取・早期経腸栄養</strong></li>
+<li><strong>ドレーン・尿道カテーテル早期抜去</strong> など</li>
+</ul>
+<h3>1-2. ERASと栄養療法の関係</h3>
+<p><strong>ESPENの「手術における臨床栄養ガイドライン」</strong>は、ERASの中での栄養管理を明確に位置づけています<sup>[3][4]</sup>。</p>
+<p>主なポイントは以下です：</p>
+<ul>
+<li><strong>早期経口摂取が第一選択</strong></li>
+<li><strong>栄養リスクのある患者には、術前7〜14日間の栄養療法を検討</strong></li>
+<li><strong>術後7〜10日以上、経口・経腸で必要量が確保できない場合に静脈栄養を併用</strong></li>
+<li><strong>ルーチンのTPNは推奨されず</strong>、「足りない分を補う」という発想</li>
+</ul>
+<p>日本の<strong>静脈経腸栄養ガイドライン（JSPEN）</strong>も、周術期栄養の位置づけをほぼ同様に整理しており、ERASの考え方と整合的です<sup>[5]</sup>。</p>
+<h2 id="section2">2. 周術期栄養療法のエビデンスと基本戦略</h2>
+<h3>2-1. 栄養状態と術後合併症</h3>
+<p><strong>低栄養やサルコペニア</strong>は、以下に直結します<sup>[6]</sup>：</p>
+<ul>
+<li><strong>創感染、縫合不全</strong></li>
+<li><strong>肺炎などの感染症</strong></li>
+<li><strong>ICU滞在延長</strong></li>
+<li><strong>在院日数延長と医療費増大</strong></li>
+</ul>
+<p>消化器がん患者では、<strong>栄養状態と栄養サポートの質が、術後合併症の頻度と関連する</strong>ことが示されています<sup>[7]</sup>。</p>
+<h3>2-2. ESPENガイドラインに基づく基本戦略</h3>
+<p><strong>ESPEN「Clinical nutrition in surgery」2021・2025改訂版</strong>より、要点を抜粋すると<sup>[8]</sup>：</p>
+<ul>
+<li><strong>早期経口摂取</strong>：状態が許せば<strong>術後24時間以内の経口摂取を目標</strong></li>
+<li><strong>栄養リスク評価</strong>：<strong>NRS-2002やMUST</strong>など検証済みスクリーニングツールを用いる</li>
+<li><strong>栄養リスクが高い患者</strong>には：
+<ul>
+<li><strong>術前7〜14日の経腸または静脈による栄養療法</strong><sup>[9]</sup></li>
+<li>体重減少の程度、BMI、食事摂取不良期間などで適応を判断</li>
+</ul>
+</li>
+<li><strong>ルーチンの術前絶食延長は不要</strong>（<strong>固形6時間前、水分2時間前まで可</strong>）</li>
+</ul>
+<div class="important-box"><strong>📋 重要な基本方針</strong><br />「すべての外科患者に栄養療法をする」のではなく、<strong>「栄養リスクの高い患者に、適切なタイミングと方法で介入する」</strong>というスタンスです。</div>
+<h2 id="section3">3. NSTとは何か：チームとシステム</h2>
+<h3>3-1. NSTの目的と役割</h3>
+<p>日本の<strong>NST</strong>は、主に以下を目的としています<sup>[10]</sup>：</p>
+<ul>
+<li><strong>すべての入院患者が適切な栄養療法を受けられるようにすること</strong></li>
+<li><strong>各職種の栄養に関する知識・スキルを底上げすること</strong></li>
+</ul>
+<p>東北大学病院の栄養サポートセンターは、「全患者が適切な栄養療法を受けられるシステム」「職員教育・情報発信」を二本柱としています<sup>[11]</sup>。</p>
+<h3>3-2. 主なメンバー構成と基本的な役割</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">職種</th>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">主な役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>医師</strong>（外科・内科・麻酔科など）</td>
+<td>全体マネジメント、栄養処方、方針決定</td>
+</tr>
+<tr>
+<td><strong>管理栄養士</strong></td>
+<td>栄養評価、栄養投与設計（経口・経腸・ONS）、食形態調整</td>
+</tr>
+<tr>
+<td><strong>看護師</strong></td>
+<td>摂取量・症状の観察、実施状況のフィードバック、患者教育</td>
+</tr>
+<tr>
+<td><strong>薬剤師</strong></td>
+<td>TPN設計、配合変化の確認、薬剤との相互作用・投与量調整</td>
+</tr>
+<tr>
+<td><strong>リハビリ</strong>（理学療法士・作業療法士）</td>
+<td>サルコペニア評価、運動・リハビリと栄養の連携</td>
+</tr>
+<tr>
+<td><strong>言語聴覚士</strong></td>
+<td>嚥下評価、食形態選択、嚥下訓練</td>
+</tr>
+<tr>
+<td><strong>歯科・口腔外科</strong></td>
+<td>術前・術後の口腔ケア</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ERASにおけるNST</strong>は、「個別症例のコンサルト対応」から一歩進んで、<strong>「病棟・診療科単位のシステム設計」に関わる</strong>ことが重要になります<sup>[12]</sup>。</p>
+<h2 id="section4">4. ERASにおけるNSTの役割：時系列で整理する</h2>
+<p>周術期を<strong>「術前」「術中〜術直後」「術後」</strong>の3フェーズに分けて、NSTの役割を整理します。</p>
+<h3>4-1. 術前フェーズ：栄養リスクの見極めと準備</h3>
+<h4>4-1-1. 栄養スクリーニング</h4>
+<p><strong>目標</strong>：手術前に<strong>「栄養ハイリスク」を漏れなく拾う</strong></p>
+<p>代表的な指標・ツール：</p>
+<ul>
+<li><strong>NRS-2002</strong></li>
+<li><strong>MUST（Malnutrition Universal Screening Tool）</strong></li>
+<li><strong>BMI、体重減少率</strong></li>
+<li><strong>食事摂取状況</strong>（何日・何週間、必要量に届いていないか）</li>
+<li><strong>アルブミン、予後栄養指数（PNI）、CONUT</strong>など</li>
+</ul>
+<p>ESPENは、<strong>検証済みスクリーニングツールを用いた体系的スクリーニング</strong>を推奨しています<sup>[13]</sup>。</p>
+<p>NSTとしては、以下のような仕組みづくりが鍵になります：</p>
+<ul>
+<li><strong>外科外来・入院時のルーチン評価にツールを組み込む</strong></li>
+<li><strong>一定以上のスコアを「NST自動コンサルトトリガー」にする</strong></li>
+</ul>
+<h4>4-1-2. 術前栄養療法の適応</h4>
+<p>ESPENとJSPENは共通して、以下のような場合に<strong>術前栄養療法</strong>を推奨しています<sup>[14]</sup>：</p>
+<ul>
+<li><strong>6か月以内に10〜15％以上の体重減少</strong></li>
+<li><strong>BMI ＜ 18.5 kg/m²</strong></li>
+<li><strong>1週間以上ほとんど食事摂取がない、または2週間以上必要量の50％未満</strong></li>
+<li><strong>重度の炎症や進行がんに伴う悪液質が疑われる</strong></li>
+</ul>
+<p><strong>原則：7〜14日間の栄養介入</strong></p>
+<ul>
+<li><strong>経口摂取が可能なら</strong>
+<ul>
+<li>高エネルギー・高たんぱく食</li>
+<li><strong>ONS（経口栄養補助食品）</strong>の併用</li>
+</ul>
+</li>
+<li><strong>経口では不足するなら</strong>
+<ul>
+<li><strong>経腸栄養</strong>（経鼻・PEGなど）を優先</li>
+<li>どうしても経腸困難なら<strong>TPN</strong>を含めて検討</li>
+</ul>
+</li>
+</ul>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />「手術を急ぐあまり、重度低栄養のまま大手術に突入しない」ことがERASの考え方とも合致します<sup>[15]</sup>。</div>
+<h4>4-1-3. 術前炭水化物飲料と絶食時間の短縮</h4>
+<p>ガイドラインでは、以下が推奨されています<sup>[16]</sup>：</p>
+<ul>
+<li><strong>麻酔導入6時間前まで固形物、2時間前まで清澄水分は摂取可</strong></li>
+<li>必要に応じて<strong>炭水化物飲料を術前2時間前まで投与</strong>
+<ul>
+<li>→ <strong>インスリン抵抗性の軽減、口渇・不快感の改善、術後回復に寄与</strong></li>
+</ul>
+</li>
+</ul>
+<p>ここでのNSTの役割は：</p>
+<ul>
+<li>病院共通の<strong>「術前飲水・炭水化物負荷プロトコル」を作成</strong></li>
+<li>麻酔科・外科・看護部と協議し、<strong>現場運用可能なオーダーセットに落とし込む</strong></li>
+</ul>
+<h3>4-2. 術中〜術直後フェーズ：過剰輸液・飢餓を避ける</h3>
+<p>術中・術直後は、主に麻酔科・外科が主導しますが、NST視点から押さえておきたいポイントは次のとおりです<sup>[17]</sup>：</p>
+<ul>
+<li><strong>術中の輸液は「必要量＋α」を意識し、過剰な維持輸液を避ける</strong></li>
+<li>術後、状態が落ち着いていれば<strong>早期の経口・経腸栄養開始を妨げない輸液設計</strong>にする</li>
+<li>術翌日以降も、<strong>輸液を惰性的に続けて「点滴満腹」で食事摂取が進まない状態にしない</strong></li>
+</ul>
+<p>NSTとしては：</p>
+<ul>
+<li>外科・麻酔科と共同で<strong>「ERAS標準輸液プロトコル」を作成</strong></li>
+<li><strong>術後1〜2病日に「食事摂取量 vs 輸液量」を見直し</strong>、必要なら減量・中止を提案</li>
+</ul>
+<h3>4-3. 術後フェーズ：早期経口摂取と不足分の補填</h3>
+<h4>4-3-1. 早期経口摂取の原則</h4>
+<p>ERASでは、術式ごとに以下のような目標が掲げられます<sup>[18]</sup>：</p>
+<ul>
+<li><strong>結腸切除</strong>：<strong>術後0〜1病日から経口摂取開始</strong></li>
+<li><strong>胃切除</strong>：<strong>術後1〜2病日で水分～流動開始</strong></li>
+<li><strong>膵頭十二指腸切除</strong>：<strong>術後3病日前後から慎重に開始</strong></li>
+</ul>
+<p>日本の報告でも、<strong>ERAS導入により術後早期の経口摂取が普及</strong>し、段階的な五分粥→全粥→常食といった従来の「長いステップアップ」が見直されています<sup>[19]</sup>。</p>
+<h4>4-3-2. 「食べさせる」だけではエネルギーが足りない</h4>
+<p>実際には、術後早期の経口摂取量は<sup>[20]</sup>：</p>
+<ul>
+<li><strong>1〜3病日：必要量の20〜40％程度</strong></li>
+<li><strong>4〜7病日：50〜70％程度</strong></li>
+</ul>
+<p>にとどまることも多く、食事単独では必要エネルギーに届かないことが多くなります。</p>
+<div class="important-box"><strong>📋 重要な考え方</strong><br /><strong>「早期経口摂取＋不足分の補填（ONS・末梢輸液・経腸栄養）」</strong>という発想が重要です。</div>
+<h4>4-3-3. 不足分の補填戦略（ONS・経腸・静脈）</h4>
+<p>不足分の補填の考え方は以下の通りです：</p>
+<ol>
+<li><strong>経口が最優先</strong>
+<ul>
+<li>食事量が少ない場合は、<strong>ONS（高エネルギー・高たんぱく飲料）</strong>を追加</li>
+<li>味や量、服薬との時間調整など、実際に飲める工夫が重要</li>
+</ul>
+</li>
+<li><strong>経腸栄養の併用</strong>
+<ul>
+<li><strong>経口摂取＋経腸で、70％以上の目標量を目指す</strong></li>
+<li>腸管機能が保たれている限り、<strong>経腸優先</strong></li>
+</ul>
+</li>
+<li><strong>静脈栄養の併用</strong>
+<ul>
+<li>ESPENは、<strong>術後7〜10日以上、経口・経腸で必要量が満たせない場合にPN併用を推奨</strong><sup>[21]</sup></li>
+<li>それ以前でも、重症合併症で経腸が不可能な場合は個別に検討</li>
+</ul>
+</li>
+</ol>
+<h2 id="section5">5. ERASにおけるNST介入の「標準フロー」</h2>
+<h3>5-1. 時系列フローの例（消化器外科）</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">フェーズ</th>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">介入内容（NST）</th>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">主な担当</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外来（術前2〜4週）</strong></td>
+<td>栄養スクリーニング、ハイリスク患者の抽出、術前栄養療法の計画</td>
+<td>外科医＋管理栄養士</td>
+</tr>
+<tr>
+<td><strong>入院時</strong></td>
+<td>スクリーニング再確認、食習慣・嗜好の聴取、ONS処方検討</td>
+<td>NST・病棟管理栄養士</td>
+</tr>
+<tr>
+<td><strong>術当日</strong></td>
+<td>術前炭水化物飲料の確認、術後栄養プラン（口・腸・静脈）の共有</td>
+<td>NST・麻酔科</td>
+</tr>
+<tr>
+<td><strong>術後1〜3病日</strong></td>
+<td>経口摂取量の確認、食形態調整、ONS追加、輸液量の調整提案</td>
+<td>NST＋病棟看護師</td>
+</tr>
+<tr>
+<td><strong>術後4〜7病日</strong></td>
+<td>エネルギー・たんぱく質充足率の評価、必要に応じ経腸・PN併用</td>
+<td>NST</td>
+</tr>
+<tr>
+<td><strong>退院前</strong></td>
+<td>自宅での食事・ONS継続の指導、地域栄養サポートとの連携</td>
+<td>管理栄養士＋医師</td>
+</tr>
+</tbody>
+</table>
+<h3>5-2. 「周術期NST」の特徴：スピードと継続性</h3>
+<p>「周術期におけるNSTはどうあるべきか？」という総説でも、周術期NSTの特徴として<strong>「スピード」と「切れ目のない栄養サポート」</strong>が強調されています<sup>[22]</sup>。</p>
+<ul>
+<li>癌手術・肝移植などは、<strong>術前に時間的余裕が少ない</strong></li>
+<li>術後は、<strong>経口摂取量・合併症の変化に応じて、迅速な方針変更が必要</strong></li>
+</ul>
+<p>そのため：</p>
+<ul>
+<li><strong>「週1回のNST回診」だけでは不十分</strong></li>
+<li><strong>外科病棟に常駐に近い形で管理栄養士が関与</strong>し、必要時にNST医師がレビューする</li>
+<li><strong>病棟カンファレンスとNSTカンファレンスを連携させる</strong></li>
+</ul>
+<h2 id="section6">6. ERASパスとNST：病院全体のシステムとして</h2>
+<h3>6-1. ERASパスに組み込むべき栄養項目</h3>
+<p><strong>ERASクリニカルパス</strong>の中に、栄養関連項目を明示的に組み込んでおきます。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">項目</th>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">内容の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>術前評価</strong></td>
+<td>NRS-2002スコア、体重変化、食事摂取状況</td>
+</tr>
+<tr>
+<td><strong>術前対策</strong></td>
+<td>術前7〜14日の栄養療法要否、ONS開始の有無</td>
+</tr>
+<tr>
+<td><strong>禁飲食</strong></td>
+<td>固形6時間前、清澄水分2時間前まで可のルール</td>
+</tr>
+<tr>
+<td><strong>術前飲料</strong></td>
+<td>炭水化物飲料の種類・量・投与タイミング</td>
+</tr>
+<tr>
+<td><strong>術後食開始</strong></td>
+<td>術式ごとの経口開始病日・食形態（例：0P：水分〜流動）</td>
+</tr>
+<tr>
+<td><strong>目標摂取量</strong></td>
+<td>術後3病日までの目標エネルギー・たんぱく質量</td>
+</tr>
+<tr>
+<td><strong>不足分補填</strong></td>
+<td>ONS・経腸・静脈栄養のトリガー条件</td>
+</tr>
+<tr>
+<td><strong>退院支援</strong></td>
+<td>自宅での食事指導、ONS処方の継続有無</td>
+</tr>
+</tbody>
+</table>
+<p>これらを<strong>診療科横断で共通化</strong>することが、ERAS×NSTの要になります。</p>
+<h3>6-2. KPI管理：何を指標に見るか</h3>
+<p>ERAS導入による栄養関連のアウトカムとして、以下の指標が有用です<sup>[23]</sup>：</p>
+<ul>
+<li><strong>在院日数</strong></li>
+<li><strong>術後合併症率</strong>（SSI、縫合不全、肺炎など）</li>
+<li><strong>再入院率</strong></li>
+<li><strong>術後3〜7病日のエネルギー充足率・たんぱく質充足率</strong></li>
+<li><strong>経口摂取再開までの日数</strong></li>
+<li><strong>TPN使用症例割合・使用日数</strong></li>
+</ul>
+<p>NSTがデータを集約し、ERASチームと定期的にフィードバックすることで、<strong>PDCAを回す文化</strong>が定着します。</p>
+<h2 id="section7">7. ケーススタディ：大腸がん患者のERAS＋NST介入（架空症例）</h2>
+<h3>7-1. 症例概要</h3>
+<ul>
+<li><strong>70歳男性、結腸がん</strong>（右半結腸切除予定）</li>
+<li>身長165cm、<strong>体重54kg</strong>（<strong>6か月で7kg減少：−11.5%</strong>）</li>
+<li><strong>BMI 19.8、NRS-2002：4点</strong>（栄養リスクあり）</li>
+<li>ここ1か月、<strong>食事摂取量は通常の6割程度</strong></li>
+</ul>
+<h3>7-2. 術前NST介入</h3>
+<h4>栄養スクリーニング</h4>
+<p><strong>6か月で10%以上の体重減少＋摂取低下あり</strong> → <strong>術前栄養療法の適応</strong><sup>[24]</sup></p>
+<h4>術前7〜10日の栄養療法</h4>
+<ul>
+<li><strong>高エネルギー・高たんぱく食＋ONS 2本／日</strong></li>
+<li>摂取不足分を補う目的で、短期間の経腸栄養を併用する選択肢も検討</li>
+</ul>
+<h4>ERAS説明と術前飲水プラン</h4>
+<ul>
+<li><strong>禁飲食時間の説明</strong></li>
+<li><strong>手術2時間前までの炭水化物飲料（400mL）の内服</strong></li>
+</ul>
+<h3>7-3. 術後の流れ</h3>
+<h4>術後1病日：水分・流動食開始</h4>
+<ul>
+<li>摂取量は<strong>必要量の約30％</strong></li>
+<li>NSTは：
+<ul>
+<li><strong>ONS 2本／日の追加</strong></li>
+<li>不足分は<strong>末梢輸液（含糖電解質＋アミノ酸）で補填</strong></li>
+</ul>
+</li>
+</ul>
+<h4>術後3病日：</h4>
+<ul>
+<li><strong>五分〜全粥＋おかずにアップ</strong></li>
+<li><strong>エネルギー充足率60％前後</strong> → 経口＋ONSで<strong>70〜80％を目指す</strong></li>
+</ul>
+<h4>術後5病日：</h4>
+<ul>
+<li><strong>常食に近い食事が摂取可能</strong>となり、<strong>ONSを1本／日に減量</strong></li>
+<li><strong>輸液中止</strong></li>
+</ul>
+<h4>結果として：</h4>
+<ul>
+<li><strong>重篤な術後合併症なく、術後8病日退院</strong></li>
+<li>術前の体重減少はあるものの、退院時には安定傾向</li>
+</ul>
+<div class="important-box"><strong>📋 本症例のポイント</strong><br /><strong>「ERASプロトコルに沿った術式・疼痛管理」＋「NSTによる栄養評価と補填」</strong>がセットで機能していることがわかります。</div>
+<h2 id="section8">8. 小規模病院・内科主体病院での現実的な導入ステップ</h2>
+<p>「専従管理栄養士もNST専任医もいない」という施設でも、栄養関連のERAS要素だけを先に導入することは十分可能です。</p>
+<h3>8-1. ミニマムで導入したい3点セット</h3>
+<ol>
+<li><strong>術前栄養スクリーニングの導入</strong>
+<ul>
+<li><strong>NRS-2002</strong>などを入院基本セットに組み込む</li>
+<li>一定スコア以上で「NST相当カンファレンス」の対象とする</li>
+</ul>
+</li>
+<li><strong>禁飲食時間の標準化と炭水化物飲料</strong>
+<ul>
+<li>麻酔科・外科と合意し、病院共通の<strong>「術前飲水オーダー」を作成</strong></li>
+</ul>
+</li>
+<li><strong>術後早期経口摂取＋ONS</strong>
+<ul>
+<li>術式ごとに<strong>「術後○病日からの食事開始」「ONSの標準量」</strong>をパスに明記</li>
+</ul>
+</li>
+</ol>
+<h3>8-2. 「疑似NST」の作り方</h3>
+<ul>
+<li><strong>外科医＋管理栄養士＋病棟看護師長＋薬剤師</strong>で、<strong>月1回のミニNSTカンファレンス</strong>を実施</li>
+<li>周術期の問題症例（縫合不全、長期TPN、再入院など）をピックアップし、<strong>「栄養面で何ができたか」を振り返る</strong></li>
+<li>そこで得られた改善点を、<strong>ERASパスに反映</strong></li>
+</ul>
+<p>いきなり「フルスペックNST」を目指すより、<strong>ERASの栄養項目を中心に小さく始めて育てていく</strong>方が現実的です。</p>
+<h2 id="section9">9. 今後の展望：プレハビリテーションとがん栄養ガイドラインとの接続</h2>
+<h3>9-1. プレハビリテーションとNST</h3>
+<p>近年、術前から<strong>運動・栄養・心理的介入を行う「プレハビリテーション」</strong>が注目されています<sup>[25]</sup>。</p>
+<ul>
+<li><strong>サルコペニア・フレイル患者</strong>では、<strong>術前数週間の栄養＋運動介入</strong>で、術後合併症や回復に差が出る可能性</li>
+<li>NSTは、プレハビリの栄養部分を担う中心的存在になり得ます</li>
+</ul>
+<h3>9-2. がん栄養ガイドライン（JSPEN）との統合</h3>
+<p>JSPENの<strong>「がん患者診療のための栄養治療ガイドライン2024年版」</strong>や、一般患者向けの2025年版など、がん栄養に特化した指針も整備されてきています<sup>[26]</sup>。</p>
+<p>ERAS導入しているがん診療拠点病院では：</p>
+<ul>
+<li><strong>ERASパス</strong>（術前〜術後）</li>
+<li><strong>がん栄養ガイドライン</strong>（術前後＋化学療法・放射線療法）</li>
+<li><strong>NSTの横断的支援</strong></li>
+</ul>
+<p>を統合した<strong>「がん栄養マネジメント・プログラム」</strong>を構築することが今後の方向性になっていくでしょう。</p>
+<h2 id="section10">10. まとめ：ERAS時代のNST実務のポイント</h2>
+<p>最後に、ERASにおけるNSTの実務ポイントを整理します。</p>
+<div class="important-box">
+<h4>✅ 栄養はERASの「オプション」ではなく「中核」</h4>
+<p><strong>早期経口摂取、禁飲食短縮、術前栄養療法</strong>など、ERASの多くが栄養と密接に関連しています。</p>
+</div>
+<div class="important-box">
+<h4>✅ 「誰に・いつ・どのくらい」栄養療法をするかを決めるのがNSTの仕事</h4>
+<p>全員にTPNをするのではなく、<strong>ハイリスク患者を見極めて術前7〜14日介入する</strong>、<strong>不足分をONSや経腸・静脈で補う</strong>、といったメリハリの効いた戦略が重要です。</p>
+</div>
+<div class="important-box">
+<h4>✅ 周術期NSTはスピードと継続性が命</h4>
+<p><strong>週1回のNST回診だけでは間に合わない</strong>ことが多く、病棟常駐の管理栄養士や外科カンファとの連携で<strong>「切れ目のない栄養サポート」</strong>を目指します<sup>[27]</sup>。</p>
+</div>
+<div class="important-box">
+<h4>✅ ERASパスに栄養項目を組み込み、KPIで評価する</h4>
+<p><strong>在院日数・合併症率・エネルギー充足率・TPN使用率</strong>などをモニタリングし、NSTがデータを持ってERASチームにフィードバックすることで、病院全体が学習します<sup>[28]</sup>。</p>
+</div>
+<div class="important-box">
+<h4>✅ 小さく始めて大きく育てる</h4>
+<p>まずは<strong>「術前スクリーニング」「禁飲食短縮」「早期経口＋ONS」</strong>など、すぐ導入できる項目から始め、徐々に術前栄養療法やプレハビリ、外来NSTへと広げていくのが現実的です。</p>
+</div>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">ajcn.nutrition.org - Enhanced Recovery After Surgery (ERAS) protocols and nutritional management</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">ESPEN - Enhanced Recovery After Surgery (ERAS) protocols: Core management components</span></div>
+<div class="ref-item"><span class="ref-numbers">3 4</span> <span class="ref-content">ESPEN Clinical Nutrition Guidelines - Clinical nutrition in surgery. PubMed - ESPEN guideline: Clinical nutrition in surgery 2021-2025</span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">files.jspen.or.jp - 日本静脈経腸栄養学会 周術期栄養管理ガイドライン</span></div>
+<div class="ref-item"><span class="ref-numbers">6 7</span> <span class="ref-content">ASPEN - Malnutrition and surgical outcomes: Impact of preoperative nutritional status. ASPEN - Nutrition support and postoperative complications in gastrointestinal surgery</span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">ESPEN - Clinical nutrition in surgery: 2021 and 2025 updated recommendations</span></div>
+<div class="ref-item"><span class="ref-numbers">9 14 24</span> <span class="ref-content">NPO法人PDN - 周術期栄養管理：術前栄養療法の適応と実践</span></div>
+<div class="ref-item"><span class="ref-numbers">10 11</span> <span class="ref-content">東北大学病院 栄養サポートセンター - NSTの目的と役割、システム構築</span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">ぴえろオンライン - ERASにおけるNSTのシステム設計と役割</span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">PubMed - Nutritional screening tools: NRS-2002, MUST, and their validation in surgical patients</span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Europe PMC - Preoperative nutrition support in malnourished surgical patients</span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">files.jspen.or.jp - 術前絶食時間の短縮と炭水化物飲料投与のエビデンス</span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">ESPEN - Perioperative fluid management in ERAS protocols</span></div>
+<div class="ref-item"><span class="ref-numbers">18 19 20 21</span> <span class="ref-content">J-STAGE - ERAS導入後の早期経口摂取と栄養管理の実態調査。J-STAGE - 周術期栄養管理におけるERASプロトコルの効果</span></div>
+<div class="ref-item"><span class="ref-numbers">22 27</span> <span class="ref-content">ぴえろオンライン - 周術期NSTにおけるスピードと継続性の重要性</span></div>
+<div class="ref-item"><span class="ref-numbers">23 28</span> <span class="ref-content">ASPEN - ERAS outcomes: Key performance indicators for nutritional management</span></div>
+<div class="ref-item"><span class="ref-numbers">25</span> <span class="ref-content">PubMed - Prehabilitation: Preoperative nutrition and exercise intervention before surgery</span></div>
+<div class="ref-item"><span class="ref-numbers">26</span> <span class="ref-content">jspen.or.jp - がん患者診療のための栄養治療ガイドライン2024年版・2025年版</span></div>
+</div>
+</div>

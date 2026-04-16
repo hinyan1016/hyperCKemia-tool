@@ -1,0 +1,455 @@
+<div class="medical-article">
+<div>音声概要
+<p><a href="https://drive.google.com/file/d/1ckt1RMpktft21J1t_Yzn3nNdwcMDfShK/view?usp=sharing" target="_blank">ニキビ082301.mp3 - Google ドライブ</a></p>
+</div>
+<div>スライド
+<p><a href="https://claude.ai/public/artifacts/bd0b7a1c-8ca1-41e0-8dbb-5fe2a5541136" target="_blank">ニキビ治療ガイド - モバイルスライドプレゼンテーション | Claude | Claude</a></p>
+</div>
+<div>確認クイズ</div>
+<div>
+<p><a href="https://claude.ai/public/artifacts/e84db228-f35e-4ade-98cc-10a40f9e08a0" target="_blank">ニキビ治療クイズアプリ | Claude | Claude</a></p>
+</div>
+</div>
+<style>
+/* はてなブログ最適化スタイル */
+.medical-article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .medical-article {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 見出しスタイル */
+.medical-article h1 {
+  font-size: 1.6rem;
+  color: #2c5aa0;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 8px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.medical-article h2 {
+  font-size: 1.3rem;
+  color: #2c5aa0;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 12px;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.medical-article h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.2rem 0 0.6rem 0;
+}
+
+.medical-article h3::before {
+  content: '▶';
+  color: #2c5aa0;
+  margin-right: 8px;
+}
+
+/* 強調表示 */
+.medical-article strong {
+  font-weight: bold;
+  color: #2c5aa0;
+}
+
+.medical-article em {
+  font-style: italic;
+  color: #444;
+}
+
+.medical-article .text-red {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.medical-article .text-blue {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 目次 */
+.toc-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc-box li {
+  margin-bottom: 8px;
+}
+
+.toc-box a {
+  color: #2c5aa0;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 情報ボックス */
+.important-box, .warning-box, .emergency-box {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.important-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2c5aa0;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.emergency-box {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+  border: 1px solid #ddd !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.medical-article .drug-table thead th,
+.medical-article .drug-table th {
+  background-color: #2c5aa0 !important;
+  background: #2c5aa0 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(even) {
+  background: #f8f9fa !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(odd) {
+  background: white !important;
+}
+
+.medical-article table.drug-table {
+  background: transparent !important;
+}
+
+.medical-article table.drug-table * {
+  background-color: inherit;
+}
+
+/* リスト */
+.medical-article ul, .medical-article ol {
+  margin: 16px 0;
+  padding-left: 1.5rem;
+}
+
+.medical-article li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* コード */
+.medical-article code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #d73502;
+}
+
+.medical-article pre {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.medical-article pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+/* 展開可能セクション */
+.medical-details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.medical-details summary {
+  background: #2c5aa0;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: block;
+}
+
+.medical-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.medical-details summary::after {
+  content: '▼ 展開';
+  float: right;
+  font-size: 0.9rem;
+}
+
+.medical-details[open] summary::after {
+  content: '▲ 閉じる';
+}
+
+.medical-details-content {
+  padding: 16px;
+  background: white;
+}
+
+/* バッジとラベル */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.badge-primary { background: #2c5aa0; color: white; }
+.badge-warning { background: #ffc107; color: #212529; }
+.badge-danger { background: #dc3545; color: white; }
+.badge-success { background: #28a745; color: white; }
+
+/* 引用番号スタイル（改良版） */
+.medical-article sup {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 0.75em;
+  vertical-align: super;
+  cursor: pointer;
+}
+
+.medical-article sup:hover {
+  text-decoration: underline;
+  color: #a02c2c;
+}
+
+.medical-article sup a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 参考文献 */
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.ref-list {
+  margin-top: 1rem;
+}
+
+.ref-item {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.ref-numbers {
+  display: inline-block;
+  color: #dc3545;
+  font-weight: bold;
+  margin-right: 8px;
+  padding: 2px 6px;
+  background: #fff;
+  border: 1px solid #dc3545;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.ref-content {
+  display: inline;
+  color: #333;
+}
+
+.references-details {
+  margin-top: 16px;
+}
+
+.references-details summary {
+  background: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 引用統計情報 */
+.citation-stats {
+  background: #f1f3f4;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .medical-article .drug-table {
+    font-size: 0.8rem;
+  }
+  .medical-article .drug-table th,
+  .medical-article .drug-table td {
+    padding: 8px !important;
+  }
+  
+  .important-box, .warning-box, .emergency-box {
+    margin: 12px 0;
+  }
+  
+  .references li {
+    padding-left: 35px;
+  }
+}
+</style>
+<div class="medical-article">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20250823/20250823074650.png" width="1200" height="800" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="ニキビ（尋常性ざ瘡）の治療">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260122/20260122134559.png" alt="ニキビ（尋常性ざ瘡）の治療" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">ニキビ（尋常性ざ瘡）の治療</figcaption>
+</figure>
+<h1><br /><br /></h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#causes">ニキビはなぜできるのか？</a></li>
+<li><a href="#topical-treatment">基本となる外用治療</a></li>
+<li><a href="#oral-treatment">内服治療：中等度以上の炎症に</a></li>
+<li><a href="#physical-therapy">物理療法・美容的治療</a></li>
+<li><a href="#daily-care">日常生活でできること</a></li>
+<li><a href="#conclusion">おわりに：自分に合った治療を続けることが鍵</a></li>
+</ul>
+</div>
+<!-- 本文 -->
+<h2 id="causes">ニキビはなぜできるのか？</h2>
+<p>ニキビは毛穴の出口にある皮脂腺が詰まり、そこに皮脂がたまって炎症を起こす慢性の皮膚トラブルです。思春期から成人まで幅広い世代にみられ、顔や背中など皮脂の多い部位に出やすいのが特徴です。生活習慣やホルモンの影響、遺伝的な要素、肌の清潔状態などさまざまな要因が関わります。</p>
+<div class="important-box"><strong>📋 治療の目的</strong><br />炎症を早く治して再発や瘢痕を防ぐこと。このため、急性期は炎症を抑える薬を使い、症状が落ち着いた後も維持療法を続けることが重要です。</div>
+<h2 id="topical-treatment">基本となる外用治療</h2>
+<p>まずは外用薬での治療が基本です。以下のような薬剤が用いられます。</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">薬の種類</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な製品例</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">作用と特徴／使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>過酸化ベンゾイル（BPO）</strong></td>
+<td>ベピオ®</td>
+<td>活性酸素を出してアクネ菌を抑え、角質を剥がす作用があり、<strong>耐性菌を作りにくい</strong>。軽症から重症まで使え、他の薬と併用することが多い。日本では保険適用となり、刺激感や乾燥感が副作用として現れる場合がある。</td>
+</tr>
+<tr>
+<td><strong>レチノイド（アダパレン）</strong></td>
+<td>ディフェリン®</td>
+<td>ビタミンA誘導体で、毛穴の詰まりを改善し、炎症や色素沈着を抑える。刺激感や赤みが出ることがあるため、少量から始め徐々に増やす。妊娠中は避ける。</td>
+</tr>
+<tr>
+<td><strong>外用抗菌薬（クリンダマイシンなど）</strong></td>
+<td>ダラシンTゲル®、アクアチム®など</td>
+<td>炎症性の赤ニキビに効果があるが、<strong>単剤使用は耐性菌のリスクが高い</strong>ため、BPOと併用するのが推奨される。日本ではクリンダマイシンとBPOが配合されたデュアック®が利用できるが、炎症が落ち着いた後の長期使用は推奨されない。</td>
+</tr>
+<tr>
+<td><strong>配合製剤</strong></td>
+<td>エピデュオ®（アダパレン＋BPO）、デュアック®（クリンダマイシン＋BPO）</td>
+<td>作用の異なる成分を組み合わせることで治療効果と耐性対策の両方を期待できる。炎症期に効果的だが刺激性が高い場合もある。</td>
+</tr>
+<tr>
+<td><strong>その他の外用薬</strong></td>
+<td>アゼライン酸など</td>
+<td>アゼライン酸は抗菌・抗炎症・角質調整作用があり、敏感肌や色素沈着が気になる人にも適している。日本では保険外だが美容皮膚科で扱っているクリニックもある。</td>
+</tr>
+</tbody>
+</table>
+<p>外用薬は顔全体の肌質に合わせて選び、刺激感が強ければ隔日から始めます。2〜3週間ほどで赤みや乾燥が出ることがありますが、徐々に慣れてくることが多いので、保湿や日焼け対策を併用することが大切です。</p>
+<h2 id="oral-treatment">内服治療：中等度以上の炎症に</h2>
+<p>炎症が強い場合や外用薬で効果不十分な場合は、内服薬を併用します。</p>
+<h3><strong>内服抗菌薬（テトラサイクリン系）</strong></h3>
+<p>ドキシサイクリンやミノサイクリンは抗菌作用に加えて抗炎症作用を持ち、中等度以上の炎症に用いられます。治療期間は耐性菌や副作用を考慮して通常3〜4か月以内に制限され、外用薬と併用するのが原則です。長期連用や繰り返しの服用は避け、必要に応じて漢方薬や物理療法を検討します。</p>
+<h3><strong>ホルモン療法（スピロノラクトンなど）</strong></h3>
+<p>大人の女性で口周りや顎の炎症が繰り返す場合、アンドロゲン（男性ホルモン）の影響が強いと考えられています。米国ガイドラインではスピロノラクトンが条件付きで推奨され、月経周期に伴うニキビに有効とされています。50〜100 mg/日で皮脂量を抑える効果が示されており、日本では保険外ですが女性の難治例に試みられることがあります。避妊の徹底とカリウム値のチェックが必要です。</p>
+<h3><strong>イソトレチノイン（内服レチノイド）</strong></h3>
+<p>海外では難治性ニキビに用いられる第一選択のひとつで、皮脂腺を縮小し角化異常や炎症を抑える作用を持ちます。副作用として皮膚の乾燥や肝機能異常、胎児奇形などがあるため厳格な管理が必要で、妊娠中は禁忌です。日本では保険適用外であり、自費診療として限られた施設でのみ使用されます。</p>
+<h2 id="physical-therapy">物理療法・美容的治療</h2>
+<p>薬物療法で効果が不十分な場合やニキビ跡を予防・改善したい場合には、以下のような物理的治療法が用いられます。</p>
+<ul>
+<li><strong>面皰（コメド）の圧出</strong>：毛穴に詰まった内容物を専用器具で除去します。</li>
+<li><strong>ケミカルピーリング</strong>：グリコール酸やサリチル酸で角質を剥離し、肌のターンオーバーを促す治療です。</li>
+<li><strong>レーザー・光治療</strong>：PDLやNd:YAGレーザー、IPLなど様々な波長の光を当て、炎症や赤みを軽減し、ニキビ跡の改善を期待します。</li>
+</ul>
+<div class="warning-box"><strong>⚠️ エビデンスについて</strong><br />米国ガイドラインでは物理療法のエビデンスは限定的とされ明確な推奨はありませんが、実臨床では適切に選択することで効果を得られることがあります。美容皮膚科ではクリニック独自のレーザー治療やピーリングが提供されているため、希望に合わせて相談すると良いでしょう。</div>
+<h2 id="daily-care">日常生活でできること</h2>
+<p>薬物治療に加え、普段の生活習慣もニキビの改善に大きく影響します。以下のポイントに気をつけましょう。</p>
+<ul>
+<li><strong>洗顔と保湿</strong>：洗顔は1日2回、刺激の少ない洗顔料で優しく行い、洗いすぎは逆効果です。乾燥を防ぐため保湿をしっかり行います。</li>
+<li><strong>食生活</strong>：高脂質・高糖質の食品を控え、野菜やフルーツ、良質なタンパク質を意識して摂るとよいでしょう。乳製品や高GI食品の摂取が多いとニキビが悪化する可能性があると報告されています。</li>
+<li><strong>睡眠とストレス管理</strong>：十分な睡眠とストレスの軽減はホルモンバランスを整え、皮膚の回復を助けます。</li>
+<li><strong>紫外線対策</strong>：日焼け止めをこまめに塗り、帽子や日傘を活用します。紫外線は炎症後の色素沈着を悪化させるためです。</li>
+</ul>
+<h2 id="conclusion">おわりに：自分に合った治療を続けることが鍵</h2>
+<p>ニキビの治療は、症状の種類や重症度、ライフスタイル、性別などによって最適な戦略が変わります。まずは保険診療で利用できる外用薬を適切に組み合わせ、それでも改善しない場合は内服薬や物理療法を検討します。米国の最新ガイドラインではスピロノラクトンやイソトレチノインなどのホルモン療法・全身療法も示されていますが、日本では保険適用外のものも多く、専門医による管理が必要です。</p>
+<div class="important-box"><strong>📋 最も重要なポイント</strong><br />医師と相談しながら早期から適切な治療を行い、再発や瘢痕を防ぐこと。ニキビに悩んでいる方は、自己判断で治療を中断したり薬を乱用したりせず、皮膚科専門医に相談して自分に合った治療計画を立てましょう。</div>
+</div>

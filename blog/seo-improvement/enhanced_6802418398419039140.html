@@ -1,0 +1,163 @@
+<h2>低Na血症 鑑別支援ツール</h2>
+<p>低ナトリウム血症は入院患者の約15〜30%に認められる頻度の高い電解質異常です。原因は多岐にわたり、体液量の評価・血清浸透圧・尿検査を組み合わせた系統的アプローチが欠かせません。</p>
+<p>このツールは、以下の鑑別フローに基づいて低Na血症の病型を判定します：</p>
+<ol>
+<li><strong>血清浸透圧で分類</strong> — 高張性（＞295）・等張性（275〜295）・低張性（＜275）</li>
+<li><strong>尿浸透圧で水排泄能を評価</strong> — 100 mOsm/kg未満なら希釈性（水分過剰・低溶質）</li>
+<li><strong>尿中Naと体液量で原因を絞り込み</strong> — 腎性/腎外性のNa喪失、SIADH、心不全・肝硬変など</li>
+</ol>
+<p>臨床で使う際は自己責任でお願いします。詳しい解説は以下の記事をご参照ください。</p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F06%2F151229" title="低ナトリウム血症の臨床鑑別アプローチ - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/06/151229">hinyan1016.hatenablog.com</a></cite></p>
+
+<h3>入力項目と判定</h3>
+<p>以下のフォームに検査値を入力すると、リアルタイムで鑑別結果とコメントが表示されます。血清Na・浸透圧・尿検査の3項目は必須です。</p>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  h1 { text-align: center; }
+  table { border-collapse: collapse; width: 100%; max-width: 700px; margin: 0 auto; }
+  td { padding: 6px; }
+  td.label { text-align: right; font-weight: bold; }
+  input[type='number'] { width: 120px; }
+  select { width: 150px; }
+  .highlight { background-color: #fffad6; }
+  #result, #comment { font-size: 1.1em; font-weight: bold; margin-top: 15px; }
+  #comment { white-space: pre-wrap; }
+</style>
+<table>
+<tbody>
+<tr>
+<td class="label">血清Na (mEq/L)</td>
+<td><input id="na" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">血清浸透圧 (mOsm/kg)</td>
+<td><input id="serumOsm" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">血清ブドウ糖 (mg/dL)</td>
+<td><input id="glucose" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">尿浸透圧 (mOsm/kg)</td>
+<td><input id="urineOsm" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">尿中Na (mmol/L)</td>
+<td><input id="urineNa" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">血清尿酸 (mg/dL)</td>
+<td><input id="uric" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">BUN (mg/dL)</td>
+<td><input id="bun" class="highlight" type="number" /></td>
+</tr>
+<tr>
+<td class="label">臨床的体液量評価</td>
+<td><select id="volume" class="highlight">
+<option selected="selected" value="Unknown">Unknown</option>
+<option value="Hypovolemic">Hypovolemic</option>
+<option value="Euvolemic">Euvolemic</option>
+<option value="Hypervolemic">Hypervolemic</option>
+</select></td>
+</tr>
+<tr>
+<td class="label">利尿薬使用</td>
+<td><select id="diuretic" class="highlight">
+<option selected="selected" value="No">No</option>
+<option value="Yes">Yes</option>
+</select></td>
+</tr>
+<tr>
+<td class="label">甲状腺機能低下症？</td>
+<td><select id="thyroid" class="highlight">
+<option selected="selected" value="Unknown">Unknown</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></td>
+</tr>
+<tr>
+<td class="label">副腎不全の疑い？</td>
+<td><select id="adrenal" class="highlight">
+<option selected="selected" value="Unknown">Unknown</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></td>
+</tr>
+</tbody>
+</table>
+<div id="result">判定結果: -</div>
+<div id="comment">コメント: -</div>
+<p>
+<script>
+function classify() {
+  const na = parseFloat(document.getElementById('na').value);
+  const serumOsm = parseFloat(document.getElementById('serumOsm').value);
+  const urineOsm = parseFloat(document.getElementById('urineOsm').value);
+  const urineNa = parseFloat(document.getElementById('urineNa').value);
+  const volume = document.getElementById('volume').value;
+
+  if (isNaN(na) || isNaN(serumOsm) || isNaN(urineOsm) || isNaN(urineNa)) {
+    document.getElementById('result').textContent = "判定結果: 必要データを入力してください";
+    document.getElementById('comment').textContent = "コメント: -";
+    return;
+  }
+
+  let res = "";
+  if (serumOsm > 295) {
+    res = "高張性低Na血症";
+  } else if (serumOsm >= 275) {
+    res = "等張性(偽性)低Na血症";
+  } else {
+    if (urineOsm < 100) {
+      res = "低張性:希釈性(水分過剰/低溶質)";
+    } else {
+      if (urineNa < 30) {
+        if (volume === "Hypovolemic" || volume === "Unknown") {
+          res = "低張性:体液量減少性(腎外Na喪失)";
+        } else {
+          res = "低張性:体液量増加性(心不全/肝硬変)";
+        }
+      } else {
+        if (volume === "Hypovolemic") {
+          res = "低張性:体液量減少性(腎性Na喪失/副腎不全/利尿薬)";
+        } else if (volume === "Hypervolemic") {
+          res = "低張性:体液量増加性(腎不全)";
+        } else {
+          res = "低張性:体液量正常性(SIADHなど)";
+        }
+      }
+    }
+  }
+
+  let comment = "";
+  if (res === "高張性低Na血症") {
+    comment = "まず高血糖や浸透圧物質の是正を優先してください。";
+  } else if (res === "等張性(偽性)低Na血症") {
+    comment = "高脂血症/高蛋白血症など測定誤差が原因の可能性。Na補正は不要。";
+  } else if (res === "低張性:希釈性(水分過剰/低溶質)") {
+    comment = "水分制限と栄養評価を検討。原発性多飲や低溶質摂取を鑑別。";
+  } else if (res.includes("減少性")) {
+    comment = "輸液/食塩補給で循環を是正し、原因(嘔吐/下痢/利尿薬/副腎不全)を治療。";
+  } else if (res.includes("増加性")) {
+    comment = "水分・食塩制限や利尿・RAA系抑制など基礎疾患管理を。";
+  } else if (res.includes("正常性")) {
+    comment = "甲状腺機能・副腎機能を除外し、SIADHなら水制限やV2受容体拮抗薬を検討。";
+  } else {
+    comment = "追加検査を要検討。";
+  }
+
+  document.getElementById('result').textContent = "判定結果: " + res;
+  document.getElementById('comment').textContent = "コメント: " + comment;
+}
+
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('input', classify);
+  el.addEventListener('change', classify);
+});
+</script>
+</p>
+
+<h3>注意事項</h3>
+<p>本ツールはあくまで鑑別の補助であり、最終的な診断は臨床所見・画像・追加検査を総合して行ってください。急性低Na血症（48時間以内の発症）では補正速度に注意が必要です（浸透圧性脱髄症候群のリスク）。</p>

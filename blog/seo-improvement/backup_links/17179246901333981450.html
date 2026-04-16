@@ -1,0 +1,544 @@
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="片付けが苦手な自分のためのイラスト">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218100510.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">片付けが苦手な自分のためのイラスト</figcaption>
+</figure>
+<div class="medical-article">
+<div class="medical-article">
+<p><strong><span style="font-size: 150%;"><a href="https://drive.google.com/file/d/1quN5U_aQO4maS4Gble3lLftDibTRx_yk/view?usp=sharing" target="_blank">片付けが苦手な人へスライド</a></span></strong></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== イラスト画像 ===== */
+.illustration-box {
+  margin: 1.5rem 0 !important;
+  text-align: center !important;
+}
+
+.illustration-box img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.illustration-caption {
+  font-size: 0.85rem !important;
+  color: var(--text-sub) !important;
+  margin-top: 8px !important;
+  font-style: italic !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>片付けが苦手な人が「自分を変える」ためにできること</h1>
+<p style="font-size: 1.1rem; color: var(--text-sub); margin-top: -0.5rem;">――散らかる前に止める<strong>"仕組み化"</strong>の話――</p>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">散らかる人の「3つの詰まりポイント」</a></li>
+<li><a href="#section2">散らからないための基本戦略</a></li>
+<li><a href="#section3">散らかりを止める"6つの仕組み"</a></li>
+<li><a href="#section4">散らかりタイプ別：対策とおすすめグッズ</a></li>
+<li><a href="#section5">15分の応急手順</a></li>
+<li><a href="#section6">便利グッズ紹介（買うならこの順）</a></li>
+<li><a href="#section7">7日間のミニプラン</a></li>
+<li><a href="#section8">失敗しやすいポイント</a></li>
+</ul>
+</div>
+<p>「気がつくと手がつけられないほど散らかっている」タイプの人は、<strong>意思が弱いわけでも、だらしないわけでもない</strong>ことが多いです。だいたい原因はシンプルで、片付けの"才能"ではなく、<strong>散らかりにくい"仕組み"が家に入っていないだけ</strong>です。</p>
+<!-- イラスト：意思が弱いからではない -->
+<div class="illustration-box">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218102743.png" width="1200" height="670" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p class="illustration-caption">変えるべきは「やる気」ではなく「家の作り」</p>
+</div>
+<p>この記事では、散らかりが爆発する前に止めるために、<strong>今日からできる具体策</strong>と、<strong>役立つグッズ</strong>をセットで紹介します。</p>
+<!-- セクション1 -->
+<h2 id="section1">1. 散らかる人の「3つの詰まりポイント」</h2>
+<p>片付けが苦手な人の多くは、次のどれか（または複数）で詰まります。</p>
+<!-- イラスト：3つの詰まりポイント -->
+<div class="illustration-box">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218102855.png" width="1200" height="670" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p class="illustration-caption">置き場所・戻す動作・判断の3つで詰まる</p>
+</div>
+<div class="info-box important-box"><span class="info-box-title">📋 3つの詰まりポイント</span>
+<p><strong>①"置き場所"が決まっていない</strong><br />→ 物が仮置きのまま積み上がる</p>
+<p><strong>②"戻す動作"が面倒な設計</strong><br />→ 扉を開ける・箱を引き出す・奥に入れる、が多いほど戻らない</p>
+<p><strong>③"判断が多すぎる"</strong>（捨てる？残す？分類？）<br />→ 疲れて後回し → そのまま山になる</p>
+</div>
+<p>つまり、変えるべきは「やる気」ではなく、<strong>判断と動作を減らす家の作り</strong>です。</p>
+<!-- セクション2 -->
+<h2 id="section2">2. 散らからないための基本戦略</h2>
+<!-- イラスト：基本戦略 -->
+<div class="illustration-box">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218103033.png" width="1200" height="670" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+<div class="info-box important-box"><span class="info-box-title">📋 基本戦略はこれだけ</span>
+<p style="font-size: 1.1rem; text-align: center; margin: 0.5rem 0;"><strong>「判断を減らす」×「動作を短くする」×「流れを固定する」</strong></p>
+</div>
+<!-- セクション3 -->
+<h2 id="section3">3. 散らかりを止める"6つの仕組み"</h2>
+<!-- イラスト：6つの仕組み概要 -->
+<div class="illustration-box">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218103150.png" width="1200" height="670" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+<h3>仕組み①：物の住所（置き場所）を「先に」決める</h3>
+<p>片付けは「しまう」ではなく、<strong>住所を決める作業</strong>です。</p>
+<p><strong>住所がない物</strong>は、必ず床・机・椅子に流れます。住所は<strong>1物1住所</strong>（例：ハサミはここ、しかない）にします。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ コツ</span> 住所は「正解」より<strong>「戻しやすさ」優先</strong>。よく使う物ほど、<strong>扉の中より"オープン収納"</strong>が勝ちます。</div>
+<h3>仕組み②：「仮置き場」を公認する（ただし1か所）</h3>
+<p>散らかる人ほど、仮置きは禁止すると破綻します。代わりに、<strong>仮置き場を1つだけ作って</strong>、そこに集約します。</p>
+<p>リビングの一角に<strong>「仮置きトレー」</strong>、玄関に<strong>「一時置きカゴ」</strong>など。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ルール</span> 仮置き場は<strong>"満杯になったらリセット"の合図</strong>にする</div>
+<h3>仕組み③：毎日やるのは「片付け」ではなく"リセット"5分</h3>
+<p>散らかりは、1回の大掃除で解決しません。<strong>毎日5分のリセット</strong>で、爆発を防ぐのが勝ち筋です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 おすすめは夜にこれだけ</span>
+<p>・<strong>テーブルの上</strong>をゼロに近づける<br />・<strong>床に落ちた物</strong>を拾う<br />・<strong>ゴミだけ</strong>捨てる</p>
+<p>※「完璧に戻す」じゃなくてOK。<strong>"増やさない"が目的</strong>です。</p>
+</div>
+<h3>仕組み④：「ゴミ箱」と「洗濯カゴ」を増やす</h3>
+<p>散らかりの正体の一部は、実は<strong>ゴミ＋洗濯物＋紙</strong>です。</p>
+<p><strong>ゴミ箱</strong>：部屋に1個では足りない → <strong>"捨てたい場所"に置く</strong>（机の横、洗面所、玄関など）</p>
+<p><strong>洗濯カゴ</strong>：1つだと溢れる → 可能なら<strong>「脱ぐ場所」付近にもう1つ</strong></p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218103600.png" width="609" height="431" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<h3>仕組み⑤：「書類・紙」は"入ってきた瞬間"に3択</h3>
+<p>紙は放置すると<strong>100%山になります</strong>。その場でこの3択に固定します。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 紙の3択ルール</span>
+<p><strong>① 捨てる</strong>（Throw Away）<br /><strong>② 今やる</strong>（Do Now）— 2分以内で終わるもの<br /><strong>③ 保管</strong>（Store）— ファイルへ</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218103651.png" width="632" height="521" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+<p>保管用は"とりあえず箱"ではなく、<strong>立てて入るファイル</strong>が強いです。</p>
+<h3>仕組み⑥：収納は8割で止める（満タンにしない）</h3>
+<p>収納をパンパンにすると、戻すのが面倒になり、崩壊します。</p>
+<p>引き出しは<strong>2割空き</strong>、服も<strong>2割空き</strong>、棚も<strong>詰め込まない</strong>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ ポイント</span> 「空き」はサボりではなく、<strong>戻すための余白</strong>です。</div>
+<!-- イラスト：仕組み⑤⑥ -->
+<div class="illustration-box">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251218/20251218103718.png" width="579" height="353" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p class="illustration-caption"> </p>
+</div>
+<!-- セクション4 -->
+<h2 id="section4">4. 散らかりタイプ別：対策とおすすめグッズ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">散らかりの原因</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">対策（仕組み）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">便利グッズ例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>置き場所が曖昧</strong></td>
+<td>1物1住所・ラベリング</td>
+<td>ラベルシール／ラベルプリンター、透明収納ケース</td>
+</tr>
+<tr>
+<td><strong>戻すのが面倒</strong></td>
+<td>"出し入れ1動作"にする</td>
+<td>フタなしボックス、カゴ収納、マグネット収納</td>
+</tr>
+<tr>
+<td><strong>紙が増える</strong></td>
+<td>3択ルール（捨てる/今/保管）</td>
+<td>ドキュメントスタンド、個別フォルダー、クリアファイル</td>
+</tr>
+<tr>
+<td><strong>小物が散らばる</strong></td>
+<td>"同カテゴリまとめ"</td>
+<td>引き出し仕切り、トレー、ジッパーバッグ</td>
+</tr>
+<tr>
+<td><strong>服が床に積まれる</strong></td>
+<td>洗濯導線にカゴ追加</td>
+<td>ランドリーバスケット（複数）、ハンガーラック</td>
+</tr>
+<tr>
+<td><strong>充電ケーブルが絡む</strong></td>
+<td>充電場所を固定</td>
+<td>ケーブルクリップ、結束バンド、充電ステーション</td>
+</tr>
+<tr>
+<td><strong>玄関が荒れる</strong></td>
+<td>玄関に集約ゾーン</td>
+<td>壁フック、鍵トレー、靴収納ラック</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション5 -->
+<h2 id="section5">5. まず"手がつけられない状態"から抜ける：15分の応急手順</h2>
+<p>散らかり切っているときは、片付け方を変えます。<strong>分類しない・考えない</strong>がポイントです。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 15分リセット（最短で部屋を回復させる）</span>
+<p><strong>① ゴミ袋を1つ持つ</strong>（明らかなゴミだけ入れる）<br /><strong>② 食器・飲み物をキッチンへ運ぶ</strong>（洗わなくてOK）<br /><strong>③ 洗濯物をカゴへ</strong>（畳まない）<br /><strong>④ 床だけ出す</strong>（床が見えると一気に回復する）</p>
+<p>※<strong>"収納に戻す"は後回し</strong>。まず生活を回復させます。</p>
+</div>
+<!-- セクション6 -->
+<h2 id="section6">6. 便利グッズ紹介（買うならこの順）</h2>
+<p>「グッズで解決」は有効ですが、<strong>順番を間違えると物が増えて逆効果</strong>です。おすすめの購入優先順位はこれです。</p>
+<!-- イラスト：グッズ優先度S・A --><details class="expandable" open="open">
+<summary>優先度S：生活を守る系（最優先）</summary>
+<div class="expandable-content">
+<p>・<strong>ゴミ箱</strong>（小さめを複数）<br />・<strong>洗濯カゴ</strong>（できれば2個）<br />・<strong>フタなしボックス／カゴ</strong>（仮置きやカテゴリ収納に）</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>優先度A：戻すのを簡単にする系</summary>
+<div class="expandable-content">
+<p>・<strong>ラベル</strong>（シールでも可）：住所を固定する<br />・<strong>引き出しの仕切り</strong>：小物が散らばらない<br />・<strong>ドキュメントスタンド</strong>：紙が山にならない</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>優先度B：散らかりがちな"特定ゾーン"対策</summary>
+<div class="expandable-content">
+<p>・<strong>壁フック</strong>（帽子・バッグ・上着）<br />・<strong>ケーブルクリップ／結束バンド</strong>（充電の固定）<br />・<strong>マグネット収納</strong>（冷蔵庫横・洗濯機横など）</p>
+</div>
+</details>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 迷ったら</span> まずは<strong>「フタなしボックス」「ラベル」「紙の立て収納」</strong>だけでOKです。収納棚を増やす前に、<strong>戻す動作を減らす方が効きます</strong>。</div>
+<!-- セクション7 -->
+<h2 id="section7">7. 「変わった実感」を作る：7日間のミニプラン</h2>
+<p>一気にやると反動が来るので、<strong>短期で小さく成功させます</strong>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">日</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1日目</strong></td>
+<td><strong>ゴミ箱を増やす</strong>（机横・洗面所など）</td>
+</tr>
+<tr>
+<td><strong>2日目</strong></td>
+<td><strong>洗濯カゴを最適化</strong>（脱ぐ場所に置く）</td>
+</tr>
+<tr>
+<td><strong>3日目</strong></td>
+<td><strong>仮置き場を1つ作る</strong>（カゴorトレー）</td>
+</tr>
+<tr>
+<td><strong>4日目</strong></td>
+<td><strong>紙の入口を作る</strong>（ドキュメントスタンド設置）</td>
+</tr>
+<tr>
+<td><strong>5日目</strong></td>
+<td><strong>よく使う物3つだけ</strong>住所を決めてラベル</td>
+</tr>
+<tr>
+<td><strong>6日目</strong></td>
+<td><strong>床リセット15分</strong>を1回やる</td>
+</tr>
+<tr>
+<td><strong>7日目</strong></td>
+<td><strong>夜5分リセット</strong>を"固定化"（タイマー推奨）</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション8 -->
+<h2 id="section8">8. 失敗しやすいポイント（先に潰す）</h2>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 こうすると失敗する</span>
+<p>・<strong>収納を買ってから考える</strong> → 物が増える<br />・<strong>完璧に分類しようとする</strong> → 判断疲れで止まる<br />・<strong>"捨てる"に全力投球する</strong> → 反動でリバウンドする<br />・<strong>「週末にまとめて」方式</strong> → 週末が来ないか、疲れて終わる</p>
+</div>
+<p>目標は「いつもきれい」ではなく、<strong>"散らかっても戻せる"状態</strong>です。</p>
+<!-- まとめ -->
+<h2 id="matome">最後に：片付けが苦手な人に一番効く一言</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 片付けが苦手な人の勝ち方</span>
+<p style="font-size: 1.1rem; text-align: center;">気合ではなく<strong>「散らかる前に止める仕組み」</strong>です。</p>
+</div>
+<p>もし今日ひとつだけやるなら、これがおすすめです：</p>
+<div class="info-box important-box" style="background: linear-gradient(135deg, #e8f0fa 0%, #f0f5ff 100%) !important;"><span class="info-box-title">✨ 今日やること</span>
+<p style="font-size: 1.1rem; text-align: center;"><strong>「仮置き場を1つ作る」＋「夜5分リセットを始める」</strong></p>
+<p style="text-align: center; margin-bottom: 0;">この2つだけで、<strong>"手がつけられない状態"に落ちる頻度</strong>がかなり減ります。</p>
+</div>
+</div>

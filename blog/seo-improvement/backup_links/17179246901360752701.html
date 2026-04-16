@@ -1,0 +1,461 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260304/20260304101047.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>脳神経内科医がよく遭遇する「漫然検査」10選 — その検査、本当に必要ですか？</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/fA09g864pcI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【脳神経内科】そのオーダー、本当に必要？無意識に繰り返す「漫然検査」10選と臨床推論の極意" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/fA09g864pcI">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>脳神経内科医がよく遭遇する「漫然検査」10選 — その検査、本当に必要ですか？</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">はじめに — 漫然検査とは</a></li>
+<li><a href="#section2">漫然検査10選</a></li>
+<li><a href="#section3">なぜ漫然検査が起きるのか</a></li>
+<li><a href="#section4">検査オーダー前の3つの質問</a></li>
+<li><a href="#section5">まとめ</a></li>
+</ul>
+</div>
+<!-- はじめに -->
+<h2 id="section1">はじめに — 漫然検査とは</h2>
+<p>神経内科外来では、次のような場面にしばしば遭遇します。</p>
+<p>「とりあえず<strong>MRI</strong>を撮りましょう」「念のため<strong>血液検査</strong>をしておきます」「前と同じ検査を続けましょう」</p>
+<p>検査は診断に不可欠なものですが、一方で<strong>目的が曖昧なまま繰り返される検査</strong>も少なくありません。検査には<strong>医療費</strong>、<strong>偽陽性</strong>、<strong>過剰診断</strong>、<strong>患者の不安</strong>といった問題も伴います。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 この記事の目的</span> この記事では、神経内科医が外来や入院でよく遭遇する<strong>漫然と行われがちな検査10種類</strong>を整理します。目的は<strong>検査を減らすことではなく、必要な検査を明確にすること</strong>です。</div>
+<!-- 漫然検査10選 -->
+<h2 id="section2">漫然検査10選</h2>
+<h3>① 慢性頭痛での繰り返しMRI</h3>
+<p>非常に多いケースです。たとえば<strong>片頭痛</strong>や<strong>緊張型頭痛</strong>で、すでに<strong>MRI</strong>を撮影しているにもかかわらず、「念のため」という理由で再撮影されることがあります。</p>
+<p>しかし、<strong>神経学的異常なし</strong>かつ<strong>症状が同じ</strong>場合、再検査の意義はほとんどありません。むしろ<strong>偶発的な所見</strong>や<strong>不要な不安</strong>につながる可能性があります。</p>
+<h3>② 無症候患者の定期MRIフォロー</h3>
+<p>たとえば偶然見つかった<strong>ラクナ梗塞</strong>や<strong>無症候の白質病変</strong>に対して、<strong>毎年MRI</strong>が行われていることがあります。しかし多くの場合、治療方針は変わりません。重要なのは<strong>血圧管理</strong>や<strong>動脈硬化管理</strong>であり、画像フォローが必須とは限りません。</p>
+<h3>③ 末梢神経障害での過剰検査</h3>
+<p><strong>しびれ</strong>を訴える患者で、各種<strong>ビタミン</strong>、<strong>自己抗体</strong>、<strong>腫瘍マーカー</strong>など大量の検査が行われることがあります。しかし実際には、<strong>末梢神経障害</strong>の原因として多いのは<strong>糖尿病</strong>、<strong>アルコール</strong>、<strong>薬剤</strong>、<strong>頸椎症</strong>などです。まずは<strong>病歴と神経診察</strong>が最も重要です。</p>
+<h3>④ めまいでの頭部CT</h3>
+<p>救急外来では非常に多い検査です。しかし<strong>末梢性めまい</strong>では<strong>CT</strong>の診断価値は高くありません。重要なのは<strong>眼振</strong>、<strong>頭位検査</strong>、<strong>HINTS</strong>などの<strong>身体診察</strong>です。画像検査が必要なのは、<strong>中枢性めまい疑い</strong>や<strong>神経症状あり</strong>などの場合に限られます。</p>
+<h3>⑤ 認知症での頻回MRI</h3>
+<p><strong>認知症</strong>患者で<strong>毎年MRI</strong>が行われているケースがあります。しかし<strong>アルツハイマー病</strong>や<strong>レビー小体型認知症</strong>では、画像が変わっても治療方針はほとんど変わりません。重要なのは<strong>臨床症状</strong>と<strong>生活機能</strong>の評価です。</p>
+<h3>⑥ 無症候頸動脈エコー</h3>
+<p><strong>動脈硬化</strong>評価として<strong>頸動脈エコー</strong>が頻繁に行われることがあります。しかし、<strong>症状なし</strong>かつ<strong>治療方針変更なし</strong>の場合、繰り返し検査の意義は限定的です。</p>
+<h3>⑦ てんかん患者の頻回脳波</h3>
+<p><strong>てんかん</strong>患者で、発作が安定しているにもかかわらず<strong>定期脳波</strong>が続けられていることがあります。しかし、<strong>発作なし</strong>かつ<strong>治療変更予定なし</strong>の場合、脳波結果が治療を変えることは多くありません。<strong>脳波</strong>は<strong>診断</strong>や<strong>薬剤調整</strong>の場面で有用です。</p>
+<h3>⑧ 高齢者の腫瘍マーカー</h3>
+<p>しびれやふらつきの精査で<strong>CEA</strong>、<strong>CA19-9</strong>、<strong>PSA</strong>などが測定されることがあります。しかし、<strong>スクリーニング目的での腫瘍マーカー</strong>は<strong>偽陽性</strong>が多く、診断価値は高くありません。</p>
+<h3>⑨ 不必要な全身CT</h3>
+<p>「何か隠れている病気があるかもしれない」という理由で<strong>全身CT</strong>が行われることがあります。しかし、<strong>症状や所見がない場合</strong>、診断的価値は限定的です。</p>
+<h3>⑩ ルーチン血液検査</h3>
+<p>外来で<strong>毎回同じ血液検査</strong>が行われていることがあります。もちろん必要な場合もありますが、検査の目的が<strong>明確でない場合</strong>は見直す価値があります。</p>
+<!-- まとめテーブル -->
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">No.</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">漫然検査</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">問題点</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">代わりに重要なこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>慢性頭痛</strong>の繰り返しMRI</td>
+<td>偶発所見・不要な不安</td>
+<td>神経学的異常・症状変化の確認</td>
+</tr>
+<tr>
+<td>②</td>
+<td>無症候の定期<strong>MRI</strong>フォロー</td>
+<td>治療方針が変わらない</td>
+<td><strong>血圧管理</strong>・動脈硬化管理</td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>末梢神経障害</strong>の過剰検査</td>
+<td>非効率な検査オーダー</td>
+<td><strong>病歴と神経診察</strong></td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>めまい</strong>での頭部CT</td>
+<td>末梢性めまいでは価値低い</td>
+<td><strong>眼振</strong>・頭位検査・<strong>HINTS</strong></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><strong>認知症</strong>での頻回MRI</td>
+<td>画像変化≠治療変更</td>
+<td><strong>臨床症状</strong>・生活機能評価</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>無症候<strong>頸動脈エコー</strong></td>
+<td>繰り返しの意義が限定的</td>
+<td>症状・治療方針の再評価</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td><strong>てんかん</strong>の頻回脳波</td>
+<td>安定時は治療に影響しにくい</td>
+<td>診断時・<strong>薬剤調整</strong>時に実施</td>
+</tr>
+<tr>
+<td>⑧</td>
+<td>高齢者の<strong>腫瘍マーカー</strong></td>
+<td><strong>偽陽性</strong>が多い</td>
+<td>症状に基づいた精査</td>
+</tr>
+<tr>
+<td>⑨</td>
+<td>不必要な<strong>全身CT</strong></td>
+<td>症状なしでは価値限定的</td>
+<td>臨床所見に基づいた検査</td>
+</tr>
+<tr>
+<td>⑩</td>
+<td>ルーチン<strong>血液検査</strong></td>
+<td>目的不明な反復</td>
+<td>検査目的の明確化</td>
+</tr>
+</tbody>
+</table>
+<!-- なぜ漫然検査が起きるのか -->
+<h2 id="section3">なぜ漫然検査が起きるのか</h2>
+<p><strong>漫然検査</strong>は、医師の問題だけではありません。主な理由は次の通りです。</p>
+<details class="expandable">
+<summary>漫然検査が起きる3つの背景</summary>
+<div class="expandable-content">
+<h3>防御医療</h3>
+<p>「念のため検査しておこう」という心理です。<strong>訴訟リスク</strong>への懸念から、必要以上に検査がオーダーされることがあります。</p>
+<h3>患者の安心</h3>
+<p>患者から「検査してほしい」と言われることもあります。<strong>患者の不安</strong>への対応として検査が選択されるケースです。</p>
+<h3>医療システム</h3>
+<p>定期フォローの流れで検査が<strong>ルーチン化</strong>してしまうことがあります。前回と同じオーダーがそのまま繰り返される仕組みが、漫然検査を助長する場合があります。</p>
+</div>
+</details><!-- 検査オーダー前の3つの質問 -->
+<h2 id="section4">検査オーダー前の3つの質問</h2>
+<p>検査をオーダーする前に、次の<strong>3つの質問</strong>を自問するとよいと言われています。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 検査前に自問すべき3つの質問</span>
+<p><strong>① その検査で診断が変わるか？</strong><br />変わらないなら、検査の意義は小さいかもしれません。</p>
+<p><strong>② 治療が変わるか？</strong><br />検査結果で治療が変わらない場合、必要性は低い可能性があります。</p>
+<p><strong>③ 患者に利益があるか？</strong><br /><strong>患者の利益</strong>が最も重要です。</p>
+</div>
+<!-- まとめ -->
+<h2 id="section5">まとめ</h2>
+<p>検査は医療に不可欠です。しかし重要なのは、<strong>「なぜこの検査をするのか」を明確にすること</strong>です。</p>
+<p><strong>神経内科診療</strong>では、<strong>病歴</strong>と<strong>神経診察</strong>が最も重要です。検査は<strong>診察を補助するためのもの</strong>であることを忘れてはいけません。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 Take Home Message</span>
+<p>検査を減らすことが目的ではなく、<strong>必要な検査を明確にすること</strong>が重要です。すべての検査オーダーの前に「<strong>診断が変わるか</strong>」「<strong>治療が変わるか</strong>」「<strong>患者に利益があるか</strong>」を自問しましょう。</p>
+</div>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=fA09g864pcI" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "脳神経内科医がよく遭遇する「漫然検査」10選 — その検査、本当に必要ですか？",
+  "description": "脳神経内科医がよく遭遇する「漫然検査」10選 — その検査、本当に必要ですか？",
+  "thumbnailUrl": "https://img.youtube.com/vi/fA09g864pcI/maxresdefault.jpg",
+  "uploadDate": "2026-03-04",
+  "contentUrl": "https://www.youtube.com/watch?v=fA09g864pcI",
+  "embedUrl": "https://www.youtube.com/embed/fA09g864pcI"
+}
+</script>

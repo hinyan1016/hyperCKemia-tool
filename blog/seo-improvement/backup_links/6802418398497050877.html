@@ -1,0 +1,599 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div><strong><strong>スライド</strong></strong>
+<p><a href="https://claude.ai/public/artifacts/ae80d652-52c1-4d0c-b8b8-184f81ad52e9" target="_blank">てんかん診療の進歩と展望 - モバイルプレゼンテーション | Claude | Claude</a></p>
+</div>
+<div><strong>音声概要</strong></div>
+<div>Part1
+<p><a href="https://drive.google.com/file/d/1k0vRFJAbzBmXphzih_XDKP-xidKBb2kE/view?usp=sharing" target="_blank">てんかん20年070201.mp3 - Google ドライブ</a></p>
+</div>
+<div>Part2
+<p><a href="https://drive.google.com/file/d/1nPXgYiAPG0sV3FelBW6sVWByfr71OD2C/view?usp=sharing" target="_blank">てんかん20年070202.mp3 - Google ドライブ</a></p>
+</div>
+<div><strong><strong>確認クイズ</strong></strong>
+<p><a href="https://claude.ai/public/artifacts/29fc72c0-6d6a-4f9a-b6fa-3a253d4918bc" target="_blank">てんかん診療クイズアプリ | Claude | Claude</a></p>
+<p> </p>
+<p>作者コメント</p>
+<p>この所、ブログ更新を休んでいたのですが、その間、プロンプトを再検討していました。Deep Researchしたものをそのまま記事にすると長くなりすぎます。</p>
+<p>参考文献も全部載せると100件くらいになったりもします。まとめて短時間でみたいときは、スライドや音声概要を使って頂いて、詳しくみるときに下記ページをみていただければと思います。試行錯誤は続きますが引き続きよろしくお願いします。</p>
+</div>
+</div>
+<style>
+/* はてなブログ最適化スタイル */
+.medical-article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .medical-article {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 見出しスタイル */
+.medical-article h1 {
+  font-size: 1.6rem;
+  color: #2c5aa0;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 8px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.medical-article h2 {
+  font-size: 1.3rem;
+  color: #2c5aa0;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 12px;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.medical-article h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.2rem 0 0.6rem 0;
+}
+
+.medical-article h3::before {
+  content: '▶';
+  color: #2c5aa0;
+  margin-right: 8px;
+}
+
+/* 目次 */
+.toc-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc-box li {
+  margin-bottom: 8px;
+}
+
+.toc-box a {
+  color: #2c5aa0;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 情報ボックス */
+.important-box, .warning-box, .emergency-box {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.important-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2c5aa0;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.emergency-box {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+  border: 1px solid #ddd !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.medical-article .drug-table thead th,
+.medical-article .drug-table th {
+  background-color: #2c5aa0 !important;
+  background: #2c5aa0 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(even) {
+  background: #f8f9fa !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(odd) {
+  background: white !important;
+}
+
+.medical-article table.drug-table {
+  background: transparent !important;
+}
+
+.medical-article table.drug-table * {
+  background-color: inherit;
+}
+
+/* 展開可能セクション */
+.medical-details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.medical-details summary {
+  background: #2c5aa0;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: block;
+}
+
+.medical-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.medical-details summary::after {
+  content: '▼ 展開';
+  float: right;
+  font-size: 0.9rem;
+}
+
+.medical-details[open] summary::after {
+  content: '▲ 閉じる';
+}
+
+.medical-details-content {
+  padding: 16px;
+  background: white;
+}
+
+/* バッジとラベル */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.badge-primary { background: #2c5aa0; color: white; }
+.badge-warning { background: #ffc107; color: #212529; }
+.badge-danger { background: #dc3545; color: white; }
+.badge-success { background: #28a745; color: white; }
+
+/* 引用番号 */
+sup {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* 参考文献 */
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+}
+
+.references li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.references-details {
+  margin-top: 16px;
+}
+
+.references-details summary {
+  background: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .medical-article .drug-table {
+    font-size: 0.8rem;
+  }
+  .medical-article .drug-table th,
+  .medical-article .drug-table td {
+    padding: 8px !important;
+  }
+  
+  .important-box, .warning-box, .emergency-box {
+    margin: 12px 0;
+  }
+}
+</style>
+<div class="medical-article">
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="てんかん診療進歩と展望">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20250702/20250702091454.png" width="1024" height="1024" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">てんかん診療進歩と展望</figcaption>
+</figure>
+<h1> </h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#section1">1. はじめに</a></li>
+<li><a href="#section2">2. 診断技術の飛躍的進歩</a></li>
+<li><a href="#section3">3. 薬物療法の新時代</a></li>
+<li><a href="#section4">4. 非薬物療法の拡大と低侵襲化</a></li>
+<li><a href="#section5">5. 病態理解の深化</a></li>
+<li><a href="#section6">6. これからの課題と展望</a></li>
+<li><a href="#section7">7. 結論</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- 要旨 -->
+<div class="important-box"><strong>📋 要旨</strong><br />てんかん診療は過去20年間で、発作症状の抑制を中心としたアプローチから、根底にある病因を標的とし、生活の質（QOL）の向上を目指す包括的なケアモデルへと、根本的なパラダイムシフトを遂げた。本稿では、診断技術（高磁場MRI、長時間ビデオ脳波モニタリング、遺伝子診断）、治療法（新規抗てんかん薬、定位的頭蓋内脳波、脳深部刺激療法）、そして病態理解（てんかん原性、自己免疫関連てんかん）における飛躍的な進歩を詳述する。同時に、薬剤抵抗性てんかん、先進的治療法の普及における「治療ギャップ」、移行期医療や社会的スティグマといった根深い制度的・社会的課題についても批判的に考察し、今後の展望を提示する。</div>
+<!-- 本文 -->
+<h2 id="section1">1. はじめに</h2>
+<h3>1.1. てんかんの定義と疫学</h3>
+<p>てんかんは、大脳神経細胞の過剰な電気的興奮に起因する、反復性の非誘発性発作を主徴とする慢性の脳疾患である <sup>1</sup>。しかし、現代の理解では、てんかんは単なる発作症状の繰り返しではなく、神経心理学的、認知的、心理社会的な影響を伴う脳の持続的な状態と定義される <sup>1</sup>。この定義自体の進化が、治療目標が単なる発作抑制から患者のQOL全体の向上へと拡大したことを象徴している。</p>
+<p>疫学的には、てんかんは最も頻度の高い神経疾患の一つ（コモンディジーズ）であり、日本国内の患者数は約100万人、有病率は人口の約1%に達すると推定されている <sup>1</sup>。世界保健機関（WHO）によれば、全世界で約5000万人が罹患しており、公衆衛生上の重要な課題と認識されている <sup>2</sup>。特に近年では、社会の高齢化に伴い、脳血管障害や認知症などを原因とする高齢発症てんかんが増加傾向にあり、新たな医療ニーズを生んでいる <sup>3</sup>。</p>
+<h3>1.2. この20年におけるパラダイムシフト</h3>
+<details class="medical-details" open="open">
+<summary>パラダイムシフトの詳細な解説</summary>
+<div class="medical-details-content">
+<p>この20年間で、てんかん診療の焦点は大きく転換した。かつての「発作抑制」という単一目標から、てんかんの「原因解明」、個々の患者に最適化された「個別化治療」、そしてうつ病や認知機能障害といった「併存症管理」を含む「包括的ケア」へと移行したのである <sup>6</sup>。</p>
+<p>この変革の背景には、国際抗てんかん連盟（International League Against Epilepsy: ILAE）による分類・定義の継続的な改訂がある。特に2014年に提唱された実用的臨床定義は、たとえ初回発作後であっても、脳波や画像所見から再発リスクが十分に高いと判断されれば「てんかん」と診断し、治療を開始できるという道筋を示した <sup>1</sup>。これは早期介入の理論的根拠となり、臨床実践に大きな影響を与えた。さらに2017年の発作型・てんかん分類改訂では、「部分発作」が脳の起始部位を明確にする「焦点起始発作」へと変更されるなど、より病態生理に基づいた用語が採用された <sup>1</sup>。</p>
+<p>ILAEによる定義の進化は、単なる学術的な用語の整理に留まらなかった。それは、てんかん医療全体の方向性を転換させる触媒として機能したのである。旧来の定義では、てんかんは「反復する発作」とほぼ同義であり、治療の成功は発作回数の減少によって測られていた <sup>9</sup>。しかし臨床現場では、たとえ発作が抑制されても、多くの患者がうつ、不安、認知機能の低下、そして社会的なスティグマといった深刻な問題に苦しみ続けていることが明らかであった <sup>6</sup>。これらの問題は、てんかんとは別の、二次的な課題として扱われることが多かった。</p>
+<p>ILAEの新たな定義は、これらの併存症を疾患そのものの構成要素として公式に組み込んだ。この概念的な飛躍により、てんかんは「発作性疾患」から、発作を含む多様な症状を呈する「複雑な脳疾患」へと再定義された。この再定義は、臨床現場に強力なメッセージを送った。もし認知機能障害や精神症状が疾患の一部であるならば、それらの評価と治療もてんかん診療の責務となる。これにより、神経心理士、精神科医、ソーシャルワーカーといった多職種の専門家がてんかん診療に不可欠であるという考えが正当化され、「包括的てんかんセンター」という概念と、QOLを最重要視する治療アプローチの確立へと直接的に繋がったのである <sup>1</sup>。</p>
+</div>
+</details>
+<h2 id="section2">2. 診断技術の飛躍的進歩</h2>
+<h3>2.1. 高精度化する神経画像診断</h3>
+<p>過去20年におけるてんかん診断の進歩は、神経画像技術の発展に大きく依存している。特に3テスラ（3T）に代表される高磁場MRIの普及は、診断能力を劇的に向上させた <sup>12</sup>。これにより、従来のMRIでは描出困難であった限局性皮質形成異常（Focal Cortical Dysplasia: FCD）や海馬硬化といった微細な「てんかん原性病変」の検出が可能となり、多くの薬剤抵抗性てんかん患者において、外科治療への道を開くことに貢献した <sup>13</sup>。</p>
+<details class="medical-details" open="open">
+<summary>機能画像診断の詳細</summary>
+<div class="medical-details-content">
+<p>さらに、脳の形態だけでなく機能を評価する画像診断も重要な役割を担っている。陽電子放出断層撮影（FDG-PET）は、発作が起きていない間欠期におけるてんかん焦点の糖代謝低下を捉えることができる <sup>13</sup>。一方、単一光子放出コンピュータ断層撮影（SPECT）は、発作時における焦点領域の血流増加を可視化する <sup>15</sup>。これらの機能画像は、特にMRIで明らかな異常が見られない（MRI-negative）症例において、てんかん焦点を同定するための強力な武器となる。近年では、発作時SPECT画像から発作間欠期SPECT画像を差し引き、それをMRI画像に重ね合わせるSISCOM（Subtraction Ictal SPECT Co-registered to MRI）といった統合解析技術も標準化され、焦点診断の精度をさらに高めている <sup>15</sup>。PETとMRIを同時に撮像できるPET/MRI装置の登場は、形態情報と機能情報を一度に取得することを可能にし、診断のさらなる精密化が期待されている <sup>14</sup>。</p>
+</div>
+</details>
+<h3>2.2. 長時間ビデオ脳波モニタリング（VEEG）の確立</h3>
+<p>長時間ビデオ脳波モニタリング（VEEG）は、患者の発作時の臨床症状をビデオで、脳の電気活動を脳波で、数日間にわたり同時に記録する検査である <sup>1</sup>。この20年で、VEEGはてんかん診断におけるゴールドスタンダードとしての地位を不動のものとした。</p>
+<p>VEEGの最大の貢献は、真のてんかん発作と、それに酷似した症状を呈する他の疾患とを確実に鑑別できる点にある <sup>17</sup>。特に、失神や心因性非てんかん発作（Psychogenic Non-Epileptic Seizures: PNES）は、てんかんとの鑑別が極めて重要である <sup>16</sup>。VEEGによってPNESと診断されれば、不適切な抗てんかん薬の長期投与を避け、患者を精神科的なアプローチといった本来必要な治療へと導くことができる <sup>6</sup>。また、VEEGは発作の起始部（焦点）を同定し、発作型を正確に分類するためにも不可欠であり、適切な薬剤選択や外科治療の適応を判断する上での根幹をなす検査となっている <sup>17</sup>。</p>
+<h3>2.3. 遺伝子診断の臨床応用</h3>
+<details class="medical-details" open="open">
+<summary>遺伝子診断の詳細と診断統合の意義</summary>
+<div class="medical-details-content">
+<p>ゲノム解析技術の進歩は、てんかんの病因解明に新たな光を当てた。ゲノムワイド関連解析（GWAS）といった網羅的な手法により、てんかんの発症に関与する新規の遺伝子や染色体領域が次々と同定されている <sup>21</sup>。</p>
+<p>この進歩は、特に重篤な経過をたどる小児期のてんかん性脳症の領域で、臨床的なインパクトをもたらしている。例えば、ドラベ症候群におけるSCN1A遺伝子変異や、一部の乳児てんかんにおけるKCNT1遺伝子変異など、原因遺伝子の特定が診断の確定に直結するケースが増えてきた <sup>23</sup>。遺伝子パネル検査が保険適用される疾患も徐々に増えており、診断のみならず、特定の遺伝子変異に基づいた治療法を選択する「プレシジョン・メディシン」の実現に向けた第一歩となっている <sup>23</sup>。しかし、その適用範囲はまだ限定的であり、多くの遺伝子検査は依然として研究ベースに留まっているのが現状である <sup>23</sup>。</p>
+<p>この20年間の診断における真のブレークスルーは、個別のツールの高性能化以上に、これらの多様な診断モダリティが統合され、患者一人ひとりに特有の「てんかんの指紋」を描き出すことが可能になった点にある。かつての診断プロセスは、各部門で分断されがちであった。神経内科医が脳波を、放射線科医がMRIを、それぞれ独立して評価し、それらの関連性は推論に頼る部分が大きかった。</p>
+<p>しかし現代のてんかんセンターでは、これらの情報が統合的に解釈される。VEEGで捉えられた左側頭葉起始の発作パターン <sup>16</sup>は、3T-MRIで同部位に微細な海馬硬化が確認され <sup>13</sup>、さらにFDG-PETで一致した糖代謝低下領域が示されることで <sup>14</sup>、その診断的価値が飛躍的に高まる。この複数の診断法にまたがる所見の一致（concordance）は、てんかん原性領域の場所と範囲について、かつてない高い確信度をもたらす。この高精度な「指紋」は、単に学術的な興味を満たすものではなく、臨床的に不可欠である。精密な焦点切除術や脳深部刺激療法の電極留置といった侵襲的治療に踏み切るための自信は、まさにこの多角的データの一致から生まれる。したがって、診断における最大の進歩は、孤立したデータ点を集めることから、複数の情報を統合し、一人の患者に特化した、治療に直結する脳機能ネットワークの地図を作成することへと移行した点にあると言える。</p>
+</div>
+</details>
+<h2 id="section3">3. 薬物療法の新時代</h2>
+<h3>3.1. 新規抗てんかん薬（ASM）の登場と作用機序の多様化</h3>
+<p>2000年以降、本邦では10種類を超える新規抗てんかん薬（Anti-Seizure Medications: ASM）が承認され、薬物療法の選択肢は劇的に拡大した <sup>3</sup>。これにより、てんかん治療は新たな時代を迎えた。</p>
+<p>従来の治療薬は、主に神経細胞の興奮を伝達するNa+チャネルを遮断するか、抑制系の神経伝達物質であるGABAの作用を増強するものが中心であった。これに対し、新規ASMは作用機序の多様化をもたらした。例えば、レベチラセタムはシナプス小胞タンパク2A（SV2A）という全く新しい標的に結合し、ペランパネルは興奮性神経伝達を担うグルタミン酸受容体の一つであるAMPA受容体を阻害する <sup>26</sup>。また、ラコサミドはNa+チャネルの中でも「緩徐な不活性化」と呼ばれるプロセスを促進するという、従来薬とは異なる作用を示す <sup>27</sup>。この作用機序の多様化は、単剤で効果不十分な場合に、異なるメカニズムを持つ薬剤を組み合わせる「合理的併用療法」の概念を確立させ、治療成績の向上に貢献した <sup>15</sup>。</p>
+<h3>3.2. 診療ガイドラインにおける治療戦略の変化</h3>
+<p>新規ASMの登場は、診療ガイドラインにも大きな影響を与えた。日本神経学会が監修する『てんかん診療ガイドライン2018』では、成人の焦点てんかん（旧称：部分てんかん）に対する第一選択薬として、従来のカルバマゼピンやバルプロ酸に加え、ラモトリギンやレベチラセタムといった新規ASMが同列に推奨されるようになった <sup>17</sup>。</p>
+<p>この変更は、治療の初期段階から、より個別化された薬剤選択が可能になったことを意味する。副作用のプロファイル、薬物相互作用のリスク、そして患者個々の背景（年齢、性別、妊娠の可能性、併存疾患など）を考慮して、最適な薬剤を選択できるようになったのである <sup>1</sup>。一方で、全般てんかんにおいては、広範な発作型に有効なバルプロ酸が依然として重要な位置を占めているが、新規ASMは第二選択薬や併用療法における有力な選択肢として位置づけられている <sup>17</sup>。これらのガイドラインは固定的なものではなく、新たなエビデンスを反映するために定期的に追補版が公開されており、臨床現場に最新の知見を提供し続けている <sup>25</sup>。</p>
+<h3>3.3. 特殊な患者群への配慮</h3>
+<details class="medical-details" open="open">
+<summary>妊娠可能年齢の女性、高齢者、小児への配慮</summary>
+<div class="medical-details-content">
+<p>新規ASMの多様なプロファイルは、特定の背景を持つ患者群への治療を大きく改善した。</p>
+<p><strong>妊娠可能年齢の女性:</strong> 従来、第一選択薬の一つであったバルプロ酸は、胎内での曝露が胎児の奇形リスクや、出生後の認知機能（特に言語性IQ）の低下と関連することが明らかになった <sup>1</sup>。このため、妊娠の可能性がある女性への使用は極めて慎重になり、代わりに催奇形性リスクが比較的低いとされるラモトリギンやレベチラセタムが第一選択薬として推奨されるようになった <sup>1</sup>。</p>
+<p><strong>高齢者:</strong> 高齢者のてんかんは、脳卒中などの基礎疾患を持つことが多く、複数の薬剤を服用しているため薬物相互作用のリスクが高い。また、薬物に対する感受性が高く副作用が出やすい傾向がある <sup>1</sup>。このため、薬物動態が安定しており、他剤との相互作用が少ないレベチラセタム、ラコサミド、ラモトリギンといった新規ASMが選択されやすくなっている <sup>1</sup>。</p>
+<p><strong>小児:</strong> 小児期には、成人とは異なる特有のてんかん症候群が存在する。ウエスト症候群に対するビガバトリンや、レノックス・ガストー症候群に対するルフィナミドなど、特定の難治性小児てんかん症候群に特化して開発・承認された新規ASMが登場し、これまで治療が困難であった子どもたちの治療成績向上に大きく貢献している <sup>1</sup>。</p>
+</div>
+</details>
+<table class="drug-table"><caption><strong>表1: 主要な新規抗てんかん薬（ASM）の比較</strong></caption>
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">一般名 (略号)</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">商品名</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な作用機序</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な適応</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">臨床的要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>レベチラセタム (LEV)</td>
+<td>イーケプラ</td>
+<td>シナプス小胞タンパク2A（SV2A）結合 <sup>27</sup></td>
+<td>焦点起始発作（単剤/併用）、強直間代発作（併用） <sup>26</sup></td>
+<td>忍容性良好、薬物相互作用が少ない。精神症状（易刺激性など）に注意が必要 <sup>1</sup>。</td>
+</tr>
+<tr>
+<td>ラモトリギン (LTG)</td>
+<td>ラミクタール</td>
+<td>Na+チャネル遮断 <sup>28</sup></td>
+<td>焦点起始発作（単剤/併用）、強直間代発作（単剤/併用） <sup>26</sup></td>
+<td>妊娠中のリスクが比較的低い。重篤な皮膚障害のリスクがあり、緩徐な増量が必要 <sup>1</sup>。</td>
+</tr>
+<tr>
+<td>ラコサミド (LCM)</td>
+<td>ビムパット</td>
+<td>Na+チャネルの緩徐な不活性化促進 <sup>26</sup></td>
+<td>焦点起始発作（単剤/併用） <sup>26</sup></td>
+<td>薬物相互作用が少ない。心伝導障害（PR延長）に注意が必要。</td>
+</tr>
+<tr>
+<td>ペランパネル (PER)</td>
+<td>フィコンパ</td>
+<td>AMPA型グルタミン酸受容体拮抗 <sup>26</sup></td>
+<td>焦点起始発作（併用）、強直間代発作（併用） <sup>26</sup></td>
+<td>1日1回投与が可能。精神症状（攻撃性など）が副作用として報告されている <sup>1</sup>。</td>
+</tr>
+<tr>
+<td>ゾニサミド (ZNS)</td>
+<td>エクセグラン</td>
+<td>Na+チャネルおよびT型Ca2+チャネル遮断 <sup>28</sup></td>
+<td>焦点起始発作、全般発作</td>
+<td>発汗減少や腎結石のリスクがある。認知機能への影響に注意が必要な場合がある <sup>1</sup>。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section4">4. 非薬物療法の拡大と低侵襲化</h2>
+<h3>4.1. てんかん外科治療の進歩</h3>
+<p>薬物療法がてんかん治療の根幹である一方、全ての患者が恩恵を受けられるわけではない。適切と考えられるASMを2種類以上、十分な期間・用量で試しても発作が抑制できない状態は「薬剤抵抗性てんかん（Drug-Resistant Epilepsy: DRE）」と定義され、てんかん患者全体の約30%を占める <sup>1</sup>。これらの患者にとって、てんかん外科治療は、発作の完全な消失（seizure freedom）を達成しうる唯一の根治的選択肢である <sup>4</sup>。近年の研究では、発作が長く続く前に早期に外科的介入を行うことが、長期的な発作予後を著しく改善することが示されている <sup>34</sup>。</p>
+<details class="medical-details" open="open">
+<summary>定位的頭蓋内脳波（SEEG）と治療ギャップ</summary>
+<div class="medical-details-content">
+<p>しかし、その有効性にもかかわらず、本邦におけるてんかん外科の実施件数は欧米諸国に比べて依然として少なく、手術によって恩恵を受けられるはずの多くの患者が治療機会を逸しているという深刻な「治療ギャップ」が存在する <sup>1</sup>。てんかんと診断されてから手術に至るまでの期間が平均で20年にも及ぶという報告もあり、薬剤抵抗性と判断された患者を、より早期に専門のてんかんセンターへ紹介することの重要性が繰り返し強調されている <sup>34</sup>。</p>
+<p>この状況を打開する鍵の一つが、術前評価技術の進歩である。特に「定位的頭蓋内脳波（Stereotactic Electroencephalography: SEEG）」の導入は、てんかん外科に革命をもたらした。従来、てんかん焦点を正確に同定するためには、開頭手術を伴う侵襲的な硬膜下電極留置術が必要であった。これに対しSEEGは、頭蓋骨に直径数ミリの小さな穴を開けるだけで、脳の深部にてんかん焦点が疑われる領域へ複数の電極を正確に留置する技術である <sup>36</sup>。近年では、手術支援ロボットを用いることで、より安全かつ正確、短時間での電極留置が可能となり、患者への身体的負担を大幅に軽減した <sup>38</sup>。SEEGは、脳の表面だけでなく、これまで評価が困難だった脳深部や、両側半球にまたがる広範なネットワークを三次元的に探索できるため、焦点診断の精度を格段に向上させ、外科治療の適応を大きく広げている <sup>1</sup>。2020年度にはロボット支援下での手術が保険収載され、今後のさらなる普及が期待されている <sup>38</sup>。</p>
+</div>
+</details>
+<h3>4.2. 神経刺激療法の確立と発展</h3>
+<p>焦点切除術の適応とならない、あるいは複数の焦点を持つ薬剤抵抗性てんかん患者に対しては、神経刺激療法（ニューロモデュレーション）が新たな希望となっている。</p>
+<p><strong>迷走神経刺激療法（VNS）:</strong> 左側の頸部にある迷走神経に、前胸部に植え込んだ刺激装置から定期的に電気刺激を送ることで、脳全体の興奮性を低下させ、発作を抑制する治療法である <sup>1</sup>。根治を目指す治療ではないが、発作の頻度や重症度を軽減させる緩和治療として確立されている。長期的なデータでは、患者の約60%で発作頻度が半分以下に減少する（レスポンダーレート）と報告されている <sup>41</sup>。</p>
+<p><strong>脳深部刺激療法（DBS）:</strong> 2023年7月、本邦でも薬剤抵抗性の焦点てんかんに対し、視床前核を標的とした脳深部刺激療法（DBS）が薬事承認された <sup>42</sup>。これは、パーキンソン病などの治療で20年以上の実績を持つDBSをてんかんに応用したもので、てんかんネットワークにおける重要な中継点（ハブ）である視床前核に電極を植え込み、持続的に刺激することで発作の伝播を抑制する <sup>44</sup>。海外の長期成績では、治療開始後7年で75%の発作減少率が報告されるなど、持続的な効果が期待されている <sup>45</sup>。</p>
+<table class="drug-table"><caption><strong>表2: 主要な神経刺激療法の比較（VNS vs. DBS）</strong></caption>
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">治療法</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">刺激標的</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">侵襲性</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">作用機序（推定）</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">本邦での適応</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">有効性（目安）</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な副作用・リスク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>迷走神経刺激療法 (VNS)</td>
+<td>左頸部迷走神経 <sup>1</sup></td>
+<td>低～中等度（頸部と胸部に皮下デバイス）</td>
+<td>脳幹から広範な脳領域への求心性投射を介したネットワーク修飾</td>
+<td>薬剤抵抗性てんかん（焦点・全般）</td>
+<td>3年後のレスポンダーレート約60% <sup>41</sup></td>
+<td>嗄声、咳、咽頭違和感、感染 <sup>43</sup></td>
+</tr>
+<tr>
+<td>脳深部刺激療法 (DBS)</td>
+<td>視床前核 <sup>43</sup></td>
+<td>高度（頭蓋内電極留置） <sup>43</sup></td>
+<td>てんかん伝播路のハブを抑制 <sup>44</sup></td>
+<td>薬剤抵抗性焦点てんかん <sup>43</sup></td>
+<td>5年後の発作中央値減少率 &gt;50% <sup>43</sup></td>
+<td>頭蓋内出血、感染、抑うつ、記憶障害 <sup>43</sup></td>
+</tr>
+</tbody>
+</table>
+<h2 id="section5">5. 病態理解の深化</h2>
+<h3>5.1. てんかん原性（Epileptogenesis）研究の最前線</h3>
+<p>てんかん研究の究極的な目標の一つは、てんかんの発症そのものを防ぐことである。その鍵を握るのが、「てんかん原性（Epileptogenesis）」と呼ばれるプロセスの解明だ。てんかん原性とは、外傷性脳損傷や脳卒中といった初期の脳への侵害刺激の後、正常であった脳が、自発的な発作を起こしやすい病的状態へと徐々に変化していく過程を指す <sup>46</sup>。この変化が進行する「潜伏期間」に介入し、てんかんへの移行を阻止する「抗てんかん原性治療」の開発が、世界中の研究者によって精力的に進められている <sup>32</sup>。</p>
+<p>近年の研究により、この複雑な過程には、特定の神経細胞の脱落、アストロサイトやミクログリアといったグリア細胞の活性化に伴う神経炎症、血液脳関門の破綻、イオンチャネルや神経伝達物質受容体の発現・機能異常など、無数の分子・細胞レベルのメカニズムが関与していることが明らかになってきた <sup>32</sup>。中でも、細胞の成長や代謝を司るmTOR（哺乳類ラパマイシン標的タンパク質）経路や、神経細胞の分化を制御する転写因子RESTなどが、有望な治療標的として注目を集めている <sup>46</sup>。</p>
+<h3>5.2. 自己免疫関連てんかんの発見と治療</h3>
+<details class="medical-details" open="open">
+<summary>自己免疫関連てんかんの詳細と病態理解の転換</summary>
+<div class="medical-details-content">
+<p>過去20年におけるてんかん学の最も重要な発見の一つは、間違いなく「自己免疫関連てんかん」という新たな疾患概念の確立である <sup>51</sup>。これは、てんかんの一部が、感染症や癌のように免疫システムが関与する疾患であることを示した画期的な発見であった。</p>
+<p>具体的には、LGI1（leucine-rich glioma-inactivated 1）抗体やCASPR2（contactin-associated protein-like 2）抗体など、神経細胞の表面に存在するタンパク質に対する自己抗体が産生され、これらが神経機能に異常をきたすことで、てんかん発作を引き起こす主要な原因となりうることが判明したのである <sup>52</sup>。</p>
+<p>この発見が臨床にもたらしたインパクトは計り知れない。自己免疫関連てんかんは、しばしば従来のASMに抵抗性を示す一方で、ステロイド、免疫グロブリン大量静注療法、血漿交換といった免疫系の活動を抑制する治療法に劇的に反応することが多い <sup>52</sup>。この事実は、治療戦略を根底から覆した。原因不明の成人発症、特に薬剤抵抗性の経過をたどるてんかん症例、中でも記憶障害や精神症状といった辺縁系脳炎を示唆する症状を伴う場合には、自己抗体の測定が必須の検査となり、診断と治療のパラダイムを大きく変えた <sup>15</sup>。</p>
+<p>これらの病態解明における進歩は、てんかんという疾患を「再分類」する動きを加速させている。かつて「薬剤抵抗性てんかん」と一括りにされていた患者群は、実際には異なる病因を持つ集団の集合体であった。ILAEによる分類が発作の見た目（現象論）に基づいていたのに対し、近年の進歩は、その背景にある原因（病因論）に光を当てた。例えば、同じ側頭葉てんかんという診断名であっても、一方はLGI1抗体を介した自己免疫疾患であり、もう一方はSCN1A遺伝子の変異によるチャネル病であり、また別の一方は頭部外傷後の慢性的な炎症カスケードの結果かもしれない。</p>
+<p>この「脱・一括化（De-lumping）」こそが、病態理解における最も根源的な進歩である。なぜなら、原因が異なれば、治療法も自ずと異なるからだ。自己免疫性の患者には免疫療法が、遺伝子変異の患者には将来的に遺伝子治療が、そして外傷後の患者には抗炎症作用を持つ抗てんかん原性薬が、それぞれ最適な治療となる可能性がある。これは、発作という症状を抑える対症療法から、個々の疾患メカニズムを標的とする根本治療、すなわちプレシジョン・メディシンへの移行を意味しており、将来の治療法開発の基盤となる最も重要な概念的転換なのである。</p>
+</div>
+</details>
+<h2 id="section6">6. これからの課題と展望</h2>
+<h3>6.1. 難治性てんかんの克服に向けた挑戦</h3>
+<p>目覚ましい進歩にもかかわらず、依然として患者の約30%は薬剤抵抗性であり、発作に苦しみ続けている <sup>1</sup>。これらの難治性てんかんを克服するための新規治療法の開発は、最優先課題である。基礎研究のレベルでは、特定の遺伝子異常を修復する遺伝子治療、神経保護作用や抗炎症作用が期待される骨髄間葉系幹細胞を用いた再生医療、そして脳表をラップのように優しく覆うことで脳波記録と電気刺激（ニューロモデュレーション）を可能にする薄膜電極や、てんかん焦点をピンポイントで冷却し興奮を抑える局所脳冷却デバイスなど、革新的な治療法の開発が精力的に進められている <sup>54</sup>。これらの基礎研究の成果を、いかにして安全かつ有効な臨床応用へと繋げていくかが、今後の大きな挑戦となる。</p>
+<h3>6.2. プレシジョン・メディシンの実現</h3>
+<p>「プレシジョン・メディシン（精密医療）」とは、個人の遺伝子情報、環境、ライフスタイルといった多様な情報に基づき、疾患の予防や治療を最適化するアプローチである <sup>59</sup>。てんかん領域では、この概念がすでに現実のものとなりつつある。その代表例が、抗てんかん薬カルバマゼピンに関する薬理遺伝学検査である。特定の白血球の型（HLA-A*31:01）を持つ日本人患者では、カルバマゼピンによる重篤な薬疹のリスクが著しく高いことが明らかにされた <sup>61</sup>。現在では、投与前にこの遺伝子型を検査することで、副作用のリスクが高い患者を特定し、投与を回避することが可能になっている。これは、プレシジョン・メディシンの成功例として特筆すべき成果である。今後の目標は、このようなアプローチをさらに拡大し、個々の患者の病因（原因遺伝子や自己免疫プロファイルなど）や病態メカニズムに基づいて、最も効果的で副作用の少ないASMや治療法を予測し、選択する、真の個別化治療を確立することである <sup>63</sup>。</p>
+<h3>6.3. 併存症への包括的アプローチ</h3>
+<p>てんかん患者は、発作そのものだけでなく、うつ病や不安障害といった精神症状、記憶障害や注意障害などの認知機能障害を高い確率で合併する <sup>1</sup>。これらの併存症は、しばしば発作以上に患者のQOLを深刻に低下させる要因となる <sup>10</sup>。したがって、現代のてんかん診療では、発作の抑制に留まらず、初診時からこれらの精神・認知機能の問題を評価し、必要に応じて介入を行う包括的なケアが不可欠であると認識されている <sup>6</sup>。この重要な役割を担うのが、神経内科医、精神科医、脳神経外科医、小児科医、心理士、精神保健福祉士、看護師といった多職種の専門家が連携して治療にあたる「てんかんセンター」である。全国的なてんかん診療拠点病院の整備と、その機能強化が喫緊の課題となっている <sup>1</sup>。</p>
+<h3>6.4. 社会的・制度的課題の解決</h3>
+<details class="medical-details" open="open">
+<summary>スティグマ、就労、運転免許の課題</summary>
+<div class="medical-details-content">
+<p>てんかん診療の進歩は、医学的な領域に留まってはならない。てんかんを持つ人々が直面する社会的・制度的な障壁の解決もまた、重要な課題である。</p>
+<p><strong>スティグマと偏見:</strong> てんかんに対する社会の誤解や偏見は未だに根強く、就労、結婚、人間関係といった人生の様々な局面で、当事者の障壁となっている <sup>10</sup>。医療者、当事者団体、行政が連携し、てんかんに関する正しい知識を社会に普及させるための継続的な啓発活動が不可欠である <sup>66</sup>。</p>
+<p><strong>就労と運転免許:</strong> 発作が薬物療法で十分にコントロールされているにもかかわらず、就労の機会を奪われたり、運転免許の取得や更新で不当な制約を受けたりするケースが後を絶たない <sup>11</sup>。2002年の道路交通法改正により、一定の条件下で免許取得が可能となったが、個々の患者の状態に応じた客観的かつ公正な評価基準の確立と、社会参加を妨げない制度運用が求められている <sup>68</sup>。</p>
+</div>
+</details>
+<h3>6.5. 移行期医療の構築</h3>
+<details class="medical-details" open="open">
+<summary>移行期医療の詳細な課題と今後の総括</summary>
+<div class="medical-details-content">
+<p>日本のてんかん診療における最も深刻かつ未解決な課題の一つが、「移行期医療」の欠如である。小児期に発症した患者が、思春期を経て成人期の医療体制へと円滑に移行するための支援システムが、極めて脆弱なのである <sup>65</sup>。</p>
+<p>この問題の背景には、小児科医と成人診療科医（神経内科医や精神科医）の間の連携不足、患者や家族が抱く主治医交代への強い不安、そして成人診療科医が小児期特有のてんかん症候群に不慣れであるといった、複合的な要因が存在する <sup>70</sup>。結果として、多くの若者が適切な医療から脱落したり、不十分な情報しか引き継がれないまま成人診療科を受診し、治療に混乱が生じたりする事態が頻発している。患者自身が病気について正しく理解し、自立して治療を管理できるようになるための教育（セルフマネジメント支援）と、小児科から成人科へ診療情報が途切れることなく確実に引き継がれる、体系的な移行支援プログラムの全国的な構築が急務である <sup>72</sup>。</p>
+<p>これまでの進歩を総括すると、次の20年における最大のフロンティアは、新たな発見や発明そのものよりも、むしろ実装、統合、そして公平性の確保にあることが明らかになる。我々は強力だが複雑で高コストな診断・治療ツールを手に入れた。しかし、薬剤抵抗性患者の3割という数字は変わらず <sup>33</sup>、有効な外科治療へのアクセスには20年もの遅れが生じ <sup>34</sup>、小児科から成人科への橋は架けられず <sup>70</sup>、発作がなくても就職できない現実がある <sup>66</sup>。</p>
+<p>これは、問題の核心が、もはや純粋な科学的課題から、医療システムの設計、公共政策、そして社会教育といった、より広範な領域へと移行したことを示している。我々が築き上げてきた科学的進歩という資産を、すべての患者が、適切な時期に、包括的かつ持続可能な形で享受できるようにするためのインフラが決定的に不足しているのである。今後のてんかん医療の成功は、承認される新薬の数よりも、外科治療の待機期間の短縮率、機能的な移行期支援外来の設置数、そしててんかんを持つ人々の就労率といった指標によって測られるべきであろう。研究室のベンチから、医療エコシステム全体、そして社会そのものへと、我々の視点を広げることが求められている。</p>
+</div>
+</details>
+<h2 id="section7">7. 結論</h2>
+<p>過去20年間のてんかん診療は、診断、治療、病態理解の各分野で、まさに革命的とも言える進歩を遂げた。治療の目標は、単に発作をなくすことから、てんかんの根本原因を解明し、患者一人ひとりの生活の質を最大化する包括的ケアへと深化・拡大した。高精度画像診断、新規ASM、低侵襲外科、神経刺激療法は、治療の選択肢を広げ、多くの患者に希望をもたらした。</p>
+<p>しかし、その輝かしい進歩の影で、薬剤抵抗性てんかんの克服、先進医療へのアクセスの地域間・施設間格差、小児科から成人科への断絶された医療、そして社会に根強く残る偏見といった、重く複雑な課題が依然として山積している。</p>
+<p>今後の展望は、二つの軸で進められるべきである。一つは、基礎研究をさらに推進し、てんかん原性や遺伝的背景といった根源的な病態の解明を進め、次世代の革新的な治療法を創出すること。もう一つは、これまでに得られた診断・治療の成果を、すべての患者が必要な時に、公平に享受できるような、統合的で継ぎ目のない医療提供体制と、それを支える社会制度を構築することである。科学的進歩と社会的・制度的成熟が両輪となって初めて、てんかんを持つ人々が真に制約なく、その人らしい人生を送れる社会が実現するだろう。</p>
+<!-- 参考文献 -->
+<div id="references" class="references">
+<h3>参考文献</h3>
+<details class="medical-details references-details" open="open">
+<summary>参考文献を表示（全100件）</summary>
+<div class="medical-details-content">
+<ol>
+<li>日本医科大学医学会. てんかん医療の現状と未来. 日本医科大学医学会雑誌. 2022;18(4).</li>
+<li>World Health Organization. Epilepsy. 2023.</li>
+<li>赤松直樹. てんかん診療の進歩と課題. BRAIN and NERVE. 2024;76(8):883-891.</li>
+<li>Kobe University. Feature: Leading the way in epilepsy treatment and care. 2022.</li>
+<li>メディカルノート. 認知症と間違えやすい高齢発症てんかん. 2021.</li>
+<li>兼本浩祐. てんかんと精神症状. BRAIN and NERVE. 2018;70(9):987-995.</li>
+<li>全国てんかんセンター協議会. てんかんセンターとは？</li>
+<li>International League Against Epilepsy. Updated Classification of Epileptic Seizures 2025. 2024.</li>
+<li>Panayiotopoulos CP. The Epilepsies: Seizures, Syndromes and Management. Bladon Medical Publishing; 2005.</li>
+<li>日本自律神経学会. 若年性ミオクロニーてんかん患者の社会適応と精神医学的併存症. 2022;45:200-209.</li>
+<li>精神神経学雑誌. てんかん患者の社会生活と福祉サービス. 2012;114(8):967-973.</li>
+<li>脳と発達. 2011;43(1):28-33.</li>
+<li>小児てんかんの画像評価. 小児科臨床. 2019;72(8):1103-1109.</li>
+<li>ヒロクリニック. PET検査とは？がん以外の疾患にも応用される最新技術を解説.</li>
+<li>Japan Epilepsy Society. White Paper on Epilepsy - Action Plan for Care and Research. 2016.</li>
+<li>神戸大学医学部附属病院 脳神経内科. 長時間ビデオ脳波モニタリング検査がはじまりました.</li>
+<li>エキスパートナース. 『てんかん診療ガイドライン2018』の変更点. 2019.</li>
+<li>日本医事新報社. てんかん診療ガイドライン2018の改訂ポイント. 2018.</li>
+<li>国立精神・神経医療研究センター. 長時間ビデオ脳波モニタリング（VEEG）. 2023.</li>
+<li>大分県立病院. 長時間ビデオ脳波モニタリングのすすめ. 2019.</li>
+<li>日本医療研究開発機構. 日本人てんかん患者のゲノム解析により新規の疾患感受性領域を発見. 2021.</li>
+<li>国立精神・神経医療研究センター. LEATにおけるMRI画像と遺伝子型の関連を解明. 2023.</li>
+<li>国立精神・神経医療研究センター. てんかんと遺伝. 2024.</li>
+<li>ヒロクリニックNIPT. 9q34.11欠失症候群（STXBP1脳症）.</li>
+<li>ケアネット. てんかん診療ガイドラインに薬物開始時期が追加. 2018.</li>
+<li>ファルマシスタ. 新世代の抗てんかん薬一覧と作用機序・効能効果の違い. 2023.</li>
+<li>天王寺駅前こいでクリニック. てんかんの薬物療法.</li>
+<li>脳科学辞典. 抗てんかん薬. 2018.</li>
+<li>m3.com. てんかん診療ガイドライン改訂のポイント. 2018.</li>
+<li>UCB. てんかん診療ガイドライン2018.</li>
+<li>日本神経学会. てんかん診療ガイドライン2018追補版2022. 2023.</li>
+<li>National Institute of Neurological Disorders and Stroke. Curing the Epilepsies: The Promise of Research. 2021.</li>
+<li>Lattanzi S, Trinka E, Zaccara G, et al. The Management of Drug-Resistant Epilepsy: A Practical Approach. Front Neurol. 2021;12:688809.</li>
+<li><a href="https://doi.org/10.1212/WNL.0000000000001720">Jehi L, Jette N, Kwon CS, et al. Timing of referral to an epilepsy center: A systematic review. Neurology. 2015;85(1):80-8.</a></li>
+<li>Thong-On P, Jette N, Sauro K, et al. The use of machine learning in epilepsy management. Epilepsia. 2021;62(11):2543-2555.</li>
+<li>広島大学病院. てんかん外科治療における脳深部電極（SEEG）を用いた術前検査を開始. 2022.</li>
+<li>愛知県医師会. 薬剤抵抗性てんかんに対する外科治療の新展開. 2022.</li>
+<li>臨床神経学. 2020;60(11):795-802.</li>
+<li>国立精神・神経医療研究センター. てんかん外科治療. 2022.</li>
+<li>臨床神経学. 2021;61(1):1-8.</li>
+<li>厚生労働省. 医療ニーズの高い医療機器等の早期導入に関する検討会. 2024.</li>
+<li>日本定位・機能神経外科学会. JSSFN Newsletter Vol.26. 2023.</li>
+<li>山梨大学医学部附属病院. 山梨てんかん市民セミナー. 2024.</li>
+<li>国立精神・神経医療研究センター. 脳深部刺激療法（DBS）について. 2023.</li>
+<li>国立精神・神経医療研究センター. てんかんの脳深部刺激療法（DBS）. 2023.</li>
+<li><a href="https://doi.org/10.1038/nrn3482">Goldberg EM, Coulter DA. Mechanisms of epileptogenesis: a convergence on neural circuit dysfunction. Nat Rev Neurosci. 2013;14(5):337-49.</a></li>
+<li><a href="https://doi.org/10.1016/S1474-4422(10)70310-0">Pitkänen A, Lukasiuk K. Mechanisms of epileptogenesis and potential treatment targets. Lancet Neurol. 2011;10(2):173-86.</a></li>
+<li>Kim JE, Choi J. Epileptogenesis: A Spatiotemporal Understanding. Encephalitis. 2024;4(2):47-54.</li>
+<li>Mir MH, Seh BA, Zahra S, Legradi A. The Crucial Interplay Between the Lungs, Brain, and the Heart to Understand Epilepsy Linked SUDEP: A Literature Review. Preprints. 2025.</li>
+<li><a href="https://doi.org/10.3389/fneur.2022.942365">Avoli M, D'Antuono M, Louvel J, et al. Novel Mechanisms of Epileptogenesis and Its Inspired Pharmaceutical Treatments for Epilepsy. Front Neurol. 2022;13:942365.</a></li>
+<li>京都大学大学院医学研究科 てんかん・運動異常生理学講座. 研究内容.</li>
+<li>Kanemoto K, et al. Recent advances in the understanding and management of epilepsy. J Clin Neurosci. 2022;30:845-851.</li>
+<li>Mayo Clinic. Autoimmune epilepsy. 2024.</li>
+<li>横浜市立大学. ラップのように脳を優しく密に覆える薄膜電極を開発. 2023.</li>
+<li>科学研究費助成事業. 難治性てんかんの局所脳温制御による治療とその応用. 2019.</li>
+<li>量子科学技術研究開発機構. 「てんかん」の発生を時間的・空間的にピンポイントで抑える画期的な治療法を開発. 2023.</li>
+<li>厚生労働科学研究費補助金. 難治性てんかんに対する非切除的治療法の開発. 2012.</li>
+<li>KAKEN. 骨髄間葉系幹細胞移植を用いた難治性てんかんに対する新規治療法の開発. 2022.</li>
+<li>江戸川プラスクリニック. プレシジョンメディシン.</li>
+<li>セントラルメディカルクラブ. 個別化医療とプレシジョンメディシンの違いとは.</li>
+<li>日本医療研究開発機構. てんかん治療薬の副作用を「遺伝子型検査」で予防. 2018.</li>
+<li>理化学研究所. てんかん治療薬遺伝子型検査の臨床的有用性を実証. 2018.</li>
+<li><a href="https://doi.org/10.1016/j.yebeh.2021.107920">Pennell PB, Meador KJ. Precision medicine for women with epilepsy. Epilepsy Behav. 2021;118:107920.</a></li>
+<li>国立精神・神経医療研究センター. 令和3年度 成果報告書. 2022.</li>
+<li>夏井 萌. 小児科医が考えるてんかんの移行期医療の課題と展望. Note. 2024.</li>
+<li>日本社会精神医学会. てんかんをもつ人の生活上の困難と課題. 2012;21(2):153-157.</li>
+<li>日本てんかん協会. 道路交通法改正に関する要望書. 2013.</li>
+<li>ノーマライゼーション 障害者の福祉. 障害者にかかわる欠格条項の問題点. 2000.</li>
+<li>QLifePro. てんかんの移行期医療. 2018.</li>
+<li>国立精神・神経医療研究センター. 思春期てんかんと移行期医療. 2021.</li>
+<li>UCB. てんかん移行期医療の実態調査.</li>
+<li>かけはしメモリークリニック. てんかんの移行期医療.</li>
+<li><a href="https://doi.org/10.1212/WNL.0000000000003509">Fiest KM, Sauro KM, Wiebe S, Patten SB, Kwon CS, Dykeman J, et al. Prevalence and incidence of epilepsy: A systematic review and meta-analysis of international studies. Neurology. 2017;88(3):296-303.</a></li>
+<li>彩花サトコ. 【読書レビュー】スピノザの診察室 夏川草介著ー安心を届ける医療とは？ Note. 2024.</li>
+<li>日本小児科学会. 2025年度 小児科領域講習 e-learning. 2024.</li>
+<li>富士山マガジンサービス. CLINICAL NEUROSCIENCE（クリニカルニューロサイエンス） 39巻11号. 2021.</li>
+<li>Mindsガイドラインライブラリ. てんかん診療ガイドライン2018. 2018.</li>
+<li>日本てんかん学会. てんかんのガイドライン.</li>
+<li>日本神経学会. てんかん治療ガイドライン2010追補版（2012年度）. 2012.</li>
+<li>医学書院. てんかん診療ガイドライン2018.</li>
+<li>日本神経学会. てんかん診療ガイドライン2018.</li>
+<li>日本神経学会. てんかん診療ガイドライン2018.</li>
+<li>日本てんかん学会. お問い合わせ.</li>
+<li><a href="https://doi.org/10.1111/j.1528-1167.2011.03024.x">Löscher W, Schmidt D. Modern antiepileptic drug development has failed to deliver: ways out of the current dilemma. Epilepsia. 2011;52(4):657-78.</a></li>
+<li>Wang W, Wu J, Wang T, et al. Epilepsy care in China: A review of the evidence. Epilepsia. 2021;62 Suppl 2:14-23.</li>
+<li>Epilepsy Foundation. The Medical History.</li>
+<li>Epilepsy Society. History of Epilepsy Society.</li>
+<li><a href="https://doi.org/10.1016/j.yebeh.2013.11.001">Hermann BP, Loring DW. The history of neuropsychology and epilepsy. Epilepsy Behav. 2014;31:1-8.</a></li>
+<li>厚生労働科学研究成果データベース. FDG-PETとMRIを用いた難治性てんかんの焦点検索に関する研究. 2010.</li>
+<li>厚生労働省. 先進医療会議 議事次第. 2012.</li>
+<li>厚生労働省. 指定難病の検討について. 2023.</li>
+<li>大阪大学医学部附属病院 てんかんセンター. 長時間ビデオ脳波とは.</li>
+<li>東北大学病院 生理検査センター. 長時間ビデオ脳波モニタリング検査.</li>
+<li>日本小児神経学会. 抗てんかん薬について.</li>
+<li>国立精神・神経医療研究センター. 新規抗てんかん薬・レスキュー薬臨床治験実施状況. 2023.</li>
+<li>日本神経学会. てんかん診療ガイドライン2018追補版. 2021.</li>
+<li>日本てんかん学会. てんかん症候群の診断と分類. 2021.</li>
+<li>厚生労働省. 指定難病検討委員会資料. 2016.</li>
+<li>厚生労働科学研究費補助金 分担研究報告書. 進行性ミオクローヌスてんかん症候群および自己免疫性てんかんのレジストリ構築. 2020.</li>
+<li>Japan Epilepsy Society. To all individuals with epilepsy and their families.</li>
+</ol>
+</div>
+</details></div>
+</div>

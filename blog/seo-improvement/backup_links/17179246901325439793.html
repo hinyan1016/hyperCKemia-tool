@@ -1,0 +1,222 @@
+<div class="medical-article">
+<div class="medical-article">
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="今回の内容を1枚の図にしました。">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251126/20251126101228.png" width="1200" height="655" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">今回の内容を1枚の図にしました。</figcaption>
+</figure>
+</div>
+</div>
+<style>
+/* 基本スタイル */
+.medical-article { max-width: 100%; padding: 16px; line-height: 1.7; color: #333333; }
+h1 { font-size: 1.6rem; color: #2c5aa0; border-bottom: 2px solid #2c5aa0; padding-bottom: 8px; margin-top: 0; }
+h2 { font-size: 1.3rem; color: #2c5aa0; border-left: 4px solid #2c5aa0; padding-left: 12px; margin-top: 1.5rem; }
+h3 { font-size: 1.1rem; color: #444444; margin-top: 1rem; }
+h3::before { content: '▶'; color: #2c5aa0; margin-right: 8px; }
+strong { font-weight: bold; color: #2c5aa0; }
+sup { color: #dc3545; font-weight: bold; font-size: 0.75em; }
+
+/* 情報ボックス */
+.toc-box { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; padding: 16px; margin: 16px 0; }
+.toc-box h3 { margin-top: 0; }
+.toc-box h3::before { content: none; }
+.toc-box ul { margin-bottom: 0; padding-left: 20px; }
+.toc-box li { margin-bottom: 6px; }
+.important-box { background: #e8f4fd; border-left: 4px solid #2c5aa0; border-radius: 4px; padding: 12px 16px; margin: 16px 0; }
+.warning-box { background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; padding: 12px 16px; margin: 16px 0; }
+.emergency-box { background: #f8d7da; border-left: 4px solid #dc3545; border-radius: 4px; padding: 12px 16px; margin: 16px 0; }
+.tip-box { background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px; padding: 12px 16px; margin: 16px 0; }
+
+/* テーブル - 強化版 */
+.drug-table { width: 100%; border-collapse: collapse; margin: 16px 0; border: 1px solid #dddddd; font-size: 0.95rem; }
+.drug-table thead th { 
+  background-color: #2c5aa0 !important; 
+  color: #ffffff !important; 
+  font-weight: bold !important;
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+}
+.drug-table th { 
+  background-color: #2c5aa0 !important; 
+  color: #ffffff !important; 
+  font-weight: bold;
+  border: 1px solid #dddddd;
+  padding: 12px;
+}
+.drug-table tbody td { 
+  border: 1px solid #dddddd; 
+  padding: 12px;
+  background-color: #ffffff;
+}
+.drug-table tbody tr:nth-child(even) td { 
+  background-color: #f8f9fa !important;
+}
+.drug-table tbody tr:nth-child(odd) td { 
+  background-color: #ffffff !important;
+}
+
+/* 展開セクション */
+.medical-details { background: #f8f9fa; margin: 16px 0; border: 1px solid #dee2e6; border-radius: 4px; }
+.medical-details summary { 
+  background-color: #2c5aa0; 
+  color: #ffffff; 
+  padding: 12px; 
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+.medical-details summary:hover { background-color: #234a80; }
+.medical-details-content { padding: 16px; background-color: #ffffff; border-radius: 0 0 4px 4px; }
+
+/* グループセクション */
+.group-section { margin: 16px 0; padding: 16px; border-radius: 4px; }
+.group-a { background: #fce4ec; border-left: 4px solid #c62828; }
+.group-b { background: #fff8e1; border-left: 4px solid #f57f17; }
+.group-c { background: #e3f2fd; border-left: 4px solid #1565c0; }
+.group-title { font-weight: bold; color: #333333; margin-bottom: 8px; font-size: 1.05rem; }
+.group-reason { font-style: italic; color: #555555; margin-bottom: 12px; }
+</style>
+<div class="medical-article">
+<h1>【完全攻略】t-PA（アルテプラーゼ）適応・禁忌の「ロジカルな覚え方」</h1>
+<p><strong>t-PA</strong>の適応判断は、単なる暗記ではなく<strong>「出血リスク vs 治療ベネフィット」の天秤</strong>です。丸暗記しようとせず、以下のイメージを持って整理しましょう。</p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="脳卒中ガイドラインの禁忌と慎重投与">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251126/20251126100835.png" width="737" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">脳卒中ガイドラインの禁忌と慎重投与</figcaption>
+</figure>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#section1">1. 大原則（適応の基本）</a></li>
+<li><a href="#section2">2. 禁忌（絶対にやってはいけない）の覚え方</a></li>
+<li><a href="#section3">3. 慎重投与（リスクはあるが、医師の判断でGo）</a></li>
+<li><a href="#section4">4. 現場での「思考フロー」まとめ</a></li>
+<li><a href="#section5">まとめ：数字の暗記リスト</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">1. 大原則（適応の基本）</h2>
+<p>まずは「スタートライン」に立てるかどうかです。ここは数字が命です。</p>
+<div class="important-box"><strong>📋 適応条件（3つの基本）</strong><br /><strong>病名</strong>：<strong>虚血性脳血管障害（脳梗塞）</strong>であること。<strong>CT/MRI</strong>で出血がないことが絶対条件。<br /><strong>時間</strong>：発症から<strong>4.5時間以内</strong>に投与開始可能であること。<br /><strong>年齢</strong>：特になし（以前はありましたが、現在は高齢者も慎重投与で可）。</div>
+<div class="tip-box"><strong>💡 覚え方</strong><br />「仕事（<strong>4.5</strong>）の時間だ、<strong>t-PA</strong>！」</div>
+<!-- セクション2 -->
+<h2 id="section2">2. 禁忌（絶対にやってはいけない）の覚え方</h2>
+<p>ここが最重要かつ最難関です。項目が多いので、<strong>3つの「ダメな理由」</strong>に分類して覚えます。</p>
+<!-- グループA -->
+<div class="group-section group-a">
+<div class="group-title">🧠 グループA：頭がすでに「破綻」している</div>
+<div class="group-reason">理由：脳出血を助長、あるいは再出血させるから。</div>
+<h3>出血の所見/既往</h3>
+<ul>
+<li><strong>頭蓋内出血（クモ膜下出血含む）</strong>の既往がある。</li>
+<li>画像で出血がある、または広範な早期虚血所見がある。</li>
+</ul>
+<h3>脳血管の異常</h3>
+<ul>
+<li><strong>脳動脈瘤</strong>、<strong>動静脈奇形</strong>、<strong>もやもや病</strong>などがある（破れやすい）。</li>
+</ul>
+<h3>最近のダメージ</h3>
+<ul>
+<li><strong>1ヶ月以内</strong>の<strong>脳梗塞</strong>既往。</li>
+<li><strong>3ヶ月以内</strong>の重篤な頭部外傷・脳脊髄の手術。</li>
+</ul>
+<div class="tip-box"><strong>💡 覚え方のコツ</strong><br />「脳の配管が壊れている、または壊れかけているなら、圧をかけて流してはいけない」</div>
+</div>
+<!-- グループB -->
+<div class="group-section group-b">
+<div class="group-title">🩸 グループB：全身の血が「止まらない」状態</div>
+<div class="group-reason">理由：脳だけでなく、全身どこからでも出血して止まらなくなるから。</div>
+<h3>血圧が高すぎる</h3>
+<ul>
+<li><strong>収縮期 &gt; 185 mmHg</strong> または <strong>拡張期 &gt; 110 mmHg</strong></li>
+<li><strong>降圧薬</strong>を用いても下がらない場合は禁忌。</li>
+</ul>
+<h3>血が固まらない（凝固異常）</h3>
+<ul>
+<li><strong>血小板 10万/mm³ 以下</strong></li>
+<li><strong>PT-INR &gt; 1.7</strong>（<strong>ワーファリン</strong>服用中など）</li>
+<li><strong>DOAC（直接阻害型経口抗凝固薬）</strong>を服用中（最終内服から4時間〜48時間以内の規定あり）。</li>
+</ul>
+<h3>出血源がある</h3>
+<ul>
+<li><strong>消化管出血</strong>、<strong>尿路出血</strong>など（<strong>21日以内</strong>）。</li>
+<li>大手術や外傷（<strong>14日以内</strong>）。</li>
+</ul>
+<div class="emergency-box"><strong>🚨 必須暗記数字</strong><br /><strong>「185/110、10万、1.7」</strong>という3つの数字だけは呪文のように唱えて暗記しましょう。</div>
+</div>
+<!-- グループC -->
+<div class="group-section group-c">
+<div class="group-title">❓ グループC：そもそも「脳梗塞ではない」可能性</div>
+<div class="group-reason">理由：別の病気（Stroke Mimics）にt-PAを使っても無意味、あるいは危険だから。</div>
+<h3>血糖値の異常</h3>
+<ul>
+<li><strong>血糖値 &lt; 50 mg/dL</strong></li>
+<li><strong>低血糖発作</strong>は<strong>脳梗塞</strong>と似た症状（片麻痺など）を出すため、まずはブドウ糖投与で除外する必要があります。</li>
+</ul>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="低血糖はまず補正">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251126/20251126100653.png" width="751" height="498" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">低血糖はまず補正</figcaption>
+</figure>
+<h3>けいれん発作</h3>
+<ul>
+<li>発症時にけいれんがあった（<strong>てんかん発作後の麻痺</strong>の可能性）。</li>
+</ul>
+</div>
+<!-- セクション3 -->
+<h2 id="section3">3. 慎重投与（リスクはあるが、医師の判断でGo）</h2>
+<p>ここは「注意信号（黄色）」です。ベネフィットがリスクを上回るなら投与します。</p>
+<div class="warning-box"><strong>⚠️ 慎重投与の対象</strong><br /><strong>高齢者</strong>：<strong>75歳以上</strong>（以前は禁忌に近い扱いでしたが、現在は慎重投与）。<br /><strong>重症度</strong>：<strong>NIHSSスコア</strong>が高い（重症＝出血リスク高）または低すぎる（軽症＝薬のリスクを負う必要がないかも）。目安：<strong>NIHSS 26以上</strong>はかなり慎重。<br /><strong>血糖値が高すぎる</strong>：<strong>血糖値 &gt; 400 mg/dL</strong>（出血リスク増大）。<br /><strong>大きな動脈瘤</strong>：未破裂動脈瘤があるが小さい場合など。</div>
+<!-- セクション4 -->
+<h2 id="section4">4. 現場での「思考フロー」まとめ</h2>
+<p>以下の順序でチェックすると抜け漏れが防げます。</p>
+<details class="medical-details" open="open">
+<summary>📋 臨床チェックフロー（クリックして展開）</summary>
+<div class="medical-details-content">
+<h3>Timing（時間）</h3>
+<p><strong>4.5時間以内</strong>か？（搬送時間含めギリギリではないか？）</p>
+<h3>Image（画像）</h3>
+<p>出血はないか？ 広範囲の早期虚血はないか？</p>
+<h3>History（既往）</h3>
+<p>「最近の手術」「<strong>脳卒中</strong>の既往」「抗凝固薬」はないか？</p>
+<h3>Vitals &amp; Lab（バイタル・採血）</h3>
+<ul>
+<li><strong>BP &gt; 185/110</strong> はないか？</li>
+<li><strong>BS &lt; 50</strong> はないか？</li>
+<li><strong>Plt &lt; 10万</strong>、<strong>INR &gt; 1.7</strong> はないか？</li>
+</ul>
+</div>
+</details><!-- セクション5 -->
+<h2 id="section5">まとめ：数字の暗記リスト</h2>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">項目</th>
+<th style="background-color: #2c5aa0 !important; color: #ffffff !important;">基準値（これを超えたら/下回ったらOUT）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>時間</strong></td>
+<td><strong>4.5 時間</strong> を超える</td>
+</tr>
+<tr>
+<td><strong>血圧</strong></td>
+<td><strong>185 / 110 mmHg</strong> を超える</td>
+</tr>
+<tr>
+<td><strong>血糖</strong></td>
+<td><strong>50 mg/dL</strong> 未満</td>
+</tr>
+<tr>
+<td><strong>血小板</strong></td>
+<td><strong>10万 /mm³</strong> 以下</td>
+</tr>
+<tr>
+<td><strong>INR</strong></td>
+<td><strong>1.7</strong> を超える</td>
+</tr>
+</tbody>
+</table>
+<div class="important-box"><strong>📋 最終まとめ</strong><br />この5つの数字と、<strong>「脳が壊れているか」「血が止まらないか」</strong>という2つの病態イメージを持っておけば、臨床現場でも焦らずにチェックリストを確認できます。</div>
+</div>

@@ -1,0 +1,756 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>眼瞼けいれん（ブレファロスパズム）の実践的総説</strong></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/_JLB9LfaFHE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="眼瞼けいれん（Blepharospasm）診断のコツからボトックス注射の実践プロトコルまで〜" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/_JLB9LfaFHE">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== フローチャート ===== */
+.flowchart-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+  text-align: center !important;
+}
+
+.flow-step {
+  display: inline-block !important;
+  background: var(--primary-light) !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  margin: 6px 4px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+}
+
+.flow-arrow {
+  display: block !important;
+  font-size: 1.3rem !important;
+  color: var(--primary) !important;
+  margin: 4px 0 !important;
+}
+
+.flow-decision {
+  display: inline-block !important;
+  background: var(--warning-bg) !important;
+  border: 2px solid var(--warning-border) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  margin: 6px 4px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: #b8860b !important;
+}
+
+.flow-alert {
+  display: inline-block !important;
+  background: var(--emergency-bg) !important;
+  border: 2px solid var(--emergency-border) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  margin: 6px 4px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: var(--accent) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>眼瞼けいれん（ブレファロスパズム）の実践的総説</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#summary">エグゼクティブサマリー</a></li>
+<li><a href="#epidemiology">疫学</a></li>
+<li><a href="#pathophysiology">病態生理</a></li>
+<li><a href="#classification">分類と鑑別診断</a></li>
+<li><a href="#diagnosis">診断のための問診・診察・検査</a></li>
+<li><a href="#flowchart">診断・治療フローチャート</a></li>
+<li><a href="#treatment">治療</a></li>
+<li><a href="#bont">ボツリヌス毒素注射</a></li>
+<li><a href="#oral">内服薬</a></li>
+<li><a href="#surgery">外科的治療とDBS</a></li>
+<li><a href="#followup">フォローアップと再評価</a></li>
+<li><a href="#refractory">難治例のチェックリスト</a></li>
+<li><a href="#future">将来の研究課題</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<!-- エグゼクティブサマリー -->
+<h2 id="summary">エグゼクティブサマリー</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 臨床上の要点</span>
+<p><strong>眼瞼けいれん</strong>は「まぶたを開け続けられない」「まぶしい」「瞬きが増えた」などの訴えで始まり、<strong>診察室では症状が軽く見えて見逃されやすい</strong>のが実務上の最大の落とし穴である<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup>。</p>
+</div>
+<p><strong>第一選択治療はボツリヌス毒素（BoNT-A）注射</strong>であり、国内ガイドラインでも推奨されている。注射部位・深さ・濃度設計が治療成績と副作用（<strong>眼瞼下垂</strong>、<strong>兎眼</strong>など）を左右する<sup>[1]</sup><sup>[2]</sup><sup>[3]</sup>。</p>
+<p>診断は<strong>臨床診断が基本</strong>で、専用問診（<strong>眼瞼ジストニア調査票</strong>等）＋「<strong>軽瞬/速瞬/強瞬</strong>」などの瞬目テスト、診察室での表情・瞬目の観察が実用的である<sup>[1]</sup><sup>[2]</sup>。</p>
+<p>鑑別では<strong>ドライアイ/眼表面刺激による反射性瞬目増多</strong>、<strong>薬剤誘発</strong>（向精神薬・ベンゾジアゼピン関連など）、<strong>片側顔面痙攣</strong>、<strong>開瞼失行</strong>（パーキンソン病/PSPなど）を必ず意識する<sup>[4]</sup><sup>[5]</sup><sup>[6]</sup>。</p>
+<p><strong>羞明</strong>が強い患者には遮光（とくに<strong>FL-41色レンズ</strong>）が低侵襲で、ランダム化クロスオーバー試験で主観・客観双方の改善が示されている<sup>[13]</sup>。</p>
+<p>難治例では「<strong>診断再確認→眼表面/薬剤性の是正→注射戦略（瞼板前部優先・部位追加・濃度調整）→手術（眼輪筋切除など）→（Meigeを含む）DBS検討</strong>」の順で再評価するのが現実的である<sup>[1]</sup><sup>[2]</sup>。</p>
+<!-- 疫学 -->
+<h2 id="epidemiology">疫学</h2>
+<p>発症は<strong>中高年（50〜60歳代が多い）</strong>に多く、<strong>女性優位（概ね男性：女性＝1：2前後）</strong>が繰り返し報告されている<sup>[5]</sup><sup>[6]</sup>。</p>
+<p><strong>有病率</strong>は地域差が大きく、欧州では概ね「数十/100万人」、報告レンジとして<strong>16〜133/100万人</strong>が引用されている<sup>[5]</sup><sup>[6]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 臨床上の注意</span>
+<p>重症化すると<strong>運転や歩行など日常動作が困難</strong>になりうる一方、<strong>診察室では症状が減り過小評価されやすい</strong>（屋外・光で増悪）点が重要である<sup>[5]</sup>。</p>
+</div>
+<!-- 病態生理 -->
+<h2 id="pathophysiology">病態生理</h2>
+<p>病態は単純な「眼輪筋の局所異常」ではなく、運動を抑える<strong>脳内回路（大脳基底核・小脳・視床などを含むネットワーク）の機能異常</strong>と、<strong>感覚（光・眼表面刺激）に対する過敏</strong>が重なる、という整理が臨床的に有用である<sup>[5]</sup><sup>[6]</sup>。</p>
+<p><strong>眼表面刺激</strong>は<strong>三叉神経反射</strong>として瞬目を誘発し、刺激が増えるほど反射瞬目回路の興奮性が上がることが示されている。「<strong>ドライアイ/眼瞼炎→瞬目増多→さらに眼表面不安定</strong>」という悪循環が疑われる<sup>[7]</sup><sup>[8]</sup>。</p>
+<p>実臨床では、運動症状が目立たない段階でも<strong>羞明・乾燥感・異物感</strong>など感覚症状が前景に出ることがあり、これが<strong>誤診（ドライアイ単独扱い等）</strong>につながる<sup>[7]</sup><sup>[8]</sup>。</p>
+<!-- 分類と鑑別診断 -->
+<h2 id="classification">分類と鑑別診断</h2>
+<h3>分類</h3>
+<p><strong>本態性（原発性）</strong>は原因疾患が同定できないタイプで、環境因子・遺伝因子・脳内機能異常が複合すると考えられている<sup>[5]</sup><sup>[6]</sup>。</p>
+<p><strong>続発性</strong>として重要なのは以下の3つである：</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">タイプ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">原因・特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">臨床的ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(a) 反射性</strong></td>
+<td><strong>眼表面刺激</strong>（角結膜刺激、睫毛・異物、眼瞼炎など）</td>
+<td>刺激源除去で改善しうる</td>
+</tr>
+<tr>
+<td><strong>(b) 薬剤誘発</strong></td>
+<td><strong>遅発性運動障害スペクトラム</strong>、<strong>ベンゾジアゼピン</strong>関連薬・<strong>向精神薬</strong>中止での改善例</td>
+<td>服薬歴の十分な聴取が必須</td>
+</tr>
+<tr>
+<td><strong>(c) 器質性</strong></td>
+<td>脳の器質病変・<strong>神経変性疾患</strong>に伴うもの</td>
+<td>画像検査・神経学的精査</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Meige症候群</strong>は「<strong>眼瞼けいれんを主症状とし、他の頭頸部（顔面・下顎・舌・咽頭・喉頭・頸部など）のジストニアを伴う分節性ジストニア</strong>」と定義するのが誤解が少ないとされる（「眼瞼＋口顎」固定は誤り）<sup>[6]</sup>。</p>
+<h3>鑑別診断の実務ポイント</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 鑑別の3ステップ</span>
+<p>診断実務では、まず「<strong>両側性か</strong>」「<strong>痙攣（強い閉瞼）か</strong>」「<strong>開け方の障害（開瞼失行）か</strong>」を分ける<sup>[1]</sup><sup>[2]</sup>。</p>
+</div>
+<p><strong>片側顔面痙攣</strong>は片側優位で、眼輪筋以外（口角・頬など）への波及が目立つことが多く、眼瞼けいれんとは<strong>病態も治療筋も異なる</strong><sup>[5]</sup>。</p>
+<p><strong>開瞼失行</strong>は<strong>パーキンソン病/PSP</strong>などで問題になり、眉毛位置（前頭筋代償）や筋電図で<strong>眼輪筋スパイクの有無</strong>を手掛かりにする<sup>[5]</sup>。</p>
+<p><strong>薬剤性</strong>が疑われる場合は「服薬歴（<strong>ベンゾジアゼピン関連薬</strong>、<strong>向精神薬</strong>、<strong>抗ドパミン薬</strong>など）を十分に聴取し、<strong>変更・中止で改善しうる</strong>」という視点が重要である<sup>[1]</sup><sup>[2]</sup>。</p>
+<!-- 診断 -->
+<h2 id="diagnosis">診断のための問診・診察・検査</h2>
+<h3>問診のポイント</h3>
+<p>問診では以下を確認する：「<strong>開けにくい/開けていられない</strong>」「<strong>瞬目増多</strong>」「<strong>羞明</strong>」「<strong>乾燥感・異物感</strong>」「<strong>屋外や運転で悪化</strong>」「<strong>緊張・ストレスで悪化</strong>」「<strong>感覚トリック</strong>（頬を押す、片目つぶり等）で軽減」<sup>[1]</sup><sup>[5]</sup>。</p>
+<h3>診察のポイント</h3>
+<p>診察室では、入室時からの表情（しかめ面、まぶしそうな表情）、瞬目の質（速いが不規則、強い瞬目が混入、閉瞼が長い）、<strong>開瞼維持の困難</strong>を観察する。<strong>軽症は診察室で症状が出ない</strong>ことがあるため、<strong>誘発が鍵</strong>である<sup>[1]</sup><sup>[5]</sup>。</p>
+<h3>瞬目テスト</h3>
+<p><strong>瞬目テスト（軽瞬/速瞬/強瞬）</strong>を各10回程度行い、スコアリングして重症度の目安にする<sup>[1]</sup><sup>[3]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">合計スコア</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">重症度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>正常</td>
+</tr>
+<tr>
+<td><strong>1〜2</strong></td>
+<td>軽症</td>
+</tr>
+<tr>
+<td><strong>3〜5</strong></td>
+<td>中等度</td>
+</tr>
+<tr>
+<td><strong>6〜8</strong></td>
+<td>重症</td>
+</tr>
+</tbody>
+</table>
+<h3>検査</h3>
+<p>検査は原則として<strong>特異的所見に乏しく</strong>、眼科的には<strong>細隙灯で角結膜刺激・眼表面障害の評価</strong>（染色、BUT、MGDなど）を優先する<sup>[1]</sup><sup>[3]</sup>。</p>
+<p>神経学的に<strong>非典型</strong>（片側優位、急性発症、他神経徴候、薬剤性/変性疾患が疑わしい等）の場合は、<strong>背景疾患探索</strong>（画像、薬剤調整、必要なら筋電図）を組み込む<sup>[1]</sup><sup>[2]</sup>。</p>
+<!-- フローチャート -->
+<h2 id="flowchart">診断・治療フローチャート</h2>
+<div class="flowchart-box"><span class="flow-step">主訴：開瞼しにくい / 瞬目増多 / 羞明</span> <span class="flow-arrow">▼</span> <span class="flow-decision">眼表面刺激や眼科疾患があるか？</span> <span class="flow-arrow">▼ あり</span> <span class="flow-step">眼表面治療・刺激源除去（眼瞼炎/DED/異物など）</span> <span class="flow-arrow">▼ 典型症状が残る場合</span> <span class="flow-step">診察室観察＋瞬目テスト（軽瞬/速瞬/強瞬）＋感覚トリック確認</span> <span class="flow-arrow">▼ 眼瞼けいれんが示唆的</span> <span class="flow-decision">続発性要因？</span> <span class="flow-arrow">▼</span> <span class="flow-step">薬剤性疑い→薬剤見直し/変更・漸減（精神科と連携）</span> <span class="flow-step">神経疾患疑い→PD/PSP等評価、開瞼失行も鑑別</span> <span class="flow-arrow">▼</span> <span class="flow-step">BoNT注射（第一選択）</span> <span class="flow-arrow">▼ 4週で効果・副作用評価</span> <span class="flow-decision">効果不十分？</span> <span class="flow-arrow">▼ いいえ → 8〜12週以上で再注射（症状再燃に合わせる）</span> <span class="flow-arrow">▼ はい</span> <span class="flow-step">部位/濃度/深さ/瞼板前部の最適化、必要なら部位追加</span> <span class="flow-arrow">▼ 2回以上連続で不十分</span> <span class="flow-alert">診断再評価＋眼表面/薬剤/注射戦略を再点検</span> <span class="flow-arrow">▼ 難治（重症/Meigeなど）</span> <span class="flow-alert">手術（眼輪筋切除等）やDBS検討</span></div>
+<!-- 治療 -->
+<h2 id="treatment">治療</h2>
+<p>治療は「<strong>眼表面・環境（増悪因子）を整える</strong>」＋「<strong>ボツリヌス毒素注射で運動症状を抑える</strong>」を同時に走らせると実務的に回りやすい<sup>[1]</sup><sup>[2]</sup>。</p>
+<h3>治療法の比較</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">治療</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">位置づけ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">効果持続の目安</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">エビデンス</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な副作用</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">推奨度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>眼表面治療</strong>（DED/眼瞼炎など）</td>
+<td>反射性増悪の是正、併存症管理</td>
+<td>状況依存</td>
+<td>関連は支持、直接効果は限定的</td>
+<td>点眼刺激など</td>
+<td>併用を強く推奨</td>
+</tr>
+<tr>
+<td><strong>遮光・色レンズ</strong>（FL-41等）</td>
+<td>羞明・屋外増悪への補助</td>
+<td>装用中に効果</td>
+<td>ランダム化クロスオーバーで主観・EMG改善<sup>[13]</sup></td>
+<td>ほぼなし</td>
+<td>補助として推奨</td>
+</tr>
+<tr>
+<td><strong>BoNT-A注射</strong></td>
+<td><strong>第一選択</strong></td>
+<td><strong>3〜6か月</strong>（個人差）</td>
+<td>RCT系統的レビューで有効<sup>[9]</sup></td>
+<td><strong>眼瞼下垂/兎眼</strong>など（概ね各<strong>2%</strong>程度）、全体で副作用<strong>10%</strong>程度</td>
+<td><strong>強く推奨</strong></td>
+</tr>
+<tr>
+<td><strong>内服</strong>（抗コリン、ベンゾ系等）</td>
+<td>BoNT困難時・補助</td>
+<td>内服中</td>
+<td>確立エビデンスなし（補助域）</td>
+<td>眠気、ふらつき、抗コリン副作用等</td>
+<td>弱い推奨</td>
+</tr>
+<tr>
+<td><strong>眼瞼手術</strong>（眼輪筋切除/吊り上げ等）</td>
+<td>難治例の補完（注射間隔延長等）</td>
+<td>長期（完治は期待しにくい）</td>
+<td>観察研究中心（自覚的有効）<sup>[14]</sup></td>
+<td>眼瞼形態異常、露出など</td>
+<td>適切に選択</td>
+</tr>
+<tr>
+<td><strong>DBS</strong>（主にGPi/STN）</td>
+<td>最重症/Meigeなど難治</td>
+<td>長期</td>
+<td>症例集積・メタ解析で有効<sup>[15]</sup></td>
+<td>外科合併症、刺激副作用</td>
+<td>専門施設で検討</td>
+</tr>
+</tbody>
+</table>
+<!-- ボツリヌス毒素注射 -->
+<h2 id="bont">ボツリヌス毒素注射</h2>
+<p>国内では「<strong>眼瞼けいれん＝A型ボツリヌス毒素注射が実質的な標準治療</strong>」と位置づけられ、添付文書ベースでも用量・間隔の枠組みが明確である<sup>[10]</sup>。</p>
+<p>系統的レビューでは、プラセボに比べ症状重症度（<strong>Jankovic Rating Scale</strong>）が<strong>4〜6週で有意に改善</strong>し、特定の副作用（<strong>眼瞼下垂</strong>、<strong>視覚症状</strong>）は増える一方、全体の有害事象比は大差ない、というまとめである<sup>[9]</sup>。</p>
+<h3>製剤別の用量目安と注意点</h3>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 重要</span>
+<p><strong>単位は製剤ごとに互換ではなく</strong>、添付文書・ラベルに従って設計する<sup>[10]</sup><sup>[11]</sup><sup>[12]</sup>。</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">製剤（主成分）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">初回の単位/部位</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">1眼あたり部位数の目安</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">再投与間隔の目安</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">上限など（代表）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ボトックス</strong>（onabotulinumtoxinA）</td>
+<td><strong>1.25〜2.5U/部位</strong></td>
+<td>6部位/眼（添付文書）〜8〜12か所（実臨床プロトコル）</td>
+<td><strong>8週以上</strong>（国内）</td>
+<td><strong>1か月累積45U超は避ける</strong><sup>[10]</sup><sup>[11]</sup></td>
+</tr>
+<tr>
+<td><strong>ゼオミン</strong>（incobotulinumtoxinA）</td>
+<td><strong>1.25〜2.5U/部位</strong></td>
+<td>既治療歴・重症度で調整（試験では平均6注射/眼）</td>
+<td>原則<strong>12週より短くしない</strong></td>
+<td>既治療量不明なら初回総量は両眼<strong>70U（35U/眼）以内</strong><sup>[12]</sup></td>
+</tr>
+<tr>
+<td><strong>ディスポート</strong>（abobotulinumtoxinA）</td>
+<td>報告はあるが適応・換算に注意</td>
+<td>施設プロトコル依存</td>
+<td>施設プロトコル依存</td>
+<td>onabotulinumtoxinAとの<strong>単位換算は一律にできない</strong>（概ね1:3前後が議論されるが症例依存）<sup>[16]</sup></td>
+</tr>
+</tbody>
+</table>
+<h3>初回BoNT注射プロトコール（実務向け）</h3>
+<p>国内ガイドラインでは、初回は<strong>眼周囲8〜12か所</strong>に各<strong>1.25〜2.5単位</strong>を基本とし、<strong>眼瞼挙筋と涙点を避け</strong>、<strong>深刺しを避ける</strong>（表層筋なので浅く）ことが推奨されている<sup>[1]</sup><sup>[10]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">想定重症度（瞬目テスト合計）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">目安総量（片眼）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">1か所量</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">基本部位（片眼）</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">初回の副作用回避策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>軽症（1〜2点）</strong></td>
+<td><strong>5〜10U</strong></td>
+<td><strong>1.25U</strong>中心</td>
+<td>眼瞼部眼輪筋4点（上眼瞼内外側＋下眼瞼外側中心）</td>
+<td>下眼瞼内側は原則避ける／浅く皮下／低容量から開始</td>
+</tr>
+<tr>
+<td><strong>中等度（3〜5点）</strong></td>
+<td><strong>10〜20U</strong></td>
+<td><strong>1.25〜2.5U</strong></td>
+<td>上記＋必要により眼窩部2点追加</td>
+<td>眼窩部は効きにくい例あり→<strong>瞼板前部優先</strong>、深刺し回避</td>
+</tr>
+<tr>
+<td><strong>重症（6〜8点）</strong></td>
+<td><strong>20〜30U</strong></td>
+<td><strong>2.5U</strong>中心</td>
+<td>眼瞼部4点＋眼窩部2点、必要により皺眉筋など追加</td>
+<td><strong>兎眼リスク</strong>に注意し漸増、角膜保護策を事前に準備</td>
+</tr>
+<tr>
+<td><strong>高齢/眼表面障害が強い</strong>（年齢にかかわらず）</td>
+<td>上記から<strong>20〜30%減</strong></td>
+<td>低容量側</td>
+<td>下眼瞼は外側寄り中心</td>
+<td><strong>兎眼/露出</strong>の早期介入（人工涙液、夜間保護）を前提に設計</td>
+</tr>
+</tbody>
+</table>
+<details class="expandable">
+<summary>技術的注意点（詳細を展開）</summary>
+<div class="expandable-content">
+<p><strong>瞼板前部（pretarsal）</strong>への投与は、<strong>隔膜前部（preseptal）</strong>より治療成績が良く、副作用が少ない可能性が示されている<sup>[9]</sup>。</p>
+<p><strong>眼瞼下垂</strong>は<strong>上眼瞼挙筋への拡散</strong>が原因になりうるため、上眼瞼中央付近・深刺しを避ける<sup>[10]</sup>。</p>
+<p><strong>複視</strong>は下眼瞼内側（<strong>下斜筋方向</strong>）への拡散で起こりうるため、<strong>下眼瞼内側は避ける</strong>設計が実用的である<sup>[10]</sup>。</p>
+</div>
+</details><details class="expandable">
+<summary>副作用対策（詳細を展開）</summary>
+<div class="expandable-content">
+<p><strong>眼瞼下垂・兎眼/閉瞼不全・流涙</strong>は代表的で、多くは毒素効果の減弱とともに改善する<sup>[9]</sup><sup>[10]</sup>。</p>
+<p><strong>兎眼/閉瞼不全</strong>で角膜露出が疑われる場合は、<strong>人工涙液・保湿と夜間アイパッチ</strong>等で<strong>角膜保護を優先</strong>する<sup>[1]</sup>。</p>
+<p><strong>皮下出血</strong>は数％〜30％と幅があるが、<strong>抗血栓薬内服でも頻度が増えない</strong>という報告があり、圧迫止血を丁寧に行う<sup>[4]</sup>。</p>
+</div>
+</details>
+<h3>再注射の指針</h3>
+<p>添付文書上は「初回<strong>1.25〜2.5U/部位</strong>、<strong>6部位/眼</strong>」「間隔<strong>8週以上</strong>」「<strong>1か月累積45U超は避ける</strong>」が枠組みである<sup>[10]</sup>。</p>
+<p>投与量が安定するまでは、投与後<strong>1か月で効果判定</strong>し、部位・単位の見直しを繰り返すとされている<sup>[1]</sup><sup>[10]</sup>。</p>
+<p>効果不十分で追加投与を考える場合でも、国内では<strong>投与間隔は最低8週間</strong>空ける必要があると整理されている<sup>[10]</sup>。</p>
+<!-- 内服薬 -->
+<h2 id="oral">内服薬</h2>
+<p>内服は「<strong>確立した有効薬はないが、BoNTが使えない/補助として試す</strong>」位置づけである<sup>[1]</sup><sup>[2]</sup>。</p>
+<p>候補として<strong>トリヘキシフェニジル</strong>、<strong>クロナゼパム</strong>、<strong>バクロフェン</strong>、<strong>テトラベナジン</strong>、<strong>ゾルピデム</strong>等の報告があるが、適応・副作用（<strong>眠気</strong>、<strong>ふらつき</strong>、<strong>抗コリン作用</strong>など）で十分量投与が難しいことが多い<sup>[1]</sup>。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 注意</span>
+<p><strong>抗ドパミン薬</strong>は<strong>遅発性症候群の観点から推奨しにくい</strong>、と国内ガイドラインは述べている<sup>[2]</sup>。</p>
+</div>
+<!-- 外科的治療とDBS -->
+<h2 id="surgery">外科的治療とDBS</h2>
+<p>難治例には<strong>眼輪筋切除（myectomy）</strong>等の眼瞼手術が検討され、長期的に<strong>自覚的有益性</strong>が報告されている（注射頻度が減る例もある）<sup>[14]</sup>。</p>
+<p>ただし、手術単独での「完治」は期待しにくく、<strong>BoNT間隔延長など補完的位置づけ</strong>として扱われる<sup>[14]</sup>。</p>
+<p><strong>Meige症候群</strong>などで重症かつ難治の場合、<strong>DBS</strong>は症例集積・メタ解析で<strong>Burke-Fahn-Marsden Dystonia Rating Scale</strong>が有意に改善し、標的（<strong>GPi/STN</strong>）間で大きな優劣は明確でない、というまとめである<sup>[15]</sup>。</p>
+<!-- フォローアップ -->
+<h2 id="followup">フォローアップと再評価</h2>
+<h3>フォローアップのタイムライン（提案）</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">目的</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">具体策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>初診〜投与前</strong></td>
+<td>診断の確度・続発性要因の整理</td>
+<td>眼表面評価、薬剤歴、瞬目テストで重症度目安</td>
+</tr>
+<tr>
+<td><strong>投与後1〜2週</strong></td>
+<td>最大効果と副作用の早期確認</td>
+<td><strong>眼瞼下垂/兎眼/複視</strong>の確認、角膜保護の要否判断</td>
+</tr>
+<tr>
+<td><strong>投与後4週</strong></td>
+<td>効果判定（投与量が安定するまで重要）</td>
+<td>効果不足なら部位/濃度/深さ再設計</td>
+</tr>
+<tr>
+<td><strong>8〜12週以降</strong></td>
+<td>再注射計画</td>
+<td>国内は<strong>8週以上</strong>、実務上は症状再燃に合わせる</td>
+</tr>
+</tbody>
+</table>
+<!-- 難治例 -->
+<h2 id="refractory">難治例のチェックリスト</h2>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 難治例の判断ポイント</span>
+<p>効果不十分が続く場合、「この患者は難治」より先に、以下を点検する<sup>[1]</sup><sup>[2]</sup>：</p>
+<p>①<strong>診断ズレ</strong>（開瞼失行、片側顔面痙攣、眼表面刺激主体、薬剤性）</p>
+<p>②<strong>注射戦略</strong>（瞼板前部優先になっているか、深刺ししていないか、部位数/濃度/総量）</p>
+<p>③<strong>再投与間隔</strong>が早すぎないか</p>
+</div>
+<p><strong>2回以上連続で効果が乏しいとき</strong>は、<strong>部位追加・濃度調整・部位変更</strong>が有効な可能性が高い、と国内ガイドラインは述べている<sup>[1]</sup>。</p>
+<p>「<strong>羞明主体で運動症状が目立たない</strong>」群を眼瞼けいれんとして扱うか（<strong>中枢性羞明</strong>として別扱いか）は結論が出ておらず、症例ごとに「何をターゲットに治療するか（けいれんか羞明か）」を明確にする必要がある<sup>[1]</sup>。</p>
+<!-- 将来の研究課題 -->
+<h2 id="future">将来の研究課題</h2>
+<p><strong>病態メカニズム</strong>（脳内ネットワーク、感覚過敏、眼表面—三叉神経反射の関係）と、<strong>羞明・不快感など非運動症状を含めた重症度尺度の整備</strong>が課題として挙げられている<sup>[5]</sup><sup>[6]</sup>。</p>
+<p>長期治療に関しては、<strong>30年規模の大規模後ろ向き解析</strong>で長期安全性・有効性が示され<sup>[4]</sup>、今後は「<strong>患者が望む投与間隔（再燃の見える化）</strong>」やQOL指標を含む最適化が焦点になりそうである<sup>[4]</sup>。</p>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=_JLB9LfaFHE" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3 id="references">📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">日本神経眼科学会. 眼瞼けいれん診療ガイドライン第3版（2025）. <a href="https://www.neuroeye.jp/" target="_blank" rel="noopener">[Link]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">日本神経学会. ジストニア診療ガイドライン2018. <a href="https://www.neurology-jp.org/guidelinem/dystonia.html" target="_blank" rel="noopener">[Link]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">日本神経眼科学会眼瞼痙攣診療ガイドライン委員会. 眼瞼けいれん診療ガイドライン（2011）. <a href="https://www.neuroeye.jp/" target="_blank" rel="noopener">[Link]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">Wabbels B, et al. Ultra-Long-Term Therapy of Benign Essential Blepharospasm with Botulinumtoxin A—30 Years of Experience. Toxins. 2022. <a href="https://doi.org/10.3390/toxins14020120" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Defazio G, et al. Development and validation of a clinical guideline for diagnosing blepharospasm. Neurology. 2013. <a href="https://doi.org/10.1212/WNL.0b013e31829bfdf6" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">Albanese A, et al. Phenomenology and classification of dystonia (consensus update). Mov Disord. 2013. <a href="https://doi.org/10.1002/mds.25475" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Evinger C, et al. Dry Eye, Blinking, and Blepharospasm. Invest Ophthalmol Vis Sci（PMC）. <a href="https://doi.org/10.1002/mds.10065" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Tsubota K, et al. Dry eye and Meige's syndrome. Br J Ophthalmol（PMC）. 1997. <a href="https://doi.org/10.1136/bjo.81.6.439" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Marques RE, et al. Botulinum toxin type A therapy for blepharospasm (Cochrane update, PMC). <a href="https://doi.org/10.1002/14651858.CD004900.pub3" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10</span> <span class="ref-content">医薬品医療機器総合機構. ボトックス注用 再審査報告書（用法・用量: 眼瞼痙攣）. <a href="https://www.pmda.go.jp/" target="_blank" rel="noopener">[PMDA]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">11</span> <span class="ref-content">BOTOX (onabotulinumtoxinA) FDA label（blepharospasm用量・注意点）. <a href="https://www.accessdata.fda.gov/scripts/cder/daf/" target="_blank" rel="noopener">[FDA]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">12</span> <span class="ref-content">XEOMIN (incobotulinumtoxinA) FDA label（blepharospasm用量・上限）. <a href="https://www.accessdata.fda.gov/scripts/cder/daf/" target="_blank" rel="noopener">[FDA]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13</span> <span class="ref-content">Blackburn MK, et al. FL-41 Tint improves blink frequency/light sensitivity in BEB. Ophthalmology（PMC）. 2009. <a href="https://doi.org/10.1016/j.ophtha.2008.12.031" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">14</span> <span class="ref-content">Chapman KL, et al. Eyelid protractor myectomy follow-up (Mayo Clinic). Ophthalmic Plast Reconstr Surg. 1999. <a href="https://doi.org/10.1097/00002341-199903000-00007" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Wang X, et al. Deep brain stimulation for Meige syndrome: individual patient data meta-analysis. J Neurol. 2019. <a href="https://doi.org/10.1007/s00415-019-09462-2" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16</span> <span class="ref-content">Dashtipour K, et al. Systematic literature review of abobotulinumtoxinA in blepharospasm/hemifacial spasm trials. Tremor Other Hyperkinet Mov. 2015. <a href="https://doi.org/10.7916/D8CJ8CVR" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">17</span> <span class="ref-content">European Federation of Neurological Societies. EFNS guideline: BoNT-A is first-line for primary cranial (excluding oromandibular) or cervical dystonia; DBS option after failure. <a href="https://doi.org/10.1111/j.1468-1331.2010.03042.x" target="_blank" rel="noopener">[DOI]</a></span></div>
+<div class="ref-item"><span class="ref-numbers">18</span> <span class="ref-content">American Academy of Neurology. Botulinum neurotoxin guideline（blepharospasm含む）は retired である旨. <a href="https://doi.org/10.1212/WNL.0000000000002560" target="_blank" rel="noopener">[DOI]</a></span></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "眼瞼けいれん（ブレファロスパズム）の実践的総説",
+  "description": "眼瞼けいれん（ブレファロスパズム）の実践的総説",
+  "thumbnailUrl": "https://img.youtube.com/vi/_JLB9LfaFHE/maxresdefault.jpg",
+  "uploadDate": "2026-03-03",
+  "contentUrl": "https://www.youtube.com/watch?v=_JLB9LfaFHE",
+  "embedUrl": "https://www.youtube.com/embed/_JLB9LfaFHE"
+}
+</script>
+<div class="related-articles">
+<h3>関連記事</h3>
+<ul>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/08/122723">非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/13/053044">後頭神経痛にメコバラミンは有効か？最新エビデンス解説</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/16/082713">2005年〜2025年における脳梗塞治療の主な進歩と変化（一般内科医向け）</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/16/041858">片頭痛治療の薬物療法：過去20年の進歩とCGRP関連製剤の登場</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/05/20/084826">アルコール離脱症候群（AWS）の包括的解説</a></li>
+</ul>
+</div>

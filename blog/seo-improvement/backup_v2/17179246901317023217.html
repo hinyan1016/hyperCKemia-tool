@@ -1,0 +1,595 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>作者コメント</div>
+<div>来月、研修医向けに「救急外来でのてんかん発作」というテーマでしゃべるように依頼を受けました。そろそろ準備をと思い、作成してみました。</div>
+<div>AIがない頃は、何日もかかっていたスライドづくりが、ものの数分でできあがりました。ChatGPTの5proでDeep Reserchし、Claudeで、はてなブログ用のHTMLに変換、スライドは、Geminiでまじん式プロンプト3を使ってスライド化、音声はGoogle AI studioを使っています。</div>
+<div>教科書を買ったり、講義を聴いたりする時代は、終わりつつあるのだと思います。</div>
+<div>来月の研修医向けの会では、最初の半分をこの救急外来でのてんかん発作について話して、後半はAIの活用方法を解説しようと思っています。</div>
+<div>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/mypOzbYf878?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="救急外来でのてんかん発作対応 2025 11 11   Google スライド   Google Chrome 2025 11 12 07 44 19" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/mypOzbYf878">youtu.be</a></cite></p>
+</div>
+<div> </div>
+<div>
+<p>音声付きスライド</p>
+<p><a href="https://docs.google.com/presentation/d/1rdKXC98CmCDANdkEKqJ-n8fKiM1CNm2uPYfpd5N48a0/edit?usp=sharing" target="_blank">救急外来でのてんかん発作対応 2025.11.11 - Google スライド</a></p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="研修医必見！救急外来でのてんかん発作対応と鑑別の極意">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251118/20251118111745.png" alt="救急外来でバイタルモニターを確認しながら冷静にてんかん発作に対応しようとする医師のイラスト。研修医が押さえておくべき初期対応、鑑別診断、治療アルゴリズムを解説した記事の内容を象徴し、医療現場の信頼感と清潔感を表現しています。" width="1024" height="1024" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">研修医必見！救急外来でのてんかん発作対応と鑑別の極意</figcaption>
+</figure>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="救急外来でのてんかん発作対応　イラスト1枚版">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251204/20251204152523.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">救急外来でのてんかん発作対応　イラスト1枚版</figcaption>
+</figure>
+<p><br /><br /></p>
+</div>
+</div>
+<style>
+/* 基本スタイル */
+.medical-article { 
+    max-width: 100%; 
+    padding: 16px; 
+    line-height: 1.7; 
+    color: #333; 
+}
+
+h1 { 
+    font-size: 1.6rem; 
+    color: #2c5aa0; 
+    border-bottom: 2px solid #2c5aa0; 
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h2 { 
+    font-size: 1.3rem; 
+    color: #2c5aa0; 
+    border-left: 4px solid #2c5aa0; 
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+h3 { 
+    font-size: 1.1rem; 
+    color: #444;
+    margin-top: 1rem;
+}
+
+h3::before { 
+    content: '▶'; 
+    color: #2c5aa0; 
+    margin-right: 8px; 
+}
+
+strong { 
+    font-weight: bold; 
+    color: #2c5aa0; 
+}
+
+sup { 
+    color: #dc3545; 
+    font-weight: bold; 
+    font-size: 0.75em; 
+}
+
+/* 情報ボックス */
+.toc-box { 
+    background: #f8f9fa; 
+    border: 1px solid #dee2e6; 
+    border-radius: 4px;
+    padding: 16px; 
+    margin: 16px 0; 
+}
+
+.toc-box h3 {
+    margin-top: 0;
+}
+
+.toc-box ul {
+    margin-bottom: 0;
+}
+
+.important-box { 
+    background: #e8f4fd; 
+    border-left: 4px solid #2c5aa0; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.warning-box { 
+    background: #fff3cd; 
+    border-left: 4px solid #ffc107; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.emergency-box { 
+    background: #f8d7da; 
+    border-left: 4px solid #dc3545; 
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.drug-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.drug-table th, .drug-table td { 
+    border: 1px solid #ddd; 
+    padding: 12px;
+    text-align: left;
+}
+
+.drug-table th { 
+    background: #2c5aa0; 
+    color: white; 
+    font-weight: bold; 
+}
+
+.drug-table tr:nth-child(even) { 
+    background: #f8f9fa; 
+}
+
+.drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-details { 
+    background: #f8f9fa; 
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-details summary { 
+    background: #2c5aa0; 
+    color: white; 
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-details-content { 
+    padding: 16px; 
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* 参考文献 */
+.references { 
+    margin-top: 2rem; 
+    border-top: 2px solid #dee2e6; 
+    padding-top: 1rem; 
+}
+
+.references h3 {
+    color: #2c5aa0;
+}
+
+.ref-item { 
+    margin-bottom: 12px; 
+    padding: 10px; 
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.ref-numbers { 
+    color: #dc3545; 
+    font-weight: bold; 
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.ref-content {
+    color: #555;
+}
+</style>
+<div class="medical-article">
+<h1>救急外来でのてんかん発作対応</h1>
+<!-- 目次ボックス -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#introduction">はじめに</a></li>
+<li><a href="#seizure-types">発作型による違いと問診・身体所見のポイント</a></li>
+<li><a href="#differential">鑑別診断：てんかん発作と類似する症状</a></li>
+<li><a href="#initial-management">初期対応の優先順位（ABCと発作中・発作後の対応）</a></li>
+<li><a href="#emergency-tests">緊急検査の適応と優先順位</a></li>
+<li><a href="#status-epilepticus">てんかん重積状態（SE）の定義と治療アルゴリズム</a></li>
+<li><a href="#history-taking">既往歴・内服歴の聴取ポイント</a></li>
+<li><a href="#avoiding-misdiagnosis">誤診を避けるポイント</a></li>
+<li><a href="#post-seizure">発作後の説明・フォローアップ指導</a></li>
+<li><a href="#case-study">症例検討</a></li>
+<li><a href="#references-section">参考文献</a></li>
+</ul>
+</div>
+<h2 id="introduction">はじめに</h2>
+<div class="important-box"><strong>📋 重要な基本概念</strong><br /><strong>けいれん ≠ てんかん</strong>です！<sup>[1]</sup></div>
+<p>救急外来ではけいれん発作に頻繁に遭遇します。まず押さえておきたいのは、「<strong>けいれん＝てんかんではない</strong>！」という点です<sup>[1]</sup>。医学用語上、「<strong>てんかん</strong>」は繰り返し発作を起こす慢性の脳疾患であり<sup>[2]</sup>、「<strong>発作（seizure）</strong>」は脳神経細胞の異常興奮による一過性の症候群、そして「<strong>けいれん（convulsion）</strong>」は意思とは無関係に筋肉が収縮する症状を指します<sup>[3]</sup>。したがって単発のけいれん発作=直ちにてんかん疾患とは限らず、<strong>脳卒中</strong>など急性疾患による発作の可能性も念頭に置く必要があります<sup>[4]</sup>。</p>
+<p>本資料では、初期研修医の先生方向けに「救急外来でのてんかん発作対応」の実践ポイントをまとめます。発作型の違いによるアプローチ、考えるべき鑑別疾患、初期対応の手順、検査や治療アルゴリズム、そして発作後の指導まで、60分プレゼンテーション相当の内容を網羅します。各項目で実臨床のノウハウと最新ガイドラインに基づく情報を示し、図表やフローチャートも交えて理解を深めます。</p>
+<h2 id="seizure-types">発作型による違いと問診・身体所見のポイント</h2>
+<h3>発作型の分類</h3>
+<p>てんかん発作の型は大きく<strong>焦点発作（部分発作）</strong>と<strong>全般発作</strong>に分類されます。</p>
+<p><strong>焦点発作</strong>は脳の一部で異常興奮が発生する発作で、症状は興奮部位の機能に対応します。例えば「右前頭葉の一次運動野」で発火すれば左半身のけいれんとして現れます<sup>[5]</sup>。焦点発作では発作前に一部の患者で「<strong>予兆（オーラ）</strong>」がみられ、発作中も体の左右どちらかに強いけいれんの偏りや、頭部・眼球の一側への偏向（発作側と反対方向への強制偏視）が観察されることがあります<sup>[6][7]</sup>。これらは興奮焦点の側位を推定する手掛かりになります。また発作後に一過性の局所神経脱落症状（いわゆる<strong>トッド麻痺</strong>）が生じることもあり、これも焦点発作の存在を示唆します。</p>
+<p>一方、<strong>全般発作</strong>は発火が両側大脳に及ぶ発作で、典型例が<strong>強直間代発作（全身けいれん発作）</strong>です。突然の意識消失と全身の強直・間代性けいれんを呈し、<strong>舌咬傷</strong>や<strong>尿失禁</strong>を伴うことが多い点が特徴です<sup>[8]</sup>。舌を噛む場合は特に舌の側面に傷ができやすく、これは非てんかん性の失神では通常みられない所見でてんかん発作を強く示唆します<sup>[8][9]</sup>。発作後には意識がもうろうとして反応が鈍い<strong>発作後もうろう状態（ポストイクタルステート）</strong>が数分～数十分残存し、頭痛や筋肉痛を訴えることもあります。</p>
+<h3>けいれん性発作と非けいれん性発作</h3>
+<div class="warning-box"><strong>⚠️ 注意</strong><br /><strong>非けいれん性発作（non-convulsive seizure）</strong>は外見上けいれんがなく、見逃されやすい点に注意が必要です。</div>
+<p>発作型に関連して<strong>けいれん性発作（convulsive seizure）</strong>と<strong>非けいれん性発作（non-convulsive seizure）</strong>の区別も重要です。前者は文字通り体のけいれんを伴う発作で、医療者が一目で発作と分かりますが、後者は外見上けいれんがなく意識障害や奇怪な言動のみで経過するため見逃されやすい点に注意が必要です。典型例は<strong>欠神発作</strong>で、突然意識が途切れて数十秒ぼんやりするだけなので周囲から見落とされることがあります。また、発作が長引く<strong>非けいれん性てんかん重積状態（NCSE）</strong>では、患者は反応が乏しい昏蒙状態なのに四肢の明らかなけいれんはない、ということもあります。発作後に意識が十分回復しないケースではNCSEも念頭に置き、必要に応じて脳波検査を検討します。</p>
+<h3>問診と身体所見のポイント</h3>
+<p>発作が起きた場面では<strong>目撃者からの情報</strong>が極めて重要です<sup>[23]</sup>。発作前後の状況や発作中の様子を詳細に聴取しましょう。</p>
+<p><strong>確認すべき項目：</strong></p>
+<ul>
+<li>「発作の前に何か前兆はあったか」</li>
+<li>「発症時の体位（例：立位か臥位か）」</li>
+<li>「最初に体のどの部分から動き出したか」</li>
+<li>「眼球や頭はどちらに向いていたか」</li>
+<li>「けいれんの持続時間」</li>
+<li>「発作中の意識や反応の有無」</li>
+<li>「発作後に会話できるようになるまでの時間」</li>
+</ul>
+<p>例えば発作前に異常な臭いやデジャヴュがあれば焦点発作を示唆しますし、立位中に徐々に崩れるように倒れたなら失神を示唆します。</p>
+<p><strong>身体所見</strong>では外傷の有無（舌傷や頭部打撲痕、骨折の有無）、瞳孔の大きさ左右差、発作後の麻痺の有無、バイタルサインの乱れ（発作に伴う頻脈・血圧上昇・低酸素など）を確認します<sup>[1]</sup>。特に<strong>舌の縁の傷（咬傷）</strong>や<strong>眼球偏倚</strong>はてんかん発作を支持する所見です<sup>[10][11][6][12]</sup>。反対に<strong>眼を固く閉じている場合</strong>は心因性発作を示唆します<sup>[6]</sup>。また発作直後に顔面や上半身に<strong>点状出血斑（petéchie）</strong>が出現することがあり（強いバルサルバに伴う現象）、これも失神や心因性発作では通常みられないてんかん発作特有の所見です<sup>[13]</sup>。</p>
+<h2 id="differential">鑑別診断：てんかん発作と類似する症状</h2>
+<p>てんかん発作と紛らわしい鑑別診断として、<strong>急性症候性発作</strong>（脳卒中など急性疾患による発作）を始め、<strong>心因性非てんかん発作（PNES）</strong>や<strong>失神</strong>、その他の一過性意識消失発作が挙げられます。</p>
+<h3>発作の緊急度判断：3つの確認事項</h3>
+<div class="emergency-box"><strong>🚨 緊急度判断の3ポイント</strong><br />以下の3点を確認し、緊急性を判断します<sup>[14][15]</sup>：</div>
+<ol>
+<li><strong>今回が初回発作か？</strong> – 初めての発作であれば無条件に緊急性あり（＝何らかの急性疾患が隠れている可能性）と考え対応します<sup>[16]</sup>。</li>
+<li><strong>てんかんと診断された既往があるか？</strong> – 既にてんかんと診断され定期治療中の患者であれば、持病のてんかんによる発作再発と考えられ、原因検索の緊急度は低くなります<sup>[17]</sup>。</li>
+<li><strong>（既知のてんかん患者で）今回の発作に普段との違いはあるか？</strong> – 発作の様子が「いつもと違う」場合（例：発作の種類が変化、強さが増強）は、新たな誘因（急性疾患）の関与を疑い緊急性ありと判断します<sup>[18]</sup>。</li>
+</ol>
+<p>初回発作や原因不明の発作は<strong>急性症候性発作</strong>の可能性を考えて緊急対応する<sup>[15][17]</sup>。一方、診断済みてんかん患者で「いつもの発作」の再発であれば緊急性は低い<sup>[18]</sup>。ただし持病のてんかん患者でも発作の様相に普段と違いがあれば新たな誘因の鑑別が必要になります<sup>[18]</sup>。</p>
+<p>このように背景で<strong>急性疾患が疑われる発作（急性症候性発作）</strong>では、発作そのものの治療のみならず原因疾患に対する介入が不可欠である点を強調します<sup>[19][20]</sup>。</p>
+<h3>主な鑑別疾患</h3>
+<details class="medical-details" open="open">
+<summary>心因性非てんかん発作（PNES）の特徴</summary>
+<div class="medical-details-content">
+<p>心的ストレスを背景に起こる偽の発作です。特徴は以下の通りです：</p>
+<ul>
+<li><strong>持続時間が長い</strong>（しばしば<strong>20分以上</strong>）<sup>[21]</sup></li>
+<li><strong>発作中は閉眼していることが多い</strong><sup>[6]</sup></li>
+<li>四肢の動きは<strong>左右非対称かつ不規則</strong><sup>[21]</sup></li>
+<li>全身が反り返るような過剰な動きがみられることもあります<sup>[22]</sup></li>
+<li>舌を噛んだり失禁したりといった所見は通常なく、発作後も意識混濁は持続せず心理的な反応（泣き出す等）がみられることがあります<sup>[21][22]</sup></li>
+</ul>
+<p>ただし決定的な単一所見でPNESと断定することは困難で、総合的な判断が必要です<sup>[22]</sup>。診断にはビデオ脳波モニタリングが有用ですが、救急現場ではまずてんかん発作と仮定して対応しつつ後日専門医に引き継ぐ形になります。</p>
+</div>
+</details><details class="medical-details" open="open">
+<summary>失神（シンコピー）との鑑別</summary>
+<div class="medical-details-content">
+<p>脳への一過性の血流低下で起こる意識消失発作です。原因は迷走神経反射や起立性低血圧、心原性不整脈など様々ですが、いずれも<strong>仰臥位にさせれば意識はすぐに回復する</strong>のが特徴です<sup>[23]</sup>。</p>
+<div class="emergency-box"><strong>🚨 重要</strong><br />けいれん発作に遭遇したら<strong>まず頸動脈を触知して心拍の有無を確認</strong>することが重要です<sup>[23]</sup>。心停止や致死的不整脈による発作であれば抗けいれん薬よりも心肺蘇生や不整脈治療が最優先となります。</div>
+<p>区別が難しいのは、失神でも<strong>けいれん様の四肢の動き（けいれん性失神）</strong>を呈することがある点です<sup>[23]</sup>。特に立位のまま倒れ込んで脳血流が一時的に低下した場合や、心停止による脳虚血では全身が一見けいれんしているように見えることがあります。</p>
+<p><strong>鑑別のヒント：</strong></p>
+<ul>
+<li><strong>尿失禁や舌咬傷の有無</strong></li>
+<li>直後の<strong>血中乳酸値</strong>（てんかん発作なら上昇しやすい<sup>[23]</sup>）</li>
+<li>発作数十分後の<strong>アンモニア値</strong>（約7割のてんかん発作で一過性に上昇する）<sup>[23]</sup></li>
+</ul>
+<p>もっとも、最も大切なのは発症時の状況を詳しく聴くことで、目撃者がいれば「発症前にめまいや冷や汗はなかったか」「徐脈や胸痛を訴えていなかったか」など失神を示唆する所見を聴取します。</p>
+</div>
+</details><details class="medical-details" open="open">
+<summary>脳卒中発作の鑑別</summary>
+<div class="medical-details-content">
+<p><strong>脳梗塞</strong>や<strong>脳出血</strong>など脳血管障害に伴ってけいれん発作が生じることがあります。脳卒中急性期（発症～7日以内）の発作は急性症候性発作として<strong>約5～10%程度</strong>の患者に起こりうる現象です<sup>[24]</sup>。</p>
+<div class="important-box"><strong>📋 重要</strong><br />高齢者で初めて発作を起こした場合は<strong>脳卒中の鑑別が最重要</strong>になります。実際、<strong>高齢初発てんかんの原因の最多が脳血管障害</strong>であり<sup>[25]</sup>、現場でも見逃しが多いので注意が必要です<sup>[26]</sup>。</div>
+<p>脳卒中による発作では<strong>局所神経症状（片麻痺・構音障害など）</strong>を伴うことが多く、発作後もそうした神経脱落所見が持続する場合は直ちに頭部画像検査を行います。発作が治まっても麻痺が残存する場合、それは単なるポストイクトルではなく脳卒中そのものかもしれません。救急外来ではまず<strong>CTで頭蓋内出血</strong>の有無を確認し、必要に応じてMRIや血管画像を追加します。</p>
+</div>
+</details>
+<h3>てんかん発作とPNESの比較</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">項目</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">てんかん発作</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">PNES（心因性発作）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>誘因</strong></td>
+<td>突然発症</td>
+<td>心理社会的ストレス</td>
+</tr>
+<tr>
+<td><strong>持続時間</strong></td>
+<td>数十秒～数分</td>
+<td>長い（しばしば20分以上）</td>
+</tr>
+<tr>
+<td><strong>発作中の眼</strong></td>
+<td>開眼していることが多い</td>
+<td>閉眼が多い<sup>[21]</sup></td>
+</tr>
+<tr>
+<td><strong>体動</strong></td>
+<td>規則的</td>
+<td>不規則・左右非対称</td>
+</tr>
+<tr>
+<td><strong>舌咬傷</strong></td>
+<td>典型的<sup>[6]</sup></td>
+<td>稀</td>
+</tr>
+<tr>
+<td><strong>失禁</strong></td>
+<td>あり<sup>[8]</sup></td>
+<td>稀</td>
+</tr>
+<tr>
+<td><strong>発作後意識混濁</strong></td>
+<td>典型的<sup>[21]</sup></td>
+<td>稀</td>
+</tr>
+</tbody>
+</table>
+<h2 id="initial-management">初期対応の優先順位（ABCと発作中・発作後の対応）</h2>
+<div class="emergency-box"><strong>🚨 鉄則</strong><br />救急外来でけいれん発作患者を受け入れる際の初期対応は<strong>「ABC優先」</strong>が鉄則です<sup>[27]</sup>。発作そのものに気を取られて基本的な救命処置をおろそかにしないよう注意します。</div>
+<h3>発作中の対応</h3>
+<p>まず<strong>気道（Airway）</strong>と<strong>呼吸（Breathing）</strong>、<strong>循環（Circulation）</strong>の安全確保を迅速に評価します<sup>[27]</sup>。激しくけいれんしている最中でも可能な範囲で頸動脈の拍動や呼吸状態を確認し、必要なら酸素投与や気道確保を開始します<sup>[28]</sup>。特に心停止や重篤な不整脈が疑われる場合は迷わず蘇生処置を優先してください<sup>[23]</sup>。並行して頭部を打っていないか確認し、周囲の危険物を除去するなど外傷予防に努めます。可能であれば患者の体位を整え、嘔吐物誤嚥防止のため顔を横向きにします。また歯の噛み締めが強い場合、無理に開口して器具を挿入しようとすると歯牙損傷や窒息のリスクがあるため原則として何も口腔内に入れないようにします。</p>
+<div class="important-box"><strong>📋 5分ルール</strong><br />けいれんが持続する場合（目安として<strong>約5分以上</strong>）は、ただちに発作を止める薬剤投与を検討します<sup>[28]</sup>。</div>
+<p>初期治療の第一選択は<strong>ベンゾジアゼピン系薬の静脈投与</strong>です<sup>[28]</sup>。具体的には<strong>ジアゼパム（セルシン®）5～10mg静注</strong>、<strong>ロラゼパム2～4mg静注</strong>、<strong>ミダゾラム5～10mg静注</strong>などが推奨されます<sup>[28]</sup>。</p>
+<p>救急隊から「けいれん発作が継続中」とホットライン連絡が入った時点で、研修医のToDoとして以下の準備を迅速に行いましょう<sup>[29]</sup>：</p>
+<ul>
+<li><strong>モニター装着と酸素投与の準備</strong> – 心電図、パルスオキシメータ、血圧計をセットし、必要に応じて酸素マスクを用意します<sup>[30]</sup>。</li>
+<li><strong>静脈ルート確保</strong> – できれば太い留置針を確保し、同時に血液検査用採血も行います<sup>[31][29]</sup>。ルート確保が難しい場合は、後述のように筋注や経鼻・直腸投与など代替経路で薬剤投与を検討します<sup>[32]</sup>。</li>
+<li><strong>血糖測定</strong> – 携帯用グルコメーター（デキストロ）で直ちに血糖値を確認します<sup>[33]</sup>。低血糖発作であればブドウ糖投与で発作が停止する可能性が高く、また低血糖を放置すれば脳損傷に至るため最優先の修正可能因子です。</li>
+<li><strong>1stライン薬の準備</strong> – ベンゾジアゼピン系薬剤（例：ジアゼパムアンプル等）を用意し、医師の指示があれば速やかに投与できるようスタンバイします<sup>[34][29]</sup>。必要量をシリンジに準備しておきましょう。</li>
+<li><strong>救援の要請</strong> – 重積状態が疑われる場合、研修医1人では手が足りません。近くの上級医や看護師にも応援を依頼し、気道確保班・静脈路班など役割分担して対応します<sup>[35]</sup>。</li>
+</ul>
+<p>発作が持続している場合は、準備したベンゾジアゼピンを静注します。IVライン確保が難しい場合、<strong>筋注や経鼻・直腸投与</strong>も選択肢です。例として<strong>ミダゾラム筋注（成人10mg、小児0.2mg/kg）</strong>や<strong>ジアゼパム坐薬（ダイアップ® 10～20mg）</strong>が有効です<sup>[32][36]</sup>。</p>
+<p>ベンゾジアゼピン投与後もけいれんが止まらなければ、<strong>3～5分おきに追加投与</strong>し最大許容量まで漸増します<sup>[35]</sup>（ジアゼパムなら合計<strong>20mg程度</strong>まで<sup>[35]</sup>、ミダゾラムなら必要に応じ繰り返し投与）。発作が止まらないまま5分以上経過した場合は<strong>てんかん重積状態（SE）</strong>とみなし、後述するアルゴリズムに沿って第二段階の治療（抗てんかん薬の追加投与）に移ります<sup>[37]</sup>。なお、この段階で気道確保が不十分（SpO₂低下や誤嚥の恐れ）であれば挿管を検討し、人工呼吸管理の体制を整えます<sup>[38]</sup>。</p>
+<h3>発作後の対応</h3>
+<p>けいれん発作が停止したら、引き続きABCの再評価を行います。自発呼吸がある場合でも、患者が意識消失後で舌根沈下しやすいため気道確保措置（頭部後屈やエアウェイ挿入、吸引）が必要です。嘔吐物や血液が口腔内にあれば迅速に吸引し、バイタルサイン（呼吸数、SpO₂、心拍、血圧、体温）を測定します。また<strong>回復体位（側臥位）</strong>をとらせて気道確保に努めます。発作が治まったからといって油断せず、患者の意識レベルと全身状態を厳重に観察しましょう<sup>[39]</sup>。</p>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />「あとは意識が戻るのを待つだけ」と安堵するのは禁物です<sup>[39]</sup>。発作後数分で意識清明となるケースもありますが、重積状態後では意識障害が遷延し非けいれん性重積に移行している可能性もあります。</div>
+<p>意識が回復しない場合は早期に専門医コンサルトし、必要なら脳波モニタリングを検討します。</p>
+<p>外傷の有無も改めて評価します。頭部外傷の兆候（皮下血腫、皮膚裂傷）、舌や口腔粘膜の裂傷、四肢の打撲傷や骨折がないか全身を確認します。舌咬傷や失禁が未確認であればこの時点でチェックし、あれば記録します<sup>[40]</sup>。発作に伴う圧挫傷による<strong>横紋筋融解</strong>の可能性もあるため、四肢の硬さや尿の色（ミオグロビン尿）にも留意します<sup>[40]</sup>。心肺や腎へのストレスも大きいため、心電図モニタで不整脈やST変化の有無、呼吸音の聴診（誤嚥性肺炎や神経原性肺水腫の兆候）、尿量チェックなど全身管理に努めます<sup>[41]</sup>。</p>
+<p>患者の意識がある程度回復してきたら、病歴聴取に移ります。既往歴や内服薬、直前の状況について本人または家族から情報収集します（詳細は後述）。特に<strong>初発のけいれん発作</strong>では放置できない原因疾患が隠れていないかを探る必要があり、発作停止後ただちに原因検索モードに切り替えることが重要です<sup>[41]</sup>。</p>
+<h2 id="emergency-tests">緊急検査の適応と優先順位（画像検査・血液検査）</h2>
+<p>発作患者の評価では「<strong>命に関わる原因の鑑別</strong>」が最優先です。発作が落ち着いたら可能な限り早く必要な検査を行いましょう。ただし検査の優先順位は患者の状態や鑑別疾患によって異なります。</p>
+<h3>血液検査</h3>
+<p>けいれん発作ではまず<strong>血糖値を指先採血</strong>で確認するのが定石です<sup>[33]</sup>（低血糖発作はブドウ糖投与で可逆的なため見逃し厳禁）。続いて採血による臨床検査を行います<sup>[26]</sup>。</p>
+<p><strong>一般項目</strong>では<strong>電解質（Na, K, Ca, Mg）</strong>や腎機能（尿素窒素・クレアチニン）、肝機能、炎症反応(CRP)などを測定します。特に<strong>低Na血症</strong>は発作原因として頻度が高く（Na <strong>&lt;115 mEq/L</strong>でリスク高<sup>[42]</sup>）、また<strong>アルコール関連</strong>（飲酒による低血糖や離脱による発作）も多いため血中アルコールや肝酵素も確認します<sup>[43]</sup>。</p>
+<p>発作後であれば<strong>血中乳酸</strong>が上昇していることが多く（全身けいれんによる代謝性アシドーシス）参考になります<sup>[23]</sup>。また<strong>アンモニア</strong>も約7割で一過性に上昇するとの報告があり<sup>[23]</sup>、痙攣か失神か判断に迷うケースでは手がかりとなり得ます（ただし重症肝障害があれば常時高アンモニア血症のため参考になりません）。<strong>女性では妊娠検査</strong>も重要です。妊娠判明時には<strong>子癇発作（妊娠高血圧腎症）</strong>の可能性や、今後の画像検査選択にも影響するため必ず確認します。</p>
+<h3>頭部画像検査</h3>
+<p>初回発作の場合や局所神経学的所見がある場合、高齢者発作、外傷の可能性がある場合などは緊急に<strong>頭部CT</strong>を行います<sup>[26]</sup>。CTは<strong>脳出血</strong>や広範な脳梗塞、腫瘍の有無を迅速に評価でき、特に治療可能な病変（血腫除去が必要な出血など）の見極めに有用です<sup>[26]</sup>。</p>
+<div class="important-box"><strong>📋 重要</strong><br />初発けいれんの<strong>約40%は脳卒中・外傷・中枢感染症など急性症候性発作</strong>であるとの報告もあり<sup>[44]</sup>、CTで明らかな病変がなくても見逃しを防ぐためルーチンで撮像することが推奨されています<sup>[26]</sup>。</div>
+<p>CTで異常がなくても、てんかんの診断目的には<strong>MRI</strong>が有用です。MRIはより微細な構造異常（海馬硬化や小さな脳梗塞、皮質形成異常など）を検出できるため、入院中または後日の精査として計画します<sup>[45]</sup>。特に<strong>成人以降の初発てんかん発作ではMRI施行が強く推奨</strong>されます<sup>[45]</sup>。</p>
+<h3>髄液検査（腰椎穿刺）</h3>
+<p>発熱や髄膜刺激徴候を伴う場合、<strong>中枢神経感染症（髄膜炎・脳炎）</strong>を疑い腰椎穿刺による髄液検査を行います。脳炎（例えば<strong>ヘルペス脳炎</strong>）はけいれん発作を伴いやすく<sup>[43]</sup>、早期診断と治療（抗ウイルス薬）が予後を左右します。ただし髄液検査の前に頭部画像で頭蓋内占拠病変や重度の脳浮腫がないことを確認します。けいれん発作後には一時的に髄液中の白血球が上昇することがある点に留意しつつ（痙攣後髄液細胞増多といい、診断の紛らわしさに注意）、総合判断します。</p>
+<h3>心電図・心エコー</h3>
+<p>心原性失神との鑑別や、不整脈によるけいれん（二次性脳虚血）を疑う場合には心電図モニタリングを継続します。特に高齢者や心疾患の既往がある患者では発作の誘因が致死的不整脈ではないか慎重に評価します。必要に応じてホルター心電図や心エコーも検討しますが、救急外来ではまず12誘導心電図で虚血所見やQT延長などがないか確認します<sup>[46]</sup>。</p>
+<p>以上のように、原因検索と治療の同時並行が求められる点が発作診療の難しいところです<sup>[47]</sup>。血液・画像・髄液等の結果を総合して原因が判明すれば、その治療（例：電解質異常の補正、抗菌薬投与、血腫除去など）を速やかに開始します。特に<strong>頭蓋内出血や脳梗塞</strong>は頻度が高い原因でありながら見逃されると重大な転帰をとるため、常に念頭に置いて評価しましょう<sup>[26]</sup>。</p>
+<h2 id="status-epilepticus">てんかん重積状態（SE）の定義と治療アルゴリズム</h2>
+<h3>定義と対応のタイミング</h3>
+<p><strong>てんかん重積状態（status epilepticus, SE）</strong>とは、けいれん発作が長時間持続するか、または発作間欠期に意識が回復しないまま反復する状態を指します<sup>[48]</sup>。従来は「30分以上発作が続く状態」と定義されてきましたが、近年のガイドラインでは<strong>5分以上続くけいれん発作はSEの早期段階（early SE）</strong>とみなし治療開始の適応としています<sup>[49]</sup>。</p>
+<div class="emergency-box"><strong>🚨 5分ルールの重要性</strong><br />これは、5分を超えて発作が持続すると自然停止しにくくなり、20～30分を超えると神経細胞の不可逆的障害や転帰不良のリスクが上昇するためです<sup>[50]</sup>。したがって<strong>「5分」という時間がSE対応のターニングポイント</strong>となります。</div>
+<h3>治療アルゴリズム：段階的アプローチ</h3>
+<p>けいれん重積状態の治療は時間経過に沿った段階的介入が原則です<sup>[34]</sup>：</p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">段階</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">タイミング</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">治療内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第一段階<br />（Stage 1）</strong></td>
+<td>発作開始から<br /><strong>5分</strong>を目安</td>
+<td><strong>ベンゾジアゼピン系薬剤</strong>の投与で発作の"初期消火"を行う<sup>[28]</sup></td>
+</tr>
+<tr>
+<td><strong>第二段階<br />（Stage 2）</strong></td>
+<td><strong>10～20分</strong>頃まで</td>
+<td><strong>ホスフェニトイン</strong>（またはフェニトイン）や<strong>フェノバルビタール</strong>、<strong>レベチラセタム</strong>など静脈投与可能な抗てんかん薬を追加<sup>[51]</sup></td>
+</tr>
+<tr>
+<td><strong>第三段階<br />（Stage 3）</strong></td>
+<td><strong>30分</strong>に達する場合</td>
+<td><strong>ミダゾラム持続投与</strong>、<strong>プロポフォール全身麻酔</strong>、<strong>チオペンタール静注</strong>など全身麻酔薬による鎮静を開始し、人工呼吸管理下において発作の完全終息を図る<sup>[51]</sup></td>
+</tr>
+</tbody>
+</table>
+<p>第三段階の管理はICUで行うのが一般的であり、救急外来では少なくとも<strong>第二段階までの治療を速やかに実施する</strong>ことが求められます<sup>[52]</sup>。</p>
+<h3>具体的な治療薬選択</h3>
+<details class="medical-details" open="open">
+<summary>第一段階（5分以内）：ベンゾジアゼピン系薬剤</summary>
+<div class="medical-details-content">
+<p>日本の救急外来では<strong>ジアゼパム静注</strong>が汎用されています（作用発現が速く効果的<sup>[32]</sup>）。効果不十分な場合は数分おきに追加投与し、年長児以上なら合計<strong>20mg程度</strong>まで増量します<sup>[35]</sup>（※小児では体重あたり0.5mg/kg程度まで）。</p>
+<p>ベンゾ系で停止しなければ重積SEと判断し、できる限り早く第二段階へ移行します<sup>[37]</sup>。</p>
+</div>
+</details><details class="medical-details" open="open">
+<summary>第二段階：抗てんかん薬の追加投与</summary>
+<div class="medical-details-content">
+<p>代表的選択肢は以下の通りです<sup>[38][51]</sup>：</p>
+<p><strong>1. ホスフェニトイン静注</strong></p>
+<ul>
+<li>フェニトイン（アレビアチン®）のプロドラッグで、筋肉注射も可能ですが通常はゆっくり静脈点滴します</li>
+<li>目安量は<strong>20mg PE/kg</strong>（PE=フェニトイン換算量）で、生理食塩水100mlに希釈し<strong>50mg/分以下</strong>の速度で投与します<sup>[53]</sup></li>
+<li>不整脈や低血圧の副作用があるため<strong>心電図モニタ下</strong>で慎重投与します<sup>[54]</sup></li>
+<li>フェニトイン系は発作が止まった後も再発予防効果が期待できるため、基本的に規定量を全て投与します<sup>[54]</sup></li>
+<li>ホスフェニトインは従来のフェニトインより血管障害が少なく投与しやすい利点があります</li>
+</ul>
+<p><strong>2. フェノバルビタール静注</strong></p>
+<ul>
+<li>バルビツール酸系の抗けいれん薬で、<strong>20mg/kg</strong>（成人なら1,000mg前後まで）を目安に静注します<sup>[51]</sup></li>
+<li>血圧低下や呼吸抑制に注意が必要ですが、鎮静効果もあるため発作制御には有効です</li>
+<li>ベンゾジアゼピンとの併用で相乗効果があります</li>
+</ul>
+<p><strong>3. レベチラセタム静注</strong></p>
+<ul>
+<li>比較的新しい抗てんかん薬で、商品名<strong>イーケプラ®</strong></li>
+<li><strong>20～60mg/kg</strong>（成人では初回2,000～3,000mgが多い）を15分以上かけ点滴静注します<sup>[51]</sup></li>
+<li>血圧や呼吸への影響が少なく、安全に投与できる点が利点です</li>
+<li>特に高齢者や肝障害例では第一選択になりえます</li>
+</ul>
+<p><strong>4. バルプロ酸静注</strong></p>
+<ul>
+<li>上記以外では<strong>バルプロ酸ナトリウム（デパコン®静注）</strong>も選択肢です（一般に20～40mg/kgを静注）</li>
+<li>ただし肝機能障害のある患者や妊娠可能な若年女性には避けるべき薬剤です</li>
+</ul>
+<p>施設毎に利用可能な薬剤が異なるため、「自院では何を第二選択薬として備えているか」を把握しておくことが重要です<sup>[55]</sup>。例えばホスフェニトインが無い場合はフェニトインやフェノバルビタールで対応する、レベチラセタムが使えるなら早めに投与する、など状況に応じ柔軟に選択します。</p>
+</div>
+</details><details class="medical-details" open="open">
+<summary>第三段階：全身麻酔薬による治療的鎮静</summary>
+<div class="medical-details-content">
+<p>一般的には<strong>ミダゾラム持続静注（0.05–0.4mg/kg/時で開始し漸増）</strong>か<strong>プロポフォール持続静注（2–10mg/kg/時）</strong>、あるいは<strong>チオペンタール静注（100–200mg静注し必要なら追加）</strong>などを用いて昏睡状態を誘導します<sup>[56]</sup>。これにより発作活動を完全に停止させ、脳の障害進行を防ぎます。ただし鎮静薬は循環抑制作用も強いため人工呼吸管理下でICUにて厳重管理します<sup>[50]</sup>。第三段階まで進むSEは重症であり、神経救急専門医や集中治療医と協力して管理する必要があります。</p>
+</div>
+</details>
+<p>以上が痙攣重積状態のアルゴリズムですが、何より大切なのは「<strong>時間との勝負</strong>」という意識です<sup>[49]</sup>。5分、10分、30分…と時間経過ごとに適切な段階へ治療をエスカレートし、一刻も早い発作制止を目指します<sup>[57]</sup>。高齢者や過去に重積状態の既往がある患者では特に転帰不良のリスクが高いため、初療の段階から積極的かつ計画的に介入しましょう<sup>[58]</sup>。</p>
+<h2 id="history-taking">既往歴・内服歴の聴取ポイント（抗てんかん薬の内服中断・飲み忘れ・アルコールなど）</h2>
+<p>発作患者の背景情報を把握することは、原因究明と再発予防の両面で非常に重要です。以下に問診時に確認すべきポイントを示します。</p>
+<h3>発作の既往と治療歴</h3>
+<p>過去にけいれん発作を起こしたことがあるか、てんかんと診断されているかを確認します<sup>[59]</sup>。既にてんかんで治療中の患者であれば、今回の発作が持病の再発なのか何か誘因があって悪化したのかを考えます<sup>[18]</sup>。一方、発作が今回初めてであれば原疾患検索を最優先しなければなりません<sup>[16]</sup>。また最近類似の発作を起こしていないか（短期間に繰り返していないか）も確認しましょう。24時間以内に複数回発作を起こしていれば何らかの進行性病態を示唆します<sup>[60]</sup>。</p>
+<h3>抗てんかん薬の内服状況</h3>
+<div class="warning-box"><strong>⚠️ 最頻の再発原因</strong><br />てんかんで治療中の場合、現在服用中の抗てんかん薬の種類と用量、<strong>アドヒアランス（飲み忘れの有無）</strong>を確認します。<strong>内服中断や飲み忘れは最も頻度の高い発作再発の原因</strong>です。</div>
+<p>実際、救急外来でてんかん既往の患者が発作を起こした場合、「薬を数日飲み忘れていた」「勝手に減量していた」というケースは少なくありません。内服中であれば血中濃度測定が可能な薬剤（<strong>バルプロ酸、フェニトイン、カルバマゼピン</strong>など）では採血しておき、治療域からの乖離がないかチェックします。</p>
+<p>低濃度であればその場で規定量内服させることも検討します<sup>[61]</sup>。例えば<strong>カルバマゼピン</strong>を飲み忘れて発作になった患者には、救急外来で追加の1錠をその場で服用させることで早期に血中濃度を是正できます<sup>[61]</sup>。また退院時には「<strong>処方通りきちんと服薬すること</strong>」を強調し指導します<sup>[62]</sup>。もし治療薬の副作用などで自己中断していた場合は、副作用対策を講じつつ服薬再開を促します<sup>[62]</sup>。今回の発作を契機に治療方針（薬剤選択や量）が変わる可能性もあるため、主治医（または神経内科専門医）への早期受診を手配します<sup>[63]</sup>。</p>
+<h3>最近開始・中止した薬剤</h3>
+<p>新たに開始した薬や中止した薬がないかも確認します。一部の医薬品は<strong>発作閾値を下げ、けいれんを誘発</strong>し得ます。例えば<strong>抗うつ薬</strong>（三環系や一部のSSRI）、<strong>抗菌薬</strong>（ペニシリン系・キノロン系・イミペネム等）、<strong>鎮痛薬</strong>（ペンタゾシンやトラマドール）、<strong>喘息治療薬</strong>（テオフィリン製剤）などです<sup>[64][65]</sup>。特に高齢者では複数の薬剤を飲んでいるケースが多く、相互作用も含め薬剤誘発性発作に注意が必要です<sup>[66][67]</sup>。もし疑わしい薬剤があれば主治医と相談の上で減量・中止を検討します（この際、単に抗てんかん薬を増やすのでは本質的解決にならない点に留意）。</p>
+<h3>直近の生活状況（誘因）</h3>
+<p><strong>睡眠不足</strong>や過度の疲労、ストレス、光刺激（ゲームやパソコン作業）、過度の飲酒などは発作を誘発しやすい因子です。それぞれ「ここ数日よく眠れていましたか？」「徹夜や長時間労働は？」「最近強いストレスは？」「発作時に特殊な光（ディスコライトなど）は？」「どのくらいお酒を飲みましたか？」といった具体的な聞き方で情報を集めます。</p>
+<div class="important-box"><strong>📋 アルコールと発作の関係</strong><br />特に<strong>アルコール</strong>は発作と関係が深いです。急性アルコール中毒では低血糖や不整脈による発作があり得ますし、慢性多量飲酒者が急に飲酒を止めた場合<strong>アルコール離脱けいれん</strong>が典型的に起こります<sup>[43]</sup>。</div>
+<p>またアルコール自体が睡眠を阻害し発作閾値を下げます。患者が大酒家の場合、「発作予防のため禁酒が必要」と説明し、関連する相談窓口につなぐことも考慮します。</p>
+<h3>その他の既往歴</h3>
+<ul>
+<li><strong>脳卒中歴</strong>（過去の脳梗塞が慢性てんかんの原因になりうる）</li>
+<li><strong>頭部外傷歴</strong>（慢性硬膜下血腫など生じていないか検討）<sup>[25]</sup></li>
+<li><strong>脳炎/髄膜炎の既往</strong></li>
+<li><strong>認知症</strong>（アルツハイマー型認知症ではけいれん合併率が高い）</li>
+<li><strong>妊娠の有無</strong>（くどいようですが再確認）<sup>[43]</sup></li>
+<li><strong>腎不全・肝不全</strong>（代謝異常による痙攣を起こしやすい）<sup>[43]</sup></li>
+</ul>
+<p>家族歴については、小児なら熱性けいれんやてんかん家系の有無、成人でもてんかん症例では遺伝性素因があることもわずかながらあり得ます。</p>
+<p>こうした問診事項は盛りだくさんですが、発作停止後の限られた時間でポイントをかいつまんで聞き取ることが求められます。可能であれば問診をしながら検査や処置を進める「<strong>並行思考</strong>」が重要です<sup>[47]</sup>。研修医の先生方は、発作対応時に「原因の聴取」「治療（薬剤投与）」「検査オーダー」の三軸を同時にこなす意識を持ちましょう<sup>[47]</sup>。</p>
+<h2 id="avoiding-misdiagnosis">誤診を避けるポイント（目撃者情報・ビデオ記録の活用など）</h2>
+<p>てんかん発作は診断が難しいケースも多く、誤診を避けるための工夫が重要です。特に<strong>PNES（心因性発作）</strong>をてんかんと誤診して不必要な抗てんかん薬治療を続けてしまったり、逆にてんかん発作をストレスのせいと見逃してしまったりすると、患者にとって大きな不利益となります。</p>
+<h3>目撃者から詳しく話を聞く</h3>
+<p>繰り返しになりますが、発作の瞬間を実際に見た人からの情報は極めて貴重です<sup>[23]</sup>。救急隊員や家族・同僚など目撃者がいれば、発症時の状況（姿勢、前兆、発作の様子、意識の有無、持続時間、終了後の状態）を時間経過に沿って詳細に聞き取ります<sup>[23]</sup>。例えば「立っているときに発症したのか」「発作後すぐ意識は戻ったのか」「けいれん中に呼びかけへ反応したか」などの情報は、失神や心因性の可能性を判断する助けになります<sup>[23]</sup>。目撃者が複数いれば複合的に情報を集め、食い違いがないか確認します。</p>
+<h3>ビデオ記録の活用</h3>
+<p>最近ではスマートフォンで発作時の様子を録画している家族も多くいます。可能であればその映像を提供してもらい、医療者側で確認します。ビデオ映像からは発作の型（焦点発作か全般発作か、強直か間代か）、身体所見（眼球偏向の方向、けいれんの左右差、四肢の姿勢）、発作持続時間など多くの手がかりが得られます。特にPNESでは不自然な動きが見られることが多く、診断の参考になります。患者プライバシーに配慮しつつ、可能なら発作時の動画を撮っておくよう家族に指導するのも有用です。実際、専門外来では家族が撮影した動画を参考に診断することが増えています。</p>
+<h3>身体所見の見逃し防止</h3>
+<p>前述したような発作特有の身体所見（<strong>舌咬傷、失禁、postictalの点状出血斑、Todd麻痺</strong>など）は必ず全例でチェックします。これらは<strong>発作の存在証明</strong>になるだけでなく、時に<strong>発作の焦点側を示唆</strong>する手がかりにもなります<sup>[12][13]</sup>。たとえば舌の左右どちらを噛んだかで焦点側を推定できる可能性があります<sup>[68]</sup>（発作側の反対側の舌縁に咬傷ができることが多く、再現性があれば全般発作ではなく焦点発作だと推測できる<sup>[69][70]</sup>）。また発作後の片麻痺（Todd麻痺）は脳卒中と紛らわしいですが、時間経過で回復すればてんかん発作由来の麻痺と判断できます。このようにその場でしか得られないフィジカルサインを見逃さないことが、正しい診断への近道です<sup>[69]</sup>。</p>
+<h3>検査所見の活用</h3>
+<p>発作直後の<strong>血中CKや乳酸値上昇、アンモニア上昇</strong>などは前述の通り発作を裏付ける所見です<sup>[23]</sup>。また余裕があれば救急外来でも脳波検査を行うことで、発作後であれば徐波の出現（Postictal slowing）など発作後所見が確認できる場合があります。近年では発作時のみ装着する簡易脳波計も実用化されつつあり、非けいれん性重積状態の見極めに用いられることがあります。ただし一般の救急現場では脳波は難しいため、発作を疑う所見と疑わしくない所見を総合して判断します。</p>
+<h3>常に広い鑑別視野を持つ</h3>
+<div class="warning-box"><strong>⚠️ 決めつけは危険</strong><br />「てんかんもちの患者＝今回もてんかん発作だろう」と決めつけてしまうのは非常に危険です<sup>[71]</sup>。普段と違う点がないか必ず自問し、少しでもおかしければ別の原因を検討します。</div>
+<ul>
+<li>「<strong>高齢の既往なし患者の初回けいれんはまず原因検索</strong>」<sup>[72][73]</sup></li>
+<li>「<strong>既知てんかん患者でも発作が様変わりしたら他原因を探す</strong>」<sup>[23]</sup></li>
+</ul>
+<p>といった原則を頭に入れておきましょう。また逆に、痙攣様だからといって何でもてんかん薬を使うのではなく、失神や中毒、代謝異常の可能性も常に念頭に置きます。診断に自信が持てない場合や鑑別に迷う場合は、早めに上級医や専門科にコンサルトすることも大切です。</p>
+<h2 id="post-seizure">発作後の説明・フォローアップ指導</h2>
+<p>急性期の対応が終わったら、患者・家族への説明と退院後の指導を適切に行います。救急外来での説明次第で、患者さんのその後の生活の質や治療継続に大きな影響を与えるため、丁寧にポイントを伝えましょう。</p>
+<h3>今回の発作の原因と再発リスク説明</h3>
+<p>検査の結果判明した原因疾患があればそれについて説明します（例：「CTで脳出血が見つかったので、発作はその影響でした」や「血糖値が著しく低下して起こった発作でした」など）。原因が特定できない場合でも、発作の様子や既往から「おそらくてんかんの可能性が高い」あるいは「誘因が取り除かれれば再発しないかもしれない」など、考えられるシナリオと再発可能性について言及します。初回発作の場合、今後てんかんと診断されるかどうかは経過を見ないと分からない旨を正直に伝え、安易に断言しないよう注意します。</p>
+<h3>発作時の対処法</h3>
+<p>患者本人やご家族に対し、再度発作が起きたときの対処法を教育します。具体的には：</p>
+<ul>
+<li>「発作が起きても周囲は慌てず、まず安全な場所に寝かせて下さい」</li>
+<li>「硬いものを口に入れようとしないで下さい」</li>
+<li>「発作が<strong>5分以上続いたら救急車を呼んで下さい</strong>」</li>
+<li>「発作が止まった後は横向きに寝かせて嘔吐物が喉に詰まらないようにして下さい」</li>
+</ul>
+<p>また可能であればスマホで動画を撮影しておいてもらえると診断に役立つこと、発作時間を計測することの重要性（体感時間より実際は短いことが多いため）なども伝えます。</p>
+<h3>生活上の注意</h3>
+<ul>
+<li><strong>睡眠不足を避けること</strong></li>
+<li><strong>飲酒は節度を守ること</strong>（大量飲酒や断酒時のリスクを説明）</li>
+<li><strong>入浴時や高所作業時の注意</strong>などを指導します</li>
+</ul>
+<p>具体的には「お風呂は長湯や深夜を避け、可能なら家族が近くにいるときに入る」「川や海で泳ぐのは控える（特に一人で泳がない）」「高い所に登る作業や重機の操作は控える」などです。てんかん発作は日常生活での事故リスクにつながるため、発作が再発する可能性があるうちは安全第一の行動を取るよう助言します。</p>
+<h3>運転に関して</h3>
+<div class="warning-box"><strong>⚠️ 法律的な注意事項</strong><br />自動車運転は<strong>法律的な観点</strong>からも慎重な指導が必要です。日本の道路交通法では、過去半年以内に意識消失を伴う発作があった場合、運転免許の取得・更新が認められない可能性があります<sup>[74]</sup>。</div>
+<p>そのため今回意識を失う発作があった患者には少なくとも今後しばらく（発作なく半年間程度）は運転を控えるよう指示します（てんかんであれば2年）<sup>[74]</sup>。特に職業運転手の場合は復職に関わる重要事項なので、必要なら主治医とも連携しつつ明確に説明します。また患者が運転免許を保持している場合、主治医による診断書提出や免許条件の確認など手続きも発生するため、早めに専門医に繋ぐようにします。</p>
+<h3>服薬指導</h3>
+<p>抗てんかん薬を新規に開始した場合や、既存処方の変更があった場合は、用法用量と継続内服の重要性についてよく説明します。とくに<strong>自己判断での減量・中止は厳禁</strong>であること、何か副作用が出たらすぐ医師に相談することを伝えます。服薬カレンダーやピルケースの活用など、飲み忘れ防止策も案内します。既に治療中の患者で発作再発した場合は「今回の発作をきっかけに主治医が薬の量を調節するかもしれないので、必ず受診してください」と伝え、勝手な調整をしないよう念押しします。</p>
+<h3>専門医へのフォローアップ</h3>
+<p>救急対応後は<strong>神経内科または脳神経外科など専門医への紹介状</strong>を書き、できるだけ早めに受診してもらいます<sup>[63]</sup>。入院治療となった場合も退院後の外来フォローが重要です。専門医の診察では必要に応じ脳波検査やMRI検査を行い、てんかんと診断された場合は長期治療計画が立てられます。患者には「今後の検査と治療方針のため専門科を受診しましょう」と説明し、その意義を理解してもらいます。</p>
+<h3>患者への安心感を与える</h3>
+<p>初めて発作を起こした患者や家族は不安で一杯です。「突然けいれんして倒れるなんて自分はもう普通の生活ができないのでは」と心配する方もいます。医師として、適切に対処すれば普段の生活を送れる可能性が十分あること、実際多くの患者さんが日常生活や仕事を続けていることを伝え、過度に恐れなくてよい旨を説明します。とはいえ根拠のない楽観も禁物なので、再発リスクや必要な制限については正直に伝えつつ、患者に寄り添ったメッセージを送ることが大切です。</p>
+<p>以上の説明事項を、患者本人だけでなく家族とも共有することで、家庭内でのサポート体制を築く助けとなります。特に高齢発作患者では家族の理解と協力が不可欠です。パンフレットや患者向けガイド（日本てんかん協会の資料など）があれば手渡し、疑問があれば後日の外来で再度説明することも約束します。救急外来自体は短時間の関わりですが、この場での適切な指導が患者のその後の生活を左右し得ることを念頭に置きましょう。</p>
+<h2 id="case-study">症例検討：診断・対応プロセスの実際</h2>
+<p>最後に、以上の知識を踏まえたケーススタディを通じて、救急外来での発作対応の流れを確認します。</p>
+<details class="medical-details" open="open">
+<summary>症例：82歳女性、高血圧性脳内出血に伴う急性症候性てんかん発作</summary>
+<div class="medical-details-content">
+<h3>症例</h3>
+<p><strong>82歳女性。</strong>高血圧と脂質異常症で内服治療中。これまでけいれん発作を起こしたことはない。ある朝、自宅で家族と会話中に突然意識を消失し、全身性のけいれん発作を認めた。四肢は突っ張った後ガクガクと震え、目は左方向を向いて固定されていたという。家族が慌てて119番通報。救急隊到着時も発作は継続し（既に約7分経過）、バイタルサインは血圧<strong>160/90mmHg</strong>、心拍<strong>110/分</strong>、呼吸数<strong>20/分</strong>、SpO₂ <strong>88%</strong> (酸素投与なし) であった。気道は保たれており呼吸はあるが、大声で呼びかけても反応がなく<strong>JCS300</strong>の意識レベル。救急隊は気道確保しながら酸素投与を開始、ストレッチャー搬送した。</p>
+<h3>救急外来での対応</h3>
+<p>ホットライン連絡で「高齢女性が全身けいれん発作を起こし搬送中、発作持続約7分」との情報が入ったため、救急外来では研修医が静脈路確保セットと酸素投与、モニター類、<strong>ジアゼパム静注</strong>の準備を行いました<sup>[29]</sup>。</p>
+<p>患者到着時も全身けいれんが続いていたため、到着直後にルート確保と同時に<strong>ジアゼパム静注10mg</strong>を投与しました<sup>[28]</sup>。けいれんは約1分後に終息し、深い呼吸が数回みられたため気道確保しつつモニター監視を継続しました。バイタルサインは血圧150/85、心拍100/分、SpO₂ 95%(酸素6Lマスク)で安定傾向。体温は<strong>37.5℃</strong>と軽度上昇していました。</p>
+<p>発作停止後も患者は反応が鈍く呼名に開眼しません。両側の瞳孔は等大で対光反射はありました。まず指先採血で血糖値は<strong>128mg/dL</strong>と低血糖は否定。血液検査用の採血を行い、電解質や炎症反応、肝腎機能、血中薬物などをオーダーしました。同時に看護師が尿道カテーテルを挿入し、尿を採取。尿は淡赤色だったため尿中ミオグロビンも依頼しました。</p>
+<p>身体所見では、<strong>舌の右縁に出血を伴う咬傷</strong>を認めました（家族にも確認してもらい、てんかん発作である可能性が高いことを説明）。右額部に皮下血腫があり、転倒時に顔面を打ったと推測されました。左上下肢に軽度の麻痺様の緩慢さがありましたが、痛み刺激には逃避反応を示します。右半身は自発運動良好だが左半身の動きが鈍いことから、発作焦点の存在あるいは脳卒中の可能性を考えました。</p>
+<p>既往を家族に確認すると「てんかんを含め特に神経疾患の既往はなく、高血圧で降圧剤を飲んでいる」程度とのこと。内服薬はCa拮抗薬とスタチンで、発作を誘発しそうな薬剤はありません。<strong>初回発作かつ高齢者</strong>であるため、これは<strong>急性症候性発作</strong>の可能性が高いと判断し<sup>[16]</sup>、ただちに<strong>頭部CT</strong>を施行しました。</p>
+<h3>診断と経過</h3>
+<p>CTの結果、<strong>左大脳半球の頭頂葉に径3cm大の出血</strong>が認められました（<strong>高血圧性脳内出血</strong>と考えられる所見）。幸い脳ヘルニアの所見はなく、脳室穿破もありませんでした。出血部位が運動野近傍であり、これがけいれん発作と右半身の麻痺の原因と判断されました。</p>
+<p>以上より診断は「<strong>高血圧性脳内出血に伴う急性症候性てんかん発作</strong>」です。</p>
+<p>患者はICUに入室し脳神経外科で治療となりました。幸い意識は数時間で清明となり、右半身麻痺は軽度残存しましたが嚥下障害なく会話も可能でした。けいれん発作は<strong>ジアゼパム投与以降再発せず</strong>経過しています。脳出血に対して降圧と脱水予防の保存的加療が行われ、発症から1週間で一般病棟に転床しました。</p>
+<p>発作予防のため抗てんかん薬（<strong>レベチラセタム内服500mg 1日2回</strong>）が開始されました。これは再発リスクが高い病変による発作であったため予防的に導入したものです（ガイドライン上は賛否あるものの、主治医判断で導入）<sup>[44]</sup>。今後はリハビリテーションを行いながら高血圧コントロールを徹底し、てんかん発作についても経過観察していく方針です。</p>
+<p>家族には「脳出血が原因の発作であり、脳出血の治療が大事であること」「再発の可能性はゼロではないが、新たな抗てんかん薬で様子を見ること」「少なくとも<strong>2年間は運転禁止</strong>であること」などを説明しました。家族は「てんかんそのものではないのですね」と少し安心した様子でしたが、「また発作が起こったらどうすれば…」と不安も口にしていました。そこで発作時の対処法（安全確保や時間計測、救急要請の判断基準）を改めて説明し、必要なら主治医とともに外来で繰り返し指導することを約束しました。</p>
+<h3>考察</h3>
+<p>この症例は、高血圧患者が脳出血によってけいれん発作を起こしたケースでした。ポイントは「<strong>初発の全身けいれん＝急性疾患の可能性大</strong>」と考え、<strong>ABC管理と並行して原因検索を速やかに行った</strong>ことです<sup>[49][34]</sup>。実際CTですぐに脳出血が確認できたため、適切な専門治療に繋げることができました。また発作自体の治療として<strong>ジアゼパムを速やかに投与</strong>し、長引く痙攣を止められたのも重要でした。<strong>5分以上の発作は迷わず早期に薬剤投与開始</strong>するべきであることを再確認できるケースです<sup>[49][34]</sup>。</p>
+<p>一方で、一度発作が止まったからといって安心せず、脳卒中の診断を見逃さなかった点も教訓的です。高齢者では<strong>脳血管障害がてんかんの主要因</strong>であり、その鑑別を常に意識する必要があります<sup>[25][26]</sup>。</p>
+<p>さらに、発作後に左半身の筋力低下が残存していたのは脳出血の影響でしたが、トッド麻痺との鑑別が問題となりました。今回の場合CTですぐ血腫が見つかったため迷いはありませんでしたが、画像で異常がなく麻痺が持続している場合はしばらく経過観察して麻痺が改善するか確認することでトッド麻痺か否か評価します。麻痺が数時間～1日で改善すればトッド麻痺の可能性が高いですが、改善しなければMRIなど追加検査で見逃し病変がないか精査が必要です。</p>
+<p>最後に、救急外来での発作対応では患者・家族への初期説明も重要です。この症例でも家族は「てんかん発作」=「てんかんという病気」と受け取り不安になっていました。医療者は発作の原因や今後の見通しについて丁寧に説明し、誤解を解く必要があります。特に初発のけいれん発作では患者家族の不安が大きいため、「今回の発作=てんかん疾患の確定診断ではない」こと、しかし「再発する可能性は否定できないので経過観察とフォローが大事」なことを伝えるバランス感が求められます。また運転免許や日常生活上の注意についてもこの段階で触れておくことで、後日の専門外来での指導がスムーズになります。</p>
+<p> </p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F10%2F27%2F045612" title="心因性非てんかん発作（PNES）総説 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/10/27/045612">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F10%2F04%2F063717" title="てんかん発作と乳酸アシドーシスの関連 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/10/04/063717">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F10%2F02%2F115704" title="日本におけるてんかん患者の運転免許制度 – 中型・準中型免許を中心に - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/10/02/115704">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F07%2F03%2F104800" title="持続する発作への初期対応とてんかん重積 vs 心因性非てんかん発作（PNES）の鑑別 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/07/03/104800">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F07%2F02%2F091738" title="てんかん診療の過去20年における進歩と今後の展望：診断、治療、病態解明から社会的課題まで - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/07/02/091738">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F06%2F12%2F082404" title="抗てんかん薬の相互作用詳解：代謝経路から臨床対策まで - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/06/12/082404">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F28%2F104150" title="焦点性てんかん重積状態の急性期〜亜急性期MRI所見：DWI・FLAIRを中心に - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/28/104150">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F25%2F153035" title="てんかん重積状態に対するベンゾジアゼピン治療：若手医師のための実践ガイド - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/25/153035">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F25%2F105101" title="全身けいれん発作後のもうろう状態への対応ガイド - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/25/105101">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F21%2F075425" title="全般てんかんに対する抗てんかん薬の推奨と薬剤選択 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/21/075425">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentry%2F2025%2F05%2F20%2F084826" title="アルコール離脱症候群（AWS）の包括的解説 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entry/2025/05/20/084826">hinyan1016.hatenablog.com</a></cite></p>
+<p> </p>
+</div>
+</details>
+<h2 id="references-section">参考文献</h2>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=mypOzbYf878" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">〖デキレジ〗けいれん - ERでの初期対応 - | Antaa Slide<br />https://slide.antaa.jp/article/view/aa57decf37724e0e</span></div>
+<div class="ref-item"><span class="ref-numbers">2 3 4 25 37 38 40 55</span> <span class="ref-content">けいれん、てんかん、意識障害―研修医からできるトリアージと専門医へのコンサルテーション―vol.3｜民間医局コネクト<br />https://connect.doctor-agent.com/article/column424/</span></div>
+<div class="ref-item"><span class="ref-numbers">5 6 7 8 9 12 13 21 22 68 69 70 75</span> <span class="ref-content">けいれん、てんかん、意識障害―研修医からできるトリアージと専門医へのコンサルテーション―vol.2｜民間医局コネクト<br />https://connect.doctor-agent.com/article/column402/</span></div>
+<div class="ref-item"><span class="ref-numbers">10 11 14 15 16 17 18 19 20 24 39 41 42 43 59 60 64 65 66 67 71 72 73</span> <span class="ref-content">けいれん、てんかん、意識障害―研修医からできるトリアージと専門医へのコンサルテーション―｜民間医局コネクト<br />https://connect.doctor-agent.com/article/column389/</span></div>
+<div class="ref-item"><span class="ref-numbers">23 26 44 47 48</span> <span class="ref-content">ピットフォールにハマらないER診療の勘どころ（14）そのけいれん、鑑別して止められる？（徳竹雅之）| 医学界新聞<br />https://www.igaku-shoin.co.jp/paper/archive/y2023/3525_03</span></div>
+<div class="ref-item"><span class="ref-numbers">27 31 32 33 35 36 46 53 54 61 62 63</span> <span class="ref-content">痙攣の初期治療まとめ（救急外来、治療薬）<br />https://xn--o1qq22cjlllou16giuj.jp/archives/5602</span></div>
+<div class="ref-item"><span class="ref-numbers">28 29 30 34 49 50 51 52 56 57 58</span> <span class="ref-content">日本神経学会『てんかん診療ガイドライン2018』</span></div>
+<div class="ref-item"><span class="ref-numbers">45</span> <span class="ref-content">診断と治療 - てんかんinfo<br />https://www.tenkan.info/cure/diagnosis/</span></div>
+<div class="ref-item"><span class="ref-numbers">74</span> <span class="ref-content">てんかんと運転免許 | 医療法人社団かけはし<br />https://kakehashi-mc.jp/epilepsy-driving-lisence/</span></div>
+</div>
+</div>

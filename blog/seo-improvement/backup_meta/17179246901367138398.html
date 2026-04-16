@@ -1,0 +1,520 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+</div>
+<style>
+/* ============================================
+   ⚠️ 全セレクターを .medical-article でスコープ
+   裸のタグセレクター（h1, h2, strong 等）は
+   他記事のCSSと競合するため絶対に使わない
+   ============================================ */
+
+/* 基本スタイル */
+.medical-article {
+    max-width: 100%;
+    padding: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.medical-article h1 {
+    font-size: 1.6rem;
+    color: #2c5aa0;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.medical-article h2 {
+    font-size: 1.3rem;
+    color: #2c5aa0;
+    border-left: 4px solid #2c5aa0;
+    padding-left: 12px;
+    margin-top: 1.5rem;
+}
+
+.medical-article h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.medical-article h3::before {
+    content: '▶';
+    color: #2c5aa0;
+    margin-right: 8px;
+}
+
+.medical-article strong {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.medical-article sup {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.medical-article p {
+    color: #333;
+}
+
+.medical-article ul,
+.medical-article ol {
+    color: #333;
+}
+
+/* 情報ボックス */
+.medical-article .toc-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.medical-article .toc-box h3 {
+    margin-top: 0;
+}
+
+.medical-article .toc-box h3::before {
+    content: '';
+    margin-right: 0;
+}
+
+.medical-article .toc-box ul {
+    margin-bottom: 0;
+}
+
+.medical-article .important-box {
+    background: #e8f4fd;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.medical-article .emergency-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.medical-article .drug-table th {
+    background: #2c5aa0 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.medical-article .drug-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.medical-article .drug-table tr:hover {
+    background: #e9ecef;
+}
+
+/* 展開セクション */
+.medical-article .medical-details {
+    background: #f8f9fa;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.medical-article .medical-details summary {
+    background: #2c5aa0;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.medical-article .medical-details summary:hover {
+    background: #234a80;
+}
+
+.medical-article .medical-details-content {
+    padding: 16px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+
+/* 参考文献 */
+.medical-article .references {
+    margin-top: 2rem;
+    border-top: 2px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.medical-article .references h3 {
+    color: #2c5aa0;
+}
+
+.medical-article .ref-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.medical-article .ref-numbers {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 0.85em;
+}
+
+.medical-article .ref-content {
+    color: #555;
+}
+
+/* ピットフォールリスト */
+.medical-article .pitfall-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.medical-article .pitfall-list li {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    border-radius: 0 4px 4px 0;
+}
+
+.medical-article .pitfall-list li strong {
+    color: #856404;
+}
+</style>
+<div class="medical-article">
+<h1> </h1>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260320/20260320125034.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/svMXL9SmQqw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/svMXL9SmQqw">youtu.be</a></cite></p>
+<p> </p>
+<p><strong><a href="https://hinyan1016.github.io/medical-ddx-tools/hypercalcemia.html" target="_blank">高カルシウム血症 鑑別診断ツール</a></strong></p>
+<p> </p>
+<!-- 目次ボックス -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#section1">1. まず「本当に高カルシウム血症か」を確認する</a></li>
+<li><a href="#section2">2. 鑑別の軸は PTH である</a></li>
+<li><a href="#section3">3. PTH依存性高カルシウム血症の見分け方</a></li>
+<li><a href="#section4">4. PTH非依存性高カルシウム血症の見分け方</a></li>
+<li><a href="#section5">5. 何をどこまで検査するか</a></li>
+<li><a href="#section6">6. 急性期対応と治療適応</a></li>
+<li><a href="#section7">7. ピットフォール</a></li>
+<li><a href="#references">参考文献</a></li>
+</ul>
+</div>
+<p><strong>高カルシウム血症</strong>は、外来でも病棟でも比較的よく出会う電解質異常です。軽度では無症候性のことが多く、健診や他疾患の採血で偶然見つかることも少なくありません。一方で、血清カルシウムが急に上がった症例や<strong>高度高カルシウム血症</strong>では、脱水、便秘、筋力低下、意識障害、腎機能障害、不整脈まで起こりうるため、見つけた時点で<strong>「緊急性の評価」と「原因の機序分類」を同時に進める</strong>必要があります。<sup>[1][2]</sup></p>
+<p>原因の大半は<strong>原発性副甲状腺機能亢進症（PHPT）</strong>か<strong>悪性腫瘍関連</strong>であり、実地診療では、ここをまず押さえたうえで、<strong>家族性低カルシウム尿性高カルシウム血症（FHH）</strong>、薬剤性、ビタミンD関連、肉芽腫性疾患、内分泌疾患、長期臥床を拾い上げるのが効率的です。<sup>[2][3]</sup></p>
+<div class="important-box"><strong>📋 鑑別の核心</strong><br />高カルシウム血症の機序は、<strong>骨からの流出</strong>、<strong>腸管吸収の増加</strong>、<strong>腎での再吸収増加</strong>の3つ。臨床の軸は<strong>intact PTH</strong>。PTH が抑制されているか、されていないかで二分するだけで、鑑別はかなり整理されます。<sup>[1][2]</sup></div>
+<!-- セクション1 -->
+<h2 id="section1">1. まず「本当に高カルシウム血症か」を確認する</h2>
+<p>最初に確認すべきは、報告されている値が「<strong>総カルシウム</strong>」なのか「<strong>イオン化カルシウム</strong>」なのかです。血中カルシウムの約半分は蛋白、とくに<strong>アルブミン</strong>に結合しており、生理活性を持つのはイオン化カルシウムです。したがって、脱水、<strong>低アルブミン血症</strong>、pH異常があると、総カルシウムは真のカルシウム状態を正確に反映しないことがあります。<sup>[7]</sup></p>
+<p>従来はアルブミン補正式が広く使われてきましたが、近年の大規模解析（<strong>22,658例</strong>の横断研究）では、補正カルシウムはとくに<strong>低アルブミン血症で誤分類を起こしやすく</strong>、未補正の総カルシウムよりもイオン化カルシウムとの一致率が低いことが示されています。<sup>[7]</sup></p>
+<div class="warning-box"><strong>⚠️ アルブミン補正Caの限界</strong><br />臨床像と合わない時、<strong>低アルブミン血症</strong>がある時、重症患者、<strong>酸塩基異常</strong>が強い時には、<strong>イオン化カルシウムを直接測定</strong>する方が安全です。まずは再検し、「持続する高カルシウム血症」なのかを確かめましょう。<sup>[7]</sup></div>
+<h3>重症度の目安</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">重症度</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">総カルシウム</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">臨床像</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>軽度</strong></td>
+<td><strong>&lt;12 mg/dL</strong></td>
+<td>無症候性が多い</td>
+</tr>
+<tr>
+<td><strong>中等度</strong></td>
+<td><strong>12–14 mg/dL</strong></td>
+<td>悪心・嘔吐、脱水、倦怠感</td>
+</tr>
+<tr>
+<td><strong>高度</strong></td>
+<td><strong>&gt;14 mg/dL</strong></td>
+<td>意識混濁、傾眠、昏睡、不整脈</td>
+</tr>
+</tbody>
+</table>
+<p>急速な上昇は絶対値以上に危険です。神経内科の現場では、<strong>せん妄、注意障害、無気力、筋力低下</strong>が「原疾患の進行」に見えてしまうことがあるため、採血異常を軽視しないことが大切です。<strong>QT短縮</strong>や<strong>徐脈</strong>も手がかりになります。<sup>[1][2][3]</sup></p>
+<!-- セクション2 -->
+<h2 id="section2">2. 鑑別の軸は PTH である</h2>
+<p>高カルシウム血症の初期鑑別で最も有用なのは<strong>intact PTH</strong>です。高カルシウム血症があるのにPTHが高い、あるいは「正常範囲内だが抑制されていない」なら、それは<strong>PTH依存性</strong>の高カルシウム血症と考えます。逆に、PTHがしっかり抑制されていれば、<strong>PTH非依存性</strong>の原因を追います。<sup>[1][2]</sup></p>
+<div class="emergency-box"><strong>🚨 重要な落とし穴</strong><br /><strong>「正常PTH」を安心材料にしない</strong>こと。高カルシウム血症の場面では、正常PTHは<strong>"異常に正常"</strong>であり、<strong>PHPT</strong>やFHHを疑う所見です。<sup>[1][2]</sup></div>
+<h3>PTHベースの実地アルゴリズム</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">ステップ</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">解釈</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">次に行うこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>高Ca血症を再確認</strong></td>
+<td>総Caの再検、アルブミン確認、必要ならイオン化Ca</td>
+<td>偽高Ca血症や一過性変動を除外</td>
+</tr>
+<tr>
+<td><strong>intact PTH を測定</strong></td>
+<td>高値 or 抑制されない正常値</td>
+<td><strong>PTH依存性</strong>：PHPT、FHH、三級性HPT、リチウム関連</td>
+</tr>
+<tr>
+<td><strong>PTH依存性なら尿中Ca評価</strong></td>
+<td>24時間尿Ca、CCCR</td>
+<td>PHPTとFHHの鑑別（腎機能・VitD・薬剤に注意）</td>
+</tr>
+<tr>
+<td><strong>PTHが抑制されていれば</strong></td>
+<td><strong>PTH非依存性</strong></td>
+<td>PTHrP、25(OH)D、1,25(OH)<sub>2</sub>D、CBC、Cr、SPEP/UPEP、画像、TSH</td>
+</tr>
+<tr>
+<td><strong>画像検査の位置づけ</strong></td>
+<td>原因を確定してから</td>
+<td>副甲状腺画像は<strong>診断ではなく手術計画</strong>のために行う</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション3 -->
+<h2 id="section3">3. PTH依存性高カルシウム血症の見分け方</h2>
+<h3>3-1. 原発性副甲状腺機能亢進症（PHPT）</h3>
+<p><strong>PHPT</strong>は外来高カルシウム血症で最も重要な原因です。現在の典型例は、骨痛や著明な腎結石で受診するというより、<strong>偶発的に見つかる軽度持続性高カルシウム血症</strong>です。診断の本体は生化学であり、「高カルシウム血症が少なくとも<strong>2回確認</strong>され、その時にPTHが<strong>高値または不適切に正常</strong>」であることが基本です。リンが低めであれば支持的ですが、必須ではありません。<sup>[3][4]</sup></p>
+<p>副甲状腺エコーやMIBIは<strong>診断のためではなく、手術をする際の局在診断</strong>です。まず画像、は順番が逆です。<sup>[4]</sup></p>
+<div class="important-box"><strong>📋 無症候性PHPTの手術適応（Fifth International Workshop 2022）</strong><sup>[4]</sup><br />症候性なら原則手術。無症候でも以下のいずれかで手術推奨：<br />① 血清Caが<strong>基準上限より 1 mg/dL 超</strong>高い<br />② <strong>骨粗鬆症</strong>または<strong>脆弱性骨折/椎体骨折</strong>がある<br />③ <strong>eGFR &lt;60 mL/min</strong>、<strong>腎結石・腎石灰化</strong>、あるいは高カルシウム尿がある<br />④ 年齢<strong>50歳未満</strong></div>
+<h3>3-2. 家族性低カルシウム尿性高カルシウム血症（FHH）</h3>
+<p><strong>FHH</strong>は頻度こそ高くありませんが、鑑別上きわめて重要です。なぜなら、PHPTと誤って副甲状腺手術に進むと、<strong>不必要な手術</strong>になるからです。典型像は、若い頃から持続する軽度高カルシウム血症、PTHは正常〜軽度高値、尿中カルシウム排泄が少ない、家族歴がある、というものです。<sup>[3][5]</sup></p>
+<p>実地では<strong>24時間尿カルシウム</strong>と<strong>CCCR（Ca/Cr clearance ratio）</strong>が鍵になります。<sup>[5]</sup></p>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">CCCR</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">解釈</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&lt;0.01</strong></td>
+<td><strong>FHHを強く示唆</strong></td>
+<td>遺伝学的検査を考慮</td>
+</tr>
+<tr>
+<td><strong>0.01–0.02</strong></td>
+<td>灰色域（判定困難）</td>
+<td>年齢・家族歴・薬剤・腎機能を総合判断</td>
+</tr>
+<tr>
+<td><strong>&gt;0.02</strong></td>
+<td><strong>PHPTを支持</strong></td>
+<td>手術適応の評価へ</td>
+</tr>
+</tbody>
+</table>
+<div class="warning-box"><strong>⚠️ CCCRの解釈に注意</strong><br /><strong>慢性腎臓病</strong>、<strong>ビタミンD不足</strong>、<strong>サイアザイド</strong>、<strong>リチウム</strong>は尿中カルシウムを下げ、FHHに見せかけます。「低尿Ca = FHH確定」ではなく、年齢、家族歴、経過、薬剤、腎機能を含めて判断します。<sup>[4][5]</sup></div>
+<h3>3-3. 三級性副甲状腺機能亢進症とリチウム関連</h3>
+<p>長期の二次性副甲状腺機能亢進症のあとに副甲状腺が自律化した<strong>三級性副甲状腺機能亢進症</strong>もあります。長期CKDや透析、腎移植後という文脈が強いので、<strong>病歴でかなり絞れます</strong>。<sup>[1][3]</sup></p>
+<p><strong>リチウム</strong>は副甲状腺のカルシウム感知受容体のセットポイントを変え、PTHとカルシウムの双方を上げることがあります。病歴を聴かずに採血だけで判定すると、PHPTと区別しにくくなります。<sup>[1][3]</sup></p>
+<!-- セクション4 -->
+<h2 id="section4">4. PTH非依存性高カルシウム血症の見分け方</h2>
+<h3>4-1. 悪性腫瘍関連高カルシウム血症</h3>
+<p>PTHが抑制されている症例で、最初に考えるべきは<strong>悪性腫瘍</strong>です。とくに、発症が急、症状が強い、脱水や急性腎障害を伴う、体重減少や食欲低下がある、既知の悪性腫瘍がある、といった文脈では優先順位が上がります。<sup>[1][2]</sup></p>
+<p>機序は大きく<strong>3つ</strong>です：<sup>[1][6]</sup></p>
+<ul>
+<li><strong>PTHrP</strong>による<strong>液性因子性高カルシウム血症</strong>（humoral hypercalcemia of malignancy）</li>
+<li><strong>骨転移</strong>や<strong>多発性骨髄腫</strong>などによる<strong>局所骨融解</strong></li>
+<li><strong>リンパ腫</strong>に代表される<strong>calcitriol（1,25[OH]<sub>2</sub>D）産生</strong></li>
+</ul>
+<p>PHPTよりも<strong>経過が急</strong>で、<strong>臨床的毒性が強い</strong>ことが多い点が実地上の重要な違いです。<sup>[1][2]</sup></p>
+<p>PTHが抑制されていれば、<strong>PTHrP</strong>、<strong>25(OH)D</strong>、<strong>1,25(OH)<sub>2</sub>D</strong>を考えながら次の検査を組み立てます。<strong>多発性骨髄腫</strong>を疑うならCBC、Crに加えて<strong>SPEP/UPEP</strong>を忘れないこと、<strong>1,25(OH)<sub>2</sub>D高値</strong>ならリンパ腫や肉芽腫性疾患を探すことがポイントです。<sup>[1]</sup></p>
+<h3>4-2. ビタミンD関連・肉芽腫性疾患</h3>
+<p><strong>ビタミンD中毒</strong>では<strong>25(OH)D</strong>が上がり、<strong>肉芽腫性疾患</strong>や一部リンパ腫では<strong>1,25(OH)<sub>2</sub>D</strong>が上がります。後者ではマクロファージや腫瘍細胞での活性型ビタミンD産生が問題になっており、PTHは抑制されています。<strong>サルコイドーシス</strong>、<strong>結核</strong>、<strong>真菌症</strong>などが典型です。<sup>[1][2]</sup></p>
+<p>この群が重要なのは、診断だけでなく<strong>治療が他と違う</strong>からです。ビタミンD過剰やcalcitriol依存性高カルシウム血症では、<strong>グルココルチコイド</strong>が機序に合った治療になります。<sup>[6]</sup></p>
+<h3>4-3. 薬剤・サプリメント・内分泌疾患</h3>
+<p>薬剤歴は必ず系統的に確認します。<sup>[1][2]</sup></p>
+<ul>
+<li><strong>サイアザイド</strong>：腎でのカルシウム排泄を減らすが、正常な恒常性のある人に持続的な高Ca血症を起こすことは少なく、むしろ<strong>軽いPHPTを顕在化</strong>させることがある</li>
+<li><strong>リチウム</strong>：PTH系に直接関わるため、より厄介</li>
+<li><strong>カルシウム製剤や炭酸カルシウムの過量</strong>：<strong>milk-alkali syndrome</strong></li>
+<li><strong>ビタミンD</strong>、<strong>ビタミンA</strong>、<strong>テオフィリン</strong>も原因になりうる</li>
+</ul>
+<div class="warning-box"><strong>⚠️ 実地上の盲点</strong><br />患者が「薬ではない」と思っている<strong>市販薬やサプリメント</strong>の聴取が抜けやすい点に注意。<sup>[1][2]</sup></div>
+<p>内分泌疾患としては、<strong>甲状腺機能亢進症</strong>、<strong>副腎不全</strong>、<strong>褐色細胞腫</strong>でも高カルシウム血症が起こりえます。ただし、全例で一斉にスクリーニングする必要はなく、PTH抑制を確認し、病歴・身体所見から疑う時に的を絞って検査します。<sup>[1]</sup></p>
+<h3>4-4. 長期臥床・神経疾患関連の視点</h3>
+<p>長期の<strong>不動化</strong>では、骨形成が抑制される一方で骨吸収が続くため、高カルシウム血症が生じます。<strong>脊髄損傷</strong>、<strong>重症脳卒中後</strong>、<strong>股関節骨折後</strong>などでみられ、とくに骨代謝回転が高い背景があると高度になりやすくなります。<sup>[1]</sup></p>
+<p>原因不明の高カルシウム血症で、PTHが抑制され、腫瘍も副甲状腺もはっきりしない時、<strong>臥床そのものを原因候補に入れないと見落とします</strong>。<sup>[1]</sup></p>
+<!-- セクション5 -->
+<h2 id="section5">5. 何をどこまで検査するか</h2>
+<div class="important-box"><strong>📋 高カルシウム血症の初期検査セット</strong><br />再検したカルシウム、<strong>アルブミン</strong>または<strong>イオン化カルシウム</strong>、<strong>intact PTH</strong>、<strong>クレアチニン/eGFR</strong>、<strong>リン</strong>、<strong>25(OH)D</strong>をまず揃えると診断が進みやすくなります。<sup>[1][2]</sup></div>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">PTHの結果</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">次の検査</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PTHが抑制されていない</strong></td>
+<td>24時間尿Ca・Cr（CCCR算出）</td>
+<td>PHPTとFHHの鑑別</td>
+</tr>
+<tr>
+<td> </td>
+<td>腎画像、骨密度</td>
+<td>標的臓器障害の評価</td>
+</tr>
+<tr>
+<td><strong>PTHが抑制されている</strong></td>
+<td>PTHrP、1,25(OH)<sub>2</sub>D</td>
+<td>悪性腫瘍 vs 肉芽腫性疾患</td>
+</tr>
+<tr>
+<td> </td>
+<td>CBC、SPEP/UPEP</td>
+<td>多発性骨髄腫の除外</td>
+</tr>
+<tr>
+<td> </td>
+<td>必要に応じて画像、TSH</td>
+<td>悪性腫瘍検索、甲状腺評価</td>
+</tr>
+</tbody>
+</table>
+<p>検査は「高カルシウム血症があるから全部出す」のではなく、<strong>「PTHで分けてから必要な枝に進む」</strong>と考えると、無駄が減ります。<sup>[1][2]</sup></p>
+<!-- セクション6 -->
+<h2 id="section6">6. 急性期対応と治療適応</h2>
+<p>高カルシウム血症は全例が救急ではありません。無症候で血清Caが<strong>12 mg/dL未満</strong>なら、基本は原因治療と外来精査です。一方、症候性で<strong>12 mg/dL超</strong>、あるいは<strong>14 mg/dL超</strong>の高度高カルシウム血症では、急性期治療が必要です。<sup>[1][6]</sup></p>
+<h3>急性治療の適応と初期対応</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">臨床状況</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">まず行うこと</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">追加する治療</th>
+<th style="background-color: #2c5aa0; color: #fff; padding: 12px; text-align: left; font-weight: bold; border: 1px solid #ddd;">実地上の要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>無症候・Ca <strong>&lt;12 mg/dL</strong></td>
+<td>原因検索、経口補水、原因薬の整理</td>
+<td>通常は急性降下療法不要</td>
+<td>外来で精査可能</td>
+</tr>
+<tr>
+<td>症候性 or Ca <strong>&gt;12 mg/dL</strong></td>
+<td><strong>等張晶質液</strong>で細胞外液補充</td>
+<td>原因に応じて抗骨吸収薬やステロイド</td>
+<td>脱水が強いことが多い</td>
+</tr>
+<tr>
+<td>高度（Ca <strong>&gt;14 mg/dL</strong>）or 意識障害・腎障害・不整脈</td>
+<td>まず<strong>輸液</strong></td>
+<td><strong>カルシトニン</strong>＋<strong>IVビスホスホネート</strong>または<strong>デノスマブ</strong></td>
+<td>カルシトニンは橋渡し治療</td>
+</tr>
+<tr>
+<td><strong>calcitriol依存性</strong>（肉芽腫性疾患、リンパ腫など）</td>
+<td><strong>輸液</strong></td>
+<td><strong>グルココルチコイド</strong>、必要なら抗骨吸収薬</td>
+<td>25(OH)D と 1,25(OH)<sub>2</sub>D を区別する</td>
+</tr>
+<tr>
+<td>補液困難、腎不全、他治療抵抗性</td>
+<td><strong>透析</strong>を検討</td>
+<td>—</td>
+<td>低Ca透析浴を用いることがある</td>
+</tr>
+</tbody>
+</table>
+<details class="medical-details" open="open">
+<summary>治療の詳細（クリックして展開）</summary>
+<div class="medical-details-content">
+<p><strong>輸液</strong>：治療の基礎。高度高カルシウム血症の患者は悪心・嘔吐・多尿・経口摂取低下のため細胞外液量が落ちていることが多く、まず<strong>生理食塩水</strong>などで循環血漿量を戻します。心不全や進行腎障害では過補液に注意が必要です。<sup>[1][6]</sup></p>
+<p><strong>ループ利尿薬</strong>：初手ではありません。再水和のあと、容量過剰の調整や尿中Ca排泄促進が必要な場面で使う位置づけです。<sup>[1]</sup></p>
+<p><strong>カルシトニン</strong>：数時間で効き始めるため、意識障害や高度高Ca血症で「今すぐ少し下げたい」時に有用。ただし効果は一時的で、<strong>48–72時間でtachyphylaxis</strong>が起こりやすく、橋渡し治療です。<sup>[6]</sup></p>
+<p><strong>ビスホスホネート</strong>：骨吸収優位の高Ca血症で中心になる治療です。<strong>Endocrine Society guideline（2023）</strong>では悪性腫瘍関連高Ca血症に対し<strong>IVビスホスホネートまたはデノスマブ</strong>を推奨し、<strong>デノスマブをやや優先</strong>しています。デノスマブは腎排泄でないため、<strong>腎機能が悪い症例で使いやすい</strong>点が強みです。<sup>[6]</sup></p>
+<p><strong>グルココルチコイド</strong>：ビタミンD過剰、肉芽腫性疾患、リンパ腫などの<strong>calcitriol依存性高Ca血症</strong>で特に有効。<sup>[6]</sup></p>
+<p><strong>透析</strong>：他治療抵抗性、重度腎不全、心不全で十分な補液ができない場合に考慮。<sup>[1]</sup></p>
+<p><strong>シナカルセト</strong>：慢性的なPHPTで手術適応があっても手術できない例で、カルシウム低下に役立ちます。<sup>[1]</sup></p>
+</div>
+</details><!-- セクション7 -->
+<h2 id="section7">7. ピットフォール</h2>
+<ul class="pitfall-list">
+<li><strong>① 「PTHが正常だから副甲状腺性ではない」と考えない</strong><br />高カルシウム血症の場面では、正常PTHはしばしば<strong>PHPT</strong>です。ここを誤ると、不要な悪性腫瘍検索が先行します。<sup>[1][2]</sup></li>
+<li><strong>② 「尿中カルシウムが低いからFHH」と短絡しない</strong><br /><strong>CKD</strong>、<strong>ビタミンD不足</strong>、<strong>サイアザイド</strong>、<strong>リチウム</strong>は尿中カルシウムを下げます。CCCRは有用ですが、決め打ち検査ではありません。<sup>[4][5]</sup></li>
+<li><strong>③ 副甲状腺画像を診断目的で早々に依頼しない</strong><br />PHPTの診断は生化学です。画像は<strong>局在診断</strong>であり<strong>手術戦略</strong>のためです。<sup>[4]</sup></li>
+<li><strong>④ 低アルブミン血症で補正カルシウムを過信しない</strong><br />補正式は便利ですが、臨床像と合わない時には<strong>イオン化カルシウム</strong>を測る方が安全です。<sup>[7]</sup></li>
+<li><strong>⑤ 薬剤、サプリメント、長期臥床を軽く見ない</strong><br />とくに神経疾患後の臥床、<strong>Ca製剤やビタミンD</strong>、<strong>サイアザイド</strong>、<strong>リチウム</strong>は、ありふれている分だけ見落とされやすい原因です。<sup>[1][2]</sup></li>
+</ul>
+<!-- おわりに -->
+<h2>おわりに</h2>
+<p>高カルシウム血症の鑑別は、原因を丸暗記するより、<strong>「真の高カルシウム血症かを確認する」「緊急性を判定する」「PTHで二分する」</strong>の3段階で考えると整理しやすくなります。PTHが抑制されていなければ<strong>PHPT</strong>とFHHを中心に考え、抑制されていれば悪性腫瘍、ビタミンD関連、肉芽腫性疾患、薬剤、内分泌疾患、長期臥床へ進みます。<sup>[1][2][3]</sup></p>
+<p>治療は重症度と機序で決まり、<strong>輸液は基礎</strong>、<strong>カルシトニンは橋渡し</strong>、<strong>ビスホスホネート/デノスマブは持続的抑制</strong>、<strong>ステロイドはcalcitriol依存性</strong>に使う、という整理が実践的です。<sup>[1][6]</sup></p>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=svMXL9SmQqw" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div id="references" class="references">
+<h3>参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/25905352/" target="_blank" rel="noopener">Goltzman D. Approach to hypercalcemia. In: Feingold KR, Adler RA, Ahmed SF, et al., editors. Endotext [Internet]. South Dartmouth (MA): MDText.com, Inc.; 2000-. 2023 Apr 17.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/36282253/" target="_blank" rel="noopener">Walker MD, Shane E. Hypercalcemia: a review. JAMA. 2022;328(16):1624-1636.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/35289573/" target="_blank" rel="noopener">Sell J, Ramirez S, Partin M. Parathyroid disorders. Am Fam Physician. 2022;105(3):289-298.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/36245251/" target="_blank" rel="noopener">Bilezikian JP, Khan AA, Silverberg SJ, El-Hajj Fuleihan G, Marcocci C, Minisola S, et al. Evaluation and management of primary hyperparathyroidism: summary statement and guidelines from the Fifth International Workshop. J Bone Miner Res. 2022;37(11):2293-2314.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/35446160/" target="_blank" rel="noopener">McAllister J, Arshad MF, Rab E, Balasubramanian SP. Excluding familial hypocalciuric hypercalcaemia before surgery for primary hyperparathyroidism - a practical evaluation of urinary calcium using a retrospective cohort design. Ann R Coll Surg Engl. 2022;104(9):710-716.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/36545746/" target="_blank" rel="noopener">El-Hajj Fuleihan G, Clines GA, Hu MI, Marcocci C, Murad MH, Piggott T, et al. Treatment of hypercalcemia of malignancy in adults: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2023;108(3):507-528.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/39836424/" target="_blank" rel="noopener">Desgagnés N, King JA, Kline GA, Seiden-Long I, Leung AA. Use of albumin-adjusted calcium measurements in clinical practice. JAMA Netw Open. 2025;8(1):e2455251.</a></span></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ",
+  "description": "高カルシウム血症の鑑別診断：PTHを軸にした実践的アプローチ",
+  "thumbnailUrl": "https://img.youtube.com/vi/svMXL9SmQqw/maxresdefault.jpg",
+  "uploadDate": "2026-03-20",
+  "contentUrl": "https://www.youtube.com/watch?v=svMXL9SmQqw",
+  "embedUrl": "https://www.youtube.com/embed/svMXL9SmQqw"
+}
+</script>

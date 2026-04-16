@@ -1,0 +1,489 @@
+<p><span style="font-size: 150%;"><strong>スライド→</strong></span><a href="https://claude.site/artifacts/5ae6d98d-b23a-4c08-994a-ed37cde57977" target="_blank">Claude Artifact</a></p>
+<p> </p>
+<style>
+        /* 変数定義（CSS変数） */
+        :root {
+            --main-color: #3498db;
+            --accent-color: #e74c3c;
+            --secondary-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --background-color: #fff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition-time: 0.3s;
+        }
+
+        /* リセットとベーススタイル */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* モバイルファースト基本スタイル */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        article {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0.5rem;
+            background-color: var(--background-color);
+        }
+        
+        /* タイポグラフィ */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark-color);
+            scroll-margin-top: 2rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--main-color);
+            position: relative;
+            text-align: center;
+        }
+        
+        h1:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            position: absolute;
+            bottom: -2px;
+            left: calc(50% - 25px);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.25rem;
+            padding: 0.5rem 0 0.5rem 0.75rem;
+            border-left: 4px solid var(--main-color);
+            background-color: var(--light-color);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin: 1.75rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px dashed var(--main-color);
+        }
+        
+        p {
+            margin: 0 0 1.5rem;
+            text-align: justify;
+        }
+        
+        strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        
+        /* 目次 */
+        .toc {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 1rem 0.75rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-time) ease;
+        }
+        
+        .toc:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .toc-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--main-color);
+            font-weight: 700;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc ul ul {
+            padding-left: 1.5rem;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: var(--dark-color);
+            text-decoration: none;
+            display: inline-block;
+            transition: all var(--transition-time) ease;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .toc a:before {
+            content: "▶";
+            font-size: 0.75em;
+            color: var(--main-color);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all var(--transition-time) ease;
+        }
+        
+        .toc a:hover {
+            color: var(--main-color);
+            transform: translateX(5px);
+        }
+        
+        .toc a:hover:before {
+            color: var(--accent-color);
+        }
+        
+        /* 画像スタイル */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-time) ease;
+        }
+        
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ブロッククォート */
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            border-left: 5px solid var(--main-color);
+            color: var(--dark-color);
+            position: relative;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        blockquote:before {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(52, 152, 219, 0.2);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: Georgia, serif;
+        }
+        
+        blockquote p {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        /* リスト */
+        ul, ol {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* セクション区切り */
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--main-color), transparent);
+            margin: 3rem 0;
+            border: none;
+        }
+        
+        /* カード型コンテンツ */
+        .content-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1rem 0.75rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-time) ease;
+            border-top: 3px solid var(--main-color);
+        }
+        
+        .content-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        /* 引用スタイル */
+        sup {
+            font-size: 0.75em;
+            vertical-align: super;
+            color: var(--accent-color);
+        }
+        
+        .references {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .references h2 {
+            margin-top: 0;
+            background-color: transparent;
+            border-left: none;
+            padding-left: 0;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .references ol {
+            padding-left: 1.5rem;
+        }
+        
+        .references li {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        /* ナビゲーション */
+        .back-to-top {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background-color: var(--main-color);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all var(--transition-time) ease;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        /* ナビゲーションリンク */
+        .section-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .nav-previous,
+        .nav-next {
+            flex: 0 0 48%;
+            background-color: var(--light-color);
+            padding: 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--dark-color);
+            transition: all var(--transition-time) ease;
+        }
+        
+        .nav-previous:hover,
+        .nav-next:hover {
+            background-color: var(--main-color);
+            color: white;
+        }
+        
+        .nav-previous:before {
+            content: "← ";
+        }
+        
+        .nav-next:after {
+            content: " →";
+        }
+        
+        .nav-next {
+            text-align: right;
+        }
+        
+        /* 図表のキャプション */
+        figcaption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* 導入部分の強調 */
+        .lead {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+        
+        /* テキスト位置調整ユーティリティ */
+        .text-center {
+            text-align: center;
+        }
+        
+        /* より大きな画面用のメディアクエリ */
+        @media (min-width: 768px) {
+            article {
+                max-width: 740px;
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            .toc {
+                float: right;
+                width: 300px;
+                margin: 0 0 1.5rem 1.5rem;
+            }
+            
+            .content-card {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+        }
+        
+        /* 印刷向けスタイル */
+        @media print {
+            .back-to-top {
+                display: none;
+            }
+            
+            article {
+                max-width: 100%;
+                box-shadow: none;
+            }
+            
+            body {
+                font-size: 12pt;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            p, blockquote, ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+<article>
+<h1 id="top">医療従事者とマインドフルネス：ストレス軽減からケアの質向上まで</h1>
+<!-- 手動で作成された目次 -->
+<div class="toc">
+<div class="toc-title">目次</div>
+<ul>
+<li><a href="#section-1">ストレス軽減・燃え尽き症候群対策としての有効性</a></li>
+<li><a href="#section-2">臨床現場でのマインドフルネス実践例</a></li>
+<li><a href="#section-3">患者ケアへの応用と指導の可能性</a></li>
+<li><a href="#section-4">科学的根拠と脳神経メカニズム</a></li>
+<li><a href="#section-5">医療従事者が取り入れる実践的アプローチ</a></li>
+<li><a href="#section-6">参考文献</a></li>
+</ul>
+</div>
+<p class="lead">医療従事者は長時間労働や生死に関わる緊張感から高いストレスに晒され、燃え尽き症候群（バーンアウト）のリスクも指摘されています。近年、この対策として注目されるのが<strong>マインドフルネス</strong>です。本記事では、マインドフルネスが医療従事者にもたらす効果と、臨床現場での活用法について解説します。</p>
+<div class="content-card">
+<h2 id="section-1">ストレス軽減・燃え尽き症候群対策としての有効性</h2>
+<p>医療従事者は長時間労働や生死に関わる緊張感から高いストレスに晒され、燃え尽き症候群（バーンアウト）のリスクも指摘されています。近年、この対策として注目されるのが<strong>マインドフルネス</strong>です。マインドフルネスとは「今この瞬間に意識を向け、評価せずにありのまま気づくこと」と定義され、瞑想などを通じて注意力や情動調整力を高める実践法です。海外では医療従事者を対象に、マインドフルネスを取り入れた介入（MBSR: マインドフルネスストレス低減法 など）の効果を検証する研究が増えています。例えば、医療従事者約2,500人分のデータを統合したメタ分析では、<strong>不安・抑うつ・心理的苦痛・知覚ストレスの有意な軽減</strong>が示されました（効果量は中程度）<sup>[1]</sup>。燃え尽き症候群についても小～中程度の改善が確認され、自己慈悲（セルフ・コンパッション）や共感性の向上といったポジティブな効果も報告されています。さらに最新の系統的レビュー（RCTに限定）でも、<strong>短期間（6～12週間）の介入で医療系学生のストレスを有意に軽減</strong>できることが示されています<sup>[2]</sup>。これらのエビデンスは、<strong>マインドフルネスが医療従事者のメンタルヘルスに有効な介入</strong>であることを強く支持しています。</p>
+<p>国内の事例でも有効性が確認されつつあります。日本のある研究グループは、がん・緩和ケア領域の医療従事者を対象に8週間のマインドフルネス研修プログラム（MaHALOプログラム）を実施し、その効果をランダム化比較試験で検証しました。その結果、<strong>介入群は待機対照群に比べてストレスレベルが有意に低下</strong>し（介入終了時の群間差 -3.8ポイント、p=0.002）、<strong>4週間後のフォローアップでも効果持続</strong>が確認されています。加えて、燃え尽き症候群の指標も改善し、レジリエンス（回復力）や主観的幸福感の有意な向上が見られました。こうした国内外のエビデンスから、マインドフルネスは<strong>医療従事者のストレス軽減と燃え尽き予防に効果的</strong>なアプローチであるといえます。</p>
+<div class="section-nav"><a href="#top" class="nav-previous">トップへ</a> <a href="#section-2" class="nav-next">次のセクション</a></div>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+<hr class="section-divider" />
+<div class="content-card">
+<h2 id="section-2">臨床現場でのマインドフルネス実践例</h2>
+<p>実際の臨床現場でも、医師や看護師がマインドフルネスを取り入れる動きが広がっています。<strong>研修プログラムの導入</strong>はその一つです。米国ロチェスター大学ではプライマリ・ケア医師70名を対象に「マインドフルコミュニケーション研修（8週間集中＋10ヶ月フォロー）」を実施し、参加医師のバーンアウト指標や共感度が研修前後で大きく改善したことが報告されています<sup>[3]</sup>。具体的には、感情的消耗のスコアが<strong>26.8から20.0へ有意に減少</strong>し、医師の共感度も向上しました。研修後15か月時点でも効果は維持されており、<strong>マインドフルネスを取り入れたトレーニングが医師のウェルビーイングと患者対応態度を改善</strong>しうることが示唆されています。日本でも、慶應義塾大学のチームが<strong>医療者向けマインドフルネス療法ワークショップ</strong>を開催し、全国から医療職が参加しています。3日間の集中研修を経て、「日常臨床で役立つ」「自分や患者への優しさが高まった」といった肯定的な声が寄せられており、実施可能性（feasibility）の高さが確認されています。</p>
+<p>こうした研修の効果は組織にも認知されつつあり、英国NHS（国民保健サービス）のサセックス・マインドフルネスセンターでは<strong>20年以上にわたり職員向けのマインドフルネスコースを提供</strong>しています。同センターのデータでは、コース修了後にスタッフのメンタルヘルスが有意に改善し、ストレスが減少することが示されています。さらにイギリスのNICE（国立医療技術評価機構）は、「あらゆる職場のスタッフがマインドフルネスコースを受けられるようにすべき」と勧告しており、マインドフルネス研修が職場のストレス対策として有望視されています。</p>
+<p><strong>日常業務への組み込み</strong>も進んでいます。たとえば集中治療室や救急部門で、勤務シフトの合間に5分間のミニ瞑想セッションを設ける病院もあります。また一部の病院では、朝のカンファレンス前に呼吸法のエクササイズを全スタッフで行う試みも報告されています。これによって「忙殺される中でも一息つき、気持ちをリセットできる」と参加者は述べています。さらに<strong>個人での自主的実践</strong>を支援するため、社内イントラネットでガイド瞑想音声を配信したり、休憩室に瞑想スペースを設置したケースもあります。これらの実践例は、マインドフルネスが<strong>医療現場で実践可能なセルフケア法</strong>として浸透しつつあることを示しています。</p>
+<div class="section-nav"><a href="#section-1" class="nav-previous">前のセクション</a> <a href="#section-3" class="nav-next">次のセクション</a></div>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+<hr class="section-divider" />
+<div class="content-card">
+<h2 id="section-3">患者ケアへの応用と指導の可能性</h2>
+<p>医療従事者が自ら実践するだけでなく、<strong>患者へのケアにマインドフルネスを活用する</strong>動きも見られます。とくに緩和ケアや心療内科など、患者の不安・痛みの緩和を重視する領域で注目されています。例えば、ある臨床研究では<strong>進行がん患者にMBSR（マインドフルネスストレス低減法）を導入</strong>し、痛みや不眠など複数の症状が緩和し霊性的なQOL（生活の質）が向上したと報告されています<sup>[4]</sup>。緩和ケア病棟で週1回のグループ瞑想セッションを行ったところ、「不安発作時に教わった呼吸法を使うと落ち着けた」「痛みへのとらわれから意識をそらせた」といった患者の声もあり、<strong>マインドフルネスは終末期ケアの一助</strong>となり得る可能性が示唆されました。</p>
+<p>心療内科領域でも、うつ病や不安障害の再発予防策として<strong>MBCT（マインドフルネス認知療法）</strong>を取り入れる試みがあります。MBCTは認知行動療法に瞑想実践を組み合わせたプログラムで、患者に「思考や感情に気づき、とらわれない心のスキル」を身につけてもらうことを目的とします。国内でも研修を受けた精神科医や臨床心理士が中心となり、<strong>グループ療法としてのMBCTクラス</strong>が開催されつつあります。こうしたクラスに参加した患者からは「再発の不安に対処する具体的な方法を得られた」「今ここに注意を向ける練習が日常生活の落ち込み予防に役立つ」といった声が報告されています。</p>
+<p>また、慢性疼痛患者に対して呼吸瞑想やボディスキャン（身体感覚に注意を向ける瞑想法）を指導し、痛みの知覚やストレス反応を和らげる<strong>ペインクリニックでの取り組み</strong>もみられます。医療従事者がファシリテーターとなって患者にマインドフルネスを教える際は、医学的知見と瞑想指導スキルの双方が求められますが、患者側の関心も高まっており、今後このような<strong>「治療の一環としてのマインドフルネス」</strong>はさらに発展していくと考えられます。</p>
+<div class="section-nav"><a href="#section-2" class="nav-previous">前のセクション</a> <a href="#section-4" class="nav-next">次のセクション</a></div>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+<hr class="section-divider" />
+<div class="content-card">
+<h2 id="section-4">科学的根拠と脳神経メカニズム</h2>
+<figure>
+<figcaption>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20250326/20250326044415.jpg" width="1024" height="1024" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</figcaption>
+</figure>
+<p>マインドフルネスの効果は科学的にも裏付けられています。そのメカニズムの一つは<strong>ストレス反応の抑制と神経ネットワークの再構築</strong>です。瞑想などの実践により、副交感神経が優位になって心拍や血圧が安定し、ストレスホルモン（コルチゾール）の分泌が抑えられることが分かっています。さらに脳画像研究からは、8週間のマインドフルネス瞑想訓練によって<strong>海馬（記憶・感情の制御に関与）の灰白質密度が増加</strong>し、扁桃体（恐怖やストレスに関与）の体積と活動が減少すると報告されています。これは、マインドフルネスが繰り返しの訓練を通じて脳の構造と機能を可塑的に変化させ、ストレスに過剰反応しにくい脳へと導く可能性を示唆します。</p>
+<p>また<strong>デフォルトモード・ネットワーク（DMN）</strong>と呼ばれる脳の内的思考モードに関連するネットワークの活動が瞑想中に低下し、代わりに注意制御や自己調整に関わる前頭前野や島皮質の活動が高まることも確認されています。これにより、「今ここ」に注意を保ちながら冷静に対処する脳の働きが強化されると考えられます。実際、マインドフルネス介入後には<strong>認知の柔軟性が向上</strong>し、ネガティブな思考へのとらわれ（反芻）が減少するとの報告があります。</p>
+<p>また、共感や思いやりの感情に関連する脳部位（例えば側島皮質や楔前部）の機能的結合が強まるという知見もあり、これは<strong>患者に寄り添う態度や対人コミュニケーション能力の向上</strong>といった臨床上のメリットにつながる可能性があります。要するに、マインドフルネスは<strong>脳神経のレベルでストレス耐性や情動コントロール力を高める土台</strong>を築くことが示唆されており、医学的エビデンスがその有効性を後押ししています。</p>
+<div class="section-nav"><a href="#section-3" class="nav-previous">前のセクション</a> <a href="#section-5" class="nav-next">次のセクション</a></div>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+<hr class="section-divider" />
+<div class="content-card">
+<h2 id="section-5">医療従事者が取り入れる実践的アプローチ</h2>
+<p>多忙な医療従事者がマインドフルネスを日常に取り入れるには、<strong>スキマ時間を活用した簡易な実践</strong>が鍵です。例えば、勤務前後や休憩時間に数分間の呼吸瞑想を行うことから始めてみるとよいでしょう。朝の始業前に<strong>3分間の短い瞑想</strong>をしてみる、昼休みに1分だけ意識的に深呼吸してみる、夜寝る前にボディスキャンでリラックスする、といった小さな習慣でも効果があります。ポイントは「毎日短くても続ける」ことで、習慣化によって注意力や情緒安定効果が蓄積しやすくなります。</p>
+<p>また、忙しいシフト勤務の合間でも実践できるよう、<strong>呼吸法だけのエクササイズ</strong>も有用です。4秒吸って4秒吐くといった簡単な呼吸に集中する練習は、その場でできるストレスリリーフとなります。加えて、最近では手軽に利用できる<strong>スマートフォンアプリ</strong>も心強いツールです。医師監修の本格的なマインドフルネス瞑想アプリ（例：「Relook」など）はガイド付き瞑想コンテンツを提供しており、隙間時間にヘッドフォンで指示に従うだけで瞑想を実践できます<sup>[5]</sup>。大学生を対象とした研究では、スマホアプリを用いたマインドフルネス瞑想（Mobile Mindfulness Meditation, MMM）は従来の対面指導による瞑想と比べてもストレス・不安の軽減に効果的であったとの結果も出ています<sup>[6]</sup>。つまり、アプリを活用することで時間・場所の制約を減らし、<strong>継続しやすい環境</strong>を整えられるのです。</p>
+<p>さらに、医療現場のチームで取り組む場合はミーティングの冒頭に1分間の静かな呼吸の時間を共有したり、同僚同士で実践状況を報告し合うことでモチベーションを維持する工夫もできます。重要なのは、自分に合った方法で無理なく継続することです。一日の中でわずかな時間でも「いまここ」に立ち戻る習慣を持つことで、蓄積するストレスに気づき早めにケアできるようになります。マインドフルネスは決して特別な場所や長時間を必要とするものではなく、<strong>短時間からでも始められる実践的なセルフケア法</strong>です。その継続が、ひいては医療従事者自身の心身の健康と、患者へのより良いケアにつながっていくでしょう。</p>
+<div class="section-nav"><a href="#section-4" class="nav-previous">前のセクション</a> <a href="#section-6" class="nav-next">参考文献</a></div>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+<hr class="section-divider" />
+<div class="references">
+<h2 id="section-6">参考文献</h2>
+<ol>
+<li>Spinelli C, Wisener M, Khoury B. Mindfulness training for healthcare professionals and trainees: A meta‐analysis of randomized controlled trials. J Psychosom Res. 2019;120:29-38.</li>
+<li>Lu CP, Oei TP, Gwee X, Qian MY, Ho RC. The effect of mindfulness-based interventions on reducing stress in future health professionals: A systematic review and meta-analysis of randomized controlled trials. Appl Psychol Health Well Being. 2024;16(1):84-106.</li>
+<li>Krasner MS, Epstein RM, Beckman H, Suchman AL, Chapman B, Mooney CJ, et al. Association of an educational program in mindful communication with burnout, empathy, and attitudes among primary care physicians. JAMA. 2009;302(12):1284-1293.</li>
+<li>Arefi M, Vahidi M, Shirvani A. Mindfulness-based interventions control symptoms and improve spiritual quality of life in patients in palliative care. Am J Hosp Palliat Med. 2023;40(1):89-95.</li>
+<li>Relook マインドフルネス研修. [Internet]. [cited 2023]. Available from: https://relook.jp/</li>
+<li>マインドフルネスアプリの有用性. ラッフルズジャーパニーズクリニック. [Internet]. [cited 2023]. Available from: https://rafflesj-clinic.com/column/mc-horibe27/</li>
+</ol>
+<p class="text-center"><a href="#top" class="back-to-top">トップへ戻る</a></p>
+</div>
+</article>

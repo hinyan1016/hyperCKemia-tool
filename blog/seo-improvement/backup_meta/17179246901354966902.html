@@ -1,0 +1,566 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260216/20260216014921.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>パーキンソン病とは？ ― 症状・原因・治療を専門医がやさしく解説 ―</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/2vub3DSEjVc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【専門医解説】パーキンソン病の正体と対策：症状・原因・治療のすべて" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/2vub3DSEjVc">youtu.be</a></cite></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>パーキンソン病とは？ ― 症状・原因・治療を専門医がやさしく解説 ―</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">パーキンソン病とは？</a></li>
+<li><a href="#section2">こんな症状があれば要注意</a></li>
+<li><a href="#section3">なぜ起きるの？ ― 原因とメカニズム</a></li>
+<li><a href="#section4">検査では何をする？</a></li>
+<li><a href="#section5">治療について</a></li>
+<li><a href="#section6">よくある質問（Q&amp;A）</a></li>
+<li><a href="#section7">受診の目安まとめ</a></li>
+<li><a href="#section8">まとめ</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">1. パーキンソン病とは？</h2>
+<p><strong>パーキンソン病</strong>は、体の動きがゆっくりになったり、手足が震えたりする病気です。脳の中で「<strong>ドパミン</strong>」という物質が減ることで起こります。</p>
+<p>主に<strong>50歳以降</strong>に増えますが、若い年代で発症することもあります。日本ではおよそ<strong>1,000人に1人前後</strong>といわれ、高齢になるほど増加します。</p>
+<p>進行は通常ゆっくりで、<strong>年単位で変化</strong>していきます。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> <strong>パーキンソン病</strong>は脳内の<strong>ドパミン</strong>が減少することで発症する神経変性疾患です。日本での有病率はおよそ<strong>1,000人に1人</strong>で、<strong>50歳以降</strong>に多く見られます。進行は通常緩徐で、適切な治療により長期間の生活維持が可能です。</div>
+<!-- セクション2 -->
+<h2 id="section2">2. こんな症状があれば要注意</h2>
+<h3>初期症状</h3>
+<p><strong>パーキンソン病</strong>の初期には、以下のような症状が見られます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">初期症状</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>片手の震え（安静時振戦）</strong></td>
+<td>じっとしているときに目立つ</td>
+</tr>
+<tr>
+<td><strong>動作緩慢</strong></td>
+<td>動きが遅くなる</td>
+</tr>
+<tr>
+<td><strong>仮面様顔貌</strong></td>
+<td>表情が乏しくなる</td>
+</tr>
+<tr>
+<td><strong>小字症</strong></td>
+<td>字が小さくなる</td>
+</tr>
+<tr>
+<td><strong>小歩症</strong></td>
+<td>歩幅が小さくなる</td>
+</tr>
+</tbody>
+</table>
+<p>最初は「年のせいかな」と思われることが少なくありません。</p>
+<h3>進行すると</h3>
+<p>病気が進行すると、以下のような症状が加わることがあります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">進行期の症状</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">分類</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>転倒しやすくなる</strong></td>
+<td>運動症状</td>
+</tr>
+<tr>
+<td><strong>前傾姿勢</strong>（体が前かがみになる）</td>
+<td>運動症状</td>
+</tr>
+<tr>
+<td><strong>小声症</strong>（声が小さくなる）</td>
+<td>運動症状</td>
+</tr>
+<tr>
+<td><strong>嚥下障害</strong>（飲み込みにくい）</td>
+<td>運動症状</td>
+</tr>
+<tr>
+<td><strong>便秘</strong>・<strong>起立性低血圧</strong>（立ちくらみ）</td>
+<td>自律神経症状</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> <strong>パーキンソン病</strong>は「動き」だけでなく、<strong>自律神経</strong>や<strong>睡眠</strong>、<strong>気分</strong>にも影響することがあります。運動症状以外の変化にも注意が必要です。</div>
+<h3>救急受診が必要な場合</h3>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 救急受診が必要な場合</span> 以下の場合は速やかに救急受診してください：<br />・<strong>急に動けなくなった</strong><br />・<strong>強い意識障害</strong><br />・<strong>高熱を伴う</strong><br /><br /><strong>パーキンソン病</strong>そのものは急に悪化する病気ではありません。急な変化は<strong>別の原因</strong>を考える必要があります。</div>
+<!-- セクション3 -->
+<h2 id="section3">3. なぜ起きるの？ ― 原因とメカニズム</h2>
+<p>脳の中には「<strong>黒質（こくしつ）</strong>」という部位があります。ここで作られる<strong>ドパミン</strong>という<strong>神経伝達物質</strong>が減少することで、動きの調整がうまくいかなくなります。</p>
+<p>イメージとしては、脳の中の「<strong>動きの調整ブレーキ</strong>」が弱くなる状態と考えると分かりやすいです。</p>
+<p>原因は完全には分かっていませんが、以下の要因が関係すると考えられています。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">関連要因</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>加齢</strong></td>
+<td>最も大きなリスク因子であり、高齢になるほど発症率が上昇する</td>
+</tr>
+<tr>
+<td><strong>遺伝的素因</strong></td>
+<td>一部に遺伝性のタイプが存在するが、多くは家族歴がない</td>
+</tr>
+<tr>
+<td><strong>環境要因</strong></td>
+<td>農薬曝露などの環境因子との関連が研究されている</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション4 -->
+<h2 id="section4">4. 検査では何をする？</h2>
+<h3>外来で行うこと</h3>
+<p>まず<strong>詳しい問診</strong>と<strong>神経診察</strong>（動きや筋肉の状態を確認）を行います。画像検査としては<strong>MRI</strong>が実施されますが、これは他の病気を除外する目的で行います。</p>
+<p>必要に応じて、<strong>ドパミントランスポーターシンチグラフィ（DATスキャン）</strong>や<strong>MIBG心筋シンチグラフィ</strong>を行うことがあります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">検査</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">目的</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">身体的負担</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>問診・神経診察</strong></td>
+<td>症状の評価と診断</td>
+<td>痛みなし</td>
+</tr>
+<tr>
+<td><strong>MRI</strong></td>
+<td>他疾患の除外</td>
+<td>痛みなし</td>
+</tr>
+<tr>
+<td><strong>DATスキャン</strong></td>
+<td>ドパミン神経の機能評価</td>
+<td>注射あり（大きな負担ではない）</td>
+</tr>
+<tr>
+<td><strong>MIBG心筋シンチグラフィ</strong></td>
+<td>心臓の交感神経機能評価（パーキンソン病では取り込み低下）</td>
+<td>注射あり（大きな負担ではない）</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション5 -->
+<h2 id="section5">5. 治療について</h2>
+<p><strong>パーキンソン病</strong>は完治させる治療はまだありませんが、<strong>症状を大きく改善できる治療</strong>があります。</p>
+<h3>① 薬物療法</h3>
+<p>代表的な薬には以下のものがあります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">薬剤分類</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>レボドパ製剤</strong></td>
+<td><strong>最も効果が高い薬</strong>。脳内でドパミンに変換される</td>
+</tr>
+<tr>
+<td><strong>ドパミン作動薬</strong></td>
+<td>ドパミン受容体を直接刺激する</td>
+</tr>
+<tr>
+<td><strong>MAO-B阻害薬</strong></td>
+<td>ドパミンの分解を抑制する</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box important-box"><span class="info-box-title">📋 薬物療法のポイント</span> 特に<strong>レボドパ</strong>は最も効果が高い薬です。適切に調整すれば、多くの患者さんが<strong>日常生活を維持</strong>できます。</div>
+<h3>② 手術療法</h3>
+<p>薬で十分な効果が得られない場合、<strong>脳深部刺激療法（DBS）</strong>という治療が選択肢になります。</p>
+<h3>③ リハビリテーション</h3>
+<p><strong>運動療法</strong>は非常に重要であり、<strong>薬と同じくらい大切</strong>です。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">リハビリの種類</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>歩行訓練</strong></td>
+<td>歩行能力の維持・改善、転倒予防</td>
+</tr>
+<tr>
+<td><strong>バランス訓練</strong></td>
+<td>姿勢の安定性向上</td>
+</tr>
+<tr>
+<td><strong>発声訓練</strong></td>
+<td>小声症の改善、嚥下機能の維持</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション6 -->
+<h2 id="section6">6. よくある質問（Q&amp;A）</h2>
+<details class="expandable" open="open">
+<summary>Q. 手の震えがあればパーキンソン病ですか？</summary>
+<div class="expandable-content">
+<p>震えにはさまざまな種類があります。<strong>本態性振戦</strong>など別の病気の可能性もあります。<strong>安静時振戦</strong>（じっとしているときの震え）が<strong>パーキンソン病</strong>の特徴ですが、確定診断には専門医の評価が必要です。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 進行は早いですか？</summary>
+<div class="expandable-content">
+<p>通常は<strong>ゆっくり進行</strong>します。適切な治療で<strong>長く安定する方も多い</strong>です。進行速度には個人差がありますが、急速に悪化する病気ではありません。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 遺伝しますか？</summary>
+<div class="expandable-content">
+<p>一部に<strong>遺伝性のタイプ</strong>がありますが、<strong>多くは家族歴がありません</strong>。孤発性（遺伝とは無関係に発症）のケースがほとんどです。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 運転できますか？</summary>
+<div class="expandable-content">
+<p>症状の程度によります。判断は<strong>主治医との相談</strong>が必要です。反応速度や注意力に影響が出る場合は運転を控えることが推奨されます。</p>
+</div>
+</details><details class="expandable" open="open">
+<summary>Q. 寿命は短くなりますか？</summary>
+<div class="expandable-content">
+<p>適切な治療と<strong>合併症管理</strong>で、<strong>長く生活できる方が多く</strong>います。現在の治療の進歩により、生活の質を維持しながら長期的な経過が見込めるようになっています。</p>
+</div>
+</details><!-- セクション7 -->
+<h2 id="section7">7. 受診の目安まとめ</h2>
+<div class="info-box important-box"><span class="info-box-title">📋 早めに外来受診</span> ・<strong>片手の震え</strong>が続く<br />・動きが遅いと指摘された（<strong>動作緩慢</strong>）<br />・歩きにくい（<strong>歩行障害</strong>）</div>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 救急受診</span> ・<strong>急な意識障害</strong><br />・<strong>高熱</strong>や<strong>脱水</strong>を伴う悪化</div>
+<!-- セクション8 -->
+<h2 id="section8">8. まとめ</h2>
+<p><strong>パーキンソン病</strong>は、脳の<strong>ドパミン</strong>が減ることで起こる<strong>ゆっくり進行する病気</strong>です。</p>
+<p>しかし、<strong>早期診断</strong>、適切な<strong>薬物治療</strong>、<strong>運動療法</strong>により、<strong>長く自分らしい生活を送ること</strong>が可能です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 この記事のまとめ</span> ・<strong>パーキンソン病</strong>は脳内<strong>ドパミン</strong>の減少により発症する<br />・主に<strong>50歳以降</strong>に発症し、日本では<strong>1,000人に1人</strong>前後<br />・<strong>レボドパ製剤</strong>を中心とした薬物療法が有効<br />・<strong>運動療法</strong>は薬と同じくらい重要<br />・<strong>早期診断・早期治療</strong>が生活の質の維持に直結する</div>
+<p>「年のせい」と思わず、気になる症状があれば<strong>神経内科</strong>に相談してください。</p>
+<p> </p>
+<p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fhinyan1016.hatenablog.com%2Fentrance%3F_gl%3D1*8wc01l*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0" title="医知創造ラボの歩き方 - 医知創造ラボ ～脳神経内科医がAIで紡ぐ最新医療情報～" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;" loading="lazy"></iframe><cite class="hatena-citation"><a href="https://hinyan1016.hatenablog.com/entrance?_gl=1*8wc01l*_gcl_au*MTU4OTI0OTg1MS4xNzY0NjM1NTI0">hinyan1016.hatenablog.com</a></cite></p>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=2vub3DSEjVc" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "パーキンソン病とは？ ― 症状・原因・治療を専門医がやさしく解説 ―",
+  "description": "パーキンソン病とは？ ― 症状・原因・治療を専門医がやさしく解説 ―",
+  "thumbnailUrl": "https://img.youtube.com/vi/2vub3DSEjVc/maxresdefault.jpg",
+  "uploadDate": "2026-02-16",
+  "contentUrl": "https://www.youtube.com/watch?v=2vub3DSEjVc",
+  "embedUrl": "https://www.youtube.com/embed/2vub3DSEjVc"
+}
+</script>

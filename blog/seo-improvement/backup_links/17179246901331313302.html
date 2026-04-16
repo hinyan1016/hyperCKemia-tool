@@ -1,0 +1,416 @@
+<div class="medical-article">
+<div class="medical-article">
+<p>作者コメント<br />前回はBAKUNEを扱いましたが、今回は自分の愛用しているエヌウォームに関して取り上げてみました。決して案件ではありません。</p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="エヌウォームはなぜ暖かいのか">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251211/20251211090254.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">エヌウォームはなぜ暖かいのか</figcaption>
+</figure>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>なぜニトリの「Nウォーム（特にダブルスーパー）」は暖かいのか？仕組みをわかりやすく解説</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 暖かさの核：体の水分で熱をつくる「吸湿発熱」</a></li>
+<li><a href="#section2">2. もう一つの柱：熱を逃がしにくい「保温・蓄熱」と空気の層</a></li>
+<li><a href="#section3">3. ダブルスーパーが"別格"に暖かい理由</a></li>
+<li><a href="#section4">4. まとめ：Nウォーム（ダブルスーパー）の暖かさの設計図</a></li>
+<li><a href="#section5">おまけ：ダブルスーパーの暖かさを"損しない"使い方</a></li>
+</ul>
+</div>
+<p>愛用されている<strong>Nウォーム・ダブルスーパー（WSP）</strong>の「触った瞬間から暖かい」「寝床のぬくもりが続く」感じは、気のせいではなく、<strong>熱を"つくる"仕組み</strong>と、<strong>熱を"逃がさない"仕組み</strong>が重なって生まれています。</p>
+<p>メーカー説明としても、<strong>Nウォーム</strong>は「体から発散される水分を熱に変える（<strong>吸湿発熱</strong>）」という考え方の寝具・生活アイテムです。<sup>[1]</sup></p>
+<h2 id="section1">1. 暖かさの核：体の水分で熱をつくる「吸湿発熱」</h2>
+<p>人はじっとしていても、皮膚から<strong>水蒸気（見えない汗）</strong>を出しています。Nウォームは、その水分を生地が取り込むことで、じんわり温度が上がるように設計されています。<sup>[1]</sup></p>
+<p>試験認証機関の解説では、<strong>吸湿発熱のメカニズム</strong>は大まかにこう説明されています。<sup>[2]</sup></p>
+<div class="info-box important-box"><span class="info-box-title">📋 吸湿発熱のメカニズム</span>
+<p>① 体から出た水分（汗・水蒸気）を<strong>繊維が吸う</strong></p>
+<p>② 吸った水蒸気が<strong>水に変わるときなどに熱が出る</strong>（「<strong>凝縮熱</strong>」など）</p>
+<p>③ その熱が、肌に近い場所で起こるので<strong>暖かく感じやすい</strong></p>
+</div>
+<h3>ここがポイント</h3>
+<p>暖房のように外から熱を足すのではなく、<strong>自分の体の水分を"燃料"にして熱を出す</strong>イメージです。<sup>[1]</sup></p>
+<p>だから「触れた直後に暖かい」「布が冷たく感じにくい」といった体感につながります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> <strong>吸湿発熱</strong>は、環境が極端に乾燥していると働きが弱くなることがあります（湿度変化で温度上昇を測る試験法が紹介されています）。<sup>[2]</sup></div>
+<h2 id="section2">2. もう一つの柱：熱を逃がしにくい「保温・蓄熱」と空気の層</h2>
+<p>暖かさは「つくる」だけでは足りません。<strong>できた熱を逃がしにくくすること</strong>が重要です。</p>
+<p>ニトリ公式の開発ストーリーでも、吸湿・発熱に加えて<strong>保温・蓄熱</strong>といった機能を追加し、糸や<strong>中わた（内部の綿）</strong>まで含めて素材開発してきたことが説明されています。<sup>[3]</sup></p>
+<p>また、吸湿発熱でよく使われる繊維（例：<strong>アクリレート系繊維</strong>）は、細さなどの特性から<strong>空気層ができやすく</strong>、保温にも寄与するという説明もあります。<sup>[2]</sup></p>
+<h2 id="section3">3. ダブルスーパーが"別格"に暖かい理由</h2>
+<p>Nウォームには複数の暖かさレベルがあり、（年によって表現や機能追加はありますが）<strong>ダブルスーパーが最上位</strong>として説明されています。<sup>[4]</sup></p>
+<h3>3-1. 「生地＋中わた」で吸湿発熱を"二重化"している</h3>
+<p><strong>ダブルスーパー</strong>は、メーカー説明として<strong>「生地とわたのダブル吸湿発熱」</strong>がうたわれています。<sup>[1]</sup></p>
+<p>実際に、WSP敷きパッドの商品説明でも<strong>「表生地」と「充填物（上層）」</strong>に吸湿発熱を持たせている旨が記載されています。<sup>[3]</sup></p>
+<p>→ 熱が出る場所が「表面だけ」より増えるので、体感的に有利です。</p>
+<h3>3-2. 蓄熱・ボリュームで"暖かさをためて逃がしにくい"</h3>
+<p>ダブルスーパーは<strong>ダブル吸湿発熱＋蓄熱＋たっぷりボリュームで最も暖かい</strong>、という整理がされています。<sup>[4]</sup></p>
+<p>また、2023年モデルの説明では、<strong>ダブルスーパーはボリューム増で保温性アップ</strong>、という記載があります。<sup>[4]</sup></p>
+<h3>3-3. 「速暖」「ヒヤッと感軽減」＝入りたてが冷たくない</h3>
+<p>WSP敷きパッドの例では、<strong>速暖（表生地）</strong>および<strong>ヒヤッと感軽減（表生地）</strong>が明記されています。<sup>[3]</sup></p>
+<p>これは「布団に入った瞬間がつらい」問題に直結する、体感として大きい部分です。</p>
+<h3>3-4. 断熱（例：エアロゲル）で熱を外に逃がしにくくする</h3>
+<p>2025年モデルのNウォーム寝具では、上位モデル（Nウォームダブルスーパー）に先進素材<strong>エアロゲル</strong>を採用し、<strong>「寝具内の熱を逃がしにくくする」</strong>と説明されています。<sup>[1]</sup></p>
+<p><strong>エアロゲル</strong>自体も、非常に多孔質（空気を多く含む）で断熱に向くという説明が一般にあります。<sup>[5]</sup></p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> どのWSP製品にも必ず同じ素材が入っているとは限らないので、ここは「該当年度・該当製品ではこういう思想が入っている」という理解が安全です。<sup>[1]</sup></div>
+<h3>3-5. 遠赤外線（例：グラフェン）で"保温性向上"を狙う</h3>
+<p>2025年モデルでは、<strong>グラフェン増量</strong>により<strong>遠赤外線効果で保温性が向上</strong>と説明されています。<sup>[1]</sup></p>
+<p>また、WSP敷きパッドの商品説明でも<strong>「遠赤外線効果（表生地）」</strong>が記載されています。<sup>[3]</sup></p>
+<p>ここも「遠赤外線＝何でも体が温まる」と単純化せず、<strong>メーカーが保温性向上の要素として組み込んでいる</strong>、という捉え方が良いです。<sup>[1]</sup></p>
+<h3>3-6. 暖かいのにムレにくい（吸放湿わた）</h3>
+<p>暖かい寝具は、汗をかくと逆に不快になりがちです。</p>
+<p>Nウォームの上位では、<strong>東洋紡の吸放湿わた</strong>で<strong>ムレにくさ</strong>を狙う説明があります。<sup>[1]</sup><sup>[4]</sup></p>
+<p>WSP敷きパッドの商品説明にも<strong>「吸放湿わた使用」</strong>とあります。<sup>[3]</sup></p>
+<h2 id="section4">4. まとめ：Nウォーム（ダブルスーパー）の暖かさの設計図</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">暖かさの要素</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">何が起きている？</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ダブルスーパーでの強化ポイント（例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>吸湿発熱</strong></td>
+<td>体の水分を吸って熱を出す</td>
+<td>表生地＋中わたで二重化（<strong>ダブル吸湿発熱</strong>）<sup>[1]</sup><sup>[3]</sup></td>
+</tr>
+<tr>
+<td><strong>保温・蓄熱</strong></td>
+<td>できた熱をためて逃がしにくい</td>
+<td><strong>蓄熱＋ボリューム増</strong>で保温性アップ<sup>[4]</sup></td>
+</tr>
+<tr>
+<td><strong>入りたての冷たさ対策</strong></td>
+<td>"ヒヤッ"を減らす</td>
+<td><strong>速暖／ヒヤッと感軽減</strong><sup>[3]</sup></td>
+</tr>
+<tr>
+<td><strong>断熱</strong></td>
+<td>外へ逃げる熱をブロック</td>
+<td><strong>エアロゲル</strong>採用（年度・製品による）<sup>[1]</sup><sup>[5]</sup></td>
+</tr>
+<tr>
+<td><strong>快適性（ムレ対策）</strong></td>
+<td>湿気を逃がして不快感を減らす</td>
+<td><strong>吸放湿わた</strong>でムレにくく<sup>[1]</sup><sup>[3]</sup></td>
+</tr>
+</tbody>
+</table>
+<h2 id="section5">おまけ：ダブルスーパーの暖かさを"損しない"使い方</h2>
+<details class="expandable">
+<summary>暖かさを最大限に活かすコツ</summary>
+<div class="expandable-content">
+<p><strong>① すき間を作らない</strong></p>
+<p>首元・肩・足元の隙間が一番冷えます（寝具は密閉が強い）。</p>
+<p><strong>② 汗をかくほど重ねすぎない</strong></p>
+<p><strong>吸湿発熱</strong>は強みですが、過剰発汗は睡眠の質を落としやすいです。</p>
+<p><strong>③ 表裏のある製品は面を守る</strong></p>
+<p>両面タイプは「暖かい面」を冬に。<sup>[3]</sup></p>
+</div>
+</details><!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">ニトリ. プレスリリース（Nウォーム製品情報）. PR TIMES.</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">JWIF（一般財団法人 日本繊維製品品質技術センター等）. 吸湿発熱素材の試験方法と評価.</span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">ニトリ公式サイト. Nウォーム製品ページ・商品説明.</span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">ニトリホールディングス. Nウォーム開発ストーリー・製品比較情報.</span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">Gore（ゴア社）. エアロゲルの断熱特性に関する技術情報.</span></div>
+</div>
+</div>

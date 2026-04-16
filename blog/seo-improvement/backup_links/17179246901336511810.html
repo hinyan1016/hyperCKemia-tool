@@ -1,0 +1,576 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225125003.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>MRIで占拠性病変が否定されたにも関わらず生じる鬱血乳頭：専門医レベルの対応</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">占拠性病変なしで生じる鬱血乳頭の鑑別診断と疫学</a></li>
+<li><a href="#section2">診断アルゴリズムと画像評価のアプローチ</a></li>
+<li><a href="#section3">腰椎穿刺のタイミング・方法と診断的および治療的意義</a></li>
+<li><a href="#section4">特発性頭蓋内圧亢進症（IIH）の診断基準・亜型・危険因子</a></li>
+<li><a href="#section5">IIHの治療選択肢（薬物治療と外科的介入）</a></li>
+<li><a href="#section6">視機能保護のためのモニタリング戦略</a></li>
+<li><a href="#section7">最新のガイドライン・専門学会の推奨</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">占拠性病変なしで生じる鬱血乳頭の鑑別診断と疫学</h2>
+<p><strong>鬱血乳頭（乳頭浮腫）</strong>とは<strong>頭蓋内圧亢進による両側性の視神経乳頭腫脹</strong>を指し、悪性高血圧や虚血性視神経症など頭蓋内圧と無関係な乳頭腫脹は含まれません<sup>[1]</sup>。MRIで腫瘤や血腫といった占拠性病変がないにも関わらず鬱血乳頭が認められる場合、以下の鑑別疾患を考慮します。</p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="うっ血乳頭と正常の模式図　NanoBananaProで作成">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225134148.png" width="934" height="444" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">うっ血乳頭と正常の模式図　NanoBananaProで作成</figcaption>
+</figure>
+<h3>特発性頭蓋内圧亢進症（IIH）</h3>
+<p>明らかな原因なく頭蓋内圧が上昇する疾患で、MRIで<strong>占拠性病変や水頭症がなく</strong>、髄液所見も正常である場合に診断されます<sup>[2]</sup>。典型的には<strong>肥満傾向の女性</strong>に多く、正常体重女性で年間発症<strong>1/100,000人</strong>、<strong>肥満女性では20/100,000人</strong>と報告されています<sup>[3]</sup>。約<strong>90%の症例で肥満が関連</strong>します<sup>[4]</sup>。<strong>頭痛</strong>、<strong>視神経乳頭浮腫</strong>、<strong>視力障害</strong>や<strong>一過性の視覚障害</strong>、<strong>拍動性雑音（耳鳴）</strong>などを呈し、放置すれば視機能低下の恐れがあります<sup>[5]</sup>。近年、本症の年間発症率は増加傾向にあり、2002–2014年で<strong>2.4/100,000</strong>に達したとの報告もあります<sup>[6]</sup>。</p>
+<h3>脳静脈洞血栓症（CVST）</h3>
+<p>脳の静脈洞に血栓が生じ頭蓋内静脈還流が障害されることで頭蓋内圧が上昇し、鬱血乳頭を呈しうる疾患です。<strong>妊娠・産褥</strong>や<strong>血栓性素因</strong>のある比較的若年者で生じやすく、しばしば<strong>頭痛</strong>や<strong>局所神経症状（けいれんや局所麻痺）</strong>を伴います。<strong>IIHと診断された患者の約10%前後にCVSTが隠れていた</strong>との報告があり<sup>[7][8]</sup>、必ず除外すべき鑑別疾患です。適切に診断すれば<strong>抗凝固療法</strong>など治療法が異なるため見逃し厳禁です。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 見逃し厳禁</span> <strong>脳静脈洞血栓症（CVST）</strong>はIIH症例の約10%に潜在しており、治療法が根本的に異なる（抗凝固療法）ため、必ず除外が必要です。</div>
+<h3>硬膜動静脈瘻（dAVF）</h3>
+<p>硬膜内で動脈と静脈洞が異常吻合する疾患で、頭蓋内静脈圧の亢進から鬱血乳頭をきたすことがあります。特に<strong>横静脈洞部のdAVF</strong>は頭蓋内圧亢進症状（頭痛、鬱血乳頭）に加え、<strong>「ゴーッ」という拍動性耳鳴（耳雑音）</strong>や<strong>血管雑音</strong>を呈するのが特徴です<sup>[9]</sup>。<strong>中高年男性</strong>にも発症しうるまれな原因ですが、画像上腫瘤がなく耳鳴を伴う鬱血乳頭では本症を疑い<strong>血管撮影での確認</strong>が必要です。</p>
+<h3>偽性乳頭浮腫（Pseudo-papilledema）</h3>
+<p>視神経乳頭部の先天異常や沈着物によって乳頭が隆起して見える状態で、<strong>真の頭蓋内圧亢進はありません</strong>。代表は<strong>視神経乳頭ドルーゼン</strong>で、一般人口の約<strong>0.3～2.4%</strong>にみられるとされます<sup>[10]</sup>。ドルーゼンは眼底検査で乳頭がデコボコした外観を呈し、小児では特に鬱血乳頭と紛らわしいことがあります<sup>[11]</sup>。多くは無症状ですが、時に<strong>視野欠損（傍中心暗点や弓状暗点）</strong>をきたします<sup>[12]</sup>。</p>
+<p>偽性乳頭浮腫と真の鬱血乳頭の鑑別には<strong>Bモード眼窩超音波</strong>や<strong>OCT（光干渉断層計）</strong>、<strong>眼底自発蛍光検査</strong>が有用であり、ドルーゼンは超音波で高エコー、<strong>OCTのエンハンス深度撮影で100%検出できる</strong>との報告があります<sup>[13][14]</sup>。一方、真の鬱血乳頭ではOCT上<strong>RNFL（網膜神経線維層）の肥厚</strong>が持続的に認められる点で鑑別できます<sup>[15]</sup>。</p>
+<h3>薬剤性頭蓋内圧亢進症</h3>
+<p>特定の薬剤が頭蓋内圧上昇を引き起こし鬱血乳頭を呈することがあります<sup>[16]</sup>。古くから知られるものに<strong>テトラサイクリン系抗生物質（ミノサイクリンなど）</strong>や<strong>ビタミンA過剰（イソトレチノイン）</strong>があります<sup>[17]</sup>。その他<strong>成長ホルモン製剤</strong>、<strong>経口避妊薬</strong>、<strong>コルチコステロイドの長期使用中止</strong>、<strong>ナリジクス酸</strong>、<strong>ニトロフラントイン</strong>、<strong>アナボリックステロイド乱用</strong>なども報告されています<sup>[18][17]</sup>。薬剤性の場合、<strong>原因薬剤の中止により改善</strong>が期待できます。</p>
+<h3>髄膜疾患（髄膜炎・髄膜播種など）</h3>
+<p>髄膜の炎症や腫瘍性病変によって髄液の吸収障害や静脈圧亢進が生じ、頭蓋内圧が上昇することがあります。<strong>結核性</strong>や<strong>真菌性</strong>など<strong>慢性髄膜炎</strong>や、<strong>癌性髄膜炎</strong>では頭痛や脳神経障害とともに鬱血乳頭が出現することがあります<sup>[19]</sup>。MRIで腫瘤がなくとも<strong>髄膜増強効果</strong>が認められる場合は髄膜生検や髄液検査が必要です。髄膜疾患では髄液所見に異常（<strong>細胞増多</strong>や<strong>タンパク上昇</strong>）がみられる点でIIHと鑑別されます。</p>
+<h3>その他稀な原因</h3>
+<p><strong>重度の貧血（鉄欠乏性貧血など）</strong><sup>[20]</sup>、<strong>副腎不全（Addison病）</strong><sup>[21]</sup>、<strong>副甲状腺機能低下症</strong><sup>[21]</sup>、<strong>慢性呼吸不全（CO₂灌流圧上昇）</strong>や<strong>睡眠時無呼吸症候群</strong><sup>[22]</sup>など全身状態が頭蓋内圧に影響して鬱血乳頭様の所見を呈することがあります。また<strong>悪性高血圧</strong>は高度の乳頭浮腫を来しますが、これは頭蓋内圧亢進によるものではないため厳密には鬱血乳頭に含まれません<sup>[1]</sup>（鑑別として重要）。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 鑑別のポイント</span> 頻度としては<strong>IIHが最も多く</strong>、ついで<strong>CVST</strong>や<strong>薬剤性</strong>が重要な鑑別となります<sup>[7]</sup>。特に脳静脈洞血栓症（約1割）や硬膜動静脈瘻といった頭蓋内静脈系の異常は見逃すと重篤な転帰をとるため、IIHと判断する前に必ず除外する必要があります<sup>[7][23]</sup>。また偽性乳頭浮腫の鑑別も重要で、OCTや超音波で乳頭ドルーゼンの有無を確認します<sup>[13]</sup>。</div>
+<!-- 鑑別疾患テーブル -->
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">鑑別疾患</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴的所見</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疫学・頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>特発性頭蓋内圧亢進症（IIH）</strong></td>
+<td>頭痛、視覚障害、拍動性耳鳴、髄液所見正常</td>
+<td>肥満女性で20/100,000人、約90%に肥満合併</td>
+</tr>
+<tr>
+<td><strong>脳静脈洞血栓症（CVST）</strong></td>
+<td>頭痛、けいれん、局所麻痺</td>
+<td>IIH症例の約10%に潜在</td>
+</tr>
+<tr>
+<td><strong>硬膜動静脈瘻（dAVF）</strong></td>
+<td>「ゴーッ」という拍動性耳鳴、血管雑音</td>
+<td>中高年男性にも発症</td>
+</tr>
+<tr>
+<td><strong>偽性乳頭浮腫</strong></td>
+<td>乳頭ドルーゼン、頭蓋内圧正常</td>
+<td>一般人口の0.3～2.4%</td>
+</tr>
+<tr>
+<td><strong>薬剤性</strong></td>
+<td>原因薬剤中止で改善</td>
+<td>テトラサイクリン系、ビタミンA過剰など</td>
+</tr>
+<tr>
+<td><strong>髄膜疾患</strong></td>
+<td>髄液異常（細胞増多、タンパク上昇）</td>
+<td>慢性髄膜炎、癌性髄膜炎</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション2 -->
+<h2 id="section2">診断アルゴリズムと画像評価のアプローチ</h2>
+<p>MRIで腫瘤性病変が否定された場合の鬱血乳頭に対しては、<strong>系統的な診断アルゴリズム</strong>に沿って原因検索と診断確定を行います<sup>[2]</sup>。以下に専門医レベルで推奨される手順を示します。</p>
+<h3>Step 1：眼科的評価と偽乳頭浮腫の除外</h3>
+<p>まず<strong>精密眼科検査</strong>で本当に乳頭浮腫があるか評価します。他の視神経乳頭浮腫の原因（<strong>視神経炎</strong>、<strong>虚血性視神経症</strong>、<strong>網膜中心静脈閉塞症</strong>、<strong>ぶどう膜炎</strong>など）がないか確認し<sup>[2]</sup>、必要に応じて<strong>OCTで視神経乳頭の隆起度（網膜神経線維層の厚み）</strong>を定量化して経時変化を追います<sup>[24]</sup>。<strong>Bスキャン超音波</strong>や<strong>眼底自発蛍光検査</strong>でドルーゼンの有無をチェックし、偽性乳頭浮腫を除外します<sup>[13][2]</sup>。乳頭浮腫が臨床的に疑われた時点で速やかに次のステップへ進みます。</p>
+<h3>Step 2：頭部画像検査</h3>
+<p>直ちに<strong>造影MRI（または造影CT）</strong>を行い、腫瘤性病変、水頭症、脳出血、脳炎など頭蓋内圧亢進の明らかな原因がないか検索します<sup>[2]</sup>。MRIではしばしば<strong>強膜陥凹の平坦化</strong>や<strong>下垂体陥凹の空虚化（empty sella）</strong>、<strong>視神経鞘の拡大</strong>など頭蓋内圧亢進を示唆する所見が得られることがあります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 重要な注意点</span> <strong>MRI単独では脳静脈洞血栓症を約3割見逃す可能性</strong>が報告されています<sup>[8]</sup>。特に所見が正常でも<strong>MR静脈造影（MRV）</strong>または<strong>CT静脈造影</strong>を追加して脳静脈洞血栓症の除外を行います<sup>[25]</sup>。</div>
+<p>臨床上<strong>拍動性雑音や耳鳴がある場合</strong>は硬膜動静脈瘻の疑いが高いため、<strong>カテーテル脳血管造影（DSA）</strong>による精査が推奨されます<sup>[9]</sup>。MRI/MRVで占拠性病変・血栓・血管奇形など明らかな原因が認められなければ、次の髄液検査に進みます<sup>[25]</sup>。</p>
+<h3>Step 3：腰椎穿刺（ルンバール穿刺）と髄液検査</h3>
+<p>画像検査で<strong>脳ヘルニアのリスクとなる占拠性病変が否定</strong>され次第、腰椎穿刺を行って<strong>髄液の初圧（開放圧）</strong>を測定します<sup>[25]</sup>。患者を側臥位にして安静を保った状態で髄液圧を測定し、成人では<strong>25 cmH₂O超を頭蓋内圧亢進</strong>とみなします<sup>[3]</sup>。併せて髄液検査（細胞数、蛋白、グルコース、病原体検査など）を行い、感染や炎症・腫瘍細胞の有無を確認します<sup>[25]</sup>。</p>
+<p><strong>初圧が上昇し髄液所見が正常</strong>で、他の頭蓋内圧亢進の原因が除外された場合、<strong>IIHの診断が確定</strong>します<sup>[25]</sup>。一方、髄液中に細胞増多や蛋白上昇がある場合は髄膜炎や癌性髄膜症を疑い、更なる精査・治療に移行します。初圧が正常で乳頭腫脹が残る場合は、偽性乳頭浮腫の見落としや他の視神経疾患の可能性を再評価します。</p>
+<h3>Step 4：診断確定後の追加評価</h3>
+<p><strong>IIHと診断された場合</strong>でも、MRI画像を再検証して<strong>横静脈洞の狭窄</strong>や<strong>内頸静脈の圧迫所見</strong>がないか確認します（IIH患者の静脈洞には狭小化が高頻度に認められます<sup>[26]</sup>）。必要に応じて眼科での<strong>定期的視野検査</strong>・<strong>OCTのbaseline測定</strong>を行い、今後のモニタリング指標とします。また患者の<strong>内服薬歴を見直し</strong>、原因となりうる薬剤の中止を検討します<sup>[27]</sup>。全身状態の評価も行い、<strong>睡眠時無呼吸</strong>や<strong>内分泌異常</strong>の治療が必要か検討します。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 診断プロセスの要点</span> <strong>MRI+MRVの施行</strong>と<strong>腰椎穿刺による開放圧測定</strong>は、鬱血乳頭症例の診断プロセスにおいて不可欠です<sup>[25][26]</sup>。</div>
+<!-- セクション3 -->
+<h2 id="section3">腰椎穿刺のタイミング・方法と診断的および治療的意義</h2>
+<p><strong>腰椎穿刺（ルンバール穿刺）</strong>は鬱血乳頭を呈する患者の診断確定において極めて重要な手技です。実施のタイミングは、<strong>画像検査で占拠性病変による脳ヘルニアのリスクが除外された直後</strong>が原則です（腫瘍や大きな水頭症がある状態での穿刺はヘルニアを誘発する危険があります）。したがって、MRIで異常がなく硬膜静脈洞血栓症も否定的であれば、<strong>できるだけ早期</strong>に腰椎穿刺を行います。</p>
+<h3>穿刺方法</h3>
+<p>穿刺方法は通常、患者を<strong>側臥位</strong>にして脊椎の<strong>L3-4またはL4-5間隙</strong>から穿刺し、<strong>マノメーター（圧測定管）</strong>を接続して開放髄液圧（初圧）を静かに測定します。成人では正常髄液圧は<strong>10～18 cmH₂O</strong>程度で、<strong>25 cmH₂O以上が異常高値</strong>と判断されます<sup>[25]</sup>（小児ではやや基準が異なり、<strong>28 cmH₂O以上</strong>を異常とすることもあります<sup>[3]</sup>）。測定の際は患者の緊張や呼吸状態によって値が変動しうるため、<strong>安静を保ちつつ複数回測定</strong>して平均値を参考にします。</p>
+<h3>診断的意義</h3>
+<p>腰椎穿刺により得られる情報は大きく2つあります。</p>
+<p><strong>（1）髄液圧の測定</strong>：頭蓋内圧亢進の客観的証拠となり、<strong>IIH診断には髄液開放圧の上昇が必須</strong>です<sup>[25]</sup>。</p>
+<p><strong>（2）髄液検査所見</strong>：IIHでは髄液の細胞数や生化学は正常であるのに対し、<strong>感染性髄膜炎</strong>なら髄液中多細胞の増加や糖低下、<strong>癌性髄膜炎</strong>なら悪性細胞の検出、高タンパク血症など所見の異常が見られるため、<strong>鑑別診断に決定的な手がかり</strong>を与えます<sup>[25]</sup>。</p>
+<h3>治療的意義</h3>
+<p><strong>腰椎穿刺による髄液排除そのものが治療効果</strong>を発揮する場合があります。IIHでは穿刺で<strong>数十mLの髄液を排出</strong>することで一時的に頭蓋内圧を低下させ、<strong>頭痛の軽減</strong>や<strong>鬱血乳頭の改善</strong>を図ることが可能です。このため、緊急の視神経障害進行時や治療までのつなぎとして、<strong>繰り返し腰椎穿刺を行い髄液をドレナージ</strong>することがあります<sup>[29]</sup>。</p>
+<p>ただし反復腰椎穿刺による長期管理は患者負担が大きく議論のあるところであり<sup>[29]</sup>、最終的には根本治療（シャント手術等）に委ねるのが一般的です。また、髄液中圧の顕著な上昇（例えば<strong>40 cmH₂O以上</strong>）を確認した場合、その場で適量の髄液を抜去しておくことで症状緩和が期待できます。</p>
+<!-- セクション4 -->
+<h2 id="section4">特発性頭蓋内圧亢進症（IIH）の診断基準・亜型・危険因子</h2>
+<p>IIHの診断基準は古典的にDandyの基準が用いられてきましたが、<strong>2013年に改訂されたFriedmanらの診断基準</strong>が広く参照されています<sup>[25]</sup>。</p>
+<h3>必須条件（改訂Friedman基準）</h3>
+<div class="info-box important-box"><span class="info-box-title">📋 IIH診断の必須条件</span> ①<strong>鬱血乳頭（または外転神経麻痺）</strong>を認めること<br />②頭痛など臨床症状が他に説明困難なこと<br />③MRIで<strong>占拠性病変や水頭症がない</strong>（横静脈洞の狭窄はあってもよい）<br />④腰椎穿刺の開放圧が高値（<strong>≧25 cmH₂O</strong>）で<strong>髄液の組成が正常</strong>であること<sup>[25][26]</sup></div>
+<p>以上を満たせば<strong>確実IIH</strong>とされます。<strong>片眼性乳頭浮腫</strong>や<strong>初圧が境界値</strong>の場合は「おそらくIIH」とされ、経過観察下で再評価します<sup>[30][31]</sup>。他に原因となる疾患や薬剤が示唆される場合は<strong>続発性の頭蓋内圧亢進症</strong>（かつての「偽性脳腫瘍症候群」）として区別します。</p>
+<h3>亜型・病態の多様性</h3>
+<p>IIHにも経過や背景因子によりいくつかの亜型が提唱されています。</p>
+<p><strong>Fulminant IIH（劇症型IIH）</strong>：診断から<strong>4週間以内に視機能が急激に悪化</strong>する重症例を指します<sup>[32]</sup>。このタイプでは短期間で<strong>失明に至る恐れ</strong>があり、早期から<strong>侵襲的治療（緊急シャント留置や視神経鞘開放術）</strong>が検討されます<sup>[33]</sup>。</p>
+<p><strong>Typical IIH</strong>：肥満の若年女性に発症しやすく、比較的緩徐な経過を辿ります<sup>[32]</sup>。</p>
+<p><strong>IIH without papilledema（無乳頭浮腫性IIH）</strong>：頭痛やVI脳神経麻痺などIIHの症状を呈し髄液圧も上昇するものの、<strong>乳頭浮腫を欠くケース</strong>で、<strong>中年男性</strong>や<strong>瘦せ型の患者</strong>にも見られます。無乳頭浮腫例では診断に慎重を期す必要がありますが、基礎疾患がなければ治療方針はIIHに準じます。</p>
+<h3>危険因子と成因</h3>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225134935.png" width="1200" height="642" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p>IIHの明確な発症機序は不明ですが、<strong>肥満との関連が顕著</strong>です<sup>[6]</sup>。<strong>20～40歳代女性</strong>での好発が古くから知られており、肥満女性では正常体重女性に比べIIHの発症リスクが著明に増加します<sup>[3]</sup>。実際、<strong>IIH患者の約90%が肥満</strong>との報告もあります<sup>[4]</sup>。体重増加が発症の引き金になることも多く、<strong>多嚢胞性卵巣症候群（PCOS）</strong>や<strong>代謝症候群</strong>を合併する例もあります<sup>[34]</sup>。</p>
+<p>その他のリスク因子として、<strong>貧血</strong>や<strong>甲状腺疾患</strong>、<strong>睡眠時無呼吸</strong>などが指摘されています<sup>[35]</sup>。薬剤では<strong>テトラサイクリン系</strong>や<strong>ビタミンA誘導体</strong>が発症契機となることがあり、<strong>成長ホルモン治療</strong>や<strong>経口避妊薬</strong>の使用歴も確認が必要です<sup>[18]</sup>。</p>
+<p>病態生理的には、IIH患者の静脈洞に<strong>狭窄や圧力勾配</strong>が認められることが多く、<strong>静脈洞狭窄→頭蓋内圧上昇→さらに静脈還流障害</strong>という悪循環が想定されています<sup>[3]</sup>。加えて肥満に伴う<strong>腹圧上昇</strong>や<strong>炎症性サイトカイン</strong>の関与、<strong>ホルモン環境（女性ホルモンやレプチン）</strong>の影響も仮説として議論されています。</p>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225134825.png" width="1200" height="1018" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<!-- セクション5 -->
+<h2 id="section5">IIHの治療選択肢（薬物治療と外科的介入）</h2>
+<p>IIHの治療目標は<strong>視機能の保護</strong>と<strong>頭痛など症状の軽減</strong>であり、可能であれば基礎要因の是正も図ります<sup>[36]</sup>。</p>
+<h3>生活習慣改善（体重減少）</h3>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251225/20251225135110.png" width="1200" height="443" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p><strong>減量はIIH管理の基盤となる第一選択</strong>です<sup>[37]</sup>。肥満患者では<strong>体重を約6%減らすだけでも鬱血乳頭が消失</strong>しうるとの報告があり、<strong>15%の減量で臨床的寛解</strong>、<strong>約24%の減量で頭蓋内圧が正常化</strong>した例もあります<sup>[4]</sup>。食事療法・運動療法による減量の継続が難しい場合、<strong>肥満外科手術（バイパス術やスリーブ術）</strong>による大幅減量でIIHが治癒したとの報告もあります<sup>[38]</sup>。</p>
+<details class="expandable" open="open">
+<summary>GLP-1受容体作動薬の可能性</summary>
+<div class="expandable-content">
+<p>近年、<strong>GLP-1受容体作動薬（肥満症治療薬）</strong>の併用による体重減少が新たな治療オプションとして注目されており、GLP-1薬は<strong>食欲抑制</strong>に加え<strong>髄液産生や脳圧調節への直接効果</strong>の可能性も示唆されています<sup>[39]</sup>。</p>
+<p>小規模研究でGLP-1薬使用群は<strong>頭痛頻度や視覚症状の改善</strong>、<strong>アセタゾラミド必要量減少</strong>が報告されており、減量以外の中枢作用にも期待が寄せられています<sup>[40]</sup>。ただしGLP-1薬は現時点でIIH治療の標準ではなく、肥満合併例への補助的選択肢です<sup>[41]</sup>。</p>
+</div>
+</details>
+<h3>薬物療法</h3>
+<p>頭蓋内圧を下げ視神経を保護する目的で<strong>炭酸脱水酵素阻害薬</strong>の内服が第一選択となります。具体的には<strong>アセタゾラミド</strong>が用いられ、<strong>髄液産生を減少</strong>させることで脳圧を低下させます<sup>[42]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">薬剤</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">用法用量</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴・副作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>アセタゾラミド</strong></td>
+<td>250mg×1日2～4回から開始、最大2～4g/日まで漸増</td>
+<td>第一選択。倦怠感、手足の痺れ、代謝性アシドーシス、腎結石</td>
+</tr>
+<tr>
+<td><strong>トピラマート</strong></td>
+<td>25～100mg/日</td>
+<td>弱い炭酸脱水酵素阻害作用＋食欲抑制効果。アセタゾラミド不耐時の代替</td>
+</tr>
+<tr>
+<td><strong>フロセミド等</strong></td>
+<td>症例に応じて追加</td>
+<td>効果不十分時の併用として検討</td>
+</tr>
+</tbody>
+</table>
+<p><strong>アセタゾラミドの有効性</strong>は無作為化比較試験（<strong>IIHTT</strong>）でも示されており、減量食事療法との併用で<strong>視野障害の軽減に有意差</strong>が認められました<sup>[43]</sup>。副作用が強い場合や体重減少効果も狙いたい場合には<strong>トピラマート</strong>が代替または併用で用いられます<sup>[42]</sup>。トピラマートも弱い炭酸脱水酵素阻害作用があり<strong>食欲抑制効果</strong>を併せ持つため、IIHの頭痛緩和と減量促進に有用です<sup>[42]</sup>。</p>
+<p>薬物療法のみでコントロール困難な場合や視機能にリスクがある場合は、早めに<strong>外科的介入</strong>を検討します<sup>[36]</sup>。</p>
+<h3>外科的介入</h3>
+<p>薬物治療下でも<strong>視力や視野の悪化が進行する場合</strong>、または<strong>Fulminant IIHで急激な視機能低下</strong>がある場合には侵襲的治療を考慮します<sup>[45]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">術式</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">適応</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>視神経鞘開窓術（ONSF）</strong></td>
+<td>視力低下が著明、片眼のみ重度乳頭浮腫</td>
+<td>視神経周囲の髄液圧を下げて乳頭浮腫を軽減。頭痛改善効果は限定的<sup>[46]</sup></td>
+</tr>
+<tr>
+<td><strong>髄液シャント術</strong><br />（VPシャント/LPシャント）</td>
+<td>慢性IIHで薬物抵抗性</td>
+<td>頭痛改善にも有効。シャント閉塞、低髄液圧症状のリスク<sup>[47]</sup></td>
+</tr>
+<tr>
+<td><strong>静脈洞ステント術</strong></td>
+<td>横静脈洞に高度の静脈狭窄・圧較差</td>
+<td>比較的新しいアプローチ。術後抗凝固療法が必要<sup>[47]</sup></td>
+</tr>
+</tbody>
+</table>
+<p>これらの外科的治療法はいずれも<strong>視機能の悪化を食い止める目的</strong>で選択され、患者ごとのリスク・ベネフィットを考慮して決定されます<sup>[47]</sup>。例えば、進行する視野欠損が主体なら<strong>ONSF</strong>、全般的な頭蓋内圧管理が必要なら<strong>VPシャント</strong>、静脈洞狭窄が明らかな例では<strong>ステント留置</strong>など、状況に応じたオーダーメイドの選択となります。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 治療戦略のまとめ</span> IIHの治療はまず<strong>体重減少とアセタゾラミド内服</strong>という保存的療法から開始し、必要に応じて外科的介入へ段階的に移行するのが一般的です<sup>[42][47]</sup>。治療反応は患者ごとに異なるため、<strong>視機能モニタリングを綿密に行いながら</strong>適切なタイミングで治療強化を図ることが重要です<sup>[49]</sup>。</div>
+<!-- セクション6 -->
+<h2 id="section6">視機能保護のためのモニタリング戦略</h2>
+<p>IIHにおいて最も重篤な合併症は<strong>不可逆的な視力・視野障害</strong>であり、これを防ぐための厳重な視機能モニタリングが欠かせません<sup>[36]</sup>。専門医レベルでは以下のような包括的モニタリング戦略が推奨されます。</p>
+<h3>定期的な視野検査</h3>
+<p><strong>静的視野検査（Humphreyなど）</strong>による視野モニタリングは視神経機能評価の要です。乳頭浮腫は初期には視力に変化を来さないことも多く<sup>[50][51]</sup>、視野異常（<strong>盲点拡大</strong>や<strong>傍中心暗点</strong>、<strong>求心性視野狭窄</strong>など）が進行して初めて視覚障害に気付く場合があります<sup>[52]</sup>。したがって<strong>症状の有無に関わらず定期的な視野検査</strong>を実施し、異常の進展があれば早急に治療強化を検討します<sup>[53]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">視野検査頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>治療開始直後・乳頭浮腫高度</td>
+<td><strong>1～2か月毎</strong></td>
+</tr>
+<tr>
+<td>安定傾向</td>
+<td><strong>3か月毎</strong>程度</td>
+</tr>
+<tr>
+<td>改善確実</td>
+<td><strong>6か月毎～1年毎</strong></td>
+</tr>
+</tbody>
+</table>
+<p>視野検査は慣れない患者では信頼性に欠ける結果が出ることもあるため、<strong>一度の悪化所見で判断せず再検査して確認</strong>することも重要です<sup>[54][55]</sup>。特に治療変更の判断基準として、視野の有意な悪化（<strong>MD値の低下</strong>や<strong>新たな暗点出現</strong>）は重要な指標となります<sup>[56]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> <strong>視力は末期まで保たれる</strong>ことも多く、視力良好でも視野が進行している可能性がある点に注意します<sup>[52][49]</sup>。</div>
+<h3>OCTによる構造評価</h3>
+<p><strong>光干渉断層計（OCT）</strong>で視神経周囲の<strong>網膜神経線維層厚（RNFL）</strong>や黄斑部の<strong>神経節細胞-内網状層複合体（GCL+IPL）厚</strong>を定量計測し、視神経の構造的変化を追跡します。Papilledemaでは<strong>RNFLが浮腫により肥厚</strong>し、治療で浮腫が引くとRNFL厚が減少しますが、その減少が単なる浮腫改善なのか<strong>軸索萎縮（神経線維の喪失）</strong>によるものか判別が難しい場合があります<sup>[57]</sup>。</p>
+<p>そこで<strong>GCL厚の測定</strong>が有用で、GCLは視神経萎縮により明らかに菲薄化するため<strong>視野障害との相関が高い</strong>とされています<sup>[57]</sup>。定量OCTにより乳頭浮腫の改善度合いを客観評価でき、例えば減量治療6週間で乳頭体積が著減したケースなどが報告されています<sup>[58][59]</sup>。他方、浮腫が強すぎるとOCT自動解析が誤作動することもあり、重度乳頭浮腫例では測定値の信頼性に留意が必要です<sup>[60]</sup>。</p>
+<h3>眼底写真記録</h3>
+<p>乳頭浮腫の<strong>カラー眼底写真</strong>や<strong>蛍光眼底画像</strong>を定期的に残し、乳頭発赤腫脹や出血の所見が改善しているかを視覚的に比較します。<strong>Frisénの乳頭浮腫重症度分類</strong>なども参考にしつつ、臨床医の経験に基づき総合的に評価します。写真はOCTに比べ定性的ですが、微細な乳頭表面のしわ（Paton線）や出血の有無など肉眼所見の把握には不可欠です<sup>[61]</sup>。</p>
+<h3>神経学的・全身状態のフォロー</h3>
+<p><strong>頭痛の頻度や程度</strong>、<strong>VI神経麻痺（複視）の有無</strong>、<strong>嘔気嘔吐</strong>など症状も毎診察時に評価します。頭痛の増悪や新規神経症状出現は治療不十分を示唆し、視機能に先行して現れる可能性があります。また<strong>体重測定を定期</strong>に行い、減量目標の達成度を確認します。IIH患者に併存しやすい<strong>抑うつ傾向</strong>についても配慮し、必要なら精神科サポートも行います。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 モニタリングの判断基準</span> <strong>視野上新たな暗点や盲点拡大</strong>が認められたり、OCTで<strong>RNFL厚が治療前より悪化</strong>していれば、アセタゾラミド増量や早期のシャント術検討など<strong>治療方針の変更を即座に行う</strong>基準とします<sup>[53]</sup>。逆に改善傾向が明らかであれば、経過観察間隔を少し延ばしつつ薬剤副作用の軽減も考慮します<sup>[49]</sup>。</div>
+<!-- セクション7 -->
+<h2 id="section7">最新のガイドライン・専門学会の推奨</h2>
+<p>IIHと鬱血乳頭のマネジメントについては、近年アップデートされた国際ガイドラインや専門家コンセンサスがいくつか存在します。</p>
+<h3>米国神経学会（AAN）</h3>
+<p>IIHに特化した公式ガイドラインはありませんが、関連する推奨として「まず<strong>MRI/MRVで二次性原因を除外</strong>し、<strong>開放圧測定で診断確定</strong>、初期治療は<strong>減量とアセタゾラミド</strong>、視機能悪化時は迅速に<strong>外科的介入を検討</strong>する」という流れが推奨されています<sup>[2][49]</sup>。AANの継続教育誌Continuum（2022）でもIIHの最新知見がまとめられており、IIHTT試験に基づくアセタゾラミドの有用性や、トピラマート併用、さらには新規治療の可能性（GLP-1作動薬や静脈洞ステントなど）にも言及されています。また<strong>2013年の改訂診断基準（Friedmanら）</strong>もAAN学会誌Neurologyに発表されており、国際的に参照されています。</p>
+<h3>欧州頭痛連盟/欧州神経学会（EHF/EAN）</h3>
+<p>2018年に<strong>European Headache FederationからIIHの治療ガイドライン</strong>が公表され<sup>[43]</sup>、<strong>アセタゾラミドが唯一RCTで有効性が示された第一選択薬</strong>であること、<strong>減量を全例で行う</strong>こと、視機能障害の進行例では<strong>外科的措置を考慮</strong>することなどが推奨されています<sup>[43]</sup>。</p>
+<p>また欧州の専門家グループからは<strong>英国発のコンセンサスステートメント（2018年 Mollanら）</strong>も発表されており<sup>[36]</sup>、「<strong>基礎疾患の治療</strong>」「<strong>視機能の保護</strong>」「<strong>頭痛の軽減</strong>」の3原則が強調されています。このコンセンサスでは20以上のクリニカルクエスチョンに対する推奨が示されており、例として「MRVを含む画像検査で診断精度を上げる」「減量を治療の柱とする」「頭痛管理には生活指導と必要に応じ鎮痛薬を」等、実践的な指針が提案されています<sup>[62][63]</sup>。特に英国ではIIH患者支援団体（IIH UK）も関与し、<strong>多職種による包括的管理体制の整備</strong>が推奨されています<sup>[64][65]</sup>。</p>
+<h3>日本における対応</h3>
+<p>現時点で<strong>日本神経学会や日本神経眼科学会によるIIH単独の公式ガイドライン</strong>は存在しませんが、国内の専門医も海外のエビデンスに準拠した診療を行っています<sup>[66]</sup>。たとえば日本神経治療学会の総説や神経眼科領域のレビューで、MRI/MRVによる診断アプローチやアセタゾラミド療法、視野検査の重要性が繰り返し述べられています。またMSDマニュアル プロフェッショナル版（日本語版）<sup>[26][49]</sup>やUpToDate日本語版などが最新知見をアップデートしており、臨床医はこれらを参考に診療しています。</p>
+<p>日本では症例数が欧米ほど多くないためかエビデンス集積は限られますが、「<strong>減量</strong>」「<strong>アセタゾラミド</strong>」「<strong>視機能フォロー</strong>」「<strong>必要時外科治療</strong>」という基本戦略は国際標準と一致しています。</p>
+<h3>UpToDate</h3>
+<p>米国発のUpToDateオンライン情報（2025年版）でも、IIHの項で<strong>MRI+MRVで原因検索→腰椎穿刺で確定→減量とアセタゾラミドを基軸に、視力低下時の手術適応、モニタリング方法（視野検査・OCT）</strong>に至るまで、本稿で述べた内容と軌を一にする解説がなされています<sup>[26][2]</sup>。UpToDateでは特に「<strong>若年肥満女性の新規頭痛ではIIHを念頭にMRI/MRVとLPを行うこと</strong>」「<strong>視野進行例では躊躇なく神経外科紹介すること</strong>」が強調されており、日本の臨床現場でも標準的対応として受け入れられています。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 最新の国際的推奨のまとめ</span> 最新知見としては<strong>減量療法の有用性再確認</strong>や<strong>GLP-1受容体作動薬など新規治療の可能性</strong>、<strong>静脈洞ステントの位置づけ</strong>などが話題となっています<sup>[39][43]</sup>。専門学会からも「<strong>視機能を守りつつ頭痛によるQOL低下を最小化する</strong>」ことがIIH管理の双目標として掲げられており<sup>[36]</sup>、患者の長期予後改善のために<strong>包括的かつ学際的チームでケアする重要性</strong>が強調されています<sup>[64][65]</sup>。</div>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">乳頭浮腫 - 17. 眼疾患 - MSDマニュアル プロフェッショナル版. <a href="https://www.msdmanuals.com/ja-jp/professional/17-%E7%9C%BC%E7%96%BE%E6%82%A3/%E8%A6%96%E7%A5%9E%E7%B5%8C%E7%96%BE%E6%82%A3/%E4%B9%B3%E9%A0%AD%E6%B5%AE%E8%85%AB" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">特発性頭蓋内圧亢進症 - 07. 神経疾患 - MSDマニュアル プロフェッショナル版. <a href="https://www.msdmanuals.com/ja-jp/professional/07-%E7%A5%9E%E7%B5%8C%E7%96%BE%E6%82%A3/%E9%A0%AD%E7%97%9B/%E7%89%B9%E7%99%BA%E6%80%A7%E9%A0%AD%E8%93%8B%E5%86%85%E5%9C%A7%E4%BA%A2%E9%80%B2%E7%97%87" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3 28</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/23966248/" target="_blank" rel="noopener">Friedman DI, et al. Revised diagnostic criteria for the pseudotumor cerebri syndrome in adults and children. Neurology. 2013.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">4 5 37</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/34484948/" target="_blank" rel="noopener">Sinclair AJ, et al. Is obesity a risk factor for idiopathic intracranial hypertension?</a></span></div>
+<div class="ref-item"><span class="ref-numbers">6 32 33</span> <span class="ref-content">Mollan SP, et al. Idiopathic intracranial hypertension: consensus guidelines on management. J Neurol Neurosurg Psychiatry. 2018;89(10):1088-1100. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6166610/" target="_blank">PMC6166610</a></span></div>
+<div class="ref-item"><span class="ref-numbers">7</span> <span class="ref-content">Biousse V, et al. Occurrence of cerebral venous sinus thrombosis in patients with presumed idiopathic intracranial hypertension. <a href="https://pubmed.ncbi.nlm.nih.gov/17157135/" target="_blank">PubMed</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8</span> <span class="ref-content">Clinical profile of cerebral venous sinus thrombosis. Indian J Ophthalmol. 2010. <a href="https://journals.lww.com/ijo/fulltext/2010/58020/clinical_profile_of_cerebral_venous_sinus.14.aspx" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">9</span> <span class="ref-content">Type I Dural Arteriovenous Fistula Mimicking Dural Venous Sinus Thrombosis. J Neuro-Ophthalmol. 2017. <a href="https://journals.lww.com/jneuro-ophthalmology/fulltext/2017/12000/type_i_dural_arteriovenous_fistula_mimicking_dural.24.aspx" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">10 11 12 14 15</span> <span class="ref-content">A field guide to optic disc drusen. Modern Retina. <a href="https://www.modernretina.com/view/a-field-guide-to-optic-disc-drusen" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">13 24 53 57 58 59 60 61</span> <span class="ref-content">Papilledema - EyeWiki. American Academy of Ophthalmology. <a href="https://eyewiki.org/Papilledema" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">16 17 18 27</span> <span class="ref-content">Drug-induced intracranial hypertension. 各種文献より。</span></div>
+<div class="ref-item"><span class="ref-numbers">19 20 21 22</span> <span class="ref-content">Secondary causes of intracranial hypertension. 各種文献より。</span></div>
+<div class="ref-item"><span class="ref-numbers">23</span> <span class="ref-content">Complex Dural Arteriovenous Fistula Masquerading as IIH. Neurology. <a href="https://www.neurology.org/doi/10.1212/WNL.88.16_supplement.P1.200" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">25 26 29 30 31</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/12455560/" target="_blank" rel="noopener">Friedman DI, Jacobson DM. Diagnostic criteria for idiopathic intracranial hypertension. Neurology. 2002;59:1492-1495.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">34 35</span> <span class="ref-content">Risk factors and comorbidities in IIH. 各種文献より。</span></div>
+<div class="ref-item"><span class="ref-numbers">36 44 45 46 47 62 63 64 65</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/29903905/" target="_blank" rel="noopener">Mollan SP, et al. Idiopathic intracranial hypertension: consensus guidelines on management. J Neurol Neurosurg Psychiatry. 2018;89(10):1088-1100.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">38</span> <span class="ref-content">Bariatric surgery in IIH management. 各種文献より。</span></div>
+<div class="ref-item"><span class="ref-numbers">39 40 41</span> <span class="ref-content">減量だけじゃない？GLP-1薬と特発性頭蓋内圧亢進症の治療最前線 - シーサー通り内科リハビリクリニック. <a href="https://www.shisa-clinic.com/202509301645/" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">42 48 49</span> <span class="ref-content"><a href="https://pubmed.ncbi.nlm.nih.gov/28017254/" target="_blank" rel="noopener">NORDIC Idiopathic Intracranial Hypertension Study Group. Effect of acetazolamide on visual function in patients with idiopathic intracranial hypertension and mild visual loss: the idiopathic intracranial hypertension treatment trial. JAMA. 2014.</a></span></div>
+<div class="ref-item"><span class="ref-numbers">43 54 55</span> <span class="ref-content">European Headache Federation guideline on idiopathic intracranial hypertension. J Headache Pain. 2018. <a href="https://link.springer.com/article/10.1186/s10194-018-0919-2" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">50 51 52</span> <span class="ref-content">Visual field monitoring in IIH. 各種文献より。</span></div>
+<div class="ref-item"><span class="ref-numbers">56</span> <span class="ref-content">How is a Patient Diagnosed? Department of Ophthalmology, Harvard Medical School. <a href="https://eye.hms.harvard.edu/book/how-patient-diagnosed-and-treated" target="_blank">リンク</a></span></div>
+<div class="ref-item"><span class="ref-numbers">66</span> <span class="ref-content">特発性頭蓋内圧亢進症の診断と治療. Neurological Surgery. 医書.jp. <a href="https://webview.isho.jp/journal/detail/abs/10.11477/mf.1436204572" target="_blank">リンク</a></span></div>
+</div>
+</div>

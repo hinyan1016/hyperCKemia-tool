@@ -1,0 +1,503 @@
+<div class="medical-article">
+<div>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="脳卒中とTIA一般向け解説">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260201/20260201150749.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">脳卒中とTIA一般向け解説</figcaption>
+</figure>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/OGlG3wcKAn4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="【保存版】脳卒中・TIA完全ガイド：命を守る「FAST」と緊急対応アクション" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/OGlG3wcKAn4">youtu.be</a></cite></p>
+<p><a href="https://docs.google.com/presentation/d/1vmY9xWmJw5dnAGudwYSPMNCzeHlO5Brh/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank">脳卒中とTIAの基礎知識スライド</a></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>脳卒中とTIAの基礎知識・症状・受診の目安・緊急対応ポイント</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">脳卒中とは：3つのタイプとその違い・頻度</a></li>
+<li><a href="#section2">一過性脳虚血発作（TIA）とは？脳梗塞の"前触れ"に要注意</a></li>
+<li><a href="#section3">症状が自然に治まっても油断禁物！TIAが危険な理由</a></li>
+<li><a href="#section4">脳卒中によくある症状と見分け方</a></li>
+<li><a href="#section5">「FAST」チェックの意味と実用性</a></li>
+<li><a href="#section6">救急車を呼ぶべき症状は？様子見でよいケースとの区別</a></li>
+<li><a href="#section7">一般の人がとるべき対応と、かかりつけ医と救急の使い分け</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">脳卒中とは：3つのタイプとその違い・頻度</h2>
+<p><strong>脳卒中</strong>は、脳の血管が詰まるか破れることで脳への血流が途絶え、様々な神経症状を引き起こす総称です。日本では<strong>年間約10万人</strong>が脳卒中で亡くなっており、<strong>死因の第4位</strong>であるとともに、<strong>要介護や寝たきりの主要因</strong>にもなっています<sup>[1]</sup>。脳卒中には大きく<strong>3つのタイプ</strong>があり、それぞれ原因や治療法、経過が異なります（まとめると「血管が詰まるタイプが脳梗塞」「破れるタイプが脳出血・くも膜下出血」になります）。各タイプの特徴と発生頻度の目安は次のとおりです。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">タイプ</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">病態</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">頻度</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>脳梗塞</strong></td>
+<td>血管が詰まる</td>
+<td><strong>約60～70%</strong></td>
+<td>最も多い。発症4.5時間以内の治療が重要</td>
+</tr>
+<tr>
+<td><strong>脳出血</strong></td>
+<td>脳内血管が破れる</td>
+<td><strong>約20%</strong></td>
+<td>高血圧が主因。死亡率・後遺症リスクが高い</td>
+</tr>
+<tr>
+<td><strong>くも膜下出血</strong></td>
+<td>動脈瘤が破裂</td>
+<td><strong>約5%</strong></td>
+<td>突然の激しい頭痛。若年者でも発症</td>
+</tr>
+</tbody>
+</table>
+<h3>脳梗塞（脳こうそく）</h3>
+<p>血管が詰まるタイプの脳卒中です。<strong>動脈硬化</strong>などにより脳の血管が<strong>血栓</strong>で塞がり、その先の脳細胞が酸素不足で機能しなくなることで発症します<sup>[2]</sup>。日本の脳卒中の中で最も頻度が高く、全体の過半数（およそ<strong>60～70%</strong>）を占めます<sup>[3]</sup>。脳梗塞はさらに原因によって「<strong>ラクナ梗塞</strong>」「<strong>アテローム血栓性脳梗塞</strong>」「<strong>心原性脳塞栓症</strong>」などに分類されますが、それぞれ全体の<strong>4分の1程度</strong>ずつ発生するとされています<sup>[4]</sup>。脳梗塞では発症から数時間以内に血流を再開できれば症状が軽減・消失する可能性があり、これを目指す治療（血栓を溶かす薬による治療やカテーテル治療）を「<strong>急性期再灌流療法</strong>」と呼びます<sup>[5]</sup>。逆に血流が途絶えたまま数時間経つと脳細胞が不可逆的に死んでしまい、後遺症が残ります。</p>
+<h3>脳出血</h3>
+<p>脳内の細い血管が破れるタイプの脳卒中で、「<strong>脳内出血</strong>」とも呼ばれます<sup>[6]</sup>。主な原因は長年の<strong>高血圧</strong>で、脳の深部の細い動脈が傷んで破裂するケースが多く、出血した血液のかたまり（血腫）の圧迫で神経症状が生じます<sup>[7]</sup>。脳出血は日本では全脳卒中の<strong>約2割</strong>を占め<sup>[8]</sup>、脳梗塞よりも<strong>死亡率が高く</strong>、重い麻痺など後遺症が残りやすい傾向があります<sup>[9]</sup>。原因として高血圧の他に<strong>脳アミロイド血管症</strong>（高齢者の脳表面の出血の原因）や<strong>血管奇形</strong>、<strong>脳腫瘍</strong>などもあり、原因疾患ごとの治療が必要になる場合もあります<sup>[10]</sup>。治療は<strong>血圧コントロール（降圧薬）</strong>が基本で、血腫が大きい時や意識障害がある時には<strong>脳外科手術</strong>（開頭による血腫除去、内視鏡手術など）を検討します<sup>[11]</sup>。20世紀後半の降圧療法の普及で脳出血の発症頻度は大きく減少しましたが、近年は下げ止まり傾向にあります<sup>[8]</sup>。特に日本を含む東アジアでは欧米より脳出血が多く、遺伝的要因も指摘されています<sup>[12]</sup>。</p>
+<h3>くも膜下出血</h3>
+<p>脳の表面の<strong>動脈瘤</strong>（血管のこぶ）が破裂することで、脳を覆うくも膜の下に出血が広がるタイプの脳卒中です<sup>[13]</sup>。典型的には「<strong>バットで殴られたような突然の激しい頭痛</strong>」で発症し、しばしば<strong>意識障害</strong>、<strong>嘔吐</strong>、<strong>けいれん</strong>を伴います<sup>[14]</sup><sup>[15]</sup>。全脳卒中のうち<strong>約5%</strong>と頻度は低いものの<sup>[15]</sup>、若い世代でも起こりうる上に<strong>死亡率が非常に高い</strong>重篤な疾患です<sup>[16]</sup>。くも膜下出血の場合は再出血を防ぐための早期手術（脳動脈瘤に対する<strong>クリッピング術</strong>や<strong>コイル塞栓術</strong>）が中心となります<sup>[17]</sup><sup>[18]</sup>。発症後ごく短時間で急変・死亡するケースもあり、迅速な対応が必要です。また、<strong>未破裂の脳動脈瘤</strong>が健康診断のMRIなどで偶然見つかることもありますが、破裂リスクを専門医と相談し管理することが大切です<sup>[2]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> 脳梗塞・脳出血・くも膜下出血はいずれも突然起こりうる脳血管のトラブルですが、原因や治療法が異なるため、まずどのタイプかを見極めることが適切な治療への第一歩です<sup>[19]</sup>。なお、「脳卒中（stroke）」という言葉は「卒然として中（あた）る」＝「予兆なく突然倒れる」病気を意味し、英語の"Stroke（一撃）"とも共通した表現です<sup>[1]</sup>。</div>
+<!-- セクション2 -->
+<h2 id="section2">一過性脳虚血発作（TIA）とは？脳梗塞の"前触れ"に要注意</h2>
+<p><strong>一過性脳虚血発作（TIA：Transient Ischemic Attack）</strong>とは、脳梗塞と同じような症状が一時的に起こり、短時間で自然に消失してしまう発作のことです<sup>[20]</sup>。脳の血管が一時的に詰まって血流が低下することで症状が出ますが、詰まりがすぐに解消すると脳細胞が死なずに済み、症状が<strong>24時間以内</strong>（多くは数分～数十分以内）に消える状態を指します<sup>[21]</sup>。かつては「24時間以内に症状が消えるもの」をTIAと定義していましたが、現在では画像検査で梗塞が残らないケースをTIAとし、持続時間に関係なく症状の有無にかかわらず緊急に対処すべきとの考え方（<strong>急性脳血管症候群：ACVS</strong>）が主流です<sup>[22]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ TIAは脳梗塞の警告サイン</span> TIAが重要視されるのは、<strong>脳梗塞の前触れ（黄信号）</strong>であるためです。脳卒中は予兆なく突然起こるイメージがありますが、実は脳梗塞患者の中には発症前にTIAのような一時的な前触れ症状を経験するケースも少なくありません<sup>[23]</sup>。TIAが起きるということは、脳梗塞の原因となる心臓や血管の病変が存在しているということであり、そのまま放置すればいずれ本格的な脳梗塞発作が起こる可能性が高いのです<sup>[24]</sup>。</div>
+<p>したがってTIAは「大きな脳梗塞の警告サイン」と位置付けられ、軽視せず原因に応じた適切な治療を早期に開始すれば脳卒中発作を防げる可能性があります<sup>[25]</sup><sup>[24]</sup>。</p>
+<!-- セクション3 -->
+<h2 id="section3">症状が自然に治まっても油断禁物！TIAが危険な理由</h2>
+<p>一過性脳虚血発作（TIA）は症状が短時間で治まるため、「大事に至らなくてよかった」と安心してしまいがちです。しかしTIAを経験した人の<strong>約15～20%</strong>は、その後<strong>3か月以内</strong>に脳梗塞を発症すると報告されています<sup>[26]</sup><sup>[27]</sup>。しかも、その<strong>約半数</strong>は最初のTIA発症から<strong>48時間以内</strong>という極めて早期に起こることがわかっています<sup>[26]</sup>。つまりTIA症状が消えた後は、「<strong>次の本格発作が差し迫っている</strong>」と考えるべきなのです<sup>[26]</sup>。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 警告：TIA後は緊急対応が必要</span> たとえ症状が短時間で完全に元に戻ったとしても、絶対に油断せずに<strong>速やかに専門医療機関を受診</strong>し、原因精査と発作予防の治療を開始する必要があります<sup>[20]</sup><sup>[28]</sup>。「症状が治まったから」と放置してしまい治療が遅れると、せっかく軽症で済んでいた段階から本格的な脳梗塞に移行して<strong>重篤な後遺症</strong>が残ったり、命に関わる危険があります。</div>
+<p>TIAの段階で適切に対処できれば、脳梗塞を予防できる可能性が高まります<sup>[25]</sup>。逆に見逃すと貴重なチャンスを逃すことになるため、TIAは脳卒中に含めないこともありますが、実質「<strong>脳卒中の一種</strong>」と考えて緊急対応すべき疾患なのです<sup>[28]</sup>。</p>
+<p><strong>ポイント</strong>：症状が一過性でも「自然に治った」と自己判断しないこと！ 片麻痺やろれつ障害など典型的な症状が数分で消えてしまった場合でも、必ず<strong>脳神経内科や脳神経外科の専門医</strong>を受診してください<sup>[28]</sup>。TIAは重大な危険信号ですから、決して様子見せず専門的評価を受けることが早期治療と脳卒中予防につながります<sup>[28]</sup>。</p>
+<!-- セクション4 -->
+<h2 id="section4">脳卒中によくある症状と見分け方</h2>
+<p>脳卒中では障害される脳の部位によって症状は様々ですが、典型的に多いのは次のような症状です<sup>[29]</sup>（※特徴はいずれも<strong>突然発症</strong>する点です<sup>[30]</sup>）。</p>
+<h3>片側の手足の麻痺・脱力（片麻痺）</h3>
+<p>身体の右半身または左半身に急に力が入らなくなる、動かせなくなる<sup>[31]</sup>。箸やペンが急に持てなくなったり、物を落とす、立てない・歩けないなどの形で現れます。顔面では片側の口角が垂れ下がるなどの表情の左右差として現れることもあります<sup>[32]</sup>。</p>
+<h3>顔面の麻痺・ゆがみ</h3>
+<p>笑ってみると片方の顔がうまく動かず垂れ下がる、口角が下がるなどの左右差が出ます<sup>[32]</sup>。周囲から見て「<strong>口がヘン（ゆがんでいる）</strong>」と気付かれる典型的症状です<sup>[33]</sup>。</p>
+<h3>言語障害（ろれつが回らない、言葉が出ない）</h3>
+<p>急に舌がもつれてはっきり話せない（<strong>構音障害</strong>）、うまく喋れているつもりでも周囲には何を言っているか伝わらない、簡単な言葉が出てこない・言い間違う（<strong>失語症</strong>）といった症状です<sup>[34]</sup>。また他人の話す言葉が理解できなくなるケースもあります<sup>[34]</sup>。周囲から見ると「<strong>言葉がヘン（おかしい）</strong>」と感じられる状態です<sup>[33]</sup>。</p>
+<h3>視覚の異常</h3>
+<p>片目が見えない・見えにくい、視野の半分が欠ける（片側の視野が真っ黒になる）などの視力障害が突然現れることがあります<sup>[35]</sup>。物が二重に見える（<strong>複視</strong>）症状が出る場合もあります。普段眼疾患のない人が急に視野の異常を自覚したら要注意です。</p>
+<h3>めまい・平衡感覚の障害</h3>
+<p>突然立てないほどの激しいめまいや、まっすぐ歩けなくなる、ふらついて転びそうになるといったバランス障害も脳卒中の症状の一つです<sup>[36]</sup>。特に<strong>小脳</strong>や<strong>脳幹</strong>の梗塞・出血で起こりやすく、吐き気を伴うこともあります。耳石による良性のめまいと違い、手足の麻痺や言語障害を伴う場合は脳卒中を強く疑います。</p>
+<h3>激しい頭痛</h3>
+<p>経験したことがないような<strong>突然の激烈な頭痛</strong>は、<strong>くも膜下出血</strong>に典型的な症状です<sup>[35]</sup>。しばしば意識混濁や嘔吐、けいれんを伴います<sup>[35]</sup>。頭痛発症直後に意識を失うこともあり、「<strong>いつもの頭痛と違う</strong>」「<strong>バットで殴られたような痛み</strong>」という場合は直ちに救急車を呼ぶべき緊急症状です<sup>[37]</sup>。</p>
+<h3>意識障害・けいれん発作</h3>
+<p>脳卒中の部位によっては意識がぼんやりして受け答えがおかしい、人や時間・場所がわからなくなる、突然意識を失う、といった症状も現れます<sup>[38]</sup>。重度の場合は昏睡状態になることもあります。また、脳出血やくも膜下出血の際に<strong>全身のけいれん発作</strong>が起こることもあります<sup>[39]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 脳卒中を疑うポイント</span> こうした症状はいずれも<strong>ある日突然に起こる</strong>のが脳卒中の特徴です<sup>[17]</sup>。たとえば慢性的な肩こりや耳の疾患で生じる軽いめまいや、寝違えで手がしびれる程度の症状とは明らかに質が異なります。「<strong>明らかにいつもと違うおかしな症状</strong>」が出現したら、まず脳卒中を疑ってください<sup>[40]</sup>。</div>
+<p>なお症状の出方として、脳の中でも特に「<strong>内頸動脈～中大脳動脈</strong>」領域（大脳の広範囲を栄養する血管）が詰まった場合に発症することが多く、全脳卒中の<strong>6～7割</strong>を占めます。その領域には運動・感覚・言語をつかさどる中枢があるため、<strong>顔面麻痺・腕の脱力・言語障害の3つ</strong>が高頻度で起こります<sup>[41]</sup>。実際、この3症状のうち1つでも突然起こった場合、<strong>約8割</strong>は脳卒中によるものだと報告されています<sup>[41]</sup>。ですから顔・腕・言葉の異変は見落とさないよう、次に述べる「FASTチェック」で素早く確認することが大切です。</p>
+<!-- セクション5 -->
+<h2 id="section5">「FAST」チェックの意味と実用性 – 顔・腕・言葉で症状を確認</h2>
+<p>脳卒中の初期症状を一般の人が簡便にチェックする方法として、<strong>FAST</strong>という合言葉があります。FASTはそれぞれ <strong>Face（顔）</strong>、<strong>Arm（腕）</strong>、<strong>Speech（言葉）</strong>、そして <strong>Time（時間）</strong> の頭文字を取ったもので、米国脳卒中協会が提唱し世界中で普及している早期発見のキーワードです<sup>[42]</sup>。日本でもこのFASTに倣い、「顔・腕・言葉の異変に気付いたらすぐに適切な行動を取る（救急車を呼ぶ）」ことを啓発する活動が行われています<sup>[41]</sup><sup>[32]</sup><sup>[43]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">項目</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">確認方法</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">異常所見</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F：Face（顔）</strong></td>
+<td>「笑ってください」と促す</td>
+<td>口角が片側だけ垂れ下がる、顔のゆがみ</td>
+</tr>
+<tr>
+<td><strong>A：Arm（腕）</strong></td>
+<td>両腕をまっすぐ前に挙げてキープ</td>
+<td>片腕だけ下がる、力が入らない</td>
+</tr>
+<tr>
+<td><strong>S：Speech（言葉）</strong></td>
+<td>短い文章を話してもらう</td>
+<td>ろれつが回らない、言葉が出ない</td>
+</tr>
+<tr>
+<td><strong>T：Time（時間）</strong></td>
+<td>発症時刻を確認</td>
+<td>上記1つでも異常なら<strong>即119番</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Face（顔の麻痺）</h3>
+<p>「笑ってください」と促し、笑顔が左右対称に作れるか確認します<sup>[32]</sup>。口角が片側だけ垂れ下がっていたり、頬の片方が下がるなど顔のゆがみがあれば要注意です<sup>[32]</sup>。鏡を見てもらったり、周囲の人が顔の左右差をチェックしましょう。</p>
+<h3>Arm（腕の麻痺）</h3>
+<p>「両腕をまっすぐ前に挙げてください」と頼み、そのままキープできるか確認します<sup>[44]</sup>。片腕だけスーッと下がってきたり、そもそも片方の腕に力が入らず持ち上げられない場合、片側の上肢に麻痺が生じている可能性があります<sup>[44]</sup>。軽い麻痺だと一見わかりにくいですが、このように目をつぶった状態で両腕を水平に保つテストで差が出ることがあります。</p>
+<h3>Speech（言葉の障害）</h3>
+<p>「簡単な文章を話してください」とお願いし、発話の明瞭さと言葉の理解力を確認します<sup>[43]</sup>。例えば「今日はいい天気です」など短い文をリピートしてもらい、ろれつがきちんと回っているか、正しく復唱できるかを見ます<sup>[43]</sup>。質問に対し的確に受け答えできない場合や、こちらの言うことが理解できていない様子であれば、言語中枢の障害が疑われます<sup>[43]</sup>。</p>
+<h3>Time（時間）</h3>
+<p>これは症状チェック項目ではなく「<strong>時間が勝負</strong>」であることを意味します<sup>[45]</sup>。上記3つのうち1つでも異常があれば、それは脳卒中の可能性が高いので、ただちに<strong>発症時刻を確認して救急車を呼ぶ</strong>必要があります<sup>[46]</sup><sup>[45]</sup>。症状が出現した正確な時刻は、救急隊や病院が治療方針を判断する上で重要な手がかりになります（特に脳梗塞の治療では「<strong>発症から何時間経過したか</strong>」が治療選択に直結するため）<sup>[42]</sup>。周囲の方は発症時刻をメモし、救急隊に伝えてください。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 FASTの有用性</span> FASTの各項目は非常にシンプルですが、顔・腕・言葉という脳卒中の代表的症状を網羅しており、救急要請の判断に大いに役立ちます<sup>[47]</sup>。実際、FASTの3項目のうち1つでも当てはまれば脳卒中の可能性は高いとされています<sup>[41]</sup>。日本脳卒中協会でも「<strong>口がヘン！言葉がヘン！手がヘン！</strong>」という3つの"ヘン"な症状を合図に119番通報を促す標語を周知しています<sup>[33]</sup>。大切なのは「おかしい」と感じたらためらわず行動（<strong>ACT FAST</strong>）することです<sup>[46]</sup>。一分一秒を争う疾患なので、迷ったときは「<strong>迷う時間があればまず119番</strong>」という心構えでいましょう。</div>
+<!-- セクション6 -->
+<h2 id="section6">救急車を呼ぶべき症状は？様子見でよいケースとの区別</h2>
+<p>脳卒中が疑われる場合、基本的には少しでも早く救急車を呼んで専門病院に搬送してもらうのが鉄則です<sup>[28]</sup>。特に前述のFASTチェックで異常が確認できた場合や、以下のような典型的な症状が一つでも突然現れた場合はためらわず<strong>119番通報</strong>すべきです<sup>[48]</sup>。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 今すぐ119番を呼ぶべき症状</span>
+<ul style="margin: 10px 0 0 0; padding-left: 1.5em;">
+<li><strong>片側の手足や顔面の麻痺・しびれ</strong>が急に出現<sup>[49]</sup>（だんだん進行するのではなく瞬間的に生じるのがポイント）</li>
+<li><strong>ろれつ障害</strong>、言葉が出ない・理解できないといった症状が急に出現<sup>[49]</sup></li>
+<li>片目が見えなくなる、<strong>視野半分が欠ける</strong>などの急激な視力障害<sup>[50]</sup></li>
+<li>突然立てなくなるほどの<strong>激しいめまい</strong>や、真っすぐ歩けないほどの平衡感覚障害<sup>[51]</sup></li>
+<li>今まで経験のない<strong>激しい頭痛</strong>が突然起こり、意識もうろうとしたり嘔吐・けいれんを伴う（くも膜下出血を疑う状態）<sup>[35]</sup></li>
+<li>高リスク状況下の発症（<strong>妊娠中・産後</strong>、あるいは<strong>心房細動</strong>など不整脈がある方が上述の症状を呈した場合は特に注意）<sup>[52]</sup></li>
+</ul>
+</div>
+<p>これらはいずれも「自分で様子を見ていてはいけない症状」です<sup>[53]</sup>。すぐに救急車を呼ぶか、迷う場合は<strong>#7119（救急相談センター）</strong>に電話して指示を仰いでください<sup>[54]</sup>。脳卒中は時間との闘いです。「救急車を呼ぶほどではないかも」と迷っている時間にも脳細胞の損傷は進行します<sup>[45]</sup><sup>[28]</sup>。特に脳梗塞は<strong>発症4.5時間以内</strong>に血栓溶解療法（<strong>t-PA静注</strong>）が行えれば後遺症を大きく減らせる可能性がありますが<sup>[55]</sup>、時間を過ぎると適応できなくなります。一刻も早く治療を開始するほど予後が良いのは全てのタイプの脳卒中に共通する点です<sup>[28]</sup>。</p>
+<details class="expandable">
+<summary>様子を見てもよい可能性があるケース</summary>
+<div class="expandable-content">
+<p>基本的に、脳卒中を少しでも疑う症状があれば様子見は推奨されません。しかし、症状の様子や経過によっては救急車ではなくできるだけ早めに病院受診（その日のうちに脳神経内科などを受診）でもよい場合があります<sup>[56]</sup>。</p>
+<h3>症状が徐々に進行している場合</h3>
+<p>数時間～半日かけてゆっくり手足の力が入りにくくなってきた、といった場合は緊急性はやや低いものの、できるだけ<strong>当日中に救急外来や脳神経内科を受診</strong>することが望ましいです<sup>[57]</sup>。一過性ではなく徐々に悪化している場合、脳梗塞でも<strong>ラクナ梗塞</strong>など軽症タイプの可能性がありますが、放置すると繰り返して症状が蓄積することもあるため早期評価が必要です<sup>[58]</sup><sup>[59]</sup>。</p>
+<h3>過去に脳卒中を起こした方で、ゆっくり症状が出現している場合</h3>
+<p>たとえば以前の脳卒中の後遺症がある方が、ここ数日～数週で徐々に歩きにくさや物忘れが目立ってきた、といったケースです<sup>[60]</sup>。このような<strong>慢性的な変化</strong>の場合、超緊急ではないものの<strong>数日以内</strong>に脳神経内科やかかりつけ医を受診し、再発や新たな脳血管障害が進行していないかチェックしましょう<sup>[60]</sup>。</p>
+<p>上記のようなケースでは救急車よりまず医療機関への電話相談で指示を仰ぐのも一つです<sup>[54]</sup>。ただし繰り返しになりますが、「<strong>明らかにいつもと違う</strong>」急な症状があれば基本は迷わず119番です<sup>[40]</sup>。万一、結果的に軽い貧血や別の原因であったとしても、迅速に対処したこと自体に無駄はありません。</p>
+</div>
+</details><!-- セクション7 -->
+<h2 id="section7">一般の人がとるべき対応と、かかりつけ医と救急の使い分け</h2>
+<p>脳卒中が疑われる状況に遭遇したら、周囲の人は次のポイントを押さえて行動しましょう。</p>
+<h3>1. ただちに119番通報する</h3>
+<p>「脳卒中かもしれない」と思ったら一刻を争います。<strong>迷わず救急車を要請</strong>してください<sup>[28]</sup>。特に「脳卒中は安静第一で動かしてはいけない」という誤解がありますが、それは大きな間違いです<sup>[28]</sup>。発症直後からできる限り早く専門病院で治療を始めるほど、命が助かり後遺症も軽減できます<sup>[28]</sup>。自家用車で慌てて搬送するより、救急隊に連絡した方が途中で症状が悪化した場合も安心ですし、受け入れ可能な適切な医療機関へ迅速に運んでもらえます。</p>
+<h3>2. FASTチェックと発症時刻の確認</h3>
+<p>患者さんの容態を観察し、顔のゆがみや手足の麻痺、言葉の異常がないか確認しましょう（すでに確認済みであれば繰り返す必要はありません）。できれば<strong>何時何分ごろに症状が出始めたか</strong>時計を見てメモしてください<sup>[46]</sup>。この情報は救急隊や病院医師に伝える重要事項です<sup>[46]</sup>。</p>
+<h3>3. 楽な姿勢を取らせ、安全を確保</h3>
+<p>患者さんを可能なら平らな場所に寝かせて安静にします。<strong>意識がない場合や嘔吐がある場合</strong>は、吐物で喉を詰まらせないよう<strong>横向きに寝かせて気道を確保</strong>してください<sup>[28]</sup>。衣服を緩め、周囲に危険物や転落の危険がないようにします。頭を高くしすぎる必要はありませんが、嘔吐時は顔を横に向けます。痙攣が起きている場合は抑えつけず、周囲を片付けてケガ防止に努めます。</p>
+<h3>4. 飲食をさせない</h3>
+<p>本人が「水が飲みたい」など訴えても、<strong>何も経口摂取させてはいけません</strong>。<strong>嚥下障害</strong>が起きている恐れがあり、むせたり誤嚥する危険があります。また、今後の検査や手術で麻酔が必要になる場合にも備えます。唇を湿らせる程度にとどめましょう。</p>
+<h3>5. 現在治療中の病気・服薬状況を把握</h3>
+<p>分かる範囲で構いませんので、患者さんが普段服用している薬（特に<strong>血液をサラサラにする薬</strong>や<strong>糖尿病薬</strong>など）や、既往歴（特に<strong>心臓病</strong>や<strong>脳卒中歴</strong>）を救急隊員に伝えてください。<strong>お薬手帳</strong>があれば持参します。これは治療方針を決める助けになります。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 かかりつけ医と救急の使い分け</span> 脳卒中が疑われる急性期は<strong>迷わず救急</strong>です。かかりつけ医（家庭医）は平時の血圧・血糖管理や、退院後の再発予防のフォローアップで力を発揮しますが、急性期の脳卒中に対しては設備や対応力が限られる場合が多いです<sup>[61]</sup><sup>[62]</sup>。実際、かかりつけのクリニックでは頭部MRI等の検査設備がなかったり、t-PA投与など急性期治療ができないため、発作時にはまず救急病院へ搬送し、その後落ち着いてからかかりつけ医と連携してケアする流れになります<sup>[61]</sup><sup>[62]</sup>。</div>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ まとめ：ACT FASTで脳卒中から命を守る</span> <strong>脳卒中は誰にでも突然襲いうる重大疾患</strong>ですが、早期認知と迅速な対応によって命と健康を守れる可能性が高まります<sup>[28]</sup>。日頃から<strong>FASTのポイント</strong>を家族や職場で共有し、いざという時に適切に行動できるよう備えておきましょう。「おかしいな？」と思ったその直感が、大切な人の後遺症を防ぐ第一歩になるかもしれません。躊躇せず、<strong>ACT FAST（アクト・ファスト）</strong>で脳卒中から命を守りましょう<sup>[46]</sup>。</div>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=OGlG3wcKAn4" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1 17 43 65</span> <span class="ref-content">厚生労働省「みんなで知ろう！からだのこと 脳卒中ってなぁに？」広報誌「厚生労働」2024年10月号<br /><a href="https://www.mhlw.go.jp/stf/houdou_kouhou/kouhou_shuppan/magazine/202410_006.html" target="_blank">https://www.mhlw.go.jp/stf/houdou_kouhou/kouhou_shuppan/magazine/202410_006.html</a></span></div>
+<div class="ref-item"><span class="ref-numbers">2 13 14 16 36 38 41 50 51 52 53 54 55 56 58 59 60 61 62 63 64 70</span> <span class="ref-content">吉祥寺おおさき内科・脳神経内科「脳卒中・脳血管障害」<br /><a href="https://osaki-clinic.jp/treatment/neurology/stroke/" target="_blank">https://osaki-clinic.jp/treatment/neurology/stroke/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">3 4 5 6 7 8 9 10 11 12 18 19 29 68</span> <span class="ref-content">日本脳卒中学会 監修「脳卒中の予防・発症時の対応」J-STAGE<br /><a href="https://www.jstage.jst.go.jp/article/jsicm/28/6/28_28_509/_pdf" target="_blank">https://www.jstage.jst.go.jp/article/jsicm/28/6/28_28_509/_pdf</a></span></div>
+<div class="ref-item"><span class="ref-numbers">15</span> <span class="ref-content">Wikipedia「一過性脳虚血発作」<br /><a href="https://ja.wikipedia.org/wiki/%E4%B8%80%E9%81%8E%E6%80%A7%E8%84%B3%E8%99%9A%E8%A1%80%E7%99%BA%E4%BD%9C" target="_blank">https://ja.wikipedia.org/wiki/一過性脳虚血発作</a></span></div>
+<div class="ref-item"><span class="ref-numbers">20 21 22 23 24 25 26 30 31 39 40 42 69</span> <span class="ref-content">峰松一夫先生インタビュー「一過性脳虚血発作（TIA）とは」脳卒中インタビュー｜先進医療.net<br /><a href="https://www.senshiniryo.net/stroke_a/08/index.html" target="_blank">https://www.senshiniryo.net/stroke_a/08/index.html</a></span></div>
+<div class="ref-item"><span class="ref-numbers">27</span> <span class="ref-content">（原文引用番号27に対応する文献情報）</span></div>
+<div class="ref-item"><span class="ref-numbers">28 32 33 34 35 37 44 45 46 67</span> <span class="ref-content">聖マリアンナ医科大学 脳血管内治療科「脳卒中の警告サイン：すぐに救急車を！」<br /><a href="https://www.toyoko-stroke.com/explain/sign.html" target="_blank">https://www.toyoko-stroke.com/explain/sign.html</a></span></div>
+<div class="ref-item"><span class="ref-numbers">47 48 66</span> <span class="ref-content">日本脳卒中学会「脳卒中の予防・発症時の対応」<br /><a href="https://www.jsts.gr.jp/common/asset/pdf/onset.pdf" target="_blank">https://www.jsts.gr.jp/common/asset/pdf/onset.pdf</a></span></div>
+<div class="ref-item"><span class="ref-numbers">49</span> <span class="ref-content">F.A.S.T.で脳卒中を疑ったら911（2024年5月31日）<br /><a href="https://www.prestigein-ushealth.com/mcmp/20240531/" target="_blank">https://www.prestigein-ushealth.com/mcmp/20240531/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">57</span> <span class="ref-content">脳梗塞の予兆を見逃さないで！急変サインと対策を解説<br /><a href="https://cliniciwata.com/2025/05/15/6234/" target="_blank">https://cliniciwata.com/2025/05/15/6234/</a></span></div>
+<div class="ref-item"><span class="ref-numbers">8 67 68</span> <span class="ref-content">国立循環器病研究センター「脳卒中とは？」<br /><a href="https://www.ncvc.go.jp/hospital/pub/knowledge/disease/stroke-2/" target="_blank">https://www.ncvc.go.jp/hospital/pub/knowledge/disease/stroke-2/</a></span></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "脳卒中とTIAの基礎知識・症状・受診の目安・緊急対応ポイント",
+  "description": "脳卒中とTIAの基礎知識・症状・受診の目安・緊急対応ポイント",
+  "thumbnailUrl": "https://img.youtube.com/vi/OGlG3wcKAn4/maxresdefault.jpg",
+  "uploadDate": "2026-02-01",
+  "contentUrl": "https://www.youtube.com/watch?v=OGlG3wcKAn4",
+  "embedUrl": "https://www.youtube.com/embed/OGlG3wcKAn4"
+}
+</script>

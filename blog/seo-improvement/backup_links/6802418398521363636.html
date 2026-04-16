@@ -1,0 +1,477 @@
+<div class="medical-article">
+<div class="medical-article">作者コメント</div>
+<div>最近、音声入力を始めました。Aqua Voiceは単語登録をこまめにするとかなりの精度で変換してくれます。今後は患者さんと会話した内容をいい感じにカルテにまとめてくれるAIもどんどん出てくるでしょうね。</div>
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251212/20251212062220.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+</div>
+</div>
+<div class="medical-article"><!-- 目次 -->
+<div class="toc-box">
+<h3>📚 目次</h3>
+<ul>
+<li><a href="#intro">はじめに</a></li>
+<li><a href="#pc-tools">1. パソコンで使える音声入力</a>
+<ul>
+<li><a href="#windows">1.1 Windows標準の音声入力</a></li>
+<li><a href="#macos">1.2 macOSの音声入力</a></li>
+<li><a href="#third-party">1.3 高精度なサードパーティ製ツール</a></li>
+<li><a href="#selection-points">1.4 ツール選択のポイント</a></li>
+</ul>
+</li>
+<li><a href="#mac-specific">2. Macで使える音声入力</a></li>
+<li><a href="#mobile-tools">3. スマートフォンで使える音声入力</a>
+<ul>
+<li><a href="#iphone">3.1 iPhone（iPad を含む）の音声入力</a></li>
+<li><a href="#android">3.2 Android (Gboard) の音声入力</a></li>
+<li><a href="#mobile-apps">3.3 スマートフォン向けのサードパーティ製アプリ</a></li>
+</ul>
+</li>
+<li><a href="#summary">4. まとめとおすすめ</a></li>
+</ul>
+</div>
+<!-- 導入部分 -->
+<div id="intro">
+<p>日本語の音声認識技術は急速に進化し、パソコンでもスマートフォンでも自然に話した言葉をテキスト化できる時代になりました。ここでは、WindowsとmacOSに搭載されている標準機能と、精度や利便性に優れたサードパーティ製ツールの特徴を比較し、目的別におすすめを紹介します。<strong>医療現場では記録の迅速化やハンズフリー操作が重要であり、音声入力ツールの選択が作業効率に直結します。</strong></p>
+</div>
+<!-- パソコン音声入力 -->
+<div id="pc-tools">
+<h2>1. パソコンで使える音声入力</h2>
+<div id="windows">
+<h3>1.1 Windows 11/10 に標準搭載された「音声入力」</h3>
+<p>Windows 11/10 にはオンライン音声認識を使った音声入力機能が標準搭載されています。日本語キーボードを選んでWindowsロゴキー＋Hを押すか、タッチキーボードのマイクアイコンをタップすると音声入力UIが起動し、マイクが青色の状態で話せばテキスト化されます。</p>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />Microsoftのクラウド音声認識を利用するためインターネット接続が必須であり、オフラインでは使えません。句読点は「句読点」や「改行」などの日本語コマンドを話すことで入力できます。</div>
+<p>無料で使えるものの、オンライン依存や専門用語の誤認識があるため、長文の医学記録や報告書には精度の高いツールが望ましいでしょう。</p>
+</div>
+<div id="macos">
+<h3>1.2 macOS の「音声入力」(旧ディクテーション)</h3>
+<p>macOSでもシステム設定の「キーボード」で音声入力を有効にし、挿入ポイントを指定した状態でFn(⌨)キーを押すかメニューの「編集→音声入力を開始」を選ぶと、マイクのアイコンが現れます。Apple Silicon搭載機では音声入力中にキーボード操作も併用でき、句読点や絵文字も音声で指定できます。</p>
+<p>自動句読点機能があり、30秒間話さないと自動的に終了しますが、時間制限はないため長文の入力にも利用できます。ただしこちらも基本的にオンライン認識であり、難解な医学用語は誤認識しやすい点に注意が必要です。</p>
+</div>
+<div id="third-party">
+<h3>1.3 高精度なサードパーティ製ツール</h3>
+<table class="drug-table">
+<thead>
+<tr>
+<th style="background-color: #2c5aa0 !important; color: white !important;">ツール</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">対応OS</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">オンライン/オフライン</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">費用</th>
+<th style="background-color: #2c5aa0 !important; color: white !important;">主な特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aqua Voice</strong></td>
+<td>Windows/Mac (モバイル専用アプリは無し)</td>
+<td>オンライン（独自サーバー利用）</td>
+<td>有料（サブスク）</td>
+<td>独自の融合法認識とクライアント側のコンテキストエンジンにより遅延約450msの高速変換を実現し、メールやコードなど用途に応じて自動フォーマットを行う。複数のモデルを融合して発話の意図を理解し、自然言語コマンドに応じて文章の修正や引用の追加などを自動で行う。SiriやGoogleボイス入力より17倍少ない誤り率とされ、日本語を含む49言語に対応。現在はMac/Windows向けに提供されており、スマートフォン専用アプリは存在しません。医療記録や報告書など、精度と速度が要求される用途に適する。</td>
+</tr>
+<tr>
+<td><strong>Superwhisper</strong></td>
+<td>Mac</td>
+<td>オフライン</td>
+<td>有料（サブスクまたは買い切り、15分試用あり）</td>
+<td>Whisper.cppを利用したmacOSアプリで、日本語認識や日本語→英語翻訳が可能。1～2行程度の短文の認識が得意で、MacBook Air M2では2～3秒で変換が完了する。Macの標準音声入力とは異なり他のアプリを開いたまま音声入力でき、結果をクリップボードにコピーして自動貼付も可能。完全オフラインなので患者情報の取り扱いにも安心。</td>
+</tr>
+<tr>
+<td><strong>Voice In (Chrome拡張)</strong></td>
+<td>Windows/Mac/ChromeOS</td>
+<td>オンライン</td>
+<td>基本無料（Voice In Plusは有料）</td>
+<td>Google Chrome / Microsoft Edge で動作する拡張機能で、インストール後に言語として日本語を選択し、マイクアイコンを押して発話するとウェブ上のテキスト欄に音声をリアルタイム入力できる。句読点や特殊文字の音声コマンドが用意されており、Plus版ではカスタムコマンドの登録や長時間入力が可能。多数のウェブサービスで音声入力を使いたい人に便利。</td>
+</tr>
+<tr>
+<td><strong>Speechnotes</strong></td>
+<td>Windows(ブラウザ)/Android/iOS</td>
+<td>オンライン（オフラインモードあり）</td>
+<td>基本無料（広告あり）、プレミアムあり</td>
+<td>無料で無制限の連続入力ができ、内蔵キーボードで句読点や記号を補助入力できる。音声コマンドで改行や句読点を挿入でき、自動大文字化やスペース挿入にも対応する。Googleの音声エンジンを利用し多言語に対応。操作が簡単で医学メモの作成などに向くが、音声がGoogleに送信されるため機密性には注意が必要。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="selection-points">
+<h3>1.4 ツール選択のポイント</h3>
+<details class="medical-details" open="open">
+<summary>精度と専門用語への対応</summary>
+<div class="medical-details-content">市販の医療用語辞書を持つツールは少ないため、カスタム辞書機能があるAqua VoiceやVoice In Plusが有利です。Superwhisperは Whisper を利用しており専門用語にも強いですが短文向けです。</div>
+</details><details class="medical-details" open="open">
+<summary>オフライン対応</summary>
+<div class="medical-details-content">患者情報など機密データを扱う場合、インターネット接続のないSuperwhisperは安心です。</div>
+</details><details class="medical-details" open="open">
+<summary>コスト</summary>
+<div class="medical-details-content">標準機能は無料で手軽ですが精度に限界があります。Aqua Voiceはサブスク制、Superwhisperは買い切りも選択でき、頻繁に使う場合に向きます。</div>
+</details><details class="medical-details" open="open">
+<summary>用途</summary>
+<div class="medical-details-content">診療記録や学会演題など長文を入力するなら遅延が少なく自動フォーマット機能や自然言語コマンドに対応したAqua Voiceがおすすめです。メールやチャットの簡易入力にはVoice InやSpeechnotesで十分です。</div>
+</details></div>
+</div>
+<!-- Mac音声入力 -->
+<div id="mac-specific">
+<h2>2. Macで使える音声入力</h2>
+<p>macOSの標準機能とサードパーティ製ツールの特徴は上表の通りですが、医師にとっては以下の点も重要です。</p>
+<div class="important-box"><strong>📋 操作性</strong><br />標準の音声入力はテキストフィールドを選択した状態でないと動作せず、他のアプリ操作ができません。一方、SuperwhisperやAqua Voiceは背景で動作し、他のアプリを操作しながら文字起こしができるため、カルテやブラウザを見ながら記録を取れます。</div>
+<div class="important-box"><strong>📋 エンジンの違い</strong><br />Superwhisperはオープンソース「Whisper」をMac向けに最適化し、オフラインでも高精度に日本語を認識・翻訳できます。Aqua Voiceはクラウドとクライアント側のコンテキストエンジンを組み合わせ、他社より少ない誤認識率を実現し、自然言語コマンドに対応するため文章の修正やフォーマットを音声だけで行えます。</div>
+<div class="important-box"><strong>📋 プライバシーとセキュリティ</strong><br />医療情報の入力では音声データの扱いが重要です。Superwhisperは完全オフライン、Aqua Voiceは暗号化されたクラウド処理を行うと説明しており、標準機能よりもデータ管理が明示されています。</div>
+</div>
+<!-- スマートフォン音声入力 -->
+<div id="mobile-tools">
+<h2>3. スマートフォンで使える音声入力</h2>
+<div id="iphone">
+<h3>3.1 iPhone（iPad を含む）の音声入力</h3>
+<p>iOS/iPadOSのキーボードにはマイクボタンがあり、設定→一般→キーボード→音声入力をオンにすると、どのアプリでもテキスト入力欄でマイクボタンを押して話すだけで文字が入力できます。</p>
+<p>多くの言語はデバイス上で処理されるためインターネットなしでも使えます（検索欄など一部は検索プロバイダに送信される）。句読点や絵文字を音声で指定したり、「改行」「新しい段落」と言って段落を変えることもできます。操作を終えるにはマイクボタンを再度押すか「音声入力を停止」と話すか、30秒間黙ると自動的に終了します。</p>
+<p>医療メモ作成など外出先での利用に便利ですが、長時間の会話をリアルタイムで文字起こしするには対応アプリ（Nottaなど）の方が適しています。</p>
+</div>
+<div id="android">
+<h3>3.2 Android (Gboard) の音声入力</h3>
+<p>多くのAndroid端末にはGoogle製キーボード「Gboard」が標準搭載されています。Gboardを利用した音声入力では、キーボード左端のマイクアイコンをタップし、画面に「話してください」と表示されたら日本語で話すだけでテキスト化されます。</p>
+<p>句読点や新しい行は「とうてん」「くてん」「新しい行」などと発話することで入力でき、心を示す絵文字やハートを挿入するなどのコマンドもあります。Googleアシスタント音声入力を併用すると「最後のテキストを削除」や「メッセージを送信」などの編集コマンドや送信操作も音声で行えます。</p>
+<div class="important-box"><strong>📋 高度な音声入力機能</strong><br />Pixel 6以降にはオンデバイスで処理する「高度な音声入力」機能があり、音声をローカル処理し自動句読点を挿入、タイピングと同時に音声入力ができます。対応言語には日本語も含まれ、多言語環境では話した言語を自動判別します。</div>
+</div>
+<div id="mobile-apps">
+<h3>3.3 スマートフォン向けのサードパーティ製アプリ</h3>
+<p>スマートフォン向けには Speechnotes などの音声入力アプリがあり、長時間の会議録音をテキスト化したり、翻訳を行ったりできます。SpeechnotesはAndroidアプリとして提供され、連続入力やオフラインモードに対応し、音声コマンドで改行・句読点を挿入できます。iOS版はブラウザベースで利用できます。</p>
+<div class="warning-box"><strong>⚠️ 注意</strong><br />Aqua Voiceは現在Mac/Windows向けのサービスのみで、専用のスマートフォンアプリは提供されていません（モバイルブラウザ経由での利用は可能）。そのためスマートフォンでは標準機能やSpeechnotesなどを利用し、必要であればパソコン版のAqua Voiceに連携する使い方が現実的です。</div>
+</div>
+</div>
+<!-- まとめ -->
+<div id="summary">
+<h2>4. まとめとおすすめ</h2>
+<p>音声入力ツールは用途や環境によって選ぶべきポイントが異なります。</p>
+<div class="important-box"><strong>📋 医療現場での長文入力には</strong><br />低遅延で自然言語コマンドに対応し誤認識が少ない <strong>Aqua Voice</strong> が最適です。</div>
+<div class="important-box"><strong>📋 短文のメモや翻訳には</strong><br /><strong>Superwhisper</strong> が手軽で、オフライン環境でも安心して使えます。</div>
+<div class="important-box"><strong>📋 ウェブサービスへの書き込みには</strong><br /><strong>Voice In</strong> や <strong>Speechnotes</strong> が便利で、無料版でも十分利用できます。</div>
+<div class="warning-box"><strong>⚠️ 標準機能の限界</strong><br />標準機能は無料で導入も簡単ですが、専門用語の正確な認識や長文処理では限界があります。</div>
+<p><span class="text-blue">用途に応じたツールを併用し、効率的な記録・報告を目指しましょう。</span></p>
+</div>
+<!-- 参考文献 -->
+<div id="references" class="references">
+<h3>参考文献</h3>
+<details class="medical-details references-details" open="open">
+<summary>参考文献を表示（全10件）</summary>
+<div class="medical-details-content">
+<ol>
+<li>blogs.windows.com - Windows音声入力機能の詳細</li>
+<li>support.apple.com - macOS音声入力の使用方法</li>
+<li>withaqua.com - Aqua Voice公式サイト（機能と性能）</li>
+<li>efcl.info - Superwhisperの使用レビューと機能解説</li>
+<li>dictanote.co - Voice In Chrome拡張機能の説明</li>
+<li>play.google.com - Speechnotes Androidアプリ情報</li>
+<li>speechnotes.co - Speechnotes公式サイト</li>
+<li>android.com - Android Gboard音声入力の使用方法</li>
+<li>support.google.com - Google音声入力の高度な機能</li>
+<li>support.apple.com - iOS/iPadOS音声入力機能の詳細</li>
+</ol>
+</div>
+</details></div>
+</div>
+<style>
+/* はてなブログ最適化スタイル */
+.medical-article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .medical-article {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 見出しスタイル */
+.medical-article h1 {
+  font-size: 1.6rem;
+  color: #2c5aa0;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 8px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.medical-article h2 {
+  font-size: 1.3rem;
+  color: #2c5aa0;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 12px;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.medical-article h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.2rem 0 0.6rem 0;
+}
+
+.medical-article h3::before {
+  content: '▶';
+  color: #2c5aa0;
+  margin-right: 8px;
+}
+
+/* 強調表示 */
+.medical-article strong {
+  font-weight: bold;
+  color: #2c5aa0;
+}
+
+.medical-article em {
+  font-style: italic;
+  color: #444;
+}
+
+.medical-article .text-red {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.medical-article .text-blue {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 目次 */
+.toc-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc-box li {
+  margin-bottom: 8px;
+}
+
+.toc-box a {
+  color: #2c5aa0;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* 情報ボックス */
+.important-box, .warning-box, .emergency-box {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.important-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2c5aa0;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.emergency-box {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+/* テーブル */
+.medical-article .drug-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.medical-article .drug-table th,
+.medical-article .drug-table td {
+  border: 1px solid #ddd !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.medical-article .drug-table thead th,
+.medical-article .drug-table th {
+  background-color: #2c5aa0 !important;
+  background: #2c5aa0 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(even) {
+  background: #f8f9fa !important;
+}
+
+.medical-article .drug-table tbody tr:nth-child(odd) {
+  background: white !important;
+}
+
+.medical-article table.drug-table {
+  background: transparent !important;
+}
+
+.medical-article table.drug-table * {
+  background-color: inherit;
+}
+
+/* リスト */
+.medical-article ul, .medical-article ol {
+  margin: 16px 0;
+  padding-left: 1.5rem;
+}
+
+.medical-article li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* コード */
+.medical-article code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #d73502;
+}
+
+.medical-article pre {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.medical-article pre code {
+  background: none;
+  padding: 0;
+  color: #333;
+}
+
+/* 展開可能セクション */
+.medical-details {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.medical-details summary {
+  background: #2c5aa0;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: block;
+}
+
+.medical-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.medical-details summary::after {
+  content: '▼ 展開';
+  float: right;
+  font-size: 0.9rem;
+}
+
+.medical-details[open] summary::after {
+  content: '▲ 閉じる';
+}
+
+.medical-details-content {
+  padding: 16px;
+  background: white;
+}
+
+/* バッジとラベル */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.badge-primary { background: #2c5aa0; color: white; }
+.badge-warning { background: #ffc107; color: #212529; }
+.badge-danger { background: #dc3545; color: white; }
+.badge-success { background: #28a745; color: white; }
+
+/* 引用番号 */
+sup {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* 参考文献 */
+.references {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.references ol {
+  padding-left: 1.2rem;
+}
+
+.references li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.references-details {
+  margin-top: 16px;
+}
+
+.references-details summary {
+  background: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .medical-article .drug-table {
+    font-size: 0.8rem;
+  }
+  .medical-article .drug-table th,
+  .medical-article .drug-table td {
+    padding: 8px !important;
+  }
+  
+  .important-box, .warning-box, .emergency-box {
+    margin: 12px 0;
+  }
+}
+</style>

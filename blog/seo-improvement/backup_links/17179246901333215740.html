@@ -1,0 +1,525 @@
+<div class="medical-article">
+<div class="medical-article">
+<p>作者コメント</p>
+<p>AIに関して研修医向けにしゃべったことをブログ記事にも載せておきます。この数日の間にGoogle翻訳にGeminiが搭載されより、自然な日本語で英語のWEBページが翻訳できるようになりましたね。DeepLは今後不要になりそうです。AIの進歩はエグいですね。AIは使いこなすのは難しいですが、触れ続けるのは大事という自分からのメッセージです。</p>
+<p> </p>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="私の最近のAIの使い方">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251216/20251216090941.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">私の最近のAIの使い方</figcaption>
+</figure>
+<p><a href="https://docs.google.com/presentation/d/1s7dP2Z2QvdM3vlxy7kiVxV-CGq5XTIPR/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank">生成AIの進歩スライド</a></p>
+<p><a href="https://drive.google.com/file/d/1yy5ZsX5bxyvjYjhl8m2gmqozgRkjOeM-/view?usp=sharing" target="_blank">音声概要：私のAI活用_最適化.mp3</a></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== フローチャート風 ===== */
+.flow-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.flow-item {
+  background: var(--bg-subtle) !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  text-align: center !important;
+  min-width: 120px !important;
+}
+
+.flow-item strong {
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+
+.flow-arrow {
+  color: var(--primary) !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+  
+  .flow-container {
+    flex-direction: column !important;
+  }
+  
+  .flow-arrow {
+    transform: rotate(90deg) !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>生成AIの進歩と、私の実践的な使い方</h1>
+<p>ChatGPT、Gemini、Claudeを中心に、医療・資料作成・ブログでの活用例をまとめました。大切なのは「使いこなす」ことではなく、<strong>「触り続ける」</strong>ことです。</p>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">生成AIは「急速に進化している」</a></li>
+<li><a href="#section2">AIは「得意分野」が違う</a></li>
+<li><a href="#section3">専門ツールの活用</a></li>
+<li><a href="#section4">医学情報収集に特化したAI</a></li>
+<li><a href="#section5">音声入力の進化</a></li>
+<li><a href="#section6">私のブログ制作フロー（実例）</a></li>
+<li><a href="#section7">私の課金状況（正直な話）</a></li>
+<li><a href="#section8">まだまだ自動化できる</a></li>
+<li><a href="#section9">まとめ：AIを恐れず、まず触ってみてほしい</a></li>
+</ul>
+</div>
+<!-- セクション1 -->
+<h2 id="section1">生成AIは「急速に進化している」</h2>
+<p><strong>2024〜2025年</strong>にかけて、生成AIの性能は一段階上がりました。かつては単なる<strong>文章生成</strong>が主な用途でしたが、今では検索、解析、画像、音声、資料作成と、その活用範囲は大きく広がっています。</p>
+<div class="info-box important-box"><span class="info-box-title">💡 生産性向上の鍵</span> <strong>役割分担</strong>が生産性向上の鍵です。1つのAIですべてをやる時代ではありません。それぞれのAIの得意分野を理解し、適材適所で使い分けることが重要です。</div>
+<!-- セクション2 -->
+<h2 id="section2">AIは「得意分野」が違う</h2>
+<p>主要な3つのAIには、それぞれ得意分野があります。私は以下のように使い分けています。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">AI</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">得意分野</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ChatGPT</strong></td>
+<td>情報検索・整理の中核</td>
+<td>情報検索・要約、思考整理・構造化</td>
+</tr>
+<tr>
+<td><strong>Gemini</strong></td>
+<td>画像・ビジュアルに強い</td>
+<td>画像生成、インフォグラフィック作成</td>
+</tr>
+<tr>
+<td><strong>Claude</strong></td>
+<td>文章生成・ツール作成</td>
+<td>自然な長文作成、スライド構造化</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション3 -->
+<h2 id="section3">専門ツールの活用</h2>
+<p>汎用AIだけでなく、<strong>専門ツール</strong>を組み合わせることで、より効率的に作業を進められます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ツール</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">活用シーン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NotebookLM</strong></td>
+<td>学習・理解の最適解</td>
+<td>複数資料の要約、講演準備・ガイドライン理解</td>
+</tr>
+<tr>
+<td><strong>Google AI Studio</strong></td>
+<td>無料で最先端</td>
+<td>音声生成・ナレーション、スライド＋音声の組み合わせ</td>
+</tr>
+<tr>
+<td><strong>Genspark / Manus</strong></td>
+<td>資料生成特化</td>
+<td>構造化がうまい、スライド化が高速</td>
+</tr>
+</tbody>
+</table>
+<!-- セクション4 -->
+<h2 id="section4">医学情報収集に特化したAI</h2>
+<p>医療従事者にとって、信頼できる情報源は非常に重要です。以下のツールは<strong>医学情報収集</strong>に特化しており、臨床現場でも活用できます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">ツール</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenEvidence</strong></td>
+<td>医師向けの医学特化AI。信頼できる医学論文を根拠に回答してくれる</td>
+</tr>
+<tr>
+<td><strong>Consensus</strong></td>
+<td>「現時点での医学的コンセンサス」を提示。治療方針の確認・教育用に最適</td>
+</tr>
+<tr>
+<td><strong>Elicit</strong></td>
+<td>論文探索・整理が得意。「これが一番良い」と言う医師も多い</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> AIの回答はあくまで参考情報です。最終的な臨床判断は、必ず<strong>原著論文の確認</strong>や<strong>専門家への相談</strong>を行ってください。</div>
+<!-- セクション5 -->
+<h2 id="section5">音声入力の進化</h2>
+<p>文字入力から<strong>音声入力</strong>の時代へと変わりつつあります。音声入力AIが大きく進化したことで、私は<strong>AquaVoice</strong>を活用するようになりました。</p>
+<p>パソコンがあれば思考を止めずに入力できるのは大きなメリットです。効率的なインプット手段として、日常に定着しています。</p>
+<div class="info-box important-box"><span class="info-box-title">🎤 音声入力のメリット</span> 移動中や手がふさがっている時でも、思考を止めずにアイデアを記録できます。タイピングよりも自然な言葉で入力できるため、長文の下書きにも向いています。</div>
+<!-- セクション6 -->
+<h2 id="section6">私のブログ制作フロー（実例）</h2>
+<p>私がブログ記事を制作する際の実際のワークフローをご紹介します。複数のAIを<strong>役割分担</strong>させることで、効率的にコンテンツを作成しています。</p>
+<div class="flow-container">
+<div class="flow-item"><strong>ChatGPT</strong> 情報検索・構成</div>
+<span class="flow-arrow">→</span>
+<div class="flow-item"><strong>Claude</strong> 記事化・スライド化</div>
+<span class="flow-arrow">→</span>
+<div class="flow-item"><strong>Gemini</strong> インフォグラフィック</div>
+<span class="flow-arrow">→</span>
+<div class="flow-item"><strong>Google AI Studio</strong> 音声生成</div>
+</div>
+<p>そして、すべてのプロンプト入力には<strong>AQUA VOICE</strong>を活用しています。音声でサッと指示を出せるので、作業の流れを止めずに済みます。</p>
+<!-- セクション7 -->
+<h2 id="section7">私の課金状況（正直な話）</h2>
+<p>正直なところ、AIサービスにはそれなりの投資をしています。参考までに、私の課金状況を公開します。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">サービス</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">プラン</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">月額（ドル）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ChatGPT</strong></td>
+<td>Pro</td>
+<td>220ドル</td>
+</tr>
+<tr>
+<td><strong>Claude</strong></td>
+<td>Max</td>
+<td>100ドル</td>
+</tr>
+<tr>
+<td><strong>Gemini</strong></td>
+<td>AI Premium</td>
+<td>20ドル</td>
+</tr>
+<tr>
+<td><strong>Genspark</strong></td>
+<td>-</td>
+<td>20ドル</td>
+</tr>
+<tr>
+<td><strong>Manus</strong></td>
+<td>-</td>
+<td>40ドル</td>
+</tr>
+<tr>
+<td><strong>AquaVoice</strong></td>
+<td>-</td>
+<td>10ドル</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box important-box"><span class="info-box-title">💭 本音</span> 使い倒しているわけではありません。<strong>でも、触り続けることが大事</strong>だと思っています。常に最新の機能に触れておくことで、必要な時にすぐ活用できるようになります。</div>
+<!-- セクション8 -->
+<h2 id="section8">まだまだ自動化できる</h2>
+<p>AIの活用において、<strong>完璧な正解はありません</strong>。試行錯誤するのが楽しいのです。</p>
+<p>大切なのは、単純な「作業」をAIに任せることで、私たち人間が<strong>「考える」時間</strong>を確保すること。AIは私たちの思考を代替するものではなく、思考に集中するための時間を生み出してくれるツールなのです。</p>
+<div class="info-box important-box"><span class="info-box-title">🔄 発想の転換</span> 「作業」から「考える」時間へ。AIに単純作業を任せることで、より創造的な仕事に時間を使えるようになります。</div>
+<!-- セクション9 -->
+<h2 id="section9">まとめ：AIを恐れず、まず触ってみてほしい</h2>
+<p>AIは仕事にも、プライベートにも活用できます。<strong>生活をより充実させる道具</strong>として、私は日々AIを使っています。</p>
+<p>大事なのは、完璧に「使いこなす」ことではありません。</p>
+<div class="info-box important-box"><span class="info-box-title">🌟 この記事で伝えたいこと</span> <strong>使い続けることが大切</strong>です。最初は少し触ってみるだけでも構いません。継続して使っていくうちに、自分なりの活用法が見えてきます。AIを恐れず、まず触ってみてください。</div>
+</div>

@@ -1,0 +1,486 @@
+<div class="medical-article">
+<div>
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260130/20260130175836.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>顔面肩甲上腕型筋ジストロフィー（FSHD）総説</strong></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/WEtH6EPnMMs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="顔面肩甲上腕型筋ジストロフィー(FSHD)：病態解明から最新の核酸医薬・治療開発最前線へ" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/WEtH6EPnMMs">youtu.be</a></cite></p>
+<p><strong><a href="https://docs.google.com/presentation/d/1fkOxYUig4U5SsY8qHIQTkiHT6bC7n-WI/edit?usp=sharing&amp;ouid=115346576599278411793&amp;rtpof=true&amp;sd=true" target="_blank">FSHDスライド</a></strong></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>顔面肩甲上腕型筋ジストロフィー（FSHD）総説</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 概論と疫学</a></li>
+<li><a href="#section2">2. 遺伝学と分子病態</a></li>
+<li><a href="#section3">3. 臨床像と自然歴</a></li>
+<li><a href="#section4">4. 診断</a></li>
+<li><a href="#section5">5. 治療とケア</a></li>
+<li><a href="#section6">6. 進行中の臨床試験と新規治療開発</a></li>
+<li><a href="#section7">7. 研究の新潮流と今後の展望</a></li>
+<li><a href="#section8">8. まとめ</a></li>
+</ul>
+</div>
+<!-- 概論と疫学 -->
+<h2 id="section1">1. 概論と疫学</h2>
+<p><strong>顔面肩甲上腕型筋ジストロフィー（FSHD）</strong>は、顔・肩甲帯・上腕を中心に筋力低下が進行する遺伝性筋疾患で、筋ジストロフィーの中では<strong>デュシェンヌ型</strong>に次ぐ頻度を持つ。疾患の発症率は<strong>人口10万人あたり5〜12例</strong>と推定され、欧米では<strong>1/8,000程度</strong>と報告されている<sup>[1]</sup><sup>[2]</sup>。性差はほとんどなく、<strong>常染色体優性遺伝形式</strong>で家族内に多発するが、<strong>10〜30％は新生突然変異</strong>で発症する<sup>[3]</sup>。初発年齢の幅は広く、幼児期から成人期までさまざまである<sup>[4]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 FSHDの疫学的特徴</span> 発症率：人口10万人あたり5〜12例（欧米では約1/8,000）、常染色体優性遺伝で10〜30％が新生突然変異による孤発例</div>
+<!-- 遺伝学と分子病態 -->
+<h2 id="section2">2. 遺伝学と分子病態</h2>
+<h3>2.1 FSHD1とFSHD2</h3>
+<p>FSHDは、<strong>D4Z4マクロサテライト配列</strong>の異常を原因とする<strong>FSHD1（全体の約95％）</strong>と、同配列のメチル化低下による<strong>FSHD2（約5％）</strong>の2型に分類される<sup>[5]</sup><sup>[6]</sup>。FSHD1では<strong>4番染色体長腕（4q35）</strong>の<strong>D4Z4リピートが1〜10ユニットに縮小</strong>し、<strong>DUX4遺伝子</strong>を含む許容ハプロタイプ（<strong>4qAアリル</strong>）でのみ病的な発現が起こる<sup>[7]</sup>。FSHD2では繰り返し数は正常だが、<strong>SMCHD1</strong>、<strong>DNMT3B</strong>、<strong>LRIF1</strong>などのエピジェネティック因子の変異によりD4Z4領域のクロマチン緩和と低メチル化が生じ、双方とも最終的にDUX4遺伝子が筋細胞で異所性に発現する<sup>[8]</sup>。</p>
+<h3>2.2 DUX4遺伝子と病態機構</h3>
+<p><strong>DUX4</strong>は胚発生初期に一過性に働く二重ホームボックス転写因子で、通常は胎生期後に完全に沈黙している<sup>[9]</sup>。しかしFSHDではD4Z4縮小やクロマチン緩和によってDUX4が筋細胞で再活性化し、胚性遺伝子プログラムを誘導して<strong>炎症</strong>、<strong>細胞分化障害</strong>、<strong>DNA修復異常</strong>、<strong>ミトコンドリア機能障害</strong>など多彩な下流異常を引き起こし筋細胞死に至る<sup>[10]</sup>。特に<strong>β-2アドレナリン受容体経路</strong>や<strong>p38 MAPK経路</strong>はDUX4発現を制御する重要な経路として注目され、<strong>p38阻害薬ロスマピモド</strong>などの小分子や<strong>Wnt/β-カテニン活性化剤</strong>、<strong>BET阻害薬</strong>、<strong>ホスホジエステラーゼ阻害薬</strong>によるDUX4抑制が研究されている<sup>[11]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 遺伝学的分類</span> <strong>FSHD1（約95％）</strong>：4q35のD4Z4リピート縮小（1〜10ユニット）＋4qAハプロタイプ<br /><strong>FSHD2（約5％）</strong>：D4Z4リピート数正常だがSMCHD1等の変異によるエピジェネティック異常</div>
+<!-- 臨床像と自然歴 -->
+<h2 id="section3">3. 臨床像と自然歴</h2>
+<h3>3.1 筋症状</h3>
+<p>FSHDの筋症状は<strong>左右非対称に進行</strong>するのが特徴である。初期には口笛が吹けない・笑顔が作りにくいなどの<strong>顔面筋力低下</strong>から始まり、<strong>肩甲骨翼状肩</strong>（肩甲骨が浮き上がる）や上腕の筋萎縮へ進展する<sup>[12]</sup>。病勢が進むと体幹筋や下肢筋にも影響し、<strong>約20％の患者が生涯のどこかで車椅子を必要</strong>とする<sup>[13]</sup>。筋力低下は非常に個人差が大きく、発症早期例では急速な進行と重度の障害を示す一方、軽症例では高齢まで歩行保持が可能である<sup>[4]</sup>。</p>
+<h3>3.2 筋外症状</h3>
+<p>FSHDは筋疾患でありながら全身疾患としての側面も持つ。代表的な筋外症状には<strong>感音難聴</strong>、<strong>網膜血管異常（Coats様血管拡張）</strong>、<strong>慢性疼痛</strong>、<strong>重度の疲労</strong>、<strong>睡眠障害</strong>があり<sup>[14]</sup><sup>[15]</sup>、早期発症例では<strong>てんかん</strong>や<strong>知的障害</strong>、<strong>心臓合併症</strong>が報告される<sup>[16]</sup>。これらの症状は患者の生活の質を大きく左右するため、脳神経内科医だけでなく眼科・耳鼻科・心理社会サポートなど多職種連携が重要である。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 筋外症状に注意</span> 感音難聴、網膜血管異常、慢性疼痛、疲労、睡眠障害に加え、早期発症例ではてんかん・知的障害・心臓合併症の可能性があり、多職種連携による包括的評価が必要</div>
+<h3>3.3 自然歴と予後</h3>
+<p>オランダで<strong>154人の成人患者（平均51歳）を5年間追跡</strong>した自然歴研究では、FSHDの進行が従来考えられていたよりも遅いことが示され、臨床試験期間を延長し感度の高い評価指標を用いる必要性が指摘された<sup>[17]</sup>。ただし早期発症例やD4Z4反復回数が少ない患者では進行が早く重症化しやすい。生命予後は一般に良好であるが、<strong>呼吸筋障害</strong>や<strong>心筋合併症</strong>を伴う場合には注意を要する<sup>[13]</sup>。</p>
+<!-- 診断 -->
+<h2 id="section4">4. 診断</h2>
+<h3>4.1 診断プロセス</h3>
+<p>臨床所見として<strong>顔面・肩甲帯・上腕筋の左右非対称性筋力低下</strong>を認めた場合、家族歴と<strong>血清CK値（正常〜軽度上昇）</strong>を確認し、確定診断には<strong>遺伝学的検査</strong>を行う。FSHD1では4q35のD4Z4反復縮小と4qAハプロタイプが検出され、FSHD2では繰り返し数は正常でも<strong>SMCHD1</strong>などの変異に伴う<strong>D4Z4低メチル化</strong>が確認される<sup>[5]</sup>。筋生検は診断のためには必須ではないが、MRIで筋の非対称性や炎症を評価することが増えている。</p>
+<h3>4.2 鑑別診断</h3>
+<p><strong>肢帯型筋ジストロフィー</strong>、<strong>筋強直性ジストロフィー</strong>、<strong>炎症性ミオパチー</strong>、<strong>運動ニューロン疾患</strong>などが鑑別に挙がる。特にALSなどと異なり感覚障害は認めず、腱反射は比較的保持される。筋MRIでの非対称的萎縮や肩甲骨の翼状化が診断に有用である。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 診断のポイント</span> <strong>臨床所見</strong>：顔面・肩甲帯・上腕の左右非対称性筋力低下、肩甲骨翼状肩<br /><strong>検査所見</strong>：血清CK正常〜軽度上昇<br /><strong>確定診断</strong>：FSHD1はD4Z4リピート縮小＋4qAハプロタイプ、FSHD2はエピジェネティック変異＋D4Z4低メチル化</div>
+<!-- 治療とケア -->
+<h2 id="section5">5. 治療とケア</h2>
+<h3>5.1 現状の管理</h3>
+<p>現時点でFSHDに対する<strong>根治療法は存在せず</strong>、治療は症状緩和と機能維持が中心となる。運動療法は従来筋損傷を懸念して避けられてきたが、最近では<strong>有酸素運動</strong>や<strong>軽度の筋力トレーニング</strong>が筋機能と生活の質向上に有用と報告されている<sup>[18]</sup>。一方で過負荷は筋損傷を誘発するため、理学療法士による個別プログラムが必要である。<strong>肩甲骨翼状肩</strong>に対しては装具や<strong>肩甲骨固定術</strong>が行われ、<strong>足背屈筋の筋力低下</strong>には足底装具が有用である<sup>[19]</sup>。<strong>慢性疼痛</strong>や抑うつには薬物療法や心理社会的支援、<strong>呼吸障害</strong>には<strong>非侵襲的換気療法</strong>を検討する。視覚・聴覚障害の早期発見と管理も重要であり、幼児発症例では小児科・リハビリ専門医・言語聴覚士との連携が推奨されている<sup>[20]</sup>。</p>
+<h3>5.2 更新されつつあるケアガイドライン</h3>
+<p>FSHDの標準治療ガイドライン（Tawilら、2015年）は2024年に再評価され、痛み・疲労・睡眠・心肺機能・精神健康などの多面的管理を含む国際的な標準ケアの策定が進められている。新しいガイドラインでは、診断方法の標準化、遺伝カウンセリング、妊娠管理、呼吸管理、眼科および耳鼻科診察、精神支援などについて専門家のコンセンサスを形成することが目指されている<sup>[21]</sup><sup>[22]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 包括的ケアの要点</span> <strong>運動療法</strong>：有酸素運動・軽度筋力トレーニング（過負荷を避け個別化）<br /><strong>装具・手術</strong>：肩甲骨固定術、足底装具<br /><strong>症状管理</strong>：慢性疼痛・抑うつへの薬物療法・心理社会的支援、呼吸障害への非侵襲的換気療法<br /><strong>多職種連携</strong>：眼科・耳鼻科・リハビリ・小児科・言語聴覚士</div>
+<!-- 臨床試験と新規治療開発 -->
+<h2 id="section6">6. 進行中の臨床試験と新規治療開発</h2>
+<p>病態の中心である<strong>DUX4発現を抑制</strong>すること、および<strong>筋再生を促進</strong>することを目的に多数の治療法が開発中である。主な候補薬を表1にまとめる。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">治療法</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な作用機序・標的</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">開発段階/試験</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な結果・コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ロスマピモド（Losmapimod）</strong></td>
+<td><strong>p38α/β MAPK阻害</strong>によりDUX4発現を抑制</td>
+<td>フェーズ3試験（REACH）。<strong>2024年に主要評価項目を達成できず開発中止</strong><sup>[23]</sup><sup>[24]</sup><sup>[25]</sup></td>
+<td>初期筋形成期にはp38阻害でDUX4が減少するが、後期分化では抑制効果が弱いことが示され、治療効果に限界がある</td>
+</tr>
+<tr>
+<td><strong>デラパシバート・ブラクロシラン（del-brax / AOC 1020）</strong></td>
+<td><strong>トランスフェリン受容体</strong>に結合する抗体に<strong>DUX4 mRNAに対するsiRNA</strong>を結合させ筋内へ運ぶ</td>
+<td>フェーズ1/2 FORTITUDE試験。2024年の中間解析で<strong>DUX4調節遺伝子の発現が50%以上減少</strong>、筋力と可動域改善傾向を示し安全性も良好と報告<sup>[26]</sup></td>
+<td>米国FDAと欧州医薬品庁から<strong>希少疾病薬およびファストトラック指定</strong>を受け、2025年にバイオマーカーコホートの登録が完了</td>
+</tr>
+<tr>
+<td><strong>ARO-DUX4</strong></td>
+<td><strong>RNAi</strong>によりDUX4 mRNAを直接分解。Sarepta社が2024年に権利取得</td>
+<td>フェーズ1/2a試験（ARODUX4-1001）がオーストラリア、ニュージーランド、タイで進行中<sup>[27]</sup></td>
+<td>結果は未公表。DUX4抑制による筋機能改善が期待される</td>
+</tr>
+<tr>
+<td><strong>クレンブテロール・サルブタモールなどβ₂受容体作動薬</strong></td>
+<td><strong>β₂受容体刺激</strong>によりcAMP経路を活性化しDUX4発現を抑制すると期待</td>
+<td>β₂作動薬<strong>クレンブテロール</strong>のフェーズ1試験が準備中<sup>[28]</sup><sup>[29]</sup>。サルブタモールやアルブテロールは過去の試験で筋力増加効果はわずかで、臨床的有用性は限定的</td>
+<td>動物モデルではDUX4抑制と筋機能改善が報告されるが、人での長期有効性は未確立</td>
+</tr>
+<tr>
+<td><strong>EPI-321</strong></td>
+<td><strong>CRISPRベースのエピゲノム編集</strong>によりDUX4遺伝子配列をメチル化して沈黙させる</td>
+<td><strong>2025年8月に初のヒト試験開始</strong>（フェーズ1/2）<sup>[30]</sup></td>
+<td>1回投与で長期的な遺伝子抑制が期待されるが、安全性とオフターゲット影響の評価が必要</td>
+</tr>
+<tr>
+<td><strong>RO7204239</strong></td>
+<td><strong>抗ミオスタチン抗体</strong>により筋肉量と筋力を増加</td>
+<td>フェーズ2試験（MANOEUVRE）が進行中<sup>[31]</sup><sup>[32]</sup></td>
+<td>ミオスタチン阻害により筋再生が促進される可能性があるが、DUX4抑制には直接作用しない</td>
+</tr>
+<tr>
+<td><strong>サトラリズマブ（Satralizumab）</strong></td>
+<td><strong>インターロイキン6受容体</strong>を阻害して炎症を抑制</td>
+<td>フェーズ2 REINFORCE試験。二重盲検でプラセボと比較し48週投与<sup>[33]</sup><sup>[34]</sup></td>
+<td>IL-6はFSHDの炎症と線維脂肪変性に関与するとされ、炎症抑制による筋機能の維持が期待される</td>
+</tr>
+<tr>
+<td><strong>DYNE-302</strong></td>
+<td><strong>トランスフェリン受容体</strong>に結合するFab抗体に<strong>DUX4 mRNAに対するsiRNA</strong>を連結したプラットフォーム</td>
+<td>前臨床段階で、in vitroおよび独自のマウスモデルでDUX4抑制と機能改善を示した<sup>[35]</sup><sup>[36]</sup></td>
+<td>FSHD患者への臨床試験は未開始。Avidityのdel-braxと同様の概念で、長期的な治療効果が期待される</td>
+</tr>
+<tr>
+<td><strong>抗酸化補助療法</strong></td>
+<td><strong>ビタミンC・E、亜鉛、セレノメチオニン</strong>などで酸化ストレスを軽減</td>
+<td>ランダム化試験で抗酸化物質の混合投与により<strong>大腿四頭筋の最大随意収縮と持久時間が改善</strong>し、酸化ストレスマーカーが減少した<sup>[36]</sup><sup>[37]</sup></td>
+<td>2分間歩行テストには有意差がなく、臨床効果は限定的。運動療法との併用が研究されている</td>
+</tr>
+</tbody>
+</table>
+<p>表に示したように、多くの候補薬がDUX4遺伝子の抑制を標的としている。<strong>ロスマピモドの失敗</strong>により、p38阻害だけでは不十分であることが明らかとなり、siRNAやCRISPRによる直接的なDUX4抑制やエピジェネティック制御、炎症抑制、筋量増加など多角的アプローチが進んでいる。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 臨床試験の動向</span> p38阻害薬ロスマピモドはフェーズ3で主要評価項目を達成できず開発中止。現在はsiRNA（AOC 1020、ARO-DUX4）やCRISPRエピゲノム編集（EPI-321）など直接的なDUX4抑制療法に注目が集まっている。</div>
+<!-- 研究の新潮流 -->
+<h2 id="section7">7. 研究の新潮流と今後の展望</h2>
+<h3>7.1 バイオマーカーと自然歴研究</h3>
+<p>臨床試験の成功には、疾患活動性を的確に反映するバイオマーカーの開発が欠かせない。AvidityのFORTITUDE試験では、血中<strong>KHDC1L</strong>など新規循環バイオマーカーと筋生検における<strong>DUX4調節遺伝子の発現</strong>が評価され、有望な指標となりつつある<sup>[29]</sup>。また<strong>MOVE・MOVE+</strong>などの大規模自然歴研究では、筋力検査、MRI、質問票を用いて長期経過を追跡し、臨床アウトカム指標の妥当性を検証している<sup>[42]</sup>。これらのデータは今後の試験設計や予後予測に不可欠である。</p>
+<h3>7.2 基礎研究の進展</h3>
+<p>近年、DUX4発現を調節する経路が次々と解明されている。<strong>β₂受容体作動薬</strong>や<strong>ホスホジエステラーゼ阻害薬</strong>がcAMP経路を介してDUX4 mRNAを<strong>80％以上減少</strong>させたという報告があり<sup>[33]</sup>、<strong>Wnt/βカテニン経路</strong>の活性化がDUX4依存性細胞死を防止することも示された<sup>[43]</sup>。また、雌性ホルモン（<strong>17βエストラジオール</strong>）や<strong>3β-アンドロステンジオール</strong>がヒト化異種移植モデルでDUX4による筋再生障害を改善したとの報告もあり、ホルモンが修飾因子として作用する可能性が示唆されている<sup>[44]</sup>。一方で、<strong>p38 MAPK</strong>は筋分化初期にはDUX4発現に必須だが後期には依存性が低下することが明らかとなり、治療標的としての適応時期が議論されている<sup>[26]</sup>。</p>
+<h3>7.3 多様性と個別化医療</h3>
+<p>FSHDは遺伝学的背景や発症年齢により表現型が大きく異なり、同じ遺伝子異常でも<strong>無症候のキャリア</strong>が存在するなど<strong>不完全浸透</strong>を示す<sup>[45]</sup>。Sasaki-Hondaらは、DUX4発現を許容する遺伝的・エピジェネティック背景の多様性が発症や重症度に影響すると指摘し、<strong>個別化医療</strong>や<strong>精密医療</strong>の必要性を強調した<sup>[46]</sup>。今後はゲノム・エピゲノム・プロテオーム・画像情報を統合し、患者をサブタイプ化することで治療効果を高める研究が求められる<sup>[47]</sup>。</p>
+<details class="expandable">
+<summary>基礎研究で注目される分子経路</summary>
+<div class="expandable-content">
+<p><strong>cAMP経路</strong>：β₂受容体作動薬やホスホジエステラーゼ阻害薬により活性化され、DUX4 mRNAを80％以上減少させる可能性</p>
+<p><strong>Wnt/βカテニン経路</strong>：活性化によりDUX4依存性細胞死を防止</p>
+<p><strong>p38 MAPK経路</strong>：筋分化初期にはDUX4発現に必須だが、後期分化では依存性が低下するため治療ウィンドウが限定される</p>
+<p><strong>性ホルモン</strong>：17βエストラジオールや3β-アンドロステンジオールがDUX4による筋再生障害を改善する可能性</p>
+</div>
+</details><!-- まとめ -->
+<h2 id="section8">8. まとめ</h2>
+<p>FSHDは<strong>D4Z4領域</strong>の変化により<strong>DUX4遺伝子</strong>が異所性発現し、多彩な筋・筋外症状を引き起こす遺伝性筋疾患である。診断には臨床像と遺伝学的検査が必須であり、筋力低下の左右差や顔面筋からの進行が典型的である<sup>[19]</sup><sup>[21]</sup>。現時点で根治療法はなく、理学療法や装具、疼痛管理、呼吸管理、心理社会的支援など多職種による包括的ケアが必要である。近年は<strong>DUX4抑制</strong>を中心とした遺伝子サイレンシング療法、エピゲノム編集、炎症抑制、筋再生促進など多様な治療開発が進んでおり、<strong>AOC 1020</strong>や<strong>ARO-DUX4</strong>、<strong>EPI-321</strong>、<strong>satralizumab</strong>などの臨床試験が開始されている<sup>[28]</sup><sup>[48]</sup><sup>[49]</sup>。また、自然歴研究や新規バイオマーカー開発、遺伝的多様性の解明によって治療評価指標が洗練されつつある。今後は標準治療ガイドラインの改訂と<strong>個別化医療</strong>の実現が期待されており、FSHD研究は臨床・基礎の両面で大きな転換期を迎えている。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 Key Takeaways</span> <strong>病態</strong>：D4Z4領域異常→DUX4異所性発現→多彩な筋・筋外症状<br /><strong>診断</strong>：臨床像（左右非対称・顔面筋からの進行）＋遺伝学的検査<br /><strong>現行治療</strong>：包括的支持療法（理学療法・装具・疼痛管理・呼吸管理・多職種連携）<br /><strong>新規治療</strong>：DUX4抑制（siRNA、CRISPRエピゲノム編集）、炎症抑制、筋再生促進<br /><strong>今後の方向性</strong>：バイオマーカー開発、個別化医療、国際標準ケアガイドライン策定</div>
+<!-- 参考文献 -->
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=WEtH6EPnMMs" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1 6 12 14 17 25 49</span> <span class="ref-content">Advances in FSHD. AFM-Télethon. https://www.afm-telethon.fr/sites/default/files/media/documents/Advances_FSHD.pdf</span></div>
+<div class="ref-item"><span class="ref-numbers">2 7 8 9 10 11 18 33 43 47</span> <span class="ref-content">Deciphering Facioscapulohumeral Dystrophy in the clinical trials era: where are we now? PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11978427/</span></div>
+<div class="ref-item"><span class="ref-numbers">3 21</span> <span class="ref-content">Facioscapulohumeral Muscular Dystrophy - GeneReviews® - NCBI Bookshelf. https://www.ncbi.nlm.nih.gov/books/NBK1443/</span></div>
+<div class="ref-item"><span class="ref-numbers">4 15 16 45 46</span> <span class="ref-content">Sasaki-Honda M, et al. Diversity challenges and reconciles genetics in facioscapulohumeral muscular dystrophy. J Hum Genet. 2025. https://www.nature.com/articles/s10038-025-01401-6</span></div>
+<div class="ref-item"><span class="ref-numbers">5 19 20 29 35 41</span> <span class="ref-content">Current landscape for the management of facioscapulohumeral muscular dystrophy and emerging treatment modalities: A literature review. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC12287641/</span></div>
+<div class="ref-item"><span class="ref-numbers">13 24 31 32 34 36 37 42 48</span> <span class="ref-content">Simply Stated: Updates in Facioscapulohumeral Muscular Dystrophy (FSHD) - Quest | Muscular Dystrophy Association. https://mdaquest.org/simply-stated-updates-in-facioscapulohumeral-muscular-dystrophy-fshd/</span></div>
+<div class="ref-item"><span class="ref-numbers">22</span> <span class="ref-content">Developing an Updated Standard of Care and Management for Facioscapulohumeral muscular dystrophy - MDA Clinical &amp; Scientific Conference 2026. https://www.mdaconference.org/abstract-library/developing-an-updated-standard-of-care-and-management-for-facioscapulohumeral-muscular-dystrophy/</span></div>
+<div class="ref-item"><span class="ref-numbers">23 26</span> <span class="ref-content">Temporal variation in p38-mediated regulation of DUX4 in facioscapulohumeral muscular dystrophy. Sci Rep. 2024. https://www.nature.com/articles/s41598-024-77911-8</span></div>
+<div class="ref-item"><span class="ref-numbers">27 28 30</span> <span class="ref-content">FSHD | Avidity Biosciences. https://www.aviditybiosciences.com/pipeline/fshd</span></div>
+<div class="ref-item"><span class="ref-numbers">38 39</span> <span class="ref-content">Satralizumab for Muscular Dystrophy · Phase 2 Clinical Trial 2026 | Power. https://www.withpower.com/trial/phase-2-muscular-dystrophies-2024-928e8</span></div>
+<div class="ref-item"><span class="ref-numbers">40</span> <span class="ref-content">DYNE-302 for FSHD - Dyne Therapeutics. https://www.dyne-tx.com/dyne-302-for-fshd/</span></div>
+<div class="ref-item"><span class="ref-numbers">44</span> <span class="ref-content">Estrogen rescues muscle regeneration impaired by DUX4 in a humanized xenograft mouse model. Cell Death Dis. 2025. https://www.nature.com/articles/s41419-025-07827-2</span></div>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "顔面肩甲上腕型筋ジストロフィー（FSHD）総説",
+  "description": "顔面肩甲上腕型筋ジストロフィー（FSHD）総説",
+  "thumbnailUrl": "https://img.youtube.com/vi/WEtH6EPnMMs/maxresdefault.jpg",
+  "uploadDate": "2026-01-30",
+  "contentUrl": "https://www.youtube.com/watch?v=WEtH6EPnMMs",
+  "embedUrl": "https://www.youtube.com/embed/WEtH6EPnMMs"
+}
+</script>
+<div class="related-articles">
+<h3>関連記事</h3>
+<ul>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/08/06/132530">CADASILに関する総合解説</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2025/08/12/062600">結節性硬化症（TSC）の解説</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2026/01/20/113547">筋強直性ジストロフィー（Myotonic Dystrophy）の概要と未来の治療</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2026/01/21/111020">神経核内封入体病（NIID）の最新解説：疫学から病態、診断、治療まで</a></li>
+<li><a href="https://hinyan1016.hatenablog.com/entry/2026/02/15/033326">「3億円の薬」は本当に効くのか？― DMD遺伝子治療エレビジスのエビデンスを読み解く</a></li>
+</ul>
+</div>

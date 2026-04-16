@@ -1,0 +1,628 @@
+<div class="medical-article">
+<div class="medical-article"> </div>
+<div>
+<figure class="figure-image figure-image-fotolife mceNonEditable" title="年賀状の「いま」を知る">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20251217/20251217090804.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<figcaption class="mceEditable">年賀状の「いま」を知る</figcaption>
+</figure>
+<p>スライド資料</p>
+<p><a href="https://drive.google.com/file/d/1zBsaISKS_bez-eHHX87tpWpj7jfdltq6/view?usp=sharing" target="_blank">Nengajo_A_Modern_Relationship_Tool.pdf - Google ドライブ</a></p>
+</div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== 参考文献 ===== */
+.references {
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px solid var(--border) !important;
+}
+
+.references h3 {
+  color: var(--primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.ref-item {
+  background: var(--bg-subtle) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+.ref-numbers {
+  display: inline-block !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-right: 10px !important;
+  font-size: 0.85em !important;
+  min-width: 3em !important;
+}
+
+.ref-content {
+  color: var(--text-sub) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<h1>年賀状の「いま」を知る：歴史・文化・現状・これからと、失礼にならない書き方／NG集（保存版）</h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">1. 年賀状とは何か：年始回りの「代替」から文化になった</a></li>
+<li><a href="#section2">2. 年賀状のピークと「いま」：なぜ減ったのか</a></li>
+<li><a href="#section3">3. これからの年賀状：なくなる？残る？</a></li>
+<li><a href="#section4">4. 年賀状の基本スケジュール（元日に届けるには）</a></li>
+<li><a href="#section5">5. 年賀はがきの種類</a></li>
+<li><a href="#section6">6. 年賀状の具体的な書き方（宛名面）</a></li>
+<li><a href="#section7">7. 年賀状の具体的な書き方（裏面）</a></li>
+<li><a href="#section8">8. すぐ使える文例（相手別）</a></li>
+<li><a href="#section9">9. 書いてはいけないこと／避けたいこと</a></li>
+<li><a href="#section10">10. 「届いたのに出してない」問題：返礼の正解</a></li>
+<li><a href="#section11">11. お年玉くじ：当選確認のタイミング</a></li>
+<li><a href="#section12">12. まとめ</a></li>
+</ul>
+</div>
+<p><strong>年賀状</strong>は「新年のあいさつ」を形にして届ける、日本ならではの習慣です。ところが近年は、SNSやメールの普及、生活の忙しさ、郵便料金の改定なども重なり、やり取りの数は大きく減っています。それでも、紙で届く一枚には「手間をかけた分の温度」が残り、関係を丁寧に保ちたい相手ほど、年賀状が効く場面もあります。</p>
+<p>この記事では、年賀状の歴史的・文化的背景から、今の状況と今後の見通し、そして「具体的な書き方」「書いてはいけないこと（避けたい表現・マナー違反）」まで、まとめて解説します。最新の郵便局情報（差し出し時期・料金など）も織り込みます<sup>[1]</sup>。</p>
+<h2 id="section1">1. 年賀状とは何か：年始回りの「代替」から文化になった</h2>
+<p>もともと日本には、年の初めに直接会ってあいさつをする「<strong>年始回り</strong>」がありました。ただ、距離や都合で会えない相手もいます。そこで「手紙で年始のあいさつを交わす」習慣が育ち、年賀状につながっていきます。<strong>平安時代後期</strong>には、年始のあいさつを手紙で交わした記録が文例集に残る、と日本郵便系メディアでも紹介されています<sup>[2]</sup>。</p>
+<p><strong>江戸時代</strong>に飛脚などが発達し、庶民にも広がり、明治に近代郵便が整うことで一気に身近になります（<strong>1871年</strong>に近代郵便が始まり、<strong>1873年</strong>に日本初の郵便はがきが発行）<sup>[2]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 年賀状が担う3つの役割</span>
+<p>年賀状が単なる「はがき」ではなく、以下を担う"年中行事のツール"になった点がポイントです。</p>
+<p>① <strong>年始の礼</strong>（あいさつ）<br />② <strong>関係の維持</strong>（疎遠にしない）<br />③ <strong>近況の共有</strong>（節目の報告）</p>
+</div>
+<h2 id="section2">2. 年賀状のピークと「いま」：なぜ減ったのか</h2>
+<h3>2-1. 枚数はピークの「6分の1程度」へ</h3>
+<p>年賀はがきは<strong>2004年用で約44億4,780万枚</strong>発行、という公式資料が残っています<sup>[1]</sup>。一方、<strong>2026年用年賀はがきの当初発行枚数は7.5億枚</strong>（前年比約69.9%）とされ、長期で見ると大きく縮小しています<sup>[1]</sup>。</p>
+<h3>2-2. 減少の背景（現場で起きていること）</h3>
+<p>減少の背景は単一ではありません。大きくは次の複合です。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">要因</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>連絡手段の置き換え</strong></td>
+<td>SNS・メールで年始のあいさつが済む</td>
+</tr>
+<tr>
+<td><strong>時間と手間</strong></td>
+<td>宛名管理・印刷・投函が負担</td>
+</tr>
+<tr>
+<td><strong>費用</strong></td>
+<td>はがき料金の改定（<strong>通常はがき63円→85円</strong>、実施日2024/10/1）<sup>[1]</sup></td>
+</tr>
+<tr>
+<td><strong>職場のペーパーレス・業務効率</strong></td>
+<td>企業は特に顕著</td>
+</tr>
+</tbody>
+</table>
+<p>企業調査の例では、2026年の年賀状を「<strong>出さない</strong>」企業が<strong>64.0%</strong>、理由は「必要性を感じない」が最多（<strong>52.3%</strong>）で、「業務量が増える」「ペーパーレス推進」が続く、という結果が示されています<sup>[3]</sup>。</p>
+<h2 id="section3">3. これからの年賀状：なくなる？残る？（見通し）</h2>
+<p>年賀状は今後、"全員が大量に出す習慣"から、"<strong>出す相手を選ぶ習慣</strong>"へ、さらに移っていく可能性が高いです。企業でも「出す／出さない」の二極化が進む、という見方が示されています<sup>[3]</sup>。</p>
+<p>一方で、日本郵便側も「続けたい人が続けやすい形」を整えています。たとえば2026年用は、全券種で<strong>FSC認証紙</strong>を使う（森林保全に配慮）と明記されています<sup>[1]</sup>。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 今後の現実的な着地点</span>
+<p>年賀状は「完全に消える」というより、価値の置き方が変わると見るのが自然です。</p>
+<p>① <strong>"大事な人だけ紙"</strong>（少数・高密度）<br />② <strong>"基本はデジタル、節目だけ紙"</strong>（結婚・転居・喪中明け等）<br />③ <strong>"年賀状じまい"を丁寧に宣言</strong>し、以後は別の形で関係維持</p>
+</div>
+<h2 id="section4">4. 年賀状の基本スケジュール（元日に届けるには）</h2>
+<p>日本郵便の案内では、2026年（令和8年）の年賀状の<strong>引受開始は2025年12月15日</strong>、<strong>元日に届けるためには12月25日ごろまで</strong>の差し出しが推奨されています<sup>[1]</sup>。また、はがき料金は「<strong>通常はがき85円</strong>」<sup>[1]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">やること</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">失敗しがちな点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>11月中旬〜下旬</strong></td>
+<td>宛名リスト整理／住所更新（転居・結婚・退職など）</td>
+<td>古い住所のまま印刷</td>
+</tr>
+<tr>
+<td><strong>12月上旬</strong></td>
+<td>喪中はがきが届いていないか確認</td>
+<td><strong>喪中相手に年賀状を出してしまう</strong></td>
+</tr>
+<tr>
+<td><strong>12/15〜</strong></td>
+<td>年賀状として引受開始<sup>[1]</sup></td>
+<td>通常ポストに入れてもOKだが、遅いと元日に届かない</td>
+</tr>
+<tr>
+<td><strong>〜12/25頃</strong></td>
+<td>元日配達の目安<sup>[1]</sup></td>
+<td>ギリギリ投函で遅配</td>
+</tr>
+<tr>
+<td><strong>1/1以降</strong></td>
+<td>返礼・出し忘れ対応（松の内、寒中見舞い）</td>
+<td>「元旦」と書いたのに明らかに遅れる</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span>
+<p>「年賀はがき」を年賀状扱い（元日以降配達）にしたくない目的（懸賞応募など）で使う場合は、<strong>料額印面下部の「年賀」を二重線で消して</strong>出すよう案内されています<sup>[1]</sup>。</p>
+</div>
+<h2 id="section5">5. 年賀はがきの種類：知っておくと地味に助かる</h2>
+<p>2026年用の券種一覧では、基本の「無地」「インクジェット紙」などが<strong>85円</strong>であることに加え、写真向け（<strong>95円</strong>）や、広告付き（<strong>80円</strong>）なども示されています（地域限定など条件あり）<sup>[1]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">種類</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">価格</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>無地／インクジェット紙</strong></td>
+<td>85円</td>
+<td>基本の年賀はがき</td>
+</tr>
+<tr>
+<td><strong>インクジェット写真用</strong></td>
+<td>95円</td>
+<td>写真をきれいに印刷したい場合<sup>[1]</sup></td>
+</tr>
+<tr>
+<td><strong>広告付き年賀はがき</strong></td>
+<td>80円</td>
+<td>地域限定<sup>[1]</sup></td>
+</tr>
+</tbody>
+</table>
+<p>「写真入りで色が沈む」「にじむ」などが気になる場合は、<strong>写真用</strong>を選ぶと失敗が減ります。</p>
+<h2 id="section6">6. 年賀状の具体的な書き方（宛名面）</h2>
+<p>宛名面は「配達品質」に直結します。内容が良くても、宛名のミスは致命的です。</p>
+<h3>6-1. 郵便番号：7けた・ハイフン位置</h3>
+<p>郵便番号枠は「<strong>7けた1段</strong>」「<strong>3けた目と4けた目の間にハイフン</strong>」と日本郵便のマニュアルで定義されています<sup>[1]</sup>。（年賀はがきの枠にそのまま書けばOK。私製はがきを自作する人だけ、仕様が重要になります。）</p>
+<h3>6-2. 住所：省略しない（特に仕事相手）</h3>
+<p><strong>都道府県から書く</strong>、<strong>マンション名・部屋番号まで正確に</strong>、縦書きなら数字は漢数字に寄せると見た目が整う（ただし読みやすさ優先でOK）。</p>
+<h3>6-3. 宛名（敬称）で事故を防ぐルール</h3>
+<p>技術評論社の年賀状マナー解説では、基本として以下が整理されています<sup>[4]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">宛先</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">敬称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>個人宛</td>
+<td><strong>様</strong></td>
+</tr>
+<tr>
+<td>会社・団体宛</td>
+<td><strong>御中</strong></td>
+</tr>
+<tr>
+<td>会社名＋個人名の場合</td>
+<td>会社名に御中は付けず、<strong>個人に様</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 よくある地雷</span>
+<p><strong>× 「株式会社〇〇 御中　山田太郎 様」</strong>（御中と様を重ねる）<br /><strong>× 「社長様」「部長様」</strong>（役職に"様"を重ねる）<sup>[4]</sup></p>
+<p>○ 「株式会社〇〇　山田太郎 様」<br />○ 「株式会社〇〇　営業部 御中」（部署宛の場合）</p>
+</div>
+<h2 id="section7">7. 年賀状の具体的な書き方（裏面）</h2>
+<p>裏面は「礼」と「あなたらしさ」のバランスです。基本要素は5つに分けると迷いません。</p>
+<p>① <strong>賀詞</strong>（お祝いの言葉）<br />② <strong>本文</strong>（近況・感謝・今後もよろしく）<br />③ <strong>日付</strong>（元日／元旦など）<br />④ <strong>差出人名</strong>（連名なら並べ方）<br />⑤ <strong>住所</strong>（転居報告があるならここに）</p>
+<h3>7-1. 賀詞（がし）の選び方：相手別に変える</h3>
+<p>賀詞には種類があり、一般には「<strong>二文字以下は略式で、目上には避ける</strong>」と説明されています<sup>[4]</sup><sup>[5]</sup>。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">相手</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">推奨する賀詞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>目上・取引先向け（丁寧）</strong></td>
+<td><strong>謹賀新年</strong>／<strong>恭賀新年</strong>／謹んで新春のお慶びを申し上げます<sup>[4]</sup><sup>[5]</sup></td>
+</tr>
+<tr>
+<td><strong>同僚・友人向け（カジュアル）</strong></td>
+<td>あけましておめでとうございます／Happy New Year!</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span>
+<p>「<strong>賀正</strong>」「<strong>迎春</strong>」など二文字賀詞は、デザインでよく見ますが、<strong>目上には避ける</strong>説明がされています<sup>[5]</sup>。</p>
+</div>
+<h3>7-2. 賀詞の"重複"を避ける</h3>
+<p>ありがちなミスが「同じ意味を二回書く」こと。</p>
+<p><strong>× 「新年あけましておめでとうございます」</strong>（意味が重なる）<sup>[5]</sup><br />○ 「あけましておめでとうございます」<br />○ 「新年おめでとうございます」</p>
+<h3>7-3. 日付：「元旦」「元日」の使い分けとNG</h3>
+<p>富士フイルム系の解説では、以下のように説明されています<sup>[5]</sup>。</p>
+<p><strong>元日</strong>は「一年の始めの日」<br /><strong>元旦</strong>は「一月一日の朝」</p>
+<p>「<strong>一月一日元旦</strong>」「<strong>一月元旦</strong>」などの<strong>重複表現は使わない</strong>とされています<sup>[5]</sup>。また、明らかに元旦に届かない年賀状には「元旦」と書かず、「一月」「正月」などにする、<strong>松の内を過ぎるなら寒中見舞いにする</strong>、という整理もあります<sup>[5]</sup>。</p>
+<h2 id="section8">8. すぐ使える文例（相手別）</h2>
+<details class="expandable">
+<summary>友人・同僚（ほどよく丁寧）</summary>
+<div class="expandable-content">
+<p>あけましておめでとうございます。<br />昨年はなかなか会えませんでしたが、お元気ですか。<br />今年は一度ゆっくり話せる機会を作れたら嬉しいです。<br />本年もどうぞよろしく！</p>
+</div>
+</details><details class="expandable">
+<summary>目上・恩師・取引先（フォーマル）</summary>
+<div class="expandable-content">
+<p>謹賀新年<br />旧年中は格別のご厚情を賜り、誠にありがとうございました。<br />本年も変わらぬご指導ご鞭撻のほど、何卒よろしくお願い申し上げます。<br />令和〇〇年　元日</p>
+<p>※二文字賀詞を避ける、句読点を控えるなど「かたい型」を意識する考え方が紹介されています<sup>[4]</sup>。</p>
+</div>
+</details><details class="expandable">
+<summary>転居・転勤の報告を兼ねる</summary>
+<div class="expandable-content">
+<p>あけましておめでとうございます。<br />昨年〇月に転居いたしました。お近くにお越しの際はぜひお立ち寄りください。<br />本年もどうぞよろしくお願いいたします。</p>
+</div>
+</details><details class="expandable">
+<summary>年賀状じまい（角を立てない書き方）</summary>
+<div class="expandable-content">
+<p>新年のごあいさつを申し上げます。<br />誠に勝手ながら本年をもちまして年賀状でのごあいさつを控えさせていただきます。<br />今後は別の形でご連絡させていただければ幸いです。<br />皆さまのご健康とご多幸をお祈り申し上げます。</p>
+<p>ポイントは「関係を切る」ではなく、「<strong>手段を変える</strong>」を明言することです。</p>
+</div>
+</details>
+<h2 id="section9">9. 書いてはいけないこと／避けたいこと（実務で困る順）</h2>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 ここが一番大事です</span>
+<p>年賀状のトラブルは「気持ち」ではなく「<strong>地雷を踏む</strong>」ことで起きます。</p>
+</div>
+<h3>9-1. 喪中・忌中まわり：最大の事故ポイント</h3>
+<p><strong>喪中</strong>の一般的な考え方として「<strong>近親者が亡くなった日から1年間（13か月の場合も）</strong>」が紹介され、喪中は年賀を控え、<strong>年賀欠礼状（喪中はがき）</strong>を送る、と説明されています<sup>[6]</sup>。</p>
+<p><strong>喪中はがき</strong>は、相手が年賀状準備を始める前（<strong>11月中〜遅くとも12月初旬</strong>）に届くように、という目安も示されています<sup>[6]</sup>。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 やってはいけない例</span>
+<p><strong>× 喪中の相手に「おめでとうございます」を送る</strong><br /><strong>× 喪中はがきを受け取ったのに、そのまま年賀状を出す</strong></p>
+<p>迷ったら、年賀状ではなく「<strong>寒中見舞い</strong>」に切り替えるほうが安全です。</p>
+</div>
+<h3>9-2. 忌み言葉：縁起の悪い連想を避ける</h3>
+<p>避ける言葉として「<strong>枯れる</strong>」「<strong>衰える</strong>」「<strong>破れる</strong>」「<strong>失う</strong>」「<strong>倒れる</strong>」「<strong>滅びる</strong>」等が挙げられ、さらに意外な例として「<strong>去年</strong>」も避け、「<strong>昨年</strong>」「<strong>旧年</strong>」を使う、という説明があります<sup>[4]</sup>。（「去年」は"去"が入るため縁起を気にする、という感覚です。）</p>
+<h3>9-3. 目上に「略式の賀詞」</h3>
+<p><strong>二文字以下の賀詞</strong>（例：賀正、迎春、寿など）は略式で、<strong>目上には避ける</strong>、という整理が複数の解説で示されています<sup>[5]</sup>。</p>
+<h3>9-4. 敬称ミス（仕事関係で信用を落とす）</h3>
+<p>敬称の基本（個人＝様、団体＝御中、併用しない等）が解説されています<sup>[4]</sup>。ここは"礼儀のミス"として相手に刺さりやすいので、最優先で見直してください。</p>
+<h3>9-5. 句読点の扱い（フォーマルでは控える考え方）</h3>
+<p>かたい年賀状では、<strong>句読点を入れないのが正式</strong>、という説明があります（親しい相手なら気にしすぎなくてよい、という注記も）<sup>[4]</sup>。ビジネス・目上は「句読点なし」で作っておくと無難です。</p>
+<h3>9-6. 「元旦」の誤用・重複</h3>
+<p>「<strong>一月一日元旦</strong>」「<strong>一月元旦</strong>」などの重複は避ける、と解説されています<sup>[5]</sup>。</p>
+<h3>9-7. 修正液・修正テープの多用</h3>
+<p>公的ルールではなく"印象"の問題ですが、宛名や相手の名前を修正した跡があると、丁寧さが落ちます。大きなミスは<strong>書き直すのが基本</strong>です（特に宛名面）。</p>
+<h3>9-8. 相手が困る内容（写真・個人情報・価値観）</h3>
+<p>これはマナー本に明確に「禁止」とは書かれにくいですが、炎上や不快の原因になります。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">内容</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>子どもの写真</strong></td>
+<td>OKだが、相手や状況を選ぶ（職場関係・独身の友人など）</td>
+</tr>
+<tr>
+<td><strong>家族の詳細</strong>（病気・不妊・離婚などセンシティブ）</td>
+<td>年賀状で一方的に出さない</td>
+</tr>
+<tr>
+<td><strong>政治・宗教の主張</strong></td>
+<td>相手が同意している確信がない限り避ける</td>
+</tr>
+<tr>
+<td><strong>他人の写真やキャラクター画像</strong></td>
+<td>著作権・肖像権に配慮</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section10">10. 「届いたのに出してない」問題：返礼の正解</h2>
+<p>年明けに年賀状を受け取って「出してなかった…」となるのは毎年のあるあるです。対処はシンプルで、遅れた理由を一言添えて、できるだけ早く返します。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">時期</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>松の内（一般的には1/7目安）まで</strong></td>
+<td>年賀状として返しても許容されやすい</td>
+</tr>
+<tr>
+<td><strong>松の内を過ぎる</strong></td>
+<td><strong>寒中見舞い</strong>に切り替える（「遅れて失礼しました」を添える）<sup>[5]</sup></td>
+</tr>
+</tbody>
+</table>
+<h2 id="section11">11. お年玉くじ：当選確認のタイミングだけ押さえる</h2>
+<p>年賀はがきには「お年玉」があります。2026年用の<strong>くじ抽せん日は2026年1月19日（月）</strong>、<strong>引換期間は2026年1月20日〜7月21日</strong>と案内されています<sup>[1]</sup>。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span>
+<p><strong>当選番号部分は切り取らずに郵便局へ</strong>、という注意も明記されています<sup>[1]</sup>。</p>
+</div>
+<h2 id="section12">12. まとめ：年賀状は「大量」から「選んで丁寧に」へ</h2>
+<p>年賀状は、<strong>平安期の年始の手紙文化</strong>を背景に、近代郵便の整備とともに定着してきました<sup>[2]</sup>。発行枚数は<strong>2004年用の約44億枚規模</strong>から、<strong>2026年用は7.5億枚</strong>へと縮小しています<sup>[1]</sup>。料金面でも、<strong>通常はがきは63円→85円</strong>（2024/10/1実施）となり、負担感は増えました<sup>[1]</sup>。企業でも「出さない」が多数派になりつつあります<sup>[3]</sup>。</p>
+<p>それでも年賀状は、<strong>関係を丁寧に保ちたい相手に対して"効く"</strong>コミュニケーションです。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 失敗を激減させる3つのポイント</span>
+<p>続けるなら、次の3点だけは守ると失敗が激減します。</p>
+<p>① <strong>喪中・忌み言葉を避ける</strong><sup>[4]</sup><sup>[6]</sup><br />② <strong>敬称と賀詞を相手に合わせる</strong><sup>[4]</sup><sup>[5]</sup><br />③ <strong>元日に届けたいなら12/25頃までに投函</strong><sup>[1]</sup></p>
+</div>
+<!-- 参考文献 -->
+<div class="references">
+<h3>📚 参考文献</h3>
+<div class="ref-item"><span class="ref-numbers">1</span> <span class="ref-content">日本郵便株式会社. 郵便局公式サイト（年賀状関連情報・料金案内）. https://www.post.japanpost.jp/</span></div>
+<div class="ref-item"><span class="ref-numbers">2</span> <span class="ref-content">JP CAST（郵便局の魅力を発信するメディア）. 年賀状の歴史.</span></div>
+<div class="ref-item"><span class="ref-numbers">3</span> <span class="ref-content">TSR Network. 企業の年賀状に関する調査（2026年用）.</span></div>
+<div class="ref-item"><span class="ref-numbers">4</span> <span class="ref-content">技術評論社（gihyo.jp）. 年賀状マナー解説.</span></div>
+<div class="ref-item"><span class="ref-numbers">5</span> <span class="ref-content">富士フイルム（postcard.jp）. 年賀状の書き方・マナー.</span></div>
+<div class="ref-item"><span class="ref-numbers">6</span> <span class="ref-content">郵便年賀.jp. 喪中・忌中のマナー.</span></div>
+</div>
+</div>

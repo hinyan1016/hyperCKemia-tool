@@ -1,0 +1,457 @@
+<div class="medical-article">
+<div> </div>
+</div>
+<style>
+/* ===== CSS変数（カラーパレット） ===== */
+:root {
+  --primary: #1e4a8c;
+  --primary-light: #e8f0fa;
+  --accent: #c9302c;
+  --text-main: #2d3436;
+  --text-sub: #636e72;
+  --bg-base: #ffffff;
+  --bg-subtle: #f7f9fc;
+  --border: #dfe6e9;
+  --warning-bg: #fff8e6;
+  --warning-border: #f5a623;
+  --emergency-bg: #fdecea;
+  --emergency-border: #c9302c;
+}
+
+/* ===== ベーススタイル ===== */
+.medical-article {
+  max-width: 100% !important;
+  padding: 20px !important;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: var(--text-main) !important;
+  background: var(--bg-base) !important;
+}
+
+.medical-article p {
+  margin: 1em 0 !important;
+  text-align: justify !important;
+}
+
+/* ===== 見出し ===== */
+.medical-article h1 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  border-bottom: 3px solid var(--primary) !important;
+  padding-bottom: 12px !important;
+  margin: 0 0 1.5rem 0 !important;
+}
+
+.medical-article h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: var(--primary) !important;
+  border-left: 5px solid var(--primary) !important;
+  padding-left: 14px !important;
+  margin: 2rem 0 1rem 0 !important;
+  background: var(--primary-light) !important;
+  padding: 10px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.medical-article h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  margin: 1.5rem 0 0.75rem 0 !important;
+  padding-left: 1.2em !important;
+  position: relative !important;
+}
+
+.medical-article h3::before {
+  content: "●" !important;
+  color: var(--primary) !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-size: 0.7em !important;
+}
+
+/* ===== 強調・引用 ===== */
+.medical-article strong {
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.medical-article sup {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.7em !important;
+  vertical-align: super !important;
+  margin: 0 1px !important;
+}
+
+/* ===== 目次ボックス ===== */
+.toc-box {
+  background: var(--bg-subtle) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.toc-box h3 {
+  margin: 0 0 12px 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.toc-box h3::before {
+  content: none !important;
+}
+
+.toc-box ul {
+  margin: 0 !important;
+  padding-left: 1.5em !important;
+  list-style-type: disc !important;
+}
+
+.toc-box li {
+  margin: 6px 0 !important;
+}
+
+.toc-box a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+}
+
+.toc-box a:hover {
+  text-decoration: underline !important;
+}
+
+/* ===== 情報ボックス ===== */
+.info-box {
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin: 1.5rem 0 !important;
+  border-left: 5px solid !important;
+}
+
+.info-box-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.important-box {
+  background: var(--primary-light) !important;
+  border-left-color: var(--primary) !important;
+}
+
+.important-box .info-box-title {
+  color: var(--primary) !important;
+}
+
+.warning-box {
+  background: var(--warning-bg) !important;
+  border-left-color: var(--warning-border) !important;
+}
+
+.warning-box .info-box-title {
+  color: #b8860b !important;
+}
+
+.emergency-box {
+  background: var(--emergency-bg) !important;
+  border-left-color: var(--emergency-border) !important;
+}
+
+.emergency-box .info-box-title {
+  color: var(--accent) !important;
+}
+
+/* ===== テーブル ===== */
+.data-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border: 1px solid var(--border) !important;
+}
+
+.data-table thead th {
+  background-color: #1e4a8c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 14px 12px !important;
+  text-align: left !important;
+  border: 1px solid #1a4080 !important;
+}
+
+.data-table tbody td {
+  padding: 12px !important;
+  border: 1px solid var(--border) !important;
+  vertical-align: top !important;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.data-table tbody tr:nth-child(even) td {
+  background-color: #f7f9fc !important;
+}
+
+/* ===== 展開セクション ===== */
+.expandable {
+  margin: 1.5rem 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.expandable summary {
+  background: linear-gradient(135deg, #1e4a8c 0%, #2a5da8 100%) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.expandable summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.expandable summary::after {
+  content: "＋" !important;
+  font-size: 1.2em !important;
+}
+
+.expandable[open] summary::after {
+  content: "－" !important;
+}
+
+.expandable-content {
+  padding: 20px !important;
+  background: var(--bg-base) !important;
+}
+
+/* ===== レスポンシブ ===== */
+@media screen and (max-width: 600px) {
+  .medical-article {
+    padding: 12px !important;
+    font-size: 15px !important;
+  }
+  
+  .medical-article h1 {
+    font-size: 1.4rem !important;
+  }
+  
+  .medical-article h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .data-table {
+    font-size: 0.85rem !important;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px !important;
+  }
+}
+</style>
+<div class="medical-article">
+<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260304/20260304103416.png" width="670" height="1200" loading="lazy" title="" class="hatena-fotolife" itemprop="image" /></p>
+<p style="font-size: 1.1em; margin-bottom: 1em;"><strong>脳神経内科医がよく遭遇する「誤解」10選 — 外来で何度も説明すること</strong></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/2xJttKmi9rk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" title="脳神経内科医が外来で何度も説明する、よくある10の誤解" id="widget2"></iframe><cite class="hatena-citation"><a href="https://youtu.be/2xJttKmi9rk">youtu.be</a></cite></p>
+<h1><br /><br /></h1>
+<!-- 目次 -->
+<div class="toc-box">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#intro">はじめに</a></li>
+<li><a href="#m1">① 脳梗塞は血液をサラサラにすれば防げる</a></li>
+<li><a href="#m2">② MRIが正常なら脳の病気はない</a></li>
+<li><a href="#m3">③ しびれ＝神経障害</a></li>
+<li><a href="#m4">④ めまいは耳の病気</a></li>
+<li><a href="#m5">⑤ 認知症はアルツハイマー病だけ</a></li>
+<li><a href="#m6">⑥ 加齢で物忘れは仕方ない</a></li>
+<li><a href="#m7">⑦ パーキンソン病＝手の震え</a></li>
+<li><a href="#m8">⑧ てんかん＝けいれん</a></li>
+<li><a href="#m9">⑨ 脳梗塞は突然起こる</a></li>
+<li><a href="#m10">⑩ 脳神経内科は難しい病気ばかり</a></li>
+<li><a href="#reason">誤解が生まれる理由と脳神経内科医の役割</a></li>
+<li><a href="#summary">まとめ</a></li>
+</ul>
+</div>
+<!-- はじめに -->
+<h2 id="intro">はじめに</h2>
+<p>脳神経内科外来では、患者さんやご家族から同じ質問を何度も受けます。</p>
+<p>「<strong>脳梗塞</strong>は血液をサラサラにすれば防げるんですよね？」「<strong>MRI</strong>が正常なら病気はないですよね？」「しびれは神経が悪いからですよね？」——これらは完全な間違いではありませんが、医学的にはかなり単純化された理解です。</p>
+<p>こうした誤解は、不必要な検査、不適切な治療、患者の不安につながることがあります。この記事では、脳神経内科医が日常診療でよく遭遇する<strong>「脳神経内科のよくある誤解」10項目</strong>を整理します。</p>
+<!-- ① -->
+<h2 id="m1">① 「脳梗塞は血液をサラサラにすれば防げる」</h2>
+<p>これは非常によくある誤解です。確かに<strong>抗血小板薬</strong>や<strong>抗凝固薬</strong>は<strong>脳梗塞</strong>予防に重要です。しかし実際には、脳梗塞の最大のリスクは<strong>高血圧</strong>です。</p>
+<p>そのほかにも<strong>糖尿病</strong>、<strong>脂質異常症</strong>、<strong>喫煙</strong>、<strong>心房細動</strong>などが重要なリスク因子です。つまり、<strong>「血液サラサラ薬だけでは脳梗塞は防げない」</strong>ということです。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 ポイント</span> 脳梗塞予防は抗血栓薬だけでなく、<strong>高血圧</strong>・<strong>糖尿病</strong>・<strong>脂質異常症</strong>・<strong>喫煙</strong>・<strong>心房細動</strong>などの包括的なリスク管理が不可欠です。</div>
+<!-- ② -->
+<h2 id="m2">② 「MRIが正常なら脳の病気はない」</h2>
+<p><strong>MRI</strong>は非常に優れた検査ですが、すべての病気を映し出すわけではありません。例えば<strong>片頭痛</strong>、<strong>てんかん</strong>、<strong>機能性神経症状</strong>、<strong>初期パーキンソン病</strong>などでは、MRIが正常でも病気は存在します。</p>
+<p>脳神経内科では、<strong>診察が診断の中心</strong>になります。</p>
+<div class="info-box warning-box"><span class="info-box-title">⚠️ 注意</span> MRI正常でも疾患は否定できません。<strong>片頭痛</strong>・<strong>てんかん</strong>・<strong>機能性神経症状</strong>・<strong>初期パーキンソン病</strong>などは画像で異常を認めないことが多く、<strong>神経診察</strong>による評価が重要です。</div>
+<!-- ③ -->
+<h2 id="m3">③ 「しびれ＝神経障害」</h2>
+<p>しびれという症状は非常に幅広いです。原因としては<strong>末梢神経障害</strong>、<strong>脊椎疾患</strong>、<strong>脳卒中</strong>、<strong>不安やストレス</strong>などがあります。つまり、<strong>しびれの原因は一つではありません</strong>。</p>
+<p>診断には<strong>分布</strong>（どこがしびれるか）、<strong>発症様式</strong>（いつ・どのように始まったか）、<strong>神経診察</strong>が重要です。</p>
+<!-- ④ -->
+<h2 id="m4">④ 「めまいは耳の病気」</h2>
+<p>多くのめまいは<strong>内耳（末梢性めまい）</strong>が原因です。しかし、<strong>小脳梗塞</strong>や<strong>脳幹梗塞</strong>などの<strong>中枢性めまい</strong>も存在します。</p>
+<p>めまい診療では、<strong>眼振</strong>の評価や<strong>神経症状</strong>の有無など、診察が重要になります。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 警告</span> めまいに加えて<strong>構音障害</strong>・<strong>嚥下障害</strong>・<strong>四肢の運動失調</strong>・<strong>激しい頭痛</strong>を伴う場合は、<strong>小脳梗塞</strong>や<strong>脳幹梗塞</strong>など<strong>中枢性めまい</strong>の可能性があり、緊急の対応が必要です。</div>
+<!-- ⑤ -->
+<h2 id="m5">⑤ 「認知症はアルツハイマー病だけ」</h2>
+<p><strong>認知症</strong>には多くの種類があります。代表的なものは<strong>アルツハイマー病</strong>、<strong>レビー小体型認知症</strong>、<strong>前頭側頭型認知症</strong>、<strong>血管性認知症</strong>です。それぞれ症状、治療、予後が異なります。</p>
+<details class="expandable" open="open">
+<summary>認知症の主な分類と特徴</summary>
+<div class="expandable-content">
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">疾患名</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">主な特徴</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">特徴的な症状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>アルツハイマー病</strong></td>
+<td>最も多い認知症（約60〜70%）</td>
+<td>近時記憶障害、見当識障害</td>
+</tr>
+<tr>
+<td><strong>レビー小体型認知症</strong></td>
+<td>2番目に多い変性性認知症</td>
+<td>幻視、パーキンソニズム、認知機能の変動</td>
+</tr>
+<tr>
+<td><strong>前頭側頭型認知症</strong></td>
+<td>比較的若年で発症しやすい</td>
+<td>人格変化、脱抑制、常同行動</td>
+</tr>
+<tr>
+<td><strong>血管性認知症</strong></td>
+<td>脳血管障害に伴う認知症</td>
+<td>階段状の悪化、まだら認知症</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><!-- ⑥ -->
+<h2 id="m6">⑥ 「加齢で物忘れは仕方ない」</h2>
+<p>加齢による物忘れはあります。しかし、<strong>同じことを何度も聞く</strong>、<strong>生活に支障がある</strong>場合は、<strong>認知症の可能性</strong>があります。</p>
+<p><strong>早期診断</strong>が重要です。</p>
+<div class="info-box important-box"><span class="info-box-title">📋 加齢による物忘れ vs 認知症</span> 加齢による物忘れは「体験の一部を忘れる」のに対し、認知症では「体験そのものを忘れる」ことが特徴です。<strong>日常生活に支障がある物忘れ</strong>は、早めに脳神経内科を受診しましょう。</div>
+<!-- ⑦ -->
+<h2 id="m7">⑦ 「パーキンソン病＝手の震え」</h2>
+<p><strong>パーキンソン病</strong>の典型症状は<strong>振戦</strong>、<strong>動作緩慢</strong>、<strong>筋強剛</strong>です。しかし、震えが目立たない患者も少なくありません。</p>
+<p>むしろ、<strong>動作が遅い</strong>、<strong>歩きにくい</strong>といった症状が主なこともあります。</p>
+<!-- ⑧ -->
+<h2 id="m8">⑧ 「てんかん＝けいれん」</h2>
+<p><strong>てんかん</strong>発作には<strong>意識消失</strong>、<strong>ぼーっとする</strong>（意識減損発作）、<strong>自動症</strong>など様々な形があります。つまり、<strong>けいれんを伴わない発作も多い</strong>のです。</p>
+<!-- ⑨ -->
+<h2 id="m9">⑨ 「脳梗塞は突然起こる」</h2>
+<p>多くの<strong>脳梗塞</strong>は突然発症します。しかし、<strong>一過性脳虚血発作（TIA）</strong>という前兆発作がある場合があります。</p>
+<p><strong>TIA</strong>は<strong>脳卒中の警告サイン</strong>です。</p>
+<div class="info-box emergency-box"><span class="info-box-title">🚨 TIA（一過性脳虚血発作）を見逃さない</span> 一過的な<strong>片側の脱力</strong>・<strong>しびれ</strong>・<strong>言語障害</strong>・<strong>視力障害</strong>などが出現し、短時間で改善した場合でも、<strong>TIA</strong>の可能性があります。<strong>TIA後は脳梗塞のリスクが非常に高い</strong>ため、すみやかな受診が必要です。</div>
+<!-- ⑩ -->
+<h2 id="m10">⑩ 「脳神経内科は難しい病気ばかり」</h2>
+<p>脳神経内科というと<strong>ALS</strong>（筋萎縮性側索硬化症）や<strong>多発性硬化症</strong>などの難病をイメージする人も多いです。しかし実際には、外来で多いのは<strong>頭痛</strong>、<strong>めまい</strong>、<strong>しびれ</strong>、<strong>認知症</strong>などの日常的な症状です。</p>
+<p>脳神経内科は<strong>日常診療に近い分野</strong>でもあります。</p>
+<!-- 誤解が生まれる理由と役割 -->
+<h2 id="reason">誤解が生まれる理由と脳神経内科医の役割</h2>
+<h3>誤解が生まれる背景</h3>
+<p>医療の誤解は、誰の責任でもありません。理由としては、医療情報の単純化、インターネット情報、テレビ番組などが挙げられます。また、医学は本来複雑なものです。</p>
+<h3>脳神経内科医の役割</h3>
+<p>脳神経内科医の重要な役割の一つは、<strong>誤解を解くこと</strong>です。患者が病気を正しく理解することで、<strong>不安が減る</strong>、<strong>治療の理解が深まる</strong>といったメリットがあります。</p>
+<!-- まとめ -->
+<h2 id="summary">まとめ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">番号</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">よくある誤解</th>
+<th style="background-color: #1e4a8c !important; color: #ffffff !important;">実際のポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>脳梗塞は血液サラサラで防げる</td>
+<td><strong>高血圧</strong>をはじめとした包括的リスク管理が重要</td>
+</tr>
+<tr>
+<td>②</td>
+<td>MRIが正常なら病気はない</td>
+<td><strong>片頭痛</strong>・<strong>てんかん</strong>等はMRI正常でも存在する</td>
+</tr>
+<tr>
+<td>③</td>
+<td>しびれ＝神経障害</td>
+<td>原因は多岐にわたり、<strong>分布・発症様式・診察</strong>が鍵</td>
+</tr>
+<tr>
+<td>④</td>
+<td>めまいは耳の病気</td>
+<td><strong>中枢性めまい</strong>（小脳・脳幹梗塞）にも注意</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>認知症＝アルツハイマー</td>
+<td><strong>レビー小体型</strong>・<strong>前頭側頭型</strong>・<strong>血管性</strong>など多様</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>物忘れは加齢で仕方ない</td>
+<td>生活に支障がある場合は<strong>認知症</strong>の可能性あり</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td>パーキンソン病＝震え</td>
+<td><strong>動作緩慢</strong>・<strong>歩行障害</strong>が主な患者も多い</td>
+</tr>
+<tr>
+<td>⑧</td>
+<td>てんかん＝けいれん</td>
+<td><strong>意識減損発作</strong>・<strong>自動症</strong>など非けいれん性発作も多い</td>
+</tr>
+<tr>
+<td>⑨</td>
+<td>脳梗塞は突然起こる</td>
+<td><strong>TIA</strong>（一過性脳虚血発作）が前兆となることがある</td>
+</tr>
+<tr>
+<td>⑩</td>
+<td>脳神経内科は難しい病気ばかり</td>
+<td><strong>頭痛</strong>・<strong>めまい</strong>・<strong>しびれ</strong>など日常的な症状が多い</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box important-box"><span class="info-box-title">📋 脳神経内科診療のキーワード</span> 脳神経内科診療では、<strong>症状</strong>・<strong>診察</strong>・<strong>病歴</strong>が非常に重要です。そして、<strong>患者の誤解を一つずつ解いていくこと</strong>も、脳神経内科医の大切な仕事だと言えるでしょう。</div>
+<div class="youtube-cta" style="background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); border: 2px solid #2c5aa0; border-radius: 8px; padding: 20px; margin: 2rem 0; text-align: center;">
+<p style="font-size: 1.2em; font-weight: bold; color: #1a3a5c; margin: 0 0 8px 0;">🎬 この内容をYouTubeで動画解説しています</p>
+<p style="color: #555; margin: 0 0 12px 0;">スライド付きでわかりやすく解説。通勤中・休憩中の視聴にもおすすめです。</p>
+<a href="https://www.youtube.com/watch?v=2xJttKmi9rk" target="_blank" rel="noopener" style="display: inline-block; background: #c00; color: #fff; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold;">▶ YouTubeで見る</a></div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "脳神経内科医がよく遭遇する「誤解」10選 — 外来で何度も説明すること",
+  "description": "脳神経内科医がよく遭遇する「誤解」10選 — 外来で何度も説明すること",
+  "thumbnailUrl": "https://img.youtube.com/vi/2xJttKmi9rk/maxresdefault.jpg",
+  "uploadDate": "2026-03-04",
+  "contentUrl": "https://www.youtube.com/watch?v=2xJttKmi9rk",
+  "embedUrl": "https://www.youtube.com/embed/2xJttKmi9rk"
+}
+</script>
