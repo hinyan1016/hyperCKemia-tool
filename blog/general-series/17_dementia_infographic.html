@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<title>認知症の親を病院に連れて行くには インフォグラフィック</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 800px;
+  font-family: 'BIZ UDPGothic', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  background: #f5f0eb;
+  color: #333;
+  line-height: 1.5;
+}
+.container {
+  width: 800px;
+  padding: 28px 32px 20px;
+}
+
+/* タイトル */
+.main-title {
+  text-align: center;
+  margin-bottom: 6px;
+}
+.main-title h1 {
+  font-size: 26px;
+  color: #1a3a5c;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.main-title .subtitle {
+  font-size: 14px;
+  color: #666;
+}
+.divider {
+  height: 3px;
+  background: linear-gradient(to right, #2c5aa0, #5b9bd5, #2c5aa0);
+  margin: 10px 0 16px;
+  border-radius: 2px;
+}
+
+/* セクション共通 */
+.section {
+  margin-bottom: 16px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #2c5aa0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a3a5c;
+}
+
+/* 3列カード */
+.three-cols {
+  display: flex;
+  gap: 10px;
+}
+.reason-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  border-top: 3px solid #c0392b;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.reason-card .card-icon {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.reason-card h3 {
+  font-size: 14px;
+  color: #c0392b;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.reason-card p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+}
+.reason-card .stat {
+  display: inline-block;
+  background: #fde8e8;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* アプローチカード */
+.approach-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  border-top: 3px solid #27ae60;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.approach-card .card-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #27ae60;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+.approach-card h3 {
+  font-size: 13px;
+  color: #1a6b3a;
+  margin-bottom: 6px;
+}
+.approach-card p {
+  font-size: 11.5px;
+  color: #555;
+  line-height: 1.6;
+}
+.approach-card .example {
+  background: #e8f5e9;
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #2e7d32;
+}
+
+/* チェックリスト */
+.checklist-grid {
+  display: flex;
+  gap: 10px;
+}
+.checklist-col {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.checklist-col h3 {
+  font-size: 13px;
+  color: #2c5aa0;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dde5ed;
+}
+.checklist-col ul {
+  list-style: none;
+  padding: 0;
+}
+.checklist-col li {
+  font-size: 11.5px;
+  padding: 3px 0 3px 18px;
+  position: relative;
+  color: #444;
+}
+.checklist-col li::before {
+  content: '☐';
+  position: absolute;
+  left: 0;
+  color: #c0392b;
+  font-size: 12px;
+}
+
+/* もの忘れ外来フロー */
+.flow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+.flow-step {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  width: 130px;
+  flex-shrink: 0;
+}
+.flow-step .step-icon {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+.flow-step .step-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1a3a5c;
+}
+.flow-step .step-desc {
+  font-size: 10px;
+  color: #777;
+  margin-top: 2px;
+}
+.flow-arrow {
+  font-size: 18px;
+  color: #2c5aa0;
+  flex-shrink: 0;
+}
+
+/* 相談窓口 */
+.support-row {
+  display: flex;
+  gap: 10px;
+}
+.support-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border-left: 3px solid #2c5aa0;
+}
+.support-card h3 {
+  font-size: 13px;
+  color: #2c5aa0;
+  margin-bottom: 4px;
+}
+.support-card p {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Take Home */
+.thm-box {
+  background: #e8f0fa;
+  border: 2px solid #2c5aa0;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.thm-box h3 {
+  font-size: 15px;
+  color: #1a3a5c;
+  margin-bottom: 8px;
+}
+.thm-box ol {
+  padding-left: 20px;
+}
+.thm-box li {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+/* 緊急ボックス */
+.emergency {
+  background: #fde8e8;
+  border: 2px solid #c0392b;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+.emergency h3 {
+  font-size: 14px;
+  color: #c0392b;
+  margin-bottom: 6px;
+}
+.emergency ul {
+  list-style: none;
+  padding: 0;
+}
+.emergency li {
+  font-size: 11.5px;
+  padding: 2px 0 2px 16px;
+  position: relative;
+  color: #8b1a1a;
+}
+.emergency li::before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  font-size: 11px;
+}
+
+/* フッター */
+.footer {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #999;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- タイトル -->
+<div class="main-title">
+  <h1>認知症の親を病院に連れて行くには</h1>
+  <div class="subtitle">脳神経内科専門医が解説 ― 受診を嫌がる場合の実践的アプローチ</div>
+</div>
+<div class="divider"></div>
+
+<!-- A. 受診拒否の理由 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">A</span>
+    <span class="section-title">なぜ「病院に行きたくない」のか ― 3つの医学的背景</span>
+  </div>
+  <div class="three-cols">
+    <div class="reason-card">
+      <div class="card-icon">🧠</div>
+      <h3>病識低下（アノソグノシア）</h3>
+      <p>脳の萎縮により、自分の状態を客観的に把握する能力そのものが低下。「私はおかしくない」は本当にそう感じている</p>
+      <span class="stat">アルツハイマー型の 40〜81%</span>
+    </div>
+    <div class="reason-card">
+      <div class="card-icon">😰</div>
+      <h3>スティグマへの恐れ</h3>
+      <p>「施設に入れられる」「家族に迷惑をかける」という不安。一家の柱だった世代ほどプライドとの葛藤が強い</p>
+    </div>
+    <div class="reason-card">
+      <div class="card-icon">🔄</div>
+      <h3>医療不信・先送り</h3>
+      <p>「年をとれば誰でも忘れる」「今度でいい」。正常化による否認と、受診への恐れが合わさる</p>
+    </div>
+  </div>
+</div>
+
+<!-- B. 受診につなげるアプローチ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">B</span>
+    <span class="section-title">受診につなげる 3つの実践的アプローチ</span>
+  </div>
+  <div class="three-cols">
+    <div class="approach-card">
+      <span class="card-num">1</span>
+      <h3>「認知症の検査」とは言わない</h3>
+      <p>健康診断・脳ドック・他の症状のついでなど、別の目的を入口にする</p>
+      <div class="example">💬「頭のMRIを一度撮っておいたほうがいいって先生が言っていたよ」</div>
+    </div>
+    <div class="approach-card">
+      <span class="card-num">2</span>
+      <h3>かかりつけ医を経由する</h3>
+      <p>家族だけで先に相談 → 先生から本人に声かけを依頼。長年の信頼関係が効く</p>
+      <div class="example">💬「血圧の薬をもらうついでに、脳の検査もしてもらえないかな」</div>
+    </div>
+    <div class="approach-card">
+      <span class="card-num">3</span>
+      <h3>まず家族だけで相談に行く</h3>
+      <p>もの忘れ外来・地域包括支援センターは患者不在でも相談可能</p>
+      <div class="example">💬 事前にアドバイスを得て、段取りを立てられる</div>
+    </div>
+  </div>
+</div>
+
+<!-- C. 受診前チェックリスト -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">C</span>
+    <span class="section-title">もの忘れ外来に持参するもの</span>
+  </div>
+  <div class="checklist-grid">
+    <div class="checklist-col">
+      <h3>📋 基本情報</h3>
+      <ul>
+        <li>健康保険証・診察券</li>
+        <li>お薬手帳（服用中の薬一覧）</li>
+        <li>既往歴（高血圧・糖尿病等）</li>
+        <li>家族歴（認知症の親族）</li>
+        <li>生活歴（学歴・職歴・趣味）</li>
+      </ul>
+    </div>
+    <div class="checklist-col">
+      <h3>📝 症状メモ</h3>
+      <ul>
+        <li>症状が始まった時期</li>
+        <li>具体的エピソード（日時入り）</li>
+        <li>日常生活への支障の程度</li>
+        <li>行動・心理症状の記録</li>
+        <li>最近の血液検査・画像結果</li>
+      </ul>
+    </div>
+    <div class="checklist-col">
+      <h3>💡 メモの渡し方</h3>
+      <ul>
+        <li>本人の前で話しにくい内容は<br>受付にメモを事前に渡す</li>
+        <li>「家族だけで少し話せますか」<br>とスタッフに申し出る</li>
+        <li>正確な診断のために<br>医師は家族の情報を歓迎</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- D. もの忘れ外来の流れ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">D</span>
+    <span class="section-title">もの忘れ外来の流れ</span>
+  </div>
+  <div class="flow-row">
+    <div class="flow-step">
+      <div class="step-icon">🗣️</div>
+      <div class="step-name">問診</div>
+      <div class="step-desc">症状・日常生活<br>への影響を確認</div>
+    </div>
+    <span class="flow-arrow">▶</span>
+    <div class="flow-step">
+      <div class="step-icon">📝</div>
+      <div class="step-name">神経心理検査</div>
+      <div class="step-desc">MMSE・MoCA等<br>約30分の検査</div>
+    </div>
+    <span class="flow-arrow">▶</span>
+    <div class="flow-step">
+      <div class="step-icon">🩸</div>
+      <div class="step-name">血液検査</div>
+      <div class="step-desc">治療可能な原因<br>の除外</div>
+    </div>
+    <span class="flow-arrow">▶</span>
+    <div class="flow-step">
+      <div class="step-icon">🧲</div>
+      <div class="step-name">頭部MRI</div>
+      <div class="step-desc">萎縮・脳血管<br>病変の確認</div>
+    </div>
+    <span class="flow-arrow">▶</span>
+    <div class="flow-step">
+      <div class="step-icon">📊</div>
+      <div class="step-name">結果と説明</div>
+      <div class="step-desc">経過観察に<br>なることも多い</div>
+    </div>
+  </div>
+</div>
+
+<!-- E. 緊急受診サイン -->
+<div class="section">
+  <div class="emergency">
+    <h3>🚨 こんな症状は救急へ（もの忘れ外来ではなく）</h3>
+    <ul>
+      <li>急に（数日〜数週間で）認知機能が落ちた</li>
+      <li>手足の麻痺・言語障害・激しい頭痛を伴う</li>
+      <li>高熱・意識の変容がある</li>
+      <li>強い幻視・幻聴で本人や家族が危険な状況 → 脳卒中・脳炎・せん妄の可能性</li>
+    </ul>
+  </div>
+</div>
+
+<!-- F. 相談窓口 -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">E</span>
+    <span class="section-title">受診前後に使える相談窓口</span>
+  </div>
+  <div class="support-row">
+    <div class="support-card">
+      <h3>🏢 地域包括支援センター</h3>
+      <p>無料・患者不在でも相談可能。「地域包括支援センター＋市区町村名」で検索</p>
+    </div>
+    <div class="support-card">
+      <h3>🏥 認知症疾患医療センター</h3>
+      <p>専門拠点。BPSDが強い場合や診断困難なケースの紹介先</p>
+    </div>
+    <div class="support-card">
+      <h3>📞 認知症の人と家族の会</h3>
+      <p>電話相談: 0120-294-456<br>家族同士の経験共有の場</p>
+    </div>
+  </div>
+</div>
+
+<!-- G. Take Home Message -->
+<div class="section">
+  <div class="thm-box">
+    <h3>📌 Take Home Message</h3>
+    <ol>
+      <li><strong>受診拒否の背景には「病識低下」という医学的原因</strong>がある。頑固なだけではない</li>
+      <li>「認知症の検査」とは言わず、<strong>別の入口（健康診断・脳ドック）</strong>を使う</li>
+      <li>まず<strong>家族だけで相談できる</strong>（もの忘れ外来・地域包括支援センター）</li>
+      <li>1回で白黒つかなくてよい。<strong>ベースラインの記録</strong>が将来につながる</li>
+    </ol>
+  </div>
+</div>
+
+<div class="footer">医知創造ラボ creator group</div>
+
+</div>
+</body>
+</html>

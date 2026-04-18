@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海綿静脈洞 解剖エクスプローラー プロトタイプ v3</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'BIZ UDPGothic', 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+h1 { color: #1B3A5C; margin-bottom: 6px; font-size: 1.4rem; }
+.subtitle { color: #555; margin-bottom: 16px; font-size: 0.9rem; }
+.view-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.view-btn {
+  padding: 10px 28px;
+  border: 2px solid #2c5aa0;
+  background: #fff;
+  color: #2c5aa0;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.view-btn.active {
+  background: #2c5aa0;
+  color: #fff;
+}
+.view-btn:hover:not(.active) {
+  background: #e8f0fe;
+}
+.svg-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 860px;
+  width: 100%;
+}
+svg { width: 100%; height: auto; }
+.info-panel {
+  max-width: 860px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  min-height: 80px;
+}
+.info-panel h3 { color: #1B3A5C; margin-bottom: 8px; }
+.info-panel p { color: #333; font-size: 0.95rem; line-height: 1.6; }
+.structure-item {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.structure-item:hover { opacity: 0.75; }
+.label-text {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  pointer-events: none;
+}
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>海綿静脈洞 解剖エクスプローラー v3</h1>
+<p class="subtitle">クリックで各構造の詳細を表示</p>
+
+<!-- ビュー切り替えボタン -->
+<div class="view-toggle">
+  <button class="view-btn active" id="btnCoronal" onclick="switchView('coronal')">断面図（Coronal）</button>
+  <button class="view-btn" id="btnSagittal" onclick="switchView('sagittal')">側面図（Sagittal）</button>
+</div>
+
+<div class="svg-container">
+
+<!-- ==================== 断面図（Coronal） ==================== -->
+<svg id="coronalView" viewBox="0 0 750 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="spongyPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#c8ddf0" fill-opacity="0.5"/>
+      <circle cx="8" cy="8" r="4" fill="#a8c4e0" fill-opacity="0.4"/>
+      <circle cx="22" cy="20" r="5" fill="#a8c4e0" fill-opacity="0.35"/>
+      <circle cx="5" cy="24" r="3" fill="#b0cce6" fill-opacity="0.3"/>
+      <circle cx="18" cy="6" r="3.5" fill="#b0cce6" fill-opacity="0.3"/>
+    </pattern>
+    <radialGradient id="icaGrad">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </radialGradient>
+    <linearGradient id="duraGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B7355"/>
+      <stop offset="50%" stop-color="#a08060"/>
+      <stop offset="100%" stop-color="#8B7355"/>
+    </linearGradient>
+    <linearGradient id="lateralWallGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c4a87a" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#d4bc96" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#c4a87a" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 方向ラベル -->
+  <text x="375" y="28" text-anchor="middle" class="label-text" font-size="13" fill="#999">← 内側 (Medial)　　　　　　　　　　外側 (Lateral) →</text>
+
+  <!-- 側頭葉 -->
+  <path d="M 60,45 Q 375,15 690,45 L 690,100 Q 375,75 60,100 Z" fill="#f5e6ce" stroke="#bfa882" stroke-width="1.5"/>
+  <text x="375" y="78" text-anchor="middle" class="label-text" font-size="14" fill="#8a6d3b">側頭葉 Temporal Lobe</text>
+
+  <!-- 硬膜上壁 -->
+  <rect x="60" y="98" width="630" height="8" fill="url(#duraGrad)" rx="1"/>
+
+  <!-- 海綿静脈洞本体 -->
+  <path d="M 175,108 L 520,108 Q 545,120 555,155 Q 568,200 572,255 Q 568,310 555,345 Q 545,380 520,395 L 175,395 Q 152,380 142,345 Q 132,310 128,255 Q 132,200 142,155 Q 152,120 175,108 Z"
+        fill="url(#spongyPattern)" stroke="#2c5aa0" stroke-width="2" class="structure-item" onclick="showInfo('sinus')"/>
+
+  <!-- 小梁 -->
+  <line x1="200" y1="140" x2="220" y2="200" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="350" y1="130" x2="340" y2="180" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="420" y1="150" x2="450" y2="210" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="180" y1="300" x2="210" y2="360" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="300" y1="320" x2="280" y2="375" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="400" y1="310" x2="430" y2="370" stroke="#8aadcc" stroke-width="0.8" opacity="0.5"/>
+  <line x1="460" y1="170" x2="480" y2="230" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <line x1="250" y1="340" x2="230" y2="380" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="310" cy="160" r="6" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="440" cy="330" r="5" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="200" cy="270" r="7" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="380" cy="370" r="4" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="470" cy="200" r="5" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- 外側壁（厚み帯） -->
+  <path d="M 520,108 Q 545,120 555,155 Q 568,200 572,255 Q 568,310 555,345 Q 545,380 520,395
+           L 510,390 Q 535,375 543,340 Q 553,305 557,255 Q 553,205 543,165 Q 535,130 510,115 Z"
+        fill="url(#lateralWallGrad)" stroke="#8B7355" stroke-width="1.5"/>
+  <text x="598" y="255" class="label-text" font-size="11" fill="#6b4c2a" transform="rotate(90,598,255)">外側壁（硬膜）</text>
+
+  <!-- 内側壁 -->
+  <path d="M 175,108 Q 152,120 142,155 Q 132,200 128,255 Q 132,310 142,345 Q 152,380 175,395
+           L 185,390 Q 162,375 153,340 Q 143,305 139,255 Q 143,205 153,165 Q 162,130 185,115 Z"
+        fill="url(#lateralWallGrad)" stroke="#8B7355" stroke-width="1.5"/>
+
+  <!-- 下垂体 -->
+  <rect x="30" y="190" width="100" height="120" rx="14" fill="#ffe0e0" stroke="#d9534f" stroke-width="1.5"/>
+  <text x="80" y="245" text-anchor="middle" class="label-text" font-size="13" fill="#a94442">下垂体</text>
+  <text x="80" y="265" text-anchor="middle" class="label-text" font-size="11" fill="#a94442">Pituitary</text>
+
+  <!-- 蝶形骨洞 -->
+  <path d="M 100,405 Q 350,425 600,405 L 600,475 Q 350,495 100,475 Z" fill="#e8e8e8" stroke="#999" stroke-width="1.5"/>
+  <text x="350" y="448" text-anchor="middle" class="label-text" font-size="14" fill="#666">蝶形骨洞 Sphenoid Sinus</text>
+
+  <!-- ICA -->
+  <circle cx="230" cy="255" r="34" fill="url(#icaGrad)" stroke="#922b21" stroke-width="2.5" class="structure-item" onclick="showInfo('ica')"/>
+  <text x="230" y="250" text-anchor="middle" class="label-text" font-size="12" fill="#fff" font-weight="bold">ICA</text>
+  <text x="230" y="267" text-anchor="middle" class="label-text" font-size="10" fill="#ffe0e0">内頸動脈</text>
+
+  <!-- 交感神経叢 -->
+  <circle cx="230" cy="255" r="44" fill="none" stroke="#e74c8b" stroke-width="1.5" stroke-dasharray="4,3" class="structure-item" onclick="showInfo('sympathetic')"/>
+  <circle cx="230" cy="255" r="48" fill="none" stroke="#e74c8b" stroke-width="0.8" stroke-dasharray="2,4" opacity="0.5"/>
+  <text x="175" y="315" class="label-text" font-size="10" fill="#e74c8b">交感神経叢</text>
+
+  <!-- CN VI -->
+  <circle cx="360" cy="260" r="11" fill="#f1c40f" stroke="#d4ac0d" stroke-width="2" class="structure-item" onclick="showInfo('cn6')"/>
+  <text x="360" y="264" text-anchor="middle" class="label-text" font-size="9" fill="#333" font-weight="bold">VI</text>
+  <line x1="371" y1="260" x2="410" y2="248" stroke="#d4ac0d" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="415" y="242" class="label-text" font-size="11" fill="#d4ac0d" font-weight="bold">CN VI 外転神経</text>
+  <text x="415" y="257" class="label-text" font-size="9" fill="#998a00">※洞腔内を自由走行</text>
+
+  <!-- CN III -->
+  <ellipse cx="537" cy="155" rx="13" ry="9" fill="#e67e22" stroke="#d35400" stroke-width="2" class="structure-item" onclick="showInfo('cn3')"/>
+  <text x="537" y="159" text-anchor="middle" class="label-text" font-size="8" fill="#fff" font-weight="bold">III</text>
+  <line x1="550" y1="150" x2="620" y2="135" stroke="#d35400" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="625" y="130" class="label-text" font-size="11" fill="#d35400" font-weight="bold">CN III 動眼神経</text>
+  <text x="625" y="145" class="label-text" font-size="9" fill="#a04000">※外側壁の硬膜内を走行</text>
+
+  <!-- CN IV -->
+  <ellipse cx="545" cy="220" rx="13" ry="9" fill="#27ae60" stroke="#1e8449" stroke-width="2" class="structure-item" onclick="showInfo('cn4')"/>
+  <text x="545" y="224" text-anchor="middle" class="label-text" font-size="8" fill="#fff" font-weight="bold">IV</text>
+  <line x1="558" y1="218" x2="625" y2="205" stroke="#1e8449" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="630" y="200" class="label-text" font-size="11" fill="#1e8449" font-weight="bold">CN IV 滑車神経</text>
+  <text x="630" y="215" class="label-text" font-size="9" fill="#145a32">※外側壁の硬膜内を走行</text>
+
+  <!-- V1 -->
+  <ellipse cx="550" cy="285" rx="13" ry="9" fill="#8e44ad" stroke="#6c3483" stroke-width="2" class="structure-item" onclick="showInfo('v1')"/>
+  <text x="550" y="289" text-anchor="middle" class="label-text" font-size="8" fill="#fff" font-weight="bold">V1</text>
+  <line x1="563" y1="283" x2="630" y2="275" stroke="#6c3483" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="635" y="270" class="label-text" font-size="11" fill="#6c3483" font-weight="bold">V1 眼神経</text>
+  <text x="635" y="285" class="label-text" font-size="9" fill="#4a235a">※外側壁の硬膜内を走行</text>
+
+  <!-- V2 -->
+  <ellipse cx="545" cy="345" rx="13" ry="9" fill="#2980b9" stroke="#1a5276" stroke-width="2" class="structure-item" onclick="showInfo('v2')"/>
+  <text x="545" y="349" text-anchor="middle" class="label-text" font-size="8" fill="#fff" font-weight="bold">V2</text>
+  <line x1="558" y1="343" x2="630" y2="340" stroke="#1a5276" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="635" y="335" class="label-text" font-size="11" fill="#1a5276" font-weight="bold">V2 上顎神経</text>
+  <text x="635" y="350" class="label-text" font-size="9" fill="#0e2f44">※外側壁の硬膜内を走行</text>
+
+  <!-- 凡例 -->
+  <rect x="120" y="490" width="510" height="55" rx="8" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="375" y="510" text-anchor="middle" class="label-text" font-size="12" fill="#444" font-weight="bold">海綿静脈洞 冠状断面（右側、前方から見た図）</text>
+  <rect x="150" y="520" width="12" height="12" rx="2" fill="url(#lateralWallGrad)" stroke="#8B7355" stroke-width="1"/>
+  <text x="168" y="531" class="label-text" font-size="10" fill="#555">硬膜壁（CN III,IV,V1,V2が埋入）</text>
+  <rect x="380" y="520" width="12" height="12" rx="2" fill="url(#spongyPattern)" stroke="#2c5aa0" stroke-width="1"/>
+  <text x="398" y="531" class="label-text" font-size="10" fill="#555">洞腔内（CN VIが自由走行）</text>
+</svg>
+
+<!-- ==================== 側面図（Sagittal） ==================== -->
+<svg id="sagittalView" class="hidden" viewBox="0 0 820 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="spongyPattern2" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#c8ddf0" fill-opacity="0.5"/>
+      <circle cx="8" cy="8" r="4" fill="#a8c4e0" fill-opacity="0.4"/>
+      <circle cx="22" cy="20" r="5" fill="#a8c4e0" fill-opacity="0.35"/>
+      <circle cx="5" cy="24" r="3" fill="#b0cce6" fill-opacity="0.3"/>
+      <circle cx="18" cy="6" r="3.5" fill="#b0cce6" fill-opacity="0.3"/>
+    </pattern>
+    <linearGradient id="duraGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B7355"/>
+      <stop offset="50%" stop-color="#a08060"/>
+      <stop offset="100%" stop-color="#8B7355"/>
+    </linearGradient>
+    <linearGradient id="icaLongGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c0392b"/>
+      <stop offset="50%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 方向ラベル -->
+  <text x="410" y="25" text-anchor="middle" class="label-text" font-size="13" fill="#999">← 後方 (Posterior)　　　　　　　　　　前方 (Anterior) →</text>
+
+  <!-- ===== 頭蓋底（上方の硬膜） ===== -->
+  <path d="M 40,60 Q 410,40 780,60 L 780,75 Q 410,55 40,75 Z" fill="url(#duraGrad2)" stroke="#6b4c2a" stroke-width="1.5"/>
+  <text x="410" y="55" text-anchor="middle" class="label-text" font-size="11" fill="#8a6d3b">中頭蓋窩底（硬膜）</text>
+
+  <!-- ===== 海綿静脈洞本体（側面から見た長方形〜台形） ===== -->
+  <path d="M 130,80 L 560,80 Q 580,90 585,110 L 585,350 Q 580,370 560,380 L 130,380 Q 110,370 105,350 L 105,110 Q 110,90 130,80 Z"
+        fill="url(#spongyPattern2)" stroke="#2c5aa0" stroke-width="2" class="structure-item" onclick="showInfo('sinus')"/>
+
+  <!-- 小梁（側面図） -->
+  <line x1="160" y1="100" x2="170" y2="160" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <line x1="250" y1="110" x2="240" y2="170" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <line x1="350" y1="100" x2="360" y2="155" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <line x1="450" y1="310" x2="440" y2="365" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <line x1="200" y1="300" x2="220" y2="360" stroke="#8aadcc" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="300" cy="130" r="5" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="500" cy="340" r="4" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="180" cy="250" r="6" fill="#dbe9f5" fill-opacity="0.5" stroke="#8aadcc" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ===== 上眼窩裂 (SOF) — 前方出口 ===== -->
+  <path d="M 585,130 L 660,100 Q 675,95 680,105 L 680,260 Q 675,270 660,265 L 585,240"
+        fill="#f0e6d3" stroke="#8B7355" stroke-width="2" class="structure-item" onclick="showInfo('sof')"/>
+  <text x="665" y="170" class="label-text" font-size="11" fill="#6b4c2a" font-weight="bold" transform="rotate(-8,665,170)">上眼窩裂</text>
+  <text x="668" y="185" class="label-text" font-size="10" fill="#8a6d3b" transform="rotate(-8,668,185)">SOF</text>
+  <!-- SOFの先（眼窩） -->
+  <path d="M 680,105 L 780,75 L 780,280 L 680,260 Z" fill="#fef9f0" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="740" y="175" text-anchor="middle" class="label-text" font-size="12" fill="#999">眼窩</text>
+  <text x="740" y="192" text-anchor="middle" class="label-text" font-size="10" fill="#bbb">Orbit</text>
+
+  <!-- ===== 正円孔 (Foramen Rotundum) — V2の出口 ===== -->
+  <ellipse cx="490" cy="385" rx="25" ry="10" fill="#e8e8e8" stroke="#888" stroke-width="1.5" class="structure-item" onclick="showInfo('foramen_rotundum')"/>
+  <text x="490" y="410" text-anchor="middle" class="label-text" font-size="10" fill="#666">正円孔</text>
+  <text x="490" y="424" text-anchor="middle" class="label-text" font-size="9" fill="#888">F. Rotundum</text>
+
+  <!-- ===== Dorello管 — CN VIの入口（後方） ===== -->
+  <path d="M 105,200 L 50,215 Q 40,220 42,230 L 55,250 L 105,240"
+        fill="#f0e6d3" stroke="#8B7355" stroke-width="1.5" class="structure-item" onclick="showInfo('dorello')"/>
+  <text x="48" y="265" class="label-text" font-size="10" fill="#6b4c2a">Dorello管</text>
+
+  <!-- ===== 蝶形骨洞（下方） ===== -->
+  <path d="M 80,395 L 620,395 L 620,470 Q 350,490 80,470 Z" fill="#e8e8e8" stroke="#999" stroke-width="1.5"/>
+  <text x="350" y="440" text-anchor="middle" class="label-text" font-size="14" fill="#666">蝶形骨洞 Sphenoid Sinus</text>
+
+  <!-- ===== 下垂体（上方中央） ===== -->
+  <path d="M 260,60 L 420,60 L 420,80 L 260,80 Z" fill="#ffe0e0" stroke="#d9534f" stroke-width="1.5"/>
+  <text x="340" y="74" text-anchor="middle" class="label-text" font-size="11" fill="#a94442">下垂体 Pituitary（上方）</text>
+
+  <!-- ===== ICA（S字走行） ===== -->
+  <!-- ICAは後方から入り、洞内をS字状に走行し、前方で上行して出る -->
+  <path d="M 60,230 Q 105,225 150,200 Q 200,170 280,180 Q 360,190 420,210 Q 480,230 520,190 Q 550,160 585,140 L 620,120"
+        fill="none" stroke="#c0392b" stroke-width="12" stroke-linecap="round" opacity="0.8" class="structure-item" onclick="showInfo('ica')"/>
+  <path d="M 60,230 Q 105,225 150,200 Q 200,170 280,180 Q 360,190 420,210 Q 480,230 520,190 Q 550,160 585,140 L 620,120"
+        fill="none" stroke="#e74c3c" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <!-- ICA方向矢印 -->
+  <polygon points="620,120 608,130 612,118" fill="#c0392b"/>
+  <!-- ICAラベル -->
+  <text x="280" y="215" text-anchor="middle" class="label-text" font-size="11" fill="#922b21" font-weight="bold">ICA（内頸動脈）</text>
+  <text x="280" y="230" text-anchor="middle" class="label-text" font-size="9" fill="#a04000">海綿静脈洞部 C4セグメント</text>
+  <!-- ICAセグメントラベル -->
+  <text x="85" y="250" class="label-text" font-size="9" fill="#c0392b">← 頸部から</text>
+  <text x="630" y="115" class="label-text" font-size="9" fill="#c0392b">→ 床上部へ</text>
+
+  <!-- ===== 交感神経叢（ICA沿い、点線） ===== -->
+  <path d="M 70,240 Q 105,235 150,210 Q 200,180 280,190 Q 360,200 420,220 Q 480,240 520,200 Q 550,170 585,150 L 615,132"
+        fill="none" stroke="#e74c8b" stroke-width="2" stroke-dasharray="4,3" class="structure-item" onclick="showInfo('sympathetic')"/>
+  <text x="430" y="254" class="label-text" font-size="9" fill="#e74c8b">交感神経叢（ICA沿い）</text>
+
+  <!-- ===== CN III（外側壁上部を走行 → SOFへ） ===== -->
+  <path d="M 130,110 Q 300,100 450,105 Q 530,108 585,130 L 660,110"
+        fill="none" stroke="#e67e22" stroke-width="4" stroke-linecap="round" class="structure-item" onclick="showInfo('cn3')"/>
+  <circle cx="130" cy="110" r="5" fill="#e67e22" stroke="#d35400" stroke-width="1.5"/>
+  <text x="130" y="98" text-anchor="middle" class="label-text" font-size="10" fill="#d35400" font-weight="bold">III</text>
+  <text x="350" y="96" text-anchor="middle" class="label-text" font-size="11" fill="#d35400" font-weight="bold">CN III 動眼神経</text>
+  <!-- SOF通過の矢印 -->
+  <polygon points="660,110 648,118 650,105" fill="#e67e22"/>
+
+  <!-- ===== CN IV（CN IIIの下を走行 → SOFへ） ===== -->
+  <path d="M 140,145 Q 300,140 450,145 Q 530,150 585,155 L 660,140"
+        fill="none" stroke="#27ae60" stroke-width="3.5" stroke-linecap="round" class="structure-item" onclick="showInfo('cn4')"/>
+  <circle cx="140" cy="145" r="5" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="140" y="133" text-anchor="middle" class="label-text" font-size="10" fill="#1e8449" font-weight="bold">IV</text>
+  <text x="350" y="136" text-anchor="middle" class="label-text" font-size="11" fill="#1e8449" font-weight="bold">CN IV 滑車神経</text>
+  <polygon points="660,140 648,148 650,135" fill="#27ae60"/>
+
+  <!-- ===== V1（外側壁下部を走行 → SOFへ） ===== -->
+  <path d="M 200,290 Q 350,280 450,270 Q 530,255 585,240 L 660,220"
+        fill="none" stroke="#8e44ad" stroke-width="3.5" stroke-linecap="round" class="structure-item" onclick="showInfo('v1')"/>
+  <circle cx="200" cy="290" r="5" fill="#8e44ad" stroke="#6c3483" stroke-width="1.5"/>
+  <text x="200" y="278" text-anchor="middle" class="label-text" font-size="10" fill="#6c3483" font-weight="bold">V1</text>
+  <text x="400" y="265" text-anchor="middle" class="label-text" font-size="11" fill="#6c3483" font-weight="bold">V1 眼神経</text>
+  <polygon points="660,220 648,228 650,215" fill="#8e44ad"/>
+
+  <!-- ===== V2（外側壁最下部 → 正円孔へ、SOFは通過しない） ===== -->
+  <path d="M 200,330 Q 350,330 430,340 Q 470,350 490,375"
+        fill="none" stroke="#2980b9" stroke-width="3.5" stroke-linecap="round" class="structure-item" onclick="showInfo('v2')"/>
+  <circle cx="200" cy="330" r="5" fill="#2980b9" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="200" y="318" text-anchor="middle" class="label-text" font-size="10" fill="#1a5276" font-weight="bold">V2</text>
+  <text x="340" y="355" text-anchor="middle" class="label-text" font-size="11" fill="#1a5276" font-weight="bold">V2 上顎神経</text>
+  <text x="340" y="370" text-anchor="middle" class="label-text" font-size="9" fill="#0e2f44">→ 正円孔へ（SOF不通過）</text>
+  <polygon points="490,375 480,368 485,380" fill="#2980b9"/>
+
+  <!-- ===== CN VI（Dorello管から → 洞腔内を走行 → SOFへ） ===== -->
+  <path d="M 50,235 Q 80,225 105,220 Q 200,210 350,230 Q 480,250 540,220 Q 570,200 585,185 L 660,165"
+        fill="none" stroke="#f1c40f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8,4" class="structure-item" onclick="showInfo('cn6')"/>
+  <circle cx="50" cy="235" r="5" fill="#f1c40f" stroke="#d4ac0d" stroke-width="1.5"/>
+  <text x="50" y="223" text-anchor="middle" class="label-text" font-size="10" fill="#d4ac0d" font-weight="bold">VI</text>
+  <text x="350" y="255" text-anchor="middle" class="label-text" font-size="11" fill="#d4ac0d" font-weight="bold">CN VI 外転神経</text>
+  <text x="350" y="270" text-anchor="middle" class="label-text" font-size="9" fill="#998a00">※洞腔内を走行（破線）— 壁内ではない</text>
+  <polygon points="660,165 648,173 650,160" fill="#f1c40f"/>
+
+  <!-- ===== SOF通過神経まとめ ===== -->
+  <rect x="665" y="95" width="110" height="88" rx="6" fill="#fff8e1" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="720" y="112" text-anchor="middle" class="label-text" font-size="10" fill="#333" font-weight="bold">SOF通過:</text>
+  <circle cx="680" cy="124" r="4" fill="#e67e22"/><text x="690" y="128" class="label-text" font-size="9" fill="#333">CN III</text>
+  <circle cx="680" cy="140" r="4" fill="#27ae60"/><text x="690" y="144" class="label-text" font-size="9" fill="#333">CN IV</text>
+  <circle cx="680" cy="156" r="4" fill="#8e44ad"/><text x="690" y="160" class="label-text" font-size="9" fill="#333">V1</text>
+  <circle cx="680" cy="172" r="4" fill="#f1c40f"/><text x="690" y="176" class="label-text" font-size="9" fill="#333">CN VI</text>
+
+  <!-- ===== 凡例 ===== -->
+  <rect x="100" y="480" width="620" height="50" rx="8" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="410" y="500" text-anchor="middle" class="label-text" font-size="12" fill="#444" font-weight="bold">海綿静脈洞 矢状断面（外側から見た図）</text>
+  <text x="410" y="518" text-anchor="middle" class="label-text" font-size="10" fill="#888">実線 = 外側壁（硬膜内）走行　　破線 = 洞腔内走行（CN VI）</text>
+</svg>
+
+</div>
+
+<div class="info-panel" id="infoPanel">
+  <h3>構造を選択してください</h3>
+  <p>図中の各構造（神経・血管）をクリックすると、詳細情報が表示されます。<br>
+  <strong>重要な解剖ポイント：</strong>CN III, IV, V1, V2は外側壁の硬膜「内」を走行するのに対し、CN VIは洞腔「内」を自由に走行します。この違いがTolosa-Hunt症候群の症候学に直結します。</p>
+</div>
+
+<script>
+var INFO = {
+  sinus: {
+    title: '海綿静脈洞（Cavernous Sinus）',
+    desc: '蝶形骨体の両側に位置する硬膜静脈洞。内部は均一な空間ではなく、線維性の小梁（trabeculae）で仕切られた複数の小腔からなる「海綿状」構造を示す。内部を内頸動脈とCN VIが通過し、外側壁の硬膜内にCN III, IV, V1, V2が走行する。前方は上眼窩裂（SOF）に連続し、後方はDorello管・錐体静脈洞と連絡する。Tolosa-Hunt症候群では、この静脈洞内およびその周囲に肉芽腫性炎症が生じ、これらの神経が障害される。'
+  },
+  ica: {
+    title: '内頸動脈（Internal Carotid Artery: ICA）',
+    desc: '海綿静脈洞内をS字状に走行する（海綿静脈洞部＝C4セグメント）。後方から洞に入り、前方で上行して前床突起の内側を通過し床上部に出る。周囲を交感神経叢が網状に取り囲む。THSでは内頸動脈狭窄を伴うことがある。海綿静脈洞部の内頸動脈瘤はTHSとの重要な鑑別疾患。'
+  },
+  cn3: {
+    title: 'CN III 動眼神経（Oculomotor Nerve）',
+    desc: '中脳から出て後方から海綿静脈洞の外側壁上部に入り、壁の硬膜内を前方に走行して上眼窩裂（SOF）から眼窩に入る。上眼瞼挙筋、上直筋、内側直筋、下直筋、下斜筋を支配し、副交感線維で瞳孔括約筋・毛様体筋も支配する。障害時：眼瞼下垂、散瞳、眼球の外下方偏位。THS障害頻度：約80%（最多）。'
+  },
+  cn4: {
+    title: 'CN IV 滑車神経（Trochlear Nerve）',
+    desc: '中脳背側から出て、CN IIIの下方で外側壁の硬膜内を前方に走行し、SOFを通って眼窩に入る。最も細い脳神経であり、唯一背側から出る。上斜筋のみを支配する。障害時：複視（特に下方視・内転位で顕著）、代償性頭位傾斜。THS障害頻度：約29%。'
+  },
+  v1: {
+    title: 'V1 眼神経（Ophthalmic Nerve）',
+    desc: '三叉神経第1枝。三叉神経節（Meckel腔）から分岐後、外側壁の硬膜内をCN IVの下方で前方に走行し、SOFを通って眼窩に入る。前額部・上眼瞼・鼻背の感覚を支配。障害時：前額部の感覚低下、角膜反射低下。THS障害頻度：約30%。THSの疼痛はV1領域に生じることが多い。'
+  },
+  v2: {
+    title: 'V2 上顎神経（Maxillary Nerve）',
+    desc: '三叉神経第2枝。外側壁の硬膜内で最下部を走行するが、他の神経と異なりSOFは通過せず、正円孔（foramen rotundum）を通って翼口蓋窩に出る。頬部・上唇・上歯・鼻翼の感覚を支配。海綿静脈洞の後方部分に位置するため、後方への炎症波及時に障害されやすい。THS障害頻度：稀。'
+  },
+  cn6: {
+    title: 'CN VI 外転神経（Abducens Nerve）',
+    desc: '橋から出て、後方のDorello管を通って海綿静脈洞に入る。他の神経と異なり壁内ではなく洞腔内を自由に走行し、ICAの外側に位置する。前方でSOFを通って眼窩に入り、外側直筋を支配する。この解剖学的特徴（洞腔内の自由走行）から圧迫を受けやすい。障害時：内斜視、外転制限。THS障害頻度：約70%。'
+  },
+  sympathetic: {
+    title: '交感神経叢（Sympathetic Plexus）',
+    desc: 'ICA周囲を網状に取り囲む交感神経線維。上頸神経節からの節後線維がICAに沿って上行し、海綿静脈洞内でICA表面に密着して走行する。瞳孔散大筋、Müller筋、血管平滑筋を支配。障害時：Horner症候群（縮瞳・軽度眼瞼下垂・無汗症）。THS障害頻度：約20%。'
+  },
+  sof: {
+    title: '上眼窩裂（Superior Orbital Fissure: SOF）',
+    desc: '蝶形骨の大翼と小翼の間の裂隙。海綿静脈洞の前方出口として機能し、CN III, IV, V1, CN VIがここを通って眼窩に入る。V2は通過せず、正円孔から出る。SOF症候群（上眼窩裂症候群）では、この裂隙を通るすべての神経が障害され、Tolosa-Hunt症候群との鑑別が重要となる。'
+  },
+  foramen_rotundum: {
+    title: '正円孔（Foramen Rotundum）',
+    desc: '蝶形骨大翼に位置する円形の孔。V2（上顎神経）のみがここを通過し、翼口蓋窩に出る。他の神経は上眼窩裂（SOF）を通るため、正円孔は海綿静脈洞から眼窩以外への出口として重要。海綿静脈洞の後下方に位置する。'
+  },
+  dorello: {
+    title: 'Dorello管（Dorello\'s Canal）',
+    desc: '錐体尖部と斜台の間を通るCN VIの通路。CN VIはこの狭い管を通って海綿静脈洞に入る。解剖学的に狭い空間であるため、頭蓋内圧亢進時にCN VIが圧迫されやすく、偽局在徴候としてのCN VI麻痺の原因となる。Gradenigo症候群（錐体尖端炎）でもこの部位でCN VIが障害される。'
+  }
+};
+
+function showInfo(key) {
+  var panel = document.getElementById('infoPanel');
+  var data = INFO[key];
+  if (data) {
+    panel.innerHTML = '<h3>' + data.title + '</h3><p>' + data.desc + '</p>';
+  }
+}
+
+function switchView(view) {
+  var coronal = document.getElementById('coronalView');
+  var sagittal = document.getElementById('sagittalView');
+  var btnCoronal = document.getElementById('btnCoronal');
+  var btnSagittal = document.getElementById('btnSagittal');
+
+  if (view === 'coronal') {
+    coronal.classList.remove('hidden');
+    sagittal.classList.add('hidden');
+    btnCoronal.classList.add('active');
+    btnSagittal.classList.remove('active');
+  } else {
+    coronal.classList.add('hidden');
+    sagittal.classList.remove('hidden');
+    btnCoronal.classList.remove('active');
+    btnSagittal.classList.add('active');
+  }
+
+  // 情報パネルリセット
+  var panel = document.getElementById('infoPanel');
+  panel.innerHTML = '<h3>構造を選択してください</h3><p>図中の各構造（神経・血管）をクリックすると、詳細情報が表示されます。</p>';
+}
+</script>
+</body>
+</html>
