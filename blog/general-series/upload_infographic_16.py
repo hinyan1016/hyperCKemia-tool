@@ -18,9 +18,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-IMAGE_FILE = Path(r"C:\Users\jsber\Downloads\Gemini_Generated_Image_1c8ufw1c8ufw1c8u.png")
+IMAGE_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\general-series\16_seizure_infographic.png")
 
-ENTRY_ID = "17179246901372000539"
+ENTRY_ID = "17179246901377558729"
 HATENA_ID = "hinyan1016"
 BLOG_DOMAIN = "hinyan1016.hatenablog.com"
 BLOG_TITLE = "けいれんを目撃したときの正しい対応 ― やってはいけないことと救急車を呼ぶ判断【からだの不思議 #16】"
@@ -132,7 +132,7 @@ def put_entry(env, content):
   <content type="text/html"><![CDATA[{content}]]></content>
 {categories}
   <app:control>
-    <app:draft>yes</app:draft>
+    <app:draft>no</app:draft>
   </app:control>
 </entry>""".format(title=BLOG_TITLE, author=HATENA_ID, content=content, categories=cat_xml)
 
@@ -179,20 +179,19 @@ def main():
         '</div>'
     ).format(image_url)
 
-    # h1とYouTubeボタンの後、本文の前に挿入
-    # YouTubeボタンの</a></p>の後に挿入
-    yt_button_end = 'YouTube動画で見る</a></p>'
-    if yt_button_end in content:
+    # YouTube動画リンクdivの後に挿入
+    yt_marker = 'YouTube動画で詳しく解説しています</p>\n</div>'
+    if yt_marker in content:
         content = content.replace(
-            yt_button_end,
-            yt_button_end + '\n\n' + infographic_html,
+            yt_marker,
+            yt_marker + '\n\n' + infographic_html,
             1
         )
-        print("  YouTubeボタンの後にインフォグラフィック挿入完了")
+        print("  YouTubeリンクの後にインフォグラフィック挿入完了")
     else:
-        # フォールバック: 最初の<p>の前に挿入
-        content = infographic_html + '\n\n' + content
-        print("  記事先頭にインフォグラフィック挿入（フォールバック）")
+        # フォールバック: 最初のh2の前に挿入
+        content = re.sub(r'(<h2[ >])', infographic_html + '\n\n' + r'\1', content, count=1)
+        print("  最初のh2の前にインフォグラフィック挿入（フォールバック）")
 
     # 3. 記事更新
     print("\n[3/3] ブログ記事更新中...")

@@ -181,10 +181,20 @@ def convert_to_inline():
 </ul>
 </div>"""
 
+    # --- YouTube動画リンク（h1直後に挿入）---
+    youtube_link = """<div style="text-align:center;margin:20px 0;">
+<a href="https://www.youtube.com/watch?v=E75RZdF4pd4" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/E75RZdF4pd4/maxresdefault.jpg" alt="けいれんを目撃したときの正しい対応｜からだの不思議 #16" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></a>
+<p style="margin-top:8px;font-size:0.9rem;color:#555;">&#9654; YouTube動画で詳しく解説しています</p>
+</div>"""
+    content = re.sub(r'(</h1>)', r'\1\n\n' + youtube_link, content, count=1)
+
     # --- FAQ構造化データ ---
     faq_jsonld = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"けいれん発作を目撃したら最初に何をすべきですか？","acceptedAnswer":{"@type":"Answer","text":"最も重要なのは時間を確認することです。発作が始まった時刻を記録し、周囲の危険物を除き、頭を守り、横向き（回復体位）にしてください。5分以上続く場合は119番通報してください。"}},{"@type":"Question","name":"けいれん中に口にタオルや指を入れてもいいですか？","acceptedAnswer":{"@type":"Answer","text":"絶対にやめてください。舌を飲み込むことは医学的にありえません。口に物を入れると窒息・歯の骨折・介助者の咬傷などを引き起こす最も危険な行為です。"}},{"@type":"Question","name":"けいれんが何分続いたら救急車を呼ぶべきですか？","acceptedAnswer":{"@type":"Answer","text":"5分以上続く場合は119番通報してください。国際てんかん連盟（ILAE）のガイドラインでは5分以上の発作を「てんかん重積状態」として早急な治療が必要としています。"}}]}
 </script>"""
+
+    # --- VideoObject JSON-LD ---
+    video_jsonld = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"けいれんを目撃したときの正しい対応は？｜脳神経内科医がやってはいけないことと救急車を呼ぶ判断を解説【からだの不思議 #16】","description":"けいれん発作を目撃したときの正しい対応・やってはいけないこと・救急車を呼ぶ判断を脳神経内科医が解説","thumbnailUrl":"https://img.youtube.com/vi/E75RZdF4pd4/maxresdefault.jpg","uploadDate":"2026-04-15","contentUrl":"https://www.youtube.com/watch?v=E75RZdF4pd4","embedUrl":"https://www.youtube.com/embed/E75RZdF4pd4"}</script>'
 
     # 関連記事を参考文献divの前に挿入
     content = content.replace(
@@ -193,8 +203,8 @@ def convert_to_inline():
         1
     )
 
-    # FAQ JSON-LDを末尾に追加
-    content = content + "\n\n" + faq_jsonld
+    # FAQ JSON-LD + VideoObject JSON-LDを末尾に追加
+    content = content + "\n\n" + faq_jsonld + "\n" + video_jsonld
 
     return content
 

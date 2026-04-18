@@ -96,7 +96,7 @@ Q けいれん中に水を飲ませるとよい？
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（全文＋全参考文献リンク）
-https://hinyan1016.hatenablog.com/entry/2026/04/15/131007
+https://hinyan1016.hatenablog.com/entry/2026/04/17/182021
 
 ▶ 医学診断ツール一覧
 https://hinyan1016.github.io/medical-ddx-tools/

@@ -87,7 +87,7 @@
 🔗 関連リンク
 ━━━━━━━━━━━━━━━━━━━━━
 ▶ ブログ記事（全文＋全参考文献リンク）
-https://hinyan1016.hatenablog.com/
+https://hinyan1016.hatenablog.com/entry/2026/04/15/104135
 
 ▶ 動画リンク
 https://youtu.be/UX_sXj_27Ts
