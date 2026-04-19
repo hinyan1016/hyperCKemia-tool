@@ -182,7 +182,7 @@ render() → DOM更新
 ### VideoObject JSON-LDテンプレート
 ```html
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoObject","name":"動画タイトル","description":"説明","thumbnailUrl":"https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg","uploadDate":"YYYY-MM-DD","contentUrl":"https://www.youtube.com/watch?v=VIDEO_ID","embedUrl":"https://www.youtube.com/embed/VIDEO_ID"}
+{"@context":"https://schema.org","@type":"VideoObject","name":"動画タイトル","description":"説明","thumbnailUrl":"https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg","uploadDate":"YYYY-MM-DDT00:00:00+09:00","contentUrl":"https://www.youtube.com/watch?v=VIDEO_ID","embedUrl":"https://www.youtube.com/embed/VIDEO_ID"}
 </script>
 ```
 

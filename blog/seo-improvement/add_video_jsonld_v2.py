@@ -130,7 +130,7 @@ def build_video_jsonld(
             "thumbnailUrl": "https://img.youtube.com/vi/{}/maxresdefault.jpg".format(
                 vid
             ),
-            "uploadDate": published_date[:10],
+            "uploadDate": "{}T00:00:00+09:00".format(published_date[:10]),
             "contentUrl": "https://www.youtube.com/watch?v={}".format(vid),
             "embedUrl": "https://www.youtube.com/embed/{}".format(vid),
         }

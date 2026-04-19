@@ -1,0 +1,20 @@
+=== YouTube iframe 診断結果 ===
+総記事数: 1070（公開 996 / 下書き 74）
+YouTube関連を含む記事: 330
+
+--- パターン別件数 ---
+  P1 bare URLのみ / iframe無し（最優先修正）
+    全体   14 / 公開   13
+  P2 古いiframe（?feature=oembed無し）
+    全体    8 / 公開    7
+  P3 oembed iframeだが <cite>欠落
+    全体    3 / 公開    3
+  P4 完全な oembed + <cite>（正常／Google待ち）
+    全体  305 / 公開  301
+  P5 JSON-LDのみ（動画本体無し）
+    全体    0 / 公開    0
+  N YouTube関連なし
+    全体  740 / 公開  672
+
+修正対象候補（P1+P2+P3 公開のみ）: 23 件
+うちP4（完了形でGoogle待ち）: 301 件
