@@ -7,7 +7,7 @@ import urllib.request
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\private_credit_crisis_blog.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\private_credit_crisis_blog.html")
 ENTRY_ID = "17179246901374206438"
 TITLE = "プライベートクレジット問題とは？ 3兆ドル市場の構造リスクと今後のシナリオをわかりやすく解説"
 CATEGORIES = ["金融リスク", "プライベートクレジット", "投資"]

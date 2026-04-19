@@ -11,7 +11,7 @@ import base64
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\hypoactive_delirium_blog.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\hypoactive_delirium_blog.html")
 TITLE = "低活動性せん妄 ― 「静かなせん妄」を見逃さないための実践ガイド"
 CATEGORIES = ["医学教育", "脳神経内科", "せん妄"]
 

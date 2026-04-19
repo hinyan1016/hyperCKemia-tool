@@ -10,7 +10,7 @@ import base64
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\rtpa_thrombolysis_mnemonic_blog.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\rtpa_thrombolysis_mnemonic_blog.html")
 TITLE = "rt-PA静注療法の適応と禁忌を覚えるコツ ― 「時・血・画・出・偽」で整理する"
 CATEGORIES = ["医学教育", "脳神経内科", "脳卒中"]
 

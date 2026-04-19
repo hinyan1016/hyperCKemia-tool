@@ -264,7 +264,7 @@ def post_draft(title, body_html, categories):
 
 if __name__ == "__main__":
     # HTMLファイル読み込み
-    html_path = r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\private_credit_crisis_blog.html"
+    html_path = r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\private_credit_crisis_blog.html"
     with open(html_path, "r", encoding="utf-8") as f:
         raw_html = f.read()
 

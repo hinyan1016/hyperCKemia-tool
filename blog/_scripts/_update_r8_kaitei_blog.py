@@ -8,7 +8,7 @@ import urllib.error
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\r8_shinryouhoushu_kaitei_blog_hatena.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\r8_shinryouhoushu_kaitei_blog_hatena.html")
 ENTRY_URL = "https://hinyan1016.hatenablog.com/entry/2026/04/10/141419"
 
 

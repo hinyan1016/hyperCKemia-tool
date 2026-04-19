@@ -11,7 +11,7 @@ import base64
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\oceanic_stroke_fxia_inhibitor_blog.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\oceanic_stroke_fxia_inhibitor_blog.html")
 TITLE = "OCEANIC-STROKE試験の衝撃 ― XIa因子阻害薬asundexianが脳梗塞二次予防を変える"
 CATEGORIES = ["脳血管障害", "抗凝固療法", "臨床試験"]
 

@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HATENA_HTML = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\hypoactive_delirium_blog_hatena.html")
+HATENA_HTML = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\hypoactive_delirium_blog_hatena.html")
 TARGET_URL = "https://hinyan1016.hatenablog.com/entry/2026/04/09/160554"
 DUPLICATE_URL = "https://hinyan1016.hatenablog.com/entry/2026/04/09/161339"
 TITLE = "低活動性せん妄 ― 「静かなせん妄」を見逃さないための実践ガイド"

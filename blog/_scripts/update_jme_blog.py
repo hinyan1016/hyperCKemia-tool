@@ -14,7 +14,7 @@ from xml.etree import ElementTree as ET
 
 # パス設定
 ENV_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env")
-HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\jme_blog.html")
+HTML_FILE = Path(r"C:\Users\jsber\OneDrive\Documents\Claude_task\blog\posts\jme_blog.html")
 
 # カテゴリ
 CATEGORIES = ["医学教育", "てんかん", "神経内科", "鑑別診断"]
