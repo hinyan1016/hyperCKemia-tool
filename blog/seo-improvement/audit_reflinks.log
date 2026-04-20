@@ -1,0 +1,41 @@
+--- 2025/07 ---
+  54 entries
+--- 2025/08 ---
+  60 entries
+--- 2025/09 ---
+  63 entries
+--- 2025/10 ---
+  46 entries
+--- 2025/11 ---
+  44 entries
+--- 2025/12 ---
+  88 entries
+--- 2026/01 ---
+  67 entries
+--- 2026/02 ---
+  71 entries
+--- 2026/03 ---
+  78 entries
+--- 2026/04 ---
+  34 entries
+
+=== スキャン結果 ===
+総記事数: 605
+リンク不足記事: 187
+  [73/73] 副腎白質ジストロフィー(ALD)総説 https://hinyan1016.hatenablog.com/entry/2025/10/19/050931
+  [63/63] てんかん治療薬・デバイスパイプラインの現状 https://hinyan1016.hatenablog.com/entry/2026/02/17/101639
+  [56/56] 日本で増えるクマ被害：2020年以降の動向と2025年最新状況 https://hinyan1016.hatenablog.com/entry/2025/10/19/224322
+  [52/52] 50歳から始める帯状疱疹予防:シングリックス(不活化)とビケン(生ワクチン)徹底比較 https://hinyan1016.hatenablog.com/entry/2025/11/14/193519
+  [49/49] 多発脳神経障害の鑑別と診断アプローチ https://hinyan1016.hatenablog.com/entry/2025/11/05/115554
+  [46/49] もやもや病に伴う脳梗塞：解説 https://hinyan1016.hatenablog.com/entry/2026/01/02/222516
+  [41/46] ミトコンドリア脳筋症（Mitochondrial Encephalomyopathy）総説 https://hinyan1016.hatenablog.com/entry/2025/10/04/092356
+  [40/50] ボルノレキサント（ボルズィ）の概要と作用機序 https://hinyan1016.hatenablog.com/entry/2025/11/11/093250
+  [31/47] 国債発行による減税政策は正当化できるか：4つの観点からの分析 https://hinyan1016.hatenablog.com/entry/2025/08/21/072820
+  [29/30] 脳卒中後の「隠れ心房細動」を見つける新しい方法 ― BNP検査の可能性 https://hinyan1016.hatenablog.com/entry/2025/11/14/155130
+  [27/30] ビタミンB12欠乏症の診断と治療【医療従事者向け総説】原因・症状・MMA/ホモシステイン・補充法を最新エビデンスで解説 https://hinyan1016.hatenablog.com/entry/2026/03/27/201504
+  [25/25] 髄液の蛋白細胞乖離：メカニズムと鑑別診断の総説 https://hinyan1016.hatenablog.com/entry/2026/02/10/115631
+Traceback (most recent call last):
+  File "C:\Users\jsber\OneDrive\Documents\Claude_task\blog\seo-improvement\audit_reflinks.py", line 91, in <module>
+    print(f"  [{m['missing']}/{m['total']}] {m['title'][:60]} {m['url']}", flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\u2013' in position 38: illegal multibyte sequence
