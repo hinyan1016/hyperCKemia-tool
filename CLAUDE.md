@@ -198,11 +198,26 @@ render() → DOM更新
 - 2025年8月 — 完了（2025-03-26）。全61記事スキャン、68件リンク追加
 - 2025年7月 — 完了（2025-03-26）。282件リンク追加（P1:145+P2:137）。6月以前は対応不要
 
+### 自動バッチ（2026-04-21）
+- **P1（本文内URL/PMID/DOI抽出）**: 38記事・292件
+- **P2（PubMed esearch厳格）**: 26記事・122件
+- **P3（PubMed esearch緩和v2）**: 32記事・88件
+- 監査「具体文献リンク不足」: 805件 → 647件 → **561件**（30%改善）
+- スクリプト: `blog/seo-improvement/fix_reflinks_pubmed_v2.py`
+- 進捗メモ: `blog/seo-improvement/REFLINKS_STATUS.md`
+
 ### 累計実績
-**862件のリンク追加 + 9件のリンク修正**
+**1364件のリンク追加 + 9件のリンク修正**（手動862 + 自動バッチ502）
+
+### 残課題（2026-04-21時点）
+- 残561件は日本語学会GL・厚労省・JBpress等のWebリソース中心
+- PubMed対象外 → 次回は学会GL辞書 or 手動上位対応が必要
+- 残上位: クマ被害27、生成AI規制16、易怒性15、ERAS栄養13 など
 
 ### 技術メモ（要点）
 - iframe直接変更→submit[0].click()で保存。beforeunload対策必須
 - バッチスキャン: アーカイブページから`a.entry-title-link`のhrefでURL取得→fetchでref-itemチェック
 - 一部記事はref-contentスパンなし（テキスト直接div内）→テキスト直接置換方式
+- v2緩和スコア: 先頭40字一致=1.0 / 25字一致+token coverage>=0.4=0.8 / THRESHOLD=0.75
+- v2 build_queries: A(著者+タイトル) → B(タイトル+年) → B2(タイトル短縮) → C(著者+年)
 - 詳細はローカルメモリ `~/.claude/projects/.../memory/project_blog_reference_links.md` 参照
