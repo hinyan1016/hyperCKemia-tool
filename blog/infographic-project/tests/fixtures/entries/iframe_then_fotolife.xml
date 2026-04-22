@@ -1,0 +1,499 @@
+<entry>
+<id>tag:blog.hatena.ne.jp,2013:blog-hinyan1016-6802418398334363645-17179246901379326820</id>
+<link rel="edit" href="https://blog.hatena.ne.jp/hinyan1016/hinyan1016.hatenablog.com/atom/entry/17179246901379326820"/>
+<link rel="alternate" type="text/html" href="https://hinyan1016.hatenablog.com/entry/2026/04/22/135449"/>
+
+<author><name>hinyan1016</name></author>
+<title>脳梗塞急性期のヘパリン、結局どう使う？ 1万単位 vs APTT管理・ブリッジング不要論・HIT対応【ガイドライン2025対応】</title>
+<updated>2026-04-22T13:54:49+09:00</updated>
+<published>2026-04-22T14:01:35+09:00</published>
+<app:edited>2026-04-22T14:07:15+09:00</app:edited>
+<summary type="text">脳神経内科の日常診療において、脳梗塞急性期のヘパリンは「1日1万単位の固定か、APTTで細かく調整すべきか」「心原性脳塞栓症に対するヘパリンブリッジングはまだ必要か」「低用量でもHIT（ヘパリン起因性血小板減少症）は起きるのか」と、若手医師や専攻医が繰り返し悩むテーマです。本記事…</summary>
+<content type="text/html">&lt;p&gt;脳神経内科の日常診療において、脳梗塞急性期のヘパリンは「1日1万単位の固定か、APTTで細かく調整すべきか」「心原性脳塞栓症に対するヘパリンブリッジングはまだ必要か」「低用量でもHIT（ヘパリン起因性血小板減少症）は起きるのか」と、若手医師や専攻医が繰り返し悩むテーマです。本記事では、&lt;strong&gt;『脳卒中治療ガイドライン2021〔改訂2025〕』&lt;/strong&gt;およびELAN・TIMING・OPTIMASを含む最新RCTの知見に基づき、脳梗塞急性期のヘパリンの適応・用量・モニタリング・HIT対応までを1本で整理します。&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;margin:1.5em 0;&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/WdGXFCNDaBo&quot; title=&quot;脳梗塞急性期のヘパリン 結局どう使う？&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot;max-width:100%;&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p style=&quot;text-align:center;font-size:0.9em;color:#636E72;&quot;&gt;▲ 本記事の内容をYouTubeでも解説しています（約11分）&lt;/p&gt;
+
+&lt;figure style=&quot;margin:2em 0;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260422/20260422135010.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260422/20260422135010.png&quot; alt=&quot;脳梗塞急性期のヘパリン使用のまとめ — 3つの論点（1万単位 vs APTT管理、ブリッジング不要論、HIT対応）、1-2-3-4日ルール、4Tsスコア、アルガトロバンへの切替&quot; style=&quot;max-width:100%;height:auto;border:1px solid #e0e0e0;border-radius:8px;&quot; loading=&quot;lazy&quot;&gt;&lt;/a&gt;
+&lt;figcaption style=&quot;margin-top:0.6em;font-size:0.9em;color:#636E72;&quot;&gt;▲ 本記事全体を1枚に凝縮したビジュアルサマリー（クリックで拡大）&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;toc&quot;&gt;目次&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#sec1&quot;&gt;脳梗塞急性期のヘパリン — 推奨度とジレンマ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec2&quot;&gt;投与方法の実際 — 「1万単位固定」か「APTT管理」か？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec3&quot;&gt;病態別のヘパリン適応と「ブリッジング不要論」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec4&quot;&gt;決して見逃せないHIT（4Tsスコアとアルガトロバン）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec5&quot;&gt;まとめ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#faq&quot;&gt;よくある質問（FAQ）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ref&quot;&gt;参考文献&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec1&quot;&gt;1. 脳梗塞急性期のヘパリン — 推奨度とジレンマ&lt;/h2&gt;
+&lt;p&gt;日本の実地診療では、非ラクナ梗塞の過半数に対してアルガトロバンや未分画ヘパリンによる抗凝固療法が行われています&lt;sup&gt;[1]&lt;/sup&gt;。一方、エビデンスから見ると、急性期脳梗塞に対するヘパリンの立ち位置は決して盤石ではありません。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jsts.gr.jp/img/guideline2021_kaitei2025_kaiteikoumoku.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;『脳卒中治療ガイドライン2021〔改訂2025〕』&lt;/a&gt;において、脳梗塞急性期に未分画ヘパリンを使用することは&lt;strong&gt;「考慮しても良い（推奨度C、エビデンスレベル中）」&lt;/strong&gt;とされています&lt;sup&gt;[2]&lt;/sup&gt;。一方、米国心臓協会・米国脳卒中協会（AHA/ASA）のガイドラインでは、脳梗塞の再発予防や症候改善を目的に急性期に抗凝固療法をルーチンで行うことは推奨されていません&lt;sup&gt;[3]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;この背景には、過去の主要臨床試験の結果が影響しています。19,435例を対象とした&lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/9174558/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;International Stroke Trial（IST）&lt;/a&gt;では、未分画ヘパリンの皮下投与（5,000または12,500単位を1日2回）はアスピリンと比較して14日以内の脳梗塞再発を有意に減少させた（2.9% vs 3.8%）ものの、出血性脳卒中の増加によりベネフィットが相殺され、死亡または非致死的脳卒中再発に有意差をもたらしませんでした&lt;sup&gt;[4]&lt;/sup&gt;。APTTを投与前値の2〜2.5倍に調整した静注試験でも、3か月後の自立率は改善した反面、症候性頭蓋内出血も有意に増加することが示されています&lt;sup&gt;[5]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;つまりヘパリンには、&lt;strong&gt;「虚血イベントの再発を防ぐ力はあるが、出血リスクの増加によって全体の転帰改善には直結しにくい」&lt;/strong&gt;というジレンマがあります。すべての脳梗塞患者に漫然と投与するのではなく、&lt;strong&gt;病態を見極めた個別化治療&lt;/strong&gt;が求められます。最新の改訂ポイントについては、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/09/07/062616&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕の主要変更点&lt;/a&gt;もあわせて参照してください。&lt;/p&gt;
+
+&lt;h2 id=&quot;sec2&quot;&gt;2. 投与方法の実際 — 「1万単位固定」か「APTT管理」か？&lt;/h2&gt;
+
+&lt;h3&gt;日本独自の慣習と「1万単位」の根拠&lt;/h3&gt;
+&lt;p&gt;日本の脳神経内科病棟では、&lt;strong&gt;「未分画ヘパリン1万単位（または1万5千単位）/日の持続静注」&lt;/strong&gt;が頻用されます。この数字に海外RCTレベルの強固な裏付けはなく、添付文書の&lt;strong&gt;「1回5,000〜10,000単位を4〜8時間ごとに静脈内注射する」&lt;/strong&gt;&lt;sup&gt;[6]&lt;/sup&gt;という記載を24時間持続投与に換算・調整し、出血リスクを抑えつつ簡便に開始できる用量として経験的に定着したと考えられます&lt;sup&gt;[7]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;欧米の標準的な治療用量（体重ベースノモグラム：80単位/kgのボーラス後、18単位/kg/hrで持続静注）を適用すると、体重60kgの患者で1日約25,000単位以上となり、脳梗塞急性期では出血性梗塞のリスクが高すぎると判断される傾向にあります&lt;sup&gt;[8]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3&gt;APTTを指標とした用量調整の重要性&lt;/h3&gt;
+&lt;p&gt;ヘパリンの抗凝固効果には個人差が大きく、固定用量のみでは効果不足や過剰効果になりうるため、ガイドラインや専門家の見解では、&lt;strong&gt;APTTを投与前値の2〜2.5倍（施設によっては1.5〜2.5倍）&lt;/strong&gt;となるように調整することが推奨されています&lt;sup&gt;[2][7]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;実臨床における現実的なアプローチは、&lt;strong&gt;「出血リスクを考慮して1万〜1万5千単位/日の持続静注で開始し、投与開始後早期（6〜12時間後など）にAPTTを測定。目標値（前値の2〜2.5倍）に達していなければ、適宜用量を増減する」&lt;/strong&gt;という方法です。固定用量はあくまで「開始用量」であり、その後のAPTTモニタリングによる微調整が不可欠です。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;投与アプローチ&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;特徴と実臨床での位置づけ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;体重ベース治療量&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;欧米標準（80 U/kgボーラス＋18 U/kg/hr）。脳梗塞では出血リスクから敬遠されがち&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;固定用量（1万単位/日）&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;日本の経験的開始用量。簡便で出血リスクを抑えやすいが、効果不足例あり&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;APTT調整（前値の2〜2.5倍）&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ガイドラインが言及する目標値。固定用量で開始後、この目標へ微調整するのが現実的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;進行性のラクナ梗塞・BAD（分枝粥腫型梗塞）でのアルガトロバンの位置づけについては、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/10/12/123944&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;穿通枝梗塞（BAD）の進行管理：日本の治療戦略とエビデンス&lt;/a&gt;で別途詳説しています。&lt;/p&gt;
+
+&lt;h2 id=&quot;sec3&quot;&gt;3. 病態別のヘパリン適応と「ブリッジング不要論」&lt;/h2&gt;
+
+&lt;h3&gt;心原性脳塞栓症と「ブリッジング」の終焉&lt;/h3&gt;
+&lt;p&gt;かつて、心原性脳塞栓症の急性期には、ワルファリンが治療域に達するまでヘパリンを持続静注する&lt;strong&gt;「ブリッジング療法」&lt;/strong&gt;が頻繁に行われていました。しかし現在、このプラクティスは過去のものとなりつつあります。&lt;/p&gt;
+&lt;p&gt;直接作用型経口抗凝固薬（DOAC）の登場により、早期に安定した抗凝固作用が得られるようになりました。近年の大規模試験で、非弁膜症性心房細動（NVAF）を伴う急性期脳梗塞に対して、発症早期（48時間〜4日以内）からDOACを開始しても、遅延開始群と比較して出血リスクを増やすことなく再発を予防できることが証明されています。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;試験&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;主要知見&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1161/CIRCULATIONAHA.122.060666&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TIMING（Circulation 2022）&lt;/a&gt;&lt;sup&gt;[9]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;発症4日以内のDOAC開始は5〜10日後開始に対して非劣性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1056/NEJMoa2303048&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ELAN（NEJM 2023）&lt;/a&gt;&lt;sup&gt;[10]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;早期開始で30日複合エンドポイント 2.9% vs 遅延 4.1%、出血は増えず&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1016/S0140-6736(24)02197-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OPTIMAS（Lancet 2024）&lt;/a&gt;&lt;sup&gt;[11]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;発症4日以内の開始は7〜14日後開始に対して非劣性、症候性頭蓋内出血0.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;これを受け、『脳卒中治療ガイドライン2021〔改訂2025〕』では、NVAFを伴う急性期脳梗塞患者に対し発症早期からDOACを投与することが&lt;strong&gt;「妥当である（推奨度B）」&lt;/strong&gt;と位置づけられました&lt;sup&gt;[2]&lt;/sup&gt;。国立循環器病研究センターは、梗塞サイズに応じた開始日として&lt;strong&gt;「TIA=1日、軽症=2日、中等症=3日、重症=4日」の『1-2-3-4日ルール』&lt;/strong&gt;を提唱しています。&lt;/p&gt;
+&lt;p&gt;したがって&lt;strong&gt;心原性脳塞栓症におけるヘパリンによるルーチンのブリッジングは原則として不要&lt;/strong&gt;であり、血圧管理の下で適切なタイミングでDOACを開始することが現在のスタンダードです。NVAFに対するDOAC選択のポイントは、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/05/08/122723&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス&lt;/a&gt;を参照ください。&lt;/p&gt;
+
+&lt;h3&gt;ヘパリンが主役となる特殊な病態&lt;/h3&gt;
+&lt;p&gt;一方で、DOACではなくヘパリン（またはワルファリン）が依然として重要な役割を果たす病態もあります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;脳静脈・静脈洞血栓症（CSVT）&lt;/strong&gt;：頭蓋内出血合併例でも、急性期の第一選択は未分画ヘパリン持続静注または低分子ヘパリン（推奨度B）&lt;sup&gt;[2][12]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;癌関連脳梗塞（Trousseau症候群）&lt;/strong&gt;：多発性・進行性の急性期にはヘパリンによる強力な抗凝固が選ばれることが多い&lt;sup&gt;[13]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;抗リン脂質抗体症候群（APS）&lt;/strong&gt;：急性期はヘパリン、維持期はワルファリン（目標PT-INR 2〜3）。リバーロキサバンは血栓再発リスクを高めるため推奨されない&lt;sup&gt;[14]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;頭蓋外動脈解離&lt;/strong&gt;：虚血発症急性期において、抗血小板療法と並んで抗凝固療法（ヘパリン→ワルファリン）が選択肢（推奨度B）&lt;sup&gt;[2]&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec4&quot;&gt;4. 決して見逃せないHIT（ヘパリン起因性血小板減少症）&lt;/h2&gt;
+
+&lt;h3&gt;頻度と病態 — 低用量でも発症する免疫原性&lt;/h3&gt;
+&lt;p&gt;ヘパリンを使用する上で、脳神経内科医が最も警戒すべき合併症が&lt;strong&gt;HIT（Heparin-Induced Thrombocytopenia）&lt;/strong&gt;です。HITはヘパリン投与患者の0.1〜7%に発症するとされ、急性期脳梗塞患者における確定診断（definite HIT）の発生率は約1.7%&lt;sup&gt;[15]&lt;/sup&gt;、神経内科全体で約2.5%&lt;sup&gt;[16]&lt;/sup&gt;と決して稀ではありません。&lt;/p&gt;
+&lt;p&gt;HIT（Type II）は、ヘパリンと血小板第4因子（PF4）の複合体に対するIgG抗体が産生され、血小板が強力に活性化されることで発症します&lt;sup&gt;[17]&lt;/sup&gt;。この過程で大量のトロンビンが産生されるため、&lt;strong&gt;血小板減少を伴いながら強力な血栓傾向（白色血栓）&lt;/strong&gt;を呈します。&lt;/p&gt;
+&lt;p&gt;重要なのはHITが&lt;strong&gt;用量依存ではなく免疫原性&lt;/strong&gt;の問題であることです。DVT予防目的の低用量（5,000単位皮下注）でも発症しうるため、「低用量だから安全」は成り立ちません。未分画ヘパリンは低分子ヘパリン（LMWH）より発症頻度が高いとされます&lt;sup&gt;[18]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3&gt;4Tsスコアを用いた診断アプローチ&lt;/h3&gt;
+&lt;p&gt;HITは通常、ヘパリン投与開始後5〜14日に発症します。過去30日以内の曝露歴がある場合は、投与後数時間〜1日以内で急激に発症する「迅速発症型」も存在します&lt;sup&gt;[17]&lt;/sup&gt;。臨床的にHITを疑うためのツールが&lt;a href=&quot;https://doi.org/10.1111/j.1538-7836.2006.01787.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;4Tsスコア&lt;/strong&gt;&lt;/a&gt;&lt;sup&gt;[19]&lt;/sup&gt;です。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;項目&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;2点&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;1点&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;0点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;hrombocytopenia&lt;br&gt;（血小板減少）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;gt;50%低下かつ最低値≥20,000/μL&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;30〜50%低下または最低値10,000〜19,000/μL&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;lt;30%低下または最低値&amp;lt;10,000/μL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;iming&lt;br&gt;（発症時期）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ヘパリン開始後5〜10日、または過去30日以内の曝露あり&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;gt;10日、または過去30〜100日の曝露&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ヘパリン開始後4日以内（曝露歴なし）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;hrombosis&lt;br&gt;（血栓症）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;新規血栓症／皮膚壊死／急性全身反応&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;血栓の進行／皮膚紅斑／血栓疑い&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;なし&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;o&lt;strong&gt;T&lt;/strong&gt;her causes&lt;br&gt;（他原因）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因なし&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因の可能性あり&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因が明らか&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;合計&lt;strong&gt;0〜3点=低確率（陰性的中率99%）&lt;/strong&gt;、&lt;strong&gt;4〜5点=中等度&lt;/strong&gt;、&lt;strong&gt;6〜8点=高確率&lt;/strong&gt;と判定し、4点以上で抗PF4/ヘパリン抗体（ELISA法など）や機能的検査（セロトニン放出試験：SRA）による確定診断に進みます&lt;sup&gt;[19]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3&gt;脳神経内科領域におけるHITT（HITに伴う血栓症）の脅威&lt;/h3&gt;
+&lt;p&gt;HITを発症した患者の30〜50%は血栓症を合併し、これを&lt;strong&gt;HITT（HIT with Thrombotic Syndrome）&lt;/strong&gt;と呼びます&lt;sup&gt;[17]&lt;/sup&gt;。動脈系にも血栓を生じうるため、脳神経内科医にとっては&lt;strong&gt;「脳梗塞の増悪・多発」&lt;/strong&gt;という形で現れます。&lt;/p&gt;
+&lt;p&gt;特に、HIT関連の&lt;strong&gt;脳静脈洞血栓症（CVT）&lt;/strong&gt;は通常のCVTと比較して頭蓋内出血の合併率が高く、死亡リスクも高い重篤な病態です&lt;sup&gt;[20]&lt;/sup&gt;。ヘパリン投与中に予期せぬ神経症状の悪化や新たな血栓・出血イベントを認めた場合は、直ちに血小板数を確認し、HITを鑑別に挙げる臨床的センスが求められます。&lt;/p&gt;
+
+&lt;h3&gt;HIT疑い時のマネジメント（4Tsスコア4点以上）&lt;/h3&gt;
+&lt;p&gt;4Tsスコアで中等度以上のリスクと判断された場合、検査結果を待たずに以下を直ちに開始します&lt;sup&gt;[21]&lt;/sup&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;すべてのヘパリンの即時中止&lt;/strong&gt;（持続静注・皮下注・ルートフラッシュ・ヘパリンコートカテーテルも含む）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代替抗凝固薬の治療用量での開始&lt;/strong&gt; — 日本ではアルガトロバン（0.7μg/kg/min 開始、APTTが前値の1.5〜3倍となるよう調整）が保険適用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ワルファリンは禁忌&lt;/strong&gt; — 血小板数が150,000/μL以上に回復するまで開始禁（プロテインC急減による皮膚壊死・静脈性四肢壊疽のリスク）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;血小板輸血は原則禁忌&lt;/strong&gt; — 活動性の重篤な出血がない限り、血栓症を助長するため行わない&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec5&quot;&gt;5. まとめ&lt;/h2&gt;
+&lt;p&gt;脳梗塞急性期における未分画ヘパリンの使用は、かつての「ルーチン投与」から、&lt;strong&gt;病態（CSVT・Trousseau症候群・APS・動脈解離など）を見極めた個別化された強力な武器&lt;/strong&gt;へとシフトしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;心原性脳塞栓症に対する&lt;strong&gt;ヘパリンブリッジングは原則不要&lt;/strong&gt;。DOACの早期開始（1-2-3-4日ルール）が新しい標準&lt;/li&gt;
+&lt;li&gt;使用時は&lt;strong&gt;1万〜1万5千単位/日で開始 → 6〜12時間後にAPTT測定 → 前値の2〜2.5倍に微調整&lt;/strong&gt;する&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投与後5〜14日の血小板数モニタリングは必須&lt;/strong&gt;。予期せぬ血小板減少・血栓増悪時は4Tsスコア評価 → アルガトロバンへ切り替え&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ヘパリンは「敵」でも「万能薬」でもなく、病態と時期を選べば極めて強力な武器です。最新エビデンスとHITの警戒感を併せ持つことが、脳神経内科医に求められる重要なスキルです。&lt;/p&gt;
+
+&lt;h2 id=&quot;faq&quot;&gt;よくある質問（FAQ）&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;Q1. 心原性脳塞栓症でDOACをすぐに開始する場合、ヘパリンはもう不要ですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 原則として&lt;strong&gt;ルーチンのブリッジングは不要&lt;/strong&gt;です。ELAN・TIMING・OPTIMAS試験で、発症4日以内のDOAC早期開始が遅延開始に対して非劣性かつ出血を増やさないことが示され、改訂2025ガイドラインでも推奨度Bで「妥当」とされています。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q2. 1万単位/日固定で開始した場合、APTTはいつ測定すべきですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 投与開始後6〜12時間以内に初回APTTを測定し、前値の2〜2.5倍に入っていなければ用量を増減します。その後も毎日〜隔日でモニタリングを続けるのが一般的です。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q3. DVT予防目的の低用量ヘパリン（5,000単位皮下注）でもHITは起きますか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 起こりえます。HITは&lt;strong&gt;用量依存ではなく免疫原性&lt;/strong&gt;の問題のため、低用量でも発症しうると考えて血小板数をモニタリングする必要があります。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q4. HITを疑ったら血小板輸血をしても良いですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 活動性の重篤な出血がない限り&lt;strong&gt;原則禁忌&lt;/strong&gt;です。血小板輸血は血栓症を助長するリスクがあります。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q5. HIT発症時、ワルファリンはいつから開始して良いですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 血小板数が&lt;strong&gt;150,000/μL以上に回復するまで開始禁&lt;/strong&gt;です。プロテインCの急減により皮膚壊死や静脈性四肢壊疽のリスクがあります。&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;related&quot;&gt;関連記事&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/09/07/062616&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕の主要変更点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/05/08/122723&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/10/12/123944&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;穿通枝梗塞（BAD）の進行管理：日本の治療戦略とエビデンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/07/24/124843&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;レベチラセタム（LEV）とDOACは併用して良いのか？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ref&quot;&gt;参考文献&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;伊藤義彰. &lt;a href=&quot;https://www.neurology-jp.org/Journal/public_pdf/053111172.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳梗塞急性期の抗凝固療法・抗血小板療法&lt;/a&gt;. 臨床神経学. 2013;53(11):1172-1175.&lt;/li&gt;
+&lt;li&gt;日本脳卒中学会. &lt;a href=&quot;https://www.jsts.gr.jp/img/guideline2021_kaitei2025_kaiteikoumoku.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Powers WJ, et al. &lt;a href=&quot;https://doi.org/10.1161/STR.0000000000000211&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;2019 Update to the 2018 Guidelines for the Early Management of Patients With Acute Ischemic Stroke&lt;/a&gt;. Stroke. 2019.&lt;/li&gt;
+&lt;li&gt;International Stroke Trial Collaborative Group. &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/9174558/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;The International Stroke Trial (IST)&lt;/a&gt;. Lancet. 1997;349:1569-81.&lt;/li&gt;
+&lt;li&gt;Camerlingo M, et al. &lt;a href=&quot;https://doi.org/10.1161/01.STR.0000175933.76116.29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Intravenous Heparin After Acute Ischemic Stroke&lt;/a&gt;. Stroke. 2005.&lt;/li&gt;
+&lt;li&gt;ヘパリンナトリウム注射液 添付文書（医薬品医療機器総合機構）.&lt;/li&gt;
+&lt;li&gt;井島大輔, 西山和利. &lt;a href=&quot;https://www.jstage.jst.go.jp/article/naika/107/8/107_1462/_pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;虚血性脳血管障害について&lt;/a&gt;. 日本内科学会雑誌. 2018;107(8):1462-1469.&lt;/li&gt;
+&lt;li&gt;Bauer SR, et al. &lt;a href=&quot;https://doi.org/10.1378/chest.130.5.1638&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Initiation of a Weight-Based Unfractionated Heparin Nomogram&lt;/a&gt;. Chest. 2006.&lt;/li&gt;
+&lt;li&gt;Oldgren J, et al. &lt;a href=&quot;https://doi.org/10.1161/CIRCULATIONAHA.122.060666&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus Delayed Non-Vitamin K Antagonist Oral Anticoagulant Therapy After Acute Ischemic Stroke in Atrial Fibrillation (TIMING)&lt;/a&gt;. Circulation. 2022.&lt;/li&gt;
+&lt;li&gt;Fischer U, et al. &lt;a href=&quot;https://doi.org/10.1056/NEJMoa2303048&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus Later Anticoagulation for Stroke with Atrial Fibrillation (ELAN)&lt;/a&gt;. N Engl J Med. 2023;388:2411-2421.&lt;/li&gt;
+&lt;li&gt;Werring DJ, et al. &lt;a href=&quot;https://doi.org/10.1016/S0140-6736(24)02197-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus delayed direct oral anticoagulation in patients with atrial fibrillation and acute ischaemic stroke (OPTIMAS)&lt;/a&gt;. Lancet. 2024.&lt;/li&gt;
+&lt;li&gt;Ferro JM, et al. &lt;a href=&quot;https://doi.org/10.1111/ene.13381&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;European Stroke Organization guideline for the diagnosis and treatment of cerebral venous thrombosis&lt;/a&gt;. Eur J Neurol. 2017.&lt;/li&gt;
+&lt;li&gt;Naito H, et al. &lt;a href=&quot;https://doi.org/10.1016/j.jstrokecerebrovasdis.2018.09.008&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Antithrombotic Therapy Strategy for Cancer-Associated Ischemic Stroke&lt;/a&gt;. J Stroke Cerebrovasc Dis. 2018.&lt;/li&gt;
+&lt;li&gt;Pengo V, et al. &lt;a href=&quot;https://doi.org/10.1182/blood-2018-04-848333&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome (TRAPS)&lt;/a&gt;. Blood. 2018.&lt;/li&gt;
+&lt;li&gt;Harbrecht U, et al. &lt;a href=&quot;https://doi.org/10.1111/j.1365-2141.2011.08703.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Prospective multicentre cohort study of heparin-induced thrombocytopenia in acute ischaemic stroke&lt;/a&gt;. Br J Haematol. 2011.&lt;/li&gt;
+&lt;li&gt;Pohl C, et al. &lt;a href=&quot;https://doi.org/10.1212/WNL.54.6.1240&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heparin-induced thrombocytopenia in neurologic disease treated with unfractionated heparin&lt;/a&gt;. Neurology. 2000.&lt;/li&gt;
+&lt;li&gt;Arepally GM. &lt;a href=&quot;https://doi.org/10.1182/blood-2016-11-709873&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heparin-induced thrombocytopenia&lt;/a&gt;. Blood. 2017.&lt;/li&gt;
+&lt;li&gt;Martel N, et al. &lt;a href=&quot;https://doi.org/10.1182/blood-2005-04-1546&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Risk for heparin-induced thrombocytopenia with unfractionated and low-molecular-weight heparin thromboprophylaxis: a meta-analysis&lt;/a&gt;. Blood. 2005.&lt;/li&gt;
+&lt;li&gt;Lo GK, et al. &lt;a href=&quot;https://doi.org/10.1111/j.1538-7836.2006.01787.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Evaluation of pretest clinical score (4 T&#39;s) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings&lt;/a&gt;. J Thromb Haemost. 2006.&lt;/li&gt;
+&lt;li&gt;Aguiar de Sousa D, et al. &lt;a href=&quot;https://doi.org/10.1161/STROKEAHA.121.038098&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Cerebral Venous Thrombosis in Patients With Heparin-Induced Thrombocytopenia&lt;/a&gt;. Stroke. 2022.&lt;/li&gt;
+&lt;li&gt;Cuker A, et al. &lt;a href=&quot;https://doi.org/10.1182/bloodadvances.2018024489&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia&lt;/a&gt;. Blood Adv. 2018.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;FAQPage&quot;,&quot;mainEntity&quot;:[{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;心原性脳塞栓症でDOACをすぐに開始する場合、ヘパリンはもう不要ですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;原則としてルーチンのブリッジングは不要です。ELAN・TIMING・OPTIMAS試験で、発症4日以内のDOAC早期開始が遅延開始に対して非劣性かつ出血を増やさないことが示され、改訂2025ガイドラインでも推奨度Bで妥当とされています。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;1万単位/日固定で開始した場合、APTTはいつ測定すべきですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;投与開始後6〜12時間以内に初回APTTを測定し、前値の2〜2.5倍に入っていなければ用量を増減します。その後も毎日〜隔日でモニタリングを続けるのが一般的です。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;DVT予防目的の低用量ヘパリン（5,000単位皮下注）でもHITは起きますか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;起こりえます。HITは用量依存ではなく免疫原性の問題のため、低用量でも発症しうると考えて血小板数をモニタリングする必要があります。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;HITを疑ったら血小板輸血をしても良いですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;活動性の重篤な出血がない限り原則禁忌です。血小板輸血は血栓症を助長するリスクがあります。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;HIT発症時、ワルファリンはいつから開始して良いですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;血小板数が150,000/μL以上に回復するまで開始禁です。プロテインCの急減により皮膚壊死や静脈性四肢壊疽のリスクがあります。&quot;}}]}
+&lt;/script&gt;
+
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;VideoObject&quot;,&quot;name&quot;:&quot;脳梗塞急性期のヘパリン、結局どう使う？ 1万単位 vs APTT管理・ブリッジング不要論・HIT対応【ガイドライン2025対応】&quot;,&quot;description&quot;:&quot;脳神経内科医向けに、脳梗塞急性期のヘパリン使用の推奨度、1万単位固定とAPTT管理の使い分け、心原性脳塞栓症でのブリッジング不要論、HIT（ヘパリン起因性血小板減少症）の4Tsスコアとアルガトロバン対応までを、脳卒中治療ガイドライン2021改訂2025に基づき解説。&quot;,&quot;thumbnailUrl&quot;:&quot;https://img.youtube.com/vi/WdGXFCNDaBo/maxresdefault.jpg&quot;,&quot;uploadDate&quot;:&quot;2026-04-22T14:01:35+09:00&quot;,&quot;contentUrl&quot;:&quot;https://www.youtube.com/watch?v=WdGXFCNDaBo&quot;,&quot;embedUrl&quot;:&quot;https://www.youtube.com/embed/WdGXFCNDaBo&quot;}
+&lt;/script&gt;
+</content>
+<hatena:formatted-content type="text/html" xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;脳神経内科の日常診療において、脳梗塞急性期のヘパリンは「1日1万単位の固定か、APTTで細かく調整すべきか」「心原性脳塞栓症に対するヘパリンブリッジングはまだ必要か」「低用量でもHIT（ヘパリン起因性血小板減少症）は起きるのか」と、若手医師や専攻医が繰り返し悩むテーマです。本記事では、&lt;strong&gt;『脳卒中治療ガイドライン2021〔改訂2025〕』&lt;/strong&gt;およびELAN・TIMING・OPTIMASを含む最新RCTの知見に基づき、脳梗塞急性期のヘパリンの適応・用量・モニタリング・HIT対応までを1本で整理します。&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;margin:1.5em 0;&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/WdGXFCNDaBo&quot; title=&quot;脳梗塞急性期のヘパリン 結局どう使う？&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot;max-width:100%;&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p style=&quot;text-align:center;font-size:0.9em;color:#636E72;&quot;&gt;▲ 本記事の内容をYouTubeでも解説しています（約11分）&lt;/p&gt;
+
+&lt;figure style=&quot;margin:2em 0;text-align:center;&quot;&gt;
+&lt;a href=&quot;https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260422/20260422135010.png&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://cdn-ak.f.st-hatena.com/images/fotolife/h/hinyan1016/20260422/20260422135010.png&quot; alt=&quot;脳梗塞急性期のヘパリン使用のまとめ — 3つの論点（1万単位 vs APTT管理、ブリッジング不要論、HIT対応）、1-2-3-4日ルール、4Tsスコア、アルガトロバンへの切替&quot; style=&quot;max-width:100%;height:auto;border:1px solid #e0e0e0;border-radius:8px;&quot; loading=&quot;lazy&quot;&gt;&lt;/a&gt;
+&lt;figcaption style=&quot;margin-top:0.6em;font-size:0.9em;color:#636E72;&quot;&gt;▲ 本記事全体を1枚に凝縮したビジュアルサマリー（クリックで拡大）&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;toc&quot;&gt;目次&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#sec1&quot;&gt;脳梗塞急性期のヘパリン — 推奨度とジレンマ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec2&quot;&gt;投与方法の実際 — 「1万単位固定」か「APTT管理」か？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec3&quot;&gt;病態別のヘパリン適応と「ブリッジング不要論」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec4&quot;&gt;決して見逃せないHIT（4Tsスコアとアルガトロバン）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#sec5&quot;&gt;まとめ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#faq&quot;&gt;よくある質問（FAQ）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ref&quot;&gt;参考文献&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec1&quot;&gt;1. 脳梗塞急性期のヘパリン — 推奨度とジレンマ&lt;/h2&gt;
+&lt;p&gt;日本の実地診療では、非ラクナ梗塞の過半数に対してアルガトロバンや未分画ヘパリンによる抗凝固療法が行われています&lt;sup&gt;[1]&lt;/sup&gt;。一方、エビデンスから見ると、急性期脳梗塞に対するヘパリンの立ち位置は決して盤石ではありません。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jsts.gr.jp/img/guideline2021_kaitei2025_kaiteikoumoku.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;『脳卒中治療ガイドライン2021〔改訂2025〕』&lt;/a&gt;において、脳梗塞急性期に未分画ヘパリンを使用することは&lt;strong&gt;「考慮しても良い（推奨度C、エビデンスレベル中）」&lt;/strong&gt;とされています&lt;sup&gt;[2]&lt;/sup&gt;。一方、米国心臓協会・米国脳卒中協会（AHA/ASA）のガイドラインでは、脳梗塞の再発予防や症候改善を目的に急性期に抗凝固療法をルーチンで行うことは推奨されていません&lt;sup&gt;[3]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;この背景には、過去の主要臨床試験の結果が影響しています。19,435例を対象とした&lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/9174558/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;International Stroke Trial（IST）&lt;/a&gt;では、未分画ヘパリンの皮下投与（5,000または12,500単位を1日2回）はアスピリンと比較して14日以内の脳梗塞再発を有意に減少させた（2.9% vs 3.8%）ものの、出血性脳卒中の増加によりベネフィットが相殺され、死亡または非致死的脳卒中再発に有意差をもたらしませんでした&lt;sup&gt;[4]&lt;/sup&gt;。APTTを投与前値の2〜2.5倍に調整した静注試験でも、3か月後の自立率は改善した反面、症候性頭蓋内出血も有意に増加することが示されています&lt;sup&gt;[5]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;つまりヘパリンには、&lt;strong&gt;「虚血イベントの再発を防ぐ力はあるが、出血リスクの増加によって全体の転帰改善には直結しにくい」&lt;/strong&gt;というジレンマがあります。すべての脳梗塞患者に漫然と投与するのではなく、&lt;strong&gt;病態を見極めた個別化治療&lt;/strong&gt;が求められます。最新の改訂ポイントについては、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/09/07/062616&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕の主要変更点&lt;/a&gt;もあわせて参照してください。&lt;/p&gt;
+
+&lt;h2 id=&quot;sec2&quot;&gt;2. 投与方法の実際 — 「1万単位固定」か「APTT管理」か？&lt;/h2&gt;
+
+&lt;h3 id=&quot;日本独自の慣習と1万単位の根拠&quot;&gt;日本独自の慣習と「1万単位」の根拠&lt;/h3&gt;
+&lt;p&gt;日本の脳神経内科病棟では、&lt;strong&gt;「未分画ヘパリン1万単位（または1万5千単位）/日の持続静注」&lt;/strong&gt;が頻用されます。この数字に海外RCTレベルの強固な裏付けはなく、添付文書の&lt;strong&gt;「1回5,000〜10,000単位を4〜8時間ごとに静脈内注射する」&lt;/strong&gt;&lt;sup&gt;[6]&lt;/sup&gt;という記載を24時間持続投与に換算・調整し、出血リスクを抑えつつ簡便に開始できる用量として経験的に定着したと考えられます&lt;sup&gt;[7]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;欧米の標準的な治療用量（体重ベースノモグラム：80単位/kgのボーラス後、18単位/kg/hrで持続静注）を適用すると、体重60kgの患者で1日約25,000単位以上となり、脳梗塞急性期では出血性梗塞のリスクが高すぎると判断される傾向にあります&lt;sup&gt;[8]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;APTTを指標とした用量調整の重要性&quot;&gt;APTTを指標とした用量調整の重要性&lt;/h3&gt;
+&lt;p&gt;ヘパリンの抗凝固効果には個人差が大きく、固定用量のみでは効果不足や過剰効果になりうるため、ガイドラインや専門家の見解では、&lt;strong&gt;APTTを投与前値の2〜2.5倍（施設によっては1.5〜2.5倍）&lt;/strong&gt;となるように調整することが推奨されています&lt;sup&gt;[2][7]&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;実臨床における現実的なアプローチは、&lt;strong&gt;「出血リスクを考慮して1万〜1万5千単位/日の持続静注で開始し、投与開始後早期（6〜12時間後など）にAPTTを測定。目標値（前値の2〜2.5倍）に達していなければ、適宜用量を増減する」&lt;/strong&gt;という方法です。固定用量はあくまで「開始用量」であり、その後のAPTTモニタリングによる微調整が不可欠です。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;投与アプローチ&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;特徴と実臨床での位置づけ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;体重ベース治療量&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;欧米標準（80 U/kgボーラス＋18 U/kg/hr）。脳梗塞では出血リスクから敬遠されがち&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;固定用量（1万単位/日）&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;日本の経験的開始用量。簡便で出血リスクを抑えやすいが、効果不足例あり&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;APTT調整（前値の2〜2.5倍）&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ガイドラインが言及する目標値。固定用量で開始後、この目標へ微調整するのが現実的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;進行性のラクナ梗塞・BAD（分枝粥腫型梗塞）でのアルガトロバンの位置づけについては、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/10/12/123944&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;穿通枝梗塞（BAD）の進行管理：日本の治療戦略とエビデンス&lt;/a&gt;で別途詳説しています。&lt;/p&gt;
+
+&lt;h2 id=&quot;sec3&quot;&gt;3. 病態別のヘパリン適応と「ブリッジング不要論」&lt;/h2&gt;
+
+&lt;h3 id=&quot;心原性脳塞栓症とブリッジングの終焉&quot;&gt;心原性脳塞栓症と「ブリッジング」の終焉&lt;/h3&gt;
+&lt;p&gt;かつて、心原性脳塞栓症の急性期には、ワルファリンが治療域に達するまでヘパリンを持続静注する&lt;strong&gt;「ブリッジング療法」&lt;/strong&gt;が頻繁に行われていました。しかし現在、このプラクティスは過去のものとなりつつあります。&lt;/p&gt;
+&lt;p&gt;直接作用型経口抗凝固薬（DOAC）の登場により、早期に安定した抗凝固作用が得られるようになりました。近年の大規模試験で、非弁膜症性心房細動（NVAF）を伴う急性期脳梗塞に対して、発症早期（48時間〜4日以内）からDOACを開始しても、遅延開始群と比較して出血リスクを増やすことなく再発を予防できることが証明されています。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;試験&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;主要知見&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1161/CIRCULATIONAHA.122.060666&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TIMING（Circulation 2022）&lt;/a&gt;&lt;sup&gt;[9]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;発症4日以内のDOAC開始は5〜10日後開始に対して非劣性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1056/NEJMoa2303048&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ELAN（NEJM 2023）&lt;/a&gt;&lt;sup&gt;[10]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;早期開始で30日複合エンドポイント 2.9% vs 遅延 4.1%、出血は増えず&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;a href=&quot;https://doi.org/10.1016/S0140-6736(24)02197-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OPTIMAS（Lancet 2024）&lt;/a&gt;&lt;sup&gt;[11]&lt;/sup&gt;&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;発症4日以内の開始は7〜14日後開始に対して非劣性、症候性頭蓋内出血0.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;これを受け、『脳卒中治療ガイドライン2021〔改訂2025〕』では、NVAFを伴う急性期脳梗塞患者に対し発症早期からDOACを投与することが&lt;strong&gt;「妥当である（推奨度B）」&lt;/strong&gt;と位置づけられました&lt;sup&gt;[2]&lt;/sup&gt;。国立循環器病研究センターは、梗塞サイズに応じた開始日として&lt;strong&gt;「TIA=1日、軽症=2日、中等症=3日、重症=4日」の『1-2-3-4日ルール』&lt;/strong&gt;を提唱しています。&lt;/p&gt;
+&lt;p&gt;したがって&lt;strong&gt;心原性脳塞栓症におけるヘパリンによるルーチンのブリッジングは原則として不要&lt;/strong&gt;であり、血圧管理の下で適切なタイミングでDOACを開始することが現在のスタンダードです。NVAFに対するDOAC選択のポイントは、&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/05/08/122723&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス&lt;/a&gt;を参照ください。&lt;/p&gt;
+
+&lt;h3 id=&quot;ヘパリンが主役となる特殊な病態&quot;&gt;ヘパリンが主役となる特殊な病態&lt;/h3&gt;
+&lt;p&gt;一方で、DOACではなくヘパリン（またはワルファリン）が依然として重要な役割を果たす病態もあります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;脳静脈・静脈洞血栓症（CSVT）&lt;/strong&gt;：頭蓋内出血合併例でも、急性期の第一選択は未分画ヘパリン持続静注または低分子ヘパリン（推奨度B）&lt;sup&gt;[2][12]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;癌関連脳梗塞（Trousseau症候群）&lt;/strong&gt;：多発性・進行性の急性期にはヘパリンによる強力な抗凝固が選ばれることが多い&lt;sup&gt;[13]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;抗リン脂質抗体症候群（APS）&lt;/strong&gt;：急性期はヘパリン、維持期はワルファリン（目標PT-INR 2〜3）。リバーロキサバンは血栓再発リスクを高めるため推奨されない&lt;sup&gt;[14]&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;頭蓋外動脈解離&lt;/strong&gt;：虚血発症急性期において、抗血小板療法と並んで抗凝固療法（ヘパリン→ワルファリン）が選択肢（推奨度B）&lt;sup&gt;[2]&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec4&quot;&gt;4. 決して見逃せないHIT（ヘパリン起因性血小板減少症）&lt;/h2&gt;
+
+&lt;h3 id=&quot;頻度と病態--低用量でも発症する免疫原性&quot;&gt;頻度と病態 — 低用量でも発症する免疫原性&lt;/h3&gt;
+&lt;p&gt;ヘパリンを使用する上で、脳神経内科医が最も警戒すべき合併症が&lt;strong&gt;HIT（Heparin-Induced Thrombocytopenia）&lt;/strong&gt;です。HITはヘパリン投与患者の0.1〜7%に発症するとされ、急性期脳梗塞患者における確定診断（definite HIT）の発生率は約1.7%&lt;sup&gt;[15]&lt;/sup&gt;、神経内科全体で約2.5%&lt;sup&gt;[16]&lt;/sup&gt;と決して稀ではありません。&lt;/p&gt;
+&lt;p&gt;HIT（Type II）は、ヘパリンと血小板第4因子（PF4）の複合体に対するIgG抗体が産生され、血小板が強力に活性化されることで発症します&lt;sup&gt;[17]&lt;/sup&gt;。この過程で大量のトロンビンが産生されるため、&lt;strong&gt;血小板減少を伴いながら強力な血栓傾向（白色血栓）&lt;/strong&gt;を呈します。&lt;/p&gt;
+&lt;p&gt;重要なのはHITが&lt;strong&gt;用量依存ではなく免疫原性&lt;/strong&gt;の問題であることです。DVT予防目的の低用量（5,000単位皮下注）でも発症しうるため、「低用量だから安全」は成り立ちません。未分画ヘパリンは低分子ヘパリン（LMWH）より発症頻度が高いとされます&lt;sup&gt;[18]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;4Tsスコアを用いた診断アプローチ&quot;&gt;4Tsスコアを用いた診断アプローチ&lt;/h3&gt;
+&lt;p&gt;HITは通常、ヘパリン投与開始後5〜14日に発症します。過去30日以内の曝露歴がある場合は、投与後数時間〜1日以内で急激に発症する「迅速発症型」も存在します&lt;sup&gt;[17]&lt;/sup&gt;。臨床的にHITを疑うためのツールが&lt;a href=&quot;https://doi.org/10.1111/j.1538-7836.2006.01787.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;strong&gt;4Tsスコア&lt;/strong&gt;&lt;/a&gt;&lt;sup&gt;[19]&lt;/sup&gt;です。&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse:collapse;width:100%;margin:1em 0;&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;項目&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;2点&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;1点&lt;/th&gt;
+&lt;th style=&quot;background-color:#1B3A5C;color:#ffffff;border:1px solid #cccccc;padding:8px;text-align:left;&quot;&gt;0点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;hrombocytopenia&lt;br&gt;（血小板減少）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;gt;50%低下かつ最低値≥20,000/μL&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;30〜50%低下または最低値10,000〜19,000/μL&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;lt;30%低下または最低値&amp;lt;10,000/μL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;iming&lt;br&gt;（発症時期）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ヘパリン開始後5〜10日、または過去30日以内の曝露あり&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&amp;gt;10日、または過去30〜100日の曝露&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;ヘパリン開始後4日以内（曝露歴なし）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;&lt;strong&gt;T&lt;/strong&gt;hrombosis&lt;br&gt;（血栓症）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;新規血栓症／皮膚壊死／急性全身反応&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;血栓の進行／皮膚紅斑／血栓疑い&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;なし&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;o&lt;strong&gt;T&lt;/strong&gt;her causes&lt;br&gt;（他原因）&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因なし&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因の可能性あり&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #cccccc;padding:8px;&quot;&gt;他原因が明らか&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;合計&lt;strong&gt;0〜3点=低確率（陰性的中率99%）&lt;/strong&gt;、&lt;strong&gt;4〜5点=中等度&lt;/strong&gt;、&lt;strong&gt;6〜8点=高確率&lt;/strong&gt;と判定し、4点以上で抗PF4/ヘパリン抗体（ELISA法など）や機能的検査（セロトニン放出試験：SRA）による確定診断に進みます&lt;sup&gt;[19]&lt;/sup&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;脳神経内科領域におけるHITTHITに伴う血栓症の脅威&quot;&gt;脳神経内科領域におけるHITT（HITに伴う血栓症）の脅威&lt;/h3&gt;
+&lt;p&gt;HITを発症した患者の30〜50%は血栓症を合併し、これを&lt;strong&gt;HITT（HIT with Thrombotic Syndrome）&lt;/strong&gt;と呼びます&lt;sup&gt;[17]&lt;/sup&gt;。動脈系にも血栓を生じうるため、脳神経内科医にとっては&lt;strong&gt;「脳梗塞の増悪・多発」&lt;/strong&gt;という形で現れます。&lt;/p&gt;
+&lt;p&gt;特に、HIT関連の&lt;strong&gt;脳静脈洞血栓症（CVT）&lt;/strong&gt;は通常のCVTと比較して頭蓋内出血の合併率が高く、死亡リスクも高い重篤な病態です&lt;sup&gt;[20]&lt;/sup&gt;。ヘパリン投与中に予期せぬ神経症状の悪化や新たな血栓・出血イベントを認めた場合は、直ちに血小板数を確認し、HITを鑑別に挙げる臨床的センスが求められます。&lt;/p&gt;
+
+&lt;h3 id=&quot;HIT疑い時のマネジメント4Tsスコア4点以上&quot;&gt;HIT疑い時のマネジメント（4Tsスコア4点以上）&lt;/h3&gt;
+&lt;p&gt;4Tsスコアで中等度以上のリスクと判断された場合、検査結果を待たずに以下を直ちに開始します&lt;sup&gt;[21]&lt;/sup&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;すべてのヘパリンの即時中止&lt;/strong&gt;（持続静注・皮下注・ルートフラッシュ・ヘパリンコートカテーテルも含む）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代替抗凝固薬の治療用量での開始&lt;/strong&gt; — 日本ではアルガトロバン（0.7μg/kg/min 開始、APTTが前値の1.5〜3倍となるよう調整）が保険適用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ワルファリンは禁忌&lt;/strong&gt; — 血小板数が150,000/μL以上に回復するまで開始禁（プロテインC急減による皮膚壊死・静脈性四肢壊疽のリスク）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;血小板輸血は原則禁忌&lt;/strong&gt; — 活動性の重篤な出血がない限り、血栓症を助長するため行わない&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;sec5&quot;&gt;5. まとめ&lt;/h2&gt;
+&lt;p&gt;脳梗塞急性期における未分画ヘパリンの使用は、かつての「ルーチン投与」から、&lt;strong&gt;病態（CSVT・Trousseau症候群・APS・動脈解離など）を見極めた個別化された強力な武器&lt;/strong&gt;へとシフトしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;心原性脳塞栓症に対する&lt;strong&gt;ヘパリンブリッジングは原則不要&lt;/strong&gt;。DOACの早期開始（1-2-3-4日ルール）が新しい標準&lt;/li&gt;
+&lt;li&gt;使用時は&lt;strong&gt;1万〜1万5千単位/日で開始 → 6〜12時間後にAPTT測定 → 前値の2〜2.5倍に微調整&lt;/strong&gt;する&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投与後5〜14日の血小板数モニタリングは必須&lt;/strong&gt;。予期せぬ血小板減少・血栓増悪時は4Tsスコア評価 → アルガトロバンへ切り替え&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ヘパリンは「敵」でも「万能薬」でもなく、病態と時期を選べば極めて強力な武器です。最新エビデンスとHITの警戒感を併せ持つことが、脳神経内科医に求められる重要なスキルです。&lt;/p&gt;
+
+&lt;h2 id=&quot;faq&quot;&gt;よくある質問（FAQ）&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;Q1. 心原性脳塞栓症でDOACをすぐに開始する場合、ヘパリンはもう不要ですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 原則として&lt;strong&gt;ルーチンのブリッジングは不要&lt;/strong&gt;です。ELAN・TIMING・OPTIMAS試験で、発症4日以内のDOAC早期開始が遅延開始に対して非劣性かつ出血を増やさないことが示され、改訂2025ガイドラインでも推奨度Bで「妥当」とされています。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q2. 1万単位/日固定で開始した場合、APTTはいつ測定すべきですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 投与開始後6〜12時間以内に初回APTTを測定し、前値の2〜2.5倍に入っていなければ用量を増減します。その後も毎日〜隔日でモニタリングを続けるのが一般的です。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q3. DVT予防目的の低用量ヘパリン（5,000単位皮下注）でもHITは起きますか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 起こりえます。HITは&lt;strong&gt;用量依存ではなく免疫原性&lt;/strong&gt;の問題のため、低用量でも発症しうると考えて血小板数をモニタリングする必要があります。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q4. HITを疑ったら血小板輸血をしても良いですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 活動性の重篤な出血がない限り&lt;strong&gt;原則禁忌&lt;/strong&gt;です。血小板輸血は血栓症を助長するリスクがあります。&lt;/dd&gt;
+
+&lt;dt&gt;&lt;strong&gt;Q5. HIT発症時、ワルファリンはいつから開始して良いですか？&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A. 血小板数が&lt;strong&gt;150,000/μL以上に回復するまで開始禁&lt;/strong&gt;です。プロテインCの急減により皮膚壊死や静脈性四肢壊疽のリスクがあります。&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;related&quot;&gt;関連記事&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/09/07/062616&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕の主要変更点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/05/08/122723&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;非弁膜症性心房細動におけるDOAC使い分け：最新エビデンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/10/12/123944&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;穿通枝梗塞（BAD）の進行管理：日本の治療戦略とエビデンス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hinyan1016.hatenablog.com/entry/2025/07/24/124843&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;レベチラセタム（LEV）とDOACは併用して良いのか？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ref&quot;&gt;参考文献&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;伊藤義彰. &lt;a href=&quot;https://www.neurology-jp.org/Journal/public_pdf/053111172.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳梗塞急性期の抗凝固療法・抗血小板療法&lt;/a&gt;. 臨床神経学. 2013;53(11):1172-1175.&lt;/li&gt;
+&lt;li&gt;日本脳卒中学会. &lt;a href=&quot;https://www.jsts.gr.jp/img/guideline2021_kaitei2025_kaiteikoumoku.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;脳卒中治療ガイドライン2021〔改訂2025〕&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Powers WJ, et al. &lt;a href=&quot;https://doi.org/10.1161/STR.0000000000000211&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;2019 Update to the 2018 Guidelines for the Early Management of Patients With Acute Ischemic Stroke&lt;/a&gt;. Stroke. 2019.&lt;/li&gt;
+&lt;li&gt;International Stroke Trial Collaborative Group. &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/9174558/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;The International Stroke Trial (IST)&lt;/a&gt;. Lancet. 1997;349:1569-81.&lt;/li&gt;
+&lt;li&gt;Camerlingo M, et al. &lt;a href=&quot;https://doi.org/10.1161/01.STR.0000175933.76116.29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Intravenous Heparin After Acute Ischemic Stroke&lt;/a&gt;. Stroke. 2005.&lt;/li&gt;
+&lt;li&gt;ヘパリンナトリウム注射液 添付文書（医薬品医療機器総合機構）.&lt;/li&gt;
+&lt;li&gt;井島大輔, 西山和利. &lt;a href=&quot;https://www.jstage.jst.go.jp/article/naika/107/8/107_1462/_pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;虚血性脳血管障害について&lt;/a&gt;. 日本内科学会雑誌. 2018;107(8):1462-1469.&lt;/li&gt;
+&lt;li&gt;Bauer SR, et al. &lt;a href=&quot;https://doi.org/10.1378/chest.130.5.1638&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Initiation of a Weight-Based Unfractionated Heparin Nomogram&lt;/a&gt;. Chest. 2006.&lt;/li&gt;
+&lt;li&gt;Oldgren J, et al. &lt;a href=&quot;https://doi.org/10.1161/CIRCULATIONAHA.122.060666&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus Delayed Non-Vitamin K Antagonist Oral Anticoagulant Therapy After Acute Ischemic Stroke in Atrial Fibrillation (TIMING)&lt;/a&gt;. Circulation. 2022.&lt;/li&gt;
+&lt;li&gt;Fischer U, et al. &lt;a href=&quot;https://doi.org/10.1056/NEJMoa2303048&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus Later Anticoagulation for Stroke with Atrial Fibrillation (ELAN)&lt;/a&gt;. N Engl J Med. 2023;388:2411-2421.&lt;/li&gt;
+&lt;li&gt;Werring DJ, et al. &lt;a href=&quot;https://doi.org/10.1016/S0140-6736(24)02197-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Early versus delayed direct oral anticoagulation in patients with atrial fibrillation and acute ischaemic stroke (OPTIMAS)&lt;/a&gt;. Lancet. 2024.&lt;/li&gt;
+&lt;li&gt;Ferro JM, et al. &lt;a href=&quot;https://doi.org/10.1111/ene.13381&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;European Stroke Organization guideline for the diagnosis and treatment of cerebral venous thrombosis&lt;/a&gt;. Eur J Neurol. 2017.&lt;/li&gt;
+&lt;li&gt;Naito H, et al. &lt;a href=&quot;https://doi.org/10.1016/j.jstrokecerebrovasdis.2018.09.008&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Antithrombotic Therapy Strategy for Cancer-Associated Ischemic Stroke&lt;/a&gt;. J Stroke Cerebrovasc Dis. 2018.&lt;/li&gt;
+&lt;li&gt;Pengo V, et al. &lt;a href=&quot;https://doi.org/10.1182/blood-2018-04-848333&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome (TRAPS)&lt;/a&gt;. Blood. 2018.&lt;/li&gt;
+&lt;li&gt;Harbrecht U, et al. &lt;a href=&quot;https://doi.org/10.1111/j.1365-2141.2011.08703.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Prospective multicentre cohort study of heparin-induced thrombocytopenia in acute ischaemic stroke&lt;/a&gt;. Br J Haematol. 2011.&lt;/li&gt;
+&lt;li&gt;Pohl C, et al. &lt;a href=&quot;https://doi.org/10.1212/WNL.54.6.1240&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heparin-induced thrombocytopenia in neurologic disease treated with unfractionated heparin&lt;/a&gt;. Neurology. 2000.&lt;/li&gt;
+&lt;li&gt;Arepally GM. &lt;a href=&quot;https://doi.org/10.1182/blood-2016-11-709873&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heparin-induced thrombocytopenia&lt;/a&gt;. Blood. 2017.&lt;/li&gt;
+&lt;li&gt;Martel N, et al. &lt;a href=&quot;https://doi.org/10.1182/blood-2005-04-1546&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Risk for heparin-induced thrombocytopenia with unfractionated and low-molecular-weight heparin thromboprophylaxis: a meta-analysis&lt;/a&gt;. Blood. 2005.&lt;/li&gt;
+&lt;li&gt;Lo GK, et al. &lt;a href=&quot;https://doi.org/10.1111/j.1538-7836.2006.01787.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Evaluation of pretest clinical score (4 T&#39;s) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings&lt;/a&gt;. J Thromb Haemost. 2006.&lt;/li&gt;
+&lt;li&gt;Aguiar de Sousa D, et al. &lt;a href=&quot;https://doi.org/10.1161/STROKEAHA.121.038098&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Cerebral Venous Thrombosis in Patients With Heparin-Induced Thrombocytopenia&lt;/a&gt;. Stroke. 2022.&lt;/li&gt;
+&lt;li&gt;Cuker A, et al. &lt;a href=&quot;https://doi.org/10.1182/bloodadvances.2018024489&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia&lt;/a&gt;. Blood Adv. 2018.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;FAQPage&quot;,&quot;mainEntity&quot;:[{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;心原性脳塞栓症でDOACをすぐに開始する場合、ヘパリンはもう不要ですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;原則としてルーチンのブリッジングは不要です。ELAN・TIMING・OPTIMAS試験で、発症4日以内のDOAC早期開始が遅延開始に対して非劣性かつ出血を増やさないことが示され、改訂2025ガイドラインでも推奨度Bで妥当とされています。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;1万単位/日固定で開始した場合、APTTはいつ測定すべきですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;投与開始後6〜12時間以内に初回APTTを測定し、前値の2〜2.5倍に入っていなければ用量を増減します。その後も毎日〜隔日でモニタリングを続けるのが一般的です。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;DVT予防目的の低用量ヘパリン（5,000単位皮下注）でもHITは起きますか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;起こりえます。HITは用量依存ではなく免疫原性の問題のため、低用量でも発症しうると考えて血小板数をモニタリングする必要があります。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;HITを疑ったら血小板輸血をしても良いですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;活動性の重篤な出血がない限り原則禁忌です。血小板輸血は血栓症を助長するリスクがあります。&quot;}},{&quot;@type&quot;:&quot;Question&quot;,&quot;name&quot;:&quot;HIT発症時、ワルファリンはいつから開始して良いですか？&quot;,&quot;acceptedAnswer&quot;:{&quot;@type&quot;:&quot;Answer&quot;,&quot;text&quot;:&quot;血小板数が150,000/μL以上に回復するまで開始禁です。プロテインCの急減により皮膚壊死や静脈性四肢壊疽のリスクがあります。&quot;}}]}
+&lt;/script&gt;
+
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;VideoObject&quot;,&quot;name&quot;:&quot;脳梗塞急性期のヘパリン、結局どう使う？ 1万単位 vs APTT管理・ブリッジング不要論・HIT対応【ガイドライン2025対応】&quot;,&quot;description&quot;:&quot;脳神経内科医向けに、脳梗塞急性期のヘパリン使用の推奨度、1万単位固定とAPTT管理の使い分け、心原性脳塞栓症でのブリッジング不要論、HIT（ヘパリン起因性血小板減少症）の4Tsスコアとアルガトロバン対応までを、脳卒中治療ガイドライン2021改訂2025に基づき解説。&quot;,&quot;thumbnailUrl&quot;:&quot;https://img.youtube.com/vi/WdGXFCNDaBo/maxresdefault.jpg&quot;,&quot;uploadDate&quot;:&quot;2026-04-22T14:01:35+09:00&quot;,&quot;contentUrl&quot;:&quot;https://www.youtube.com/watch?v=WdGXFCNDaBo&quot;,&quot;embedUrl&quot;:&quot;https://www.youtube.com/embed/WdGXFCNDaBo&quot;}
+&lt;/script&gt;
+</hatena:formatted-content>
+
+<category term="脳神経内科" />
+
+<category term="脳卒中" />
+
+<category term="医師向け" />
+
+<category term="医学情報" />
+
+<category term="ガイドライン" />
+
+<app:control>
+  <app:draft>no</app:draft>
+  <app:preview>no</app:preview>
+  
+</app:control>
+
+  </entry>
