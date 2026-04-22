@@ -1,0 +1,20 @@
+# AtomPubキャッシュ（再生成可能な派生物）
+data/entries/*.xml
+data/entries/failed/
+
+# 実行時成果物
+data/state.sqlite
+data/state.sqlite-*
+data/batches/*.csv
+data/entries_for_claude/*.md
+data/reviews/*.html
+data/decisions/*.csv
+images/in/*
+images/approved/*
+images/archive/*
+logs/*.log
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
