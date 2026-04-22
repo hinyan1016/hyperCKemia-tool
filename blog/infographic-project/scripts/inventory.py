@@ -117,3 +117,37 @@ def detect_v2(body_html: str) -> tuple[str, str]:
         return "has_ig_likely", "figure_img_head"
 
     return "needs_ig", "no_image_in_head"
+
+
+def strip_tags(html: str) -> str:
+    text = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL | re.I)
+    text = re.sub(r"<style[^>]*>.*?</style>", "", text, flags=re.DOTALL | re.I)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"&nbsp;", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def count_internal_hatena_links(html: str) -> int:
+    return len(
+        re.findall(
+            r'<a[^>]+href="https?://hinyan1016\.hatenablog\.com/', html
+        )
+    )
+
+
+def count_all_links(html: str) -> int:
+    return len(re.findall(r"<a\s[^>]*href=", html))
+
+
+def should_exclude(entry: Entry, body_text: str) -> tuple[bool, str]:
+    for cat in entry.categories:
+        if cat in EXCLUDED_CATEGORIES:
+            return True, f"category:{cat}"
+    if len(body_text) < SHORT_CONTENT_THRESHOLD:
+        return True, f"short:{len(body_text)}chars"
+    total = count_all_links(entry.body_html)
+    internal = count_internal_hatena_links(entry.body_html)
+    if total >= 5 and internal / total >= 0.8:
+        return True, f"index_page:{internal}/{total}"
+    return False, ""
