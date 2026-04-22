@@ -74,13 +74,14 @@ def generate_daily_batch(
         md_sections: list[str] = []
         for eid in entry_ids:
             row = conn.execute(
-                """SELECT title, category, published_date FROM articles
+                """SELECT title, category, published_date, url FROM articles
                 WHERE entry_id=?""",
                 (eid,),
             ).fetchone()
             if not row:
                 continue
-            title, category, published = row
+            title, category, published, url = row
+            url = url or ""
 
             # 前回NG情報
             prev_ng = conn.execute(
@@ -92,13 +93,6 @@ def generate_daily_batch(
             prev_tags = prev_ng[0] if prev_ng else ""
             prev_note = prev_ng[1] if prev_ng else ""
             next_attempt = (prev_ng[2] if prev_ng else 0) + 1
-
-            url = ""
-            if published:
-                url = (
-                    f"https://hinyan1016.hatenablog.com/entry/"
-                    f"{published[:10].replace('-', '/')}"
-                )
 
             rows.append(
                 {

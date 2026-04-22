@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS articles (
   title TEXT,
   category TEXT,
   published_date TEXT,
+  url TEXT,
   body_html_path TEXT,
   body_html_before TEXT,
   word_count INTEGER,

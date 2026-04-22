@@ -18,12 +18,13 @@ def _insert_article(
     status: str = "pending",
     published: str = "2025-03-01T00:00:00+09:00",
     title: str = "title",
+    url: str = "",
 ) -> None:
     conn.execute(
         """INSERT INTO articles
-        (entry_id, title, category, published_date, status, excluded, word_count)
-        VALUES (?, ?, 'cat', ?, ?, 0, 1000)""",
-        (entry_id, title, published, status),
+        (entry_id, title, category, published_date, url, status, excluded, word_count)
+        VALUES (?, ?, 'cat', ?, ?, ?, 0, 1000)""",
+        (entry_id, title, published, url, status),
     )
 
 
@@ -63,6 +64,63 @@ def test_generate_batch_picks_oldest_pending_first() -> None:
             "B": "in_batch",
             "C": "pending",
         }
+
+
+@pytest.mark.integration
+def test_generate_batch_uses_db_url_not_date_guess() -> None:
+    """CSVのURL列はarticles.urlから読む（公開日からの推測ではない）。"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        db_path = tmp / "s.sqlite"
+        out_dir = tmp / "batches"
+        initialize_schema(db_path)
+
+        real_url = "https://hinyan1016.hatenablog.com/entry/2025/03/07/044435"
+        conn = sqlite3.connect(db_path)
+        try:
+            _insert_article(
+                conn, "X",
+                published="2025-03-07T04:44:35+09:00",
+                url=real_url,
+            )
+            conn.commit()
+        finally:
+            conn.close()
+
+        csv_path, _ = generate_daily_batch(
+            db_path, out_dir, batch_size=1, batch_date="2026-04-23"
+        )
+        with csv_path.open(encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
+        assert rows[0]["url"] == real_url
+
+
+@pytest.mark.integration
+def test_generate_batch_url_empty_when_db_url_missing() -> None:
+    """articles.urlが空ならCSVのurlも空（日付推測でフォールバックしない）。"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        db_path = tmp / "s.sqlite"
+        out_dir = tmp / "batches"
+        initialize_schema(db_path)
+
+        conn = sqlite3.connect(db_path)
+        try:
+            _insert_article(
+                conn, "X",
+                published="2025-03-07T04:44:35+09:00",
+                url="",
+            )
+            conn.commit()
+        finally:
+            conn.close()
+
+        csv_path, _ = generate_daily_batch(
+            db_path, out_dir, batch_size=1, batch_date="2026-04-23"
+        )
+        with csv_path.open(encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
+        assert rows[0]["url"] == ""
 
 
 @pytest.mark.integration
