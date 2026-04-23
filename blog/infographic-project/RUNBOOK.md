@@ -7,6 +7,9 @@
 **2026-04-23 更新**: ChatGPT UIでの手動画像生成 → OpenAI Images API による自動生成に切り替え。
 人間の拘束時間が 20-30分 → 5-7分（ダッシュボードレビューのみ）に短縮。
 
+**2026-04-23 更新 (Day 2)**: 画像生成は **Codex ルートを本命**に（ChatGPT Plus範囲、追加課金ゼロ）。
+OpenAI API ルートは保険として温存。`sync_generations_from_csv` で Day 3 以降の本運用ワークフローを整備。
+
 ---
 
 ## 日次ルーチン（10〜15分、人間の拘束は5〜7分のみ）
@@ -40,14 +43,44 @@ Claudeが `<today>.md` の各記事について:
 
 を決定し、`<today>_prompts.csv` の空欄を埋める。
 
-### ③ 画像自動生成（5〜10分）
+### ③ generations テーブル同期（30秒、**必須**）
 
-> 「画像を自動生成して」
-
-Claudeが実行:
+プロンプト記入後に CSV の内容を `generations` テーブルへ UPSERT:
 
 ```bash
-python -m scripts.generate_images
+python -m scripts.sync_generations_from_csv --date <today>
+```
+
+動作:
+- `(entry_id, attempt)` キーで既存行を検索
+- 空の既存行は UPDATE、存在しなければ INSERT
+- 既に `decision` が set された行（approved/ng）は上書きしない
+- 省略すると⑥ process_decisions が `generations に <eid> がない` で失敗する
+
+### ④ 画像生成（5〜10分）
+
+画像生成は2ルート。**本命は A）Codex ルート**（追加課金ゼロ）、B）API ルートは保険。
+
+#### A）Codex ルート（本命、ChatGPT Plus範囲）
+
+Codex向け指示書を生成:
+
+```bash
+python -m scripts.export_for_codex --date <today>
+# → data/batches/<today>_codex_instructions.md
+```
+
+生成されたmdを:
+- VS Code の Codex タブにドラッグ、または
+- 内容をコピペしてChatGPT Plus に依頼
+
+指示書は entry_id ごとに保存ファイル名・参考URL・プロンプト・命名規約を自動整形。
+画像は `images/in/<entry_id>.png` に保存。完了後は Claude Code セッションに「Codex画像保存完了」と伝える。
+
+#### B）API ルート（保険、大量・完全自動化向け）
+
+```bash
+python -m scripts.generate_images --date <today>
 ```
 
 動作:
@@ -64,14 +97,14 @@ python -m scripts.generate_images --quality high       # $0.19/枚
 python -m scripts.generate_images --size 1536x1024     # 横長
 ```
 
-### ④ ダッシュボードレビュー（5〜7分、人間担当）
+### ⑤ ダッシュボードレビュー（5〜7分、人間担当）
 
 > 「ダッシュボード作って」
 
 Claudeが実行:
 
 ```bash
-python -m scripts.build_dashboard
+python -m scripts.build_dashboard --date <today>
 ```
 
 1. 生成された `data/reviews/<today>_review.html` をブラウザで開く
@@ -80,7 +113,7 @@ python -m scripts.build_dashboard
 4. 下部の「決定をCSVにエクスポート」ボタン押下
 5. ダウンロードされた CSV を `data/decisions/<today>_decisions.csv` として保存
 
-### ⑤ 反映（3分）
+### ⑥ 反映（3分）
 
 > 「決定を反映して」
 
@@ -97,7 +130,7 @@ python -m scripts.process_decisions data/decisions/<today>_decisions.csv
 完了: OK=17 NG=2 Skip=1 既処理=0 失敗=0
 ```
 
-### ⑥ 進捗確認
+### ⑦ 進捗確認
 
 ```bash
 python -c "
@@ -139,12 +172,14 @@ pip install -r requirements.txt
 本番の1件目を処理する前に:
 
 - [ ] `git status` でクリーン
-- [ ] `pytest --cov=scripts` 全pass（39テスト）
-- [ ] `.env` に `OPENAI_API_KEY` が設定済
+- [ ] `pytest --cov=scripts` 全pass（44テスト）
+- [ ] `.env` に `HATENA_API_KEY` と（API route使うなら）`OPENAI_API_KEY` が設定済
 - [ ] `python -m scripts.generate_batch_csv --batch-size 1`（1件だけ選定＋存在確認）
-- [ ] `python -m scripts.generate_images`（1件だけAPI呼出して `images/in/` に保存）
-- [ ] `python -m scripts.build_dashboard` — ダッシュボード表示確認
-- [ ] 1件にOK判定 → CSV エクスポート → `data/decisions/` に保存
+- [ ] Claudeが `<today>_prompts.csv` のprompt/alt/style_summary を記入
+- [ ] `python -m scripts.sync_generations_from_csv --date <today>` — generations へUPSERT
+- [ ] 画像生成: A) `python -m scripts.export_for_codex --date <today>` → Codexで画像作成 → `images/in/<eid>.png` に配置、または B) `python -m scripts.generate_images --date <today>`（API route）
+- [ ] `python -m scripts.build_dashboard --date <today>` — ダッシュボード表示確認
+- [ ] 1件にOK判定 → CSV エクスポート → `data/decisions/<today>_decisions.csv` に保存
 - [ ] `python -m scripts.process_decisions <path> --dry-run` — 変更内容確認
 - [ ] `python -m scripts.process_decisions <path>` — yesで実行
 - [ ] ブラウザで記事を開き、インフォグラフィック表示を確認
@@ -190,6 +225,12 @@ python -m scripts.rollback <entry_id>
 
 - `images/in/<entry_id>.png` のファイル名が `entry_id` と一致しているか確認
 - 大文字/小文字の違い、拡張子の違い（.PNG, .jpg等）を確認
+- build_dashboard の相対パス生成は `../../images/in/<eid>.png` が出ることが期待値（2026-04-23 修正）。古いHTMLが残っている場合は `python -m scripts.build_dashboard --date <today>` で再生成
+
+### process_decisions が `generations に <eid> がない` で失敗
+
+- ③ の `sync_generations_from_csv --date <today>` をスキップしている
+- 同コマンドを走らせてから再実行すればOK（idempotent）
 
 ---
 
@@ -237,6 +278,9 @@ blog/infographic-project/
 │   ├── html_inserter.py            # HTML挿入（3段階フォールバック）
 │   ├── hatena_client.py            # AtomPub/Fotolife クライアント
 │   ├── generate_batch_csv.py       # 日次バッチ生成
+│   ├── sync_generations_from_csv.py # prompts.csv → generations UPSERT
+│   ├── generate_images.py          # OpenAI API 画像生成（保険ルート）
+│   ├── export_for_codex.py         # Codex向け指示書生成（本命ルート）
 │   ├── build_dashboard.py          # レビューダッシュボード生成
 │   ├── process_decisions.py        # OK/NG/Skip反映
 │   ├── rollback.py                 # 緊急ロールバック
