@@ -124,6 +124,55 @@ def test_generate_batch_url_empty_when_db_url_missing() -> None:
 
 
 @pytest.mark.integration
+def test_generate_batch_with_existence_check_skips_deleted_and_refills() -> None:
+    """exists_fn で404の記事は excluded になり、代替で batch_size を満たす。"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        db_path = tmp / "s.sqlite"
+        out_dir = tmp / "batches"
+        initialize_schema(db_path)
+
+        conn = sqlite3.connect(db_path)
+        try:
+            for i, eid in enumerate(["A", "B", "C", "D", "E"]):
+                _insert_article(
+                    conn, eid,
+                    published=f"2025-0{i + 1}-01T00:00:00+09:00",
+                )
+            conn.commit()
+        finally:
+            conn.close()
+
+        # B だけ "削除済み" として404扱い
+        deleted = {"B"}
+
+        def exists_fn(eid: str) -> bool:
+            return eid not in deleted
+
+        csv_path, _ = generate_daily_batch(
+            db_path, out_dir,
+            batch_size=3, batch_date="2026-04-23",
+            exists_fn=exists_fn,
+        )
+        with csv_path.open(encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
+        entry_ids = [r["entry_id"] for r in rows]
+        assert "B" not in entry_ids
+        assert len(entry_ids) == 3
+        # A, C, D が選ばれるはず (B がスキップされて D が補充)
+        assert entry_ids == ["A", "C", "D"]
+
+        conn = sqlite3.connect(db_path)
+        try:
+            b_row = conn.execute(
+                "SELECT excluded, excluded_reason, status FROM articles WHERE entry_id='B'"
+            ).fetchone()
+        finally:
+            conn.close()
+        assert b_row == (1, "deleted_from_hatena", "excluded")
+
+
+@pytest.mark.integration
 def test_generate_batch_includes_ng_revision() -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)

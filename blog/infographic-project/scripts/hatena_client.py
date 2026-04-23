@@ -122,6 +122,31 @@ def fetch_entry(
         return resp.read().decode("utf-8")
 
 
+def entry_exists(
+    entry_id: str,
+    api_key: str,
+    *,
+    hatena_id: str = HATENA_ID_DEFAULT,
+    blog_domain: str = BLOG_DOMAIN_DEFAULT,
+) -> bool:
+    """AtomPub GET で記事の存在確認。404ならFalse、2xxならTrue。
+
+    他のHTTPエラーは例外を伝播させる（認証失敗などの早期発見のため）。
+    """
+    try:
+        fetch_entry(
+            entry_id,
+            api_key,
+            hatena_id=hatena_id,
+            blog_domain=blog_domain,
+        )
+        return True
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return False
+        raise
+
+
 def put_entry(
     entry_id: str,
     xml_body: str,

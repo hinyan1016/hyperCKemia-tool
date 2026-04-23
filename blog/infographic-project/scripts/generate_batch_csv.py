@@ -1,12 +1,17 @@
-"""日次バッチCSV生成：DBから20件選定してCSVとClaude読込用MDを作る。"""
+"""日次バッチCSV生成：DBから20件選定してCSVとClaude読込用MDを作る。
+
+各候補エントリはAtomPub存在確認を行い、404の場合は excluded=1 に
+マークして代替を選出する（削除済み記事の混入を避けるため）。
+"""
 
 from __future__ import annotations
 
 import csv
 import sqlite3
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
+from typing import Callable
 
 
 CSV_HEADER = [
@@ -49,14 +54,75 @@ def select_batch_entry_ids(
     return ng_ids + pending_ids
 
 
+def select_batch_with_existence_check(
+    conn: sqlite3.Connection,
+    batch_size: int,
+    *,
+    exists_fn: Callable[[str], bool],
+) -> list[str]:
+    """存在確認を通しながら batch_size 件を確保する。
+
+    - 各候補で exists_fn(entry_id) を呼ぶ
+    - 404 の場合は articles.excluded=1, excluded_reason='deleted_from_hatena'
+      に更新して代替を選出
+    - 代替候補が尽きた場合は取れた分だけ返す
+    """
+    selected: list[str] = []
+
+    # 初期候補
+    candidates = select_batch_entry_ids(conn, batch_size)
+
+    while len(selected) < batch_size and candidates:
+        eid = candidates.pop(0)
+        if eid in selected:
+            continue
+        if exists_fn(eid):
+            selected.append(eid)
+            continue
+
+        # 404 → excluded マーク
+        now_iso = datetime.now(timezone.utc).astimezone().isoformat(
+            timespec="seconds"
+        )
+        conn.execute(
+            """UPDATE articles
+            SET excluded=1,
+                excluded_reason='deleted_from_hatena',
+                status='excluded',
+                last_ng_date=?
+            WHERE entry_id=?""",
+            (now_iso, eid),
+        )
+        conn.commit()
+
+        # 補充: 既に selected / 今の候補キュー / excluded になった記事を除いて
+        # 足りない分を取り直す
+        need = batch_size - len(selected) - len(candidates)
+        if need <= 0:
+            continue
+        # 余裕を持って need*2+1件 取得して、未選択のものを追加
+        refill = select_batch_entry_ids(conn, need * 2 + 1)
+        for rid in refill:
+            if rid not in selected and rid not in candidates:
+                candidates.append(rid)
+                if len(candidates) + len(selected) >= batch_size:
+                    break
+
+    return selected
+
+
 def generate_daily_batch(
     db_path: Path,
     out_dir: Path,
     *,
     batch_size: int = 20,
     batch_date: str | None = None,
+    exists_fn: Callable[[str], bool] | None = None,
 ) -> tuple[Path, Path]:
     """対象記事を選定し、prompts.csvテンプレと entries_for_claude/<date>.md を生成。
+
+    Args:
+        exists_fn: entry_id を受けて存在確認する関数。None ならスキップ。
 
     Returns:
         (prompts_csv_path, entries_md_path)
@@ -66,7 +132,12 @@ def generate_daily_batch(
 
     conn = sqlite3.connect(db_path)
     try:
-        entry_ids = select_batch_entry_ids(conn, batch_size)
+        if exists_fn is None:
+            entry_ids = select_batch_entry_ids(conn, batch_size)
+        else:
+            entry_ids = select_batch_with_existence_check(
+                conn, batch_size, exists_fn=exists_fn
+            )
         if not entry_ids:
             raise RuntimeError("選定対象がありません。全完了または在庫切れ。")
 
@@ -148,10 +219,38 @@ def generate_daily_batch(
 
 
 def main() -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--batch-size", type=int, default=20)
+    parser.add_argument(
+        "--skip-existence-check",
+        action="store_true",
+        help="AtomPub存在確認を省く（テスト/オフライン用）",
+    )
+    args = parser.parse_args()
+
     root = Path(__file__).resolve().parent.parent
     db_path = root / "data" / "state.sqlite"
     out_dir = root / "data" / "batches"
-    csv_path, md_path = generate_daily_batch(db_path, out_dir, batch_size=20)
+
+    exists_fn: Callable[[str], bool] | None = None
+    if not args.skip_existence_check:
+        from scripts.hatena_client import entry_exists, load_env
+
+        env_file = Path(
+            r"C:\Users\jsber\OneDrive\Documents\Claude_task"
+            r"\youtube-slides\食事指導シリーズ\_shared\.env"
+        )
+        api_key = load_env(env_file)["HATENA_API_KEY"]
+        exists_fn = lambda eid: entry_exists(eid, api_key)  # noqa: E731
+
+    csv_path, md_path = generate_daily_batch(
+        db_path,
+        out_dir,
+        batch_size=args.batch_size,
+        exists_fn=exists_fn,
+    )
     print(f"バッチCSV: {csv_path}")
     print(f"Claude参照MD: {md_path}")
     return 0

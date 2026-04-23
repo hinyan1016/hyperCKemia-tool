@@ -1,45 +1,70 @@
 # インフォグラフィック・バックフィル運用手順
 
-**対象**: インフォグラフィック未対応記事227件へのChatGPT生成画像追加
+**対象**: インフォグラフィック未対応記事227件へのAI生成画像追加
 **ペース**: 20件/日 × 約12日で完走予定
 **関連設計書**: [`docs/superpowers/specs/2026-04-23-infographic-backfill-design.md`](../../docs/superpowers/specs/2026-04-23-infographic-backfill-design.md)
 
+**2026-04-23 更新**: ChatGPT UIでの手動画像生成 → OpenAI Images API による自動生成に切り替え。
+人間の拘束時間が 20-30分 → 5-7分（ダッシュボードレビューのみ）に短縮。
+
 ---
 
-## 日次ルーチン（15〜20分）
+## 日次ルーチン（10〜15分、人間の拘束は5〜7分のみ）
 
-### ① バッチ生成（2分）
+### ① バッチ生成 + 存在確認（3分）
 
 Claude Codeセッションで:
 
-> 「今日の20件のプロンプト生成して」
+> 「今日の20件のバッチ生成して」
 
-Claudeが以下を実行:
+Claudeが実行:
 
 ```bash
 cd blog/infographic-project
 python -m scripts.generate_batch_csv
 ```
 
-これにより生成:
-- `data/batches/<today>_prompts.csv` — プロンプト記入用CSV（空欄テンプレ）
-- `data/entries_for_claude/<today>.md` — Claudeが読む記事情報
+これにより:
+- 候補各記事に対して **AtomPub GET で存在確認**（404なら`excluded=1, excluded_reason='deleted_from_hatena'` に自動マーク、代替を選出）
+- `data/batches/<today>_prompts.csv` を生成（プロンプト欄は空）
+- `data/entries_for_claude/<today>.md` を生成
 
-次にClaudeが `<today>.md` を読み、各記事について:
+オフライン/テスト時は `--skip-existence-check` フラグで存在確認を省略可能。
+
+### ② プロンプト記入（2分）
+
+Claudeが `<today>.md` の各記事について:
 - **style_summary**（例: 「神経疾患・青系・解剖図レイアウト」）
-- **prompt**（ChatGPT GPT Image用、日本語、約300-500字）
+- **prompt**（画像生成用、日本語、約300-500字、医学的正確さを確保）
 - **alt**（120字前後、主キーワード含む）
 
 を決定し、`<today>_prompts.csv` の空欄を埋める。
 
-### ② ChatGPT画像生成（5〜10分）
+### ③ 画像自動生成（5〜10分）
 
-1. `data/batches/<today>_prompts.csv` をExcelで開く
-2. 1行ずつ `prompt` 列をコピー → ChatGPT UI（画像生成）に貼付
-3. 生成画像を右クリック → 保存 → `blog/infographic-project/images/in/<entry_id>.png` にリネーム
-4. 20件全部保存できたらファイルマネージャで件数確認
+> 「画像を自動生成して」
 
-### ③ ダッシュボードレビュー（5〜7分）
+Claudeが実行:
+
+```bash
+python -m scripts.generate_images
+```
+
+動作:
+- OpenAI Images API (`gpt-image-1`, 1024x1024, quality=`medium`) で全行を生成
+- 出力先: `images/in/<entry_id>.png`
+- 既に存在するファイルはスキップ（idempotency）
+- 失敗は `logs/image_gen.log` に記録、他の行は継続
+- デフォルトは `medium` 品質（$0.07/枚、19件で約$1.33）
+
+品質パラメータをオプションで調整:
+
+```bash
+python -m scripts.generate_images --quality high       # $0.19/枚
+python -m scripts.generate_images --size 1536x1024     # 横長
+```
+
+### ④ ダッシュボードレビュー（5〜7分、人間担当）
 
 > 「ダッシュボード作って」
 
@@ -55,7 +80,7 @@ python -m scripts.build_dashboard
 4. 下部の「決定をCSVにエクスポート」ボタン押下
 5. ダウンロードされた CSV を `data/decisions/<today>_decisions.csv` として保存
 
-### ④ 反映（3分）
+### ⑤ 反映（3分）
 
 > 「決定を反映して」
 
@@ -72,7 +97,7 @@ python -m scripts.process_decisions data/decisions/<today>_decisions.csv
 完了: OK=17 NG=2 Skip=1 既処理=0 失敗=0
 ```
 
-### ⑤ 進捗確認
+### ⑥ 進捗確認
 
 ```bash
 python -c "
@@ -86,14 +111,38 @@ print(f'{done}/{total} 完了、残 {total-done} 件')
 
 ---
 
+## 前提設定
+
+### `.env` 認証情報
+
+場所: `C:\Users\jsber\OneDrive\Documents\Claude_task\youtube-slides\食事指導シリーズ\_shared\.env`
+
+必要キー:
+```
+HATENA_ID=hinyan1016
+HATENA_BLOG_DOMAIN=hinyan1016.hatenablog.com
+HATENA_API_KEY=<your-key>
+OPENAI_API_KEY=<your-openai-key>    # 2026-04-23 追加: 画像自動生成用
+```
+
+### 依存
+
+```bash
+pip install -r requirements.txt
+# openai>=1.40.0, pillow==11.0.0, pytest==8.3.4, pytest-cov==6.0.0
+```
+
+---
+
 ## Day 1（初回運用）チェックリスト
 
 本番の1件目を処理する前に:
 
 - [ ] `git status` でクリーン
-- [ ] `pytest --cov=scripts` 全pass（32テスト）
-- [ ] `python -m scripts.generate_batch_csv`（ただし `batch_size=1` でテスト）
-- [ ] ChatGPTで1件だけ生成、`images/in/<entry_id>.png` に配置
+- [ ] `pytest --cov=scripts` 全pass（39テスト）
+- [ ] `.env` に `OPENAI_API_KEY` が設定済
+- [ ] `python -m scripts.generate_batch_csv --batch-size 1`（1件だけ選定＋存在確認）
+- [ ] `python -m scripts.generate_images`（1件だけAPI呼出して `images/in/` に保存）
 - [ ] `python -m scripts.build_dashboard` — ダッシュボード表示確認
 - [ ] 1件にOK判定 → CSV エクスポート → `data/decisions/` に保存
 - [ ] `python -m scripts.process_decisions <path> --dry-run` — 変更内容確認
@@ -125,9 +174,17 @@ python -m scripts.rollback <entry_id>
 
 `status='manual_intervention'` に自動変更されるので、手動でChatGPT生成＋既存の `blog/_scripts/upload_and_insert_infographic.py` で対応。
 
-### バッチCSVでpromptが空のまま ChatGPT手順に移ってしまった
+### バッチCSVでpromptが空のまま `generate_images` を実行してしまった
 
-Claudeに「今日のCSVにプロンプトを埋めて」と依頼。`generate_batch_csv.py` は再実行しない（既に in_batch ステータスになっているため）。
+`generate_images` は prompt が空の行を `skipped_empty_prompt` としてスキップする。Claudeに「今日のCSVにプロンプトを埋めて」と依頼してから再実行する。`generate_batch_csv.py` は再実行しない（既に in_batch ステータスになっているため）。
+
+### OpenAI APIで生成が失敗する
+
+- `logs/image_gen.log` を確認
+- レート制限 / 内容ポリシー違反が主因
+- ポリシー違反の場合はプロンプトを修正して再実行（既存画像はスキップされる）
+- レート制限の場合は `--max-retries 5 --retry-delay-s 10` などで粘り強く再試行
+- `OPENAI_API_KEY` が `.env` にない場合はエラー終了
 
 ### ブラウザダッシュボードで画像が表示されない
 
