@@ -1,21 +1,21 @@
-# Session Handoff — 2026-04-23（Day 3 完了時点）
+# Session Handoff — 2026-04-23（Day 4 完了時点）
 
-インフォグラフィック・バックフィルプロジェクト、Day 3 まで完走。
+インフォグラフィック・バックフィルプロジェクト、Day 4 まで完走。
 本運用ツール（`--date` CLI、sync_generations、export_for_codex）一式を整備。
 
 ---
 
-## 累計進捗（2026-04-23 セッション終了時点）
+## 累計進捗（Day 4 終了時点）
 
 | 指標 | 値 |
 |------|-----|
-| articles: done | **39 / 227** (17.2%) |
-| articles: excluded | 2（1件は削除済み判定） |
-| articles: pending | 186 |
+| articles: done | **56 / 227**（対象ベース 56 / 222 = **25.2%**） |
+| articles: excluded | 5（削除済み 2 + skipped_by_review 3） |
+| articles: pending | 166 |
 | articles: in_batch | 0 |
-| generations | 41件（approved 39 + attempt未処理0 + 初期21手動） |
+| generations | 58件 |
 
-**残り 186 件、ペース 20件/日で 10営業日程度**で完走見込み。
+**残り 166 件、ペース 17〜20件/日で 9〜10営業日程度**で完走見込み。
 
 ---
 
@@ -32,6 +32,13 @@
 - batch_date = `2026-04-25` で20件バッチ生成 → Codex で画像生成 → 一括反映
 - 処理結果: OK=20 NG=0 失敗=0
 - サンプル公開URL 3件で HTTP 200 + Fotolife img 挿入確認
+
+### Day 4（20件一括、本セッション）
+- batch_date = `2026-04-26` で20件バッチ生成 → Codex で画像生成 → 一括反映
+- 処理結果: OK=17 NG=0 Skip=3 失敗=0
+- サンプル公開URL 3件で HTTP 200 + Fotolife img 挿入確認
+- Skip 3件（CIDP病理所見/自己免疫性ノドパシー/CIDP病理所見 Genspark版）は
+  `status='excluded'` + `excluded_reason='skipped_by_review'` に確定 → 今後の選定対象外
 
 ### 本セッションのコミット（7件）
 
@@ -90,11 +97,15 @@ curl -s -o /dev/null -w "%{http_code}\n" https://hinyan1016.hatenablog.com/entry
 - **`sync_generations_from_csv` を忘れると `process_decisions` は `generations に <eid> がない` で失敗**: Day 3 以降は必須ステップ。
 - **batch_date は重複不可**: `batches` テーブルのPKが batch_date。既存日付指定は INSERT OR REPLACE で prompts.csv ごと上書きになるので注意。
 
+### 注意点（Day 4 で学んだこと）
+
+- **Skip 扱いは `in_batch` に残り続ける**: `process_decisions` の `skip` ブランチは `processed_decisions` への記録のみで、`articles.status` は `in_batch` のまま。進捗カウンタが永久にズレるので、今後「再選定不要な Skip」は処理後に `status='excluded' / excluded=1 / excluded_reason='skipped_by_review'` に手動昇格させて対象ベース分母を正しく保つ。再選定したい場合は `status='pending'` に戻してから次バッチで拾う。
+
 ---
 
 ## 未消化の低優先度タスク
 
-- **Codex ルートのレート制限検証**: Day 3 で20件 Plus範囲内で問題なく回ったが、連日実行時の累積制限は未検証（Day 4-5で要観察）
+- **Codex ルートのレート制限検証**: Day 3・Day 4 で連続20件ずつ Plus 範囲内で問題なく完走。連日運用でのバースト制限は引き続き要観察（Day 5 以降）
 - **.omc 等のスペック/アーキドキュ整備**: 未着手。現運用が安定すれば不要
 
 ---
@@ -110,20 +121,20 @@ curl -s -o /dev/null -w "%{http_code}\n" https://hinyan1016.hatenablog.com/entry
 ### 現在のDB状態
 
 ```sql
-articles: done=39, excluded=2, pending=186
-generations: 41件（全 in_batch 処理済み）
+articles: done=56, excluded=5, pending=166, in_batch=0
+generations: 58件（全 in_batch 処理済み）
 batches:
-  2026-04-23 / 2026-04-24 / 2026-04-25 いずれも処理完了
+  2026-04-23 / 2026-04-24 / 2026-04-25 / 2026-04-26 いずれも処理完了
 ```
 
 ---
 
 ## 次セッション再開フレーズ
 
-- **「Day 4 バッチ準備」** → batch_date=2026-04-26 で 20件バッチ生成以降のフロー
+- **「Day 5 バッチ準備」** → batch_date=2026-04-27 で 20件バッチ生成以降のフロー
 - **「インフォグラフィックの続き」** → このファイルを読んで現状確認
 - **「ブログ文献リンクの続き」** → 別プロジェクト（文献リンク有効化、残561件）
 
 ---
 
-**セッション終了時刻**: 2026-04-23（Day 3 完了、39/227件 done、次は Day 4）
+**セッション終了時刻**: 2026-04-23（Day 4 完了、56/227件 done、次は Day 5）
