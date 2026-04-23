@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import html
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -150,10 +151,12 @@ def build_dashboard(
         eid = row["entry_id"]
         image_path = images_dir / f"{eid}.png"
         try:
-            rel_path = str(image_path.relative_to(out_html.parent).as_posix())
+            rel_path = Path(
+                os.path.relpath(image_path.resolve(), out_html.parent.resolve())
+            ).as_posix()
         except ValueError:
-            # different drives or non-child path: fallback to absolute
-            rel_path = str(image_path.as_posix())
+            # different drives: fallback to absolute
+            rel_path = image_path.resolve().as_posix()
         cards.append(_card_html(row, image_path.exists(), rel_path))
 
     body = "".join(cards)
