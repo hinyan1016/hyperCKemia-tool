@@ -167,13 +167,27 @@ def build_dashboard(
 
 
 def main() -> int:
-    root = Path(__file__).resolve().parent.parent
-    today = date.today().isoformat()
-    prompts_csv = root / "data" / "batches" / f"{today}_prompts.csv"
-    images_dir = root / "images" / "in"
-    out_html = root / "data" / "reviews" / f"{today}_review.html"
+    import argparse
 
-    build_dashboard(prompts_csv, images_dir, out_html, batch_date=today)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--date",
+        default=None,
+        help="YYYY-MM-DD (default: today)。指定日のバッチCSV/ダッシュボードを処理。",
+    )
+    args = parser.parse_args()
+
+    root = Path(__file__).resolve().parent.parent
+    batch_date = args.date or date.today().isoformat()
+    prompts_csv = root / "data" / "batches" / f"{batch_date}_prompts.csv"
+    images_dir = root / "images" / "in"
+    out_html = root / "data" / "reviews" / f"{batch_date}_review.html"
+
+    if not prompts_csv.exists():
+        print(f"[ERROR] バッチCSVが見つかりません: {prompts_csv}", file=sys.stderr)
+        return 2
+
+    build_dashboard(prompts_csv, images_dir, out_html, batch_date=batch_date)
     print(f"ダッシュボード: {out_html}")
     return 0
 
