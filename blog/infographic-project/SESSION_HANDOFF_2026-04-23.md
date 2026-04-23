@@ -1,236 +1,129 @@
-# Session Handoff — 2026-04-23
+# Session Handoff — 2026-04-23（Day 3 完了時点）
 
-インフォグラフィック・バックフィルプロジェクト、Day 1 反映 + API実装 + Day 2 Codex試行準備まで。
-
----
-
-## Accomplished
-
-### ① Day 1 本番反映（2026-04-23）
-- 19件中 **18件成功**: Fotolifeへ画像アップロード + はてなブログ本文へ`max-width:100%; box-shadow`スタイル付きimg挿入
-- **1件失敗**: `6802418398334380887`（抗てんかん薬の妊娠に対する催奇形リスクまとめ） → AtomPub 404。はてな側で記事削除済みと確認（AtomPub 108ページスキャンで該当なし）。`articles.status='excluded', excluded_reason='deleted_from_hatena'` マーク、画像は `images/archive/<eid>_deleted_<ts>.png` に退避
-- 代表2件（NSAIDs/BBE）で公開URL上のimg挿入を確認
-
-### ② OneDriveコンフリクト整理
-- 別PC（Envy14）との同期で発生した `-Envy14faHI.*` 27ファイルを削除（内容は全てCRLFのみの差、ロジック差なし）
-
-### ③ API統合実装（コミット `87f9542`）
-| ファイル | 変更 |
-|---------|------|
-| `scripts/generate_images.py` | **新規** — OpenAI Images API (`gpt-image-1`) で prompts.csv 全件を自動生成。既存ファイル/空プロンプトはスキップ、失敗はリトライ後ログ記録して継続 |
-| `scripts/generate_batch_csv.py` | `select_batch_with_existence_check()` 追加。AtomPub GETで404の記事は `excluded_reason='deleted_from_hatena'` マーク＋代替選出。`--skip-existence-check` フラグ追加 |
-| `scripts/hatena_client.py` | `entry_exists()` 追加 |
-| `requirements.txt` | `openai>=1.40.0` 追加 |
-| `tests/integration/test_generate_images.py` | **新規** 4テスト |
-| `tests/integration/test_batch_generation.py` | 存在確認テスト 1件追加 |
-| `RUNBOOK.md` | 新ワークフロー反映、OPENAI_API_KEY必須化、Day 1チェックリスト更新 |
-
-テスト結果: **39件全pass**（元32 + 新7）
-
-### ④ `.gitignore` 整理（コミット `c65ca6b`）
-- `.coverage` / `.coverage.*` / `htmlcov/` 追加
-- `data/batches/*.md` 追加（`prompts_for_copy.md`等）
-- `data/inventory.csv` / `inventory_summary.txt` 追加（v1は除外、v2のみcommit対象）
-- `scripts/_fill_prompts_*.py` 追加（日付固定のワンショット）
-
-### ⑤ Day 2 Codex試行準備（**未コミット**）
-- 1件バッチ生成: `2026-04-24_prompts.csv` (entry_id `6802418398336571447`, 「2025年最新の一般内科トレンド：感染症動向と対策」)
-- Claudeがプロンプト記入済（感染症4分割: 百日咳/COVID-19/インフルエンザ/エムポックス&AMR）
-- `generations` テーブルへ1件手動INSERT（alt_text保存）
-- `scripts/export_for_codex.py` 新規作成 — Codex用指示書生成
-- `data/batches/2026-04-24_codex_instructions.md` 出力済
+インフォグラフィック・バックフィルプロジェクト、Day 3 まで完走。
+本運用ツール（`--date` CLI、sync_generations、export_for_codex）一式を整備。
 
 ---
 
-## Current State
+## 累計進捗（2026-04-23 セッション終了時点）
 
-### 動いているもの
-- パイプライン全体（generate_batch_csv → build_dashboard → process_decisions → rollback）
-- 39テスト全pass
-- OpenAI API経由の画像生成スクリプト（API key設定後に動作可能）
-- AtomPub存在確認つきバッチ選出
+| 指標 | 値 |
+|------|-----|
+| articles: done | **39 / 227** (17.2%) |
+| articles: excluded | 2（1件は削除済み判定） |
+| articles: pending | 186 |
+| articles: in_batch | 0 |
+| generations | 41件（approved 39 + attempt未処理0 + 初期21手動） |
 
-### 部分的な実装
-- **Codexルート**: 指示書生成は完了、Codex側での画像生成はユーザ作業待ち
-- **build_dashboard main()**: `date.today()` 固定。未来日（2026-04-24）を指定する CLI 引数がない
-
-### 意図的に後回し
-- **`sync_generations_from_csv.py` の恒久化**: Day 2 試行のために1件手動INSERTで凌いだ。Day 3以降に本格運用するには必須
-- **build_dashboard への `--date` 引数追加**: Codex結果が揃ったら必要
-- **`.env` への `OPENAI_API_KEY` 追加**: Codexルートで問題なく進めばAPI routeは保険扱いでOK
+**残り 186 件、ペース 20件/日で 10営業日程度**で完走見込み。
 
 ---
 
-## Pending
+## 本セッション（2026-04-23）の成果
 
-### 優先度高
-1. **Codex画像生成の結果受け取り** — ユーザがCodexで1件生成して `images/in/6802418398336571447.png` に保存
-2. **build_dashboard `--date` 引数追加** — Day 2以降のバッチをCLIで処理するため
-3. **Day 2 の反映完走テスト** — ダッシュボード→レビュー→process_decisions
+### Day 1（18件本番反映、前回セッション実績）
 
-### 優先度中
-4. **`sync_generations_from_csv.py` 実装** — CSVのprompt/alt/styleをgenerationsテーブルに自動同期（UPSERT）
-5. **`export_for_codex.py` のcommit** — 機能確認後にcommit
+### Day 2（1件試行・完走、本セッション）
+- Codex ルートでの画像生成を初めて本番投入
+- `6802418398336571447`（2025年感染症トレンド記事）反映 → HTTP 200、画像挿入確認
+- 反映中に build_dashboard の相対パスバグ発覚 → 修正
 
-### 優先度低
-6. **RUNBOOK に Codex ルート追記** — API/Codex両方の分岐を明記
-7. **Codexルートのレート制限検証** — 20件連続でもPlus範囲内で回るか
+### Day 3（20件一括、本セッション）
+- batch_date = `2026-04-25` で20件バッチ生成 → Codex で画像生成 → 一括反映
+- 処理結果: OK=20 NG=0 失敗=0
+- サンプル公開URL 3件で HTTP 200 + Fotolife img 挿入確認
 
-### 既知の課題
-- **OneDriveロックによるgit失敗** → 回避済み（ユーザが `git config windows.appendAtomically false` 設定）
-- **state.sqlite はOneDrive上**: ロック問題で同期衝突のリスクあり。別PCで作業する場合は注意
+### 本セッションのコミット（7件）
+
+| hash | 種別 | 内容 |
+|------|------|------|
+| `7482d21` | fix | build_dashboard の画像相対パス計算修正（Day 2 発覚） |
+| `7c6943b` | feat | Codex向け画像生成指示書エクスポート（`export_for_codex.py`）+ handoff doc |
+| `fb921e1` | feat | build_dashboard `--date` CLI 引数 |
+| `d3f346a` | feat | `sync_generations_from_csv` スクリプト + 5テスト |
+| `20b18a7` | docs | RUNBOOK に Codex ルート / sync / --date フロー反映 |
+| `2ec48ab` | feat | generate_batch_csv `--batch-date` CLI 引数 |
+| -- | -- | Day 3 本番反映（DBと公開記事のみ、コード変更なし） |
+
+### テスト状態
+`pytest tests/` = **44件全pass**（元39 + sync_generations 5）。
 
 ---
 
-## Context for Next Session
+## Day 4 以降の本運用フロー（全CLIで一貫）
 
-### 最初に読むべきファイル
-1. `blog/infographic-project/RUNBOOK.md` — 日次運用手順（最新）
-2. `blog/infographic-project/SESSION_HANDOFF_2026-04-23.md` — これ
-3. `blog/infographic-project/data/batches/2026-04-24_codex_instructions.md` — Codex向け指示書
-4. `blog/infographic-project/scripts/generate_images.py` — OpenAI APIルート（実装済）
+```bash
+cd blog/infographic-project
 
-### 重要な決定事項
-- **画像生成は当面Codexルートを本命に**（ChatGPT Plus範囲、追加課金ゼロ）。OpenAI APIルートは保険として温存
-- **VS Code上で Codex と Claude Code が同じワークスペースを共有** → ファイルリレーで分業可能
-- **generations テーブルはプロセス全体の中核** — alt_text格納が process_decisions の前提条件
-- **batch_date キーは日付。当日のCSV/MDを上書きするため、テストは未来日で行う**
+# ① 20件バッチ生成（batch_date 指定、AtomPub 存在確認つき）
+python -m scripts.generate_batch_csv --batch-date <YYYY-MM-DD> --batch-size 20
 
-### 非自明なGotchas
-- **process_decisions は generations 行を必須とする**。alt_text がないと `RuntimeError("generations に {eid} がない")` で失敗。現状 generate_batch_csv はarticlesしか触らないので、CSV記入と generations 書込みは別ステップ
-- **CRLF警告は無視してOK** — Windows環境下でgitの改行変換警告が常時出るが、実害なし
-- **build_dashboard の HTML には `awaiting_image` がCSS内に1回出現** — ステータス検出のとき正規表現要注意
-- **はてな側で削除された記事は AtomPub でも404** — 棚卸しv2時点のsnapshotに対してリアルタイム存在確認が必要
+# ② Claude がプロンプトを記入
+#    `data/entries_for_claude/<date>.md` を読み、
+#    `data/batches/<date>_prompts.csv` の style_summary / prompt / alt を埋める
+#    （Day 3 では _fill_prompts_<date>.py でPythonスクリプト化、.gitignore対象）
 
-### 現在のDB状態（`data/state.sqlite`）
-```
-articles:
-  done:      18  (Day 1 で反映完了)
-  excluded:   2  (1件はv2除外 + 1件は削除済み判定)
-  pending:  207
-  in_batch:   1  (Day 2試行中: 6802418398336571447)
+# ③ generations テーブル同期（必須）
+python -m scripts.sync_generations_from_csv --date <YYYY-MM-DD>
 
-generations:
-  計21件 (Day 1分20 + Day 2試行1)
+# ④ Codex 指示書生成
+python -m scripts.export_for_codex --date <YYYY-MM-DD>
+# → data/batches/<date>_codex_instructions.md をCodexに渡す
+# → 画像を images/in/<entry_id>.png に保存（20件）
+
+# ⑤ ダッシュボード生成 → ブラウザでレビュー
+python -m scripts.build_dashboard --date <YYYY-MM-DD>
+start data/reviews/<date>_review.html
+# → OK/NG/Skip選択 → CSVエクスポート → data/decisions/<date>_decisions.csv に配置
+
+# ⑥ dry-run → 本番反映
+python -m scripts.process_decisions data/decisions/<date>_decisions.csv --dry-run
+python -m scripts.process_decisions data/decisions/<date>_decisions.csv --yes
+
+# ⑦ 検証
+curl -s -o /dev/null -w "%{http_code}\n" https://hinyan1016.hatenablog.com/entry/YYYY/MM/DD/HHMMSS
 ```
 
-### 現在のGit状態
+### 注意点（Day 3 で学んだこと）
+
+- **ダッシュボードの CSV エクスポート漏れ**: 1カードだけ未選択だったため、CSV が 19件 ＜ バッチ20件 になる事象。対処は(A) ブラウザで再選択、(B) CSV に手動追記、(C) スキップ扱いのいずれか。選ばれたら「ユーザに選択肢を提示」する運用で対応済。
+- **`sync_generations_from_csv` を忘れると `process_decisions` は `generations に <eid> がない` で失敗**: Day 3 以降は必須ステップ。
+- **batch_date は重複不可**: `batches` テーブルのPKが batch_date。既存日付指定は INSERT OR REPLACE で prompts.csv ごと上書きになるので注意。
+
+---
+
+## 未消化の低優先度タスク
+
+- **Codex ルートのレート制限検証**: Day 3 で20件 Plus範囲内で問題なく回ったが、連日実行時の累積制限は未検証（Day 4-5で要観察）
+- **.omc 等のスペック/アーキドキュ整備**: 未着手。現運用が安定すれば不要
+
+---
+
+## 現在の Git 状態（参考）
+
 ```
-commits:
-  c65ca6b chore(infographic): .gitignore に .coverage / batches/*.md / v1棚卸し / ワンショット追加
-  87f9542 feat(infographic): 画像生成自動化 - OpenAI Images APIと記事存在確認
-  60399b8 fix(infographic): ... (Day 1セッション以前)
-
-未コミット（プロジェクト内）:
-  - blog/infographic-project/scripts/export_for_codex.py   ← 新規、未追跡
-  - blog/infographic-project/data/batches/2026-04-24_*.md  ← gitignore対象
-  - blog/infographic-project/data/state.sqlite             ← gitignore対象
-
+最新: 2ec48ab feat(infographic): generate_batch_csv に --batch-date 引数を追加
 ブランチ: main
+未コミット: .claude/settings.local.json のみ（プロジェクト外、無関係）
+```
+
+### 現在のDB状態
+
+```sql
+articles: done=39, excluded=2, pending=186
+generations: 41件（全 in_batch 処理済み）
+batches:
+  2026-04-23 / 2026-04-24 / 2026-04-25 いずれも処理完了
 ```
 
 ---
 
-## Resume Commands
+## 次セッション再開フレーズ
 
-### 状態確認（新セッション開始時）
-```bash
-cd "C:/Users/jsber/OneDrive/Documents/Claude_task"
-
-# gitとDB状態
-git log --oneline -5
-git status --short | grep infographic-project
-
-# DB確認
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -c "
-import sqlite3
-conn = sqlite3.connect(r'blog/infographic-project/data/state.sqlite')
-for r in conn.execute(\"SELECT status, COUNT(*) FROM articles GROUP BY status\"):
-    print(r)
-"
-
-# Codex側の画像到着確認
-ls blog/infographic-project/images/in/
-# → 6802418398336571447.png があれば Codex生成済
-```
-
-### テスト（健全性チェック）
-```bash
-cd blog/infographic-project
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m pytest -v
-# 39件全passが期待値
-```
-
-### Codex画像が揃ったら（Day 2 反映フロー）
-```bash
-cd blog/infographic-project
-
-# 1. build_dashboard を未来日で実行（--date引数未実装なのでPython直叩き）
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -c "
-from pathlib import Path
-from scripts.build_dashboard import build_dashboard
-build_dashboard(
-    Path('data/batches/2026-04-24_prompts.csv'),
-    Path('images/in'),
-    Path('data/reviews/2026-04-24_review.html'),
-    batch_date='2026-04-24',
-)
-print('OK')
-"
-
-# 2. ブラウザで開いてレビュー → decisions.csv ダウンロード → data/decisions/ に配置
-start "" "data/reviews/2026-04-24_review.html"
-
-# 3. dry-run 確認
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m scripts.process_decisions data/decisions/2026-04-24_decisions.csv --dry-run
-
-# 4. 本番反映
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m scripts.process_decisions data/decisions/2026-04-24_decisions.csv --yes
-
-# 5. 検証
-curl -s -o /dev/null -w "%{http_code}\n" https://hinyan1016.hatenablog.com/entry/2025/03/15/075022
-```
-
-### Day 3 以降の本運用
-```bash
-cd blog/infographic-project
-
-# バッチ生成（存在確認つき）
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m scripts.generate_batch_csv --batch-size 20
-
-# Claudeがプロンプト記入
-# → 2026-04-NN_prompts.csv の空欄を手で/会話で埋める
-
-# (未実装) sync_generations — 現状は手動INSERTで凌ぐ必要あり
-# 1件ずつ手動:
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -c "... 前回手動でやった処理 ..."
-
-# Codex用指示書生成
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m scripts.export_for_codex
-
-# → Codex に data/batches/<date>_codex_instructions.md を渡す
-# → images/in/ に画像が揃う
-
-# 以降 build_dashboard → レビュー → process_decisions
-```
-
-### 緊急ロールバック（反映後にNGが見つかった場合）
-```bash
-cd blog/infographic-project
-/c/Users/jsber/AppData/Local/Programs/Python/Python313/python.exe -m scripts.rollback <entry_id>
-# ※ body_html_before が保存されている7日以内のみ有効
-```
+- **「Day 4 バッチ準備」** → batch_date=2026-04-26 で 20件バッチ生成以降のフロー
+- **「インフォグラフィックの続き」** → このファイルを読んで現状確認
+- **「ブログ文献リンクの続き」** → 別プロジェクト（文献リンク有効化、残561件）
 
 ---
 
-## 会話での再開フレーズ
-
-次セッションで以下のいずれかを言えば流れを戻せます:
-
-- 「インフォグラフィックの続き」 → このファイルを読んで現状確認から
-- 「Codex画像保存完了」 → Day 2 build_dashboard以降へ直行
-- 「Day 3 バッチ準備」 → 20件バッチ生成から
-
----
-
-**セッション終了時刻**: 2026-04-23（主要コミット2件、全テスト39件pass、Day 2試行準備完了）
+**セッション終了時刻**: 2026-04-23（Day 3 完了、39/227件 done、次は Day 4）
