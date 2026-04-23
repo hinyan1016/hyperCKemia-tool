@@ -224,6 +224,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=20)
     parser.add_argument(
+        "--batch-date",
+        default=None,
+        help="YYYY-MM-DD (default: today)。batches/generations の日付キーに使われる。",
+    )
+    parser.add_argument(
         "--skip-existence-check",
         action="store_true",
         help="AtomPub存在確認を省く（テスト/オフライン用）",
@@ -249,6 +254,7 @@ def main() -> int:
         db_path,
         out_dir,
         batch_size=args.batch_size,
+        batch_date=args.batch_date,
         exists_fn=exists_fn,
     )
     print(f"バッチCSV: {csv_path}")
