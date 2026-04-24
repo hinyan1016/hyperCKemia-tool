@@ -162,7 +162,7 @@ OPENAI_API_KEY=<your-openai-key>    # 2026-04-23 追加: 画像自動生成用
 
 ```bash
 pip install -r requirements.txt
-# openai>=1.40.0, pillow==11.0.0, pytest==8.3.4, pytest-cov==6.0.0
+# openai==2.32.0, pillow==12.2.0, pytest==9.0.3, pytest-cov==7.1.0
 ```
 
 ---
