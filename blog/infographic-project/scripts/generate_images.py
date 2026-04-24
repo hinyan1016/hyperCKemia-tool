@@ -101,6 +101,7 @@ def generate_images_for_batch(
     retry_delay_s: float = DEFAULT_RETRY_DELAY_S,
     progress_cb: Callable[[str], None] | None = None,
     log_path: Path | None = None,
+    entry_ids: set[str] | None = None,
 ) -> GenerateResult:
     """prompts.csv の各行について画像を生成して images/in/ に保存。"""
     result = GenerateResult()
@@ -114,6 +115,8 @@ def generate_images_for_batch(
     try:
         for row in rows:
             eid = row["entry_id"].strip()
+            if entry_ids is not None and eid not in entry_ids:
+                continue
             prompt = (row.get("prompt") or "").strip()
             out_path = images_in_dir / f"{eid}.png"
 
@@ -192,6 +195,12 @@ def main() -> int:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--size", default=DEFAULT_SIZE)
     parser.add_argument(
+        "--entry-id",
+        action="append",
+        default=None,
+        help="Only generate the specified entry_id. Repeatable.",
+    )
+    parser.add_argument(
         "--quality", default=DEFAULT_QUALITY, choices=["low", "medium", "high"]
     )
     args = parser.parse_args()
@@ -234,6 +243,7 @@ def main() -> int:
         quality=args.quality,
         progress_cb=print,
         log_path=log_path,
+        entry_ids=set(args.entry_id) if args.entry_id else None,
     )
 
     print()
