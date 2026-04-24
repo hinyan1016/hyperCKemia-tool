@@ -44,15 +44,30 @@ def convert_to_hatena(html):
     content = re.sub(r'<div class="toc-box">(.*?)</div>', convert_toc, content, flags=re.DOTALL)
 
     # h2のidを日本語テキストに変換（はてなブログ用）
-    def convert_h2_id(m):
-        id_attr = m.group(1)
-        text = m.group(2)
-        # テキストからはてな風IDを生成（英数字・ハイフン以外を除去）
+    # 同時にTOCのhref（英語スラッグ）も日本語idへ追従させる
+    id_mapping = {}
+
+    def make_clean_id(text):
         clean = re.sub(r'[―–—]', '--', text)
         clean = re.sub(r'[^\w\s\u3000-\u9fff\u30a0-\u30ff\u3040-\u309f-]', '', clean)
         clean = re.sub(r'\s+', '', clean)
-        return '<h2 id="' + clean + '">' + text + '</h2>'
+        return clean
+
+    def convert_h2_id(m):
+        old_id = m.group(1)
+        text = m.group(2)
+        new_id = make_clean_id(text)
+        if old_id != new_id:
+            id_mapping[old_id] = new_id
+        return '<h2 id="' + new_id + '">' + text + '</h2>'
     content = re.sub(r'<h2 id="([^"]+)">(.*?)</h2>', convert_h2_id, content)
+
+    # TOCのhref="#旧ID"を新IDに追従（見出しと一致させる）
+    for old_id, new_id in id_mapping.items():
+        content = content.replace(
+            'href="#' + old_id + '"',
+            'href="#' + new_id + '"',
+        )
 
     # important-box → inline style
     content = re.sub(
