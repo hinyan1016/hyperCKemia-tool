@@ -13,6 +13,7 @@ data/decisions/*.csv
 images/in/*
 images/approved/*
 images/archive/*
+images/backup/*
 logs/*.log
 
 # 旧v1棚卸し（v2が inventory_v2.csv / targets_v2.csv として存在）
