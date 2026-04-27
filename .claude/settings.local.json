@@ -391,7 +391,9 @@
       "Bash(awk '{print $5, $9}')",
       "Bash(start *)",
       "Bash(echo \"exit=$?\")",
-      "Bash(PYTHONIOENCODING=utf-8 echo \"yes\")"
+      "Bash(PYTHONIOENCODING=utf-8 echo \"yes\")",
+      "Bash(rm -f slide-*.png)",
+      "Bash(\"/c/Users/jsber/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin/pdftoppm.exe\" -png -r 150 autonomic_nerves_slides.pdf slide)"
     ],
     "deny": [
       "Bash(rm -rf *)",
