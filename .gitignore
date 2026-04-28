@@ -1,60 +1,10 @@
-# Node.js
-node_modules/
-package-lock.json
-
-# Playwright
-.playwright-mcp/
+# Claude Code internal
+.claude/
 
 # OS
 Thumbs.db
 .DS_Store
 
-# Claude Code内部ファイル
-.claude/launch.json
-.claude/worktrees/
-
-# 独立リポジトリ
-medical-ddx-tools/
-
-# 大容量ファイル（GitHub 50MB制限）
-*.mp4
-youtube-slides/パーキンソン病せん妄/パーキンソン病せん妄_評価とNPO対策_20260209_023028.pptx
-
-# 認証情報
-.env
-
-# 一時ファイル
-*.tmp
-*.bak
-
-# Python キャッシュ
-**/__pycache__/
-*.pyc
-
-# Claude / OmniBook ローカルキャッシュ
-.claude/scheduled_tasks.lock
-.omc/
-
-# Playwright スナップショット出力
-hatena_entries*.md
-
-# 一時データ・テンポラリ
-*_temp.json
-**/_temp_*.html
-
-# OneDrive重複ファイル（OmniBook9hxサフィックス）
-**/*-OmniBook9hx.*
-
-# SEO改善 実行ログ・バックアップ
-blog/seo-improvement/*.log
-blog/seo-improvement/backup_uploaddate/
-
-# infographic-project の凍結DB（ローカル保管のみ）
-blog/infographic-project/data/state_final_*.sqlite
-
-# 確認用スクリーンショット（再生成可能、本番反映後不要）
-**/slides_check-*.png
-**/slide_check-*.png
-**/thumb_check-*.png
-blog_infographic_check*.png
-youtube_analytics_*.png
+# Editor
+.vscode/
+*.swp
